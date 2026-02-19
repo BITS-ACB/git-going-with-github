@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GitHub Skills — Introduction to GitHub
+    url: https://github.com/skills/introduction-to-github
+    about: Interactive module — branches, commits, pull requests, and merge. Mona guides you step by step.
+  - name: GitHub Skills — Communicate Using Markdown
+    url: https://github.com/skills/communicate-using-markdown
+    about: Interactive module — headings, emphasis, links, code blocks, task lists, and tables.
+  - name: GitHub Skills — Review Pull Requests
+    url: https://github.com/skills/review-pull-requests
+    about: Interactive module — Mona creates a real PR in your account for you to review.
+  - name: Workshop Documentation
+    url: https://github.com/accesswatch/learning-room/blob/main/README.md
+    about: Full workshop guide — start here if you are new to this repository.

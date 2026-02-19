@@ -1,0 +1,25 @@
+# Agent Forge personal preferences — each person's copy stays in their fork only, never committed
+.github/agents/preferences.md
+
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# VS Code personal settings (workspace settings in .vscode/ are committed; personal settings are not)
+.vscode/settings.json
+
+# Temporary and editor swap files
+*.tmp
+*.swp
+*~

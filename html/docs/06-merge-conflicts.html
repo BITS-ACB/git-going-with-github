@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GitHub Learning Room - Open Source Assistive Technology Hackathon">
+  <title>Merge Conflicts — GitHub Learning Room</title>
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Merge Conflicts</span>
+  </nav>
+  <main id="main-content" class="markdown-body">
+    <h1>Merge Conflicts</h1>
+<h2>Understanding, Preventing, and Resolving Conflicts</h2>
+<blockquote>
+<p>Merge conflicts sound intimidating but are a normal, manageable part of collaborative development. This guide explains what conflicts are, how to read conflict markers, and how to resolve them — step by step.</p>
+</blockquote>
+<hr>
+<h2>What Is a Merge Conflict?</h2>
+<p>A merge conflict occurs when two people have both changed the <strong>same part of the same file</strong> in <strong>different ways</strong>, and Git cannot automatically decide which version is correct.</p>
+<p>Git can merge changes automatically when they touch different parts of a file. Conflicts only happen when two changes overlap — for example:</p>
+<ul>
+<li>Person A changed line 12 to say &quot;Submit form&quot;</li>
+<li>Person B changed line 12 to say &quot;Send message&quot;</li>
+<li>Git asks: which one do you want to keep?</li>
+</ul>
+<hr>
+<h2>Why Conflicts Happen</h2>
+<p>The most common causes:</p>
+<table>
+<thead>
+<tr>
+<th>Cause</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Two people edited the same line</td>
+<td>You both fixed the same typo differently</td>
+</tr>
+<tr>
+<td>One person deleted a file but another edited it</td>
+<td>You removed an old function; they fixed a bug in it</td>
+</tr>
+<tr>
+<td>Two people restructured the same section</td>
+<td>You reorganized a list; they added items to it</td>
+</tr>
+<tr>
+<td>A long-running PR diverged from main</td>
+<td>Your branch is weeks old and main has changed significantly</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>How to Prevent Conflicts (Prevention is Easier Than Resolution)</h2>
+<p>Avoiding conflicts in the first place saves time and reduces stress. Here are the most effective strategies:</p>
+<h3>1. <strong>Keep your branches short-lived</strong></h3>
+<p>Work in small, focused chunks. A branch that lives for 3 days has far fewer conflicts than one that lives for 3 weeks.</p>
+<ul>
+<li>Target: 1-3 days from branch to merge</li>
+<li>If a feature takes longer, break it into smaller PRs</li>
+</ul>
+<h3>2. <strong>Sync with main frequently</strong></h3>
+<p>The longer your branch diverges from main, the more likely conflicts become.</p>
+<p><strong>Best practice:</strong> Sync daily if main is active:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># From your feature branch:</span>
+git fetch origin
+git merge origin/main
+<span class="hljs-comment"># Or: git rebase origin/main (if comfortable with rebasing)</span></code></pre>
+<p><strong>GitHub web method:</strong> Use the &quot;Update branch&quot; button on your PR if it appears.</p>
+<h3>3. <strong>Communicate with your team</strong></h3>
+<p>Let others know what files you&#39;re working on. Use issue comments:</p>
+<blockquote>
+<p>&quot;Heads up: I&#39;m refactoring <code>auth.js</code> in my PR for #42. If you&#39;re touching that file, let&#39;s coordinate.&quot;</p>
+</blockquote>
+<p>Prevents two people from heavily editing the same file simultaneously.</p>
+<h3>4. <strong>Avoid mass reformatting</strong></h3>
+<p>Running a formatter on an entire file creates conflicts with anyone else editing that file. If you must:</p>
+<ul>
+<li>Do it in a <strong>separate PR</strong> before functional changes</li>
+<li>Announce it to the team</li>
+<li>Merge it quickly so everyone can sync</li>
+</ul>
+<h3>5. <strong>Pull before you push</strong></h3>
+<p>Always fetch and merge (or pull) before pushing your changes:</p>
+<pre><code class="hljs language-bash">git pull origin main  <span class="hljs-comment"># Sync your local main</span>
+git checkout your-branch
+git merge main        <span class="hljs-comment"># Merge main into your branch</span>
+git push              <span class="hljs-comment"># Now push</span></code></pre>
+<p>This catches conflicts locally where they&#39;re easier to resolve.</p>
+<h3>6. <strong>Work on separate files when possible</strong></h3>
+<p>If multiple people are working simultaneously, divide tasks by files or modules rather than everyone touching the same code.</p>
+<h3>7. <strong>Keep PRs small</strong></h3>
+<p>A 50-file PR will almost certainly conflict with something. A 5-file PR merges quickly and cleanly.</p>
+<p>The most effective contributors make many small PRs rather than one giant one.</p>
+<h3>8. <strong>Use Draft PRs for early visibility</strong></h3>
+<p>Open your PR as a draft while still working. Others can see what you&#39;re changing and avoid overlapping work. Convert to &quot;Ready for review&quot; when done.</p>
+<hr>
+<h2>Advanced Prevention: Understanding Fast-Forward Merges</h2>
+<p>When your branch is perfectly up to date with main and adds new commits on top, GitHub can do a &quot;fast-forward&quot; merge — main simply moves forward to your latest commit. No merge commit needed. No possibility of conflicts.</p>
+<p><strong>How to achieve this:</strong> Rebase your branch on main right before merging:</p>
+<pre><code class="hljs language-bash">git checkout your-branch
+git fetch origin
+git rebase origin/main
+git push --force-with-lease  <span class="hljs-comment"># See warning below about force pushing</span></code></pre>
+<p><strong>Warning:</strong> Force pushing rewrites history. Only do this on branches you alone control (not shared branches). Never force push to <code>main</code>.</p>
+<p>For more on force pushing and rebasing, see the <a href="appendix-a-glossary.md#force-push">Glossary</a>.</p>
+<hr>
+<h2>When Conflicts Are Actually Good</h2>
+<p>Conflicts indicate that multiple people are actively improving the project. In a healthy, collaborative environment, occasional conflicts are normal and manageable.</p>
+<p>If you never have conflicts, it might mean:</p>
+<ul>
+<li>You&#39;re the only contributor (less review, less learning)</li>
+<li>PRs are moving too slowly (stagnation)</li>
+<li>People are avoiding working on important files (technical debt)</li>
+</ul>
+<p><strong>The goal isn&#39;t zero conflicts.</strong> The goal is catching them early, resolving them cleanly, and learning patterns that reduce future conflicts.</p>
+<hr>
+<h2>Spotting a Conflict on GitHub</h2>
+<p>When a PR has a merge conflict, you will see this message on the Conversation tab, near the merge section:</p>
+<blockquote>
+<p>“This branch has conflicts that must be resolved”</p>
+</blockquote>
+<p>You will also see a “Resolve conflicts” button. If you cannot see it (it may require write access), contact the PR author.</p>
+<details>
+<summary>Visual / mouse users</summary>
+
+<p>Scroll to the bottom of the Conversation tab. The conflict message appears as a yellow or orange banner above the merge button area. Click <strong>Resolve conflicts</strong> to open the web conflict editor.</p>
+</details>
+
+<details>
+<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+
+<ol>
+<li>Press <code>D</code> to reach the bottom of the Conversation tab</li>
+<li>Navigate down with <code>H</code> or <code>↓</code> past the comment threads</li>
+<li>Find the heading or region containing &quot;This branch has conflicts&quot;</li>
+<li>Press <code>B</code> to find the <strong>Resolve conflicts</strong> button → <code>Enter</code></li>
+</ol>
+</details>
+
+<details>
+<summary>Screen reader users (VoiceOver — macOS)</summary>
+
+<ol>
+<li><code>VO+U</code> → Landmarks or <code>VO+Down</code> to move toward the bottom of the Conversation tab</li>
+<li>Quick Nav <code>H</code> or <code>VO+Cmd+H</code> past comment headings until you reach the conflict notice</li>
+<li>Quick Nav <code>B</code> to find the <strong>Resolve conflicts</strong> button → <code>VO+Space</code></li>
+</ol>
+</details>
+
+<hr>
+<h2>Conflict Markers — What They Mean</h2>
+<p>When conflict markers appear in a file, your editor is showing you both versions of the conflicted content so you can choose. The format is always:</p>
+<pre><code class="hljs">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<span class="hljs-section">The content that is on YOUR current branch
+=======</span>
+The content coming from the OTHER branch (or main)
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name-or-commit-hash</code></pre>
+<p><strong>Breakdown:</strong></p>
+<ul>
+<li><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> — the start of YOUR version (HEAD = &quot;the branch you are currently on&quot;)</li>
+<li><code>=======</code> — the dividing line between the two versions</li>
+<li><code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name</code> — the end of the INCOMING version (from the branch being merged in)</li>
+</ul>
+<h3>Example in a real file</h3>
+<p><strong>Original file (before conflict):</strong></p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+<h1><strong>After two conflicting changes:</strong>
+```
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<button aria-label="Submit form">Submit</button></h1>
+<p><button type="submit">Send message</button></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>feature/form-improvements</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre><code class="hljs">
+<span class="hljs-strong">**Resolution options:**</span>
+<span class="hljs-bullet">1.</span> Keep your version: <span class="hljs-code">`&lt;button aria-label=&quot;Submit form&quot;&gt;Submit&lt;/button&gt;`</span>
+<span class="hljs-bullet">2.</span> Keep their version: <span class="hljs-code">`&lt;button type=&quot;submit&quot;&gt;Send message&lt;/button&gt;`</span>
+<span class="hljs-bullet">3.</span> Keep both changes: <span class="hljs-code">`&lt;button type=&quot;submit&quot; aria-label=&quot;Submit form&quot;&gt;Submit&lt;/button&gt;`</span> ← often the right answer
+
+---
+
+<span class="hljs-section">## Resolving Conflicts on GitHub (Web Editor)</span>
+
+GitHub has a built-in conflict editor that you can use without any local tools.
+
+<span class="hljs-section">### Step-by-step: GitHub Conflict Editor</span>
+
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">details</span>&gt;</span></span>
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span></span>Visual / mouse users<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span></span>
+
+<span class="hljs-bullet">1.</span> Click <span class="hljs-strong">**Resolve conflicts**</span> on the PR Conversation tab
+<span class="hljs-bullet">2.</span> GitHub opens a full-page text editor showing each conflicted file
+<span class="hljs-bullet">3.</span> The conflict markers are highlighted — everything between <span class="hljs-code">`&lt;&lt;&lt;&lt;&lt;&lt;`</span> and <span class="hljs-code">`=======`</span> is your version; between <span class="hljs-code">`=======`</span> and <span class="hljs-code">`&gt;&gt;&gt;&gt;&gt;&gt;&gt;`</span> is the incoming version
+<span class="hljs-bullet">4.</span> Edit the content directly: delete the lines you don’t want, including the three marker lines (<span class="hljs-code">`&lt;&lt;&lt;`</span>, <span class="hljs-code">`===`</span>, <span class="hljs-code">`&gt;&gt;&gt;`</span>)
+<span class="hljs-bullet">5.</span> When the file looks correct, click <span class="hljs-strong">**Mark as resolved**</span> (top-right of the file)
+<span class="hljs-bullet">6.</span> If there are multiple conflicted files, a file list on the left lets you jump between them
+<span class="hljs-bullet">7.</span> After all files are resolved, click <span class="hljs-strong">**Commit merge**</span>
+
+<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span></span>
+
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">details</span>&gt;</span></span>
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span></span>Screen reader users (NVDA / JAWS — Windows)<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span></span>
+
+<span class="hljs-bullet">1.</span> Activate the <span class="hljs-strong">**Resolve conflicts**</span> button from the PR Conversation tab
+<span class="hljs-bullet">2.</span> GitHub opens the conflict editor — a full-page text editor
+<span class="hljs-bullet">3.</span> Navigate between conflicted files using the file list (press <span class="hljs-code">`NVDA+F7`</span> or <span class="hljs-code">`VO+U`</span> to find the file navigation panel)
+<span class="hljs-bullet">4.</span> Switch to Focus Mode (<span class="hljs-code">`NVDA+Space`</span>) to enter the text editor
+<span class="hljs-bullet">5.</span> Read the conflict markers line by line with <span class="hljs-code">`↓`</span>:
+<span class="hljs-bullet">   -</span> <span class="hljs-code">`&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD`</span> marks the start of your version
+<span class="hljs-bullet">   -</span> <span class="hljs-code">`=======`</span> is the dividing line
+<span class="hljs-bullet">   -</span> <span class="hljs-code">`&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name`</span> marks the end of the incoming version
+<span class="hljs-bullet">6.</span> Edit to keep the desired content — delete the conflict marker lines and the version you don&#x27;t want
+<span class="hljs-bullet">7.</span> <span class="hljs-code">`Tab`</span> to <span class="hljs-strong">**Mark as resolved**</span> button → <span class="hljs-code">`Enter`</span>
+<span class="hljs-bullet">8.</span> Repeat for all conflicted files
+<span class="hljs-bullet">9.</span> <span class="hljs-code">`Tab`</span> to <span class="hljs-strong">**Commit merge**</span> button → <span class="hljs-code">`Enter`</span>
+
+<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span></span>
+
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">details</span>&gt;</span></span>
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span></span>Screen reader users (VoiceOver — macOS)<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span></span>
+
+<span class="hljs-bullet">1.</span> Activate the <span class="hljs-strong">**Resolve conflicts**</span> button from the PR Conversation tab
+<span class="hljs-bullet">2.</span> GitHub opens the conflict editor — a full-page text editor
+<span class="hljs-bullet">3.</span> <span class="hljs-code">`VO+U`</span> → navigate to the file navigation panel to switch between conflicted files
+<span class="hljs-bullet">4.</span> <span class="hljs-code">`VO+Shift+Down`</span> to interact with the text editor
+<span class="hljs-bullet">5.</span> <span class="hljs-code">`VO+Down`</span> to read the conflict markers line by line:
+<span class="hljs-bullet">   -</span> <span class="hljs-code">`&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD`</span> marks the start of your version
+<span class="hljs-bullet">   -</span> <span class="hljs-code">`=======`</span> is the dividing line
+<span class="hljs-bullet">   -</span> <span class="hljs-code">`&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name`</span> marks the end of the incoming version
+<span class="hljs-bullet">6.</span> Edit to keep the desired content — delete the conflict marker lines and the version you don&#x27;t want
+<span class="hljs-bullet">7.</span> <span class="hljs-code">`VO+Shift+Up`</span> to stop interacting, then <span class="hljs-code">`Tab`</span> to <span class="hljs-strong">**Mark as resolved**</span> → <span class="hljs-code">`VO+Space`</span>
+<span class="hljs-bullet">8.</span> Repeat for all conflicted files
+<span class="hljs-bullet">9.</span> <span class="hljs-code">`Tab`</span> to <span class="hljs-strong">**Commit merge**</span> → <span class="hljs-code">`VO+Space`</span>
+
+<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span></span>
+
+<span class="hljs-section">### What it looks like in the editor</span>
+
+When the conflict editor opens, your screen reader will announce a text editor. In Focus Mode, navigate with arrow keys. The content reads:
+</code></pre>
+<p>&lt;  &lt;  &lt;  &lt;  &lt;  &lt;  &lt;  H  E  A  D
+<button aria-label="Submit form">Submit</button>
+=  =  =  =  =  =  =
+<button type="submit">Send message</button></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p> f  e  a  t  u  r  e  /  f  o  r  m - i  m  p  r  o  v  e  m  e  n  t  s</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre><code class="hljs">
+<span class="hljs-attr">*(Note:</span> <span class="hljs-string">screen</span> <span class="hljs-string">readers</span> <span class="hljs-string">may</span> <span class="hljs-string">spell</span> <span class="hljs-string">out</span> <span class="hljs-string">the</span> <span class="hljs-string">`&lt;`</span> <span class="hljs-string">and</span> <span class="hljs-string">`&gt;`</span> <span class="hljs-string">characters</span> <span class="hljs-string">letter</span> <span class="hljs-string">by</span> <span class="hljs-string">letter</span> <span class="hljs-string">—</span> <span class="hljs-string">this</span> <span class="hljs-string">is</span> <span class="hljs-string">normal)*</span>
+
+<span class="hljs-meta">---
+</span>
+<span class="hljs-comment">## Resolving Conflicts in VS Code (Day 2)</span>
+
+<span class="hljs-string">VS</span> <span class="hljs-string">Code</span> <span class="hljs-string">has</span> <span class="hljs-string">excellent</span> <span class="hljs-string">merge</span> <span class="hljs-string">conflict</span> <span class="hljs-string">tooling</span> <span class="hljs-string">with</span> <span class="hljs-string">full</span> <span class="hljs-string">screen</span> <span class="hljs-string">reader</span> <span class="hljs-string">support.</span> <span class="hljs-string">This</span> <span class="hljs-string">is</span> <span class="hljs-string">covered</span> <span class="hljs-string">in</span> <span class="hljs-string">depth</span> <span class="hljs-string">in</span> [<span class="hljs-string">Git</span> <span class="hljs-string">&amp;</span> <span class="hljs-string">Source</span> <span class="hljs-string">Control</span> <span class="hljs-string">in</span> <span class="hljs-string">VS</span> <span class="hljs-string">Code</span>]<span class="hljs-string">(11-git-source-control.md),</span> <span class="hljs-attr">but here is an overview:</span>
+
+<span class="hljs-comment">### VS Code shows conflicts as:</span>
+</code></pre>
+<h1>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD (Current Change)
+Your version
+||||||| original                   ← (3-way merge, if enabled)
+Original version before both edits</h1>
+<p>Incoming version</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>branch-name (Incoming Change)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre><code class="hljs">
+<span class="hljs-comment">### VS Code merge conflict actions</span>
+
+&lt;details&gt;
+&lt;summary&gt;Visual / mouse users&lt;/summary&gt;
+
+When your cursor is <span class="hljs-keyword">on</span> <span class="hljs-title">a</span> <span class="hljs-title">conflict</span> <span class="hljs-title">region</span>, <span class="hljs-title">VS</span> <span class="hljs-title">Code</span> <span class="hljs-title">shows</span> **<span class="hljs-title">CodeLens</span> <span class="hljs-title">action</span> <span class="hljs-title">links</span>** <span class="hljs-title">above</span> <span class="hljs-title">the</span> <span class="hljs-title">conflict</span> <span class="hljs-title">block</span> <span class="hljs-title">in</span> <span class="hljs-title">the</span> <span class="hljs-title">editor</span>:
+- **Accept Current Change** — keeps your <span class="hljs-built_in">version</span> (HEAD)
+- **Accept Incoming Change** — keeps <span class="hljs-keyword">the</span> branch <span class="hljs-built_in">version</span> being merged
+- **Accept Both Changes** — keeps both (stacked <span class="hljs-literal">one</span> <span class="hljs-keyword">after</span> <span class="hljs-keyword">the</span> other)
+- **Compare Changes** — opens <span class="hljs-keyword">a</span> side-<span class="hljs-keyword">by</span>-side diff
+
+Click <span class="hljs-keyword">the</span> link you want. The conflict markers disappear <span class="hljs-keyword">and</span> your chosen content remains. Save <span class="hljs-keyword">the</span> <span class="hljs-built_in">file</span> <span class="hljs-keyword">with</span> `Ctrl+S`.
+
+&lt;/details&gt;
+
+&lt;details&gt;
+&lt;summary&gt;Screen reader users (NVDA / JAWS — Windows)&lt;/summary&gt;
+
+<span class="hljs-number">1.</span> Open <span class="hljs-keyword">the</span> conflicted <span class="hljs-built_in">file</span>
+<span class="hljs-number">2.</span> Press `↓` <span class="hljs-built_in">to</span> navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">a</span> conflict marker (`&lt;&lt;&lt;&lt;&lt;&lt;&lt;`)
+<span class="hljs-number">3.</span> The CodeLens links appear above — press `Tab` <span class="hljs-built_in">to</span> reach them
+<span class="hljs-number">4.</span> Press `Enter` <span class="hljs-keyword">on</span> <span class="hljs-title">your</span> <span class="hljs-title">chosen</span> <span class="hljs-title">action</span>
+<span class="hljs-number">5.</span> Save <span class="hljs-keyword">the</span> <span class="hljs-built_in">file</span> (`Ctrl+S`)
+<span class="hljs-number">6.</span> Stage <span class="hljs-keyword">the</span> resolved <span class="hljs-built_in">file</span>: `Ctrl+Shift+G` → find <span class="hljs-keyword">the</span> <span class="hljs-built_in">file</span> → **Stage changes**
+<span class="hljs-number">7.</span> Commit <span class="hljs-keyword">the</span> <span class="hljs-built_in">merge</span>
+
+**GitHub Copilot can help:** With <span class="hljs-keyword">the</span> cursor <span class="hljs-keyword">in</span> <span class="hljs-keyword">a</span> conflict region, <span class="hljs-built_in">open</span> Copilot Chat (`Ctrl+Shift+I`) <span class="hljs-keyword">and</span> type: <span class="hljs-string">&quot;Resolve this merge conflict — keep meaningful changes from both sides.&quot;</span> Copilot will suggest <span class="hljs-keyword">a</span> resolution that you can review <span class="hljs-keyword">and</span> accept.
+
+&lt;/details&gt;
+
+&lt;details&gt;
+&lt;summary&gt;Screen reader users (VoiceOver — macOS)&lt;/summary&gt;
+
+<span class="hljs-number">1.</span> Open <span class="hljs-keyword">the</span> conflicted <span class="hljs-built_in">file</span>
+<span class="hljs-number">2.</span> `VO+Down` <span class="hljs-keyword">or</span> arrow <span class="hljs-built_in">keys</span> <span class="hljs-built_in">to</span> navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">a</span> conflict marker (`&lt;&lt;&lt;&lt;&lt;&lt;&lt;`)
+<span class="hljs-number">3.</span> The CodeLens links appear above — `Tab` <span class="hljs-built_in">to</span> reach them
+<span class="hljs-number">4.</span> `VO+Space` <span class="hljs-keyword">on</span> <span class="hljs-title">your</span> <span class="hljs-title">chosen</span> <span class="hljs-title">action</span>
+<span class="hljs-number">5.</span> Save <span class="hljs-keyword">the</span> <span class="hljs-built_in">file</span> (`Cmd+S`)
+<span class="hljs-number">6.</span> Stage <span class="hljs-keyword">the</span> resolved <span class="hljs-built_in">file</span>: `Cmd+Shift+G` → find <span class="hljs-keyword">the</span> <span class="hljs-built_in">file</span> → **Stage changes**
+<span class="hljs-number">7.</span> Commit <span class="hljs-keyword">the</span> <span class="hljs-built_in">merge</span>
+
+**GitHub Copilot can help:** With <span class="hljs-keyword">the</span> cursor <span class="hljs-keyword">in</span> <span class="hljs-keyword">a</span> conflict region, <span class="hljs-built_in">open</span> Copilot Chat (`Cmd+Option+I`) <span class="hljs-keyword">and</span> type: <span class="hljs-string">&quot;Resolve this merge conflict — keep meaningful changes from both sides.&quot;</span> Copilot will suggest <span class="hljs-keyword">a</span> resolution that you can review <span class="hljs-keyword">and</span> accept.
+
+&lt;/details&gt;
+
+<span class="hljs-comment">---</span>
+
+<span class="hljs-comment">## When You Feel Stuck</span>
+
+<span class="hljs-comment">### Ask for help — it&#x27;s normal</span>
+
+If you are unsure which <span class="hljs-built_in">version</span> <span class="hljs-built_in">to</span> keep:
+<span class="hljs-number">1.</span> Leave <span class="hljs-keyword">a</span> comment <span class="hljs-keyword">on</span> <span class="hljs-title">the</span> <span class="hljs-title">PR</span>: <span class="hljs-string">&quot;I have a merge conflict in `filename.js` and I&#x27;m not sure which version to keep — could someone help me understand the intent of these two changes?&quot;</span>
+<span class="hljs-number">2.</span> Tag <span class="hljs-keyword">the</span> PR author <span class="hljs-keyword">or</span> <span class="hljs-keyword">a</span> maintainer <span class="hljs-keyword">with</span> `@username`
+
+<span class="hljs-comment">### Abandon and start fresh (nuclear option)</span>
+
+If <span class="hljs-keyword">a</span> conflict is severe (<span class="hljs-keyword">the</span> branch diverged <span class="hljs-keyword">a</span> lot <span class="hljs-built_in">from</span> main):
+<span class="hljs-number">1.</span> Close <span class="hljs-keyword">the</span> PR <span class="hljs-keyword">without</span> merging
+<span class="hljs-number">2.</span> Start <span class="hljs-keyword">a</span> <span class="hljs-built_in">new</span> branch <span class="hljs-built_in">from</span> <span class="hljs-keyword">the</span> latest `main`
+<span class="hljs-number">3.</span> Apply only your intended changes <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">new</span> branch
+<span class="hljs-number">4.</span> Open <span class="hljs-keyword">a</span> <span class="hljs-built_in">new</span> PR
+
+This is legitimate — <span class="hljs-keyword">not</span> <span class="hljs-keyword">a</span> failure.
+
+<span class="hljs-comment">---</span>
+
+<span class="hljs-comment">## Reading a Conflict Message from Git (Command Line Reference)</span>
+
+If you work locally, `git <span class="hljs-built_in">merge</span>` <span class="hljs-keyword">or</span> `git pull` will say:
+</code></pre>
+<p>CONFLICT (content): Merge conflict in src/index.html
+Automatic merge failed; fix conflicts and then commit the result.</p>
+<pre><code class="hljs">
+And `git <span class="hljs-built_in">status</span>` will <span class="hljs-built_in">show</span>:
+</code></pre>
+<p>both modified: src/index.html</p>
+<pre><code class="hljs">
+These are normal outputs. The <span class="hljs-keyword">conflict</span> markers are inserted <span class="hljs-keyword">into</span> the file <span class="hljs-keyword">by</span> Git — <span class="hljs-keyword">open</span> the file <span class="hljs-keyword">and</span> follow the steps above.
+
+<span class="hljs-comment">---</span>
+
+## <span class="hljs-keyword">Summary</span> Checklist
+</code></pre>
+<p>Before you start:
+  □ My PR is small and focused (fewer conflicts = easier life)
+  □ I checked that others aren&#39;t editing the same files</p>
+<p>When you see a conflict:
+  □ Don&#39;t panic — conflicts are normal
+  □ Read both versions (between &lt;&lt;&lt; and ===, and between === and &gt;&gt;&gt;)
+  □ Decide: keep one, keep both, or combine intelligently
+  □ Remove ALL three conflict marker lines (&lt;&lt;&lt;, ===, &gt;&gt;&gt;)
+  □ Verify the final file makes sense
+  □ Mark as resolved → Commit merge</p>
+<p>After resolving:
+  □ Re-check that the PR description and issue link are still accurate
+  □ Comment on the PR: &quot;Resolved merge conflict — kept both the aria-label and type attribute&quot;
+  □ Request re-review if reviewers already approved before the conflict was introduced</p>
+<pre><code class="hljs">
+<span class="hljs-comment">---</span>
+
+## Try It: <span class="hljs-keyword">Read</span> a <span class="hljs-keyword">Conflict</span> (<span class="hljs-keyword">Without</span> Fear)
+
+**<span class="hljs-type">Time</span>:** <span class="hljs-number">2</span> minutes | **What you need:** <span class="hljs-keyword">Any</span> <span class="hljs-type">text</span> editor <span class="hljs-keyword">or</span> just <span class="hljs-keyword">read</span> below
+
+<span class="hljs-keyword">Read</span> this merge <span class="hljs-keyword">conflict</span> aloud. The goal <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">to</span> resolve it — just <span class="hljs-keyword">to</span> understand what you<span class="hljs-string">&#x27;re hearing:
+</span></code></pre>
+<h1>The button should have an
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+aria-label=&quot;Submit form&quot;</h1>
+<p>aria-label=&quot;Send your response&quot;</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>feature-branch
+attribute for screen readers.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre><code class="hljs">
+Answer these three questions:
+<span class="hljs-number">1.</span> **What <span class="hljs-keyword">does</span> your branch <span class="hljs-built_in">say</span>?** (The <span class="hljs-built_in">text</span> <span class="hljs-keyword">between</span> `&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD` <span class="hljs-keyword">and</span> `=======`)
+<span class="hljs-number">2.</span> **What <span class="hljs-keyword">does</span> <span class="hljs-keyword">the</span> other branch <span class="hljs-built_in">say</span>?** (The <span class="hljs-built_in">text</span> <span class="hljs-keyword">between</span> `=======` <span class="hljs-keyword">and</span> `&gt;&gt;&gt;&gt;&gt;&gt;&gt;`)
+<span class="hljs-number">3.</span> **Which <span class="hljs-built_in">version</span> would you keep, <span class="hljs-keyword">and</span> why?**
+
+**You&#x27;re done.** You just <span class="hljs-built_in">read</span> a merge conflict. That&#x27;s <span class="hljs-keyword">the</span> entire skill — everything <span class="hljs-keyword">else</span> <span class="hljs-keyword">is</span> just choosing which lines <span class="hljs-keyword">to</span> keep <span class="hljs-keyword">and</span> deleting <span class="hljs-keyword">the</span> three marker lines.
+
+&gt; **What success feels like:** Conflicts aren&#x27;t mysterious anymore. They&#x27;re just two versions side <span class="hljs-keyword">by</span> side <span class="hljs-keyword">with</span> markers telling you which <span class="hljs-keyword">is</span> which. You already know how <span class="hljs-keyword">to</span> pick <span class="hljs-keyword">the</span> right one.
+
+<span class="hljs-comment">---</span>
+
+&gt; <span class="hljs-comment">### Day 2 Amplifier — Copilot Chat &amp; Conflict Prevention</span>
+&gt;
+&gt; **Resolve <span class="hljs-keyword">at</span> least one conflict completely <span class="hljs-keyword">by</span> hand <span class="hljs-keyword">before</span> using any AI assistance.** You must be able <span class="hljs-keyword">to</span> <span class="hljs-built_in">read</span> `&lt;&lt;&lt;&lt;&lt;&lt;&lt;`, `=======`, <span class="hljs-keyword">and</span> `&gt;&gt;&gt;&gt;&gt;&gt;&gt;` markers <span class="hljs-keyword">and</span> understand what each <span class="hljs-built_in">version</span> represents. An AI-suggested resolution you cannot independently verify <span class="hljs-keyword">is</span> a liability — you are accepting a change you do <span class="hljs-keyword">not</span> understand <span class="hljs-keyword">into</span> a codebase other people depend <span class="hljs-keyword">on</span>.
+&gt;
+&gt; Once you have mastered manual conflict resolution:
+&gt; - **In VS Code** — Copilot Chat (`Ctrl+Shift+I`) can explain a conflict <span class="hljs-keyword">in</span> plain language — *<span class="hljs-string">&quot;Person A renamed the button to &#x27;Submit Form&#x27;; Person B renamed it to &#x27;Send Message&#x27;. Which intent should take priority?&quot;</span>* — <span class="hljs-keyword">but</span> you decide what survives
+&gt; - **In your repo** — Agent Forge&#x27;s `@pr-review` can identify high-risk overlapping changes <span class="hljs-keyword">before</span> a conflict occurs, flagging when two contributors are editing <span class="hljs-keyword">the</span> same <span class="hljs-built_in">file</span> area <span class="hljs-keyword">and</span> giving you <span class="hljs-built_in">time</span> <span class="hljs-keyword">to</span> coordinate <span class="hljs-keyword">before</span> <span class="hljs-keyword">it</span> escalates
+&gt; - **In <span class="hljs-keyword">the</span> cloud** — GitHub Agentic Workflows can detect stale PRs diverging <span class="hljs-keyword">from</span> `main` <span class="hljs-keyword">and</span> automatically notify contributors <span class="hljs-keyword">with</span> a suggested rebase checklist — preventing <span class="hljs-keyword">the</span> conflict <span class="hljs-keyword">before</span> <span class="hljs-keyword">it</span> <span class="hljs-keyword">is</span> ever introduced
+&gt;
+&gt; *Understanding conflict markers <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> a stepping stone <span class="hljs-keyword">to</span> letting AI handle conflicts. It <span class="hljs-keyword">is</span> <span class="hljs-keyword">the</span> skill <span class="hljs-keyword">that</span> tells you when AI got <span class="hljs-keyword">it</span> wrong.*
+
+<span class="hljs-comment">---</span>
+
+*Next: [Culture <span class="hljs-keyword">and</span> Etiquette](<span class="hljs-number">07</span>-culture-etiquette.md)*
+*Back: [Working <span class="hljs-keyword">with</span> Pull Requests](<span class="hljs-number">05</span>-working-<span class="hljs-keyword">with</span>-pull-requests.md)*
+*Related: [Git &amp; Source Control <span class="hljs-keyword">in</span> VS Code](<span class="hljs-number">11</span>-git-source-control.md)*</code></pre>
+
+  </main>
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+    <p>GitHub Learning Room — Open Source Assistive Technology Hackathon</p>
+    <p><a href="https://github.com/accesswatch/Learning-Room">View on GitHub</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+
+/* Custom styles for GitHub Learning Room HTML documentation */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #24292f;
+}
+
+.breadcrumb {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1rem 45px 0;
+  font-size: 0.875rem;
+  color: #57606a;
+}
+
+.breadcrumb a {
+  color: #0969da;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Improve focus visibility for keyboard navigation */
+a:focus,
+button:focus,
+summary:focus {
+  outline: 2px solid #0969da;
+  outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #0969da;
+  color: #ffffff;
+  padding: 8px 16px;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  .markdown-body {
+    color: #ffffff;
+  }
+  .skip-link {
+    background: #ffffff;
+    color: #000000;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0d1117;
+    color: #e6edf3;
+  }
+  .markdown-body {
+    color: #e6edf3;
+  }
+  .breadcrumb {
+    color: #8b949e;
+  }
+  .breadcrumb a {
+    color: #58a6ff;
+  }
+  footer {
+    border-color: #30363d !important;
+    color: #8b949e;
+  }
+  footer a {
+    color: #58a6ff;
+  }
+}
+
+/* Ensure tables are responsive */
+.markdown-body table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* details/summary styling for collapsible blocks */
+.markdown-body details {
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  margin: 0.75rem 0;
+}
+
+.markdown-body details[open] {
+  padding-bottom: 0.75rem;
+}
+
+.markdown-body summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.25rem 0;
+  user-select: none;
+  list-style: none;
+}
+
+.markdown-body summary::-webkit-details-marker {
+  display: none;
+}
+
+.markdown-body summary::before {
+  content: '';
+  font-size: 0.75em;
+  vertical-align: middle;
+}
+
+.markdown-body details[open] > summary::before {
+  content: '▼ ';
+}
+
+/* Print styles */
+@media print {
+  .breadcrumb,
+  footer,
+  .skip-link {
+    display: none;
+  }
+  .markdown-body details {
+    border: none;
+    padding: 0;
+  }
+  .markdown-body details > * {
+    display: block;
+  }
+  .markdown-body summary::before {
+    display: none;
+  }
+}

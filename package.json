@@ -1,0 +1,24 @@
+{
+  "name": "github-learning-room",
+  "version": "1.0.0",
+  "description": "GitHub Learning Room - Open Source Assistive Technology Hackathon",
+  "scripts": {
+    "build:html": "node scripts/build-html.js",
+    "watch:html": "node scripts/build-html.js --watch",
+    "clean": "node -e \"require('fs').rmSync('html', {recursive: true, force: true})\""
+  },
+  "keywords": [
+    "github",
+    "accessibility",
+    "workshop",
+    "documentation"
+  ],
+  "author": "",
+  "license": "CC-BY-4.0",
+  "devDependencies": {
+    "marked": "^11.2.0",
+    "highlight.js": "^11.9.0",
+    "github-markdown-css": "^5.5.1",
+    "chokidar": "^3.5.3"
+  }
+}

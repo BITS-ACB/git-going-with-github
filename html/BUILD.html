@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GitHub Learning Room - Open Source Assistive Technology Hackathon">
+  <title>HTML Documentation Build System — GitHub Learning Room</title>
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">HTML Documentation Build System</span>
+  </nav>
+  <main id="main-content" class="markdown-body">
+    <h1>HTML Documentation Build System</h1>
+<p>This repository converts all Markdown files to accessible HTML. The HTML output is committed alongside the Markdown source so that both formats are always in sync.</p>
+<h2>Quick Start</h2>
+<h3>View HTML Documentation</h3>
+<p>All HTML files live in the <code>html/</code> directory:</p>
+<ul>
+<li>Open <code>html/index.html</code> in your browser for the homepage</li>
+<li>Browse the <code>html/docs/</code> folder for chapter and appendix pages</li>
+<li>All internal links between documents are preserved</li>
+</ul>
+<h3>Build Commands</h3>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Install dependencies (first time only)</span>
+npm install
+
+<span class="hljs-comment"># Build HTML once</span>
+npm run build:html
+
+<span class="hljs-comment"># Watch mode — auto-rebuild on markdown changes</span>
+npm run watch:html
+
+<span class="hljs-comment"># Clean generated files</span>
+npm run clean</code></pre>
+<h2>How It Works</h2>
+<p>The build is run <strong>locally</strong> before committing. There is no CI pipeline — you build the HTML yourself and commit both the <code>.md</code> source and the <code>html/</code> output in the same commit.</p>
+<p><strong>Typical workflow:</strong></p>
+<ol>
+<li>Edit one or more <code>.md</code> files</li>
+<li>Run <code>npm run build:html</code></li>
+<li>Stage and commit everything: <code>git add -A &amp;&amp; git commit -m &quot;docs: update chapter 5 and rebuild HTML&quot;</code></li>
+<li>Push</li>
+</ol>
+<h3>What Gets Converted</h3>
+<ul>
+<li><code>docs/*.md</code> → <code>html/docs/*.html</code></li>
+<li><code>learning-room/**/*.md</code> → <code>html/learning-room/**/*.html</code></li>
+<li><code>README.md</code> → <code>html/index.html</code></li>
+<li><code>CONTRIBUTING.md</code> → <code>html/CONTRIBUTING.html</code></li>
+<li>All other root-level <code>.md</code> files</li>
+</ul>
+<h3>HTML Features</h3>
+<p><strong>Style and Layout:</strong></p>
+<ul>
+<li>GitHub-flavored Markdown styling (familiar appearance)</li>
+<li>Responsive design (mobile and desktop)</li>
+<li>Syntax highlighting for code blocks</li>
+<li>Clean, readable typography</li>
+</ul>
+<p><strong>Accessibility:</strong></p>
+<ul>
+<li>Semantic HTML5 markup</li>
+<li>Proper ARIA labels and roles</li>
+<li>Keyboard navigation support</li>
+<li>High contrast mode support</li>
+<li>Skip-to-content links</li>
+<li>Screen reader friendly navigation</li>
+</ul>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Breadcrumb links on every page</li>
+<li>Footer with return link</li>
+<li>Preserves all internal links between documents</li>
+</ul>
+<h2>Configuration Files</h2>
+<ul>
+<li><strong>Build script:</strong> <code>scripts/build-html.js</code> — Conversion logic</li>
+<li><strong>Dependencies:</strong> <code>package.json</code> — Node.js packages (marked, highlight.js, etc.)</li>
+</ul>
+<h2>Customization</h2>
+<h3>Modify Styling</h3>
+<p>Edit <code>scripts/build-html.js</code> and look for the <code>customCss</code> constant to add custom styles.</p>
+<h3>Change HTML Template</h3>
+<p>Edit the <code>htmlTemplate</code> function in <code>scripts/build-html.js</code> to modify the page structure.</p>
+<h3>Update Dependencies</h3>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Check for updates</span>
+npm outdated
+
+<span class="hljs-comment"># Update packages</span>
+npm update
+
+<span class="hljs-comment"># Commit package.json changes</span>
+git add package.json
+git commit -m <span class="hljs-string">&quot;chore: update HTML build dependencies&quot;</span></code></pre>
+<h2>Troubleshooting</h2>
+<h3>Local Build Errors</h3>
+<p><strong>&quot;Cannot find module &#39;marked&#39;&quot;</strong>
+→ Run <code>npm install</code> first</p>
+<p><strong>&quot;Permission denied&quot; errors</strong>
+→ Check write permissions on the <code>html/</code> directory</p>
+<p><strong>HTML doesn&#39;t look right</strong>
+→ Clear browser cache and reload</p>
+<p><strong>Watch mode not detecting changes</strong>
+→ Ensure you&#39;re saving files (Ctrl+S in VS Code)</p>
+<h3>HTML Files Not Appearing in Git</h3>
+<p>Check <code>.gitignore</code> to ensure <code>html/</code> is NOT listed there. The <code>html/</code> directory must be tracked by Git so the built output is always available in the repository.</p>
+<h2>For Contributors</h2>
+<p>When submitting pull requests:</p>
+<ul>
+<li><strong>Edit the Markdown files</strong>, then run <code>npm run build:html</code></li>
+<li><strong>Include both</strong> the <code>.md</code> changes and the updated <code>html/</code> files in your commit</li>
+<li>If you forget to rebuild, a reviewer will ask you to run the build before merging</li>
+</ul>
+<h2>Additional Resources</h2>
+<ul>
+<li><a href="https://marked.js.org/">marked documentation</a> — Markdown parser</li>
+<li><a href="https://highlightjs.org/">highlight.js documentation</a> — Syntax highlighting</li>
+<li><a href="https://github.github.com/gfm/">GitHub Markdown spec</a> — GitHub Flavored Markdown</li>
+</ul>
+<hr>
+<p>For complete contributor guidelines, see <a href="CONTRIBUTING.md#7-html-documentation-build-system">CONTRIBUTING.md</a>.</p>
+
+  </main>
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+    <p>GitHub Learning Room — Open Source Assistive Technology Hackathon</p>
+    <p><a href="https://github.com/accesswatch/Learning-Room">View on GitHub</a></p>
+  </footer>
+</body>
+</html>

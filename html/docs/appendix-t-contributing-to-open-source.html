@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GitHub Learning Room - Open Source Assistive Technology Hackathon">
+  <title>Appendix T: Contributing to Open Source — GitHub Learning Room</title>
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix T: Contributing to Open Source</span>
+  </nav>
+  <main id="main-content" class="markdown-body">
+    <h1>Appendix T: Contributing to Open Source</h1>
+<h2>A Guide for First-Time Contributors</h2>
+<blockquote>
+<p>You do not need to be a professional developer to contribute to open source. Documentation, accessibility improvements, and bug reports are among the most valuable contributions any project can receive.</p>
+</blockquote>
+<hr>
+<h2>Table of Contents</h2>
+<ol>
+<li><a href="#1-what-is-open-source">What Is Open Source?</a></li>
+<li><a href="#2-who-can-contribute">Who Can Contribute?</a></li>
+<li><a href="#3-what-makes-a-good-first-contribution">What Makes a Good First Contribution?</a></li>
+<li><a href="#4-finding-something-to-work-on">Finding Something to Work On</a></li>
+<li><a href="#5-reading-an-issue-before-you-start">Reading an Issue Before You Start</a></li>
+<li><a href="#6-making-your-contribution">Making Your Contribution</a></li>
+<li><a href="#7-getting-help">Getting Help</a></li>
+<li><a href="#8-after-your-contribution-is-merged">After Your Contribution Is Merged</a></li>
+<li><a href="#9-building-a-contribution-habit">Building a Contribution Habit</a></li>
+</ol>
+<hr>
+<h2>1. What Is Open Source?</h2>
+<p>Open source software is software whose source code is publicly available. Anyone can read it, use it, and — in most cases — contribute to it. Contributions can include:</p>
+<ul>
+<li>Fixing bugs in the software</li>
+<li>Writing or improving documentation</li>
+<li>Filing bug reports that help maintainers understand problems</li>
+<li>Reviewing other people&#39;s changes and leaving thoughtful feedback</li>
+<li>Translating content into other languages</li>
+<li>Improving accessibility — adding alt text, fixing heading structure, testing with screen readers</li>
+</ul>
+<p>The projects that power much of today&#39;s web infrastructure — operating systems, programming languages, screen readers, and developer tools — are maintained by contributors who started exactly where you are now.</p>
+<hr>
+<h2>2. Who Can Contribute?</h2>
+<p>Contributors come from all backgrounds, skill levels, and countries. A first contribution could be fixing a typo, adding a missing full stop, or filing a bug report that saves a maintainer hours of debugging.</p>
+<p>Assistive technology users bring a perspective that most sighted, mouse-first developers cannot — you notice when heading structure is broken, when a button has no accessible name, or when a form cannot be completed with a keyboard. These are real, high-value contributions that improve projects for everyone.</p>
+<p>You do not need permission to start. If a repository&#39;s issues are public, you can file a bug or suggest an improvement today.</p>
+<hr>
+<h2>3. What Makes a Good First Contribution?</h2>
+<p>A good first contribution is:</p>
+<ul>
+<li><strong>Specific</strong> — it addresses one problem clearly, not a general &quot;this could be better&quot;</li>
+<li><strong>Scoped</strong> — it does not try to fix everything at once; one PR, one problem</li>
+<li><strong>Described</strong> — the PR or issue explains what changed and why, not just what</li>
+<li><strong>Tested</strong> — for documentation, this means reading it aloud with your screen reader before submitting; for code, it means verifying the fix works</li>
+</ul>
+<p><strong>Signs a contribution is too large for a first attempt:</strong></p>
+<ul>
+<li>The PR touches more than three or four files</li>
+<li>You need to understand the entire codebase to make the change</li>
+<li>The issue has been open for a long time with many comments suggesting it is complex</li>
+</ul>
+<p>Start small. A well-executed small contribution is far more valuable than a large contribution that cannot be merged because it is out of scope.</p>
+<hr>
+<h2>4. Finding Something to Work On</h2>
+<p>Most open source projects label issues that are suitable for new contributors. Look for:</p>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>good first issue</code></td>
+<td>Explicitly recommended for first-time contributors</td>
+</tr>
+<tr>
+<td><code>first-timers-only</code></td>
+<td>Reserved for people making their first contribution to this project</td>
+</tr>
+<tr>
+<td><code>help wanted</code></td>
+<td>Maintainers are actively looking for someone to pick this up</td>
+</tr>
+<tr>
+<td><code>beginner</code> or <code>easy</code></td>
+<td>Lower complexity than average</td>
+</tr>
+<tr>
+<td><code>documentation</code></td>
+<td>No coding required — writing or editing docs</td>
+</tr>
+<tr>
+<td><code>accessibility</code></td>
+<td>Directly relevant to AT users; high-value work</td>
+</tr>
+</tbody></table>
+<p><strong>How to search:</strong> On any GitHub repository, go to Issues → filter by label. Or use GitHub&#39;s global search: <code>label:&quot;good first issue&quot; is:open language:markdown</code> to find documentation issues across all public repositories.</p>
+<hr>
+<h2>5. Reading an Issue Before You Start</h2>
+<p>Before commenting &quot;I&#39;ll take this&quot; on an issue, ask yourself:</p>
+<ul>
+<li><strong>Is the description clear enough to act on?</strong> If you are not sure what the problem is, ask a clarifying question before starting work.</li>
+<li><strong>Is anyone else already working on it?</strong> Look for recent comments from others saying they are working on it, or an open PR that references this issue. If a PR exists, it may already be in review.</li>
+<li><strong>Is the issue in scope for me?</strong> A documentation task does not require programming knowledge. A bug fix in compiled code may require understanding the codebase.</li>
+<li><strong>How old is the issue?</strong> Very old issues (2+ years) may be stale or no longer relevant. You can ask the maintainer if it is still valid before investing time.</li>
+</ul>
+<p>If the issue looks right for you, comment briefly to let the team know you are working on it: &quot;I&#39;d like to work on this. I&#39;ll open a draft PR shortly.&quot; This prevents duplicate work.</p>
+<hr>
+<h2>6. Making Your Contribution</h2>
+<h3>The Basic Workflow</h3>
+<ol>
+<li><strong>Fork the repository</strong> — creates your own copy on GitHub</li>
+<li><strong>Clone your fork</strong> to your computer (or open a Codespace — see <a href="appendix-n-github-codespaces.md">Appendix N</a>)</li>
+<li><strong>Create a branch</strong> — name it something descriptive: <code>fix/broken-link-setup-guide</code></li>
+<li><strong>Make your change</strong> — edit the file, save, verify</li>
+<li><strong>Commit with a clear message</strong> — &quot;Fix broken link in setup-guide.md line 34&quot;</li>
+<li><strong>Push to your fork</strong></li>
+<li><strong>Open a pull request</strong> from your branch to the original repository&#39;s default branch</li>
+<li><strong>Respond to review feedback</strong> — maintainers may ask for changes; this is normal and not a rejection</li>
+</ol>
+<h3>Writing a Good PR Description</h3>
+<p>A PR description should answer:</p>
+<ul>
+<li><strong>What</strong> did you change?</li>
+<li><strong>Why</strong> was the change needed?</li>
+<li><strong>How</strong> did you verify it works?</li>
+</ul>
+<p>Example:</p>
+<blockquote>
+<p>Fixed a broken link on line 34 of <code>setup-guide.md</code>. The link pointed to <code>/docs/old-setup</code> which no longer exists. Updated it to <code>/docs/00-pre-workshop-setup.md</code>, verified the target file exists and the anchor is correct.</p>
+</blockquote>
+<p>This gives the reviewer everything they need to approve quickly.</p>
+<hr>
+<h2>7. Getting Help</h2>
+<p>It is always acceptable to ask a question on an issue or pull request. Good questions:</p>
+<ul>
+<li><strong>Are specific:</strong> &quot;I&#39;m trying to fix the broken link on line 24 of <code>setup-guide.md</code>. The link currently points to <code>/docs/old-setup</code>. Where should it point?&quot;</li>
+<li><strong>Show what you tried:</strong> &quot;I searched the repository for the correct URL but couldn&#39;t find a file at that path.&quot;</li>
+<li><strong>Are polite:</strong> Assume good intent from maintainers, even if they are slow to respond. Maintainers are often volunteers with day jobs.</li>
+</ul>
+<p>If you opened a PR and are waiting for a review, it is appropriate to leave one polite follow-up comment after a week or two. Start with: &quot;Hi, just checking in on this PR when you have a moment.&quot;</p>
+<hr>
+<h2>8. After Your Contribution Is Merged</h2>
+<p>When your pull request is merged:</p>
+<ul>
+<li>Your name appears in the project&#39;s <strong>commit history permanently</strong> — it cannot be removed</li>
+<li>The issue you fixed is closed</li>
+<li>You are officially listed as a <strong>contributor</strong> to this project, visible on the repository&#39;s Contributors page</li>
+</ul>
+<p>This matters for your GitHub profile. Each merged contribution demonstrates real-world collaboration with a project team: you scoped a problem, communicated with maintainers, addressed feedback, and saw the work through. That record is visible to anyone who views your profile.</p>
+<p>Over time, a series of contributions builds a portfolio that shows how you work — not just what you can do in isolation.</p>
+<hr>
+<h2>9. Building a Contribution Habit</h2>
+<p>The hardest part of open source contribution is starting. Once you have one merged PR, the next is easier — you know the workflow, you have proof it is possible, and you have already navigated the social dynamics of working with a maintainer.</p>
+<p><strong>Practical habits:</strong></p>
+<ul>
+<li><strong>Keep a list</strong> of projects you use and like. These are natural candidates for contributions because you already understand what they do.</li>
+<li><strong>File bug reports</strong> when you encounter problems, even if you cannot fix them yourself. A clear, reproducible bug report is a real contribution.</li>
+<li><strong>Review other PRs.</strong> Even as a new contributor, you can leave useful feedback: &quot;Does this change affect screen reader users?&quot; or &quot;The example in the PR description is missing a step.&quot;</li>
+<li><strong>Set a low bar.</strong> A contribution does not need to be impressive. A fixed typo merged into a project used by thousands of people is more valuable than a perfect contribution never submitted.</li>
+</ul>
+<hr>
+<p><em>Return to: <a href="appendix-u-resources.md">Resources</a> | <a href="appendix-a-glossary.md">Appendix A — Glossary</a></em></p>
+
+  </main>
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+    <p>GitHub Learning Room — Open Source Assistive Technology Hackathon</p>
+    <p><a href="https://github.com/accesswatch/Learning-Room">View on GitHub</a></p>
+  </footer>
+</body>
+</html>

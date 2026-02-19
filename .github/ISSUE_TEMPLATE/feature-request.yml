@@ -1,0 +1,60 @@
+name: Feature or Improvement Request
+description: Suggest an improvement, new feature, or documentation addition
+title: "[FEATURE] "
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest an improvement. The more context you provide, the easier it is to evaluate and prioritize your request.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What Problem Does This Solve?
+      description: Describe the situation or need that prompted this request. What are you trying to do that is currently difficult or impossible?
+      placeholder: |
+        There is no keyboard shortcut reference for VoiceOver on macOS. 
+        The existing cheat sheet only covers NVDA and JAWS, which means
+        macOS users have to look elsewhere during the workshop.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: What would you like to see added or changed? Be as specific as possible.
+      placeholder: |
+        Add a VoiceOver section to docs/01-screen-reader-cheatsheet.md
+        with keyboard commands for: heading navigation, link navigation, 
+        landmark navigation, interacting with forms, and the Rotor.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives You Have Considered
+      description: Have you thought of other ways to solve the problem? Why do you prefer the approach you proposed?
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Are you able to help implement this?
+      description: No commitment required — just helps with planning.
+      options:
+        - label: Yes, I can open a pull request with the change
+        - label: I can provide research, examples, or feedback but cannot write the change
+        - label: I need someone else to implement this
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other information, links, or examples that support this request.
+    validations:
+      required: false

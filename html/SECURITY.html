@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GitHub Learning Room - Open Source Assistive Technology Hackathon">
+  <title>Security Policy — GitHub Learning Room</title>
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Security Policy</span>
+  </nav>
+  <main id="main-content" class="markdown-body">
+    <h1>Security Policy</h1>
+<h2>Supported Versions</h2>
+<p>This repository contains <strong>educational curriculum and documentation only</strong> — no production software, application servers, or APIs. There are no versioned software releases to patch.</p>
+<table>
+<thead>
+<tr>
+<th>Content</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Curriculum documentation (docs/)</td>
+<td>Current main branch</td>
+</tr>
+<tr>
+<td>GitHub Actions workflows (.github/workflows/)</td>
+<td>Current main branch</td>
+</tr>
+<tr>
+<td>Build scripts (scripts/)</td>
+<td>Current main branch</td>
+</tr>
+<tr>
+<td>AI agent prompts (.github/prompts/, .github/agents/)</td>
+<td>Current main branch</td>
+</tr>
+</tbody></table>
+<h2>Reporting a Vulnerability</h2>
+<p><strong>Please do not report security vulnerabilities as public GitHub Issues.</strong> Public issues are visible to everyone, including people who might exploit the vulnerability before it is fixed.</p>
+<h3>Preferred Method — Private Vulnerability Reporting</h3>
+<p>This repository has <strong>Private Vulnerability Reporting</strong> enabled. To submit a report:</p>
+<ol>
+<li>Navigate to the <strong>Security tab</strong> of this repository</li>
+<li>Select <strong>&quot;Report a vulnerability&quot;</strong></li>
+<li>Fill in the form with:<ul>
+<li>A clear title describing the issue</li>
+<li>A detailed description of the vulnerability and its potential impact</li>
+<li>Steps to reproduce (if applicable)</li>
+<li>Your suggested fix (optional but appreciated)</li>
+</ul>
+</li>
+<li>Submit — only the maintainers will see your report</li>
+</ol>
+<h3>What to Report</h3>
+<p>Even though this is an educational repository, the following are genuine security concerns:</p>
+<ul>
+<li><strong>Malicious content injected into curriculum files</strong> — documentation that contains links to phishing sites, malware downloads, or misleading instructions</li>
+<li><strong>GitHub Actions workflow vulnerabilities</strong> — script injection risks in <code>.github/workflows/</code>, insecure use of <code>GITHUB_TOKEN</code>, or pull-request-triggered workflows that execute untrusted code</li>
+<li><strong>Hardcoded credentials</strong> — any real tokens, passwords, or API keys accidentally committed to any file</li>
+<li><strong>Supply chain risks</strong> — compromised npm dependencies used by the build system</li>
+<li><strong>Prompt injection in agent files</strong> — AI agent prompts (<code>.prompt.md</code>, <code>.agent.md</code>) that could manipulate an LLM to produce harmful output</li>
+</ul>
+<h3>What Is Out of Scope</h3>
+<ul>
+<li>Theoretical attacks with no realistic exploitation path</li>
+<li>Vulnerabilities in GitHub&#39;s own infrastructure (report those to GitHub directly at <a href="https://github.com/security">github.com/security</a>)</li>
+<li>Broken links or outdated documentation (open a regular issue for those)</li>
+</ul>
+<h2>Response Timeline</h2>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Acknowledge receipt</td>
+<td>Within 3 business days</td>
+</tr>
+<tr>
+<td>Initial assessment</td>
+<td>Within 7 business days</td>
+</tr>
+<tr>
+<td>Fix deployed (if confirmed)</td>
+<td>Within 30 days for critical/high; 90 days for medium/low</td>
+</tr>
+<tr>
+<td>Public disclosure</td>
+<td>After fix is deployed, or coordinated with reporter</td>
+</tr>
+</tbody></table>
+<h2>Scope and Impact</h2>
+<p>This curriculum is designed to teach GitHub to workshop participants. The primary security risks are:</p>
+<ol>
+<li><strong>Documentation accuracy</strong> — incorrect instructions that could cause participants to configure their systems insecurely</li>
+<li><strong>Workflow integrity</strong> — GitHub Actions that run on pull requests from forks require careful scoping to prevent privilege escalation</li>
+<li><strong>Dependency security</strong> — the build system uses Node.js packages that must be kept up to date</li>
+</ol>
+<h2>Credit</h2>
+<p>Security researchers who responsibly disclose valid vulnerabilities will be credited in the repository&#39;s release notes (unless they prefer to remain anonymous).</p>
+<hr>
+<p><em>For general questions about the curriculum, open a regular issue. For security concerns, use private reporting above.</em></p>
+
+  </main>
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+    <p>GitHub Learning Room — Open Source Assistive Technology Hackathon</p>
+    <p><a href="https://github.com/accesswatch/Learning-Room">View on GitHub</a></p>
+  </footer>
+</body>
+</html>

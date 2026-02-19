@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GitHub Learning Room - Open Source Assistive Technology Hackathon">
+  <title>Appendix X: GitHub Copilot AI Models Reference — GitHub Learning Room</title>
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix X: GitHub Copilot AI Models Reference</span>
+  </nav>
+  <main id="main-content" class="markdown-body">
+    <h1>Appendix X: GitHub Copilot AI Models Reference</h1>
+<!-- TOC -->
+<ul>
+<li><a href="#1-overview">Overview</a></li>
+<li><a href="#2-how-to-choose-a-model">How to Choose a Model</a></li>
+<li><a href="#3-complete-model-reference">Complete Model Reference</a></li>
+<li><a href="#4-model-availability-by-plan">Model Availability by Plan</a></li>
+<li><a href="#5-premium-requests-and-cost-multipliers">Premium Requests and Cost Multipliers</a></li>
+<li><a href="#6-switching-models-in-vs-code">Switching Models in VS Code</a></li>
+<li><a href="#7-auto-model-selection">Auto Model Selection</a></li>
+<li><a href="#8-models-retiring-soon">Models Retiring Soon</a><!-- /TOC --></li>
+</ul>
+<hr>
+<h2>1. Overview</h2>
+<p>GitHub Copilot offers access to AI models from multiple providers including OpenAI, Anthropic, Google, and xAI. The model you choose affects response quality, speed, and premium request consumption. Different models excel at different tasks — understanding these trade-offs helps you get better results.</p>
+<p><strong>Models are updated frequently.</strong> This appendix reflects the model landscape as of February 2026. For the latest additions and retirements, see the <a href="https://github.blog/changelog/label/copilot/">GitHub Copilot changelog</a> and <a href="https://docs.github.com/en/copilot/reference/ai-models/supported-models">GitHub&#39;s official supported models documentation</a>.</p>
+<hr>
+<h2>2. How to Choose a Model</h2>
+<p>GitHub Docs organizes models by task. Match your task to the right model to get the best results without unnecessary premium request cost.</p>
+<h3>General-Purpose Coding and Writing</h3>
+<p>For everyday tasks — code completions, explanations, refactoring, writing documentation.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Provider</th>
+<th>Strengths</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>GPT-4.1</strong></td>
+<td>OpenAI</td>
+<td>Fast, accurate code completions and explanations. Reliable default for most tasks.</td>
+<td>Free</td>
+</tr>
+<tr>
+<td><strong>GPT-5 mini</strong></td>
+<td>OpenAI</td>
+<td>Reliable for most coding and writing tasks. Fast and accurate across languages and frameworks. Also supports image input.</td>
+<td>Free</td>
+</tr>
+<tr>
+<td><strong>GPT-5.1-Codex</strong></td>
+<td>OpenAI</td>
+<td>Higher-quality code on complex engineering tasks like features, tests, debugging, refactors, and reviews — without requiring lengthy prompts.</td>
+<td>1×</td>
+</tr>
+<tr>
+<td><strong>Grok Code Fast 1</strong></td>
+<td>xAI</td>
+<td>Specialized for coding. Performs well on code generation and debugging across multiple languages.</td>
+<td>0.25×</td>
+</tr>
+<tr>
+<td><strong>Raptor mini</strong></td>
+<td>OpenAI (fine-tuned)</td>
+<td>Specialized for fast, accurate inline suggestions and explanations. Optimized for completions.</td>
+<td>Free</td>
+</tr>
+</tbody></table>
+<h3>Fast Help with Simple or Repetitive Tasks</h3>
+<p>For quick answers, boilerplate generation, renaming, or lightweight explanations where speed matters.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Provider</th>
+<th>Strengths</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Claude Haiku 4.5</strong></td>
+<td>Anthropic</td>
+<td>Balances fast responses with quality output. Ideal for small tasks and lightweight code explanations.</td>
+<td>0.33×</td>
+</tr>
+<tr>
+<td><strong>Gemini 3 Flash</strong></td>
+<td>Google</td>
+<td>Fast, reliable answers to lightweight coding questions.</td>
+<td>0.33×</td>
+</tr>
+<tr>
+<td><strong>GPT-5.1-Codex-Mini</strong></td>
+<td>OpenAI</td>
+<td>Fast reasoning variant; quick answers on coding tasks.</td>
+<td>0.33×</td>
+</tr>
+</tbody></table>
+<h3>Deep Reasoning and Debugging</h3>
+<p>For complex problems, architecture decisions, multi-file analysis, tricky bugs, and understanding unfamiliar codebases.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Provider</th>
+<th>Strengths</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>GPT-5 mini</strong></td>
+<td>OpenAI</td>
+<td>Deep reasoning with faster responses. Ideal for interactive sessions and step-by-step code analysis.</td>
+<td>Free</td>
+</tr>
+<tr>
+<td><strong>GPT-5.2</strong></td>
+<td>OpenAI</td>
+<td>Great at complex reasoning, code analysis, and technical decision-making.</td>
+<td>1×</td>
+</tr>
+<tr>
+<td><strong>Claude Sonnet 4 / 4.5 / 4.6</strong></td>
+<td>Anthropic</td>
+<td>More reliable completions and smarter reasoning under pressure. Performance and practicality balanced for coding workflows; strong at complex problem-solving.</td>
+<td>1×</td>
+</tr>
+<tr>
+<td><strong>Claude Opus 4.6</strong></td>
+<td>Anthropic</td>
+<td>Anthropic&#39;s most powerful model. Best for the most demanding complex problem-solving challenges and sophisticated reasoning.</td>
+<td>3×</td>
+</tr>
+<tr>
+<td><strong>Gemini 2.5 Pro</strong></td>
+<td>Google</td>
+<td>Complex code generation, debugging, and research workflows.</td>
+<td>1×</td>
+</tr>
+<tr>
+<td><strong>Gemini 3 Pro</strong></td>
+<td>Google</td>
+<td>Advanced reasoning across long contexts and scientific or technical analysis. Supports vision/image input.</td>
+<td>1×</td>
+</tr>
+<tr>
+<td><strong>Goldeneye</strong></td>
+<td>OpenAI (fine-tuned)</td>
+<td>Complex problem-solving and sophisticated reasoning. Available for code completions and Copilot Free users only.</td>
+<td>1×</td>
+</tr>
+</tbody></table>
+<h3>Agentic Software Development</h3>
+<p>For autonomous coding tasks in Agent mode — when Copilot writes code, runs terminal commands, and iterates without step-by-step guidance from you.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Provider</th>
+<th>Strengths</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>GPT-5.1-Codex-Max</strong></td>
+<td>OpenAI</td>
+<td>Best for agentic tasks. Recommended when using Copilot in Agent mode.</td>
+<td>1×</td>
+</tr>
+<tr>
+<td><strong>GPT-5.2-Codex</strong></td>
+<td>OpenAI</td>
+<td>Best for agentic tasks. Strong autonomous reasoning and multi-step execution.</td>
+<td>1×</td>
+</tr>
+<tr>
+<td><strong>GPT-5.3-Codex</strong></td>
+<td>OpenAI</td>
+<td>Newest Codex variant. Powerful agentic capabilities.</td>
+<td>1×</td>
+</tr>
+</tbody></table>
+<h3>Working with Visuals</h3>
+<p>For tasks that involve images, screenshots, diagrams, or UI mockups — paste an image directly into the chat input.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Supports Images</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GPT-5 mini</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Claude Sonnet 4 / 4.5 / 4.6</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Gemini 3 Pro</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>3. Complete Model Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Status</th>
+<th>Provider</th>
+<th>Plans</th>
+<th>Multiplier</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GPT-4.1</td>
+<td>GA</td>
+<td>OpenAI</td>
+<td>Free, Pro, Pro+, Business, Enterprise</td>
+<td>0 (free)</td>
+</tr>
+<tr>
+<td>GPT-5 mini</td>
+<td>GA</td>
+<td>OpenAI</td>
+<td>Free, Pro, Pro+, Business, Enterprise</td>
+<td>0 (free)</td>
+</tr>
+<tr>
+<td>Raptor mini</td>
+<td>Preview</td>
+<td>OpenAI (fine-tuned)</td>
+<td>Free, Pro</td>
+<td>0 (free)</td>
+</tr>
+<tr>
+<td>Goldeneye</td>
+<td>GA</td>
+<td>OpenAI (fine-tuned)</td>
+<td>All plans (completions only)</td>
+<td>1×</td>
+</tr>
+<tr>
+<td>Grok Code Fast 1</td>
+<td>GA</td>
+<td>xAI</td>
+<td>Pro, Pro+, Business, Enterprise</td>
+<td>0.25×</td>
+</tr>
+<tr>
+<td>Claude Haiku 4.5</td>
+<td>GA</td>
+<td>Anthropic</td>
+<td>Pro, Pro+, Business, Enterprise</td>
+<td>0.33×</td>
+</tr>
+<tr>
+<td>Gemini 3 Flash</td>
+<td>GA</td>
+<td>Google</td>
+<td>Pro, Pro+, Business, Enterprise</td>
+<td>0.33×</td>
+</tr>
+<tr>
+<td>GPT-5.1-Codex-Mini</td>
+<td>GA</td>
+<td>OpenAI</td>
+<td>Pro, Pro+, Business, Enterprise</td>
+<td>0.33×</td>
+</tr>
+<tr>
+<td>GPT-5.1-Codex</td>
+<td>GA</td>
+<td>OpenAI</td>
+<td>Pro, Pro+, Business, Enterprise</td>
+<td>1×</td>
+</tr>
+<tr>
+<td>GPT-5.1-Codex-Max</td>
+<td>GA</td>
+<td>OpenAI</td>
+<td>Pro, Pro+, Business, Enterprise</td>
+<td>1×</td>
+</tr>
+<tr>
+<td>GPT-5.1</td>
+<td>GA</td>
+<td>OpenAI</td>
+<td>Pro, Pro+, Business, Enterprise</td>
+<td>1×</td>
+</tr>
+<tr>
+<td>GPT-5.2</td>
+<td>GA</td>
+<td>OpenAI</td>
+<td>Pro, Pro+, Business, Enterprise</td>
+<td>1×</td>
+</tr>
+<tr>
+<td>GPT-5.2-Codex</td>
+<td>GA</td>
+<td>OpenAI</td>
+<td>Pro, Pro+, Business, Enterprise</td>
+<td>1×</td>
+</tr>
+<tr>
+<td>GPT-5.3-Codex</td>
+<td>GA</td>
+<td>OpenAI</td>
+<td>Pro, Pro+, Business, Enterprise</td>
+<td>1×</td>
+</tr>
+<tr>
+<td>Claude Sonnet 4</td>
+<td>GA</td>
+<td>Anthropic</td>
+<td>Pro, Pro+, Business, Enterprise</td>
+<td>1×</td>
+</tr>
+<tr>
+<td>Claude Sonnet 4.5</td>
+<td>GA</td>
+<td>Anthropic</td>
+<td>Pro, Pro+, Business, Enterprise</td>
+<td>1×</td>
+</tr>
+<tr>
+<td>Claude Sonnet 4.6</td>
+<td>GA</td>
+<td>Anthropic</td>
+<td>Pro, Pro+, Business, Enterprise</td>
+<td>1×</td>
+</tr>
+<tr>
+<td>Gemini 2.5 Pro</td>
+<td>GA</td>
+<td>Google</td>
+<td>Pro, Pro+, Business, Enterprise</td>
+<td>1×</td>
+</tr>
+<tr>
+<td>Gemini 3 Pro</td>
+<td>Preview</td>
+<td>Google</td>
+<td>Pro, Pro+, Business, Enterprise</td>
+<td>1×</td>
+</tr>
+<tr>
+<td>Claude Opus 4.5</td>
+<td>Preview</td>
+<td>Anthropic</td>
+<td>Pro+, Business, Enterprise</td>
+<td>3×</td>
+</tr>
+<tr>
+<td>Claude Opus 4.6</td>
+<td>GA</td>
+<td>Anthropic</td>
+<td>Pro+, Business, Enterprise</td>
+<td>3×</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Note:</strong> Model availability changes frequently. Check <a href="https://docs.github.com/en/copilot/reference/ai-models/supported-models">GitHub&#39;s supported models page</a> for the current list.</p>
+</blockquote>
+<hr>
+<h2>4. Model Availability by Plan</h2>
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Free Models Included</th>
+<th>Paid Models Available</th>
+<th>Monthly Premium Requests</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Copilot Free</strong></td>
+<td>GPT-4.1, GPT-5 mini, Raptor mini</td>
+<td>None</td>
+<td>50 (monthly)</td>
+</tr>
+<tr>
+<td><strong>Copilot Pro</strong></td>
+<td>All 0× models</td>
+<td>Most (Pro+ models excluded)</td>
+<td>300 (monthly)</td>
+</tr>
+<tr>
+<td><strong>Copilot Pro+</strong></td>
+<td>All 0× models</td>
+<td>All models</td>
+<td>Unlimited</td>
+</tr>
+<tr>
+<td><strong>Copilot Business</strong></td>
+<td>All 0× models</td>
+<td>Most</td>
+<td>300 per user (monthly)</td>
+</tr>
+<tr>
+<td><strong>Copilot Enterprise</strong></td>
+<td>All 0× models</td>
+<td>All models</td>
+<td>Unlimited</td>
+</tr>
+</tbody></table>
+<p>Models marked with a premium multiplier consume premium requests proportionally. For example, Claude Opus 4.6 (3× multiplier) uses 3 premium requests per message. Free models (0× multiplier) never consume premium requests.</p>
+<hr>
+<h2>5. Premium Requests and Cost Multipliers</h2>
+<table>
+<thead>
+<tr>
+<th>Multiplier</th>
+<th>Impact</th>
+<th>Example Models</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>0 (free)</strong></td>
+<td>Never consumes premium requests</td>
+<td>GPT-4.1, GPT-5 mini, Raptor mini</td>
+</tr>
+<tr>
+<td><strong>0.25×</strong></td>
+<td>Very low cost</td>
+<td>Grok Code Fast 1</td>
+</tr>
+<tr>
+<td><strong>0.33×</strong></td>
+<td>Low cost</td>
+<td>Claude Haiku 4.5, Gemini 3 Flash, GPT-5.1-Codex-Mini</td>
+</tr>
+<tr>
+<td><strong>1×</strong></td>
+<td>Standard</td>
+<td>Claude Sonnet 4/4.5/4.6, GPT-5.1-Codex, GPT-5.2, Gemini 2.5 Pro, Codex variants</td>
+</tr>
+<tr>
+<td><strong>3×</strong></td>
+<td>High cost</td>
+<td>Claude Opus 4.5, Claude Opus 4.6</td>
+</tr>
+</tbody></table>
+<p><strong>Tips for managing premium request usage:</strong></p>
+<ul>
+<li>Use <strong>GPT-4.1</strong> or <strong>GPT-5 mini</strong> (both free) for everyday questions, quick explanations, and simple completions — they&#39;re fast and capable</li>
+<li>Upgrade to <strong>Claude Sonnet</strong> or <strong>GPT-5.2</strong> (1×) only when the task genuinely requires deeper reasoning</li>
+<li>Save <strong>Claude Opus</strong> (3×) for the most demanding analyses — architecture decisions, complex debugging, sophisticated design review</li>
+<li>Use <strong>Auto</strong> mode (see below) and let Copilot allocate model selection intelligently</li>
+</ul>
+<hr>
+<h2>6. Switching Models in VS Code</h2>
+<h3>In the Chat Panel</h3>
+<ol>
+<li>Open the <strong>Chat</strong> panel (<code>Ctrl+Shift+I</code> / <code>Cmd+Shift+I</code>)</li>
+<li>At the bottom of the chat input area, you&#39;ll see the current model name as a button (e.g., &quot;Auto&quot; or &quot;Claude Sonnet 4.6&quot;)</li>
+<li>Activate the model picker button — this opens a dropdown list of available models</li>
+<li>Arrow through the list and press <code>Enter</code> to select a model</li>
+<li>For screen reader users: the chat input will announce the newly selected model after switching</li>
+</ol>
+<h3>In an Inline Chat Session</h3>
+<ol>
+<li>Open Inline Chat (<code>Ctrl+I</code> / <code>Cmd+I</code>)</li>
+<li>The model picker appears in the inline chat toolbar</li>
+<li>Same interaction: activate the model button to switch</li>
+</ol>
+<h3>Keyboard Note for Screen Readers</h3>
+<p>In the Chat panel, the model picker button is near the <strong>bottom</strong> of the chat view. If you&#39;re having trouble locating it:</p>
+<ul>
+<li>Tab through the bottom toolbar of the chat panel</li>
+<li>Listen for the model name announced — it appears between the &quot;Attach&quot; button and the send button</li>
+<li>Press <code>Space</code> or <code>Enter</code> to open the picker</li>
+</ul>
+<hr>
+<h2>7. Auto Model Selection</h2>
+<p><strong>Auto mode</strong> (the default) lets Copilot choose the best model based on the type of request. It became generally available on December 10, 2025.</p>
+<p><strong>How Auto works:</strong></p>
+<ul>
+<li>For simple questions, Copilot routes to a faster, lighter model</li>
+<li>For complex code generation or debugging, Copilot upgrades to a more capable model automatically</li>
+<li>For agent tasks, Copilot selects an appropriate Codex model</li>
+<li>You can see which model was used after each response</li>
+</ul>
+<p><strong>When to override Auto:</strong></p>
+<ul>
+<li>You specifically need a model with certain capabilities (e.g., vision input with Claude Sonnet 4)</li>
+<li>You&#39;re managing premium request quotas and want to control costs</li>
+<li>You&#39;ve found a particular model gives better results for your specific workflow or domain</li>
+<li>You&#39;re doing agentic work and want to explicitly use GPT-5.1-Codex-Max or GPT-5.2-Codex</li>
+</ul>
+<p>To switch back to Auto from a specific model, re-open the model picker and select <strong>Auto</strong> at the top of the list.</p>
+<hr>
+<h2>8. Models Retiring Soon</h2>
+<p>GitHub regularly updates the model roster. Older model versions are retired when newer equivalents are available. When a model is retired, Copilot stops sending requests to it and falls back to newer alternatives.</p>
+<p><strong>Already retired (as of February 2026):</strong></p>
+<ul>
+<li>Claude Sonnet 3.5, Claude Sonnet 3.7</li>
+<li>Gemini 2.0 Flash</li>
+<li>o1-mini, o3, o3-mini, o4-mini</li>
+<li>Claude Opus 4.1</li>
+<li>GPT-5 (base), GPT-5-Codex</li>
+</ul>
+<p>To stay current, watch the <a href="https://github.blog/changelog/label/copilot/">GitHub Copilot changelog</a> — model additions and retirements are announced there.</p>
+<hr>
+<h2>Related Resources</h2>
+<ul>
+<li><a href="https://docs.github.com/en/copilot/reference/ai-models/model-comparison">GitHub Docs: Comparing AI models</a></li>
+<li><a href="https://docs.github.com/en/copilot/reference/ai-models/supported-models">GitHub Docs: Supported AI models in Copilot</a></li>
+<li><a href="https://docs.github.com/en/copilot/using-github-copilot/ai-models/changing-the-ai-model-for-copilot-chat">GitHub Docs: Changing the model for Copilot Chat</a></li>
+<li><a href="appendix-w-github-copilot-reference.md">Appendix W: GitHub Copilot Reference</a></li>
+<li><a href="13-github-copilot.md">Chapter 13: GitHub Copilot</a></li>
+</ul>
+
+  </main>
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+    <p>GitHub Learning Room — Open Source Assistive Technology Hackathon</p>
+    <p><a href="https://github.com/accesswatch/Learning-Room">View on GitHub</a></p>
+  </footer>
+</body>
+</html>

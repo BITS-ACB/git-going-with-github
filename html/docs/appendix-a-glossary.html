@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GitHub Learning Room - Open Source Assistive Technology Hackathon">
+  <title>Appendix A: GitHub Concepts & Glossary — GitHub Learning Room</title>
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix A: GitHub Concepts & Glossary</span>
+  </nav>
+  <main id="main-content" class="markdown-body">
+    <h1>Appendix A: GitHub Concepts &amp; Glossary</h1>
+<h2>Every Term You Need for Open Source Contribution</h2>
+<blockquote>
+<p>This glossary is your reference for the entire two-day workshop. When you hear a term you don&#39;t recognize — check here first. Terms are grouped by category and also sorted alphabetically at the end.</p>
+</blockquote>
+<hr>
+<h2>Part 1: The Building Blocks</h2>
+<h3>Repository (Repo)</h3>
+<p>A repository is the container for an entire project. It holds all the project&#39;s files, folders, documentation, and the complete history of every change ever made. Think of it as a project folder that has a time machine built in — you can see every version of every file going back to the beginning.</p>
+<p>A repository lives on GitHub at an address like: <code>https://github.com/owner/repo-name</code></p>
+<p><strong>Related terms:</strong> remote repository (the one on GitHub), local repository (a copy on your computer), upstream (the original repo), fork (your personal copy)</p>
+<hr>
+<h3>Organization (Org)</h3>
+<p>An organization is a group account on GitHub that multiple people can belong to. Open source projects typically live inside an organization rather than under a personal account. For example: <code>https://github.com/microsoft/vscode</code> — here <code>microsoft</code> is the organization and <code>vscode</code> is the repository.</p>
+<hr>
+<h3>Fork</h3>
+<p>A fork is a personal copy of someone else&#39;s repository, living in your own GitHub account. When you fork a repo, you get all its files and history. Changes you make to your fork do not automatically affect the original. To propose your changes to the original project, you submit a pull request.</p>
+<p><strong>Why fork?</strong> You do not have write access to most open source repos. Forking lets you work freely and then propose changes.</p>
+<hr>
+<h3>Remote</h3>
+<p>A remote is a connection to a repository hosted elsewhere (usually on GitHub). Your local Git repository can have multiple remotes. The most common remotes are:</p>
+<ul>
+<li><strong><code>origin</code></strong> — your fork on GitHub</li>
+<li><strong><code>upstream</code></strong> — the original repository you forked from</li>
+</ul>
+<p>When you run <code>git push origin main</code>, you&#39;re pushing your local <code>main</code> branch to the remote named <code>origin</code>.</p>
+<p><strong>To see your remotes:</strong></p>
+<pre><code class="hljs language-bash">git remote -v</code></pre>
+<p><strong>To add a remote:</strong></p>
+<pre><code class="hljs language-bash">git remote add upstream https://github.com/original-owner/repo.git</code></pre>
+<hr>
+<h3>Origin</h3>
+<p><code>origin</code> is the default name Git gives to the remote repository you cloned from. When you clone your fork, <code>origin</code> points to your fork on GitHub. </p>
+<p>Commands like <code>git push</code> and <code>git pull</code> default to using <code>origin</code> unless you specify otherwise.</p>
+<hr>
+<h3>.gitignore</h3>
+<p><code>.gitignore</code> is a special file in the root of your repository that tells Git which files or folders to ignore — meaning Git will not track or commit them.</p>
+<p><strong>Why use .gitignore?</strong></p>
+<ul>
+<li>Prevent committing temporary files (<code>.DS_Store</code>, <code>Thumbs.db</code>)</li>
+<li>Ignore build outputs (<code>dist/</code>, <code>build/</code>, <code>node_modules/</code>)</li>
+<li>Keep secrets out of Git (<code>.env</code> files, API keys, credentials)</li>
+<li>Avoid committing IDE-specific files (<code>.vscode/</code>, <code>.idea/</code>)</li>
+</ul>
+<p><strong>Example <code>.gitignore</code>:</strong></p>
+<pre><code class="hljs"><span class="hljs-comment"># Dependencies</span>
+node_modules/
+vendor/
+
+<span class="hljs-comment"># Environment variables</span>
+<span class="hljs-string">.env</span>
+<span class="hljs-string">.env.local</span>
+
+<span class="hljs-comment"># Build outputs</span>
+dist/
+build/
+*<span class="hljs-string">.log</span>
+
+<span class="hljs-comment"># OS files</span>
+<span class="hljs-string">.DS_Store</span>
+Thumbs.db
+
+<span class="hljs-comment"># IDE</span>
+<span class="hljs-string">.vscode/</span>
+<span class="hljs-string">.idea/</span></code></pre>
+<p><strong>Important:</strong> <code>.gitignore</code> only ignores <strong>untracked</strong> files. If you already committed a file, you must remove it from Git&#39;s tracking first:</p>
+<pre><code class="hljs language-bash">git <span class="hljs-built_in">rm</span> --cached filename</code></pre>
+<p>Then add it to <code>.gitignore</code> and commit the change.</p>
+<hr>
+<h3>Clone</h3>
+<p>Cloning copies a repository from GitHub to your local computer so you can work with it in VS Code or your preferred editor. When you clone, you get all the files and the complete history.</p>
+<pre><code class="hljs">git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/your-username/repo-name.git</code></pre>
+<p><strong>Fork vs Clone:</strong> Fork = your copy on GitHub. Clone = a copy on your computer. You usually clone your fork.</p>
+<hr>
+<h3>Branch</h3>
+<p>A branch is a separate line of development inside a repository. The main branch (often called <code>main</code> or <code>master</code>) holds the stable, released version of the project. When you want to add a feature or fix a bug, you create a new branch so your work doesn&#39;t affect <code>main</code> until it&#39;s ready.</p>
+<p>Think of branches like parallel timelines — each branch is its own version of the project that can evolve independently and be merged back together later.</p>
+<p><strong>Common branch names:</strong></p>
+<ul>
+<li><code>main</code> — the primary, stable branch</li>
+<li><code>develop</code> — integration branch (not all projects have this)</li>
+<li><code>feature/my-new-thing</code> — convention for feature branches</li>
+<li><code>fix/broken-button</code> — convention for bug fix branches</li>
+<li><code>docs/update-readme</code> — convention for documentation-only branches</li>
+</ul>
+<hr>
+<h3>Commit</h3>
+<p>A commit is a saved snapshot of your changes at a moment in time. Every commit has:</p>
+<ul>
+<li>A <strong>message</strong> describing what changed and why</li>
+<li>A unique <strong>SHA hash</strong> (a fingerprint like <code>a1b2c3d</code>)</li>
+<li>The <strong>author</strong> and timestamp</li>
+<li>The <strong>changes</strong> (additions and deletions to files)</li>
+</ul>
+<p>Good commit messages are in the imperative mood: &quot;Fix typo in README&quot; not &quot;Fixed typo&quot; or &quot;Fixing typo.&quot;</p>
+<p>Example of a well-written commit message:</p>
+<pre><code class="hljs">Fix broken link <span class="hljs-keyword">in</span> accessibility guide
+
+The link <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> NVDA download page was <span class="hljs-keyword">using</span> <span class="hljs-keyword">an</span> outdated <span class="hljs-built_in">URL</span>.
+Updated <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> current direct download page.
+
+Fixes <span class="hljs-comment">#42</span></code></pre>
+<hr>
+<h3>Diff</h3>
+<p>A diff (short for difference) shows what changed between two versions of a file. Lines that were <strong>added</strong> are shown in green (with a <code>+</code> prefix). Lines that were <strong>removed</strong> are shown in red (with a <code>-</code> prefix). Lines that are unchanged are shown in grey for context.</p>
+<p>Reading diffs is one of the core skills for code review. When you view a Pull Request&#39;s &quot;Files Changed&quot; tab, you are reading a diff.</p>
+<hr>
+<h2>Part 2: Collaboration Workflow</h2>
+<h3>Issue</h3>
+<p>An issue is a discussion item in a GitHub repository. Issues are used for:</p>
+<ul>
+<li>Reporting bugs</li>
+<li>Requesting features or improvements</li>
+<li>Asking questions</li>
+<li>Discussing ideas</li>
+<li>Tracking work items</li>
+</ul>
+<p>Every issue gets a sequential number (like <code>#42</code>) and can have labels, assignees, milestones, and comments. Issues are the starting point for most contributions — it&#39;s best practice to open or find an issue before making code changes.</p>
+<hr>
+<h3>Pull Request (PR)</h3>
+<p>A pull request is a proposal to merge changes from one branch into another. When you have finished working on your fork or feature branch, you open a PR to say &quot;here is my work — please review it and consider merging it.&quot;</p>
+<p>A PR shows:</p>
+<ul>
+<li>Which branch you want to merge into which target branch</li>
+<li>The diff (all changes you made)</li>
+<li>A description of what you changed and why</li>
+<li>Discussion threads and reviews from others</li>
+</ul>
+<p>The name &quot;pull request&quot; means you are requesting that the maintainers pull your changes into their project.</p>
+<hr>
+<h3>Code Review</h3>
+<p>Code review is the process of one or more collaborators reading and providing feedback on a PR before it is merged. Reviewers can:</p>
+<ul>
+<li><strong>Comment</strong> — leave a note on a line (not a formal verdict)</li>
+<li><strong>Approve</strong> — signal that they are happy with the changes</li>
+<li><strong>Request Changes</strong> — indicate that specific things need to be addressed before merging</li>
+</ul>
+<p>Good code reviews are kind, specific, and constructive.</p>
+<hr>
+<h3>Merge</h3>
+<p>Merging is combining changes from one branch into another. When a PR is approved, a maintainer merges it. There are three merge strategies:</p>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>What It Does</th>
+<th>When Used</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Merge commit</strong></td>
+<td>Creates a new commit recording the merge</td>
+<td>Default on most projects</td>
+</tr>
+<tr>
+<td><strong>Squash and merge</strong></td>
+<td>Combines all PR commits into one commit</td>
+<td>Keeping history clean</td>
+</tr>
+<tr>
+<td><strong>Rebase and merge</strong></td>
+<td>Replays commits on top of target branch</td>
+<td>Linear history projects</td>
+</tr>
+</tbody></table>
+<hr>
+<h3>Merge Conflict</h3>
+<p>A merge conflict happens when two branches have both changed the same part of the same file in different ways. Git doesn&#39;t know which version to keep, so it pauses and asks you to resolve it manually.</p>
+<h1>Conflict markers look like this in a file:
+```
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+The current content on your branch</h1>
+<p>The incoming content from the other branch</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>feature/other-branch</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre><code class="hljs">
+You resolve a <span class="hljs-keyword">conflict</span> <span class="hljs-keyword">by</span> editing the file <span class="hljs-keyword">to</span> have the correct final content, removing the <span class="hljs-keyword">conflict</span> markers, <span class="hljs-keyword">and</span> <span class="hljs-keyword">then</span> committing.
+
+See [Merge Conflicts Guide](<span class="hljs-number">06</span>-merge-conflicts.md) <span class="hljs-keyword">for</span> step-<span class="hljs-keyword">by</span>-step instructions.
+
+<span class="hljs-comment">---</span>
+
+### Upstream
+
+Upstream refers <span class="hljs-keyword">to</span> the original repository that you forked <span class="hljs-keyword">from</span>. <span class="hljs-keyword">When</span> the upstream project has <span class="hljs-built_in">new</span> changes that you want <span class="hljs-keyword">to</span> bring <span class="hljs-keyword">into</span> your fork, you &quot;sync&quot; your fork <span class="hljs-keyword">with</span> upstream.
+</code></pre>
+<p>Your Fork → upstream → Original Repo
+Your changes flow this way: Original Repo ← Pull Request ← Your Fork</p>
+<pre><code class="hljs">
+<span class="hljs-meta">---
+</span>
+<span class="hljs-comment">### Label</span>
+
+<span class="hljs-attr">Labels are colored tags applied to issues and PRs to categorize them. Common labels:</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">`bug`</span> <span class="hljs-string">—</span> <span class="hljs-string">something</span> <span class="hljs-string">isn&#x27;t</span> <span class="hljs-string">working</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">`enhancement`</span> <span class="hljs-string">—</span> <span class="hljs-string">new</span> <span class="hljs-string">feature</span> <span class="hljs-string">or</span> <span class="hljs-string">request</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">`documentation`</span> <span class="hljs-string">—</span> <span class="hljs-string">documentation-only</span> <span class="hljs-string">change</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">`good</span> <span class="hljs-string">first</span> <span class="hljs-string">issue`</span> <span class="hljs-string">—</span> <span class="hljs-string">good</span> <span class="hljs-string">for</span> <span class="hljs-string">newcomers</span> <span class="hljs-string">(look</span> <span class="hljs-string">for</span> <span class="hljs-string">this</span> <span class="hljs-string">when</span> <span class="hljs-string">finding</span> <span class="hljs-string">your</span> <span class="hljs-string">first</span> <span class="hljs-string">contribution!)</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">`help</span> <span class="hljs-string">wanted`</span> <span class="hljs-string">—</span> <span class="hljs-string">maintainers</span> <span class="hljs-string">want</span> <span class="hljs-string">community</span> <span class="hljs-string">help</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">`accessibility`</span> <span class="hljs-string">—</span> <span class="hljs-string">accessibility-related</span>
+
+<span class="hljs-meta">---
+</span>
+<span class="hljs-comment">### Milestone</span>
+
+<span class="hljs-attr">A milestone groups issues and PRs toward a goal or deadline. For example:</span> <span class="hljs-string">&quot;v2.0 Release&quot;</span> <span class="hljs-string">or</span> <span class="hljs-string">&quot;Hackathon Day 1.&quot;</span> <span class="hljs-string">Milestones</span> <span class="hljs-string">show</span> <span class="hljs-string">progress</span> <span class="hljs-string">as</span> <span class="hljs-string">a</span> <span class="hljs-string">percentage</span> <span class="hljs-string">of</span> <span class="hljs-string">closed</span> <span class="hljs-string">versus</span> <span class="hljs-string">open</span> <span class="hljs-string">items.</span>
+
+<span class="hljs-meta">---
+</span>
+<span class="hljs-comment">### Project (GitHub Projects)</span>
+
+<span class="hljs-string">A</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Project</span> <span class="hljs-string">is</span> <span class="hljs-string">a</span> <span class="hljs-string">flexible</span> <span class="hljs-string">board</span> <span class="hljs-string">for</span> <span class="hljs-string">tracking</span> <span class="hljs-string">work.</span> <span class="hljs-string">It</span> <span class="hljs-string">can</span> <span class="hljs-string">show</span> <span class="hljs-string">issues</span> <span class="hljs-string">and</span> <span class="hljs-string">PRs</span> <span class="hljs-string">in</span> <span class="hljs-string">table</span> <span class="hljs-string">view,</span> <span class="hljs-string">board</span> <span class="hljs-string">view</span> <span class="hljs-string">(kanban),</span> <span class="hljs-string">or</span> <span class="hljs-string">roadmap</span> <span class="hljs-string">view.</span> <span class="hljs-string">Projects</span> <span class="hljs-string">are</span> <span class="hljs-string">especially</span> <span class="hljs-string">useful</span> <span class="hljs-string">for</span> <span class="hljs-string">hackathon-style</span> <span class="hljs-string">coordination.</span>
+
+<span class="hljs-meta">---
+</span>
+<span class="hljs-comment">## Part 3: People and Roles</span>
+
+<span class="hljs-comment">### Maintainer</span>
+
+<span class="hljs-string">A</span> <span class="hljs-string">maintainer</span> <span class="hljs-string">is</span> <span class="hljs-string">someone</span> <span class="hljs-string">with</span> <span class="hljs-string">write</span> <span class="hljs-string">or</span> <span class="hljs-string">admin</span> <span class="hljs-string">access</span> <span class="hljs-string">to</span> <span class="hljs-string">a</span> <span class="hljs-string">repository.</span> <span class="hljs-string">Maintainers</span> <span class="hljs-string">review</span> <span class="hljs-string">PRs,</span> <span class="hljs-string">triage</span> <span class="hljs-string">issues,</span> <span class="hljs-string">manage</span> <span class="hljs-string">releases,</span> <span class="hljs-string">and</span> <span class="hljs-string">make</span> <span class="hljs-string">decisions</span> <span class="hljs-string">about</span> <span class="hljs-string">the</span> <span class="hljs-string">project&#x27;s</span> <span class="hljs-string">direction.</span> <span class="hljs-string">Most</span> <span class="hljs-string">open</span> <span class="hljs-string">source</span> <span class="hljs-string">projects</span> <span class="hljs-string">have</span> <span class="hljs-string">between</span> <span class="hljs-string">one</span> <span class="hljs-string">and</span> <span class="hljs-string">five</span> <span class="hljs-string">core</span> <span class="hljs-string">maintainers.</span>
+
+<span class="hljs-meta">---
+</span>
+<span class="hljs-comment">### Contributor</span>
+
+<span class="hljs-string">Anyone</span> <span class="hljs-string">who</span> <span class="hljs-string">contributes</span> <span class="hljs-string">to</span> <span class="hljs-string">an</span> <span class="hljs-string">open</span> <span class="hljs-string">source</span> <span class="hljs-string">project</span> <span class="hljs-string">is</span> <span class="hljs-string">a</span> <span class="hljs-string">contributor.</span> <span class="hljs-string">Contributing</span> <span class="hljs-string">includes</span> <span class="hljs-string">code,</span> <span class="hljs-string">documentation,</span> <span class="hljs-string">design,</span> <span class="hljs-string">testing,</span> <span class="hljs-string">translation,</span> <span class="hljs-string">issue</span> <span class="hljs-string">triage,</span> <span class="hljs-string">and</span> <span class="hljs-string">community</span> <span class="hljs-string">support.</span> <span class="hljs-string">You</span> <span class="hljs-string">do</span> <span class="hljs-string">not</span> <span class="hljs-string">need</span> <span class="hljs-string">commit</span> <span class="hljs-string">access</span> <span class="hljs-string">to</span> <span class="hljs-string">contribute.</span>
+
+<span class="hljs-meta">---
+</span>
+<span class="hljs-comment">### Triage</span>
+
+<span class="hljs-string">Triaging</span> <span class="hljs-string">issues</span> <span class="hljs-string">means</span> <span class="hljs-string">reviewing</span> <span class="hljs-string">new</span> <span class="hljs-string">issues</span> <span class="hljs-string">to</span> <span class="hljs-string">categorize</span> <span class="hljs-string">them,</span> <span class="hljs-string">add</span> <span class="hljs-string">labels,</span> <span class="hljs-string">assign</span> <span class="hljs-string">them,</span> <span class="hljs-string">close</span> <span class="hljs-string">duplicates,</span> <span class="hljs-string">and</span> <span class="hljs-string">communicate</span> <span class="hljs-string">with</span> <span class="hljs-string">the</span> <span class="hljs-string">reporter.</span> <span class="hljs-string">Triage</span> <span class="hljs-string">is</span> <span class="hljs-string">an</span> <span class="hljs-string">important</span> <span class="hljs-string">contribution</span> <span class="hljs-string">that</span> <span class="hljs-string">doesn&#x27;t</span> <span class="hljs-string">require</span> <span class="hljs-string">coding</span> <span class="hljs-string">skills.</span>
+
+<span class="hljs-meta">---
+</span>
+<span class="hljs-comment">### Collaborator</span>
+
+<span class="hljs-string">A</span> <span class="hljs-string">collaborator</span> <span class="hljs-string">is</span> <span class="hljs-string">someone</span> <span class="hljs-string">who</span> <span class="hljs-string">has</span> <span class="hljs-string">been</span> <span class="hljs-string">explicitly</span> <span class="hljs-string">granted</span> <span class="hljs-string">write</span> <span class="hljs-string">access</span> <span class="hljs-string">to</span> <span class="hljs-string">a</span> <span class="hljs-string">repository.</span> <span class="hljs-string">Collaborators</span> <span class="hljs-string">can</span> <span class="hljs-string">commit</span> <span class="hljs-string">directly</span> <span class="hljs-string">to</span> <span class="hljs-string">the</span> <span class="hljs-string">repo</span> <span class="hljs-string">without</span> <span class="hljs-string">forking</span> <span class="hljs-string">(though</span> <span class="hljs-string">good</span> <span class="hljs-string">practice</span> <span class="hljs-string">is</span> <span class="hljs-string">still</span> <span class="hljs-string">to</span> <span class="hljs-string">use</span> <span class="hljs-string">branches</span> <span class="hljs-string">and</span> <span class="hljs-string">PRs).</span>
+
+<span class="hljs-meta">---
+</span>
+<span class="hljs-comment">## Part 4: Common Abbreviations and Slang</span>
+
+<span class="hljs-string">These</span> <span class="hljs-string">abbreviations</span> <span class="hljs-string">appear</span> <span class="hljs-string">frequently</span> <span class="hljs-string">in</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">comments,</span> <span class="hljs-string">PR</span> <span class="hljs-string">descriptions,</span> <span class="hljs-attr">and commit messages:</span>
+
+<span class="hljs-string">|</span> <span class="hljs-string">Term</span> <span class="hljs-string">|</span> <span class="hljs-string">Stands</span> <span class="hljs-string">For</span> <span class="hljs-string">|</span> <span class="hljs-string">Meaning</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|------|-----------|---------|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**LGTM**</span> <span class="hljs-string">|</span> <span class="hljs-string">Looks</span> <span class="hljs-string">Good</span> <span class="hljs-string">To</span> <span class="hljs-string">Me</span> <span class="hljs-string">|</span> <span class="hljs-string">Informal</span> <span class="hljs-string">approval</span> <span class="hljs-string">—</span> <span class="hljs-string">&quot;I reviewed it and it looks correct&quot;</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**WIP**</span> <span class="hljs-string">|</span> <span class="hljs-string">Work</span> <span class="hljs-string">In</span> <span class="hljs-string">Progress</span> <span class="hljs-string">|</span> <span class="hljs-string">This</span> <span class="hljs-string">PR</span> <span class="hljs-string">is</span> <span class="hljs-string">not</span> <span class="hljs-string">ready</span> <span class="hljs-string">for</span> <span class="hljs-string">review</span> <span class="hljs-string">yet</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**nit**</span> <span class="hljs-string">|</span> <span class="hljs-string">Nitpick</span> <span class="hljs-string">|</span> <span class="hljs-string">A</span> <span class="hljs-string">minor,</span> <span class="hljs-string">optional</span> <span class="hljs-string">suggestion</span> <span class="hljs-string">—</span> <span class="hljs-string">&quot;not a blocker&quot;</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**RFC**</span> <span class="hljs-string">|</span> <span class="hljs-string">Request</span> <span class="hljs-string">For</span> <span class="hljs-string">Comments</span> <span class="hljs-string">|</span> <span class="hljs-string">Seeking</span> <span class="hljs-string">broad</span> <span class="hljs-string">feedback</span> <span class="hljs-string">on</span> <span class="hljs-string">an</span> <span class="hljs-string">idea</span> <span class="hljs-string">or</span> <span class="hljs-string">approach</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**PTAL**</span> <span class="hljs-string">|</span> <span class="hljs-string">Please</span> <span class="hljs-string">Take</span> <span class="hljs-string">A</span> <span class="hljs-string">Look</span> <span class="hljs-string">|</span> <span class="hljs-string">Asking</span> <span class="hljs-string">someone</span> <span class="hljs-string">to</span> <span class="hljs-string">review</span> <span class="hljs-string">something</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**IMO</span> <span class="hljs-string">/</span> <span class="hljs-string">IMHO**</span> <span class="hljs-string">|</span> <span class="hljs-string">In</span> <span class="hljs-string">My</span> <span class="hljs-string">(Humble)</span> <span class="hljs-string">Opinion</span> <span class="hljs-string">|</span> <span class="hljs-string">Softening</span> <span class="hljs-string">a</span> <span class="hljs-string">suggestion</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**AFAICT**</span> <span class="hljs-string">|</span> <span class="hljs-string">As</span> <span class="hljs-string">Far</span> <span class="hljs-string">As</span> <span class="hljs-string">I</span> <span class="hljs-string">Can</span> <span class="hljs-string">Tell</span> <span class="hljs-string">|</span> <span class="hljs-string">&quot;Based on what I can see...&quot;</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**TIL**</span> <span class="hljs-string">|</span> <span class="hljs-string">Today</span> <span class="hljs-string">I</span> <span class="hljs-string">Learned</span> <span class="hljs-string">|</span> <span class="hljs-string">Sharing</span> <span class="hljs-string">a</span> <span class="hljs-string">discovery</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**FYI**</span> <span class="hljs-string">|</span> <span class="hljs-string">For</span> <span class="hljs-string">Your</span> <span class="hljs-string">Information</span> <span class="hljs-string">|</span> <span class="hljs-string">Sharing</span> <span class="hljs-string">information,</span> <span class="hljs-literal">no</span> <span class="hljs-string">action</span> <span class="hljs-string">needed</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**EOD</span> <span class="hljs-string">/</span> <span class="hljs-string">EOW**</span> <span class="hljs-string">|</span> <span class="hljs-string">End</span> <span class="hljs-string">of</span> <span class="hljs-string">Day</span> <span class="hljs-string">/</span> <span class="hljs-string">Week</span> <span class="hljs-string">|</span> <span class="hljs-string">Deadline</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**Closes</span> <span class="hljs-comment">#42** | — | When merged, this PR closes issue #42 (automatic linking) |</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**Fixes</span> <span class="hljs-comment">#42** | — | Same as Closes — use when the PR fixes a bug |</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**Resolves</span> <span class="hljs-comment">#42** | — | Same as Closes — general resolution |</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**Refs</span> <span class="hljs-comment">#42** | References #42 | Links to the issue without closing it |</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**cc</span> <span class="hljs-string">@username**</span> <span class="hljs-string">|</span> <span class="hljs-string">Carbon</span> <span class="hljs-string">copy</span> <span class="hljs-string">|</span> <span class="hljs-string">Notifying</span> <span class="hljs-string">someone</span> <span class="hljs-string">without</span> <span class="hljs-string">requiring</span> <span class="hljs-string">their</span> <span class="hljs-string">action</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**/cc**</span> <span class="hljs-string">|</span> <span class="hljs-string">Same</span> <span class="hljs-string">as</span> <span class="hljs-string">cc</span> <span class="hljs-string">|</span> <span class="hljs-string">Alternative</span> <span class="hljs-string">form</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**stale**</span> <span class="hljs-string">|</span> <span class="hljs-string">—</span> <span class="hljs-string">|</span> <span class="hljs-string">An</span> <span class="hljs-string">issue</span> <span class="hljs-string">or</span> <span class="hljs-string">PR</span> <span class="hljs-string">with</span> <span class="hljs-literal">no</span> <span class="hljs-string">recent</span> <span class="hljs-string">activity</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**WONTFIX**</span> <span class="hljs-string">|</span> <span class="hljs-string">—</span> <span class="hljs-string">|</span> <span class="hljs-string">The</span> <span class="hljs-string">project</span> <span class="hljs-string">won&#x27;t</span> <span class="hljs-string">address</span> <span class="hljs-string">this</span> <span class="hljs-string">issue</span> <span class="hljs-string">(it&#x27;s</span> <span class="hljs-string">not</span> <span class="hljs-string">a</span> <span class="hljs-string">bug,</span> <span class="hljs-string">or</span> <span class="hljs-string">by</span> <span class="hljs-string">design)</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**upstream**</span> <span class="hljs-string">|</span> <span class="hljs-string">—</span> <span class="hljs-string">|</span> <span class="hljs-string">The</span> <span class="hljs-string">original</span> <span class="hljs-string">repo</span> <span class="hljs-string">you</span> <span class="hljs-string">forked</span> <span class="hljs-string">from</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**downstream**</span> <span class="hljs-string">|</span> <span class="hljs-string">—</span> <span class="hljs-string">|</span> <span class="hljs-string">A</span> <span class="hljs-string">fork</span> <span class="hljs-string">or</span> <span class="hljs-string">project</span> <span class="hljs-string">that</span> <span class="hljs-string">depends</span> <span class="hljs-string">on</span> <span class="hljs-string">this</span> <span class="hljs-string">one</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> <span class="hljs-string">**breaking</span> <span class="hljs-string">change**</span> <span class="hljs-string">|</span> <span class="hljs-string">—</span> <span class="hljs-string">|</span> <span class="hljs-string">A</span> <span class="hljs-string">change</span> <span class="hljs-string">that</span> <span class="hljs-string">will</span> <span class="hljs-string">break</span> <span class="hljs-string">existing</span> <span class="hljs-string">functionality</span> <span class="hljs-string">for</span> <span class="hljs-string">users</span> <span class="hljs-string">|</span>
+
+<span class="hljs-meta">---
+</span>
+<span class="hljs-comment">## Part 5: Technical GitHub Concepts</span>
+
+<span class="hljs-comment">### HEAD</span>
+
+<span class="hljs-string">`HEAD`</span> <span class="hljs-string">is</span> <span class="hljs-string">Git&#x27;s</span> <span class="hljs-string">way</span> <span class="hljs-string">of</span> <span class="hljs-string">saying</span> <span class="hljs-string">&quot;where you are right now.&quot;</span> <span class="hljs-string">It&#x27;s</span> <span class="hljs-string">a</span> <span class="hljs-string">pointer</span> <span class="hljs-string">to</span> <span class="hljs-string">the</span> <span class="hljs-string">current</span> <span class="hljs-string">commit</span> <span class="hljs-string">on</span> <span class="hljs-string">the</span> <span class="hljs-string">current</span> <span class="hljs-string">branch.</span>
+
+<span class="hljs-bullet">-</span> <span class="hljs-string">When</span> <span class="hljs-string">you&#x27;re</span> <span class="hljs-string">on</span> <span class="hljs-string">`main`,</span> <span class="hljs-string">`HEAD`</span> <span class="hljs-string">points</span> <span class="hljs-string">to</span> <span class="hljs-string">the</span> <span class="hljs-string">latest</span> <span class="hljs-string">commit</span> <span class="hljs-string">on</span> <span class="hljs-string">`main`</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">When</span> <span class="hljs-string">you</span> <span class="hljs-string">switch</span> <span class="hljs-string">branches,</span> <span class="hljs-string">`HEAD`</span> <span class="hljs-string">moves</span> <span class="hljs-string">to</span> <span class="hljs-string">that</span> <span class="hljs-string">branch</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">`HEAD^`</span> <span class="hljs-string">or</span> <span class="hljs-string">`HEAD~1`</span> <span class="hljs-string">means</span> <span class="hljs-string">&quot;the commit before HEAD&quot;</span>
+
+<span class="hljs-string">You&#x27;ll</span> <span class="hljs-attr">see HEAD referenced in commands like:</span>
+<span class="hljs-string">```bash</span>
+<span class="hljs-string">git</span> <span class="hljs-string">reset</span> <span class="hljs-string">HEAD~1</span>  <span class="hljs-comment"># Undo the last commit</span>
+<span class="hljs-string">git</span> <span class="hljs-string">diff</span> <span class="hljs-string">HEAD</span>     <span class="hljs-comment"># Show uncommitted changes</span></code></pre>
+<hr>
+<h3>Detached HEAD</h3>
+<p>A &quot;detached HEAD&quot; occurs when you check out a specific commit instead of a branch. You&#39;re no longer &quot;on&quot; a branch — just looking at a snapshot in time.</p>
+<p><strong>Why it happens:</strong></p>
+<pre><code class="hljs language-bash">git checkout a1b2c3d  <span class="hljs-comment"># Checking out a commit directly</span></code></pre>
+<p><strong>What this means:</strong></p>
+<ul>
+<li>Any commits you make won&#39;t belong to any branch</li>
+<li>If you switch branches, those commits become &quot;orphaned&quot;</li>
+</ul>
+<p><strong>How to fix it:</strong>
+If you made commits in detached HEAD state and want to keep them:</p>
+<pre><code class="hljs language-bash">git branch new-branch-name  <span class="hljs-comment"># Creates a branch from your current position</span>
+git checkout new-branch-name</code></pre>
+<p><strong>Screen reader note:</strong> Git will warn you verbosely when entering detached HEAD state. Read the guidance carefully.</p>
+<hr>
+<h3>Stash</h3>
+<p><code>git stash</code> temporarily saves your uncommitted changes and reverts your working directory to a clean state. It&#39;s useful when you need to switch branches but aren&#39;t ready to commit.</p>
+<p><strong>Common workflow:</strong></p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># You&#x27;re working on branch A</span>
+git stash  <span class="hljs-comment"># Save your changes temporarily</span>
+git checkout main  <span class="hljs-comment"># Switch to main</span>
+<span class="hljs-comment"># Do something on main...</span>
+git checkout branch-a  <span class="hljs-comment"># Switch back</span>
+git stash pop  <span class="hljs-comment"># Restore your changes</span></code></pre>
+<p><strong>Stash commands:</strong></p>
+<ul>
+<li><code>git stash</code> — save changes</li>
+<li><code>git stash list</code> — see what&#39;s stashed</li>
+<li><code>git stash pop</code> — restore and remove from stash</li>
+<li><code>git stash apply</code> — restore but keep in stash</li>
+<li><code>git stash drop</code> — delete a stash</li>
+</ul>
+<p><strong>Use case:</strong> &quot;I need to quickly switch branches to check something, but I&#39;m in the middle of work I&#39;m not ready to commit.&quot;</p>
+<hr>
+<h3>Rebase</h3>
+<p>Rebasing is an alternative to merging. Instead of creating a merge commit, rebase moves (replays) your commits on top of another branch.</p>
+<p><strong>Merge:</strong></p>
+<pre><code class="hljs"><span class="hljs-comment">main:    A</span><span class="hljs-literal">---</span><span class="hljs-comment">B</span><span class="hljs-literal">---</span><span class="hljs-comment">C</span>
+               <span class="hljs-comment">\</span>
+<span class="hljs-comment">feature:        D</span><span class="hljs-literal">---</span><span class="hljs-comment">E</span><span class="hljs-literal">---</span><span class="hljs-comment">F</span>
+                         <span class="hljs-comment">\</span>
+<span class="hljs-comment">result:  A</span><span class="hljs-literal">---</span><span class="hljs-comment">B</span><span class="hljs-literal">---</span><span class="hljs-comment">C</span><span class="hljs-literal">-------</span><span class="hljs-comment">M (merge commit)</span></code></pre>
+<p><strong>Rebase:</strong></p>
+<pre><code class="hljs"><span class="hljs-variable">main</span><span class="hljs-operator">:</span>    <span class="hljs-variable">A</span><span class="hljs-operator">---</span><span class="hljs-variable">B</span><span class="hljs-operator">---</span><span class="hljs-built_in">C</span>
+<span class="hljs-variable">feature</span><span class="hljs-operator">:</span>             <span class="hljs-built_in">D</span><span class="hljs-operator">&#x27;---</span><span class="hljs-built_in">E</span><span class="hljs-operator">&#x27;---</span><span class="hljs-variable">F</span><span class="hljs-operator">&#x27;</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">commits</span> <span class="hljs-string">&quot;replayed&quot;</span> <span class="hljs-variable">on</span> <span class="hljs-variable">top</span> <span class="hljs-variable">of</span> <span class="hljs-built_in">C</span><span class="hljs-punctuation">)</span></code></pre>
+<p><strong>When to use rebase:</strong></p>
+<ul>
+<li>Keep a linear project history</li>
+<li>Clean up your branch before submitting a PR</li>
+<li>Incorporate upstream changes into your feature branch</li>
+</ul>
+<p><strong>When NOT to rebase:</strong></p>
+<ul>
+<li>Shared branches (never rebase <code>main</code> or public branches)</li>
+<li>After pushing to GitHub (unless you&#39;re comfortable force pushing)</li>
+</ul>
+<p><strong>Basic rebase workflow:</strong></p>
+<pre><code class="hljs language-bash">git checkout feature-branch
+git rebase main
+<span class="hljs-comment"># Fix any conflicts</span>
+git push --force-with-lease  <span class="hljs-comment"># See Force Push below</span></code></pre>
+<p><strong>Screen reader note:</strong> Rebase conflicts are resolved the same way as merge conflicts (edit file, remove markers, <code>git add</code>, <code>git rebase --continue</code>).</p>
+<hr>
+<h3>Cherry-Pick</h3>
+<p>Cherry-picking applies a single commit from one branch onto another. It&#39;s like copy-pasting a commit.</p>
+<p><strong>Use case:</strong> You made a bug fix on the wrong branch and want to apply it to <code>main</code> without merging the whole branch.</p>
+<pre><code class="hljs language-bash">git checkout main
+git cherry-pick a1b2c3d  <span class="hljs-comment"># Apply commit a1b2c3d to main</span></code></pre>
+<p><strong>When to use:</strong></p>
+<ul>
+<li>Extract a single fix from a larger feature branch</li>
+<li>Backport a bug fix to an older release branch</li>
+<li>Undo a commit on one branch but keep it on another</li>
+</ul>
+<p><strong>Warning:</strong> Cherry-picking duplicates commits (creates a new commit with the same changes). Avoid cherry-picking commits that are part of an active feature branch — it causes confusion.</p>
+<hr>
+<h3>Fetch vs Pull</h3>
+<p><strong><code>git fetch</code></strong> downloads changes from a remote repository but doesn&#39;t merge them into your current branch. It updates your local copy of remote branches (like <code>origin/main</code> or <code>upstream/main</code>) without touching your working files.</p>
+<pre><code class="hljs language-bash">git fetch origin  <span class="hljs-comment"># Download updates from origin</span></code></pre>
+<p><strong><code>git pull</code></strong> = <code>git fetch</code> + <code>git merge</code>. It downloads changes <strong>and</strong> immediately merges them into your current branch.</p>
+<pre><code class="hljs language-bash">git pull origin main  <span class="hljs-comment"># Fetch + merge origin/main into current branch</span></code></pre>
+<p><strong>When to use fetch:</strong></p>
+<ul>
+<li>You want to see what changed without committing to merging</li>
+<li>You want to review changes before integrating them</li>
+<li>You&#39;re syncing upstream and want to inspect first</li>
+</ul>
+<p><strong>When to use pull:</strong></p>
+<ul>
+<li>You know you want the latest changes merged immediately</li>
+<li>You&#39;re working alone on a branch</li>
+</ul>
+<p><strong>Best practice for collaboration:</strong> Use <code>fetch</code> first, review with <code>git log origin/main</code>, then decide to merge or rebase.</p>
+<hr>
+<h3>Force Push</h3>
+<p>Force pushing (<code>git push --force</code> or <code>git push -f</code>) overwrites the remote branch with your local version, replacing its history. This is <strong>dangerous</strong> because it can delete commits that others have based work on.</p>
+<p><strong>When force push is okay:</strong></p>
+<ul>
+<li>Your own feature branch that no one else is working on</li>
+<li>After rebasing to clean up history before merging a PR</li>
+</ul>
+<p><strong>When force push is NEVER okay:</strong></p>
+<ul>
+<li>The <code>main</code> branch</li>
+<li>Shared branches where others have based work on your commits</li>
+<li>Public branches with collaborators</li>
+</ul>
+<p><strong>Safer alternative: <code>--force-with-lease</code></strong></p>
+<pre><code class="hljs language-bash">git push --force-with-lease origin feature-branch</code></pre>
+<p><code>--force-with-lease</code> only force pushes if no one else has pushed to the remote branch since you last fetched. If someone pushed changes, the command fails and warns you.</p>
+<p><strong>Why force push is needed after rebase:</strong></p>
+<p>When you rebase, Git rewrites commit history. The remote branch and your local branch now have conflicting histories. A normal <code>git push</code> fails. Force pushing resolves this by saying &quot;trust my version.&quot;</p>
+<p><strong>Rule of thumb:</strong> If you&#39;re not sure whether you need to force push, you probably shouldn&#39;t.</p>
+<hr>
+<h3>SHA / Hash</h3>
+<p>Every commit, file, and tree in Git is identified by a SHA hash — a 40-character string of letters and numbers (e.g., <code>a1b2c3d4e5f6...</code>). You will see shortened versions like <code>a1b2c3d</code> in the GitHub UI. These are unique fingerprints.</p>
+<hr>
+<h3>Tag / Release</h3>
+<p>A tag marks a specific commit as significant — usually a version release like <code>v1.0.0</code>. Tags are permanent references (unlike branches, which move with each new commit). GitHub Releases are built on top of tags and can include release notes and downloadable files.</p>
+<hr>
+<h3>Actions / Workflow / CI/CD</h3>
+<p>GitHub Actions is an automation platform built into GitHub. Workflows are automated scripts (written in YAML) that run in response to events — like a PR being opened or code being pushed. CI/CD stands for Continuous Integration / Continuous Deployment.</p>
+<p>In practice: when you open a PR, you will often see automated checks run (tests, linting, accessibility checks). These are GitHub Actions. See <a href="appendix-q-github-actions-workflows.md">GitHub Actions &amp; Workflows</a> for a full explanation.</p>
+<hr>
+<h3>Status Check</h3>
+<p>A status check is the result of an automated test or workflow run on a PR. Status checks show as:</p>
+<ul>
+<li>Green checkmark — all checks passed</li>
+<li>Red X — one or more checks failed</li>
+<li>Yellow dot — checks are still running</li>
+</ul>
+<p>Maintainers often require status checks to pass before merging.</p>
+<hr>
+<h3>Webhook</h3>
+<p>A webhook is an automated notification that GitHub sends to another service when something happens (a push, a PR opened, etc.). Webhooks power integrations with tools like Slack, project management systems, and CI services. As a contributor, you typically don&#39;t configure webhooks — they are set up by maintainers.</p>
+<hr>
+<h3>GitHub Discussions</h3>
+<p>Discussions are a threaded forum built into GitHub, separate from Issues. They are used for open-ended conversation, Q&amp;A, and community announcements. Not all projects use Discussions — some prefer issues or external forums.</p>
+<hr>
+<h3>Profile</h3>
+<p>Your GitHub profile is your public identity. It shows your name, bio, location, repositories, contribution activity (the green squares), and pinned projects. Your profile URL is <code>https://github.com/your-username</code>.</p>
+<hr>
+<h3>GitHub Copilot</h3>
+<p>GitHub Copilot is an AI-powered coding assistant. It suggests code, documentation, and commit messages. In this workshop, we use Copilot to help write issue descriptions, PR descriptions, documentation, and code. See <a href="13-github-copilot.md">GitHub Copilot</a> for the full walkthrough.</p>
+<hr>
+<h2>Part 6: Community Files</h2>
+<p>Every healthy open source project has these files in the root of the repository:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>README.md</code></td>
+<td>Project overview, how to use it, how to contribute</td>
+</tr>
+<tr>
+<td><code>CONTRIBUTING.md</code></td>
+<td>How to contribute — setup, workflow, PR guidelines</td>
+</tr>
+<tr>
+<td><code>CODE_OF_CONDUCT.md</code></td>
+<td>Community standards and expectations</td>
+</tr>
+<tr>
+<td><code>LICENSE</code></td>
+<td>Legal terms for using the software</td>
+</tr>
+<tr>
+<td><code>SECURITY.md</code></td>
+<td>How to report security vulnerabilities responsibly</td>
+</tr>
+<tr>
+<td><code>CHANGELOG.md</code></td>
+<td>History of notable changes by version</td>
+</tr>
+<tr>
+<td><code>.github/ISSUE_TEMPLATE/</code></td>
+<td>Templates for bug reports, feature requests, etc.</td>
+</tr>
+<tr>
+<td><code>.github/PULL_REQUEST_TEMPLATE.md</code></td>
+<td>Template for PR descriptions</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Alphabetical Quick Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.gitignore</td>
+<td>File specifying which files Git should ignore</td>
+</tr>
+<tr>
+<td>Assignee</td>
+<td>Person responsible for an issue or PR</td>
+</tr>
+<tr>
+<td>Base branch</td>
+<td>The branch a PR merges INTO</td>
+</tr>
+<tr>
+<td>Branch</td>
+<td>A parallel line of development</td>
+</tr>
+<tr>
+<td>Cherry-pick</td>
+<td>Apply a specific commit from one branch to another</td>
+</tr>
+<tr>
+<td>CI/CD</td>
+<td>Continuous Integration / Continuous Deployment</td>
+</tr>
+<tr>
+<td>Clone</td>
+<td>Copy a repo to your local computer</td>
+</tr>
+<tr>
+<td>Code review</td>
+<td>Reviewing PR changes before merging</td>
+</tr>
+<tr>
+<td>Codespaces</td>
+<td>Cloud-based VS Code development environment</td>
+</tr>
+<tr>
+<td>Collaborator</td>
+<td>Someone with write access to a repo</td>
+</tr>
+<tr>
+<td>Comment</td>
+<td>Discussion note on an issue, PR, or specific line</td>
+</tr>
+<tr>
+<td>Commit</td>
+<td>A saved snapshot of changes</td>
+</tr>
+<tr>
+<td>Compare branch</td>
+<td>The branch a PR merges FROM</td>
+</tr>
+<tr>
+<td>Contributor</td>
+<td>Anyone who contributes to a project</td>
+</tr>
+<tr>
+<td>Default branch</td>
+<td>The main branch (usually named &quot;main&quot;)</td>
+</tr>
+<tr>
+<td>Detached HEAD</td>
+<td>Checking out a specific commit instead of a branch</td>
+</tr>
+<tr>
+<td>Diff</td>
+<td>The visual difference between two file versions</td>
+</tr>
+<tr>
+<td>Discussions</td>
+<td>Threaded forum space for Q&amp;A and community conversation</td>
+</tr>
+<tr>
+<td>Draft PR</td>
+<td>A PR not yet ready for review</td>
+</tr>
+<tr>
+<td>Feature preview</td>
+<td>Opt-in GitHub UI experiments</td>
+</tr>
+<tr>
+<td>Fetch</td>
+<td>Download remote changes without merging</td>
+</tr>
+<tr>
+<td>Force push</td>
+<td>Overwrite remote branch history (use with caution)</td>
+</tr>
+<tr>
+<td>Fork</td>
+<td>Your personal copy of another repo</td>
+</tr>
+<tr>
+<td>Git</td>
+<td>The version control system GitHub is built on</td>
+</tr>
+<tr>
+<td>GitHub Pages</td>
+<td>Free static site hosting from a GitHub repository</td>
+</tr>
+<tr>
+<td>Gist</td>
+<td>Shareable code snippet or small file collection</td>
+</tr>
+<tr>
+<td>Hash / SHA</td>
+<td>Unique identifier for a commit or object</td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>Pointer to your current commit/branch</td>
+</tr>
+<tr>
+<td>Issue</td>
+<td>A discussion item (bug, feature, question)</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>Colored tag for categorizing issues/PRs</td>
+</tr>
+<tr>
+<td>Maintainer</td>
+<td>Person with repo write/admin access</td>
+</tr>
+<tr>
+<td>Merge</td>
+<td>Combining changes from one branch into another</td>
+</tr>
+<tr>
+<td>Merge conflict</td>
+<td>When two branches changed the same content differently</td>
+</tr>
+<tr>
+<td>Milestone</td>
+<td>A goal grouping related issues/PRs</td>
+</tr>
+<tr>
+<td>Organization</td>
+<td>A group GitHub account</td>
+</tr>
+<tr>
+<td>Origin</td>
+<td>Default name for the remote you cloned from (your fork)</td>
+</tr>
+<tr>
+<td>PR</td>
+<td>Pull Request</td>
+</tr>
+<tr>
+<td>Pull</td>
+<td>Fetch changes and merge them (<code>git pull</code>)</td>
+</tr>
+<tr>
+<td>Pull Request</td>
+<td>Proposal to merge your changes</td>
+</tr>
+<tr>
+<td>README</td>
+<td>The main project documentation file</td>
+</tr>
+<tr>
+<td>Rebase</td>
+<td>Replay commits on top of another branch</td>
+</tr>
+<tr>
+<td>Release</td>
+<td>A versioned snapshot with notes and downloads</td>
+</tr>
+<tr>
+<td>Remote</td>
+<td>A connection to a repository hosted elsewhere</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>A project container with all files and history</td>
+</tr>
+<tr>
+<td>Review</td>
+<td>Formal feedback on a PR (approve/comment/request changes)</td>
+</tr>
+<tr>
+<td>SHA</td>
+<td>Unique hash identifier</td>
+</tr>
+<tr>
+<td>Squash merge</td>
+<td>Combining all PR commits into one</td>
+</tr>
+<tr>
+<td>Stash</td>
+<td>Temporarily save uncommitted changes</td>
+</tr>
+<tr>
+<td>Status check</td>
+<td>Automated pass/fail result shown on a PR</td>
+</tr>
+<tr>
+<td>Tag</td>
+<td>A permanent named reference to a specific commit</td>
+</tr>
+<tr>
+<td>Triage</td>
+<td>Reviewing and categorizing new issues</td>
+</tr>
+<tr>
+<td>Upstream</td>
+<td>The original repo you forked from</td>
+</tr>
+<tr>
+<td>Wiki</td>
+<td>Multi-page documentation space in a repository</td>
+</tr>
+<tr>
+<td>Tag</td>
+<td>A permanent named reference to a specific commit</td>
+</tr>
+<tr>
+<td>Triage</td>
+<td>Reviewing and categorizing new issues</td>
+</tr>
+<tr>
+<td>Upstream</td>
+<td>The original repo you forked from</td>
+</tr>
+</tbody></table>
+<hr>
+<p><em>Appendix B — look up any term here at any point during the workshop.</em>
+<em>Return to: <a href="02-day1-agenda.md">Day 1 Agenda</a> | <a href="01-understanding-github-web-structure.md">Understanding GitHub&#39;s Web Structure</a></em>
+<em>See also: <a href="appendix-b-screen-reader-cheatsheet.md">Screen Reader Cheat Sheet</a></em></p>
+
+  </main>
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+    <p>GitHub Learning Room — Open Source Assistive Technology Hackathon</p>
+    <p><a href="https://github.com/accesswatch/Learning-Room">View on GitHub</a></p>
+  </footer>
+</body>
+</html>

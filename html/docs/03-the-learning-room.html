@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GitHub Learning Room - Open Source Assistive Technology Hackathon">
+  <title>The Learning Room: Shared Practice Repository — GitHub Learning Room</title>
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">The Learning Room: Shared Practice Repository</span>
+  </nav>
+  <main id="main-content" class="markdown-body">
+    <h1>The Learning Room: Shared Practice Repository</h1>
+<h2>What Is the Learning Room?</h2>
+<p>The <strong>Learning Room</strong> is a single, shared GitHub repository where all workshop participants collaborate together. It is not your personal fork. It is not your individual repository. It is one repo with many students, many branches, and many pull requests.</p>
+<pre><code class="hljs">learning-room (<span class="hljs-keyword">SHARED</span>)
+├── main branch (<span class="hljs-keyword">protected</span>)
+├── Student A<span class="hljs-symbol">&#x27;s</span> PR #<span class="hljs-number">12</span> (<span class="hljs-keyword">open</span>, assigned <span class="hljs-keyword">to</span> Student B <span class="hljs-keyword">for</span> review)
+├── Student B<span class="hljs-symbol">&#x27;s</span> PR #<span class="hljs-number">13</span> (<span class="hljs-keyword">open</span>, assigned <span class="hljs-keyword">to</span> Student C <span class="hljs-keyword">for</span> review)
+├── Student C<span class="hljs-symbol">&#x27;s</span> PR #<span class="hljs-number">14</span> (<span class="hljs-keyword">open</span>, assigned <span class="hljs-keyword">to</span> Student A <span class="hljs-keyword">for</span> review)
+├── Student A<span class="hljs-symbol">&#x27;s</span> PR #<span class="hljs-number">11</span> (merged, closed)
+└── [More PRs as students contribute]</code></pre>
+<p><strong>Why one shared repo?</strong></p>
+<ul>
+<li><strong>Realistic</strong> — Open source projects are shared spaces</li>
+<li><strong>Community</strong> — You see each other&#39;s work and learn from each other</li>
+<li><strong>Peer review</strong> — You review the people sitting next to you</li>
+<li><strong>Automation</strong> — The bot serves one repo, coordinating all contributions</li>
+</ul>
+<hr>
+<h2>Two Tracks, One Repository</h2>
+<p>Throughout Day 1, you work on <strong>two parallel learning tracks</strong>:</p>
+<h3>Track 1: GitHub Skills Modules (Your Account)</h3>
+<ul>
+<li><strong><a href="https://github.com/skills/introduction-to-github">Introduction to GitHub</a></strong> — Create branch, open PR, merge</li>
+<li><strong><a href="https://github.com/skills/communicate-using-markdown">Communicate Using Markdown</a></strong> — Write headings, links, code, tables</li>
+<li><strong><a href="https://github.com/skills/review-pull-requests">Review Pull Requests</a></strong> — Comment, approve, suggest changes</li>
+</ul>
+<p><strong>Scope:</strong> Your personal account (private to you unless you make it public)<br><strong>Bot:</strong> Mona (GitHub&#39;s automated learning bot) guides each step<br><strong>Pace:</strong> Self-directed, you complete at your own speed<br><strong>Purpose:</strong> Hands-on practice of individual skills</p>
+<h3>Track 2: Learning Room Contribution Sprint (Shared)</h3>
+<ul>
+<li><strong>Block 5:</strong> Your first real contribution (you and 5-20 other students contributing simultaneously)</li>
+<li><strong>Block 6:</strong> Community tools (labels, milestones, notifications)</li>
+</ul>
+<p><strong>Scope:</strong> The shared <code>learning-room</code> repository (one repo, visible to everyone)<br><strong>Bot:</strong> The Learning Room automation bot validates PRs and tracks progress<br><strong>Pace:</strong> Structured by facilitator; synchronized with workshop schedule<br><strong>Purpose:</strong> Collaborative practice of the full workflow (issue → branch → PR → review → merge)</p>
+<p><strong>The Two Tracks Reinforce Each Other:</strong></p>
+<pre><code class="hljs">Skills <span class="hljs-keyword">Module</span> (individual)      Learning Room (<span class="hljs-keyword">group</span>)
+     ↓                               ↓
+Create a branch                 Create a branch (together)
+     ↓                               ↓
+Open a PR                       Open a PR (see others<span class="hljs-comment">&#x27; too)</span>
+     ↓                               ↓
+<span class="hljs-keyword">Get</span> instant bot feedback        <span class="hljs-keyword">Get</span> bot feedback + human review
+     ↓                               ↓
+Mona verifies your <span class="hljs-keyword">step</span>         Human peer reviewer approves
+     ↓                               ↓
+<span class="hljs-keyword">Next</span> <span class="hljs-keyword">step</span> unlocked             Ready <span class="hljs-keyword">to</span> merge</code></pre>
+<hr>
+<h2>Learning Room Folder Structure</h2>
+<pre><code class="hljs">learning-room/
+├── README<span class="hljs-selector-class">.md</span>                           ← Getting started guide
+├── AUTOMATION<span class="hljs-selector-class">.md</span>                       ← How the bot works
+├── .github/
+│   ├── workflows/                      ← <span class="hljs-number">3</span> automation workflows
+│   │   ├── learning-room-pr-bot<span class="hljs-selector-class">.yml</span>            (PR validation)
+│   │   ├── skills-progression<span class="hljs-selector-class">.yml</span>              (progress tracking)
+│   │   └── student-grouping<span class="hljs-selector-class">.yml</span>                (peer pairing)
+│   ├── scripts/
+│   │   └── validate-pr<span class="hljs-selector-class">.js</span>                      (validation logic)
+│   ├── data/
+│   │   ├── student-roster<span class="hljs-selector-class">.json</span>                 (your cohort info)
+│   │   └── challenge-progression<span class="hljs-selector-class">.json</span>          (levels, badges)
+│   └── docs/
+│       ├── LEARNING_PATHS<span class="hljs-selector-class">.md</span>                   (skill progression guide)
+│       └── IMPLEMENTATION_GUIDE<span class="hljs-selector-class">.md</span>             (facilitator setup)
+├── docs/
+│   ├── CHALLENGES<span class="hljs-selector-class">.md</span>                   ← <span class="hljs-number">12</span> challenges (Beginner → Expert)
+│   ├── GROUP_CHALLENGES<span class="hljs-selector-class">.md</span>             ← <span class="hljs-number">7</span> collaborative exercises
+│   ├── welcome<span class="hljs-selector-class">.md</span>                      ← Has <span class="hljs-selector-attr">[TODO]</span> to complete
+│   ├── keyboard-shortcuts<span class="hljs-selector-class">.md</span>           ← Has intentional errors
+│   └── setup-guide<span class="hljs-selector-class">.md</span>                  ← Has broken links
+└── <span class="hljs-selector-attr">[other files for practice]</span></code></pre>
+<hr>
+<h2>How PR Sharing Works</h2>
+<h3>Step 1: Student Opens a PR</h3>
+<p><strong>Student A (in the workshop):</strong></p>
+<ol>
+<li>Finds their assigned issue (Issues tab → filter <code>Assignee:@me</code>)</li>
+<li>Edits the practice file on GitHub</li>
+<li>Commits to a new branch: <code>fix/studentA-issue12</code></li>
+<li>Opens a pull request</li>
+<li>Fills in PR description using the template</li>
+<li><strong>Submits the PR</strong></li>
+</ol>
+<p><strong>Visibility:</strong> The PR immediately appears in the repo&#39;s Pull Requests tab. All students can see it.</p>
+<h3>Step 2: Automation Bot Validates</h3>
+<p><strong>Bot (<code>.github/workflows/learning-room-pr-bot.yml</code>):</strong></p>
+<ul>
+<li>Runs within 30 seconds</li>
+<li>Checks:<ul>
+<li>Issue reference (does PR link to issue with <code>Closes #XX</code>?)</li>
+<li>File location (only <code>learning-room/</code> allowed?)</li>
+<li>Markdown accessibility (headings, links, alt text, broken links)</li>
+<li>[TODO] markers (all completed?)</li>
+</ul>
+</li>
+<li>Posts a comprehensive comment with:<ul>
+<li>Required checks (must pass) /</li>
+<li>Suggestions (optional improvements)</li>
+<li>Accessibility analysis (detailed issues + fixes)</li>
+<li>Learning resources (links to docs)</li>
+</ul>
+</li>
+<li>Applies labels (documentation, accessibility, needs-review)</li>
+<li>Creates commit status check visible in PR checks</li>
+</ul>
+<p><strong>Visibility:</strong> The bot comment appears in the PR. All students can read it.</p>
+<h3>Step 3: Peer Reviewer Is Assigned</h3>
+<p><strong>Pairing Bot (<code>.github/workflows/student-grouping.yml</code>):</strong></p>
+<ul>
+<li>Automatically selects a reviewer (uses <code>least_reviews</code> strategy — balances workload)</li>
+<li>Requests review via GitHub API</li>
+<li>Posts assignment comment explaining what to look for</li>
+<li><strong>Example:</strong><pre><code class="hljs"><span class="hljs-comment">## Peer Review Assigned</span>
+
+Hi @studentA! Your PR has been automatically paired <span class="hljs-keyword">with</span> @studentC <span class="hljs-keyword">for</span> peer review.
+
+<span class="hljs-comment">### For @studentC:
+This is a great opportunity to practice code review skills! Here&#x27;s what to look for:
+- Content quality...
+- Accessibility...
+- Etiquette...</span></code></pre>
+</li>
+</ul>
+<p><strong>Visibility:</strong></p>
+<ul>
+<li>Student A sees their assigned reviewer</li>
+<li>Student C receives a notification: &quot;review requested&quot;</li>
+<li>All students see the assignment comment in the PR thread</li>
+</ul>
+<h3>Step 4: Reviewer Reads and Comments</h3>
+<p><strong>Student C (the assigned reviewer):</strong></p>
+<ol>
+<li>Receives notification: &quot;PR review requested&quot;</li>
+<li>Navigates to the PR in the Learning Room repo</li>
+<li>Reads:<ul>
+<li>PR title and description</li>
+<li>Bot feedback comment</li>
+<li>The actual file changes (Files Changed tab)</li>
+</ul>
+</li>
+<li>Leaves review comments:<ul>
+<li>Inline comments on specific lines</li>
+<li>Overall comment on the PR</li>
+</ul>
+</li>
+<li>Submits review (Comment / Approve / Request Changes)</li>
+</ol>
+<p><strong>Visibility:</strong></p>
+<ul>
+<li>Student A (PR author) gets notification: &quot;Your PR has a new review&quot;</li>
+<li>All students see the review comments in the PR thread</li>
+<li>Student C&#39;s review shows in the Reviewers sidebar</li>
+</ul>
+<h3>Step 5: Author Responds and Updates</h3>
+<p><strong>Student A (PR author):</strong></p>
+<ol>
+<li>Reads the bot feedback and human review</li>
+<li>Talks to the reviewer if something is unclear</li>
+<li>Makes changes based on feedback</li>
+<li>Pushes new commits to the same branch</li>
+<li>Re-addresses the feedback</li>
+</ol>
+<p><strong>Visibility:</strong></p>
+<ul>
+<li>Bot re-validates on each new commit</li>
+<li>All students see updated activity in the PR</li>
+<li>Timeline shows iteration happening</li>
+</ul>
+<h3>Step 6: Merge and Celebration</h3>
+<p><strong>When Reviewer Approves:</strong></p>
+<ul>
+<li>Student A merges the PR (button becomes available)</li>
+<li>PR closes, shows &quot;merged&quot;</li>
+</ul>
+<p><strong>Bot Posts Celebration:</strong></p>
+<ul>
+<li>Skills progression bot tracks the merge</li>
+<li>Posts achievement comment (badge earned, level up tracking)</li>
+<li>Updates student roster progress</li>
+<li>Shows milestone celebration if applicable</li>
+</ul>
+<p><strong>Visibility:</strong></p>
+<ul>
+<li>All students see the merged PR</li>
+<li>Achievement comment is public</li>
+<li>Progress reflected in Learning Paths documentation</li>
+</ul>
+<hr>
+<h2>What All Students See</h2>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Where</th>
+<th>Who Sees It</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>All open PRs</td>
+<td>Pull Requests tab</td>
+<td>Everyone</td>
+</tr>
+<tr>
+<td>PR description &amp; changes</td>
+<td>PR page</td>
+<td>Everyone</td>
+</tr>
+<tr>
+<td>Bot feedback</td>
+<td>PR comments</td>
+<td>Everyone</td>
+</tr>
+<tr>
+<td>Peer review comments</td>
+<td>PR comments</td>
+<td>Everyone</td>
+</tr>
+<tr>
+<td>Reviewer assignments</td>
+<td>PR sidebar &quot;Reviewers&quot;</td>
+<td>Everyone</td>
+</tr>
+<tr>
+<td>Merge celebrations</td>
+<td>PR comments</td>
+<td>Everyone</td>
+</tr>
+<tr>
+<td>Your review request</td>
+<td>Your notification inbox</td>
+<td>You + PR author</td>
+</tr>
+<tr>
+<td>You assigned as reviewer</td>
+<td>Your review requests filter</td>
+<td>You + PR author</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>The Learning Automation System</h2>
+<p>When you open a PR in the Learning Room, you get <strong>three types of feedback</strong>:</p>
+<h3>Type 1: Automated Bot Feedback (30 seconds)</h3>
+<ul>
+<li>Technical validation (links, headings, file locations)</li>
+<li>Accessibility checking (detailed)</li>
+<li>Educational messaging (WHY each thing matters)</li>
+<li>Links to learning resources</li>
+<li>Never fails the PR; always educational</li>
+</ul>
+<h3>Type 2: Peer Reviewer Feedback (15-60 minutes)</h3>
+<ul>
+<li>Human judgment on content</li>
+<li>Creative suggestions</li>
+<li>Encouragement and mentorship</li>
+<li>Understanding of context</li>
+<li>Can approve, request changes, or comment</li>
+</ul>
+<h3>Type 3: Progress Tracking (on merge)</h3>
+<ul>
+<li>Skill badges (Markdown Master, Accessibility Advocate)</li>
+<li>Level progression (Beginner → Intermediate → Advanced → Expert)</li>
+<li>Milestone celebrations (1st, 5th, 10th PR)</li>
+<li>Motivational comments</li>
+</ul>
+<p><strong>Together:</strong> Instant technical feedback + human mentorship + visible progress</p>
+<hr>
+<h2>Study Groups (Optional)</h2>
+<p>If your facilitator creates study groups, you&#39;ll be assigned with 2-3 other students:</p>
+<ol>
+<li><strong>Group Issue Thread</strong> — Private communication space for your group</li>
+<li><strong>Shared Review Responsibility</strong> — You review each other&#39;s work</li>
+<li><strong>Collaborative Challenges</strong> — Optional group exercises</li>
+<li><strong>Peer Support</strong> — Tag each other with questions</li>
+</ol>
+<p><strong>Example:</strong></p>
+<pre><code class="hljs">Study Group <span class="hljs-comment">#2: @studentA, @studentC, @studentE</span>
+
+This <span class="hljs-keyword">is</span> your collaboration space!
+- Review each othe<span class="hljs-string">r&#x27;s PRs (beyond automated pairing)
+- Share tips and resources
+- Support each other through challenges
+- Celebrate each other&#x27;</span>s achievements</code></pre>
+<hr>
+<h2>Key Differences: Skills Module vs. Learning Room</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>GitHub Skills (Your Account)</th>
+<th>Learning Room (Shared)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Repo</strong></td>
+<td>Your personal copy</td>
+<td>One shared repo</td>
+</tr>
+<tr>
+<td><strong>Bot</strong></td>
+<td>Mona (GitHub)</td>
+<td>Learning Room automation bot</td>
+</tr>
+<tr>
+<td><strong>Reviewer</strong></td>
+<td>Mona (auto)</td>
+<td>Human peer (auto-assigned)</td>
+</tr>
+<tr>
+<td><strong>Visibility</strong></td>
+<td>Private (unless you make public)</td>
+<td>Public to all workshop students</td>
+</tr>
+<tr>
+<td><strong>Pace</strong></td>
+<td>Self-directed</td>
+<td>Synchronized with workshop</td>
+</tr>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>Individual skill building</td>
+<td>Collaborative, real-world practice</td>
+</tr>
+<tr>
+<td><strong>Feedback</strong></td>
+<td>Instant, next-step only</td>
+<td>Both bot + human, comprehensive</td>
+</tr>
+<tr>
+<td><strong>Completion</strong></td>
+<td>Badge on your profile</td>
+<td>Progress appears in Learning Paths</td>
+</tr>
+<tr>
+<td><strong>Community</strong></td>
+<td>You alone</td>
+<td>All students together</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Tips for PR Sharing</h2>
+<h3>Finding PRs to Review</h3>
+<details>
+<summary>Visual / mouse users</summary>
+
+<ol>
+<li>Go to <code>github.com/[org]/learning-room</code></li>
+<li>Click the <strong>Pull Requests</strong> tab</li>
+<li>Click the <strong>Filters</strong> dropdown → &quot;Review requested&quot; → your username</li>
+<li>Click any PR title to open it</li>
+</ol>
+</details>
+
+<details>
+<summary>Screen reader users (NVDA / JAWS)</summary>
+
+<pre><code class="hljs"><span class="hljs-number">1</span>. Go <span class="hljs-keyword">to</span> github.<span class="hljs-keyword">com</span>/[org]/learning-room
+<span class="hljs-number">2</span>. Press D → <span class="hljs-string">&quot;Repository navigation&quot;</span>
+<span class="hljs-number">3</span>. Press K → navigate <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;Pull Requests&quot;</span> <span class="hljs-keyword">tab</span>
+<span class="hljs-number">4</span>. Filter: Press F, <span class="hljs-built_in">type</span> <span class="hljs-string">&quot;review-requested:@me&quot;</span>
+<span class="hljs-number">5</span>. Press H repeatedly <span class="hljs-keyword">to</span> navigate PR titles
+<span class="hljs-number">6</span>. Press Enter <span class="hljs-keyword">to</span> <span class="hljs-keyword">open</span> <span class="hljs-keyword">a</span> PR</code></pre>
+</details>
+
+<details>
+<summary>Screen reader users (VoiceOver — macOS)</summary>
+
+<pre><code class="hljs"><span class="hljs-number">1.</span> Go <span class="hljs-keyword">to</span> github.com/[org]/learning-room
+<span class="hljs-number">2.</span> VO+U → Landmarks → &quot;Repository navigation&quot;
+<span class="hljs-number">3.</span> Quick Nav K → navigate <span class="hljs-keyword">to</span> &quot;Pull Requests&quot; tab → VO+Space
+<span class="hljs-number">4.</span> <span class="hljs-keyword">Filter</span>: Quick Nav F, <span class="hljs-keyword">type</span> &quot;review-requested:@me&quot;, press <span class="hljs-keyword">Return</span>
+<span class="hljs-number">5.</span> Quick Nav H (<span class="hljs-keyword">or</span> VO+Cmd+H) <span class="hljs-keyword">to</span> navigate PR titles
+<span class="hljs-number">6.</span> VO+Space <span class="hljs-keyword">to</span> <span class="hljs-keyword">open</span> a PR</code></pre>
+</details>
+
+<h3>Reading a PR You&#39;re Assigned To</h3>
+<details>
+<summary>Visual / mouse users</summary>
+
+<ul>
+<li><strong>Conversation tab:</strong> Scroll through the discussion. Reviewers are listed in the right sidebar.</li>
+<li><strong>Files Changed tab:</strong> Changed files are in a tree on the left. Click a filename to jump to its diff. Green = added lines, red = removed lines.</li>
+<li>Line comments appear as inline cards within the diff.</li>
+</ul>
+</details>
+
+<details>
+<summary>Screen reader users (NVDA / JAWS)</summary>
+
+<pre><code class="hljs">Conversation Tab (reading reviews):
+  <span class="hljs-number">1.</span> Press H → navigate headings
+  <span class="hljs-number">2.</span> <span class="hljs-keyword">Listen</span> <span class="hljs-keyword">for</span> &quot;Reviewers&quot; heading (h3)
+  <span class="hljs-number">3.</span> Your <span class="hljs-type">name</span> appears <span class="hljs-keyword">as</span> reviewer
+  <span class="hljs-number">4.</span> <span class="hljs-keyword">Read</span> bot <span class="hljs-keyword">comment</span>
+  <span class="hljs-number">5.</span> <span class="hljs-keyword">Read</span> peer feedback
+  
+Files Changed Tab (what actually changed):
+  <span class="hljs-number">1.</span> Press H <span class="hljs-keyword">to</span> navigate files
+  <span class="hljs-number">2.</span> Press T <span class="hljs-keyword">to</span> explore file tree
+  <span class="hljs-number">3.</span> <span class="hljs-keyword">Read</span> the diff <span class="hljs-keyword">with</span> your screen reader
+  <span class="hljs-number">4.</span> Navigate <span class="hljs-type">line</span> comments <span class="hljs-keyword">with</span> H → nested headings</code></pre>
+</details>
+
+<details>
+<summary>Screen reader users (VoiceOver — macOS)</summary>
+
+<pre><code class="hljs">Conversation Tab (reading reviews):
+  <span class="hljs-number">1.</span> Quick Nav H <span class="hljs-keyword">or</span> VO+Cmd+H → navigate headings
+  <span class="hljs-number">2.</span> Listen <span class="hljs-keyword">for</span> <span class="hljs-string">&quot;Reviewers&quot;</span> heading
+  <span class="hljs-number">3.</span> Your name appears <span class="hljs-keyword">as</span> reviewer
+  <span class="hljs-number">4.</span> VO+Down <span class="hljs-built_in">to</span> <span class="hljs-built_in">read</span> bot comment <span class="hljs-keyword">and</span> peer feedback
+  
+Files Changed Tab (what actually changed):
+  <span class="hljs-number">1.</span> Quick Nav H <span class="hljs-built_in">to</span> navigate <span class="hljs-built_in">file</span> headings
+  <span class="hljs-number">2.</span> VO+U → Landmarks → <span class="hljs-string">&quot;File tree&quot;</span> <span class="hljs-built_in">to</span> explore <span class="hljs-built_in">files</span>
+  <span class="hljs-number">3.</span> VO+Shift+Down <span class="hljs-built_in">to</span> interact <span class="hljs-keyword">with</span> <span class="hljs-keyword">the</span> diff table, <span class="hljs-keyword">then</span> VO+Down <span class="hljs-keyword">for</span> <span class="hljs-keyword">lines</span>
+  <span class="hljs-number">4.</span> Navigate <span class="hljs-built_in">line</span> comments <span class="hljs-keyword">with</span> Quick Nav H → nested headings</code></pre>
+</details>
+
+<h3>Leaving a Review</h3>
+<details>
+<summary>Visual / mouse users</summary>
+
+<ol>
+<li>Scroll to the comment box on the Conversation tab</li>
+<li>Type your review comment</li>
+<li>Click <strong>&quot;Review Changes&quot;</strong> (top-right of the Files Changed tab, or at the bottom of the PR page)</li>
+<li>Select your review type: Comment / Approve / Request changes</li>
+<li>Click <strong>&quot;Submit review&quot;</strong></li>
+</ol>
+</details>
+
+<details>
+<summary>Screen reader users (NVDA / JAWS)</summary>
+
+<pre><code class="hljs"><span class="hljs-number">1</span>. On Conversation tab, scroll <span class="hljs-keyword">to</span> <span class="hljs-built_in">comment</span> box
+<span class="hljs-number">2</span>. <span class="hljs-keyword">Switch</span> <span class="hljs-keyword">to</span> Focus Mode (NVDA+Space / <span class="hljs-built_in">Insert</span>+Z)
+<span class="hljs-number">3</span>. <span class="hljs-built_in">Type</span> your review <span class="hljs-built_in">comment</span>
+<span class="hljs-number">4</span>. Tab <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;Review Changes&quot;</span> button
+<span class="hljs-number">5</span>. <span class="hljs-built_in">Select</span> review <span class="hljs-built_in">type</span>:
+   - <span class="hljs-string">&quot;Comment&quot;</span> (just feedback)
+   - <span class="hljs-string">&quot;Approve&quot;</span> (good <span class="hljs-keyword">to</span> <span class="hljs-built_in">merge</span>)
+   - <span class="hljs-string">&quot;Request changes&quot;</span> (needs fixes)
+<span class="hljs-number">6</span>. Tab <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;Submit review&quot;</span>
+<span class="hljs-number">7</span>. Press Enter</code></pre>
+</details>
+
+<details>
+<summary>Screen reader users (VoiceOver — macOS)</summary>
+
+<pre><code class="hljs"><span class="hljs-number">1</span>. On Conversation tab, Quick Nav F <span class="hljs-built_in">or</span> VO+U → Landmarks → <span class="hljs-string">&quot;Add a comment&quot;</span>
+<span class="hljs-number">2</span>. VO+Shift+Down <span class="hljs-keyword">to</span> interact <span class="hljs-keyword">with</span> the <span class="hljs-built_in">comment</span> <span class="hljs-built_in">text</span> area
+<span class="hljs-number">3</span>. <span class="hljs-built_in">Type</span> your review <span class="hljs-built_in">comment</span>
+<span class="hljs-number">4</span>. VO+Shift+Up → Tab <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;Review Changes&quot;</span> button → VO+Space
+<span class="hljs-number">5</span>. <span class="hljs-built_in">Select</span> review <span class="hljs-built_in">type</span>:
+   - <span class="hljs-string">&quot;Comment&quot;</span> (just feedback)
+   - <span class="hljs-string">&quot;Approve&quot;</span> (good <span class="hljs-keyword">to</span> <span class="hljs-built_in">merge</span>)
+   - <span class="hljs-string">&quot;Request changes&quot;</span> (needs fixes)
+<span class="hljs-number">6</span>. Tab <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;Submit review&quot;</span> → VO+Space</code></pre>
+</details>
+
+<h3>Responding to Feedback</h3>
+<details>
+<summary>Visual / mouse users</summary>
+
+<ol>
+<li>Open your PR (Pull Requests tab → click your PR)</li>
+<li>Read all comments and bot feedback</li>
+<li>Click in the comment box to reply</li>
+<li>Push your fixes to the same branch</li>
+<li>Comment: &quot;Updates pushed, ready for review&quot;</li>
+</ol>
+</details>
+
+<details>
+<summary>Screen reader users (NVDA / JAWS)</summary>
+
+<pre><code class="hljs"><span class="hljs-number">1.</span> <span class="hljs-keyword">Open</span> your PR (find <span class="hljs-keyword">in</span> Pull Requests tab)
+<span class="hljs-number">2.</span> <span class="hljs-keyword">Read</span> <span class="hljs-keyword">all</span> comments <span class="hljs-keyword">and</span> bot feedback
+<span class="hljs-number">3.</span> Scroll <span class="hljs-keyword">to</span> <span class="hljs-keyword">comment</span> <span class="hljs-type">box</span>
+<span class="hljs-number">4.</span> <span class="hljs-keyword">Type</span> your response
+<span class="hljs-number">5.</span> Mention reviewers <span class="hljs-keyword">with</span> @ <span class="hljs-keyword">if</span> clarifying
+<span class="hljs-number">6.</span> Push your fixes <span class="hljs-keyword">to</span> the same branch
+<span class="hljs-number">7.</span> <span class="hljs-keyword">Comment</span>: &quot;Updates pushed, ready for review&quot;</code></pre>
+</details>
+
+<details>
+<summary>Screen reader users (VoiceOver — macOS)</summary>
+
+<pre><code class="hljs"><span class="hljs-number">1.</span> <span class="hljs-keyword">Open</span> your PR (find <span class="hljs-keyword">in</span> Pull Requests tab → Quick Nav H <span class="hljs-keyword">to</span> navigate PR titles)
+<span class="hljs-number">2.</span> Quick Nav H <span class="hljs-keyword">and</span> VO+Down <span class="hljs-keyword">to</span> <span class="hljs-keyword">read</span> <span class="hljs-keyword">all</span> comments <span class="hljs-keyword">and</span> bot feedback
+<span class="hljs-number">3.</span> VO+U → Landmarks → &quot;Add a comment&quot; <span class="hljs-keyword">to</span> reach the <span class="hljs-keyword">comment</span> <span class="hljs-type">box</span>
+<span class="hljs-number">4.</span> VO+Shift+Down → <span class="hljs-keyword">type</span> your response
+<span class="hljs-number">5.</span> Mention reviewers <span class="hljs-keyword">with</span> @ <span class="hljs-keyword">if</span> clarifying
+<span class="hljs-number">6.</span> Push your fixes <span class="hljs-keyword">to</span> the same branch
+<span class="hljs-number">7.</span> <span class="hljs-keyword">Comment</span>: &quot;Updates pushed, ready for review&quot;</code></pre>
+</details>
+
+<hr>
+<h2>FAQ: PR Sharing in Learning Room</h2>
+<h3>&quot;Can I see other students&#39; PRs?&quot;</h3>
+<p><strong>Yes!</strong> All PRs in the shared repo are visible. This is intentional — you learn by seeing how others approach problems.</p>
+<h3>&quot;What if I don&#39;t agree with my assigned reviewer?&quot;</h3>
+<p>You can request additional reviewers manually. The bot&#39;s assignment is a convenience, not a mandate. Click &quot;Reviewers&quot; → select someone else.</p>
+<h3>&quot;Will my PR get lost with everyone&#39;s open at once?&quot;</h3>
+<p>No. Each PR has its own conversation thread. The bot update is yours alone. Your reviewer is specifically assigned.</p>
+<h3>&quot;Can I comment on someone else&#39;s PR?&quot;</h3>
+<p>Yes! Anyone can comment on public PRs. If you see something helpful, jump in. This is real open source.</p>
+<h3>&quot;What if my reviewer doesn&#39;t respond?&quot;</h3>
+<p>Mention them directly: &quot;@name, any thoughts on the changes I pushed?&quot; or ask your facilitator for help.</p>
+<h3>&quot;Can I work with a friend?&quot;</h3>
+<p>Your study group will be created by facilitator, but you likely know your reviewers from the workshop. It&#39;s okay to chat between sessions.</p>
+<h3>&quot;How long does review take?&quot;</h3>
+<p>Typically 15-60 minutes during the workshop. If a reviewer is slow, your facilitator can help or assign someone else.</p>
+<h3>&quot;What if bot feedback is wrong?&quot;</h3>
+<p>Comment explaining why. Request human review. The bot isn&#39;t perfect — that&#39;s why you have humans too.</p>
+<h3>&quot;Do I need to complete every challenge?&quot;</h3>
+<p>No! The Learning Room has challenges for all skill levels. You can pick what interests you, complete at your pace, and continue after the workshop.</p>
+<hr>
+<h2>Celebration: You&#39;re Contributing</h2>
+<p>Every PR you open and merge in the Learning Room is a <strong>real contribution</strong>:</p>
+<p>You found something to improve<br>You made a meaningful change<br>You received feedback (technical + human)<br>You incorporated suggestions<br>You merged your work  </p>
+<p><strong>That is open source contribution.</strong> Your facilitator has a record. The GitHub repo has a record. You have a merged commit in your history.</p>
+<p>This is not hypothetical. This is not simulation. This is real.</p>
+<hr>
+<p><em>Next: <a href="04-working-with-issues.md">Working with Issues</a></em>
+<em>Back: <a href="02-navigating-repositories.md">Navigating Repositories</a></em>
+<em>Reference: <a href="../learning-room/AUTOMATION.md">Automation Guide</a> | <a href="../learning-room/docs/CHALLENGES.md">Available Challenges</a></em></p>
+
+  </main>
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+    <p>GitHub Learning Room — Open Source Assistive Technology Hackathon</p>
+    <p><a href="https://github.com/accesswatch/Learning-Room">View on GitHub</a></p>
+  </footer>
+</body>
+</html>

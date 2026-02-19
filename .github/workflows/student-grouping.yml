@@ -1,0 +1,353 @@
+name: Student Pairing & Grouping
+# Automatically pairs students for peer review and group exercises
+
+on:
+  issues:
+    types: [labeled]
+  pull_request:
+    types: [opened, ready_for_review]
+  workflow_dispatch:
+    inputs:
+      pairing_strategy:
+        description: 'Pairing strategy (random, skill_match, timezone_match)'
+        required: true
+        default: 'skill_match'
+
+jobs:
+  assign-peer-reviewer:
+    name: Assign Peer Reviewer
+    runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'pull_request' && 
+      (github.event.action == 'opened' || github.event.action == 'ready_for_review')
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Find and assign peer reviewer
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const author = context.payload.pull_request.user.login;
+            
+            // Load student roster if available
+            const rosterPath = '.github/data/student-roster.json';
+            let roster = { students: [] };
+            
+            if (fs.existsSync(rosterPath)) {
+              roster = JSON.parse(fs.readFileSync(rosterPath, 'utf8'));
+            }
+            
+            // Get all participants (contributors to learning-room)
+            const { data: contributors } = await github.rest.repos.listContributors({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            });
+            
+            // Filter out bots and the PR author
+            const potentialReviewers = contributors
+              .filter(c => c.type === 'User' && c.login !== author)
+              .map(c => c.login);
+            
+            if (potentialReviewers.length === 0) {
+              console.log('No peer reviewers available yet');
+              return;
+            }
+            
+            // Pairing strategies
+            async function getReviewerByStrategy(strategy = 'random') {
+              if (strategy === 'random') {
+                return potentialReviewers[Math.floor(Math.random() * potentialReviewers.length)];
+              }
+              
+              if (strategy === 'least_reviews') {
+                // Find person who has done the fewest reviews
+                const reviewCounts = {};
+                for (const reviewer of potentialReviewers) {
+                  const { data: reviews } = await github.rest.pulls.list({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    state: 'all',
+                    per_page: 100
+                  });
+                  
+                  let count = 0;
+                  for (const pr of reviews) {
+                    const { data: prReviews } = await github.rest.pulls.listReviews({
+                      owner: context.repo.owner,
+                      repo: context.repo.repo,
+                      pull_number: pr.number
+                    });
+                    if (prReviews.some(r => r.user.login === reviewer)) {
+                      count++;
+                    }
+                  }
+                  reviewCounts[reviewer] = count;
+                }
+                
+                // Return reviewer with fewest reviews
+                return Object.entries(reviewCounts)
+                  .sort((a, b) => a[1] - b[1])[0]?.[0] || potentialReviewers[0];
+              }
+              
+              if (strategy === 'skill_match') {
+                // Match based on PR content
+                const prFiles = context.payload.pull_request.changed_files;
+                
+                // If accessibility-related, find reviewer interested in a11y
+                const { data: prData } = await github.rest.pulls.get({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: context.payload.pull_request.number
+                });
+                
+                const hasA11yLabel = prData.labels?.some(l => 
+                  l.name.includes('accessibility') || l.name.includes('a11y')
+                );
+                
+                if (hasA11yLabel && roster.students.length > 0) {
+                  const a11yExperts = roster.students
+                    .filter(s => s.interests?.includes('accessibility') && s.username !== author)
+                    .map(s => s.username);
+                  
+                  if (a11yExperts.length > 0) {
+                    return a11yExperts[Math.floor(Math.random() * a11yExperts.length)];
+                  }
+                }
+              }
+              
+              // Default to random
+              return potentialReviewers[Math.floor(Math.random() * potentialReviewers.length)];
+            }
+            
+            const reviewer = await getReviewerByStrategy('least_reviews');
+            
+            // Request review
+            try {
+              await github.rest.pulls.requestReviewers({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.payload.pull_request.number,
+                reviewers: [reviewer]
+              });
+              
+              const pairBody = [
+                '## Peer Review Assigned',
+                '',
+                'Hi @' + author + '! Your PR has been automatically paired with @' + reviewer + ' for peer review.',
+                '',
+                '### For @' + reviewer + ':',
+                '',
+                'This is a great opportunity to practice code review skills! Here\'s what to look for:',
+                '',
+                '**Content Quality:**',
+                '- [ ] Does the change accomplish what the issue describes?',
+                '- [ ] Is the writing clear and helpful?',
+                '- [ ] Are there any typos or grammar issues?',
+                '',
+                '**Accessibility:**',
+                '- [ ] Proper heading hierarchy (H1 \u2192 H2 \u2192 H3, no skips)?',
+                '- [ ] Descriptive link text (not "click here")?',
+                '- [ ] Alt text on images?',
+                '- [ ] [TODO] markers removed?',
+                '',
+                '**Documentation:**',
+                '- [ ] Code blocks are properly formatted?',
+                '- [ ] Tables have headers?',
+                '- [ ] References/links work correctly?',
+                '',
+                '**Review Guidelines:**',
+                '- Be kind and constructive',
+                '- Suggest improvements, don\'t just point out problems',
+                '- Ask questions if something is unclear',
+                '- Approve when ready or request changes with explanation',
+                '',
+                '**Resources:**',
+                '- [How to Review PRs](../../docs/05-working-with-pull-requests.md#reviewing-pull-requests)',
+                '- [Writing Good Review Comments](../../docs/07-culture-etiquette.md#giving-feedback)',
+                '',
+                '---',
+                '*Pairing by Learning Room Grouping Engine*'
+              ].join('\n');
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: pairBody
+              });
+              
+            } catch (error) {
+              console.log('Could not assign reviewer:', error.message);
+            }
+
+  create-study-groups:
+    name: Form Study Groups
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Create balanced groups
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            
+            // Load roster
+            const rosterPath = '.github/data/student-roster.json';
+            if (!fs.existsSync(rosterPath)) {
+              console.log('No roster file found');
+              return;
+            }
+            
+            const roster = JSON.parse(fs.readFileSync(rosterPath, 'utf8'));
+            const students = roster.students || [];
+            
+            if (students.length < 2) {
+              console.log('Not enough students for grouping');
+              return;
+            }
+            
+            // Grouping strategies
+            const groupSize = 3; // Optimal for peer review
+            const strategy = context.payload.inputs?.pairing_strategy || 'random';
+            
+            function shuffleArray(array) {
+              for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+              }
+              return array;
+            }
+            
+            function groupByTimezone(students) {
+              // Sort by timezone first
+              const sorted = students.sort((a, b) => {
+                const tzA = a.timezone || 'UTC';
+                const tzB = b.timezone || 'UTC';
+                return tzA.localeCompare(tzB);
+              });
+              
+              const groups = [];
+              for (let i = 0; i < sorted.length; i += groupSize) {
+                groups.push(sorted.slice(i, i + groupSize));
+              }
+              return groups;
+            }
+            
+            function groupBySkill(students) {
+              // Mix skill levels
+              const beginners = students.filter(s => (s.mergedPRs || 0) <= 1);
+              const intermediate = students.filter(s => (s.mergedPRs || 0) > 1 && (s.mergedPRs || 0) <= 5);
+              const advanced = students.filter(s => (s.mergedPRs || 0) > 5);
+              
+              const groups = [];
+              const maxGroups = Math.ceil(students.length / groupSize);
+              
+              for (let i = 0; i < maxGroups; i++) {
+                const group = [];
+                if (advanced[i]) group.push(advanced[i]);
+                if (intermediate[i]) group.push(intermediate[i]);
+                if (beginners[i]) group.push(beginners[i]);
+                if (beginners[i + maxGroups]) group.push(beginners[i + maxGroups]);
+                
+                if (group.length > 0) groups.push(group);
+              }
+              
+              return groups;
+            }
+            
+            let groups;
+            if (strategy === 'timezone_match') {
+              groups = groupByTimezone(students);
+            } else if (strategy === 'skill_match') {
+              groups = groupBySkill(students);
+            } else {
+              // Random
+              const shuffled = shuffleArray([...students]);
+              groups = [];
+              for (let i = 0; i < shuffled.length; i += groupSize) {
+                groups.push(shuffled.slice(i, i + groupSize));
+              }
+            }
+            
+            // Create issue for each group
+            for (let i = 0; i < groups.length; i++) {
+              const group = groups[i];
+              const members = group.map(s => '@' + s.username).join(', ');
+              
+              const memberList = group
+                .map(s => '- @' + s.username + (s.timezone ? ' (' + s.timezone + ')' : ''))
+                .join('\n');
+              
+              const groupBody = [
+                '## Study Group ' + (i + 1),
+                '',
+                'Welcome to your study group! You\'ve been paired for collaborative learning and peer support.',
+                '',
+                '### Group Members',
+                memberList,
+                '',
+                '### Group Objectives',
+                '',
+                '1. **Peer Review Partnership**',
+                '   - Review each other\'s PRs',
+                '   - Provide constructive feedback',
+                '   - Learn from each other\'s approaches',
+                '',
+                '2. **Collaborative Learning**',
+                '   - Work through challenges together',
+                '   - Share resources and tips',
+                '   - Ask questions in this thread',
+                '',
+                '3. **Accountability**',
+                '   - Check in on progress',
+                '   - Celebrate successes',
+                '   - Support through challenges',
+                '',
+                '### How to Work Together',
+                '',
+                '**Review Rotation:**',
+                '- When anyone opens a PR, request review from someone in your group',
+                '- Aim to review within 24 hours',
+                '- Give thoughtful, kind feedback',
+                '',
+                '**Communication:**',
+                '- Use this issue thread for group chat',
+                '- Tag each other with questions',
+                '- Share helpful resources and insights',
+                '',
+                '**Group Activity:**',
+                'If your group wants a challenge, try the collaborative exercises in [`learning-room/docs/GROUP_CHALLENGES.md`](../../learning-room/docs/GROUP_CHALLENGES.md)',
+                '',
+                '---',
+                '*Grouped by Learning Room Pairing Engine based on: ' + strategy + '*'
+              ].join('\n');
+
+              const { data: groupIssue } = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: 'Study Group ' + (i + 1) + ': ' + group.map(s => s.username).join(', '),
+                body: groupBody,
+                labels: ['study-group', 'collaboration']
+              });
+              
+              console.log('Created group ' + (i + 1) + ': ' + members);
+            }
+            
+            console.log('Created ' + groups.length + ' study groups with strategy: ' + strategy);

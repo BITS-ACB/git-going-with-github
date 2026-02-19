@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GitHub Learning Room - Open Source Assistive Technology Hackathon">
+  <title>Facilitator Guide — GitHub Learning Room</title>
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Facilitator Guide</span>
+  </nav>
+  <main id="main-content" class="markdown-body">
+    <h1>Facilitator Guide</h1>
+<h2>Open Source Assistive Technology Hackathon</h2>
+<blockquote>
+<p>This document is for workshop facilitators only. Participants should start with <a href="README.md">README.md</a> and <a href="docs/00-pre-workshop-setup.md">docs/00-pre-workshop-setup.md</a>.</p>
+</blockquote>
+<hr>
+<h2>Repository Structure</h2>
+<p>This is the single repository students clone. Everything they need for both days is here:</p>
+<pre><code class="hljs">learning-room/                  ← workshop repository root
+├── README<span class="hljs-selector-class">.md</span>                   ← participant-facing start <span class="hljs-attribute">page</span>
+├── CONTRIBUTING<span class="hljs-selector-class">.md</span>             ← contribution guide
+├── CODE_OF_CONDUCT<span class="hljs-selector-class">.md</span>          ← community standards
+├── FACILITATOR<span class="hljs-selector-class">.md</span>              ← this file
+├── <span class="hljs-selector-class">.gitignore</span>
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── config<span class="hljs-selector-class">.yml</span>          ← disables blank issues, links to Skills modules
+│   │   ├── accessibility-bug<span class="hljs-selector-class">.yml</span> ← accessibility bug report YAML <span class="hljs-selector-tag">form</span>
+│   │   └── feature-request<span class="hljs-selector-class">.yml</span> ← feature/improvement request YAML <span class="hljs-selector-tag">form</span>
+│   ├── PULL_REQUEST_TEMPLATE<span class="hljs-selector-class">.md</span> ← PR template with accessibility checklist
+│   ├── agents/                 ← Agent Forge — six Copilot agents
+│   │   ├── daily-briefing<span class="hljs-selector-class">.agent</span><span class="hljs-selector-class">.md</span>
+│   │   ├── issue-tracker<span class="hljs-selector-class">.agent</span><span class="hljs-selector-class">.md</span>
+│   │   ├── pr-review<span class="hljs-selector-class">.agent</span><span class="hljs-selector-class">.md</span>
+│   │   ├── analytics<span class="hljs-selector-class">.agent</span><span class="hljs-selector-class">.md</span>
+│   │   ├── insiders-a11y-tracker<span class="hljs-selector-class">.agent</span><span class="hljs-selector-class">.md</span>
+│   │   ├── template-builder<span class="hljs-selector-class">.agent</span><span class="hljs-selector-class">.md</span>
+│   │   └── preferences<span class="hljs-selector-class">.example</span><span class="hljs-selector-class">.md</span>
+│   └── prompts/                ← <span class="hljs-number">28</span> slash commands <span class="hljs-keyword">for</span> Copilot Chat
+│       ├── a11y-update<span class="hljs-selector-class">.prompt</span><span class="hljs-selector-class">.md</span>
+│       ├── create-issue<span class="hljs-selector-class">.prompt</span><span class="hljs-selector-class">.md</span>
+│       ├── daily-briefing<span class="hljs-selector-class">.prompt</span><span class="hljs-selector-class">.md</span>
+│       ├── explain-<span class="hljs-selector-tag">code</span><span class="hljs-selector-class">.prompt</span><span class="hljs-selector-class">.md</span>
+│       ├── review-pr<span class="hljs-selector-class">.prompt</span><span class="hljs-selector-class">.md</span>
+│       ├── triage<span class="hljs-selector-class">.prompt</span><span class="hljs-selector-class">.md</span>
+│       └── ... (<span class="hljs-number">22</span> more — see docs/appendix-w-agent-forge-reference.md)
+├── docs/                       ← full workshop curriculum (<span class="hljs-number">16</span> chapters + appendices A–X)
+│   ├── <span class="hljs-number">00</span>-pre-workshop-setup<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">01</span>-understanding-github-web-structure<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">02</span>-navigating-repositories<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">03</span>-the-learning-room<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">04</span>-working-with-issues<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">05</span>-working-with-pull-requests<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">06</span>-merge-conflicts<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">07</span>-culture-etiquette<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">08</span>-labels-milestones-projects<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">09</span>-notifications<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">10</span>-vscode-basics<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">11</span>-git-source-control<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">12</span>-github-pull-requests-extension<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">13</span>-github-copilot<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">14</span>-accessible-code-review<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">15</span>-issue-templates<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">16</span>-agent-forge<span class="hljs-selector-class">.md</span>
+│   ├── appendix-a-glossary<span class="hljs-selector-class">.md</span>              ← every term explained
+│   ├── appendix-b-screen-reader-cheatsheet<span class="hljs-selector-class">.md</span> ← full shortcut reference
+│   ├── appendix-c through appendix-<span class="hljs-attribute">x</span>      ← deep-dive references (C–X)
+│   └── (see appendix-u-resources<span class="hljs-selector-class">.md</span> <span class="hljs-keyword">for</span> complete file listing)
+└── learning-room/              ← practice <span class="hljs-attribute">content</span> (contribution sprint targets)
+    ├── README<span class="hljs-selector-class">.md</span>
+    └── docs/
+        ├── welcome<span class="hljs-selector-class">.md</span>          ← has <span class="hljs-selector-attr">[TODO]</span> gaps <span class="hljs-keyword">for</span> participants to complete
+        ├── keyboard-shortcuts<span class="hljs-selector-class">.md</span> ← has intentional errors and <span class="hljs-selector-tag">a</span> heading hierarchy problem
+        └── setup-guide<span class="hljs-selector-class">.md</span>      ← has <span class="hljs-selector-tag">a</span> broken URL and <span class="hljs-selector-attr">[TODO]</span> markers</code></pre>
+<hr>
+<h2>Two Weeks Before the Workshop</h2>
+<h3>Create the GitHub Organization and Repository</h3>
+<ol>
+<li>Create a GitHub org (recommended) or use your personal account</li>
+<li>Create a new repository named <code>learning-room</code> (or your preferred name)</li>
+<li>Make it <strong>Public</strong> — participants need read access without being org members</li>
+<li>Push the contents of this repository to it:<pre><code class="hljs">git remote add origin <span class="hljs-link">https://github.com/</span>[<span class="hljs-string">org</span>]/learning-room
+git push -u origin main</code></pre>
+</li>
+</ol>
+<h3>Configure the Repository</h3>
+<p><strong>Enable Issues:</strong>
+Settings → Features → check Issues</p>
+<p><strong>Enable Discussions (optional):</strong>
+Settings → Features → check Discussions (useful for async Q&amp;A)</p>
+<p><strong>Branch protection for <code>main</code>:</strong>
+Settings → Branches → Add rule:</p>
+<ul>
+<li>Require pull request before merging:</li>
+<li>Require at least 1 approving review:</li>
+<li>Do not require up-to-date branches before merging (reduces friction for beginners)</li>
+</ul>
+<p><strong>Mark as Template Repository (recommended):</strong>
+Settings → check &quot;Template repository&quot;
+This allows you to create a fresh copy for each cohort with one click.</p>
+<hr>
+<h2>One Week Before the Workshop</h2>
+<h3>Create Labels</h3>
+<p>Navigate to Issues → Labels → create these labels (delete GitHub defaults if desired):</p>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Color</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>accessibility</code></td>
+<td><code>#0075ca</code></td>
+<td>Keyboard, screen reader, WCAG</td>
+</tr>
+<tr>
+<td><code>good first issue</code></td>
+<td><code>#7057ff</code></td>
+<td>Good for new contributors</td>
+</tr>
+<tr>
+<td><code>documentation</code></td>
+<td><code>#0075ca</code></td>
+<td>Improvements to docs</td>
+</tr>
+<tr>
+<td><code>needs triage</code></td>
+<td><code>#e4e669</code></td>
+<td>Awaiting review by a maintainer</td>
+</tr>
+<tr>
+<td><code>bug</code></td>
+<td><code>#d73a4a</code></td>
+<td>Something isn&#39;t working</td>
+</tr>
+<tr>
+<td><code>enhancement</code></td>
+<td><code>#a2eeef</code></td>
+<td>New feature or request</td>
+</tr>
+<tr>
+<td><code>help wanted</code></td>
+<td><code>#008672</code></td>
+<td>Extra attention needed</td>
+</tr>
+<tr>
+<td><code>question</code></td>
+<td><code>#d876e3</code></td>
+<td>More information needed</td>
+</tr>
+<tr>
+<td><code>wontfix</code></td>
+<td><code>#ffffff</code></td>
+<td>This will not be addressed</td>
+</tr>
+<tr>
+<td><code>duplicate</code></td>
+<td><code>#cfd3d7</code></td>
+<td>This issue already exists</td>
+</tr>
+</tbody></table>
+<h3>Create a Milestone</h3>
+<p>Issues → Milestones → New milestone:</p>
+<ul>
+<li>Title: <code>Hackathon Day 1</code></li>
+<li>Due date: Day 1 date</li>
+<li>Description: &quot;Issues targeted for the Day 1 contribution sprint&quot;</li>
+</ul>
+<h3>Pre-Seed Issues for the Contribution Sprint</h3>
+<p>Create one issue per participant, assigned to them. Each issue points to a specific problem in <code>learning-room/docs/</code>. Template:</p>
+<p><strong>Issue title:</strong> <code>Fix: [specific problem] in [filename]</code>
+<strong>Issue body:</strong></p>
+<pre><code class="hljs language-markdown"><span class="hljs-section">## What to Fix</span>
+
+[Specific description of the problem — be precise enough that the participant knows exactly
+what line or section to look at.]
+
+<span class="hljs-section">## File to Edit</span>
+
+<span class="hljs-code">`learning-room/docs/[filename].md`</span>
+
+<span class="hljs-section">## Acceptance Criteria</span>
+
+<span class="hljs-bullet">-</span> [ ] [Specific thing that should be true when the fix is complete]
+<span class="hljs-bullet">-</span> [ ] No new heading-level skips introduced
+<span class="hljs-bullet">-</span> [ ] Link text is descriptive (not &quot;click here&quot;)
+
+<span class="hljs-section">## How to Contribute</span>
+
+See [<span class="hljs-string">Working with Issues</span>](<span class="hljs-link">docs/04-working-with-issues.md</span>) and the [<span class="hljs-string">Day 1 Agenda</span>](<span class="hljs-link">DAY1_AGENDA.md</span>) for the full contribution workflow.</code></pre>
+<p><strong>Pre-seeded issues to create (by file):</strong></p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Problem to fix</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>keyboard-shortcuts.md</code></td>
+<td>Heading jumps from <code>#</code> (h1) to <code>####</code> (h4) for NVDA section sub-headings — should be <code>##</code> and <code>###</code></td>
+<td><code>accessibility</code>, <code>good first issue</code></td>
+</tr>
+<tr>
+<td><code>keyboard-shortcuts.md</code></td>
+<td>The Accessibility Settings link is broken: <code>htps://</code> has a typo</td>
+<td><code>bug</code>, <code>good first issue</code></td>
+</tr>
+<tr>
+<td><code>setup-guide.md</code></td>
+<td>Step 2 link has a typo: <code>htps://github.com/settings/accessibility</code> — missing one <code>t</code></td>
+<td><code>bug</code>, <code>good first issue</code></td>
+</tr>
+<tr>
+<td><code>setup-guide.md</code></td>
+<td>&quot;Note: Links marked [TODO]&quot; callout at the bottom — replace with actual links to the workshop repo</td>
+<td><code>documentation</code>, <code>good first issue</code></td>
+</tr>
+<tr>
+<td><code>welcome.md</code></td>
+<td>[TODO] paragraph about who can contribute (line 22)</td>
+<td><code>documentation</code>, <code>good first issue</code></td>
+</tr>
+<tr>
+<td><code>welcome.md</code></td>
+<td>[TODO] paragraph about reading an issue to decide if it&#39;s right for you (line 40)</td>
+<td><code>documentation</code>, <code>good first issue</code></td>
+</tr>
+<tr>
+<td><code>welcome.md</code></td>
+<td>[TODO] sentence about what a merged PR means for GitHub profile (line 52)</td>
+<td><code>documentation</code>, <code>good first issue</code></td>
+</tr>
+<tr>
+<td><code>welcome.md</code></td>
+<td><code>Last reviewed: [DATE]</code> placeholder at the bottom — replace with today&#39;s date</td>
+<td><code>documentation</code>, <code>good first issue</code></td>
+</tr>
+</tbody></table>
+<p>Create extras for any additional participants.</p>
+<h3>Create the Welcome Issue</h3>
+<p>Create this issue, unassigned, labeled <code>good first issue</code>:</p>
+<p><strong>Title:</strong> <code>Welcome! Introduce yourself</code>
+<strong>Body:</strong></p>
+<pre><code class="hljs language-markdown">Welcome to the workshop repository! This issue is for introductions.
+
+<span class="hljs-section">## How to participate</span>
+
+Leave a comment on this issue introducing yourself:
+
+<span class="hljs-bullet">-</span> Your name (first name or preferred name)
+<span class="hljs-bullet">-</span> Your screen reader and operating system
+<span class="hljs-bullet">-</span> One thing you are hoping to learn or do during this workshop
+
+Use Markdown in your comment:
+<span class="hljs-bullet">-</span> Use <span class="hljs-code">`**bold**`</span> to highlight your screen reader name
+<span class="hljs-bullet">-</span> Use a task list (<span class="hljs-code">`- [ ]`</span>) for things you want to accomplish
+
+There is no wrong answer. This is practice, and it is also a real community.</code></pre>
+<h3>Create the Pre-Seeded PR</h3>
+<p>Create a PR from a <code>practice-review</code> branch with a meaningful change to <code>learning-room/docs/welcome.md</code> — add one paragraph, change one heading, correct one small issue. This PR exists so participants can practice reviewing in Block 4 before the contribution sprint.</p>
+<p>PR title: <code>Expand the &quot;What Is Open Source?&quot; section</code>
+Description: Use the PR template. Fill in all fields.</p>
+<hr>
+<h2>Day 1 — Pre-Session Checklist</h2>
+<p>Run through this 30 minutes before participants arrive:</p>
+<ul>
+<li><input disabled="" type="checkbox"> All participant issues created, assigned, and labeled</li>
+<li><input disabled="" type="checkbox"> Welcome issue open and unlabeled</li>
+<li><input disabled="" type="checkbox"> Pre-seeded practice PR open on <code>practice-review</code> branch</li>
+<li><input disabled="" type="checkbox"> <code>learning-room</code> milestone created and linked to all participant issues</li>
+<li><input disabled="" type="checkbox"> All labels created</li>
+<li><input disabled="" type="checkbox"> <code>day1-practice</code> branch created (differs from <code>main</code> by 2–3 files — for Branch Navigation exercise in Block 2)</li>
+<li><input disabled="" type="checkbox"> Repository is public and accessible without login</li>
+<li><input disabled="" type="checkbox"> GitHub Skills modules tested (go through the first 2 steps of each to verify Mona responds)</li>
+</ul>
+<h3>GitHub Skills Pre-Test (Important)</h3>
+<p>Test each module at least 3 days before the workshop:</p>
+<ol>
+<li><a href="https://github.com/skills/introduction-to-github">Introduction to GitHub</a> — complete Steps 1–3 in a test account</li>
+<li><a href="https://github.com/skills/communicate-using-markdown">Communicate Using Markdown</a> — start and verify Mona creates the first issue</li>
+<li><a href="https://github.com/skills/review-pull-requests">Review Pull Requests</a> — start and verify Mona creates the practice PR</li>
+</ol>
+<p><strong>Note:</strong> GitHub Skills modules occasionally have delayed Mona responses. If Mona does not respond within 2 minutes:</p>
+<ol>
+<li>Check that the repo was created as <strong>Public</strong> (Mona requires this on the free tier)</li>
+<li>Navigate to the Actions tab of the student&#39;s new repo — confirm a workflow run is listed</li>
+<li>If the workflow failed: click it → read the error → the most common cause is a rate limit (wait 1–2 minutes and re-trigger by creating another commit)</li>
+<li>Have backup screenshots of Mona&#39;s expected responses ready for demo purposes</li>
+</ol>
+<hr>
+<h2>Day 2 — Pre-Session Checklist</h2>
+<ul>
+<li><input disabled="" type="checkbox"> VS Code installed on any shared/demo machine</li>
+<li><input disabled="" type="checkbox"> GitHub Copilot Chat extension installed and authenticated</li>
+<li><input disabled="" type="checkbox"> GitHub Pull Requests extension installed</li>
+<li><input disabled="" type="checkbox"> Agent Forge agents verified: open Copilot Chat → type <code>@daily-briefing morning briefing</code> → confirm a response</li>
+<li><input disabled="" type="checkbox"> Slash commands verified: type <code>/find-issues good first issue</code> → confirm a response</li>
+<li><input disabled="" type="checkbox"> Each participant&#39;s upstream PR target ready (if doing the agent-forge contribution)</li>
+</ul>
+<hr>
+<h2>GitHub Skills — Facilitator Script</h2>
+<h3>Block 1: Introducing Introduction to GitHub</h3>
+<blockquote>
+<p><em>&quot;Before we explore the learning-room repo, I want you to do something first. We&#39;re going to navigate to a GitHub Skills module — this is an interactive learning course built into GitHub itself. When you activate it, GitHub creates a copy of the course repository in your own account. Then a bot called Mona starts guiding you through steps — and it responds to real GitHub actions that you take.&quot;</em></p>
+</blockquote>
+<p>Walk through the setup together. Wait until everyone sees Mona&#39;s Issue #1 before continuing.</p>
+<blockquote>
+<p><em>&quot;Look at your repositories list. You now own a repository on GitHub. Mona is waiting inside it. Keep that tab open — we&#39;ll come back to it throughout the day.&quot;</em></p>
+</blockquote>
+<h3>Block 3: Mona Responds to the PR</h3>
+<p>When participants create their PR and Mona responds:</p>
+<blockquote>
+<p><em>&quot;Pause what you&#39;re doing. Navigate to your Pull Request tab in your Skills repo. What does Mona say? Read it with your screen reader.&quot;</em></p>
+</blockquote>
+<p>Wait a moment.</p>
+<blockquote>
+<p><em>&quot;What just happened is exactly how real open source bots work. Dependabot, GitHub Actions CI, automated labelers — they all watch for GitHub events and respond automatically. You just experienced that for the first time on your own repository.&quot;</em></p>
+</blockquote>
+<h3>Wrap-Up: Completion Certificates</h3>
+<p>When checking Skills module completions:</p>
+<blockquote>
+<p><em>&quot;Navigate to github.com/skills/introduction-to-github. Do you see your completion badge? That&#39;s yours. It&#39;s tied to your GitHub profile. It will be there when you apply for jobs, when you introduce yourself to a new open source community, when you want to demonstrate that you know how to use GitHub.&quot;</em></p>
+</blockquote>
+<hr>
+<h2>Managing Learning Room Automation</h2>
+<p>The Learning Room includes comprehensive automation that provides instant feedback while preserving the educational value of human peer review.</p>
+<h3>Automation Components</h3>
+<p><strong>1. PR Validation Bot</strong> (<code>.github/workflows/learning-room-pr-bot.yml</code>)</p>
+<ul>
+<li>Welcomes first-time contributors</li>
+<li>Validates PRs against quality standards</li>
+<li>Checks accessibility (headings, links, alt text, broken links)</li>
+<li>Provides educational feedback with links to resources</li>
+<li>Auto-applies labels (first-time-contributor, documentation, needs-work, accessibility)</li>
+<li>Responds to keywords: @bot help, &quot;merge conflict&quot;, &quot;request review&quot;</li>
+</ul>
+<p><strong>2. Skills Progression Engine</strong> (<code>.github/workflows/skills-progression.yml</code>)</p>
+<ul>
+<li>Tracks student progress through skill levels (Beginner → Intermediate → Advanced → Expert)</li>
+<li>Awards badges for specific achievements (Markdown Master, Accessibility Advocate, etc.)</li>
+<li>Unlocks new challenges based on merged PR count</li>
+<li>Celebrates milestones (1st, 5th, 10th, 25th merged PRs)</li>
+<li>Posts progress updates with stats</li>
+</ul>
+<p><strong>3. Student Pairing &amp; Grouping</strong> (<code>.github/workflows/student-grouping.yml</code>)</p>
+<ul>
+<li>Automatically assigns peer reviewers to PRs</li>
+<li>Balances review load using &quot;least_reviews&quot; strategy</li>
+<li>Creates study groups when triggered manually</li>
+<li>Provides review guidance to both author and reviewer</li>
+</ul>
+<h3>Before the Workshop: Configure Automation</h3>
+<p><strong>Update Student Roster</strong> (<code>.github/data/student-roster.json</code>)</p>
+<pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;cohort&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Your Cohort Name 2024&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;facilitators&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;your-github-username&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;students&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;username&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;student-github-username&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Student Display Name&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;timezone&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;America/Los_Angeles&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;interests&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;accessibility&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;frontend&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;pronouns&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;they/them&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;screenReader&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;mergedPRs&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;currentLevel&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Beginner&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;badges&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;joinedDate&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;2024-01-15&quot;</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span></code></pre>
+<p><strong>Verify Workflows Are Enabled</strong></p>
+<ul>
+<li>Navigate to Actions tab</li>
+<li>Ensure workflows are enabled (not disabled by GitHub)</li>
+<li>Check that GitHub Actions has write permissions:<ul>
+<li>Settings → Actions → General → Workflow permissions</li>
+<li>Select &quot;Read and write permissions&quot;</li>
+<li>Check &quot;Allow GitHub Actions to create and approve pull requests&quot;</li>
+</ul>
+</li>
+</ul>
+<p><strong>Test Automation</strong></p>
+<ol>
+<li>Open a test PR before workshop</li>
+<li>Verify bot comments within ~30 seconds</li>
+<li>Check that labels are applied</li>
+<li>Verify validation results are accurate</li>
+<li>Test @bot help keyword response</li>
+</ol>
+<h3>During the Workshop: Interacting with Automation</h3>
+<p><strong>Introducing the Bot (Day 1, Block 5)</strong></p>
+<blockquote>
+<p><em>&quot;When you open your PR, you&#39;ll see a comment from a bot within about 30 seconds. This bot is not grading you — it&#39;s teaching you. Read its feedback carefully. It will tell you about accessibility issues, link you to resources, and celebrate things you did well.&quot;</em></p>
+</blockquote>
+<p>Walk through a sample bot comment:</p>
+<ul>
+<li>Required checks (must pass)</li>
+<li>Suggestions (optional improvements)</li>
+<li>Accessibility analysis (detailed feedback with fixes)</li>
+<li>Learning resources (relevant documentation links)</li>
+</ul>
+<blockquote>
+<p><em>&quot;The bot is consistent and instant, but it&#39;s not perfect. If you disagree with its feedback, comment on your PR explaining why. Always request human review — peer review teaches things the bot cannot.&quot;</em></p>
+</blockquote>
+<p><strong>Monitoring Bot Behavior</strong></p>
+<p>Watch for:</p>
+<ul>
+<li>Bot comments that are incorrect (file issues with label <code>automation-feedback</code>)</li>
+<li>Bot overwhelming participants (adjust timing if needed)</li>
+<li>Students relying solely on bot without requesting reviews (remind them of human review value)</li>
+</ul>
+<p><strong>Overriding Bot Checks</strong></p>
+<p>If bot incorrectly flags something:</p>
+<ol>
+<li>Facilitator comments: &quot;Bot feedback incorrect here — [explanation]&quot;</li>
+<li>Approve PR despite bot warning</li>
+<li>File issue to improve validation script later</li>
+</ol>
+<p><strong>Manual Skill Progression Adjustments</strong></p>
+<p>If a student completes work outside tracked PRs:</p>
+<ol>
+<li>Update their entry in <code>.github/data/student-roster.json</code></li>
+<li>Increment <code>mergedPRs</code> count</li>
+<li>Update <code>currentLevel</code> if appropriate</li>
+<li>Add badges to <code>badges</code> array</li>
+<li>Commit and push to apply</li>
+</ol>
+<h3>Creating Study Groups</h3>
+<p><strong>Manual Creation:</strong>
+Run the student-grouping workflow manually:</p>
+<ol>
+<li>Navigate to Actions tab</li>
+<li>Select &quot;Student Pairing &amp; Grouping&quot;</li>
+<li>Click &quot;Run workflow&quot;</li>
+<li>Choose pairing strategy:<ul>
+<li><code>random</code>: Shuffle and divide</li>
+<li><code>skill_match</code>: Mix skill levels (recommended)</li>
+<li><code>timezone_match</code>: Group by timezone</li>
+</ul>
+</li>
+<li>Bot creates issue thread for each group</li>
+</ol>
+<p><strong>Group Sizes:</strong></p>
+<ul>
+<li>2-3 students: Ideal for focused collaboration</li>
+<li>4-5 students: Good for larger cohorts</li>
+<li>Edit <code>groupSize</code> variable in workflow to adjust</li>
+</ul>
+<p><strong>Monitoring Groups:</strong></p>
+<ul>
+<li>Check group issue threads for activity</li>
+<li>Ensure all members are participating</li>
+<li>Intervene if one person dominates or is left out</li>
+</ul>
+<h3>Automation Philosophy</h3>
+<p><strong>Automation Provides:</strong></p>
+<ul>
+<li>Instant feedback (students don&#39;t wait)</li>
+<li>Educational resources (links to learning materials)</li>
+<li>Consistency (same standards for everyone)</li>
+<li>Unlimited patience (can run on every commit)</li>
+</ul>
+<p><strong>Human Review Provides:</strong></p>
+<ul>
+<li>Creative suggestions (beyond rule-checking)</li>
+<li>Contextual judgment (understanding nuance)</li>
+<li>Social learning (building relationships)</li>
+<li>Encouragement (celebrating growth)</li>
+</ul>
+<p><strong>The Goal:</strong> Automation handles technical checks so humans can focus on higher-level feedback, mentorship, and community building.</p>
+<h3>Troubleshooting Automation</h3>
+<p><strong>Bot not commenting:</strong></p>
+<ul>
+<li>Check Actions tab for workflow runs</li>
+<li>Verify workflow triggered (visible in Actions)</li>
+<li>Check workflow permissions (Settings → Actions)</li>
+<li>Review workflow logs for errors</li>
+</ul>
+<p><strong>Incorrect validation results:</strong></p>
+<ul>
+<li>Review <code>.github/scripts/validate-pr.js</code> logic</li>
+<li>Check if file paths match expectations</li>
+<li>Test validation script locally: <code>node .github/scripts/validate-pr.js</code></li>
+<li>File issue with details for post-workshop fixes</li>
+</ul>
+<p><strong>Bot commenting multiple times:</strong></p>
+<ul>
+<li>Should only update one comment per PR</li>
+<li>If creating multiple: check workflow logic in <code>find-comment</code> step</li>
+<li>May be multiple workflows triggering (check Actions tab)</li>
+</ul>
+<p><strong>Skills not unlocking:</strong></p>
+<ul>
+<li>Verify PR was merged (not just closed)</li>
+<li>Check that issue was linked with &quot;Closes #XX&quot;</li>
+<li>Review skills-progression.yml workflow logs</li>
+<li>Manually update <code>student-roster.json</code> if needed</li>
+</ul>
+<p><strong>Peer reviewers not assigned:</strong></p>
+<ul>
+<li>Check that student-roster.json has active students</li>
+<li>Verify pairing workflow triggered</li>
+<li>Review logs for errors</li>
+<li>Manually request reviewers as fallback</li>
+</ul>
+<h3>Customizing Automation</h3>
+<p><strong>Adjusting Validation Rules:</strong>
+Edit <code>.github/scripts/validate-pr.js</code>:</p>
+<ul>
+<li>Modify <code>checkDescription()</code> to change min character count</li>
+<li>Add new validation functions</li>
+<li>Adjust accessibility checks (heading hierarchy, link text patterns)</li>
+<li>Update messages and resources</li>
+</ul>
+<p><strong>Changing Skill Progression:</strong>
+Edit <code>.github/data/challenge-progression.json</code>:</p>
+<ul>
+<li>Adjust required PR counts per level</li>
+<li>Add new skill levels</li>
+<li>Create new badge types</li>
+<li>Change challenge lists</li>
+</ul>
+<p><strong>Adding New Challenges:</strong></p>
+<ol>
+<li>Create issue template in <code>.github/ISSUE_TEMPLATE/</code></li>
+<li>Add to <code>learning-room/docs/CHALLENGES.md</code></li>
+<li>Document in <code>.github/docs/LEARNING_PATHS.md</code></li>
+<li>Add to progression data</li>
+</ol>
+<h3>Post-Workshop: Reviewing Automation Impact</h3>
+<p>After the workshop, analyze:</p>
+<ul>
+<li>Did bot feedback help students improve faster?</li>
+<li>Were validation messages clear and educational?</li>
+<li>Did automation reduce facilitator burden?</li>
+<li>Was peer review still valued despite automation?</li>
+<li>What false positives/negatives occurred?</li>
+<li>Did skills progression motivate continued participation?</li>
+</ul>
+<p><strong>Collect Feedback:</strong>
+Create issue labeled <code>automation-retrospective</code> asking:</p>
+<ul>
+<li>What bot feedback was most helpful?</li>
+<li>What feedback was confusing?</li>
+<li>Did automation enhance or detract from learning?</li>
+<li>Would you want more or less automation?</li>
+</ul>
+<p><strong>Iterate:</strong>
+Use feedback to improve validation scripts, messages, and workflows for next cohort.</p>
+<hr>
+<h2>Accessibility Notes for Facilitators</h2>
+<ul>
+<li>Deliver all verbal instructions slowly — participants are simultaneously navigating and listening</li>
+<li>When demonstrating on screen, describe what you are doing out loud: &quot;I am pressing Tab three times to reach the Issues tab, then pressing Enter&quot;</li>
+<li>Pause after introducing each new concept before moving to the next</li>
+<li>When a participant is stuck: ask &quot;what does your screen reader say right now?&quot; before any other question — this locates them precisely</li>
+<li>Respect different reading speeds. Some participants&#39; screen readers read faster, some slower. Build buffer time into each activity.</li>
+<li>If the room has mixed screen reader experience: pair advanced and new users during the contribution sprint — code review is a natural collaboration opportunity</li>
+<li><strong>Bot accessibility:</strong> Automation comments are standard GitHub comments, fully accessible with screen readers. Bot uses clear headings, lists, and links for easy navigation.</li>
+</ul>
+<hr>
+<h2>Personalizing This Workshop</h2>
+<p>The curriculum, agent files, and practice documents are designed to be adapted:</p>
+<ul>
+<li><strong>Rename <code>learning-room</code></strong> to reflect your project or organization</li>
+<li><strong>Replace the practice issues</strong> with real issues from an AT project you support</li>
+<li><strong>Edit the agent files</strong> in <code>.github/agents/</code> to be project-specific</li>
+<li><strong>Add more slash commands</strong> by creating new <code>.prompt.md</code> files in <code>.github/prompts/</code></li>
+<li><strong>Add more practice docs</strong> to <code>learning-room/docs/</code> with intentional issues relevant to your project&#39;s actual documentation</li>
+</ul>
+<p>The workshop is licensed under Creative Commons Attribution. Attribution: &quot;Based on the Open Source AT Hackathon Learning Room by [your name].&quot;</p>
+<hr>
+<p><em>Questions about facilitation? Open an issue with the <code>question</code> label.</em></p>
+
+  </main>
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+    <p>GitHub Learning Room — Open Source Assistive Technology Hackathon</p>
+    <p><a href="https://github.com/accesswatch/Learning-Room">View on GitHub</a></p>
+  </footer>
+</body>
+</html>

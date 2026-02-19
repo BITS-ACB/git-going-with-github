@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GitHub Learning Room - Open Source Assistive Technology Hackathon">
+  <title>Setup Guide — GitHub Learning Room</title>
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Setup Guide</span>
+  </nav>
+  <main id="main-content" class="markdown-body">
+    <h1>Setup Guide</h1>
+<h2>Getting Ready to Contribute with a Screen Reader</h2>
+<p>This guide walks you through everything you need to set up before your first GitHub contribution. Complete all steps before the workshop begins.</p>
+<hr>
+<h2>Step 1 — Create a GitHub Account</h2>
+<p>If you don&#39;t already have a GitHub account, create one at <a href="https://github.com">github.com/join</a>.</p>
+<p><strong>Account name tips:</strong></p>
+<ul>
+<li>Choose something you&#39;re comfortable sharing publicly — your GitHub username will appear in commit history</li>
+<li>Avoid special characters other than hyphens</li>
+<li>Your username cannot be changed easily later</li>
+</ul>
+<hr>
+<h2>Step 2 — Configure Accessibility Settings</h2>
+<p>GitHub has several accessibility settings that make navigation significantly easier with a screen reader. These settings are per-account and sync across devices.</p>
+<ol>
+<li>Navigate to <a href="https://github.com/settings/accessibility">github.com/settings/accessibility</a></li>
+<li>Under &quot;Motion&quot;, disable any animated effects if motion causes you difficulty</li>
+<li>Under &quot;Tab size&quot;, set to your preferred number of spaces</li>
+<li>Confirm the page reads &quot;Accessibility settings saved&quot; before leaving</li>
+</ol>
+<hr>
+<h2>Step 3 — GitHub Interface (No Action Needed)</h2>
+<p>GitHub&#39;s improved Issues and Pull Request experiences have been broadly rolled out and are likely already active for your account. However, some features may still appear as opt-in toggles in Feature Preview for some users.</p>
+<p>You should automatically have:</p>
+<ul>
+<li><strong>Modern Issues experience</strong> with proper heading hierarchy and better screen reader navigation</li>
+<li><strong>Improved Pull Request Files Changed view</strong> with accessible diff navigation</li>
+<li>Better keyboard accessibility throughout GitHub</li>
+</ul>
+<p><strong>To verify:</strong> Activate the <strong>User Menu</strong> button (top right) → <strong>&quot;Feature preview&quot;</strong> → scan the list. Each toggle announces <strong>&quot;Pressed&quot;</strong> when enabled. If neither &quot;New Issues Experience&quot; nor &quot;New Files Changed Experience&quot; appears in the list, both have graduated to the standard interface and are active automatically.</p>
+<p>If something doesn&#39;t match the workshop materials, verify your Feature Preview settings as above, then try clearing your browser cache and reloading the page.</p>
+<hr>
+<h2>Step 4 — Disable Hovercards</h2>
+<p>GitHub&#39;s hovercards appear when your mouse hovers over a username or repository. For keyboard users, these can interfere with focus and create unexpected announcements.</p>
+<ol>
+<li>Navigate to your account settings: <a href="https://github.com/settings">github.com/settings</a></li>
+<li>Scroll to the &quot;Hovercards&quot; section</li>
+<li>Uncheck &quot;Show user hovercards&quot;</li>
+<li>Save the changes</li>
+</ol>
+<hr>
+<h2>Step 5 — Configure Your Screen Reader for GitHub</h2>
+<h3>NVDA</h3>
+<ol>
+<li>Set the NVDA user interface language to match your system language (NVDA Menu → Preferences → Settings → General)</li>
+<li>In Browse Mode settings: set &quot;Maximum length of text&quot; to 10000</li>
+<li>Recommended browser: Google Chrome with the NVDA Google Chrome extension installed</li>
+</ol>
+<h3>JAWS</h3>
+<ol>
+<li>Confirm JAWS is set to use the &quot;Standard&quot; verbosity level (JAWS Key + V → select Standard)</li>
+<li>When on GitHub, use Virtual PC Cursor (reading mode) for general navigation</li>
+<li>Switch to Forms Mode (Enter on a field) when filling out issue or comment forms</li>
+</ol>
+<h3>VoiceOver (macOS)</h3>
+<ol>
+<li>Open VoiceOver Utility (Command+F5 to start VoiceOver → VO+F8 for utility)</li>
+<li>Verbosity → Punctuation: set to &quot;Some&quot; or &quot;All&quot; for reading code blocks</li>
+<li>Recommended browser: Safari (best VoiceOver compatibility) or Google Chrome</li>
+</ol>
+<hr>
+<h2>Step 6 — Fork the Workshop Repository</h2>
+<p>To make your own contributions, you need your own copy of the repository.</p>
+<ol>
+<li>Navigate to the workshop repository on GitHub</li>
+<li>Find the &quot;Fork&quot; button in the top-right area of the page (navigate by button: B)</li>
+<li>Choose your GitHub account as the destination</li>
+<li>GitHub creates a fork: a copy of the repository that belongs to you</li>
+</ol>
+<p>Your fork is at: <code>github.com/[your-username]/[repository-name]</code></p>
+<hr>
+<h2>Step 7 — Verify Your Setup</h2>
+<p>Before the workshop begins, confirm that you can:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Navigate to github.com and read the page headings with your screen reader</li>
+<li><input disabled="" type="checkbox"> Find and read an issue in the Issues tab of the workshop repository</li>
+<li><input disabled="" type="checkbox"> Read a pull request description</li>
+<li><input disabled="" type="checkbox"> Access your account settings</li>
+</ul>
+<p>If any of these steps are difficult, bring your question to the workshop. There will be dedicated setup time at the start of Day 1.</p>
+<hr>
+<h2>Getting Help Before the Workshop</h2>
+<p>If you run into setup issues before the workshop:</p>
+<ul>
+<li>Open an issue in the workshop repository using the &quot;Feature or Improvement Request&quot; template</li>
+<li>Ask your question in the issue — be specific about what step you are on and what happens when you try it</li>
+</ul>
+<hr>
+<p><em>Note: Links marked [TODO] in this document need to be updated before the workshop. See the facilitator guide for details.</em></p>
+
+  </main>
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+    <p>GitHub Learning Room — Open Source Assistive Technology Hackathon</p>
+    <p><a href="https://github.com/accesswatch/Learning-Room">View on GitHub</a></p>
+  </footer>
+</body>
+</html>

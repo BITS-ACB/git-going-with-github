@@ -1,0 +1,116 @@
+{
+  "levels": [
+    {
+      "name": "Beginner",
+      "requiredPRs": 0,
+      "description": "Getting started with GitHub and Markdown basics",
+      "challenges": [
+        "fix-broken-link",
+        "add-keyboard-shortcut",
+        "complete-welcome"
+      ],
+      "skills": [
+        "markdown",
+        "git-basics",
+        "pr-workflow"
+      ]
+    },
+    {
+      "name": "Intermediate",
+      "requiredPRs": 1,
+      "description": "Learning accessibility fundamentals",
+      "challenges": [
+        "fix-heading-hierarchy",
+        "improve-link-text",
+        "add-alt-text"
+      ],
+      "skills": [
+        "accessibility",
+        "document-structure",
+        "screen-reader-basics"
+      ]
+    },
+    {
+      "name": "Advanced",
+      "requiredPRs": 3,
+      "description": "Comprehensive reviews and mentorship",
+      "challenges": [
+        "review-accessibility",
+        "create-documentation",
+        "mentor-peer"
+      ],
+      "skills": [
+        "code-review",
+        "technical-writing",
+        "mentorship"
+      ]
+    },
+    {
+      "name": "Expert",
+      "requiredPRs": 5,
+      "description": "Creating content and leading initiatives",
+      "challenges": [
+        "design-challenge",
+        "accessibility-audit",
+        "create-template"
+      ],
+      "skills": [
+        "instructional-design",
+        "community-leadership",
+        "systematic-testing"
+      ]
+    }
+  ],
+  "badges": {
+    "markdown": {
+      "title": "Markdown Master",
+      "description": "Completed Markdown challenge"
+    },
+    "accessibility": {
+      "title": "Accessibility Advocate",
+      "description": "Completed accessibility challenge"
+    },
+    "review": {
+      "title": "Code Reviewer",
+      "description": "Provided thorough peer review"
+    },
+    "collaboration": {
+      "title": "Team Player",
+      "description": "Completed collaborative challenge"
+    },
+    "documentation": {
+      "title": "Documentation Writer",
+      "description": "Created comprehensive documentation"
+    },
+    "creation": {
+      "title": "Content Creator",
+      "description": "Designed new learning content"
+    }
+  },
+  "milestones": [
+    {
+      "prs": 1,
+      "message": "Your first merged PR! This is the start of your open source journey."
+    },
+    {
+      "prs": 5,
+      "message": "Five merged contributions! You're building real momentum."
+    },
+    {
+      "prs": 10,
+      "message": "Double digits! You're becoming a regular contributor."
+    },
+    {
+      "prs": 25,
+      "message": "Quarter century! Your impact is undeniable."
+    },
+    {
+      "prs": 50,
+      "message": "Half a hundred! You're a pillar of this community."
+    },
+    {
+      "prs": 100,
+      "message": "ONE HUNDRED contributions! You're a legend!"
+    }
+  ]
+}

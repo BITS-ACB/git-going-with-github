@@ -1,0 +1,334 @@
+name: Skills Progression Engine
+# Tracks student progress and unlocks new challenges
+
+on:
+  pull_request:
+    types: [closed]
+    paths:
+      - 'learning-room/learning-room/**'
+  issues:
+    types: [closed]
+  workflow_dispatch:
+    inputs:
+      student_username:
+        description: 'Student GitHub username'
+        required: true
+      action:
+        description: 'Action (check_progress, assign_next, reset)'
+        required: true
+        default: 'check_progress'
+
+jobs:
+  track-completion:
+    name: Track Skill Completion
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Record completion
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const student = context.payload.pull_request.user.login;
+            const prNumber = context.payload.pull_request.number;
+            
+            // Get linked issue
+            const prBody = context.payload.pull_request.body || '';
+            const issueMatch = prBody.match(/(?:close|closes|fix|fixes|resolve|resolves)\s+#(\d+)/i);
+            
+            if (!issueMatch) return;
+            
+            const issueNumber = parseInt(issueMatch[1]);
+            
+            // Get issue to determine skill
+            const { data: issue } = await github.rest.issues.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber
+            });
+            
+            // Determine skill category from labels
+            const labels = issue.labels.map(l => typeof l === 'string' ? l : l.name);
+            let skillType = 'general';
+            
+            if (labels.includes('skill: markdown')) skillType = 'markdown';
+            if (labels.includes('skill: accessibility')) skillType = 'accessibility';
+            if (labels.includes('skill: review')) skillType = 'review';
+            if (labels.includes('skill: collaboration')) skillType = 'collaboration';
+            
+            // Award badge in comment
+            const badges = {
+              'markdown': 'Markdown Master',
+              'accessibility': 'Accessibility Advocate',  
+              'review': 'Code Reviewer',
+              'collaboration': 'Team Player',
+              'general': 'Contributor'
+            };
+            
+            const badge = badges[skillType] || badges['general'];
+            
+            const skills = {
+              'markdown': ['- Proper Markdown syntax', '- Document structure', '- Formatting best practices'],
+              'accessibility': ['- Heading hierarchy', '- Descriptive link text', '- Alt text for images', '- Screen reader considerations'],
+              'review': ['- Constructive feedback', '- Suggesting improvements', '- Thorough examination'],
+              'collaboration': ['- Clear communication', '- Following conventions', '- Team coordination']
+            };
+            const skillLines = skills[skillType] || [];
+            
+            const skillBody = [
+              '## Skill Unlocked: ' + badge,
+              '',
+              'Congratulations @' + student + '! You\'ve completed a **' + skillType + '** challenge.',
+              '',
+              '### Your Progress',
+              '',
+              'This PR demonstrated:',
+              ...skillLines,
+              '',
+              '### What\'s Next?',
+              '',
+              'Check your profile for the next available challenge, or explore:',
+              '- [Learning Path Tracker](../../.github/docs/LEARNING_PATHS.md)',
+              '- [Available Challenges](../../learning-room/docs/CHALLENGES.md)',
+              '',
+              'Keep up the amazing work!',
+              '',
+              '---',
+              '*Progress tracked by Learning Room Skills Engine*'
+            ].join('\n');
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              body: skillBody
+            });
+            
+            // Add achievement label to PR
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              labels: ['achievement: ' + skillType]
+            });
+
+  unlock-next-challenge:
+    name: Unlock Next Challenge
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check for next challenge
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const student = context.payload.pull_request.user.login;
+            
+            // Count student's merged PRs
+            const { data: studentPRs } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'closed',
+              creator: student
+            });
+            
+            const mergedCount = studentPRs.filter(pr => pr.merged_at).length;
+            
+            // Load challenge progression rules
+            const progressionPath = '.github/data/challenge-progression.json';
+            let progression = {
+              levels: [
+                {
+                  name: 'Beginner',
+                  requiredPRs: 0,
+                  challenges: ['fix-broken-link', 'add-keyboard-shortcut', 'complete-welcome']
+                },
+                {
+                  name: 'Intermediate',
+                  requiredPRs: 1,
+                  challenges: ['fix-heading-hierarchy', 'improve-link-text', 'add-alt-text']
+                },
+                {
+                  name: 'Advanced',
+                  requiredPRs: 3,
+                  challenges: ['review-accessibility', 'create-documentation', 'mentor-peer']
+                },
+                {
+                  name: 'Expert',
+                  requiredPRs: 5,
+                  challenges: ['design-challenge', 'accessibility-audit', 'create-template']
+                }
+              ]
+            };
+            
+            if (fs.existsSync(progressionPath)) {
+              progression = JSON.parse(fs.readFileSync(progressionPath, 'utf8'));
+            }
+            
+            // Determine current level
+            let currentLevel = progression.levels[0];
+            for (const level of progression.levels) {
+              if (mergedCount >= level.requiredPRs) {
+                currentLevel = level;
+              }
+            }
+            
+            // Check if student just leveled up
+            const previousMergedCount = mergedCount - 1;
+            let previousLevel = progression.levels[0];
+            for (const level of progression.levels) {
+              if (previousMergedCount >= level.requiredPRs) {
+                previousLevel = level;
+              }
+            }
+            
+            if (currentLevel.name !== previousLevel.name) {
+              // Level up!
+              const challengeList = currentLevel.challenges
+                .map(c => '- [ ] ' + c.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '))
+                .join('\n');
+              
+              const levelUpBody = [
+                '## Level Up: ' + currentLevel.name + '!',
+                '',
+                '@' + student + ', you\'ve reached **' + currentLevel.name + '** level!',
+                '',
+                '**Stats:**',
+                '- Merged PRs: ' + mergedCount,
+                '- Level: ' + currentLevel.name,
+                '',
+                '**Unlocked Challenges:**',
+                challengeList,
+                '',
+                'Check the [Challenges Board](../../learning-room/docs/CHALLENGES.md) to get started!',
+                '',
+                '---',
+                '*Achievement unlocked by Skills Engine*'
+              ].join('\n');
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: levelUpBody
+              });
+            } else {
+              // Progress within level
+              const nextLevelIndex = progression.levels.findIndex(l => l.name === currentLevel.name) + 1;
+              if (nextLevelIndex < progression.levels.length) {
+                const nextLevel = progression.levels[nextLevelIndex];
+                const prsToNextLevel = nextLevel.requiredPRs - mergedCount;
+                
+                const challengeList = currentLevel.challenges
+                  .map(c => '- ' + c.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '))
+                  .join('\n');
+                
+                const progressBody = [
+                  '## Progress Update',
+                  '',
+                  'Great work, @' + student + '!',
+                  '',
+                  '**Current Level:** ' + currentLevel.name,
+                  '**Merged PRs:** ' + mergedCount,
+                  '**Next Level:** ' + nextLevel.name + ' (' + prsToNextLevel + ' more merged PR' + (prsToNextLevel === 1 ? '' : 's') + ')',
+                  '',
+                  '**Available Challenges:**',
+                  challengeList,
+                  '',
+                  'Keep going!'
+                ].join('\n');
+
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.payload.pull_request.number,
+                  body: progressBody
+                });
+              }
+            }
+
+  celebrate-milestone:
+    name: Celebrate Milestones
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    
+    steps:
+      - name: Check for milestones
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const student = context.payload.pull_request.user.login;
+            
+            // Get all merged PRs
+            const { data: allPRs } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'closed',
+              creator: student,
+              per_page: 100
+            });
+            
+            const mergedPRs = allPRs.filter(pr => pr.merged_at);
+            const count = mergedPRs.length;
+            
+            // Milestone numbers
+            const milestones = [1, 5, 10, 25, 50, 100];
+            
+            if (milestones.includes(count)) {
+              const messages = {
+                1: 'Your first merged PR! This is the start of your open source journey.',
+                5: 'Five merged contributions! You\'re building real momentum.',
+                10: 'Double digits! You\'re becoming a regular contributor.',
+                25: 'Quarter century! Your impact is undeniable.',
+                50: 'Half a hundred! You\'re a pillar of this community.',
+                100: 'ONE HUNDRED contributions! You\'re a legend!'
+              };
+              
+              const filesImproved = mergedPRs.reduce((sum, pr) => sum + (pr.changed_files || 0), 0);
+              const memberSince = new Date(mergedPRs[mergedPRs.length - 1].created_at).toLocaleDateString();
+              
+              const milestoneBody = [
+                '## MILESTONE REACHED: ' + count + ' Merged PRs!',
+                '',
+                '@' + student + ' \u2014 ' + messages[count],
+                '',
+                '**Your Impact:**',
+                '- Contributions merged: ' + count,
+                '- Files improved: ' + filesImproved,
+                '- Community member since: ' + memberSince,
+                '',
+                '**Share your achievement!**',
+                'Add this badge to your GitHub profile:',
+                '',
+                '```markdown',
+                '![' + count + ' Contributions](https://img.shields.io/badge/Learning%20Room-' + count + '%20Contributions-success)',
+                '```',
+                '',
+                '---',
+                '*Milestone celebrated by Skills Engine*'
+              ].join('\n');
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: milestoneBody
+              });
+            }

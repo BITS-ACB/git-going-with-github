@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GitHub Learning Room - Open Source Assistive Technology Hackathon">
+  <title>Pre-Workshop Setup — GitHub Learning Room</title>
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Pre-Workshop Setup</span>
+  </nav>
+  <main id="main-content" class="markdown-body">
+    <h1>Pre-Workshop Setup</h1>
+<h2>Everything You Need Before Day 1 Begins</h2>
+<blockquote>
+<p><strong>Please complete this guide at least one day before the workshop.</strong> If you run into any issues, contact the event organizers so we can help — we want Day 1 to start with everyone ready to go, not troubleshooting.</p>
+</blockquote>
+<hr>
+<h2>Table of Contents</h2>
+<ol>
+<li><a href="#1-what-you-will-need">What You Will Need</a></li>
+<li><a href="#2-step-1--create-your-github-account">Step 1 — Create Your GitHub Account</a></li>
+<li><a href="#3-step-15--configure-git-identity-if-using-git-locally">Step 1.5 — Configure Git Identity (If Using Git Locally)</a></li>
+<li><a href="#4-step-2--configure-github-accessibility-settings">Step 2 — Configure GitHub Accessibility Settings</a></li>
+<li><a href="#5-step-3--configure-your-profile">Step 3 — Configure Your Profile</a></li>
+<li><a href="#6-step-4--verify-modern-github-interface">Step 4 — Verify Modern GitHub Interface</a></li>
+<li><a href="#7-step-5--test-your-screen-reader-on-github">Step 5 — Test Your Screen Reader on GitHub</a></li>
+<li><a href="#8-step-6--install-git-and-visual-studio-code-day-2">Step 6 — Install Git and Visual Studio Code</a></li>
+<li><a href="#9-step-7--install-github-copilot-in-vs-code-day-2">Step 7 — Install GitHub Copilot in VS Code</a></li>
+<li><a href="#10-step-8--verification-checklist">Step 8 — Verification Checklist</a></li>
+<li><a href="#11-other-github-access-methods-reference-only">Other GitHub Access Methods (Reference Only)</a></li>
+<li><a href="#12-getting-help-before-the-event">Getting Help Before the Event</a></li>
+</ol>
+<hr>
+<h2>1. What You Will Need</h2>
+<h3>Hardware</h3>
+<ul>
+<li>A computer running Windows or macOS</li>
+<li>A reliable internet connection</li>
+<li>Headphones (recommended — screen reader audio during group sessions)</li>
+</ul>
+<h3>Software — Day 1</h3>
+<ul>
+<li>A modern web browser: <strong>Chrome</strong> or <strong>Firefox</strong> recommended<ul>
+<li>Both have strong compatibility with GitHub&#39;s interface and screen readers</li>
+<li>Edge is also acceptable on Windows</li>
+<li>Safari is the recommended browser on macOS with VoiceOver</li>
+</ul>
+</li>
+<li>A screen reader (see options below)</li>
+<li>A GitHub account (free tier is fine)</li>
+</ul>
+<h3>Software — Required Before the Workshop</h3>
+<ul>
+<li><strong>Git</strong> — <a href="https://git-scm.com/downloads">git-scm.com</a> (Windows/Linux) or Xcode Command Line Tools (macOS)</li>
+<li><strong>Visual Studio Code</strong> (free) — <a href="https://code.visualstudio.com/">download here</a></li>
+<li><strong>GitHub Copilot Chat</strong> extension for VS Code — installed from within VS Code (this single extension provides both inline suggestions and Chat)</li>
+<li>A GitHub Copilot subscription or Free tier access (Copilot Free is available to all GitHub users)</li>
+</ul>
+<h3>Screen Reader Options</h3>
+<p>You only need <strong>one</strong> of these. Use whichever you are most comfortable with.</p>
+<table>
+<thead>
+<tr>
+<th>Screen Reader</th>
+<th>Platform</th>
+<th>Cost</th>
+<th>Download</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>NVDA</strong> (NonVisual Desktop Access)</td>
+<td>Windows</td>
+<td>Free</td>
+<td><a href="https://www.nvaccess.org/download/">nvaccess.org</a></td>
+</tr>
+<tr>
+<td><strong>JAWS</strong> (Job Access With Speech)</td>
+<td>Windows</td>
+<td>Paid (trial available)</td>
+<td><a href="https://www.freedomscientific.com/products/software/jaws/">freedomscientific.com</a></td>
+</tr>
+<tr>
+<td><strong>VoiceOver</strong></td>
+<td>macOS / iOS</td>
+<td>Built-in (free)</td>
+<td>Included with macOS — press <code>Cmd+F5</code> to activate</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Note:</strong> All workshop exercises are designed to work with any of these screen readers. Where specific key commands differ, we will note all three. You are not disadvantaged by using any particular screen reader.</p>
+</blockquote>
+<hr>
+<h2>2. Step 1 — Create Your GitHub Account</h2>
+<p>If you already have a GitHub account, skip to <a href="#4-step-2--configure-github-accessibility-settings">Step 2</a>.</p>
+<blockquote>
+<p><strong>Before you begin:</strong> Have your email address and a chosen password ready. The signup form is a single-page form with several fields — your screen reader will encounter a verification puzzle partway through (see note below).</p>
+</blockquote>
+<h3>Create an account</h3>
+<ol>
+<li><p>Open your browser and navigate to <strong><a href="https://github.com/signup">https://github.com/signup</a></strong></p>
+</li>
+<li><p>The page loads with focus on the first field: <strong>&quot;Enter your email address&quot;</strong></p>
+<ul>
+<li>Type your email address and press <code>Tab</code> or activate <strong>Continue</strong></li>
+</ul>
+</li>
+<li><p>The next field is <strong>&quot;Create a password&quot;</strong></p>
+<ul>
+<li>Choose a password of at least 8 characters (15+ recommended). Press <code>Tab</code> or <strong>Continue</strong></li>
+</ul>
+</li>
+<li><p>The next field is <strong>&quot;Enter a username&quot;</strong></p>
+<ul>
+<li>Your username appears on every issue, PR, and comment you make. Guidelines:<ul>
+<li>Use lowercase letters, numbers, and hyphens only</li>
+<li>Keep it professional — it represents you in the open source community</li>
+<li>GitHub will tell you immediately if the name is taken</li>
+</ul>
+</li>
+<li>Press <code>Tab</code> or <strong>Continue</strong></li>
+</ul>
+</li>
+<li><p>The next question asks whether you want to receive product updates by email</p>
+<ul>
+<li>Press <code>Tab</code> to reach the <strong>&quot;y&quot;</strong> or <strong>&quot;n&quot;</strong> options and press <code>Enter</code>, or type <code>y</code> or <code>n</code> directly</li>
+</ul>
+</li>
+<li><p><strong>Human verification step</strong></p>
+<details>
+<summary>Visual / mouse users</summary>
+
+<p>GitHub presents a visual CAPTCHA puzzle to verify you are human. Follow the on-screen prompts — typically clicking images that match a category, or checking a box. If the puzzle does not load, try refreshing the page.</p>
+</details>
+
+<details>
+<summary>Screen reader users</summary>
+
+<p>GitHub&#39;s visual CAPTCHA is a known accessibility barrier. After the CAPTCHA appears:</p>
+<ul>
+<li>Look for a button or link labeled <strong>&quot;Audio&quot;</strong> or <strong>&quot;Try an audio challenge&quot;</strong> — an audio CAPTCHA alternative may be available</li>
+<li>If no audio option appears, or if neither challenge is accessible, contact the workshop organizer before the event — they can assist with account verification</li>
+<li>If you complete an audio challenge, you will hear words or digits to type into a text field</li>
+</ul>
+</details>
+</li>
+<li><p>Activate the <strong>Create account</strong> button</p>
+</li>
+<li><p>GitHub sends a <strong>launch code</strong> (a short numeric code) to your email inbox</p>
+<ul>
+<li>Check your email, copy the code, return to the browser, and type it into the verification field</li>
+<li>If you don&#39;t receive it within a few minutes, check your spam folder</li>
+</ul>
+</li>
+<li><p>You will land on a &quot;Welcome to GitHub&quot; personalization page — you can skip it or answer the questions; it does not affect your account functionality</p>
+</li>
+</ol>
+<h3>Verify your email address</h3>
+<p>GitHub also sends a <strong>separate</strong> email verification link after account creation. Check your inbox for an email from GitHub with subject &quot;Please verify your email address&quot; and activate the link inside it. Some GitHub features (including creating repositories) require a verified email.</p>
+<h3>Enable two-factor authentication (strongly recommended)</h3>
+<p>Two-factor authentication (2FA) adds a second verification step each time you sign in, protecting your account if your password is compromised.</p>
+<ol>
+<li><p>Navigate to <a href="https://github.com/settings/security">github.com/settings/security</a></p>
+</li>
+<li><p>Find the section <strong>&quot;Two-factor authentication&quot;</strong> and activate <strong>&quot;Enable&quot;</strong></p>
+</li>
+<li><p>GitHub asks how you want to receive your second factor. <strong>Recommended options:</strong></p>
+<ul>
+<li><strong>Authenticator app</strong> (most reliable) — apps like Microsoft Authenticator, Google Authenticator, or Authy generate a 6-digit code</li>
+<li><strong>SMS / text message</strong> — simpler but less secure</li>
+<li><strong>Passkey or security key</strong> — most secure; requires a hardware key or device biometric</li>
+</ul>
+</li>
+<li><p>Follow the on-screen setup for your chosen method</p>
+</li>
+<li><p><strong>Setting up an authenticator app:</strong></p>
+<details>
+<summary>Visual / mouse users</summary>
+
+<p>The setup page shows a QR code. Open your authenticator app (Microsoft Authenticator, Google Authenticator, or Authy), choose <strong>Add account</strong> or the <code>+</code> button, and scan the QR code with your device camera. The app will generate 6-digit codes — enter the current code on the GitHub page to verify.</p>
+</details>
+
+<details>
+<summary>Screen reader users</summary>
+
+<p>The QR code image cannot be read by a screen reader. Look for a text link labeled <strong>&quot;Enter this text code&quot;</strong>, <strong>&quot;setup key&quot;</strong>, or <strong>&quot;can&#39;t scan the barcode?&quot;</strong> — GitHub provides the secret as a 32-character plain-text string. Copy it and paste it directly into your authenticator app&#39;s <strong>manual entry</strong> or <strong>enter key</strong> field.</p>
+</details>
+</li>
+<li><p><strong>Save your recovery codes</strong> — GitHub provides a set of single-use backup codes. Download or copy them and store them somewhere safe (password manager, printed and secured). These are the only way to regain access to your account if you lose your second factor device.</p>
+</li>
+</ol>
+<hr>
+<h2>3. Step 1.5 — Configure Git Identity (If Using Git Locally)</h2>
+<blockquote>
+<p><strong>Important:</strong> Complete this step after installing Git (Step 6) and before the workshop begins. Git must know who you are before you can make your first commit.</p>
+</blockquote>
+<p>Git needs to know who you are so every commit you make is attributed to you. This affects how your name appears in project history.</p>
+<h3>Configure in VS Code (Recommended for This Workshop)</h3>
+<ol>
+<li>Open <strong>Visual Studio Code</strong></li>
+<li>Open the integrated terminal:<ul>
+<li>Menu: <strong>Terminal → New Terminal</strong></li>
+<li>Keyboard: <code>Ctrl+`</code> (Windows) or <code>Cmd+`</code> (Mac)</li>
+</ul>
+</li>
+<li>Type the following commands, replacing with your information:</li>
+</ol>
+<pre><code class="hljs language-bash">git config --global user.name <span class="hljs-string">&quot;Your Name&quot;</span>
+git config --global user.email <span class="hljs-string">&quot;your-email@example.com&quot;</span></code></pre>
+<p><strong>What to use:</strong></p>
+<ul>
+<li><strong>user.name:</strong> Your real name or the name you want shown on commits (e.g., &quot;Jane Smith&quot;)</li>
+<li><strong>user.email:</strong> The email address associated with your GitHub account (must match exactly)</li>
+</ul>
+<p><strong>Screen reader note:</strong> The terminal in VS Code is accessible with all major screen readers. Press <code>Ctrl+`</code> to move focus to the terminal, type your commands, and press <code>Enter</code>.</p>
+<h3>Why This Matters</h3>
+<p>Every commit you make includes:</p>
+<ul>
+<li>Your name</li>
+<li>Your email address  </li>
+<li>A timestamp</li>
+<li>The commit message</li>
+</ul>
+<p>If Git isn&#39;t configured, it will either:</p>
+<ul>
+<li>Use a default name like &quot;Unknown&quot; (looks unprofessional in project history)</li>
+<li>Refuse to create commits with an error message</li>
+</ul>
+<h3>Verify Your Configuration</h3>
+<p>Run this command to see your current settings:</p>
+<pre><code class="hljs language-bash">git config --global --list</code></pre>
+<p>You should see:</p>
+<pre><code class="hljs"><span class="hljs-attr">user.name</span>=Your Name
+<span class="hljs-attr">user.email</span>=your-email@example.com</code></pre>
+<h3>Using the Correct Email</h3>
+<p>Use the same email you registered with GitHub. If you&#39;re concerned about privacy, GitHub offers a no-reply email you can use: <code>username@users.noreply.github.com</code> — find it in <a href="https://github.com/settings/emails">Settings → Emails</a>.</p>
+<p><strong>When to configure this:</strong> Before your first commit in VS Code. You can skip it on Day 1 if you&#39;re only working through the GitHub web interface.</p>
+<hr>
+<h2>4. Step 2 — Configure GitHub Accessibility Settings</h2>
+<p>These settings make GitHub significantly more usable with a screen reader. <strong>Do not skip this section</strong> — one setting in particular (hovercards) adds significant noise to every page if left on.</p>
+<h3>Navigate to Accessibility Settings</h3>
+<p>The fastest path for everyone: navigate directly to <strong><a href="https://github.com/settings/accessibility">github.com/settings/accessibility</a></strong> while signed in.</p>
+<p>If you prefer to navigate through the interface:</p>
+<details>
+<summary>Visual / mouse users</summary>
+
+<ol>
+<li>Click your <strong>profile picture</strong> (avatar) in the top-right corner of any GitHub page</li>
+<li>A dropdown menu appears — click <strong>Settings</strong></li>
+<li>On the Settings page, scroll the <strong>left sidebar</strong> and click <strong>Accessibility</strong></li>
+</ol>
+</details>
+
+<details>
+<summary>Screen reader users (NVDA / JAWS)</summary>
+
+<ol>
+<li>On any GitHub page, switch to Browse Mode if you are not already in it (<code>NVDA+Space</code> / JAWS virtual cursor should be on by default in browsers)</li>
+<li>Press <code>B</code> repeatedly until you hear <strong>&quot;Open user navigation menu, button&quot;</strong> (top-right of the page) and press <code>Enter</code></li>
+<li>Navigate the menu with <code>↓</code> or <code>K</code> until you hear <strong>&quot;Settings&quot;</strong> and press <code>Enter</code></li>
+<li>On the Settings page, press <code>D</code> to move through landmark regions until you reach the left sidebar navigation</li>
+<li>Press <code>K</code> or <code>↓</code> to navigate through sidebar links until you hear <strong>&quot;Accessibility&quot;</strong> and press <code>Enter</code></li>
+</ol>
+</details>
+
+<details>
+<summary>Screen reader users (VoiceOver on macOS)</summary>
+
+<ol>
+<li>Press <code>VO+U</code> to open the Rotor, arrow to Buttons, find <strong>&quot;Open user navigation menu&quot;</strong> and press <code>Enter</code></li>
+<li>Press <code>VO+Down Arrow</code> to find <strong>&quot;Settings&quot;</strong> and press <code>VO+Space</code></li>
+<li>On Settings, press <code>VO+U</code>, go to Links, find <strong>&quot;Accessibility&quot;</strong> and press <code>Enter</code></li>
+</ol>
+</details>
+
+<h3>Settings to configure</h3>
+<p>Work through each setting below. All are on the <a href="https://github.com/settings/accessibility">Accessibility settings page</a> unless noted.</p>
+<h4>1. Disable Hovercards (highest priority)</h4>
+<blockquote>
+<p><strong>Do this first.</strong> Hovercards are the most disruptive default setting for screen reader users on GitHub. When enabled, every link announces its hover keyboard shortcut (<code>H</code>) as you navigate past it, dramatically slowing page reading.</p>
+</blockquote>
+<details>
+<summary>Visual / mouse users</summary>
+
+<p>On the Accessibility settings page, look for a checkbox or toggle labeled <strong>&quot;Link previews&quot;</strong> or <strong>&quot;Hovercards&quot;</strong>. If it is turned on, click it to turn it off. The change saves automatically.</p>
+</details>
+
+<details>
+<summary>Screen reader users</summary>
+
+<ol>
+<li>On the Accessibility settings page, switch to Browse Mode if not already active</li>
+<li>Press <code>F</code> or <code>X</code> to jump through form controls until you hear <strong>&quot;Link previews&quot;</strong> or <strong>&quot;Hovercards&quot;</strong></li>
+<li>If it is announced as <strong>checked</strong> or <strong>on</strong>, press <code>Space</code> to turn it off</li>
+<li>The change saves automatically — no Submit button required</li>
+</ol>
+</details>
+
+<h4>2. Enable Link Underlines</h4>
+<details>
+<summary>Visual / mouse users</summary>
+
+<p>Find the <strong>Link underlines</strong> checkbox or toggle and turn it on. This adds underlines to all links on GitHub, making them distinguishable without relying on colour alone.</p>
+</details>
+
+<details>
+<summary>Screen reader users</summary>
+
+<ol>
+<li>Press <code>F</code> or <code>X</code> to navigate form controls until you hear <strong>&quot;Link underlines&quot;</strong></li>
+<li>If it is announced as <strong>unchecked</strong>, press <code>Space</code> to enable it</li>
+<li>The change saves automatically</li>
+</ol>
+</details>
+
+<h4>3. Character Key Shortcuts</h4>
+<ol>
+<li>Find <strong>&quot;Character key shortcuts&quot;</strong></li>
+<li>Single-key shortcuts (<code>H</code> for next heading, <code>I</code> for next issue, etc.) speed up navigation but <strong>can conflict with screen reader quick-navigation keys</strong><ul>
+<li>If your screen reader uses letters for navigation in Browse Mode (NVDA, JAWS), GitHub&#39;s single-key shortcuts are suppressed when Browse Mode is active, so conflicts are rare in practice</li>
+<li>If you notice unexpected behavior, return here and turn them off</li>
+</ul>
+</li>
+<li>Leave at the default unless you have a reason to change it</li>
+</ol>
+<h4>4. Set Your Theme (Appearance Settings)</h4>
+<p>Theme is on a separate page: <a href="https://github.com/settings/appearance">github.com/settings/appearance</a></p>
+<ol>
+<li>Navigate to that page</li>
+<li>Find the <strong>&quot;Theme mode&quot;</strong> or <strong>&quot;Theme&quot;</strong> section</li>
+<li>Options available:<ul>
+<li><strong>Light default</strong> — standard white background</li>
+<li><strong>Dark default</strong> — dark background, easier on some eyes</li>
+<li><strong>High contrast light</strong> — maximum contrast, recommended for low vision</li>
+<li><strong>High contrast dark</strong> — maximum contrast on dark background</li>
+<li><strong>Colorblind</strong> variants — Protanopia, Deuteranopia, Tritanopia</li>
+</ul>
+</li>
+<li>Select your preferred theme and activate <strong>Save</strong> if prompted (some changes apply immediately)</li>
+</ol>
+<hr>
+<h2>5. Step 3 — Configure Your Profile</h2>
+<p>Your GitHub profile is your public identity in the open source community. Setting it up properly helps maintainers know who you are.</p>
+<h3>Update your profile</h3>
+<ol>
+<li>Navigate to <a href="https://github.com/settings/profile">Settings → Public profile</a></li>
+<li>Fill in:<ul>
+<li><strong>Name</strong> — your real name or display name (not the same as your username)</li>
+<li><strong>Bio</strong> — a short description (e.g., &quot;Accessibility advocate and open source contributor&quot;)</li>
+<li><strong>Location</strong> — optional but builds trust in the community</li>
+<li><strong>Website or social links</strong> — optional</li>
+<li><strong>Pronouns</strong> — GitHub supports adding pronouns to your profile</li>
+</ul>
+</li>
+</ol>
+<h3>Add a profile picture (optional)</h3>
+<p>A profile picture humanizes your contributions. It can be a photo or any image. If you prefer not to use a photo, GitHub generates a default avatar based on your username.</p>
+<h3>Set your notification email</h3>
+<ol>
+<li>Navigate to <a href="https://github.com/settings/notifications">Settings → Notifications</a></li>
+<li>Add a <strong>custom routing</strong> email if you want GitHub notifications to go to a different address than your account email</li>
+</ol>
+<hr>
+<h2>6. Step 4 — Check GitHub Feature Preview Settings</h2>
+<p>GitHub continuously rolls out improvements to its interface. Some enhancements start as opt-in Feature Previews before becoming the standard experience. Two features matter most for screen reader users working through this workshop:</p>
+<ul>
+<li><strong>New Issues Experience</strong> — improves heading hierarchy, ARIA landmark structure, and live-region announcements on the Issues pages</li>
+<li><strong>New Files Changed Experience</strong> — adds proper landmark structure, an accessible file tree, and better keyboard navigation to the Files Changed tab in Pull Requests</li>
+</ul>
+<p>Both have been broadly rolled out and may already be active on your account. Check before the workshop begins.</p>
+<h3>How to Check and Enable Feature Previews</h3>
+<blockquote>
+<p>Source: <a href="https://accessibility.github.com/documentation/guide/issues/">accessibility.github.com/documentation/guide/issues/</a> and <a href="https://accessibility.github.com/documentation/guide/pull-requests/">accessibility.github.com/documentation/guide/pull-requests/</a></p>
+</blockquote>
+<details>
+<summary>Visual / mouse users</summary>
+
+<ol>
+<li>Sign in to GitHub and go to any page</li>
+<li>Click your <strong>profile picture</strong> (avatar) in the top-right corner</li>
+<li>In the dropdown menu, click <strong>Feature preview</strong></li>
+<li>A panel opens on the right side of the screen listing available features</li>
+<li>Click on <strong>New Issues Experience</strong> to expand its details</li>
+<li>If an <strong>Enable</strong> button appears, click it. If you see <strong>Disable</strong>, the feature is already active — no action needed.</li>
+<li>Return to the feature list and repeat for <strong>New Files Changed Experience</strong></li>
+</ol>
+</details>
+
+<details>
+<summary>Screen reader users (NVDA / JAWS)</summary>
+
+<p><strong>NVDA or JAWS (Windows):</strong></p>
+<ol>
+<li>Sign into GitHub and open any page</li>
+<li>Switch to Browse Mode if not already active (<code>NVDA+Space</code> / JAWS virtual cursor)</li>
+<li>Press <code>H</code> or <code>Shift+H</code> to navigate to the <strong>&quot;Navigation Menu&quot;</strong> heading, or press <code>D</code> to navigate landmark regions to the navigation section</li>
+<li>Press <code>B</code> to jump to buttons, navigating until you hear <strong>&quot;Open user navigation menu, button&quot;</strong> — this button is in the top-right corner of the page</li>
+<li>Press <code>Enter</code> to activate it — a dropdown menu opens</li>
+<li>Press <code>↓</code> or <code>K</code> to move through the menu items until you hear <strong>&quot;Feature preview&quot;</strong></li>
+<li>Press <code>Enter</code> to select it — the Feature Preview panel opens</li>
+<li>Navigate through the list of features with <code>↓</code> or <code>I</code> (list item navigation)</li>
+<li>When you reach <strong>&quot;New Issues Experience&quot;</strong>, press <code>Enter</code> or <code>Space</code> to select it — its detail panel expands</li>
+<li>Press <code>Tab</code> to move to the end of the feature detail section, where you will find either:<ul>
+<li>An <strong>&quot;Enable&quot;</strong> button — press <code>Enter</code> to enable the feature</li>
+<li>A <strong>&quot;Disable&quot;</strong> button — the feature is already enabled; no action needed</li>
+</ul>
+</li>
+<li>Go back and repeat steps 9–10 for <strong>&quot;New Files Changed Experience&quot;</strong></li>
+</ol>
+</details>
+
+<details>
+<summary>Screen reader users (VoiceOver on macOS)</summary>
+
+<ol>
+<li>Sign into GitHub and open any page</li>
+<li>Press <code>VO+U</code> to open the Rotor and navigate to the Buttons list</li>
+<li>Find <strong>&quot;Open user navigation menu&quot;</strong> and press <code>Enter</code> to activate it</li>
+<li>Use <code>VO+Down Arrow</code> to navigate the dropdown until you hear <strong>&quot;Feature preview&quot;</strong></li>
+<li>Press <code>VO+Space</code> to activate it — the Feature Preview panel opens</li>
+<li>Use <code>VO+Down Arrow</code> or <code>VO+Right Arrow</code> to navigate through the feature list</li>
+<li>When you reach <strong>&quot;New Issues Experience&quot;</strong>, press <code>VO+Space</code> to select it</li>
+<li>Press <code>Tab</code> to move to the end of the feature detail section</li>
+<li>If you hear <strong>&quot;Enable&quot;</strong>, press <code>VO+Space</code> to activate it. If you hear <strong>&quot;Disable&quot;</strong>, it is already on.</li>
+<li>Repeat for <strong>&quot;New Files Changed Experience&quot;</strong></li>
+</ol>
+</details>
+
+<h3>What &quot;Not Listed&quot; Means</h3>
+<p>If you open Feature Preview and neither <strong>&quot;New Issues Experience&quot;</strong> nor <strong>&quot;New Files Changed Experience&quot;</strong> appears in the list at all — that is good news. It means both features have <strong>graduated to the standard GitHub interface</strong> and are active automatically for every user. No action needed.</p>
+<h3>What Each Feature Enables</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>What it improves for screen reader users</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>New Issues Experience</strong></td>
+<td>Issues list uses proper <code>&lt;ul&gt;</code> list structure. Issue titles are h3 headings. ARIA live regions announce filter result updates. Toolbar uses arrow key navigation. Close issue via <code>Ctrl+Shift+Enter</code> from the comment box.</td>
+</tr>
+<tr>
+<td><strong>New Files Changed Experience</strong></td>
+<td>Files Changed tab includes a navigable file tree region. Diffs are structured as tables with row/column navigation. Filter changed files field is reachable with <code>E</code>. Inline comment mode activates with <code>Enter</code> on a focused diff line.</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Why this matters:</strong> Without these features enabled, the keyboard and screen reader workflows described throughout this workshop will not match what you see on screen. Enabling them before you begin ensures everything works as documented.</p>
+</blockquote>
+<hr>
+<h2>7. Step 5 — Set Up Your Screen Reader &amp; Browser</h2>
+<h3>NVDA (Windows)</h3>
+<p><strong>Install NVDA</strong> if you haven&#39;t already:</p>
+<ol>
+<li>Download from <a href="https://www.nvaccess.org/download/">nvaccess.org/download</a></li>
+<li>Run the installer — you can install to your computer or run portably</li>
+<li>After launch, NVDA speaks &quot;NVDA started&quot; when running</li>
+</ol>
+<p><strong>Configure NVDA for web browsing:</strong></p>
+<ol>
+<li>Open NVDA Menu (<code>NVDA+N</code>)</li>
+<li>Go to <strong>Preferences → Settings → Browse Mode</strong></li>
+<li>Enable &quot;Use screen layout&quot; — this helps with GitHub&#39;s landmark navigation</li>
+<li>Under <strong>Document Formatting</strong>, disable announcements you find too verbose</li>
+</ol>
+<p><strong>Recommended NVDA voice settings:</strong></p>
+<ul>
+<li>Rate: 60–75% (fast enough to be efficient, slow enough to be clear)</li>
+<li>Punctuation: &quot;Most&quot; (reads important symbols like <code>#</code> and <code>@</code> without reading every period)</li>
+</ul>
+<p><strong>Your NVDA key:</strong> By default it is <code>Insert</code>. It can also be set to <code>Caps Lock</code> in NVDA preferences if that is more comfortable.</p>
+<hr>
+<h3>JAWS (Windows)</h3>
+<p><strong>If using a trial:</strong> JAWS runs in 40-minute sessions without a license. Restart it if you need more time.</p>
+<p><strong>Configure JAWS for web browsing:</strong></p>
+<ol>
+<li>Open JAWS Settings Center: <code>Insert+F2 → Settings Center</code></li>
+<li>Ensure &quot;Virtual cursor&quot; is active for web browsing</li>
+<li>In Chrome or Firefox, JAWS should automatically activate Virtual/Browse mode</li>
+</ol>
+<p><strong>Recommended JAWS settings for GitHub:</strong></p>
+<ul>
+<li>Verbosity → Links: Read link text only (disable &quot;opens in new window&quot; if too verbose)</li>
+<li>Verbosity → Punctuation: &quot;Most&quot; for same reason as NVDA</li>
+</ul>
+<p><strong>Your JAWS key:</strong> <code>Insert</code> (or <code>Caps Lock</code> if using laptop layout)</p>
+<hr>
+<h3>VoiceOver (macOS)</h3>
+<p><strong>Activate VoiceOver:</strong> <code>Command+F5</code> toggles VoiceOver on and off.</p>
+<p><strong>Essential VoiceOver setup for web:</strong></p>
+<ol>
+<li>Open VoiceOver Utility: <code>VO+F8</code></li>
+<li>Go to <strong>Web</strong> category → <strong>Web Rotor</strong></li>
+<li>Ensure these are checked: Headings, Landmarks, Links, Buttons, Form Controls, Tables</li>
+<li><strong>Recommended browser:</strong> Safari (best VoiceOver integration on macOS)</li>
+<li>Firefox on macOS also has good VoiceOver support</li>
+</ol>
+<p><strong>Your VoiceOver modifier key:</strong> <code>VO</code> = <code>Control+Option</code> by default.</p>
+<p><strong>Turn on Quick Nav for fast navigation:</strong></p>
+<ul>
+<li>Press <code>Left Arrow + Right Arrow</code> simultaneously to toggle Quick Nav</li>
+<li>With Quick Nav on: <code>H</code> = next heading, <code>L</code> = next link, <code>B</code> = next button (same as NVDA/JAWS browse mode keys)</li>
+</ul>
+<hr>
+<h3>Browser Recommendations Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Browser</th>
+<th>Windows</th>
+<th>macOS</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Chrome</strong></td>
+<td>Recommended</td>
+<td>Good</td>
+<td>Best with NVDA and JAWS</td>
+</tr>
+<tr>
+<td><strong>Firefox</strong></td>
+<td>Recommended</td>
+<td>Good</td>
+<td>Excellent accessibility support on all platforms</td>
+</tr>
+<tr>
+<td><strong>Edge</strong></td>
+<td>Acceptable</td>
+<td>Acceptable</td>
+<td>Chromium-based; works well</td>
+</tr>
+<tr>
+<td><strong>Safari</strong></td>
+<td>Not available</td>
+<td>Recommended</td>
+<td>Best for VoiceOver on macOS</td>
+</tr>
+</tbody></table>
+<p><strong>Before the workshop:</strong> Open GitHub.com in your chosen browser with your screen reader running and confirm you can navigate the page using heading keys.</p>
+<hr>
+<h2>8. Step 6 — Install Git and Visual Studio Code</h2>
+<h3>Install Git First</h3>
+<blockquote>
+<p><strong>VS Code does not install Git.</strong> It detects whether Git is already on your system. If Git is missing, the Source Control panel will display a warning, and all <code>git</code> commands in the terminal will fail. Install Git before installing VS Code.</p>
+</blockquote>
+<p><strong>Windows:</strong></p>
+<ol>
+<li>Download the Git for Windows installer from <a href="https://git-scm.com/download/win">git-scm.com/download/win</a></li>
+<li>Run the installer — default options are correct for most users</li>
+<li>On the &quot;Adjusting your PATH environment&quot; screen, keep the default: <strong>&quot;Git from the command line and also from 3rd-party software&quot;</strong></li>
+<li>Complete the installer and restart any open terminals</li>
+</ol>
+<p><strong>Verify installation (Windows):</strong></p>
+<ol>
+<li>Open PowerShell or Command Prompt</li>
+<li>Type <code>git --version</code> and press <code>Enter</code></li>
+<li>You should see a version number such as <code>git version 2.47.0.windows.2</code> — any version is fine</li>
+</ol>
+<p><strong>macOS:</strong>
+Git is often already present via Xcode Command Line Tools. To check:</p>
+<ol>
+<li>Open Terminal (<code>Cmd+Space</code> → type &quot;Terminal&quot;)</li>
+<li>Type <code>git --version</code> and press <code>Enter</code></li>
+<li>If Git is not installed, macOS will automatically prompt you to install Xcode Command Line Tools — follow the prompt and wait for it to complete</li>
+<li>Alternatively, install directly from <a href="https://git-scm.com/download/mac">git-scm.com/download/mac</a> or via Homebrew: <code>brew install git</code></li>
+</ol>
+<p><strong>Screen reader note (Windows terminal verification):</strong></p>
+<ul>
+<li>PowerShell is accessible with all screen readers via Browse Mode or Forms Mode</li>
+<li>Type <code>git --version</code>, press <code>Enter</code>, then press <code>↑</code> to re-read the output line</li>
+</ul>
+<p>Once Git is installed, proceed to <a href="#3-step-15--configure-git-identity-if-using-git-locally">Step 1.5</a> to configure your name and email before your first commit.</p>
+<hr>
+<h3>Install Visual Studio Code</h3>
+<p>Visual Studio Code (VS Code) is the development environment used throughout this workshop. It is free, open source, and has excellent built-in accessibility support.</p>
+<h3>Download and install</h3>
+<ol>
+<li>Navigate to <a href="https://code.visualstudio.com/">code.visualstudio.com</a></li>
+<li>Select the download link for your operating system</li>
+<li>Run the installer with default options</li>
+<li>Launch VS Code when the installer finishes</li>
+</ol>
+<h3>Enable Screen Reader Mode in VS Code</h3>
+<blockquote>
+<p><strong>Do this before anything else in VS Code.</strong> Screen Reader Mode changes how the editor renders content — without it, your screen reader may receive incomplete or fragmented output from the editor, diff views, and Copilot Chat.</p>
+</blockquote>
+<p>VS Code may detect your screen reader automatically when it first opens and ask if you want to enable this mode. If it does:</p>
+<ol>
+<li>Listen for the dialog — it will say something like &quot;A screen reader is detected. Would you like to enable Screen Reader Optimized mode?&quot;</li>
+<li>Press <code>Enter</code> to accept, or <code>Tab</code> to the <strong>Enable</strong> button and press <code>Space</code></li>
+</ol>
+<p>If VS Code did <strong>not</strong> prompt you automatically, enable it manually:</p>
+<p><strong>Option A — Keyboard shortcut:</strong></p>
+<ol>
+<li>Press <code>Shift+Alt+F1</code></li>
+<li>VS Code toggles Screen Reader Optimized mode immediately</li>
+</ol>
+<p><strong>Option B — Command Palette:</strong></p>
+<ol>
+<li>Press <code>Ctrl+Shift+P</code> to open the Command Palette<ul>
+<li>Your screen reader will announce &quot;Type to filter&quot; or the palette input field</li>
+</ul>
+</li>
+<li>Type: <code>screen reader</code> — the list filters as you type</li>
+<li>Arrow down to <strong>&quot;Accessibility: Toggle Screen Reader Accessibility Mode&quot;</strong></li>
+<li>Press <code>Enter</code></li>
+</ol>
+<p><strong>How to confirm it is on:</strong></p>
+<ol>
+<li>Press <code>Ctrl+Shift+P</code> to open the Command Palette again</li>
+<li>Type: <code>screen reader optimized</code></li>
+<li>If the status bar at the bottom of the window is accessible to you, it will read <strong>&quot;Screen Reader Optimized&quot;</strong></li>
+<li>Alternatively: go to <strong>File → Preferences → Settings</strong> (<code>Ctrl+,</code>), type <code>screenReaderOptimized</code> in the search box, and verify the checkbox is ticked</li>
+</ol>
+<p><strong>What Screen Reader Mode changes:</strong></p>
+<ul>
+<li>The editor renders as a plain text region your screen reader can navigate linearly with arrow keys</li>
+<li>Audio cues are enabled for inline suggestions, errors, warnings, and folder expand/collapse</li>
+<li>Diffs are presented as readable before/after text instead of a visual side-by-side view</li>
+<li>The Copilot Chat response panel reads as a structured document</li>
+</ul>
+<blockquote>
+<p><strong>Screen reader note:</strong> Once Screen Reader Mode is on, you navigate the editor with <code>Up</code> and <code>Down Arrow</code> to move line by line. Press <code>Enter</code> to open a folded section. Press <code>Escape</code> to leave the editor and move focus back to the activity bar or panels.</p>
+</blockquote>
+<h3>VS Code keyboard basics (we will cover these fully in the workshop)</h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Open Command Palette</td>
+<td><code>Ctrl+Shift+P</code></td>
+</tr>
+<tr>
+<td>Open file</td>
+<td><code>Ctrl+P</code></td>
+</tr>
+<tr>
+<td>Open terminal</td>
+<td><code>Ctrl+`</code> (backtick)</td>
+</tr>
+<tr>
+<td>Focus Explorer panel</td>
+<td><code>Ctrl+Shift+E</code></td>
+</tr>
+<tr>
+<td>Focus editor</td>
+<td><code>Ctrl+1</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>9. Step 7 — Install VS Code Extensions</h2>
+<p>This workshop uses two VS Code extensions. Both are published by GitHub and are free. Install them in the order shown below.</p>
+<hr>
+<h3>Sign in to GitHub in VS Code first</h3>
+<p>Both extensions require you to be signed into GitHub. Do this once and both will be authenticated.</p>
+<ol>
+<li>Open VS Code</li>
+<li>Press <code>Ctrl+Shift+P</code> to open the Command Palette</li>
+<li>Type: <code>sign in</code> and arrow down to <strong>&quot;GitHub: Sign in&quot;</strong> — press <code>Enter</code><ul>
+<li>Your default web browser will open to a GitHub authentication page</li>
+</ul>
+</li>
+<li>In the browser, confirm your GitHub account when prompted and select <strong>Authorize Visual Studio Code</strong></li>
+<li>Switch back to VS Code — your browser may ask you to confirm opening VS Code; select <strong>Open</strong> or <strong>Allow</strong></li>
+<li>You should hear VS Code announce a notification, and the accounts icon in the Activity Bar will show your GitHub username</li>
+</ol>
+<blockquote>
+<p><strong>Screen reader note:</strong> The authentication happens in your browser. After authorizing, your browser will show a page saying &quot;You can close this tab and return to VS Code.&quot; Switch back to VS Code with <code>Alt+Tab</code> (Windows) or <code>Cmd+Tab</code> (macOS).</p>
+</blockquote>
+<hr>
+<h3>Extension 1 — GitHub Copilot Chat</h3>
+<p>This single extension provides both inline code completions and the conversational Chat panel. It is used throughout the second half of the workshop.</p>
+<p><strong>Install:</strong></p>
+<ol>
+<li>Press <code>Ctrl+Shift+X</code> to open the Extensions panel<ul>
+<li>Your screen reader will announce &quot;Extensions&quot; and place focus in the search box</li>
+</ul>
+</li>
+<li>Type: <code>GitHub Copilot Chat</code><ul>
+<li>The list updates as you type</li>
+</ul>
+</li>
+<li>Press <code>Tab</code> to move from the search box into the results list</li>
+<li>Arrow down through the results. Look for <strong>&quot;GitHub Copilot Chat&quot;</strong> with publisher <strong>&quot;GitHub&quot;</strong><ul>
+<li>There are similar-named extensions from other publishers — verify the publisher is &quot;GitHub&quot; before installing</li>
+</ul>
+</li>
+<li>Press <code>Enter</code> to open the extension details page</li>
+<li>Press <code>Tab</code> to find the <strong>Install</strong> button, then press <code>Enter</code> or <code>Space</code></li>
+<li>Wait for installation to complete — VS Code will announce &quot;Extension installed&quot; or similar</li>
+</ol>
+<p><strong>Verify it is working:</strong></p>
+<ol>
+<li>Press <code>Ctrl+Shift+I</code> to open the Copilot Chat panel<ul>
+<li>Your screen reader should announce the chat input field</li>
+</ul>
+</li>
+<li>Type: <code>Hello, are you there?</code> and press <code>Enter</code></li>
+<li>A response will appear in the chat history above the input field</li>
+<li>Navigate up with <code>Shift+Tab</code> or <code>Up Arrow</code> to read the response</li>
+<li>If you see an error about signing in, press <code>Ctrl+Shift+P</code> and run <strong>&quot;GitHub: Sign in&quot;</strong> again</li>
+</ol>
+<p><strong>Verify inline completions:</strong></p>
+<ol>
+<li>Press <code>Ctrl+N</code> to create a new untitled file</li>
+<li>Press <code>Ctrl+Shift+P</code>, type <code>change language</code>, and select <strong>&quot;Change Language Mode&quot;</strong> — choose <strong>Python</strong> or <strong>JavaScript</strong></li>
+<li>Start typing a function name such as <code>function greet</code> (JavaScript) or <code>def greet</code> (Python)</li>
+<li>Pause for 1–2 seconds — Copilot will suggest a completion in grey ghost text</li>
+<li>Press <code>Tab</code> to accept it, or <code>Esc</code> to dismiss</li>
+<li>If no suggestions appear: confirm Copilot icon shows in the status bar and that you are signed in</li>
+</ol>
+<hr>
+<h3>Extension 2 — GitHub Pull Requests</h3>
+<p>This extension lets you review and manage pull requests without leaving VS Code. It is used in the code review chapters.</p>
+<p><strong>Install:</strong></p>
+<ol>
+<li>Press <code>Ctrl+Shift+X</code> to open the Extensions panel</li>
+<li>Type: <code>GitHub Pull Requests</code></li>
+<li>Press <code>Tab</code> to move into the results list</li>
+<li>Arrow down to find <strong>&quot;GitHub Pull Requests&quot;</strong> with publisher <strong>&quot;GitHub&quot;</strong><ul>
+<li>This extension was formerly named &quot;GitHub Pull Requests and Issues&quot; — either name is correct</li>
+</ul>
+</li>
+<li>Press <code>Enter</code> to open the details page</li>
+<li>Press <code>Tab</code> to the <strong>Install</strong> button and press <code>Enter</code> or <code>Space</code></li>
+<li>VS Code will announce when installation is complete</li>
+</ol>
+<p><strong>Verify it is working:</strong></p>
+<ol>
+<li>Press <code>Ctrl+Shift+P</code> and type: <code>GitHub Pull Requests: Sign in</code><ul>
+<li>If you are already signed in from the earlier step, this command may not appear — that means you are already authenticated</li>
+</ul>
+</li>
+<li>To confirm the extension loaded: press <code>Ctrl+Shift+P</code>, type <code>GitHub Pull Requests: Focus on Pull Requests View</code><ul>
+<li>The Pull Requests panel should open in the sidebar</li>
+<li>If your repository has open pull requests, they will appear here</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>Screen reader note:</strong> The Pull Requests panel is a tree view. Navigate it with <code>Up</code> and <code>Down Arrow</code>. Press <code>Enter</code> or <code>Right Arrow</code> to expand a node.</p>
+</blockquote>
+<hr>
+<h3>Copilot Free tier</h3>
+<p>Copilot Free is available to all GitHub users at no cost. It includes:</p>
+<ul>
+<li>Limited inline code completions per month</li>
+<li>Limited Copilot Chat messages per month</li>
+</ul>
+<p>For this workshop, Free tier is sufficient. If you want unlimited access, paid plans are available at <a href="https://github.com/features/copilot#pricing">github.com/features/copilot#pricing</a>.</p>
+<hr>
+<h2>10. Step 8 — Verification Checklist</h2>
+<p>Work through this checklist before Day 1. Check off each item:</p>
+<pre><code class="hljs">Pre-Workshop Checklist
+
+GITHUB ACCOUNT
+<span class="hljs-selector-attr">[ ]</span> GitHub account created and email verified
+<span class="hljs-selector-attr">[ ]</span> Two-factor authentication enabled
+<span class="hljs-selector-attr">[ ]</span> Profile name, bio set
+
+GITHUB SETTINGS
+<span class="hljs-selector-attr">[ ]</span> Accessibility settings <span class="hljs-attribute">page</span> visited
+<span class="hljs-selector-attr">[ ]</span> Hovercards / link previews turned OFF
+<span class="hljs-selector-attr">[ ]</span> Theme set to your preferred <span class="hljs-selector-tag">option</span>
+<span class="hljs-selector-attr">[ ]</span> Confirmed modern GitHub Issues and Pull Request experience is working (see Step <span class="hljs-number">4</span> — may already be active or enabled via Feature preview)
+
+BROWSER &amp; SCREEN READER
+<span class="hljs-selector-attr">[ ]</span> Screen reader installed and working (NVDA / JAWS / VoiceOver)
+<span class="hljs-selector-attr">[ ]</span> Browser chosen: Chrome, Firefox, Edge (Windows) or Safari (macOS)
+<span class="hljs-selector-attr">[ ]</span> Navigated to github<span class="hljs-selector-class">.com</span> with screen reader — <span class="hljs-attribute">page</span> announces headings and landmarks
+<span class="hljs-selector-attr">[ ]</span> Can navigate the GitHub homepage using heading keys (H) without <span class="hljs-selector-tag">a</span> mouse
+
+GIT &amp; VS CODE (required before the workshop)
+<span class="hljs-selector-attr">[ ]</span> Git installed and verified (run git <span class="hljs-attr">--version</span> <span class="hljs-keyword">in</span> <span class="hljs-selector-tag">a</span> terminal)
+<span class="hljs-selector-attr">[ ]</span> Git identity configured (git config <span class="hljs-attr">--global</span> user<span class="hljs-selector-class">.name</span> and user.email)
+<span class="hljs-selector-attr">[ ]</span> Visual Studio Code installed
+<span class="hljs-selector-attr">[ ]</span> Screen Reader Mode enabled <span class="hljs-keyword">in</span> VS Code (Shift+Alt+F1 or Command Palette)
+<span class="hljs-selector-attr">[ ]</span> Signed into GitHub <span class="hljs-keyword">in</span> VS Code
+<span class="hljs-selector-attr">[ ]</span> GitHub Copilot Chat extension installed (publisher: GitHub)
+<span class="hljs-selector-attr">[ ]</span> Copilot Chat responds <span class="hljs-keyword">in</span> the Chat panel (Ctrl+Shift+I)
+<span class="hljs-selector-attr">[ ]</span> Copilot inline suggestions appear when typing <span class="hljs-keyword">in</span> <span class="hljs-selector-tag">a</span> file
+<span class="hljs-selector-attr">[ ]</span> GitHub Pull Requests extension installed (publisher: GitHub)
+<span class="hljs-selector-attr">[ ]</span> Pull Requests panel opens (Ctrl+Shift+P → <span class="hljs-string">&quot;Focus on Pull Requests View&quot;</span>)</code></pre>
+<hr>
+<h2>11. Other GitHub Access Methods (Reference Only)</h2>
+<p>This workshop focuses entirely on GitHub.com in the browser and VS Code. However, you should be aware that other ways to work with GitHub exist. We list them here for your reference — we will not be teaching these in depth.</p>
+<h3>GitHub Desktop</h3>
+<p>A graphical desktop application for managing repositories, branches, and commits without using the command line.</p>
+<ul>
+<li>Download: <a href="https://desktop.github.com/">desktop.github.com</a></li>
+<li>Provides a visual interface for cloning, committing, pushing, and creating PRs</li>
+<li>Has some screen reader support, though the web interface is generally more accessible</li>
+<li>A good option for those who prefer a visual GUI over the command line</li>
+</ul>
+<h3>GitHub CLI (<code>gh</code>)</h3>
+<p>A command-line tool that lets you perform nearly any GitHub action directly from your terminal.</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Examples (reference only — not covered in this workshop)</span>
+gh repo <span class="hljs-built_in">clone</span> owner/repo
+gh issue create
+gh <span class="hljs-built_in">pr</span> create
+gh <span class="hljs-built_in">pr</span> review
+gh <span class="hljs-built_in">pr</span> merge</code></pre>
+<ul>
+<li>Download: <a href="https://cli.github.com/">cli.github.com</a></li>
+<li>Excellent for automation and scripting</li>
+<li>Very accessible — terminal/command-line interfaces work well with screen readers</li>
+<li>Full documentation: <a href="https://cli.github.com/manual/">cli.github.com/manual</a></li>
+</ul>
+<h3>GitHub Copilot CLI (<code>gh copilot</code>)</h3>
+<p>An extension to the GitHub CLI that brings Copilot assistance to the terminal. You can ask it to explain or suggest shell commands in plain English.</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Reference examples only</span>
+gh copilot suggest <span class="hljs-string">&quot;how do I undo my last commit&quot;</span>
+gh copilot explain <span class="hljs-string">&quot;git rebase -i HEAD~3&quot;</span></code></pre>
+<ul>
+<li>Install: <code>gh extension install github/gh-copilot</code></li>
+<li>Documentation: <a href="https://docs.github.com/en/copilot/github-copilot-in-the-cli/about-github-copilot-in-the-cli">docs.github.com/en/copilot/github-copilot-in-the-cli</a></li>
+<li>Particularly useful for users who prefer a terminal workflow</li>
+</ul>
+<h3>Git (the version control system itself)</h3>
+<p>GitHub is a platform built on top of <strong>Git</strong>, which is the underlying version control system. Git runs locally on your computer via a terminal.</p>
+<p>We are not covering Git commands in this workshop. If you want to learn Git, these are excellent starting points:</p>
+<ul>
+<li><a href="https://guides.github.com/introduction/git-handbook/">Git Handbook</a></li>
+<li><a href="https://git-scm.com/book/en/v2">Pro Git book (free)</a></li>
+<li><a href="https://github.com/skills/introduction-to-github">GitHub Skills: Introduction to GitHub</a></li>
+</ul>
+<hr>
+<h2>12. Getting Help Before the Event</h2>
+<p>If you cannot complete any step in this guide before the workshop:</p>
+<ol>
+<li><strong>File an issue in this repository</strong> — describe exactly what step you are on and what is not working</li>
+<li><strong>Join the GitHub Accessibility Discussions</strong> — <a href="https://github.com/orgs/community/discussions/categories/accessibility">github.com/orgs/community/discussions/categories/accessibility</a> — the community is helpful and welcoming</li>
+<li><strong>Contact the event organizers</strong> — details provided in your registration confirmation</li>
+</ol>
+<p>You will not be left behind. Every setup issue we can solve before Day 1 means more time for learning on the day.</p>
+<hr>
+<p><em>Next: <a href="01-understanding-github-web-structure.md">Understanding GitHub&#39;s Web Structure</a></em>
+<em>Back: <a href="../README.md">README</a></em></p>
+
+  </main>
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+    <p>GitHub Learning Room — Open Source Assistive Technology Hackathon</p>
+    <p><a href="https://github.com/accesswatch/Learning-Room">View on GitHub</a></p>
+  </footer>
+</body>
+</html>

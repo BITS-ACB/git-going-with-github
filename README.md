@@ -1,7 +1,9 @@
-# GitHub Learning Room
-## Open Source Assistive Technology Hackathon
+# GIT Going with GitHub
+## A Workshop by [BITS (Blind Information Technology Solutions)](http://www.joinbits.org)
 
-> **Welcome.** This repository is your complete guide and companion for the two-day GitHub Learning Room. Every document here is written to be read with or without a screen reader. All steps are keyboard-accessible. You belong here.
+> **Welcome.** This repository is your complete guide and companion for the two-day GIT Going with GitHub workshop. Every document here is written to be read with or without a screen reader. All steps are keyboard-accessible. You belong here.
+>
+> **About BITS:** [Blind Information Technology Solutions](http://www.joinbits.org) is a community of blind and low vision technology professionals. Visit [joinbits.org](http://www.joinbits.org) to learn more.
 
 ---
 

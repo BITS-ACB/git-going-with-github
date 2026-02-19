@@ -1,7 +1,7 @@
 {
-  "name": "github-learning-room",
+  "name": "git-going-with-github",
   "version": "1.0.0",
-  "description": "GitHub Learning Room - Open Source Assistive Technology Hackathon",
+  "description": "GIT Going with GitHub - Accessible open source workshop by BITS (Blind Information Technology Solutions)",
   "scripts": {
     "build:html": "node scripts/build-html.js",
     "watch:html": "node scripts/build-html.js --watch",

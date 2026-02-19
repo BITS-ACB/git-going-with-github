@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GIT Going with GitHub — A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
+  <title>GIT Going with GitHub — GIT Going with GitHub</title>
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">GIT Going with GitHub</span>
+  </nav>
+  <main id="main-content" class="markdown-body">
+    <h1>GIT Going with GitHub</h1>
+<h2>A Workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></h2>
+<blockquote>
+<p><strong>Welcome.</strong> This repository is your complete guide and companion for the two-day GIT Going with GitHub workshop. Every document here is written to be read with or without a screen reader. All steps are keyboard-accessible. You belong here.</p>
+<p><strong>About BITS:</strong> <a href="http://www.joinbits.org">Blind Information Technology Solutions</a> is a community of blind and low vision technology professionals. Visit <a href="http://www.joinbits.org">joinbits.org</a> to learn more.</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>The Central Project: Agent Forge</strong></p>
+<p>This workshop is built around a real, live open source project: <strong><a href="https://github.com/accesswatch/agent-forge">Agent Forge</a></strong> — six GitHub Copilot agents and 28 slash commands for accessible, agentic repository management. It was built by your facilitator and is MIT-licensed.</p>
+<p>You will fork it, understand it, contribute to it, and personalize it. By the end of Day 2, your name is in its commit history.</p>
+<p><strong>Agent Forge does not replace what you learn on Day 1. It amplifies it.</strong> The agents only make sense when you already understand the skills they automate. That is why Day 1 comes first — and why every guide in this repository shows you the manual path before it shows you the agent path.</p>
+</blockquote>
+<hr>
+<h2>What Is This Event?</h2>
+<p>During this two-day workshop, you will learn how to confidently navigate and contribute to open source projects on GitHub using:</p>
+<ul>
+<li>A <strong>screen reader</strong> (NVDA on Windows, JAWS on Windows, or VoiceOver on macOS)</li>
+<li><strong>Keyboard-only navigation</strong> — no mouse required</li>
+<li><strong>GitHub Copilot</strong> (Day 2) — AI-assisted writing and coding in the browser and in VS Code</li>
+</ul>
+<p>By the end of this event, you will have made <strong>real contributions</strong> to a real repository. Not simulated. Not pretend. Real.</p>
+<hr>
+<h2>Who Is This For?</h2>
+<p>This event is designed for:</p>
+<ul>
+<li>People new to GitHub who use assistive technology</li>
+<li>Developers who use screen readers and want to contribute to open source</li>
+<li>Anyone who is curious about accessible development workflows</li>
+<li>Sighted participants are welcome — all content is keyboard-navigable for everyone</li>
+</ul>
+<p>You do <strong>not</strong> need to know how to code to participate and contribute meaningfully. Documentation improvements, issue filing, accessibility bug reports, and code reviews are all valuable contributions.</p>
+<hr>
+<h2>Two-Day Overview</h2>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Focus</th>
+<th>What You Will Do</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Day 1</strong></td>
+<td>GitHub Foundations</td>
+<td>Set up your environment, learn GitHub navigation with your screen reader, file your first issue, open your first pull request</td>
+</tr>
+<tr>
+<td><strong>Day 2</strong></td>
+<td>VS Code + Agent Forge</td>
+<td>Bridge from the browser to <strong>github.dev</strong> (VS Code in your browser — no install needed), then step into <strong>Visual Studio Code</strong> on the desktop, learn VS Code basics, use GitHub Copilot, activate the six Agent Forge agents, run agentic workflows in the cloud, and ship a real PR upstream to <code>accesswatch/agent-forge</code></td>
+</tr>
+</tbody></table>
+<h3>The Journey Arc</h3>
+<p>This is not a two-day course with two separate syllabi. It is one arc.</p>
+<pre><code class="hljs">Day 1 — Learn the skill <span class="hljs-keyword">in</span> the browser
+  Navigate → Issue → Pull Request → Review → <span class="hljs-keyword">Merge</span>
+
+     ↓  (bridge: press . <span class="hljs-keyword">on</span> any GitHub repo — VS Code opens right <span class="hljs-keyword">in</span> your browser)
+
+github.dev — VS Code <span class="hljs-keyword">on</span> the web, <span class="hljs-keyword">no</span> install needed
+  Same keyboard shortcuts · Same screen reader mode · <span class="hljs-keyword">Edit</span> files · <span class="hljs-keyword">Open</span> PRs
+  What it cannot <span class="hljs-keyword">do</span>: <span class="hljs-keyword">no</span> terminal, <span class="hljs-keyword">no</span> Copilot agents, <span class="hljs-keyword">no</span> <span class="hljs-keyword">local</span> extensions
+
+     ↓  (you&#x27;ve earned the desktop — now it makes sense)
+
+Day 2 — Deepen with VS Code + Agent Forge
+  Learn VS Code basics → Copilot inline → Copilot Chat
+  @daily-briefing → @issue-tracker → @<span class="hljs-keyword">pr</span>-review → @analytics → ship upstream</code></pre>
+<p>Every skill you build on Day 1 maps directly to an Agent Forge command on Day 2. The agent is not a shortcut — it is a multiplier. You have to understand what it is doing to know when it is wrong.</p>
+<p><strong>By the end of Day 2, you will have:</strong></p>
+<ul>
+<li>A fork of <code>agent-forge</code> with your personalized preferences</li>
+<li>At least one merged PR in a real open source project</li>
+<li>Your name in the commit history of <code>accesswatch/agent-forge</code></li>
+<li>A working set of six AI agents that travel with your fork to any repository you apply them to</li>
+</ul>
+<hr>
+<h2>How to Read These Docs</h2>
+<p>All documentation lives in the <code>docs/</code> folder. Read them in order for the full experience, or jump to what you need.</p>
+<blockquote>
+<p><strong>HTML Version Available:</strong> All markdown documentation is automatically converted to HTML format. After cloning the repository, you can browse the <code>html/</code> directory for web-formatted versions of every document. See <a href="BUILD.md">BUILD.md</a> for details.</p>
+</blockquote>
+<h3>Quick Navigation</h3>
+<blockquote>
+<p><strong>Looking for a student-friendly table of contents?</strong> See the <a href="docs/course-guide.md">Course Guide</a> — a single page with day-by-day chapter tables, grouped appendices, all 24 exercises at a glance, and where to get help.</p>
+</blockquote>
+<p><strong>Lessons</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Document</th>
+<th>What It Covers</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="docs/00-pre-workshop-setup.md">00</a></td>
+<td><strong>Pre-Workshop Setup</strong></td>
+<td>Everything to install and configure before Day 1</td>
+</tr>
+<tr>
+<td><a href="docs/01-understanding-github-web-structure.md">01</a></td>
+<td><strong>Understanding GitHub&#39;s Web Structure</strong></td>
+<td>How GitHub is organized, page types, landmark structure, heading hierarchy, and the screen reader orientation sequence</td>
+</tr>
+<tr>
+<td><a href="docs/02-navigating-repositories.md">02</a></td>
+<td><strong>Navigating Repositories</strong></td>
+<td>Step-by-step repository navigation with your screen reader</td>
+</tr>
+<tr>
+<td><a href="docs/03-the-learning-room.md">03</a></td>
+<td><strong>The Learning Room: Shared Practice Repo</strong></td>
+<td>Your shared contribution environment, PR sharing workflow, automation system, peer reviewing, and how everything works together</td>
+</tr>
+<tr>
+<td><a href="docs/04-working-with-issues.md">04</a></td>
+<td><strong>Working with Issues</strong></td>
+<td>Filing, managing, and participating in issues</td>
+</tr>
+<tr>
+<td><a href="docs/05-working-with-pull-requests.md">05</a></td>
+<td><strong>Working with Pull Requests</strong></td>
+<td>Creating, reviewing, and merging pull requests</td>
+</tr>
+<tr>
+<td><a href="docs/06-merge-conflicts.md">06</a></td>
+<td><strong>Merge Conflicts</strong></td>
+<td>Understanding, preventing, and resolving merge conflicts</td>
+</tr>
+<tr>
+<td><a href="docs/07-culture-etiquette.md">07</a></td>
+<td><strong>Culture and Etiquette</strong></td>
+<td>Open source language, tone, commenting, review etiquette</td>
+</tr>
+<tr>
+<td><a href="docs/08-labels-milestones-projects.md">08</a></td>
+<td><strong>Labels, Milestones and Projects</strong></td>
+<td>Organizing and cross-referencing work</td>
+</tr>
+<tr>
+<td><a href="docs/09-notifications.md">09</a></td>
+<td><strong>Notifications and Mentions</strong></td>
+<td>Managing your inbox, @mentions, and subscriptions</td>
+</tr>
+<tr>
+<td><a href="docs/10-vscode-basics.md">10</a></td>
+<td><strong>VS Code: Setup &amp; Accessibility Basics</strong></td>
+<td>VS Code interface, github.dev (VS Code in the browser), screen reader mode, keyboard navigation, Accessible Help/View/Diff, audio cues</td>
+</tr>
+<tr>
+<td><a href="docs/11-git-source-control.md">11</a></td>
+<td><strong>VS Code: Git &amp; Source Control</strong></td>
+<td>Cloning, Source Control panel, branching, staging, committing, Timeline view, merge conflicts, stash management</td>
+</tr>
+<tr>
+<td><a href="docs/12-github-pull-requests-extension.md">12</a></td>
+<td><strong>VS Code: GitHub Pull Requests Extension</strong></td>
+<td>Viewing PRs, checking out branches, reviewing with Accessible Diff, creating PRs, commenting, merging</td>
+</tr>
+<tr>
+<td><a href="docs/13-github-copilot.md">13</a></td>
+<td><strong>VS Code: GitHub Copilot</strong></td>
+<td>Inline suggestions, Copilot Chat, effective prompting for documentation work, custom instructions vs custom agents, Accessible View workflow</td>
+</tr>
+<tr>
+<td><a href="docs/14-accessible-code-review.md">14</a></td>
+<td><strong>Accessible Code Review</strong></td>
+<td>Navigating diffs and conducting PR reviews with a screen reader, on GitHub and in VS Code — culminating skill before automation</td>
+</tr>
+<tr>
+<td><a href="docs/15-issue-templates.md">15</a></td>
+<td><strong>Issue Templates</strong></td>
+<td>Creating and using GitHub issue templates</td>
+</tr>
+<tr>
+<td><a href="docs/16-agent-forge.md">16</a></td>
+<td><strong>Agent Forge</strong></td>
+<td>Six agents (@daily-briefing, @issue-tracker, @pr-review, @analytics, @insiders-a11y-tracker, @template-builder), 28 slash commands, building custom agents, cloud extension — agentic flow after all learning complete</td>
+</tr>
+</tbody></table>
+<p><strong>Workshop Agendas</strong> — For facilitators only (not part of learner sequence)</p>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>What It Covers</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="DAY1_AGENDA.md">DAY1_AGENDA.md</a></td>
+<td>Full Day 1 schedule, objectives, and activities</td>
+</tr>
+<tr>
+<td><a href="DAY2_AGENDA.md">DAY2_AGENDA.md</a></td>
+<td>Full Day 2 schedule, objectives, and activities</td>
+</tr>
+</tbody></table>
+<p><strong>Appendices</strong> — Reference material; open any time during the workshop</p>
+<table>
+<thead>
+<tr>
+<th>Appendix</th>
+<th>Document</th>
+<th>What It Covers</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="docs/appendix-a-glossary.md">A</a></td>
+<td><strong>GitHub Concepts Glossary</strong></td>
+<td>Every term, concept, and piece of jargon explained</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-b-screen-reader-cheatsheet.md">B</a></td>
+<td><strong>Screen Reader Cheat Sheet</strong></td>
+<td>Complete NVDA, JAWS, and VoiceOver navigation commands — task-based and per-screen-reader — plus the full GitHub built-in keyboard shortcut system</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-c-accessibility-standards.md">C</a></td>
+<td><strong>Accessibility Standards Reference</strong></td>
+<td>WCAG 2.2 success criteria, ARIA roles and patterns, and a quick-reference PR checklist</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-d-git-authentication.md">D</a></td>
+<td><strong>Git Authentication</strong></td>
+<td>SSH keys, Personal Access Tokens, credential storage, and commit signing</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-e-github-flavored-markdown.md">E</a></td>
+<td><strong>GitHub Flavored Markdown</strong></td>
+<td>Alert blocks, collapsible sections, Mermaid diagrams, math, footnotes, heading anchors, and screen reader guidance</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-f-github-gists.md">F</a></td>
+<td><strong>GitHub Gists</strong></td>
+<td>Code snippets, sharing, embedding, and cloning</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-g-github-discussions.md">G</a></td>
+<td><strong>GitHub Discussions</strong></td>
+<td>Forum-style conversations, Q&amp;A, polls, and accessibility navigation for discussion threads</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-h-releases-tags-insights.md">H</a></td>
+<td><strong>Releases, Tags, and Repository Insights</strong></td>
+<td>Versioned releases, semver, reading release notes, pulse, contributors, traffic, and Insights metrics</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-i-github-projects.md">I</a></td>
+<td><strong>GitHub Projects Deep Dive</strong></td>
+<td>Boards, tables, roadmaps, custom fields, automations, iterations, cross-repo projects, and accessible navigation</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-j-advanced-search.md">J</a></td>
+<td><strong>GitHub Advanced Search</strong></td>
+<td>Complete query language reference for searching issues, PRs, code, commits, and repositories</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-k-branch-protection-rulesets.md">K</a></td>
+<td><strong>Branch Protection and Rulesets</strong></td>
+<td>Required reviews, status checks, repository rulesets, and diagnosing why your PR cannot be merged</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-l-github-security-features.md">L</a></td>
+<td><strong>GitHub Security Features</strong></td>
+<td>Dependabot alerts and updates, secret scanning, code scanning/CodeQL, private vulnerability reporting, and SBOM</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-m-vscode-accessibility-reference.md">M</a></td>
+<td><strong>VS Code Accessibility Reference</strong></td>
+<td>Complete technical reference for all accessibility settings, audio cues, diff viewer, screen reader configurations, keyboard shortcuts</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-n-github-codespaces.md">N</a></td>
+<td><strong>GitHub Codespaces</strong></td>
+<td>Cloud development environments — setup, accessibility configuration, and screen reader usage</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-o-github-mobile.md">O</a></td>
+<td><strong>GitHub Mobile</strong></td>
+<td>Accessibility guide for iOS and Android — VoiceOver, TalkBack, notifications, and PR reviews</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-p-github-pages.md">P</a></td>
+<td><strong>Publishing with GitHub Pages</strong></td>
+<td>Deploy a static site from your repository — branch setup, custom domains, CI workflows, and accessibility checks</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-q-github-actions-workflows.md">Q</a></td>
+<td><strong>GitHub Actions and Workflows</strong></td>
+<td>Deep-dive reference — automation, status checks, CI/CD workflows, and the path to agentic cloud</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-r-github-profile-sponsors-wikis.md">R</a></td>
+<td><strong>GitHub Profile, Sponsors, and Wikis</strong></td>
+<td>Profile README, GitHub Sponsors, and GitHub Wikis</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-s-github-organizations-templates.md">S</a></td>
+<td><strong>Organizations, Templates, and Repository Settings</strong></td>
+<td>Organizations, repository templates, visibility, archiving, and contributor-relevant settings</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-t-contributing-to-open-source.md">T</a></td>
+<td><strong>Contributing to Open Source</strong></td>
+<td>A first-timer&#39;s guide: finding issues, scoping contributions, writing PRs, and building a contribution habit</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-u-resources.md">U</a></td>
+<td><strong>Resources</strong></td>
+<td>Every link, tool, and reference from this event</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-v-agent-forge-reference.md">V</a></td>
+<td><strong>Agent Forge Reference</strong></td>
+<td>Six agents, 28 slash commands, customization system, and workspace configuration</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-w-github-copilot-reference.md">W</a></td>
+<td><strong>GitHub Copilot Reference</strong></td>
+<td>Copilot features, chat participants, slash commands, MCP servers, and agentic ecosystem</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-x-copilot-models.md">X</a></td>
+<td><strong>GitHub Copilot AI Models</strong></td>
+<td>Model comparison, strengths, plan availability, and selection guidance</td>
+</tr>
+<tr>
+<td><a href="docs/appendix-y-accessing-workshop-materials.md">Y</a></td>
+<td><strong>Accessing and Downloading Workshop Materials</strong></td>
+<td>GitHub Pages, GitHub.com, cloning, ZIP download, offline reading, folder guide</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Each guide from Lesson 03 onward includes a &quot;Day 2 Amplifier&quot; callout</strong> that shows how Agent Forge extends that skill across three scopes: your VS Code editor → your repository (travels with every fork) → the cloud (GitHub Agentic Workflows running without VS Code). <strong>Learn the manual skill first (Chapter 14), then see how it&#39;s automated (Chapter 16).</strong></p>
+</blockquote>
+<hr>
+<h2>This Repository&#39;s Structure</h2>
+<blockquote>
+<p><strong>One repository, everything included.</strong> Clone or fork this repo and you have the complete workshop — all curriculum guides, Agent Forge agents and slash commands, YAML issue forms, PR template, and a practice contribution target in <code>learning-room/</code>. GitHub Skills modules cannot be bundled here (each participant activates their own copy on their own account), but links are in <code>.github/ISSUE_TEMPLATE/config.yml</code>.</p>
+</blockquote>
+<pre><code class="hljs">[<span class="hljs-string">repo</span> <span class="hljs-string">root</span>]<span class="hljs-string">/</span>
+<span class="hljs-string">├──</span> <span class="hljs-string">README.md</span>                            <span class="hljs-string">←</span> <span class="hljs-string">You</span> <span class="hljs-string">are</span> <span class="hljs-string">here</span>
+<span class="hljs-string">├──</span> <span class="hljs-string">CONTRIBUTING.md</span>                      <span class="hljs-string">←</span> <span class="hljs-string">How</span> <span class="hljs-string">to</span> <span class="hljs-string">contribute</span> <span class="hljs-string">to</span> <span class="hljs-string">this</span> <span class="hljs-string">repo</span>
+<span class="hljs-string">├──</span> <span class="hljs-string">CODE_OF_CONDUCT.md</span>                   <span class="hljs-string">←</span> <span class="hljs-string">Community</span> <span class="hljs-string">standards</span>
+<span class="hljs-string">├──</span> <span class="hljs-string">FACILITATOR.md</span>                       <span class="hljs-string">←</span> <span class="hljs-string">For</span> <span class="hljs-string">workshop</span> <span class="hljs-string">organizers</span> <span class="hljs-string">only</span>
+<span class="hljs-string">├──</span> <span class="hljs-string">DAY1_AGENDA.md</span>                       <span class="hljs-string">←</span> <span class="hljs-string">Day</span> <span class="hljs-number">1</span> <span class="hljs-string">workshop</span> <span class="hljs-string">schedule</span> <span class="hljs-string">(facilitators</span> <span class="hljs-string">only)</span>
+<span class="hljs-string">├──</span> <span class="hljs-string">DAY2_AGENDA.md</span>                       <span class="hljs-string">←</span> <span class="hljs-string">Day</span> <span class="hljs-number">2</span> <span class="hljs-string">workshop</span> <span class="hljs-string">schedule</span> <span class="hljs-string">(facilitators</span> <span class="hljs-string">only)</span>
+<span class="hljs-string">├──</span> <span class="hljs-string">.gitignore</span>
+<span class="hljs-string">├──</span> <span class="hljs-string">.github/</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">├──</span> <span class="hljs-string">ISSUE_TEMPLATE/</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">│</span>   <span class="hljs-string">├──</span> <span class="hljs-string">config.yml</span>                   <span class="hljs-string">←</span> <span class="hljs-string">Links</span> <span class="hljs-string">to</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Skills;</span> <span class="hljs-string">disables</span> <span class="hljs-string">blank</span> <span class="hljs-string">issues</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">│</span>   <span class="hljs-string">├──</span> <span class="hljs-string">accessibility-bug.yml</span>        <span class="hljs-string">←</span> <span class="hljs-string">Structured</span> <span class="hljs-string">accessibility</span> <span class="hljs-string">bug</span> <span class="hljs-string">form</span> <span class="hljs-string">(YAML)</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">│</span>   <span class="hljs-string">└──</span> <span class="hljs-string">feature-request.yml</span>         <span class="hljs-string">←</span> <span class="hljs-string">Feature/improvement</span> <span class="hljs-string">request</span> <span class="hljs-string">form</span> <span class="hljs-string">(YAML)</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">├──</span> <span class="hljs-string">PULL_REQUEST_TEMPLATE.md</span>        <span class="hljs-string">←</span> <span class="hljs-string">PR</span> <span class="hljs-string">checklist</span> <span class="hljs-string">with</span> <span class="hljs-string">accessibility</span> <span class="hljs-string">section</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">├──</span> <span class="hljs-string">agents/</span>                          <span class="hljs-string">←</span> <span class="hljs-attr">Agent Forge:</span> <span class="hljs-string">six</span> <span class="hljs-string">Copilot</span> <span class="hljs-string">Chat</span> <span class="hljs-string">agents</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">│</span>   <span class="hljs-string">├──</span> <span class="hljs-string">daily-briefing.agent.md</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">│</span>   <span class="hljs-string">├──</span> <span class="hljs-string">issue-tracker.agent.md</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">│</span>   <span class="hljs-string">├──</span> <span class="hljs-string">pr-review.agent.md</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">│</span>   <span class="hljs-string">├──</span> <span class="hljs-string">analytics.agent.md</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">│</span>   <span class="hljs-string">├──</span> <span class="hljs-string">insiders-a11y-tracker.agent.md</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">│</span>   <span class="hljs-string">├──</span> <span class="hljs-string">template-builder.agent.md</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">│</span>   <span class="hljs-string">└──</span> <span class="hljs-string">preferences.example.md</span>      <span class="hljs-string">←</span> <span class="hljs-string">Copy</span> <span class="hljs-string">to</span> <span class="hljs-string">preferences.md</span> <span class="hljs-string">and</span> <span class="hljs-string">personalize</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">└──</span> <span class="hljs-string">prompts/</span>                         <span class="hljs-string">←</span> <span class="hljs-number">28</span> <span class="hljs-string">slash</span> <span class="hljs-string">commands</span> <span class="hljs-string">for</span> <span class="hljs-string">Copilot</span> <span class="hljs-string">Chat</span>
+<span class="hljs-string">│</span>       <span class="hljs-string">├──</span> <span class="hljs-string">a11y-update.prompt.md</span>
+<span class="hljs-string">│</span>       <span class="hljs-string">├──</span> <span class="hljs-string">create-issue.prompt.md</span>
+<span class="hljs-string">│</span>       <span class="hljs-string">├──</span> <span class="hljs-string">daily-briefing.prompt.md</span>
+<span class="hljs-string">│</span>       <span class="hljs-string">├──</span> <span class="hljs-string">review-pr.prompt.md</span>
+<span class="hljs-string">│</span>       <span class="hljs-string">├──</span> <span class="hljs-string">triage.prompt.md</span>
+<span class="hljs-string">│</span>       <span class="hljs-string">└──</span> <span class="hljs-string">...</span> <span class="hljs-string">(23</span> <span class="hljs-string">more</span> <span class="hljs-string">—</span> <span class="hljs-string">see</span> <span class="hljs-string">appendix-v-agent-forge-reference.md)</span>
+<span class="hljs-string">├──</span> <span class="hljs-string">learning-room/</span>                       <span class="hljs-string">←</span> <span class="hljs-string">Practice</span> <span class="hljs-string">target</span> <span class="hljs-string">for</span> <span class="hljs-string">the</span> <span class="hljs-string">contribution</span> <span class="hljs-string">sprint</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">├──</span> <span class="hljs-string">README.md</span>
+<span class="hljs-string">│</span>   <span class="hljs-string">└──</span> <span class="hljs-string">docs/</span>
+<span class="hljs-string">│</span>       <span class="hljs-string">├──</span> <span class="hljs-string">welcome.md</span>                   <span class="hljs-string">←</span> <span class="hljs-string">Has</span> [<span class="hljs-string">TODO</span>] <span class="hljs-string">sections</span> <span class="hljs-string">for</span> <span class="hljs-string">you</span> <span class="hljs-string">to</span> <span class="hljs-string">complete</span>
+<span class="hljs-string">│</span>       <span class="hljs-string">├──</span> <span class="hljs-string">keyboard-shortcuts.md</span>        <span class="hljs-string">←</span> <span class="hljs-string">Has</span> <span class="hljs-string">intentional</span> <span class="hljs-string">accessibility</span> <span class="hljs-string">issues</span> <span class="hljs-string">to</span> <span class="hljs-string">find</span> <span class="hljs-string">and</span> <span class="hljs-string">fix</span>
+<span class="hljs-string">│</span>       <span class="hljs-string">└──</span> <span class="hljs-string">setup-guide.md</span>              <span class="hljs-string">←</span> <span class="hljs-string">Has</span> <span class="hljs-string">a</span> <span class="hljs-string">broken</span> <span class="hljs-string">link</span> <span class="hljs-string">to</span> <span class="hljs-string">find</span> <span class="hljs-string">and</span> <span class="hljs-string">fix</span>
+<span class="hljs-string">└──</span> <span class="hljs-string">docs/</span>                               <span class="hljs-string">←</span> <span class="hljs-string">Full</span> <span class="hljs-string">workshop</span> <span class="hljs-string">curriculum</span> <span class="hljs-string">(17</span> <span class="hljs-string">lessons</span> <span class="hljs-string">+</span> <span class="hljs-number">25</span> <span class="hljs-string">appendices</span> <span class="hljs-string">A–Y)</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">course-guide.md</span>                           <span class="hljs-string">←</span> <span class="hljs-attr">Student landing page:</span> <span class="hljs-string">day-by-day</span> <span class="hljs-string">overview,</span> <span class="hljs-string">exercises,</span> <span class="hljs-string">help</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">00</span><span class="hljs-string">-pre-workshop-setup.md</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">01</span><span class="hljs-string">-understanding-github-web-structure.md</span>  <span class="hljs-string">←</span> <span class="hljs-string">How</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">is</span> <span class="hljs-string">organized</span> <span class="hljs-string">(start</span> <span class="hljs-string">here)</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">02</span><span class="hljs-string">-navigating-repositories.md</span>  <span class="hljs-string">←</span> <span class="hljs-attr">Agent Forge:</span> <span class="hljs-string">@daily-briefing</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">03</span><span class="hljs-string">-the-learning-room.md</span>        <span class="hljs-string">←</span> <span class="hljs-attr">Read this early:</span> <span class="hljs-string">your</span> <span class="hljs-string">shared</span> <span class="hljs-string">space</span> <span class="hljs-string">and</span> <span class="hljs-string">PR</span> <span class="hljs-string">workflow</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">04</span><span class="hljs-string">-working-with-issues.md</span>      <span class="hljs-string">←</span> <span class="hljs-attr">Agent Forge:</span> <span class="hljs-string">@issue-tracker</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">05</span><span class="hljs-string">-working-with-pull-requests.md</span> <span class="hljs-string">←</span> <span class="hljs-attr">Agent Forge:</span> <span class="hljs-string">@pr-review</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">06</span><span class="hljs-string">-merge-conflicts.md</span>          <span class="hljs-string">←</span> <span class="hljs-attr">Agent Forge:</span> <span class="hljs-string">Copilot</span> <span class="hljs-string">conflict</span> <span class="hljs-string">prevention</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">07</span><span class="hljs-string">-culture-etiquette.md</span>        <span class="hljs-string">←</span> <span class="hljs-attr">Agent Forge:</span> <span class="hljs-string">output</span> <span class="hljs-string">responsibility</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">08</span><span class="hljs-string">-labels-milestones-projects.md</span> <span class="hljs-string">←</span> <span class="hljs-attr">Agent Forge:</span> <span class="hljs-string">@issue-tracker</span> <span class="hljs-string">+</span> <span class="hljs-string">labels</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">09</span><span class="hljs-string">-notifications.md</span>            <span class="hljs-string">←</span> <span class="hljs-attr">Agent Forge:</span> <span class="hljs-string">@daily-briefing</span> <span class="hljs-string">+</span> <span class="hljs-string">inbox</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">10</span><span class="hljs-string">-vscode-basics.md</span>            <span class="hljs-string">←</span> <span class="hljs-string">VS</span> <span class="hljs-string">Code</span> <span class="hljs-string">setup,</span> <span class="hljs-string">github.dev,</span> <span class="hljs-string">screen</span> <span class="hljs-string">reader</span> <span class="hljs-string">mode,</span> <span class="hljs-string">accessibility</span> <span class="hljs-string">basics</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">11</span><span class="hljs-string">-git-source-control.md</span>       <span class="hljs-string">←</span> <span class="hljs-attr">Git operations in VS Code:</span> <span class="hljs-string">clone,</span> <span class="hljs-string">branch,</span> <span class="hljs-string">commit,</span> <span class="hljs-string">merge,</span> <span class="hljs-string">stash</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">12</span><span class="hljs-string">-github-pull-requests-extension.md</span> <span class="hljs-string">←</span> <span class="hljs-attr">GitHub PR extension:</span> <span class="hljs-string">view,</span> <span class="hljs-string">review,</span> <span class="hljs-string">create,</span> <span class="hljs-string">merge</span> <span class="hljs-string">PRs</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">13</span><span class="hljs-string">-github-copilot.md</span>           <span class="hljs-string">←</span> <span class="hljs-attr">GitHub Copilot:</span> <span class="hljs-string">inline</span> <span class="hljs-string">suggestions,</span> <span class="hljs-string">Chat,</span> <span class="hljs-string">prompting,</span> <span class="hljs-string">custom</span> <span class="hljs-string">agents</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">14</span><span class="hljs-string">-accessible-code-review.md</span>   <span class="hljs-string">←</span> <span class="hljs-attr">Reviewer mechanics:</span> <span class="hljs-string">diffs,</span> <span class="hljs-string">comments,</span> <span class="hljs-string">Accessible</span> <span class="hljs-string">Diff</span> <span class="hljs-string">Viewer</span> <span class="hljs-string">—</span> <span class="hljs-string">final</span> <span class="hljs-string">culminating</span> <span class="hljs-string">skill</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">15</span><span class="hljs-string">-issue-templates.md</span>          <span class="hljs-string">←</span> <span class="hljs-string">Creating</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">issue</span> <span class="hljs-string">templates</span>
+    <span class="hljs-string">├──</span> <span class="hljs-number">16</span><span class="hljs-string">-agent-forge.md</span>              <span class="hljs-string">←</span> <span class="hljs-attr">Agent Forge:</span> <span class="hljs-string">six</span> <span class="hljs-string">agents,</span> <span class="hljs-number">28</span> <span class="hljs-string">commands,</span> <span class="hljs-string">agentic</span> <span class="hljs-string">workflows</span> <span class="hljs-string">—</span> <span class="hljs-string">automate</span> <span class="hljs-string">everything</span> <span class="hljs-string">you</span> <span class="hljs-string">learned</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-a-glossary.md</span>                    <span class="hljs-string">←</span> <span class="hljs-attr">A:</span> <span class="hljs-string">Every</span> <span class="hljs-string">term</span> <span class="hljs-string">explained</span> <span class="hljs-string">(look</span> <span class="hljs-string">up</span> <span class="hljs-string">any</span> <span class="hljs-string">time)</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-b-screen-reader-cheatsheet.md</span>    <span class="hljs-string">←</span> <span class="hljs-attr">B:</span> <span class="hljs-string">Full</span> <span class="hljs-string">shortcut</span> <span class="hljs-string">reference,</span> <span class="hljs-string">per-screen-reader</span> <span class="hljs-string">tables</span> <span class="hljs-string">(keep</span> <span class="hljs-string">open)</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-c-accessibility-standards.md</span>     <span class="hljs-string">←</span> <span class="hljs-attr">C:</span> <span class="hljs-string">WCAG</span> <span class="hljs-number">2.2</span><span class="hljs-string">,</span> <span class="hljs-string">ARIA,</span> <span class="hljs-string">PR</span> <span class="hljs-string">checklist</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-d-git-authentication.md</span>          <span class="hljs-string">←</span> <span class="hljs-attr">D:</span> <span class="hljs-string">SSH</span> <span class="hljs-string">keys,</span> <span class="hljs-string">PATs,</span> <span class="hljs-string">credential</span> <span class="hljs-string">storage</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-e-github-flavored-markdown.md</span>    <span class="hljs-string">←</span> <span class="hljs-attr">E:</span> <span class="hljs-string">Alert</span> <span class="hljs-string">blocks,</span> <span class="hljs-string">Mermaid,</span> <span class="hljs-string">math,</span> <span class="hljs-string">footnotes,</span> <span class="hljs-string">heading</span> <span class="hljs-string">anchors</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-f-github-gists.md</span>                <span class="hljs-string">←</span> <span class="hljs-attr">F:</span> <span class="hljs-string">Code</span> <span class="hljs-string">snippets,</span> <span class="hljs-string">sharing,</span> <span class="hljs-string">embedding</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-g-github-discussions.md</span>          <span class="hljs-string">←</span> <span class="hljs-attr">G:</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Discussions</span> <span class="hljs-string">navigation</span> <span class="hljs-string">and</span> <span class="hljs-string">participation</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-h-releases-tags-insights.md</span>      <span class="hljs-string">←</span> <span class="hljs-attr">H:</span> <span class="hljs-string">Releases,</span> <span class="hljs-string">tags,</span> <span class="hljs-string">version</span> <span class="hljs-string">numbers,</span> <span class="hljs-string">pulse,</span> <span class="hljs-string">contributors,</span> <span class="hljs-string">traffic</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-i-github-projects.md</span>             <span class="hljs-string">←</span> <span class="hljs-attr">I:</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Projects</span> <span class="hljs-string">deep</span> <span class="hljs-string">dive</span> <span class="hljs-string">(boards,</span> <span class="hljs-string">tables,</span> <span class="hljs-string">roadmaps,</span> <span class="hljs-string">automations)</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-j-advanced-search.md</span>             <span class="hljs-string">←</span> <span class="hljs-attr">J:</span> <span class="hljs-string">Search</span> <span class="hljs-string">query</span> <span class="hljs-string">language</span> <span class="hljs-string">reference</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-k-branch-protection-rulesets.md</span>  <span class="hljs-string">←</span> <span class="hljs-attr">K:</span> <span class="hljs-string">Branch</span> <span class="hljs-string">rules,</span> <span class="hljs-string">rulesets,</span> <span class="hljs-string">diagnosing</span> <span class="hljs-string">blocked</span> <span class="hljs-string">PRs</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-l-github-security-features.md</span>    <span class="hljs-string">←</span> <span class="hljs-attr">L:</span> <span class="hljs-string">Dependabot,</span> <span class="hljs-string">secret</span> <span class="hljs-string">scanning,</span> <span class="hljs-string">code</span> <span class="hljs-string">scanning,</span> <span class="hljs-string">private</span> <span class="hljs-string">advisories</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-m-vscode-accessibility-reference.md</span> <span class="hljs-string">←</span> <span class="hljs-attr">M:</span> <span class="hljs-string">Complete</span> <span class="hljs-string">VS</span> <span class="hljs-string">Code</span> <span class="hljs-string">accessibility</span> <span class="hljs-string">technical</span> <span class="hljs-string">reference</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-n-github-codespaces.md</span>           <span class="hljs-string">←</span> <span class="hljs-attr">N:</span> <span class="hljs-string">Cloud</span> <span class="hljs-string">dev</span> <span class="hljs-string">environments,</span> <span class="hljs-string">accessibility</span> <span class="hljs-string">setup,</span> <span class="hljs-string">screen</span> <span class="hljs-string">reader</span> <span class="hljs-string">usage</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-o-github-mobile.md</span>               <span class="hljs-string">←</span> <span class="hljs-attr">O:</span> <span class="hljs-string">VoiceOver</span> <span class="hljs-string">and</span> <span class="hljs-string">TalkBack</span> <span class="hljs-string">guide</span> <span class="hljs-string">for</span> <span class="hljs-string">iOS</span> <span class="hljs-string">and</span> <span class="hljs-string">Android</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-p-github-pages.md</span>                <span class="hljs-string">←</span> <span class="hljs-attr">P:</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Pages</span> <span class="hljs-string">deployment</span> <span class="hljs-string">guide</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-q-github-actions-workflows.md</span>    <span class="hljs-string">←</span> <span class="hljs-attr">Q:</span> <span class="hljs-string">Automation,</span> <span class="hljs-string">CI/CD</span> <span class="hljs-string">workflows,</span> <span class="hljs-string">and</span> <span class="hljs-string">agentic</span> <span class="hljs-string">cloud</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-r-github-profile-sponsors-wikis.md</span> <span class="hljs-string">←</span> <span class="hljs-attr">R:</span> <span class="hljs-string">Profile</span> <span class="hljs-string">README,</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Sponsors,</span> <span class="hljs-string">wikis</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-s-github-organizations-templates.md</span> <span class="hljs-string">←</span> <span class="hljs-attr">S:</span> <span class="hljs-string">Organizations,</span> <span class="hljs-string">templates,</span> <span class="hljs-string">repository</span> <span class="hljs-string">settings</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-t-contributing-to-open-source.md</span> <span class="hljs-string">←</span> <span class="hljs-attr">T:</span> <span class="hljs-string">First</span> <span class="hljs-string">contribution</span> <span class="hljs-string">guide</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-u-resources.md</span>                   <span class="hljs-string">←</span> <span class="hljs-attr">U:</span> <span class="hljs-string">Every</span> <span class="hljs-string">link,</span> <span class="hljs-string">tool,</span> <span class="hljs-string">and</span> <span class="hljs-string">reference</span> <span class="hljs-string">(lookup</span> <span class="hljs-string">anytime)</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-v-agent-forge-reference.md</span>       <span class="hljs-string">←</span> <span class="hljs-attr">V:</span> <span class="hljs-string">Agent</span> <span class="hljs-string">Forge</span> <span class="hljs-string">agents,</span> <span class="hljs-string">commands,</span> <span class="hljs-string">and</span> <span class="hljs-string">customization</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-w-github-copilot-reference.md</span>    <span class="hljs-string">←</span> <span class="hljs-attr">W:</span> <span class="hljs-string">Copilot</span> <span class="hljs-string">features,</span> <span class="hljs-string">chat,</span> <span class="hljs-string">MCP</span> <span class="hljs-string">servers,</span> <span class="hljs-string">agentic</span> <span class="hljs-string">ecosystem</span>
+    <span class="hljs-string">├──</span> <span class="hljs-string">appendix-x-copilot-models.md</span>              <span class="hljs-string">←</span> <span class="hljs-attr">X:</span> <span class="hljs-string">AI</span> <span class="hljs-string">model</span> <span class="hljs-string">comparison</span> <span class="hljs-string">and</span> <span class="hljs-string">selection</span> <span class="hljs-string">guide</span>
+    <span class="hljs-string">└──</span> <span class="hljs-string">appendix-y-accessing-workshop-materials.md</span> <span class="hljs-string">←</span> <span class="hljs-attr">Y:</span> <span class="hljs-string">How</span> <span class="hljs-string">to</span> <span class="hljs-string">get,</span> <span class="hljs-string">download,</span> <span class="hljs-string">and</span> <span class="hljs-string">read</span> <span class="hljs-string">these</span> <span class="hljs-string">materials</span>
+
+<span class="hljs-string">&gt;</span> <span class="hljs-attr">*Note:</span> <span class="hljs-string">Appendices</span> <span class="hljs-string">were</span> <span class="hljs-string">renumbered</span> <span class="hljs-string">during</span> <span class="hljs-string">a</span> <span class="hljs-string">February</span> <span class="hljs-number">2026 </span><span class="hljs-string">review.</span> <span class="hljs-string">If</span> <span class="hljs-string">you</span> <span class="hljs-string">encounter</span> <span class="hljs-string">external</span> <span class="hljs-string">references</span> <span class="hljs-string">to</span> <span class="hljs-string">&quot;Appendix D&quot;</span> <span class="hljs-string">or</span> <span class="hljs-string">later</span> <span class="hljs-string">letters,</span> <span class="hljs-string">subtract</span> <span class="hljs-string">one</span> <span class="hljs-string">letter</span> <span class="hljs-string">(e.g.,</span> <span class="hljs-string">the</span> <span class="hljs-string">former</span> <span class="hljs-string">Appendix</span> <span class="hljs-string">D</span> <span class="hljs-string">is</span> <span class="hljs-string">now</span> [<span class="hljs-string">Appendix</span> <span class="hljs-string">C</span>]<span class="hljs-string">(docs/appendix-c-accessibility-standards.md)).*</span>
+
+<span class="hljs-meta">---
+</span>
+<span class="hljs-comment">## Quick Reference</span>
+
+<span class="hljs-attr">These standalone documents provide additional guidance and resources:</span>
+
+<span class="hljs-string">|</span> <span class="hljs-string">Document</span> <span class="hljs-string">|</span> <span class="hljs-string">Description</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|----------|-------------|</span>
+<span class="hljs-string">|</span> [<span class="hljs-string">FAQ</span>]<span class="hljs-string">(FAQ.md)</span> <span class="hljs-string">|</span> <span class="hljs-string">Frequently</span> <span class="hljs-string">asked</span> <span class="hljs-string">questions</span> <span class="hljs-string">about</span> <span class="hljs-string">the</span> <span class="hljs-string">workshop</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> [<span class="hljs-string">Quick</span> <span class="hljs-string">Reference</span>]<span class="hljs-string">(QUICK_REFERENCE.md)</span> <span class="hljs-string">|</span> <span class="hljs-string">Condensed</span> <span class="hljs-string">cheat</span> <span class="hljs-string">sheet</span> <span class="hljs-string">for</span> <span class="hljs-string">common</span> <span class="hljs-string">tasks</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> [<span class="hljs-string">Troubleshooting</span>]<span class="hljs-string">(TROUBLESHOOTING.md)</span> <span class="hljs-string">|</span> <span class="hljs-string">Solutions</span> <span class="hljs-string">for</span> <span class="hljs-string">common</span> <span class="hljs-string">setup</span> <span class="hljs-string">and</span> <span class="hljs-string">workflow</span> <span class="hljs-string">issues</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> [<span class="hljs-string">Progress</span> <span class="hljs-string">Tracker</span>]<span class="hljs-string">(PROGRESS_TRACKER.md)</span> <span class="hljs-string">|</span> <span class="hljs-string">Track</span> <span class="hljs-string">your</span> <span class="hljs-string">learning</span> <span class="hljs-string">progress</span> <span class="hljs-string">through</span> <span class="hljs-string">the</span> <span class="hljs-string">workshop</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> [<span class="hljs-string">Accessibility</span> <span class="hljs-string">Testing</span>]<span class="hljs-string">(ACCESSIBILITY_TESTING.md)</span> <span class="hljs-string">|</span> <span class="hljs-string">Accessibility</span> <span class="hljs-string">testing</span> <span class="hljs-string">procedures</span> <span class="hljs-string">and</span> <span class="hljs-string">standards</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> [<span class="hljs-string">Security</span>]<span class="hljs-string">(SECURITY.md)</span> <span class="hljs-string">|</span> <span class="hljs-string">Security</span> <span class="hljs-string">policy</span> <span class="hljs-string">and</span> <span class="hljs-string">vulnerability</span> <span class="hljs-string">reporting</span> <span class="hljs-string">|</span>
+<span class="hljs-string">|</span> [<span class="hljs-string">GitHub</span> <span class="hljs-string">Proposal</span>]<span class="hljs-string">(GITHUB_PROPOSAL.md)</span> <span class="hljs-string">|</span> <span class="hljs-string">Original</span> <span class="hljs-string">event</span> <span class="hljs-string">proposal</span> <span class="hljs-string">and</span> <span class="hljs-string">curriculum</span> <span class="hljs-string">overview</span> <span class="hljs-string">(internal</span> <span class="hljs-string">reference)</span> <span class="hljs-string">|</span>
+
+<span class="hljs-meta">---
+</span>
+<span class="hljs-comment">## Screen Reader Users: Start Here</span>
+
+<span class="hljs-string">Before</span> <span class="hljs-string">doing</span> <span class="hljs-string">anything</span> <span class="hljs-string">else,</span> <span class="hljs-string">please</span> <span class="hljs-string">read</span> [<span class="hljs-string">**00</span> <span class="hljs-string">—</span> <span class="hljs-string">Pre-Workshop</span> <span class="hljs-string">Setup**</span>]<span class="hljs-string">(docs/00-pre-workshop-setup.md).</span> <span class="hljs-attr">It will walk you through:</span>
+
+<span class="hljs-bullet">-</span> <span class="hljs-string">Configuring</span> <span class="hljs-string">your</span> <span class="hljs-string">screen</span> <span class="hljs-string">reader</span> <span class="hljs-string">for</span> <span class="hljs-string">GitHub</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">Verifying</span> <span class="hljs-string">GitHub&#x27;s</span> <span class="hljs-string">modern</span> <span class="hljs-string">interface</span> <span class="hljs-string">is</span> <span class="hljs-string">working</span> <span class="hljs-string">(may</span> <span class="hljs-string">already</span> <span class="hljs-string">be</span> <span class="hljs-string">active</span> <span class="hljs-string">—</span> <span class="hljs-string">instructions</span> <span class="hljs-string">include</span> <span class="hljs-string">how</span> <span class="hljs-string">to</span> <span class="hljs-string">check</span> <span class="hljs-string">and</span> <span class="hljs-string">enable</span> <span class="hljs-string">if</span> <span class="hljs-string">needed)</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">Turning</span> <span class="hljs-string">off</span> <span class="hljs-string">settings</span> <span class="hljs-string">that</span> <span class="hljs-string">make</span> <span class="hljs-string">screen</span> <span class="hljs-string">reader</span> <span class="hljs-string">navigation</span> <span class="hljs-string">harder</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">Verifying</span> <span class="hljs-string">everything</span> <span class="hljs-string">works</span> <span class="hljs-string">before</span> <span class="hljs-string">Day</span> <span class="hljs-number">1</span> <span class="hljs-string">begins</span>
+
+<span class="hljs-meta">---
+</span>
+<span class="hljs-comment">## The Goal of This Event</span>
+
+<span class="hljs-string">Open</span> <span class="hljs-string">source</span> <span class="hljs-string">software</span> <span class="hljs-string">is</span> <span class="hljs-string">built</span> <span class="hljs-string">by</span> <span class="hljs-string">people.</span> <span class="hljs-string">Accessibility</span> <span class="hljs-string">bugs</span> <span class="hljs-string">in</span> <span class="hljs-string">open</span> <span class="hljs-string">source</span> <span class="hljs-string">affect</span> <span class="hljs-string">millions</span> <span class="hljs-string">of</span> <span class="hljs-string">people</span> <span class="hljs-string">who</span> <span class="hljs-string">use</span> <span class="hljs-string">assistive</span> <span class="hljs-string">technology</span> <span class="hljs-string">every</span> <span class="hljs-string">day.</span> <span class="hljs-string">By</span> <span class="hljs-string">learning</span> <span class="hljs-string">to</span> <span class="hljs-string">contribute</span> <span class="hljs-string">—</span> <span class="hljs-string">even</span> <span class="hljs-string">something</span> <span class="hljs-string">as</span> <span class="hljs-string">small</span> <span class="hljs-string">as</span> <span class="hljs-string">filing</span> <span class="hljs-string">a</span> <span class="hljs-string">clear,</span> <span class="hljs-string">detailed</span> <span class="hljs-string">accessibility</span> <span class="hljs-string">issue</span> <span class="hljs-string">—</span> <span class="hljs-string">you</span> <span class="hljs-string">become</span> <span class="hljs-string">part</span> <span class="hljs-string">of</span> <span class="hljs-string">fixing</span> <span class="hljs-string">that.</span> <span class="hljs-string">That</span> <span class="hljs-string">matters.</span>
+
+<span class="hljs-string">**You</span> <span class="hljs-string">don&#x27;t</span> <span class="hljs-string">have</span> <span class="hljs-string">to</span> <span class="hljs-string">write</span> <span class="hljs-string">a</span> <span class="hljs-string">single</span> <span class="hljs-string">line</span> <span class="hljs-string">of</span> <span class="hljs-string">code</span> <span class="hljs-string">to</span> <span class="hljs-string">make</span> <span class="hljs-string">open</span> <span class="hljs-string">source</span> <span class="hljs-string">more</span> <span class="hljs-string">accessible.**</span>
+
+<span class="hljs-string">And</span> <span class="hljs-string">by</span> <span class="hljs-string">the</span> <span class="hljs-string">end</span> <span class="hljs-string">of</span> <span class="hljs-string">Day</span> <span class="hljs-number">2</span><span class="hljs-string">,</span> <span class="hljs-string">you</span> <span class="hljs-string">will</span> <span class="hljs-string">not</span> <span class="hljs-string">just</span> <span class="hljs-string">be</span> <span class="hljs-string">a</span> <span class="hljs-string">learner.</span> <span class="hljs-string">You</span> <span class="hljs-string">will</span> <span class="hljs-string">be</span> <span class="hljs-string">a</span> <span class="hljs-string">product</span> <span class="hljs-string">maker</span> <span class="hljs-string">—</span> <span class="hljs-string">someone</span> <span class="hljs-string">who</span> <span class="hljs-string">has</span> <span class="hljs-string">shipped</span> <span class="hljs-string">something</span> <span class="hljs-string">real</span> <span class="hljs-string">to</span> <span class="hljs-string">a</span> <span class="hljs-string">project</span> <span class="hljs-string">that</span> <span class="hljs-string">other</span> <span class="hljs-string">people</span> <span class="hljs-string">use.</span>
+
+<span class="hljs-meta">---
+</span>
+<span class="hljs-comment">## Questions Before the Event?</span>
+
+<span class="hljs-bullet">-</span> <span class="hljs-string">Join</span> <span class="hljs-string">the</span> [<span class="hljs-string">GitHub</span> <span class="hljs-string">Accessibility</span> <span class="hljs-string">Discussions</span>]<span class="hljs-string">(https://github.com/orgs/community/discussions/categories/accessibility)</span> <span class="hljs-string">on</span> <span class="hljs-string">GitHub</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">File</span> <span class="hljs-string">an</span> <span class="hljs-string">issue</span> <span class="hljs-string">in</span> <span class="hljs-string">this</span> <span class="hljs-string">repository</span> <span class="hljs-string">if</span> <span class="hljs-string">something</span> <span class="hljs-string">in</span> <span class="hljs-string">these</span> <span class="hljs-string">docs</span> <span class="hljs-string">is</span> <span class="hljs-string">unclear</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">Contact</span> <span class="hljs-string">the</span> <span class="hljs-string">event</span> <span class="hljs-string">organizers</span> <span class="hljs-string">(details</span> <span class="hljs-string">provided</span> <span class="hljs-string">separately)</span>
+
+<span class="hljs-meta">---
+</span>
+<span class="hljs-comment">## License</span>
+
+<span class="hljs-string">All</span> <span class="hljs-string">workshop</span> <span class="hljs-string">documentation</span> <span class="hljs-string">is</span> <span class="hljs-string">licensed</span> <span class="hljs-string">under</span> [<span class="hljs-string">CC</span> <span class="hljs-string">BY</span> <span class="hljs-number">4.0</span>]<span class="hljs-string">(https://creativecommons.org/licenses/by/4.0/)</span> <span class="hljs-string">—</span> <span class="hljs-string">you</span> <span class="hljs-string">are</span> <span class="hljs-string">free</span> <span class="hljs-string">to</span> <span class="hljs-string">share</span> <span class="hljs-string">and</span> <span class="hljs-string">adapt</span> <span class="hljs-string">with</span> <span class="hljs-string">attribution.</span>
+
+<span class="hljs-meta">---
+</span>
+<span class="hljs-attr">*Last reviewed:</span> <span class="hljs-string">February</span> <span class="hljs-number">2026</span><span class="hljs-string">*</span>
+<span class="hljs-string">*Built</span> <span class="hljs-string">for</span> <span class="hljs-string">the</span> <span class="hljs-string">Open</span> <span class="hljs-string">Source</span> <span class="hljs-string">Assistive</span> <span class="hljs-string">Technology</span> <span class="hljs-string">Hackathon.*</span></code></pre>
+
+  </main>
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+    <p><strong>GIT Going with GitHub</strong> — A workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
+    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="http://www.joinbits.org">joinbits.org</a></p>
+  </footer>
+</body>
+</html>

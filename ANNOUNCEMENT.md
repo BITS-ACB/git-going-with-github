@@ -1,12 +1,15 @@
-# You Belong in Open Source. Let Us Show You the Door.
+# GIT Going with GitHub
 
-## GitHub Learning Room — A Two-Day Workshop for the Blind and Low Vision Community
+## You Belong in Open Source. Let Us Show You the Door.
+
+### A Two-Day Workshop by [BITS (Blind Information Technology Solutions)](http://www.joinbits.org)
 
 **Dates:** [EVENT_DATE_DAY1] and [EVENT_DATE_DAY2]
 **Time:** 9:00 AM — 5:00 PM [EVENT_TIMEZONE] (both days)
 **Location:** Online via Zoom
 **Cost:** Free
 **Capacity:** [MAX_PARTICIPANTS] participants
+**Presented by:** [BITS — Blind Information Technology Solutions](http://www.joinbits.org)
 
 ---
 
@@ -258,3 +261,5 @@ Open source is not complete without you. Come build with us.
 ---
 
 *All workshop materials are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
+
+*A [BITS (Blind Information Technology Solutions)](http://www.joinbits.org) initiative.*

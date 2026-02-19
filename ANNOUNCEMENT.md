@@ -197,7 +197,7 @@ Registration requires two steps. Both are required.
 
 **Step 1** - Register for the Zoom session so you receive the meeting link before the workshop.
 
-**Step 2** - File a GitHub issue with your name, email, and screen reader preference. You will need a free [GitHub](https://github.com) account - if you do not have one yet, [create one here](https://github.com/signup) or the registration page will walk you through it.
+**Step 2** - Sign into your free [GitHub](https://github.com) account, then file a GitHub issue with your name, email, and screen reader preference. You must be signed in to file the issue. If you do not have an account yet, [create one here](https://github.com/signup) or the registration page will walk you through it.
 
 > [**Go to the registration page**](https://bits-acb.github.io/git-going-with-github/REGISTER.html) to complete both steps - it only takes a few minutes.
 

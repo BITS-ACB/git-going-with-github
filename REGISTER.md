@@ -60,6 +60,8 @@ After creating your account, check your email for a message from GitHub with the
 
 ### File Your Registration Issue
 
+**Important:** You must be signed into your GitHub account before clicking the link below. If you are not signed in, go to [github.com](https://github.com) and sign in first.
+
 > [**Start Step 2 - File your registration issue**](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+-+March+2026)
 
 **Note:** The issue title is pre-filled and required by GitHub. You do not need to change it - just fill out the form fields below it and submit.

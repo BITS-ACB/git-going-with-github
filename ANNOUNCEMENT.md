@@ -6,6 +6,8 @@
 
 ### A Two-Day Workshop by [BITS (Blind Information Technology Solutions)](https://www.joinbits.org)
 
+Sponsored by [BITS](https://www.joinbits.org) in partnership with [GitHub](https://github.com).
+
 | | |
 |---|---|
 | **Dates** | Friday, March 6 & Saturday, March 7, 2026 |
@@ -14,6 +16,7 @@
 | **Cost** | Free |
 | **Capacity** | 75 participants (limited seats) |
 | **Presented by** | [BITS - Blind Information Technology Solutions](https://www.joinbits.org) |
+| **In partnership with** | [GitHub](https://github.com) |
 
 ### Registered: <span id="registration-count" aria-live="polite">loading...</span> out of 75 spots
 

@@ -14,7 +14,7 @@ License: CC BY 4.0 | [Site](https://bits-acb.github.io/git-going-with-github/) |
 | **Register** | [Sign up now](https://bits-acb.github.io/git-going-with-github/REGISTER.html) (75 seats, free, two steps) |
 | **Discussions** | [Join the conversation](https://github.com/BITS-ACB/git-going-with-github/discussions) |
 | **Email** | [support@bits-acb.org](mailto:support@bits-acb.org) |
-| **Dates** | March 6-7, 2026 · 12-8 PM Eastern |
+| **Dates** | March 7-8, 2026 · 12-8 PM Eastern |
 
 ---
 

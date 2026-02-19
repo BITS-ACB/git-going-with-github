@@ -6,7 +6,7 @@ Registration requires two steps. Both are required to complete your registration
 
 | | |
 |---|---|
-| **Dates** | Friday, March 6 & Saturday, March 7, 2026 |
+| **Dates** | Saturday, March 7 & Sunday, March 8, 2026 |
 | **Time** | 12:00 PM - 8:00 PM Eastern (both days) |
 | **Location** | Online via [Zoom](https://zoom.us/) |
 | **Cost** | Free |
@@ -16,7 +16,7 @@ Registered: <span id="registration-count" aria-live="polite">loading...</span> o
 
 ---
 
-> **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) before March 6. It walks you through GitHub account setup, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) - with instructions for NVDA, JAWS, and VoiceOver.
+> **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) before March 7. It walks you through GitHub account setup, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) - with instructions for NVDA, JAWS, and VoiceOver.
 
 ---
 
@@ -85,7 +85,7 @@ Once you have completed both steps:
 
 1. You will receive a Zoom confirmation email (Step 1)
 2. You will see a confirmation comment on your GitHub issue (Step 2)
-3. Complete the [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) before March 6 - it covers GitHub account setup, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot)
+3. Complete the [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) before March 7 - it covers GitHub account setup, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot)
 4. Questions? Email [support@bits-acb.org](mailto:support@bits-acb.org)
 
 ---

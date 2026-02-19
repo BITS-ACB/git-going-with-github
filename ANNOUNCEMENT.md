@@ -10,7 +10,7 @@ Sponsored by [BITS](https://www.joinbits.org) in partnership with [GitHub](https
 
 | | |
 |---|---|
-| **Dates** | Friday, March 6 & Saturday, March 7, 2026 |
+| **Dates** | Saturday, March 7 & Sunday, March 8, 2026 |
 | **Time** | 12:00 PM - 8:00 PM Eastern (both days) |
 | **Location** | Online via [Zoom](https://zoom.us/) |
 | **Cost** | Free |
@@ -30,7 +30,7 @@ Sponsored by [BITS](https://www.joinbits.org) in partnership with [GitHub](https
 
 ---
 
-> **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) before March 6. It walks you through every step - GitHub account, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) - with instructions for NVDA, JAWS, and VoiceOver. Get set up early so Day 1 starts with learning, not troubleshooting.
+> **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) before March 7. It walks you through every step - GitHub account, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) - with instructions for NVDA, JAWS, and VoiceOver. Get set up early so Day 1 starts with learning, not troubleshooting.
 
 ---
 

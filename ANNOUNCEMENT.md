@@ -30,7 +30,7 @@ Sponsored by [BITS](https://www.joinbits.org) in partnership with [GitHub](https
 
 ---
 
-> **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) before March 6. It walks you through every step - GitHub account, screen reader configuration, VS Code, and GitHub Copilot - with instructions for NVDA, JAWS, and VoiceOver. Get set up early so Day 1 starts with learning, not troubleshooting.
+> **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) before March 6. It walks you through every step - GitHub account, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) - with instructions for NVDA, JAWS, and VoiceOver. Get set up early so Day 1 starts with learning, not troubleshooting.
 
 ---
 
@@ -149,16 +149,16 @@ Install these before the workshop. Detailed, screen-reader-friendly installation
    - macOS: Open Terminal and type `git --version` - if Git is not installed, macOS will prompt you to install it automatically
    - Verify: Open a terminal and run `git --version` - you should see a version number
 
-2. **Visual Studio Code** - the free, accessible code editor used on Day 2
+2. **[Visual Studio Code](https://code.visualstudio.com/)** - the free, accessible code editor used on Day 2
    - Download from [code.visualstudio.com](https://code.visualstudio.com/)
    - After installing, press `Shift+Alt+F1` to enable Screen Reader Mode - this is essential
 
-3. **GitHub Copilot Chat extension** - installed from within VS Code
-   - Press `Ctrl+Shift+X` in VS Code to open Extensions
+3. **GitHub Copilot Chat extension** - installed from within [VS Code](https://code.visualstudio.com/)
+   - Press `Ctrl+Shift+X` in [VS Code](https://code.visualstudio.com/) to open Extensions
    - Search for "GitHub Copilot Chat" (publisher: GitHub)
    - Install it - Copilot Free tier is available to all GitHub users at no cost
 
-4. **GitHub Pull Requests extension** - also installed from within VS Code
+4. **GitHub Pull Requests extension** - also installed from within [VS Code](https://code.visualstudio.com/)
    - Search for "GitHub Pull Requests" (publisher: GitHub) in the Extensions panel
    - Install it
 

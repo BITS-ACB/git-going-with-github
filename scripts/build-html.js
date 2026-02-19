@@ -77,7 +77,27 @@ const htmlTemplate = (content, title, relativePath) => {
     <p><strong>GIT Going with GitHub</strong> — A workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
     <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="http://www.joinbits.org">joinbits.org</a></p>
   </footer>
-</body>
+  ${isHome ? `<script>
+(function() {
+  var url = 'https://api.github.com/search/issues?q=repo:BITS-ACB/git-going-with-github+label:registration+is:issue+is:open';
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url);
+  xhr.setRequestHeader('Accept', 'application/vnd.github+json');
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      try {
+        var count = JSON.parse(xhr.responseText).total_count;
+        var els = document.querySelectorAll('[id^="registration-count"]');
+        for (var i = 0; i < els.length; i++) {
+          els[i].textContent = count;
+        }
+      } catch (e) {}
+    }
+  };
+  xhr.onerror = function() {};
+  xhr.send();
+})();
+</script>` : ''}</body>
 </html>`;
 };
 

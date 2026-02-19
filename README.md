@@ -1,9 +1,6 @@
 # GIT Going with GitHub
 
-![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg?style=flat-square)
-![GitHub Pages](https://img.shields.io/github/actions/workflow/status/BITS-ACB/git-going-with-github/deploy-pages.yml?label=Site&style=flat-square)
-![Registration Count](https://img.shields.io/github/issues/BITS-ACB/git-going-with-github/registration?label=Registered&color=brightgreen&style=flat-square)
-![GitHub Discussions](https://img.shields.io/github/discussions/BITS-ACB/git-going-with-github?label=Discussions&style=flat-square&color=blueviolet)
+License: CC BY 4.0 | [Site](https://bits-acb.github.io/git-going-with-github/) | [Discussions](https://github.com/BITS-ACB/git-going-with-github/discussions)
 
 ## A Workshop by [BITS (Blind Information Technology Solutions)](http://www.joinbits.org)
 
@@ -13,11 +10,11 @@
 
 | | |
 |---|---|
-| 🌐 **Workshop site** | [bits-acb.github.io/git-going-with-github](https://bits-acb.github.io/git-going-with-github/) |
-| 📝 **Register** | [Sign up now](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+) (75 seats, free) |
-| 💬 **Discussions** | [Join the conversation](https://github.com/BITS-ACB/git-going-with-github/discussions) |
-| 📧 **Email** | [support@bits-acb.org](mailto:support@bits-acb.org) |
-| 📅 **Dates** | March 6–7, 2026 · 12–8 PM Eastern |
+| **Workshop site** | [bits-acb.github.io/git-going-with-github](https://bits-acb.github.io/git-going-with-github/) |
+| **Register** | [Sign up now](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+) (75 seats, free) |
+| **Discussions** | [Join the conversation](https://github.com/BITS-ACB/git-going-with-github/discussions) |
+| **Email** | [support@bits-acb.org](mailto:support@bits-acb.org) |
+| **Dates** | March 6–7, 2026 · 12–8 PM Eastern |
 
 ---
 

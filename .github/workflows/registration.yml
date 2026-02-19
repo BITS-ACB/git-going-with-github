@@ -1,0 +1,150 @@
+name: Registration — Welcome & CSV Export
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  welcome:
+    name: Welcome New Registrant
+    runs-on: ubuntu-latest
+    if: >-
+      github.event_name == 'issues' &&
+      github.event.action == 'opened' &&
+      contains(github.event.issue.title, '[REGISTER]')
+    steps:
+      - name: Post welcome comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `## ✅ You are registered for GIT Going with GitHub!
+
+            Welcome, @${context.payload.issue.user.login}! Your registration has been received.
+
+            **Workshop details:**
+            - 📅 **Dates:** Friday, March 6 & Saturday, March 7, 2026
+            - 🕛 **Time:** 12:00 PM — 8:00 PM Eastern (both days)
+            - 📍 **Location:** Online via Zoom (link will be emailed before the event)
+
+            **What to do next:**
+            1. Complete the [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/docs/00-pre-workshop-setup.html) before March 6
+            2. Watch for an email with your Zoom join link
+            3. Questions? Email [support@bits-acb.org](mailto:support@bits-acb.org)
+
+            You just filed a GitHub issue — your first open source contribution. Welcome to the community. 🎉`
+            });
+
+      - name: Add registration label
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: ['registration']
+              });
+            } catch (e) {
+              console.log('Label may already exist:', e.message);
+            }
+
+  export-csv:
+    name: Export Registrations to CSV
+    runs-on: ubuntu-latest
+    if: >-
+      (github.event_name == 'workflow_dispatch') ||
+      (github.event_name == 'issues' && contains(github.event.issue.title, '[REGISTER]'))
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Generate CSV from registration issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+
+            // Fetch all issues with the registration label
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'registration',
+              state: 'all',
+              per_page: 100
+            });
+
+            // Parse issue body fields (GitHub YAML forms use ### heading + content pattern)
+            function parseField(body, fieldName) {
+              if (!body) return '';
+              // Match the pattern: ### Field Name\n\nValue
+              // Also handle ### Field Name\r\n\r\nValue
+              const regex = new RegExp(`### ${fieldName}\\s*\\n+([\\s\\S]*?)(?=\\n### |$)`, 'i');
+              const match = body.match(regex);
+              if (!match) return '';
+              let value = match[1].trim();
+              // Remove _No response_ placeholder
+              if (value === '_No response_') return '';
+              // Escape CSV: quote fields containing commas, quotes, or newlines
+              if (value.includes(',') || value.includes('"') || value.includes('\n')) {
+                value = '"' + value.replace(/"/g, '""') + '"';
+              }
+              return value;
+            }
+
+            // Build CSV
+            const headers = [
+              'Registration Date',
+              'GitHub Username',
+              'First Name',
+              'Last Name',
+              'Email Address',
+              'GitHub Proficiency Level',
+              'Primary Screen Reader',
+              'Questions or Accommodations',
+              'Issue Number',
+              'Issue URL'
+            ];
+
+            let csv = headers.join(',') + '\n';
+
+            for (const issue of issues) {
+              const row = [
+                issue.created_at.split('T')[0],
+                issue.user.login,
+                parseField(issue.body, 'First Name'),
+                parseField(issue.body, 'Last Name'),
+                parseField(issue.body, 'Email Address'),
+                parseField(issue.body, 'GitHub Proficiency Level'),
+                parseField(issue.body, 'Primary Screen Reader'),
+                parseField(issue.body, 'Questions or Accommodations'),
+                issue.number,
+                issue.html_url
+              ];
+              csv += row.join(',') + '\n';
+            }
+
+            // Write CSV file
+            fs.mkdirSync('.github/data', { recursive: true });
+            fs.writeFileSync('.github/data/registrations.csv', csv, 'utf-8');
+            console.log(`Exported ${issues.length} registration(s) to .github/data/registrations.csv`);
+
+      - name: Commit and push CSV
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/data/registrations.csv
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "chore: update registration CSV [skip ci]"
+          git push

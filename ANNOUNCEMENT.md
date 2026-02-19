@@ -4,12 +4,18 @@
 
 ### A Two-Day Workshop by [BITS (Blind Information Technology Solutions)](http://www.joinbits.org)
 
-**Dates:** [EVENT_DATE_DAY1] and [EVENT_DATE_DAY2]
-**Time:** 9:00 AM — 5:00 PM [EVENT_TIMEZONE] (both days)
+**Dates:** Friday, March 6, 2026 and Saturday, March 7, 2026
+**Time:** 12:00 PM — 8:00 PM Eastern (both days)
 **Location:** Online via Zoom
 **Cost:** Free
-**Capacity:** [MAX_PARTICIPANTS] participants
+**Capacity:** 75 participants (limited seats)
 **Presented by:** [BITS — Blind Information Technology Solutions](http://www.joinbits.org)
+
+---
+
+> **Registration is open!** [**Register now**](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+) — sign up by filing a GitHub issue. It only takes a minute.
+>
+> ![Registration Count](https://img.shields.io/github/issues/BITS-ACB/git-going-with-github/registration?label=Registered&color=brightgreen&style=for-the-badge) out of 75 spots
 
 ---
 
@@ -171,34 +177,28 @@ Our [Pre-Workshop Setup Guide](docs/00-pre-workshop-setup.md) walks through ever
 
 ## Register
 
-Registration is a two-step process:
+### How to Sign Up
 
-### Step 1 — Sign Up Form
+Registration works through GitHub Issues — and that is intentional. Filing a GitHub issue is one of the first skills you will learn in this workshop. By registering this way, you are already practicing.
 
-Complete the participant sign-up form so we can prepare your workshop materials, create your assigned issues, and pair you with a peer reviewer:
+> [**Click here to register**](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+) — it takes about one minute.
 
-[SIGN_UP_FORM_URL]
+You will need a free GitHub account to register (see prerequisites above). The form asks for:
+- Your first and last name
+- Your email address
+- Your GitHub username
+- Your experience level with GitHub
+- Any questions you have before the workshop
 
-The form asks for:
-- Your name and email address
-- Your GitHub username (create your account first — see prerequisites above)
-- Which screen reader and operating system you use
-- Your experience level with GitHub (none is perfectly fine)
-- Any accommodations or access needs
+![Registration Count](https://img.shields.io/github/issues/BITS-ACB/git-going-with-github/registration?label=Registered&color=brightgreen&style=for-the-badge) out of 75 spots
 
-### Step 2 — Zoom Registration
+### Zoom Link
 
-Register for the Zoom sessions. You will receive calendar invites and join links after registering.
-
-- **Day 1:** [ZOOM_REGISTRATION_URL_DAY1]
-- **Day 2:** [ZOOM_REGISTRATION_URL_DAY2]
-
-Both days use the same Zoom meeting. The links above will add the sessions to your calendar with reminders.
+Zoom join links will be emailed to all registered participants before the workshop.
 
 **Zoom accessibility notes:**
 - The Zoom client works well with NVDA, JAWS, and VoiceOver
-- We will have live captions enabled throughout
-- If you need a sign language interpreter or any other accommodation, note it on the sign-up form and we will arrange it
+- If you need a sign language interpreter or any other accommodation, note it in the registration form and we will arrange it
 
 ---
 
@@ -238,16 +238,10 @@ No. The workshop, all software, and all materials are free.
 
 ---
 
-## About the Facilitator
-
-[FACILITATOR_NAME] is the creator of Agent Forge and the architect of this workshop. [FACILITATOR_BIO]
-
----
-
 ## Questions?
 
-- Email: [CONTACT_EMAIL]
-- File an issue in the [workshop repository]([REPO_URL]) — yes, even before the workshop starts. That counts as practice.
+- Email: [support@bits-acb.org](mailto:support@bits-acb.org)
+- File an issue in the [workshop repository](https://github.com/BITS-ACB/git-going-with-github) — yes, even before the workshop starts. That counts as practice.
 - Join the [GitHub Accessibility Discussions](https://github.com/orgs/community/discussions/categories/accessibility) community
 
 ---

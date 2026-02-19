@@ -17,11 +17,11 @@
 | **Capacity** | 75 participants (limited seats) |
 | **Presented by** | [BITS — Blind Information Technology Solutions](http://www.joinbits.org) |
 
+### ![Registration Count](https://img.shields.io/github/issues/BITS-ACB/git-going-with-github/registration?label=%E2%9C%85%20Registered&color=brightgreen&style=for-the-badge) out of 75 spots
+
 ---
 
-> **Registration is open!** [**Register now**](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+) — sign up by filing a GitHub issue. It only takes a minute.
->
-> ![Registration Count](https://img.shields.io/github/issues/BITS-ACB/git-going-with-github/registration?label=Registered&color=brightgreen&style=for-the-badge) out of 75 spots
+> **Registration is open!** [**Register now**](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+%E2%80%94+March+2026) — sign up by filing a GitHub issue. It only takes a minute.
 
 ---
 
@@ -195,7 +195,7 @@ Our [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/
 
 Registration works through GitHub Issues — and that is intentional. Filing a GitHub issue is one of the first skills you will learn in this workshop. By registering this way, you are already practicing.
 
-> [**Click here to register**](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+) — it takes about one minute.
+> [**Click here to register**](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+%E2%80%94+March+2026) — it takes about one minute.
 
 You will need a free GitHub account to register (see prerequisites above). The form asks for:
 - Your first and last name

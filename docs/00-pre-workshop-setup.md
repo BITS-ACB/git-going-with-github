@@ -1,7 +1,9 @@
-# Pre-Workshop Setup
+# Pre-Workshop Setup — GIT Going with GitHub
 ## Everything You Need Before Day 1 Begins
 
-> **Please complete this guide at least one day before the workshop.** If you run into any issues, contact the event organizers so we can help — we want Day 1 to start with everyone ready to go, not troubleshooting.
+> **A [BITS (Blind Information Technology Solutions)](http://www.joinbits.org) workshop.**
+>
+> **Please complete this guide at least one day before the workshop.** If you run into any issues, email [support@bits-acb.org](mailto:support@bits-acb.org) so we can help — we want Day 1 to start with everyone ready to go, not troubleshooting.
 
 ---
 
@@ -759,9 +761,9 @@ We are not covering Git commands in this workshop. If you want to learn Git, the
 
 If you cannot complete any step in this guide before the workshop:
 
-1. **File an issue in this repository** — describe exactly what step you are on and what is not working
-2. **Join the GitHub Accessibility Discussions** — [github.com/orgs/community/discussions/categories/accessibility](https://github.com/orgs/community/discussions/categories/accessibility) — the community is helpful and welcoming
-3. **Contact the event organizers** — details provided in your registration confirmation
+1. **Email BITS support** — [support@bits-acb.org](mailto:support@bits-acb.org) — we will help you get set up
+2. **File an issue in this repository** — describe exactly what step you are on and what is not working
+3. **Join the GitHub Accessibility Discussions** — [github.com/orgs/community/discussions/categories/accessibility](https://github.com/orgs/community/discussions/categories/accessibility) — the community is helpful and welcoming
 
 You will not be left behind. Every setup issue we can solve before Day 1 means more time for learning on the day.
 

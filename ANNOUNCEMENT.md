@@ -19,6 +19,10 @@
 
 ---
 
+> **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://bits-acb.github.io/git-going-with-github/docs/00-pre-workshop-setup.html) before March 6. It walks you through every step — GitHub account, screen reader configuration, VS Code, and GitHub Copilot — with instructions for NVDA, JAWS, and VoiceOver. Get set up early so Day 1 starts with learning, not troubleshooting.
+
+---
+
 ## What Is This?
 
 This is a two-day, hands-on workshop where blind and low vision participants learn to navigate, contribute to, and build real open source projects on GitHub — using a screen reader, a keyboard, and nothing else.
@@ -126,7 +130,7 @@ All exercises work with any of these. Where keyboard commands differ, we provide
 
 ### Software to Install
 
-Install these before the workshop. Detailed, screen-reader-friendly installation instructions are in our [Pre-Workshop Setup Guide](docs/00-pre-workshop-setup.md).
+Install these before the workshop. Detailed, screen-reader-friendly installation instructions are in our [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/docs/00-pre-workshop-setup.html).
 
 1. **Git** — the version control system underneath GitHub
    - Windows: Download from [git-scm.com/download/win](https://git-scm.com/download/win) — run the installer with default options
@@ -171,7 +175,7 @@ If you do not have a GitHub account, create one before the workshop:
 2. Enable 2FA using an authenticator app, SMS, or a security key
 3. Save your recovery codes somewhere safe
 
-Our [Pre-Workshop Setup Guide](docs/00-pre-workshop-setup.md) walks through every one of these steps with detailed screen reader instructions for NVDA, JAWS, and VoiceOver.
+Our [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/docs/00-pre-workshop-setup.html) walks through every one of these steps with detailed screen reader instructions for NVDA, JAWS, and VoiceOver.
 
 ---
 

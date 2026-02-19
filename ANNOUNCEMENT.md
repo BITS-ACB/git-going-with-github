@@ -198,10 +198,13 @@ Registration works through GitHub Issues — and that is intentional. Filing a G
 **Note:** The issue title is pre-filled and required by GitHub. You do not need to change it — just fill out the form fields below it and submit.
 
 You will need a free GitHub account to register (see prerequisites above). The form asks for:
-- Your email address
-- Your GitHub username
-- Your experience level with GitHub
-- Any questions you have before the workshop
+- **First Name** (required) — your first name as you would like to be addressed during the workshop
+- **Last Name** (required)
+- **Email Address** (required) — we will use this to send you Zoom links and workshop materials before the event
+- **GitHub Username** (required) — the one that appears in your profile URL at github.com/your-username
+- **GitHub Proficiency Level** (required) — a dropdown from "Brand new" to "Experienced" so we can prepare the right level of support
+- **Primary Screen Reader** (optional) — which screen reader you primarily use (NVDA, JAWS, VoiceOver, or other)
+- **Questions or Accommodations** (optional) — anything we should know or arrange before the workshop
 
 Registered: <span id="registration-count-2" aria-live="polite">loading...</span> out of 75 spots
 

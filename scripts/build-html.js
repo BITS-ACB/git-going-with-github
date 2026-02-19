@@ -34,6 +34,7 @@ const htmlTemplate = (content, title, relativePath) => {
   const depth = relativePath.split('/').length - 1;
   const prefix = depth > 0 ? '../'.repeat(depth) : './';
   const isHome = relativePath === 'index.html';
+  const isRegister = relativePath === 'REGISTER.html';
   const siteName = 'GIT Going with GitHub';
   const pageTitle = isHome ? siteName : `${title} - ${siteName}`;
 
@@ -77,7 +78,7 @@ const htmlTemplate = (content, title, relativePath) => {
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
     <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="https://www.joinbits.org">joinbits.org</a></p>
   </footer>
-  ${isHome ? `<script>
+  ${(isHome || isRegister) ? `<script>
 (function() {
   var url = 'https://api.github.com/search/issues?q=repo:BITS-ACB/git-going-with-github+label:registration+is:issue+is:open';
   var xhr = new XMLHttpRequest();

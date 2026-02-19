@@ -10,7 +10,7 @@ The full workshop curriculum, lesson materials, and reference guides are current
 
 ### In the Meantime
 
-- [**Register for the workshop**](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+-+March+2026) - sign up by filing a GitHub issue
+- [**Register for the workshop**](https://bits-acb.github.io/git-going-with-github/REGISTER.html) - two steps: GitHub issue + Zoom registration
 - [**Join the Discussion Forum**](https://github.com/BITS-ACB/git-going-with-github/discussions) - ask questions, connect with fellow participants
 - [**Return to the home page**](https://bits-acb.github.io/git-going-with-github/)
 

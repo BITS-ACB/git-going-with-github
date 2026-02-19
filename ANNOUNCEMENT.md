@@ -1,6 +1,6 @@
 # GIT Going with GitHub
 
-[License: CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [View Site](https://bits-acb.github.io/git-going-with-github/) | [Full Curriculum](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) | [Discussion Forum](https://github.com/BITS-ACB/git-going-with-github/discussions) | [Register](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+-+March+2026)
+[License: CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [View Site](https://bits-acb.github.io/git-going-with-github/) | [Full Curriculum](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) | [Discussion Forum](https://github.com/BITS-ACB/git-going-with-github/discussions) | [Register](https://bits-acb.github.io/git-going-with-github/REGISTER.html)
 
 ## You Belong in Open Source. Let Us Show You the Door.
 
@@ -22,7 +22,7 @@ Sponsored by [BITS](https://www.joinbits.org) in partnership with [GitHub](https
 
 ---
 
-> **Registration is open!** [**Register now**](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+-+March+2026) - sign up by filing a GitHub issue. It only takes a minute.
+> **Registration is open!** [**Register now**](https://bits-acb.github.io/git-going-with-github/REGISTER.html) - registration takes two steps (GitHub issue + Zoom) and only a few minutes.
 
 ---
 
@@ -67,6 +67,7 @@ By the end of this workshop, you will have:
 - Filed real issues on a real GitHub repository
 - Opened, reviewed, and merged real pull requests
 - Your name permanently in the commit history of a public accessibility project
+- Hands-on instruction in basic [Visual Studio Code](https://code.visualstudio.com/) usage as it relates to GitHub - navigation, source control, extensions, and screen reader configuration
 - A working [VS Code](https://code.visualstudio.com/) setup with [GitHub Copilot](https://github.com/features/copilot) and six AI agents configured
 - The confidence to navigate any GitHub repository with your screen reader
 - A network of peers who understand the intersection of accessibility and open source
@@ -192,31 +193,15 @@ Our [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/
 
 ## Register
 
-### How to Sign Up
+Registration requires two steps. Both are required.
 
-Registration works through GitHub Issues - and that is intentional. Filing a GitHub issue is one of the first skills you will learn in this workshop. By registering this way, you are already practicing.
+> [**Go to the registration page**](https://bits-acb.github.io/git-going-with-github/REGISTER.html) to complete both steps - it only takes a few minutes.
 
-> [**Click here to register**](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+-+March+2026) - it takes about one minute.
+**Step 1** - File a GitHub issue with your name, email, and screen reader preference. This is intentional - filing an issue is one of the first skills you will learn in this workshop.
 
-**Note:** The issue title is pre-filled and required by GitHub. You do not need to change it - just fill out the form fields below it and submit.
-
-You will need a free GitHub account to register (see prerequisites above). The form asks for:
-- **First Name** (required) - your first name as you would like to be addressed during the workshop
-- **Last Name** (required)
-- **Email Address** (required) - we will use this to send you Zoom links and workshop materials before the event
-- **GitHub Username** (required) - the one that appears in your profile URL at github.com/your-username
-- **GitHub Proficiency Level** (required) - a dropdown from "Brand new" to "Experienced" so we can prepare the right level of support
-- **Primary Screen Reader** (optional) - which screen reader you primarily use (NVDA, JAWS, VoiceOver, or other)
-- **Questions or Accommodations** (optional) - anything we should know or arrange before the workshop
+**Step 2** - Register for the Zoom session so you receive the meeting link before the workshop.
 
 Registered: <span id="registration-count-2" aria-live="polite">loading...</span> out of 75 spots
-
-### Zoom Link
-
-Zoom join links will be emailed to all registered participants before the workshop.
-
-**Zoom accessibility notes:**
-- The [Zoom](https://zoom.us/) client works well with [NVDA](https://www.nvaccess.org/download/), [JAWS](https://www.freedomscientific.com/products/software/jaws/), and [VoiceOver](https://support.apple.com/guide/voiceover/welcome/mac)
 
 ---
 
@@ -275,6 +260,12 @@ Know someone who would benefit from this workshop? Share this page:
 The best way to make open source more accessible is to bring more people who use assistive technology into the room where it is built.
 
 Open source is not complete without you. Come build with us.
+
+---
+
+## Acknowledgments
+
+A sincere thank you to the [Visual Studio Code](https://code.visualstudio.com/) team for their continuous support of the blind and low vision community. It is through action that they empower and convert people from dreamers to creators. Thank you, Visual Studio Code team - and of course, [GitHub](https://github.com)!
 
 ---
 

@@ -11,7 +11,7 @@ License: CC BY 4.0 | [Site](https://bits-acb.github.io/git-going-with-github/) |
 | | |
 |---|---|
 | **Workshop site** | [bits-acb.github.io/git-going-with-github](https://bits-acb.github.io/git-going-with-github/) |
-| **Register** | [Sign up now](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+-+March+2026) (75 seats, free) |
+| **Register** | [Sign up now](https://bits-acb.github.io/git-going-with-github/REGISTER.html) (75 seats, free, two steps) |
 | **Discussions** | [Join the conversation](https://github.com/BITS-ACB/git-going-with-github/discussions) |
 | **Email** | [support@bits-acb.org](mailto:support@bits-acb.org) |
 | **Dates** | March 6-7, 2026 · 12-8 PM Eastern |

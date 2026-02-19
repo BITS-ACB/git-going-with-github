@@ -67,4 +67,11 @@ Once you have completed both steps:
 3. Complete the [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) before March 6 - it covers GitHub account setup, screen reader configuration, VS Code, and GitHub Copilot
 4. Questions? Email [support@bits-acb.org](mailto:support@bits-acb.org)
 
-[Back to Home](https://bits-acb.github.io/git-going-with-github/)
+---
+
+## While You Wait
+
+- [**Join the Discussion Forum**](https://github.com/BITS-ACB/git-going-with-github/discussions) - introduce yourself, ask questions, and connect with fellow participants before Day 1
+- [**Pre-Workshop Setup Guide**](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) - get your GitHub account, screen reader, VS Code, and GitHub Copilot ready ahead of time
+- [**Workshop Home Page**](https://bits-acb.github.io/git-going-with-github/) - full agenda, prerequisites, and everything you need to know
+- **Email:** [support@bits-acb.org](mailto:support@bits-acb.org) - we are here to help with anything

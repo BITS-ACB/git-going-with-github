@@ -15,3 +15,6 @@ contact_links:
   - name: Workshop Documentation
     url: https://bits-acb.github.io/git-going-with-github/
     about: Full workshop guide — start here if you are new to this repository.
+  - name: Discussion Forum — Questions, Introductions, Ideas
+    url: https://github.com/BITS-ACB/git-going-with-github/discussions
+    about: Ask questions, connect with other participants, and share ideas before, during, and after the workshop.

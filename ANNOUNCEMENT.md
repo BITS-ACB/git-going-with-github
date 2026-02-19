@@ -1,21 +1,31 @@
 # GIT Going with GitHub
 
+![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg?style=flat-square)
+![GitHub Pages](https://img.shields.io/github/actions/workflow/status/BITS-ACB/git-going-with-github/deploy-pages.yml?label=Site&style=flat-square)
+![Registration Count](https://img.shields.io/github/issues/BITS-ACB/git-going-with-github/registration?label=Registered&color=brightgreen&style=flat-square)
+
 ## You Belong in Open Source. Let Us Show You the Door.
 
 ### A Two-Day Workshop by [BITS (Blind Information Technology Solutions)](http://www.joinbits.org)
 
-**Dates:** Friday, March 6, 2026 and Saturday, March 7, 2026
-**Time:** 12:00 PM — 8:00 PM Eastern (both days)
-**Location:** Online via Zoom
-**Cost:** Free
-**Capacity:** 75 participants (limited seats)
-**Presented by:** [BITS — Blind Information Technology Solutions](http://www.joinbits.org)
+| | |
+|---|---|
+| **Dates** | Friday, March 6 & Saturday, March 7, 2026 |
+| **Time** | 12:00 PM — 8:00 PM Eastern (both days) |
+| **Location** | Online via Zoom |
+| **Cost** | Free |
+| **Capacity** | 75 participants (limited seats) |
+| **Presented by** | [BITS — Blind Information Technology Solutions](http://www.joinbits.org) |
 
 ---
 
 > **Registration is open!** [**Register now**](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+) — sign up by filing a GitHub issue. It only takes a minute.
 >
 > ![Registration Count](https://img.shields.io/github/issues/BITS-ACB/git-going-with-github/registration?label=Registered&color=brightgreen&style=for-the-badge) out of 75 spots
+
+---
+
+> **📣 Join the conversation!** Have a question before the workshop? Want to connect with other participants? Head to our [**Discussion Forum**](https://github.com/BITS-ACB/git-going-with-github/discussions) — introduce yourself, ask questions, and start building your network before Day 1.
 
 ---
 
@@ -244,15 +254,21 @@ No. The workshop, all software, and all materials are free.
 
 ## Questions?
 
-- Email: [support@bits-acb.org](mailto:support@bits-acb.org)
-- File an issue in the [workshop repository](https://github.com/BITS-ACB/git-going-with-github) — yes, even before the workshop starts. That counts as practice.
-- Join the [GitHub Accessibility Discussions](https://github.com/orgs/community/discussions/categories/accessibility) community
+- **Discussion Forum:** [Join the conversation](https://github.com/BITS-ACB/git-going-with-github/discussions) — ask questions, connect with fellow participants, and share ideas
+- **Email:** [support@bits-acb.org](mailto:support@bits-acb.org)
+- **File an issue:** [workshop repository](https://github.com/BITS-ACB/git-going-with-github/issues) — yes, even before the workshop starts. That counts as practice.
+- **Community:** [GitHub Accessibility Discussions](https://github.com/orgs/community/discussions/categories/accessibility)
 
 ---
 
 ## Share This Event
 
-Know someone who would benefit from this workshop? Forward this announcement. The best way to make open source more accessible is to bring more people who use assistive technology into the room where it is built.
+Know someone who would benefit from this workshop? Share this page:
+
+**Workshop site:** [bits-acb.github.io/git-going-with-github](https://bits-acb.github.io/git-going-with-github/)
+**GitHub repo:** [github.com/BITS-ACB/git-going-with-github](https://github.com/BITS-ACB/git-going-with-github)
+
+The best way to make open source more accessible is to bring more people who use assistive technology into the room where it is built.
 
 Open source is not complete without you. Come build with us.
 

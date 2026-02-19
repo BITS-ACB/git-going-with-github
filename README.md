@@ -1,9 +1,23 @@
 # GIT Going with GitHub
+
+![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg?style=flat-square)
+![GitHub Pages](https://img.shields.io/github/actions/workflow/status/BITS-ACB/git-going-with-github/deploy-pages.yml?label=Site&style=flat-square)
+![Registration Count](https://img.shields.io/github/issues/BITS-ACB/git-going-with-github/registration?label=Registered&color=brightgreen&style=flat-square)
+![GitHub Discussions](https://img.shields.io/github/discussions/BITS-ACB/git-going-with-github?label=Discussions&style=flat-square&color=blueviolet)
+
 ## A Workshop by [BITS (Blind Information Technology Solutions)](http://www.joinbits.org)
 
 > **Welcome.** This repository is your complete guide and companion for the two-day GIT Going with GitHub workshop. Every document here is written to be read with or without a screen reader. All steps are keyboard-accessible. You belong here.
 >
 > **About BITS:** [Blind Information Technology Solutions](http://www.joinbits.org) is a community of blind and low vision technology professionals. Visit [joinbits.org](http://www.joinbits.org) to learn more.
+
+| | |
+|---|---|
+| 🌐 **Workshop site** | [bits-acb.github.io/git-going-with-github](https://bits-acb.github.io/git-going-with-github/) |
+| 📝 **Register** | [Sign up now](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+) (75 seats, free) |
+| 💬 **Discussions** | [Join the conversation](https://github.com/BITS-ACB/git-going-with-github/discussions) |
+| 📧 **Email** | [support@bits-acb.org](mailto:support@bits-acb.org) |
+| 📅 **Dates** | March 6–7, 2026 · 12–8 PM Eastern |
 
 ---
 
@@ -280,9 +294,10 @@ And by the end of Day 2, you will not just be a learner. You will be a product m
 
 ## Questions Before the Event?
 
-- Join the [GitHub Accessibility Discussions](https://github.com/orgs/community/discussions/categories/accessibility) on GitHub
-- File an issue in this repository if something in these docs is unclear
-- Contact the event organizers (details provided separately)
+- **Discussion Forum:** [Join the conversation](https://github.com/BITS-ACB/git-going-with-github/discussions) — ask questions, connect with fellow participants, share ideas
+- **Email:** [support@bits-acb.org](mailto:support@bits-acb.org)
+- **File an issue** in this repository if something in these docs is unclear
+- **Community:** [GitHub Accessibility Discussions](https://github.com/orgs/community/discussions/categories/accessibility)
 
 ---
 
@@ -293,4 +308,4 @@ All workshop documentation is licensed under [CC BY 4.0](https://creativecommons
 ---
 
 *Last reviewed: February 2026*
-*Built for the Open Source Assistive Technology Hackathon.*
+*A [BITS (Blind Information Technology Solutions)](http://www.joinbits.org) initiative.*

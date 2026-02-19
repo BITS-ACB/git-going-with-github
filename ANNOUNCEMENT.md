@@ -1,6 +1,6 @@
 # GIT Going with GitHub
 
-[License: CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [View Site](https://bits-acb.github.io/git-going-with-github/) | [Full Curriculum](https://bits-acb.github.io/git-going-with-github/docs/course-guide.html) | [Discussion Forum](https://github.com/BITS-ACB/git-going-with-github/discussions) | [Register](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+%E2%80%94+March+2026)
+[License: CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [View Site](https://bits-acb.github.io/git-going-with-github/) | [Full Curriculum](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) | [Discussion Forum](https://github.com/BITS-ACB/git-going-with-github/discussions) | [Register](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+%E2%80%94+March+2026)
 
 ## You Belong in Open Source. Let Us Show You the Door.
 
@@ -27,7 +27,7 @@
 
 ---
 
-> **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://bits-acb.github.io/git-going-with-github/docs/00-pre-workshop-setup.html) before March 6. It walks you through every step — GitHub account, screen reader configuration, VS Code, and GitHub Copilot — with instructions for NVDA, JAWS, and VoiceOver. Get set up early so Day 1 starts with learning, not troubleshooting.
+> **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) before March 6. It walks you through every step — GitHub account, screen reader configuration, VS Code, and GitHub Copilot — with instructions for NVDA, JAWS, and VoiceOver. Get set up early so Day 1 starts with learning, not troubleshooting.
 
 ---
 
@@ -74,36 +74,36 @@ These are not hypothetical outcomes. Every participant ships something real.
 
 ## The Two-Day Journey
 
-### [Day 1 — GitHub Foundations (Browser + Screen Reader)](https://bits-acb.github.io/git-going-with-github/DAY1_AGENDA.html)
+### [Day 1 — GitHub Foundations (Browser + Screen Reader)](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)
 
 Your screen reader and keyboard are the only tools you need. Everything happens in the browser.
 
 | Block | What Happens |
 |-------|-------------|
-| **[Welcome and Setup Check](https://bits-acb.github.io/git-going-with-github/docs/00-pre-workshop-setup.html)** | Introductions, verify everyone's screen reader and browser are ready |
-| **[Screen Reader Orientation to GitHub](https://bits-acb.github.io/git-going-with-github/docs/01-understanding-github-web-structure.html)** | Navigate GitHub pages using headings, landmarks, and keyboard shortcuts |
-| **[Navigating Repositories](https://bits-acb.github.io/git-going-with-github/docs/02-navigating-repositories.html)** | Explore a real repository — files, branches, commits, contributors |
-| **[Working with Issues](https://bits-acb.github.io/git-going-with-github/docs/04-working-with-issues.html)** | Search, file, comment on, and triage issues using [Markdown](https://bits-acb.github.io/git-going-with-github/docs/appendix-e-github-flavored-markdown.html) |
-| **[Understanding Pull Requests](https://bits-acb.github.io/git-going-with-github/docs/05-working-with-pull-requests.html)** | Read diffs, write inline review comments, approve and merge |
-| **[Your First Contribution Sprint](https://bits-acb.github.io/git-going-with-github/learning-room/)** | Make a real contribution to the shared practice repository — with automated bot feedback and human peer review |
-| **[Community and Culture](https://bits-acb.github.io/git-going-with-github/docs/07-culture-etiquette.html)** | Open source etiquette, constructive feedback, [managing notifications](https://bits-acb.github.io/git-going-with-github/docs/09-notifications.html), organizing with [labels](https://bits-acb.github.io/git-going-with-github/docs/08-labels-milestones-projects.html) |
+| **[Welcome and Setup Check](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)** | Introductions, verify everyone's screen reader and browser are ready |
+| **[Screen Reader Orientation to GitHub](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)** | Navigate GitHub pages using headings, landmarks, and keyboard shortcuts |
+| **[Navigating Repositories](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)** | Explore a real repository — files, branches, commits, contributors |
+| **[Working with Issues](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)** | Search, file, comment on, and triage issues using [Markdown](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) |
+| **[Understanding Pull Requests](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)** | Read diffs, write inline review comments, approve and merge |
+| **[Your First Contribution Sprint](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)** | Make a real contribution to the shared practice repository — with automated bot feedback and human peer review |
+| **[Community and Culture](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)** | Open source etiquette, constructive feedback, [managing notifications](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html), organizing with [labels](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) |
 
 You will also work through [GitHub Skills](https://skills.github.com/) modules — interactive, bot-guided courses that run in your own GitHub account. A bot named Mona creates real issues and pull requests for you, verifies your actions, and guides you through each step. It is the same mechanism used by real open source projects.
 
-### [Day 2 — From Contributor to Product Maker (VS Code + Agent Forge)](https://bits-acb.github.io/git-going-with-github/DAY2_AGENDA.html)
+### [Day 2 — From Contributor to Product Maker (VS Code + Agent Forge)](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)
 
 You earned the tools. Now you wield them.
 
 | Block | What Happens |
 |-------|-------------|
 | **Day 1 Debrief** | Celebrate what shipped, surface questions, set your Day 2 goal |
-| **[VS Code Setup](https://bits-acb.github.io/git-going-with-github/docs/10-vscode-basics.html)** | Screen reader mode, workspace navigation, the bridge from browser to editor |
-| **[Deep Contribution with Copilot](https://bits-acb.github.io/git-going-with-github/docs/13-github-copilot.html)** | Use [GitHub Copilot](https://github.com/features/copilot) as a writing partner — draft improvements, review your own work, commit with confidence |
-| **[Activate the Agents](https://bits-acb.github.io/git-going-with-github/docs/16-agent-forge.html)** | Run six AI agents that amplify every skill you built on Day 1 — daily briefings, issue triage, PR review, accessibility monitoring |
-| **[Ship Your Contribution](https://bits-acb.github.io/git-going-with-github/docs/12-github-pull-requests-extension.html)** | Open a real pull request to a live public repository. Your facilitator reviews and merges it. |
+| **[VS Code Setup](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)** | Screen reader mode, workspace navigation, the bridge from browser to editor |
+| **[Deep Contribution with Copilot](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)** | Use [GitHub Copilot](https://github.com/features/copilot) as a writing partner — draft improvements, review your own work, commit with confidence |
+| **[Activate the Agents](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)** | Run six AI agents that amplify every skill you built on Day 1 — daily briefings, issue triage, PR review, accessibility monitoring |
+| **[Ship Your Contribution](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)** | Open a real pull request to a live public repository. Your facilitator reviews and merges it. |
 | **Design the Future** | Collaborative speccing session — what should the next version of these tools look like? Your ideas, on the record. |
 
-The central project is **[Agent Forge](https://bits-acb.github.io/git-going-with-github/docs/16-agent-forge.html)** — a real, MIT-licensed open source project with six [GitHub Copilot](https://github.com/features/copilot) agents and 28 slash commands for accessible repository management. You will fork it, understand it, improve it, and personalize it.
+The central project is **[Agent Forge](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)** — a real, MIT-licensed open source project with six [GitHub Copilot](https://github.com/features/copilot) agents and 28 slash commands for accessible repository management. You will fork it, understand it, improve it, and personalize it.
 
 ---
 
@@ -138,7 +138,7 @@ All exercises work with any of these. Where keyboard commands differ, we provide
 
 ### Software to Install
 
-Install these before the workshop. Detailed, screen-reader-friendly installation instructions are in our [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/docs/00-pre-workshop-setup.html).
+Install these before the workshop. Detailed, screen-reader-friendly installation instructions are in our [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html).
 
 1. **Git** — the version control system underneath GitHub
    - Windows: Download from [git-scm.com/download/win](https://git-scm.com/download/win) — run the installer with default options
@@ -183,7 +183,7 @@ If you do not have a GitHub account, create one before the workshop:
 2. Enable 2FA using an authenticator app, SMS, or a security key
 3. Save your recovery codes somewhere safe
 
-Our [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/docs/00-pre-workshop-setup.html) walks through every one of these steps with detailed screen reader instructions for NVDA, JAWS, and VoiceOver.
+Our [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) walks through every one of these steps with detailed screen reader instructions for NVDA, JAWS, and VoiceOver.
 
 ---
 
@@ -195,8 +195,9 @@ Registration works through GitHub Issues — and that is intentional. Filing a G
 
 > [**Click here to register**](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+%E2%80%94+March+2026) — it takes about one minute.
 
+**Note:** The issue title is pre-filled and required by GitHub. You do not need to change it — just fill out the form fields below it and submit.
+
 You will need a free GitHub account to register (see prerequisites above). The form asks for:
-- Your first and last name
 - Your email address
 - Your GitHub username
 - Your experience level with GitHub
@@ -222,7 +223,7 @@ Every step in this workshop is written three ways — for NVDA, for JAWS, and fo
 
 And the goal is not just "learn GitHub." The goal is to move you from **user** to **maker**. From someone who encounters accessibility barriers to someone who files the issue, proposes the fix, reviews the pull request, and ships the solution. That arc — from observer to contributor to product maker — is what the two days are designed to deliver.
 
-The curriculum includes [17 chapters](https://bits-acb.github.io/git-going-with-github/docs/course-guide.html), [25 reference appendices](https://bits-acb.github.io/git-going-with-github/docs/appendix-a-glossary.html), 24 hands-on exercises, a shared [practice repository](https://bits-acb.github.io/git-going-with-github/learning-room/) with automated feedback bots, three [GitHub Skills](https://skills.github.com/) modules with a bot that verifies your work in real time, and a live open source project where your contributions are merged on Day 2.
+The curriculum includes [17 chapters](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html), [25 reference appendices](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html), 24 hands-on exercises, a shared [practice repository](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) with automated feedback bots, three [GitHub Skills](https://skills.github.com/) modules with a bot that verifies your work in real time, and a live open source project where your contributions are merged on Day 2.
 
 All of it is open source. All of it is yours to keep, fork, and share.
 

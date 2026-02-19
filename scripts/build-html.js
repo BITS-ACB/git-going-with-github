@@ -35,7 +35,7 @@ const htmlTemplate = (content, title, relativePath) => {
   const prefix = depth > 0 ? '../'.repeat(depth) : './';
   const isHome = relativePath === 'index.html';
   const siteName = 'GIT Going with GitHub';
-  const pageTitle = isHome ? `${siteName} - BITS` : `${title} - ${siteName}`;
+  const pageTitle = isHome ? siteName : `${title} - ${siteName}`;
 
   return `<!DOCTYPE html>
 <html lang="en">

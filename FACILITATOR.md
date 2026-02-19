@@ -22,7 +22,7 @@ learning-room/                  ← workshop repository root
 │   │   ├── accessibility-bug.yml ← accessibility bug report YAML form
 │   │   └── feature-request.yml ← feature/improvement request YAML form
 │   ├── PULL_REQUEST_TEMPLATE.md ← PR template with accessibility checklist
-│   ├── agents/                 ← Agent Forge — six Copilot agents
+│   ├── agents/                 ← Agent Forge - six Copilot agents
 │   │   ├── daily-briefing.agent.md
 │   │   ├── issue-tracker.agent.md
 │   │   ├── pr-review.agent.md
@@ -37,8 +37,8 @@ learning-room/                  ← workshop repository root
 │       ├── explain-code.prompt.md
 │       ├── review-pr.prompt.md
 │       ├── triage.prompt.md
-│       └── ... (22 more — see docs/appendix-w-agent-forge-reference.md)
-├── docs/                       ← full workshop curriculum (16 chapters + appendices A–X)
+│       └── ... (22 more - see docs/appendix-w-agent-forge-reference.md)
+├── docs/                       ← full workshop curriculum (16 chapters + appendices A-X)
 │   ├── 00-pre-workshop-setup.md
 │   ├── 01-understanding-github-web-structure.md
 │   ├── 02-navigating-repositories.md
@@ -58,7 +58,7 @@ learning-room/                  ← workshop repository root
 │   ├── 16-agent-forge.md
 │   ├── appendix-a-glossary.md              ← every term explained
 │   ├── appendix-b-screen-reader-cheatsheet.md ← full shortcut reference
-│   ├── appendix-c through appendix-x      ← deep-dive references (C–X)
+│   ├── appendix-c through appendix-x      ← deep-dive references (C-X)
 │   └── (see appendix-u-resources.md for complete file listing)
 └── learning-room/              ← practice content (contribution sprint targets)
     ├── README.md
@@ -76,7 +76,7 @@ learning-room/                  ← workshop repository root
 
 1. Create a GitHub org (recommended) or use your personal account
 2. Create a new repository named `learning-room` (or your preferred name)
-3. Make it **Public** — participants need read access without being org members
+3. Make it **Public** - participants need read access without being org members
 4. Push the contents of this repository to it:
    ```
    git remote add origin https://github.com/[org]/learning-room
@@ -138,7 +138,7 @@ Create one issue per participant, assigned to them. Each issue points to a speci
 ```markdown
 ## What to Fix
 
-[Specific description of the problem — be precise enough that the participant knows exactly
+[Specific description of the problem - be precise enough that the participant knows exactly
 what line or section to look at.]
 
 ## File to Edit
@@ -160,14 +160,14 @@ See [Working with Issues](docs/04-working-with-issues.md) and the [Day 1 Agenda]
 
 | File | Problem to fix | Label |
 |------|---------------|-------|
-| `keyboard-shortcuts.md` | Heading jumps from `#` (h1) to `####` (h4) for NVDA section sub-headings — should be `##` and `###` | `accessibility`, `good first issue` |
+| `keyboard-shortcuts.md` | Heading jumps from `#` (h1) to `####` (h4) for NVDA section sub-headings - should be `##` and `###` | `accessibility`, `good first issue` |
 | `keyboard-shortcuts.md` | The Accessibility Settings link is broken: `htps://` has a typo | `bug`, `good first issue` |
-| `setup-guide.md` | Step 2 link has a typo: `htps://github.com/settings/accessibility` — missing one `t` | `bug`, `good first issue` |
-| `setup-guide.md` | "Note: Links marked [TODO]" callout at the bottom — replace with actual links to the workshop repo | `documentation`, `good first issue` |
+| `setup-guide.md` | Step 2 link has a typo: `htps://github.com/settings/accessibility` - missing one `t` | `bug`, `good first issue` |
+| `setup-guide.md` | "Note: Links marked [TODO]" callout at the bottom - replace with actual links to the workshop repo | `documentation`, `good first issue` |
 | `welcome.md` | [TODO] paragraph about who can contribute (line 22) | `documentation`, `good first issue` |
 | `welcome.md` | [TODO] paragraph about reading an issue to decide if it's right for you (line 40) | `documentation`, `good first issue` |
 | `welcome.md` | [TODO] sentence about what a merged PR means for GitHub profile (line 52) | `documentation`, `good first issue` |
-| `welcome.md` | `Last reviewed: [DATE]` placeholder at the bottom — replace with today's date | `documentation`, `good first issue` |
+| `welcome.md` | `Last reviewed: [DATE]` placeholder at the bottom - replace with today's date | `documentation`, `good first issue` |
 
 Create extras for any additional participants.
 
@@ -197,14 +197,14 @@ There is no wrong answer. This is practice, and it is also a real community.
 
 ### Create the Pre-Seeded PR
 
-Create a PR from a `practice-review` branch with a meaningful change to `learning-room/docs/welcome.md` — add one paragraph, change one heading, correct one small issue. This PR exists so participants can practice reviewing in Block 4 before the contribution sprint.
+Create a PR from a `practice-review` branch with a meaningful change to `learning-room/docs/welcome.md` - add one paragraph, change one heading, correct one small issue. This PR exists so participants can practice reviewing in Block 4 before the contribution sprint.
 
 PR title: `Expand the "What Is Open Source?" section`
 Description: Use the PR template. Fill in all fields.
 
 ---
 
-## Day 1 — Pre-Session Checklist
+## Day 1 - Pre-Session Checklist
 
 Run through this 30 minutes before participants arrive:
 
@@ -213,26 +213,26 @@ Run through this 30 minutes before participants arrive:
 - [ ] Pre-seeded practice PR open on `practice-review` branch
 - [ ] `learning-room` milestone created and linked to all participant issues
 - [ ] All labels created
-- [ ] `day1-practice` branch created (differs from `main` by 2–3 files — for Branch Navigation exercise in Block 2)
+- [ ] `day1-practice` branch created (differs from `main` by 2-3 files - for Branch Navigation exercise in Block 2)
 - [ ] Repository is public and accessible without login
 - [ ] GitHub Skills modules tested (go through the first 2 steps of each to verify Mona responds)
 
 ### GitHub Skills Pre-Test (Important)
 
 Test each module at least 3 days before the workshop:
-1. [Introduction to GitHub](https://github.com/skills/introduction-to-github) — complete Steps 1–3 in a test account
-2. [Communicate Using Markdown](https://github.com/skills/communicate-using-markdown) — start and verify Mona creates the first issue
-3. [Review Pull Requests](https://github.com/skills/review-pull-requests) — start and verify Mona creates the practice PR
+1. [Introduction to GitHub](https://github.com/skills/introduction-to-github) - complete Steps 1-3 in a test account
+2. [Communicate Using Markdown](https://github.com/skills/communicate-using-markdown) - start and verify Mona creates the first issue
+3. [Review Pull Requests](https://github.com/skills/review-pull-requests) - start and verify Mona creates the practice PR
 
 **Note:** GitHub Skills modules occasionally have delayed Mona responses. If Mona does not respond within 2 minutes:
 1. Check that the repo was created as **Public** (Mona requires this on the free tier)
-2. Navigate to the Actions tab of the student's new repo — confirm a workflow run is listed
-3. If the workflow failed: click it → read the error → the most common cause is a rate limit (wait 1–2 minutes and re-trigger by creating another commit)
+2. Navigate to the Actions tab of the student's new repo - confirm a workflow run is listed
+3. If the workflow failed: click it → read the error → the most common cause is a rate limit (wait 1-2 minutes and re-trigger by creating another commit)
 4. Have backup screenshots of Mona's expected responses ready for demo purposes
 
 ---
 
-## Day 2 — Pre-Session Checklist
+## Day 2 - Pre-Session Checklist
 
 - [ ] VS Code installed on any shared/demo machine
 - [ ] GitHub Copilot Chat extension installed and authenticated
@@ -243,15 +243,15 @@ Test each module at least 3 days before the workshop:
 
 ---
 
-## GitHub Skills — Facilitator Script
+## GitHub Skills - Facilitator Script
 
 ### Block 1: Introducing Introduction to GitHub
 
-> *"Before we explore the learning-room repo, I want you to do something first. We're going to navigate to a GitHub Skills module — this is an interactive learning course built into GitHub itself. When you activate it, GitHub creates a copy of the course repository in your own account. Then a bot called Mona starts guiding you through steps — and it responds to real GitHub actions that you take."*
+> *"Before we explore the learning-room repo, I want you to do something first. We're going to navigate to a GitHub Skills module - this is an interactive learning course built into GitHub itself. When you activate it, GitHub creates a copy of the course repository in your own account. Then a bot called Mona starts guiding you through steps - and it responds to real GitHub actions that you take."*
 
 Walk through the setup together. Wait until everyone sees Mona's Issue #1 before continuing.
 
-> *"Look at your repositories list. You now own a repository on GitHub. Mona is waiting inside it. Keep that tab open — we'll come back to it throughout the day."*
+> *"Look at your repositories list. You now own a repository on GitHub. Mona is waiting inside it. Keep that tab open - we'll come back to it throughout the day."*
 
 ### Block 3: Mona Responds to the PR
 
@@ -261,7 +261,7 @@ When participants create their PR and Mona responds:
 
 Wait a moment.
 
-> *"What just happened is exactly how real open source bots work. Dependabot, GitHub Actions CI, automated labelers — they all watch for GitHub events and respond automatically. You just experienced that for the first time on your own repository."*
+> *"What just happened is exactly how real open source bots work. Dependabot, GitHub Actions CI, automated labelers - they all watch for GitHub events and respond automatically. You just experienced that for the first time on your own repository."*
 
 ### Wrap-Up: Completion Certificates
 
@@ -341,7 +341,7 @@ The Learning Room includes comprehensive automation that provides instant feedba
 
 **Introducing the Bot (Day 1, Block 5)**
 
-> *"When you open your PR, you'll see a comment from a bot within about 30 seconds. This bot is not grading you — it's teaching you. Read its feedback carefully. It will tell you about accessibility issues, link you to resources, and celebrate things you did well."*
+> *"When you open your PR, you'll see a comment from a bot within about 30 seconds. This bot is not grading you - it's teaching you. Read its feedback carefully. It will tell you about accessibility issues, link you to resources, and celebrate things you did well."*
 
 Walk through a sample bot comment:
 - Required checks (must pass)
@@ -349,7 +349,7 @@ Walk through a sample bot comment:
 - Accessibility analysis (detailed feedback with fixes)
 - Learning resources (relevant documentation links)
 
-> *"The bot is consistent and instant, but it's not perfect. If you disagree with its feedback, comment on your PR explaining why. Always request human review — peer review teaches things the bot cannot."*
+> *"The bot is consistent and instant, but it's not perfect. If you disagree with its feedback, comment on your PR explaining why. Always request human review - peer review teaches things the bot cannot."*
 
 **Monitoring Bot Behavior**
 
@@ -361,7 +361,7 @@ Watch for:
 **Overriding Bot Checks**
 
 If bot incorrectly flags something:
-1. Facilitator comments: "Bot feedback incorrect here — [explanation]"
+1. Facilitator comments: "Bot feedback incorrect here - [explanation]"
 2. Approve PR despite bot warning
 3. File issue to improve validation script later
 
@@ -490,12 +490,12 @@ Use feedback to improve validation scripts, messages, and workflows for next coh
 
 ## Accessibility Notes for Facilitators
 
-- Deliver all verbal instructions slowly — participants are simultaneously navigating and listening
+- Deliver all verbal instructions slowly - participants are simultaneously navigating and listening
 - When demonstrating on screen, describe what you are doing out loud: "I am pressing Tab three times to reach the Issues tab, then pressing Enter"
 - Pause after introducing each new concept before moving to the next
-- When a participant is stuck: ask "what does your screen reader say right now?" before any other question — this locates them precisely
+- When a participant is stuck: ask "what does your screen reader say right now?" before any other question - this locates them precisely
 - Respect different reading speeds. Some participants' screen readers read faster, some slower. Build buffer time into each activity.
-- If the room has mixed screen reader experience: pair advanced and new users during the contribution sprint — code review is a natural collaboration opportunity
+- If the room has mixed screen reader experience: pair advanced and new users during the contribution sprint - code review is a natural collaboration opportunity
 - **Bot accessibility:** Automation comments are standard GitHub comments, fully accessible with screen readers. Bot uses clear headings, lists, and links for easy navigation.
 
 ---

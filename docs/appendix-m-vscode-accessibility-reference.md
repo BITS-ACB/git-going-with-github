@@ -10,8 +10,8 @@
 ## Table of Contents
 
 1. [Complete Accessibility Settings Reference](#1-complete-accessibility-settings-reference)
-2. [Audio Cues — All Options](#2-audio-cues--all-options)
-3. [Accessible Diff Viewer — Complete Guide](#3-accessible-diff-viewer--complete-guide)
+2. [Audio Cues - All Options](#2-audio-cues--all-options)
+3. [Accessible Diff Viewer - Complete Guide](#3-accessible-diff-viewer--complete-guide)
 4. [Screen Reader-Specific Configurations](#4-screen-reader-specific-configurations)
 5. [Complete Keyboard Shortcuts](#5-complete-keyboard-shortcuts)
 6. [Accessibility Signals Types and Customization](#6-accessibility-signals-types-and-customization)
@@ -79,7 +79,7 @@ All settings can be accessed via Settings UI (`Ctrl+,`) or by editing `settings.
 
 ---
 
-## 2. Audio Cues — All Options
+## 2. Audio Cues - All Options
 
 Audio cues provide non-verbal feedback through sound. Each cue can be configured independently.
 
@@ -151,7 +151,7 @@ Audio cues provide non-verbal feedback through sound. Each cue can be configured
 
 ---
 
-## 3. Accessible Diff Viewer — Complete Guide
+## 3. Accessible Diff Viewer - Complete Guide
 
 The Accessible Diff Viewer presents file diffs as a structured, line-by-line list instead of a visual side-by-side view.
 
@@ -232,7 +232,7 @@ The diff shows 3 unchanged lines before and after each change for context. These
 **Example:**
 
 ```
-Hunk 1 of 3 — lines 42-48
+Hunk 1 of 3 - lines 42-48
 
   Unchanged: ## Screen Reader Setup
   Unchanged:
@@ -289,8 +289,8 @@ The unchanged lines help you understand where in the file the change occurred.
    - "Announce candidates during IME text composition": **Checked**
 
 **NVDA add-ons for VS Code:**
-- **Focus Highlight** — shows focus location visually (helpful for sighted trainers)
-- **IndentNav** — navigate by indentation level (useful for Python, YAML)
+- **Focus Highlight** - shows focus location visually (helpful for sighted trainers)
+- **IndentNav** - navigate by indentation level (useful for Python, YAML)
 
 **VS Code-specific NVDA commands:**
 
@@ -384,7 +384,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 
 ## 5. Complete Keyboard Shortcuts
 
-> For screen reader navigation shortcuts when using GitHub in a browser (NVDA, JAWS, VoiceOver), see [Appendix B — Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md).
+> For screen reader navigation shortcuts when using GitHub in a browser (NVDA, JAWS, VoiceOver), see [Appendix B - Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md).
 
 ### Global Navigation
 
@@ -411,7 +411,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 | Run and Debug | `Ctrl+Shift+D` | `Cmd+Shift+D` |
 | Extensions | `Ctrl+Shift+X` | `Cmd+Shift+X` |
 
-### Editor — File Operations
+### Editor - File Operations
 
 | Action | Windows/Linux | macOS |
 |--------|---------------|-------|
@@ -428,7 +428,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 | Focus Second Editor | `Ctrl+2` | `Cmd+2` |
 | Split Editor | `Ctrl+\` | `Cmd+\` |
 
-### Editor — Navigation
+### Editor - Navigation
 
 | Action | Windows/Linux | macOS |
 |--------|---------------|-------|
@@ -448,7 +448,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 | Expand Selection | `Shift+Alt+Right` | `Shift+Option+Right` |
 | Shrink Selection | `Shift+Alt+Left` | `Shift+Option+Left` |
 
-### Editor — Editing
+### Editor - Editing
 
 | Action | Windows/Linux | macOS |
 |--------|---------------|-------|
@@ -470,7 +470,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 | Format Document | `Shift+Alt+F` | `Shift+Option+F` |
 | Format Selection | `Ctrl+K Ctrl+F` | `Cmd+K Cmd+F` |
 
-### Editor — Find and Replace
+### Editor - Find and Replace
 
 | Action | Windows/Linux | macOS |
 |--------|---------------|-------|
@@ -484,7 +484,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 | Toggle Whole Word | `Alt+W` | `Option+W` |
 | Toggle Regex | `Alt+R` | `Option+R` |
 
-### Editor — Multi-Cursor
+### Editor - Multi-Cursor
 
 | Action | Windows/Linux | macOS |
 |--------|---------------|-------|
@@ -598,10 +598,10 @@ Control when and how often announcements occur:
 
 When multiple signals occur simultaneously, VS Code prioritizes them:
 
-1. **Errors** (highest priority) — always announced
-2. **Warnings** — announced after errors
-3. **Completions** — announced if no errors/warnings
-4. **Focus changes** — announced last
+1. **Errors** (highest priority) - always announced
+2. **Warnings** - announced after errors
+3. **Completions** - announced if no errors/warnings
+4. **Focus changes** - announced last
 
 This prevents overlapping announcements.
 

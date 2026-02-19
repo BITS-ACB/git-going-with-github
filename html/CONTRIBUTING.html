@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GIT Going with GitHub — A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
-  <title>Contributing to This Workshop Repository — GIT Going with GitHub</title>
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
+  <title>Contributing to This Workshop Repository - GIT Going with GitHub</title>
   <link rel="stylesheet" href="./styles/github-markdown.css">
   <link rel="stylesheet" href="./styles/highlight.css">
   <link rel="stylesheet" href="./styles/custom.css">
@@ -30,15 +30,15 @@
   </nav>
   <main id="main-content" class="markdown-body">
     <h1>Contributing to This Workshop Repository</h1>
-<p>Thank you for helping improve this workshop. Whether you are a participant who found a typo, someone who wants to add a new exercise, or an educator adapting these materials for your own community — your contribution is meaningful and welcome.</p>
+<p>Thank you for helping improve this workshop. Whether you are a participant who found a typo, someone who wants to add a new exercise, or an educator adapting these materials for your own community - your contribution is meaningful and welcome.</p>
 <p>This guide covers contributing to <strong>this workshop learning repository</strong>. For contributing to Agent Forge itself (the project you work on during Day 2), see <a href="https://github.com/accesswatch/agent-forge/blob/main/CONTRIBUTING.md">Agent Forge&#39;s CONTRIBUTING.md</a>.</p>
 <hr>
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-who-this-is-for">Who This Is For</a></li>
 <li><a href="#2-what-kinds-of-contributions-are-welcome">What Kinds of Contributions Are Welcome</a></li>
-<li><a href="#3-before-you-start--fork-and-clone">Before You Start — Fork and Clone</a></li>
-<li><a href="#4-contribution-workflow--step-by-step">Contribution Workflow — Step by Step</a></li>
+<li><a href="#3-before-you-start--fork-and-clone">Before You Start - Fork and Clone</a></li>
+<li><a href="#4-contribution-workflow--step-by-step">Contribution Workflow - Step by Step</a></li>
 <li><a href="#5-writing-and-style-guidelines">Writing and Style Guidelines</a></li>
 <li><a href="#6-accessibility-requirements">Accessibility Requirements</a></li>
 <li><a href="#7-html-documentation-build-system">HTML Documentation Build System</a></li>
@@ -50,9 +50,9 @@
 <hr>
 <h2>1. Who This Is For</h2>
 <p><strong>Workshop participants:</strong> You have already completed the contribution workflow during the workshop. This repository is an excellent first contribution target for applying what you practiced.</p>
-<p><strong>Educators and facilitators:</strong> You are welcome to fork the entire repository and adapt the materials for your own workshop program. Attribution is required under the CC BY 4.0 license — please include a credit line and link to the original repository.</p>
+<p><strong>Educators and facilitators:</strong> You are welcome to fork the entire repository and adapt the materials for your own workshop program. Attribution is required under the CC BY 4.0 license - please include a credit line and link to the original repository.</p>
 <p><strong>Accessibility practitioners:</strong> If you have domain expertise in a particular screen reader or assistive technology and notice something that is incorrect or incomplete, please open an issue or submit a correction. Your expertise is exactly what this documentation needs.</p>
-<p><strong>People who find bugs:</strong> A broken link, a command that has stopped working, an exercise that cannot be completed — all of these are legitimate bugs. Open an issue the same way you would for any software project.</p>
+<p><strong>People who find bugs:</strong> A broken link, a command that has stopped working, an exercise that cannot be completed - all of these are legitimate bugs. Open an issue the same way you would for any software project.</p>
 <hr>
 <h2>2. What Kinds of Contributions Are Welcome</h2>
 <h3>Documentation Improvements</h3>
@@ -78,19 +78,19 @@
 </ul>
 <h3>What We Are Not Looking For Right Now</h3>
 <ul>
-<li>Rewriting the complete voice or structure of the workshop — if you have large-scale ideas, open a discussion first</li>
+<li>Rewriting the complete voice or structure of the workshop - if you have large-scale ideas, open a discussion first</li>
 <li>Adding content about tools or platforms not currently mentioned in the workshop</li>
 <li>Automated link-checking or content generation without human review</li>
 </ul>
 <hr>
-<h2>3. Before You Start — Fork and Clone</h2>
+<h2>3. Before You Start - Fork and Clone</h2>
 <p>You learned this workflow during the workshop. Here it is again as a reference.</p>
 <h3>Fork the Repository</h3>
 <ol>
 <li>Navigate to the workshop repository on GitHub</li>
 <li>Activate the <strong>Fork</strong> button (top right of the repository page)</li>
 <li>Select your account as the fork destination</li>
-<li>Wait for the fork to complete — you will be redirected to your copy</li>
+<li>Wait for the fork to complete - you will be redirected to your copy</li>
 </ol>
 <p><strong>Screen reader users:</strong></p>
 <ul>
@@ -111,20 +111,20 @@ origin    <span class="hljs-link">https://github.com/</span>[<span class="hljs-s
 upstream  <span class="hljs-link">https://github.com/</span>[<span class="hljs-string">original-owner</span>]/[workshop-repo-name].git (fetch)
 upstream  <span class="hljs-link">https://github.com/</span>[<span class="hljs-string">original-owner</span>]/[workshop-repo-name].git (push)</code></pre>
 <hr>
-<h2>4. Contribution Workflow — Step by Step</h2>
+<h2>4. Contribution Workflow - Step by Step</h2>
 <p>This is the same workflow you practiced during the workshop, applied to a real contribution.</p>
-<h3>Step 1 — Sync with Upstream</h3>
+<h3>Step 1 - Sync with Upstream</h3>
 <p>Always start from a current copy of the main branch:</p>
 <pre><code class="hljs language-bash">git checkout main
 git fetch upstream
 git merge upstream/main
 git push origin main</code></pre>
-<h3>Step 2 — Create a Focused Branch</h3>
+<h3>Step 2 - Create a Focused Branch</h3>
 <p>One issue or topic per branch. Branch names should describe the change:</p>
 <pre><code class="hljs language-bash">git checkout -b fix-nvda-shortcut-section-05
 git checkout -b add-exercise-03-alternative-macos
 git checkout -b update-broken-links-resources</code></pre>
-<h3>Step 3 — Make Your Changes</h3>
+<h3>Step 3 - Make Your Changes</h3>
 <p>Edit the file or files. Limit your changes to what is described in your branch name. Unrelated improvements belong in separate branches and separate pull requests.</p>
 <p><strong>In VS Code:</strong></p>
 <ol>
@@ -139,7 +139,7 @@ git checkout -b update-broken-links-resources</code></pre>
 <li>Make your changes</li>
 <li>Use &quot;Commit changes&quot; to save directly to your branch</li>
 </ol>
-<h3>Step 4 — Commit Your Changes</h3>
+<h3>Step 4 - Commit Your Changes</h3>
 <p>Write a commit message that a future contributor can read and understand without context:</p>
 <pre><code class="hljs language-bash">git add docs/04-working-with-issues.md
 git commit -m <span class="hljs-string">&quot;fix: correct NVDA virtual cursor toggle shortcut in Section 3
@@ -153,12 +153,12 @@ which is not a term NVDA uses. Updated to match NVDA&#x27;s own terminology.&quo
 Optional longer explanation <span class="hljs-keyword">of</span> why <span class="hljs-keyword">the</span> change was made, <span class="hljs-keyword">not</span> just what
 changed. What problem does this solve? What was wrong <span class="hljs-keyword">before</span>?</code></pre>
 <p>Types: <code>fix</code>, <code>docs</code>, <code>exercise</code>, <code>style</code>, <code>chore</code></p>
-<h3>Step 5 — Push to Your Fork</h3>
+<h3>Step 5 - Push to Your Fork</h3>
 <pre><code class="hljs language-bash">git push origin fix-nvda-shortcut-section-05</code></pre>
-<h3>Step 6 — Open a Pull Request</h3>
+<h3>Step 6 - Open a Pull Request</h3>
 <ol>
 <li>Navigate to your fork on GitHub</li>
-<li>A banner should appear: &quot;Compare &amp; pull request&quot; — activate it</li>
+<li>A banner should appear: &quot;Compare &amp; pull request&quot; - activate it</li>
 <li>If no banner appears: Activate the <strong>Pull requests</strong> tab → <strong>New pull request</strong> → change the compare branch to your branch</li>
 <li>Fill in the PR template (see below)</li>
 <li>Submit</li>
@@ -169,13 +169,13 @@ changed. What problem does this solve? What was wrong <span class="hljs-keyword"
 <ul>
 <li><strong>Imperative mood for instructions:</strong> &quot;Navigate to the Issues tab&quot; not &quot;You should navigate to the Issues tab&quot;</li>
 <li><strong>Present tense:</strong> &quot;The button opens a dialog&quot; not &quot;The button will open a dialog&quot;</li>
-<li><strong>Specific:</strong> Name the exact shortcut, exact menu item, exact element to look for — do not say &quot;click the appropriate option&quot;</li>
+<li><strong>Specific:</strong> Name the exact shortcut, exact menu item, exact element to look for - do not say &quot;click the appropriate option&quot;</li>
 <li><strong>Screen reader aware:</strong> Include landmark context, not just visual position (&quot;the Save button in the dialog footer&quot; not &quot;the blue button on the right&quot;)</li>
 </ul>
 <h3>Structure</h3>
 <ul>
-<li>Use heading levels consistently — H2 for major sections, H3 for subsections, H4 sparingly</li>
-<li>Use numbered lists for sequential steps — the order matters and participants need to count steps</li>
+<li>Use heading levels consistently - H2 for major sections, H3 for subsections, H4 sparingly</li>
+<li>Use numbered lists for sequential steps - the order matters and participants need to count steps</li>
 <li>Use bulleted lists for options, items where order is unimportant</li>
 <li>Use code blocks (<code>```</code>) for all commands, keyboard shortcuts in context, and file paths</li>
 <li>Inline code (<code>``</code>) for short references to a key name, command name, or file name</li>
@@ -198,25 +198,25 @@ changed. What problem does this solve? What was wrong <span class="hljs-keyword"
 <td><code>/</code></td>
 </tr>
 </tbody></table>
-<p>When mentioning a single shortcut inline: use backticks — <code>NVDA+F7</code></p>
+<p>When mentioning a single shortcut inline: use backticks - <code>NVDA+F7</code></p>
 <h3>Links</h3>
 <ul>
-<li>Link text should describe the destination — not &quot;click here&quot; or &quot;this guide&quot;</li>
+<li>Link text should describe the destination - not &quot;click here&quot; or &quot;this guide&quot;</li>
 <li>Good: <code>[NVDA User Guide](https://www.nvaccess.org/files/nvda/documentation/userGuide.html)</code></li>
 <li>Bad: <code>[click here](https://www.nvaccess.org/files/nvda/documentation/userGuide.html)</code></li>
 </ul>
 <hr>
 <h2>6. Accessibility Requirements</h2>
-<p>Every document in this repository is used by screen reader users. Accessibility is not a nice-to-have — it is the primary requirement. All contributions must meet the following:</p>
+<p>Every document in this repository is used by screen reader users. Accessibility is not a nice-to-have - it is the primary requirement. All contributions must meet the following:</p>
 <h3>Heading Structure</h3>
 <ul>
 <li>Every heading must be in-sequence (no skipping from H2 to H4)</li>
-<li>Every document must have exactly one H1 (<code>#</code>) — the page title</li>
+<li>Every document must have exactly one H1 (<code>#</code>) - the page title</li>
 <li>Headings must accurately describe the content they introduce</li>
 </ul>
 <h3>Links and References</h3>
 <ul>
-<li>No bare URLs in running text — always use descriptive link text</li>
+<li>No bare URLs in running text - always use descriptive link text</li>
 <li>Exception: the Resources document may list URLs in table columns labeled &quot;URL&quot; for copy-paste use</li>
 </ul>
 <h3>Images and Media</h3>
@@ -224,13 +224,13 @@ changed. What problem does this solve? What was wrong <span class="hljs-keyword"
 <li>Every image requires meaningful alt text</li>
 <li>Alt text describes what the image shows, not just its label</li>
 <li>Decorative-only images (rare in documentation) may use empty alt <code>alt=&quot;&quot;</code></li>
-<li>This workshop avoids screenshots of UI because screen reader users cannot use them — prefer text descriptions and keyboard instructions</li>
+<li>This workshop avoids screenshots of UI because screen reader users cannot use them - prefer text descriptions and keyboard instructions</li>
 </ul>
 <h3>Tables</h3>
 <ul>
 <li>Every table must have a header row using <code>|---|</code> separator syntax in Markdown</li>
 <li>Table headers must be meaningful and concise</li>
-<li>Avoid merged cells — Markdown tables do not support them, and they create complex reading order for screen readers</li>
+<li>Avoid merged cells - Markdown tables do not support them, and they create complex reading order for screen readers</li>
 </ul>
 <h3>Code Blocks</h3>
 <ul>
@@ -246,7 +246,7 @@ changed. What problem does this solve? What was wrong <span class="hljs-keyword"
 <ul>
 <li>You edit <code>.md</code> files, then run <code>npm run build:html</code> before committing</li>
 <li>Both the Markdown changes and the updated <code>html/</code> output are committed together</li>
-<li>There is no CI pipeline — the build is your responsibility before pushing</li>
+<li>There is no CI pipeline - the build is your responsibility before pushing</li>
 </ul>
 <p><strong>What gets converted:</strong></p>
 <ul>
@@ -262,7 +262,7 @@ npm install
 <span class="hljs-comment"># Generate HTML files once</span>
 npm run build:html
 
-<span class="hljs-comment"># Watch mode — rebuilds HTML automatically when you save markdown files</span>
+<span class="hljs-comment"># Watch mode - rebuilds HTML automatically when you save markdown files</span>
 npm run watch:html
 
 <span class="hljs-comment"># Clean generated HTML</span>
@@ -271,12 +271,12 @@ npm run clean</code></pre>
 <h3>HTML Features</h3>
 <p>The generated documentation includes:</p>
 <ul>
-<li><strong>GitHub-flavored styling</strong> — familiar appearance for GitHub users</li>
+<li><strong>GitHub-flavored styling</strong> - familiar appearance for GitHub users</li>
 <li><strong>Syntax highlighting</strong> for code blocks</li>
-<li><strong>Responsive design</strong> — works on mobile and desktop</li>
-<li><strong>Accessible markup</strong> — proper ARIA labels, semantic HTML, keyboard navigation</li>
-<li><strong>Breadcrumb navigation</strong> — easy to return to home</li>
-<li><strong>High contrast mode support</strong> — respects user preferences</li>
+<li><strong>Responsive design</strong> - works on mobile and desktop</li>
+<li><strong>Accessible markup</strong> - proper ARIA labels, semantic HTML, keyboard navigation</li>
+<li><strong>Breadcrumb navigation</strong> - easy to return to home</li>
+<li><strong>High contrast mode support</strong> - respects user preferences</li>
 </ul>
 <h3>What You Need to Know When Contributing</h3>
 <p><strong>Build before committing:</strong>
@@ -314,13 +314,13 @@ You need to install Node.js first. Download from <a href="https://nodejs.org/">n
 <h3>NVDA</h3>
 <ul>
 <li><strong>Table navigation:</strong> <code>T</code> to reach the table, then <code>Ctrl+Alt+Arrow Keys</code> to navigate cells</li>
-<li><strong>Code blocks</strong> are read as preformatted text. NVDA reads the content character-by-character if you need to copy a command — use <code>NVDA+F8</code> to switch to flat review, then <code>NVDA+C</code> to copy a line</li>
+<li><strong>Code blocks</strong> are read as preformatted text. NVDA reads the content character-by-character if you need to copy a command - use <code>NVDA+F8</code> to switch to flat review, then <code>NVDA+C</code> to copy a line</li>
 <li><strong>Headings:</strong> <code>H</code> to jump between headings when in browse mode</li>
 </ul>
 <h3>JAWS</h3>
 <ul>
 <li><strong>Table navigation:</strong> <code>T</code> to reach the table, <code>Ctrl+Alt+Arrow Keys</code> for cells</li>
-<li><strong>Code blocks:</strong> <code>Insert+F5</code> (forms list) will not find code elements — navigate with cursor keys</li>
+<li><strong>Code blocks:</strong> <code>Insert+F5</code> (forms list) will not find code elements - navigate with cursor keys</li>
 <li><strong>Headings:</strong> <code>H</code> forward, <code>Shift+H</code> backward</li>
 </ul>
 <h3>VoiceOver (macOS)</h3>
@@ -361,11 +361,11 @@ You need to install Node.js first. Download from <a href="https://nodejs.org/">n
 <hr>
 <h2>10. What Happens After You Submit</h2>
 <ol>
-<li><strong>A maintainer reviews your PR</strong> — typically within a few days for documentation changes</li>
-<li><strong>You may receive review comments</strong> — these are not rejections; they are part of the collaboration</li>
-<li><strong>You can add commits to the same branch</strong> to respond to feedback — GitHub adds them to the open PR automatically</li>
+<li><strong>A maintainer reviews your PR</strong> - typically within a few days for documentation changes</li>
+<li><strong>You may receive review comments</strong> - these are not rejections; they are part of the collaboration</li>
+<li><strong>You can add commits to the same branch</strong> to respond to feedback - GitHub adds them to the open PR automatically</li>
 <li><strong>Once approved</strong>, a maintainer will merge the PR</li>
-<li><strong>Your name is in the commit history</strong> of the repository — that is the permanent record of your contribution</li>
+<li><strong>Your name is in the commit history</strong> of the repository - that is the permanent record of your contribution</li>
 </ol>
 <p>If two weeks pass with no response, feel free to leave a comment on the PR to check in.</p>
 <hr>
@@ -375,13 +375,13 @@ You need to install Node.js first. Download from <a href="https://nodejs.org/">n
 <p><strong>For urgent issues with the workshop materials during a live event:</strong> Contact the facilitator directly</p>
 <p><strong>For accessibility concerns:</strong> Tag your issue or comment with the <code>accessibility</code> label</p>
 <hr>
-<p><em>Workshops run better when participants contribute back. Every correction, every clarification, every additional exercise makes this material stronger for everyone who comes after you. Your name in the commit history is not the end of your participation — it is the beginning.</em></p>
+<p><em>Workshops run better when participants contribute back. Every correction, every clarification, every additional exercise makes this material stronger for everyone who comes after you. Your name in the commit history is not the end of your participation - it is the beginning.</em></p>
 <p><em><a href="README.md">Back to README →</a> | <a href="docs/appendix-u-resources.md">Resources →</a> | <a href="CODE_OF_CONDUCT.md">Code of Conduct →</a></em></p>
 
   </main>
   <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
-    <p><strong>GIT Going with GitHub</strong> — A workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
-    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="http://www.joinbits.org">joinbits.org</a></p>
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
+    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="https://www.joinbits.org">joinbits.org</a></p>
   </footer>
   </body>
 </html>

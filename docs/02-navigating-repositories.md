@@ -33,34 +33,34 @@ When you navigate to a GitHub repository (e.g., `https://github.com/owner/repo-n
 
 ---
 
-## Landing on a Repository — What to Expect
+## Landing on a Repository - What to Expect
 
 When you first navigate to a repo URL:
 
-1. **The page title** is announced with the format: `owner/repo-name: Short description — GitHub`
+1. **The page title** is announced with the format: `owner/repo-name: Short description - GitHub`
 2. **First heading** (`1` key) will navigate to the repo name: "owner/repo-name"
 3. **The tab bar** is a landmark labeled "Repository navigation"
 
 ### Orientation sequence (do this on every new repo)
 
 ```
-Step 1: Press 1 — hear the repo name
-Step 2: Press D — navigate through landmarks to learn page structure
-Step 3: Press NVDA+F7 (or VO+U) — scan headings to understand what's on the page
+Step 1: Press 1 - hear the repo name
+Step 2: Press D - navigate through landmarks to learn page structure
+Step 3: Press NVDA+F7 (or VO+U) - scan headings to understand what's on the page
 ```
 
 ---
 
 ## Navigating the Repository Tabs
 
-The main tabs are: **Code**, **Issues**, **Pull Requests**, **Discussions**, **Actions**, **Projects**, **Wiki**, **Security**, **Insights**, and **Settings** (Settings only visible to maintainers). Not all tabs appear on every repository — Discussions, Wiki, and Projects must be enabled by the repository owner.
+The main tabs are: **Code**, **Issues**, **Pull Requests**, **Discussions**, **Actions**, **Projects**, **Wiki**, **Security**, **Insights**, and **Settings** (Settings only visible to maintainers). Not all tabs appear on every repository - Discussions, Wiki, and Projects must be enabled by the repository owner.
 
 ### How to reach the tabs
 
 <details>
 <summary>Visual / mouse users</summary>
 
-The tab bar is visible just below the repository name. Click the tab you want — **Code**, **Issues**, **Pull requests**, etc. The active tab is underlined. The number next to a tab (e.g., "Issues · 14") shows how many open items are in that section.
+The tab bar is visible just below the repository name. Click the tab you want - **Code**, **Issues**, **Pull requests**, etc. The active tab is underlined. The number next to a tab (e.g., "Issues · 14") shows how many open items are in that section.
 
 </details>
 
@@ -81,13 +81,13 @@ The tab bar is visible just below the repository name. Click the tab you want �
 </details>
 
 ### Reading the tab labels
-Each tab link reads with its name and the count of items: "Issues, 14 open" or "Pull requests, 3 open." The active tab is marked with `aria-selected="true"` — your screen reader will announce it as "selected" or "current."
+Each tab link reads with its name and the count of items: "Issues, 14 open" or "Pull requests, 3 open." The active tab is marked with `aria-selected="true"` - your screen reader will announce it as "selected" or "current."
 
 ---
 
 ## The Files Table
 
-The files table is the core of the Code tab — it shows every file and folder in the repo.
+The files table is the core of the Code tab - it shows every file and folder in the repo.
 
 ### Reaching the files table
 
@@ -106,9 +106,9 @@ Press `T` to jump to the next table on the page. The first table you will hit is
 </details>
 
 The three columns are:
-1. **Name** — file or folder name
-2. **Message** — the most recent commit message that changed this file
-3. **Age** — how long ago that commit happened
+1. **Name** - file or folder name
+2. **Message** - the most recent commit message that changed this file
+3. **Age** - how long ago that commit happened
 
 ### Navigating the files table
 
@@ -163,8 +163,8 @@ Mouse users see the current branch name as a button with a dropdown arrow (e.g.,
 ### Inside the branch dropdown
 
 ```
-Step 1: The dropdown panel opens — it is a live region
-Step 2: A search field appears — you can type to filter branches
+Step 1: The dropdown panel opens - it is a live region
+Step 2: A search field appears - you can type to filter branches
 Step 3: Press Tab to move to the results list
 Step 4: Press ↓/↑ or Tab/Shift+Tab to navigate the list of branches
 Step 5: Press Enter to switch to the selected branch
@@ -208,12 +208,12 @@ Cloning copies the repository to your local machine so you can work with it in V
 <summary>Screen reader users</summary>
 
 1. Press `1` or `Shift+1` to navigate to the repository h1 heading
-2. Press `B` to navigate to the next button — look for the **“Code”** button
+2. Press `B` to navigate to the next button - look for the **“Code”** button
 3. Press `Enter` or `Space` to open the Code flyout panel
 4. The flyout has tabs: **HTTPS**, **SSH**, **GitHub CLI**
 5. `Tab` to the HTTPS tab or SSH tab according to your preference
 6. `Tab` to the “Copy url to clipboard” button and press `Enter`
-7. The URL is now in your clipboard — paste it into VS Code or your terminal
+7. The URL is now in your clipboard - paste it into VS Code or your terminal
 
 **Alternative:** `Tab` further to find **Download ZIP** if you want a one-time copy without Git.
 
@@ -297,19 +297,19 @@ When you open a file from the files table, the page shows the rendered content (
 ### File page landmarks
 
 ```
-D → "Repository navigation" — repo tab bar
-D → "Repository header" — file breadcrumb path
-D → "Main" — the file content area
-D → "Repository files navigation" — contains: Raw, Blame, History buttons
+D → "Repository navigation" - repo tab bar
+D → "Repository header" - file breadcrumb path
+D → "Main" - the file content area
+D → "Repository files navigation" - contains: Raw, Blame, History buttons
 ```
 
 ### Reading a Markdown file (like README.md)
 
 The README renders with full heading structure. Use:
-- `H` — navigate headings within the README
-- `T` — find any tables
-- `L` — find lists
-- `K` — navigate links
+- `H` - navigate headings within the README
+- `T` - find any tables
+- `L` - find lists
+- `K` - navigate links
 
 ### Reading a code file
 
@@ -324,10 +324,10 @@ Code files render as a table where each row is one line of code. Content is read
 ### The file action buttons
 
 Above the file content, there are buttons:
-- **Raw** — view the file as plain text in a new page
-- **Blame** — see which commit changed each line (see below)
-- **History** — see the full commit history for this file
-- **Edit (pencil)** — edit the file directly on GitHub (if you have write access or it's your fork)
+- **Raw** - view the file as plain text in a new page
+- **Blame** - see which commit changed each line (see below)
+- **History** - see the full commit history for this file
+- **Edit (pencil)** - edit the file directly on GitHub (if you have write access or it's your fork)
 
 **How to reach these buttons:**
 Press `B` from within the file area, OR use `D` to navigate to the "Repository files navigation" landmark.
@@ -339,7 +339,7 @@ Press `B` from within the file area, OR use `D` to navigate to the "Repository f
 
 1. Open the file you want to edit
 2. Click the **pencil icon** (Edit file) in the top-right of the file content area
-3. The file opens in a web editor — click in the content area and edit
+3. The file opens in a web editor - click in the content area and edit
 4. When done, scroll down to “Commit changes”, type a commit message, and click the green **Commit changes** button
 5. Choose “Commit directly to `main`” (or your branch) and confirm
 
@@ -350,7 +350,7 @@ Press `B` from within the file area, OR use `D` to navigate to the "Repository f
 
 1. Open the file you want to edit
 2. Press `K` to navigate links until you find the **“Edit file”** link (may be labeled with a pencil icon description)
-3. Press `Enter` to activate the link — the page opens in edit mode with a code editor textarea
+3. Press `Enter` to activate the link - the page opens in edit mode with a code editor textarea
 4. Switch to Focus Mode: press `NVDA+Space` (NVDA) or `Insert+Z` (JAWS)
 5. Make your changes using standard text editing keys
 6. When done, press `Escape` to exit the textarea
@@ -375,10 +375,10 @@ Blame shows you who changed each line of a file, in what commit, and when. It is
 3. The content is a table: **left column** = commit info (who, when, message), **right column** = the line of code
 
 ```
-T — jump to the blame table
-Ctrl+Alt+→ — move from commit info column to code column
-Ctrl+Alt+↓ — move to the next line
-K — navigate the commit links (opens that commit's detail page)
+T - jump to the blame table
+Ctrl+Alt+→ - move from commit info column to code column
+Ctrl+Alt+↓ - move to the next line
+K - navigate the commit links (opens that commit's detail page)
 ```
 
 ---
@@ -392,10 +392,10 @@ Two ways to view history:
 ### Reading the Commits List Page
 
 ```
-H or 3 — navigate by date headings (commits are grouped by date)
-I — navigate individual commit list items
-K — navigate commit links (SHA hashes, short descriptions)
-Enter — open a commit to see its diff
+H or 3 - navigate by date headings (commits are grouped by date)
+I - navigate individual commit list items
+K - navigate commit links (SHA hashes, short descriptions)
+Enter - open a commit to see its diff
 ```
 
 ### Reading a Commit Page
@@ -407,10 +407,10 @@ A commit page shows:
 - A diff for every file changed
 
 ```
-1 — go to commit message heading
-H or 3 — navigate file headings in the diff
-T — navigate to the stats table (files changed, lines added/deleted)
-+ — skip table navigation and read file diffs by line
+1 - go to commit message heading
+H or 3 - navigate file headings in the diff
+T - navigate to the stats table (files changed, lines added/deleted)
++ - skip table navigation and read file diffs by line
 ```
 
 ---
@@ -422,12 +422,12 @@ The "Go to file" shortcut is extremely useful when you know what you are looking
 ### How to use Go to File
 
 1. Make sure you are on the Code tab of a repository
-   - If hovercards are off, no navigation penalty — just navigate normally
-2. Find the search box: press `F` or `E` to jump to the next edit field — look for one labeled "Go to file" or "Filter files by name"
+   - If hovercards are off, no navigation penalty - just navigate normally
+2. Find the search box: press `F` or `E` to jump to the next edit field - look for one labeled "Go to file" or "Filter files by name"
 3. Type the filename or partial path
-4. Results appear as a dropdown — use `↓` to navigate, `Enter` to open
+4. Results appear as a dropdown - use `↓` to navigate, `Enter` to open
 
-**GitHub keyboard shortcut:** `T` — opens the Go to File dialog.
+**GitHub keyboard shortcut:** `T` - opens the Go to File dialog.
 
 **Screen reader conflict warning:** `T` normally means "next table" in NVDA/JAWS Browse Mode. GitHub's `T` shortcut conflicts with this. To use GitHub's `T` shortcut:
 - **Option 1:** Switch to Focus Mode first (`Insert+Space` for NVDA, `Insert+Z` for JAWS)
@@ -436,13 +436,13 @@ The "Go to file" shortcut is extremely useful when you know what you are looking
 
 ---
 
-## GitHub Shortcuts for Repository Navigation — Spotlight
+## GitHub Shortcuts for Repository Navigation - Spotlight
 
 These are the GitHub built-in shortcuts you will use most on repository pages. They work by sending keystrokes directly to GitHub's JavaScript, so **enable Focus Mode first** (NVDA: `NVDA+Space`, JAWS: `Insert+Z`).
 
 | Shortcut | What it does | When you need it |
 |---|---|---|
-| `?` | Show all shortcuts for this page | Any time — get the full context-specific list |
+| `?` | Show all shortcuts for this page | Any time - get the full context-specific list |
 | `G C` | Jump to the Code tab | You're on Issues or PRs and want the file tree |
 | `G I` | Jump to the Issues tab | You're browsing code and spot a bug to report |
 | `G P` | Jump to the Pull Requests tab | You want to review open PRs |
@@ -457,22 +457,22 @@ These are the GitHub built-in shortcuts you will use most on repository pages. T
 
 **Press `?` now** on any GitHub repository page to see the live shortcut list for that specific context.
 
-> **Screen reader tip — reading the shortcut dialog:** When the `?` dialog opens it is a modal overlay. Press `NVDA+Space` (NVDA) or ensure JAWS Virtual Cursor is active to browse the dialog content with `H` for headings and `↓` to read each shortcut. The dialog is **context-aware** — the shortcuts listed change based on the page you are on. Press `Escape` to close.
+> **Screen reader tip - reading the shortcut dialog:** When the `?` dialog opens it is a modal overlay. Press `NVDA+Space` (NVDA) or ensure JAWS Virtual Cursor is active to browse the dialog content with `H` for headings and `↓` to read each shortcut. The dialog is **context-aware** - the shortcuts listed change based on the page you are on. Press `Escape` to close.
 
-For the full shortcut system including issues, PRs, comments, and notifications, see [Screen Reader Cheat Sheet — GitHub Shortcuts section](appendix-b-screen-reader-cheatsheet.md#github-built-in-keyboard-shortcuts).
+For the full shortcut system including issues, PRs, comments, and notifications, see [Screen Reader Cheat Sheet - GitHub Shortcuts section](appendix-b-screen-reader-cheatsheet.md#github-built-in-keyboard-shortcuts).
 
 The sidebar (on desktop-width windows) contains:
-- **About** — the repo description and topics
-- **Releases** — recent published releases
-- **Packages** — Docker/npm packages attached to the repo
-- **Contributors** — the top contributors
-- **Languages** — the percentage breakdown of programming languages
+- **About** - the repo description and topics
+- **Releases** - recent published releases
+- **Packages** - Docker/npm packages attached to the repo
+- **Contributors** - the top contributors
+- **Languages** - the percentage breakdown of programming languages
 
 ### Navigating the sidebar
 
 The sidebar content is inside the "Main" landmark, after the files table and README. After the README, press `H` or `2` to reach "About" and the sidebar section headings.
 
-**VoiceOver:** Navigate past the README section with `VO+Right` — the sidebar elements follow sequentially in the reading order.
+**VoiceOver:** Navigate past the README section with `VO+Right` - the sidebar elements follow sequentially in the reading order.
 
 ---
 
@@ -491,8 +491,8 @@ Quick way to check the project description, website link, and topics:
 
 ### Scenario A: "I want to find out what this project does"
 1. Navigate to the repo URL
-2. Press `1` — hear the repo name
-3. `↓` — read the description (announced as a paragraph after the heading)
+2. Press `1` - hear the repo name
+3. `↓` - read the description (announced as a paragraph after the heading)
 4. Navigate to README: `D` → "Repository files navigation" → `H` within the README
 
 ### Scenario B: "I want to find a good file to edit"
@@ -511,7 +511,7 @@ Quick way to check the project description, website link, and topics:
 2. Activate the latest release link
 3. Read the release notes (rendered Markdown with headings and lists)
 
-### Scenario E: "I want to contribute — where do I start?"
+### Scenario E: "I want to contribute - where do I start?"
 1. Navigate to the Code tab
 2. Look for `CONTRIBUTING.md` in the files table
 3. Open it and read the contributing guidelines
@@ -525,26 +525,26 @@ Quick way to check the project description, website link, and topics:
 
 Navigate to [github.com/accesswatch/agent-forge](https://github.com/accesswatch/agent-forge) and do this:
 
-1. **Code tab** — Press `D` to the "Repository navigation" landmark, then `K` to find "Code". Press `Enter`. You're on the file list.
-2. **Issues tab** — Press `G` then `I` (Focus Mode first: `NVDA+Space`). How many open issues are there? Press `3` to jump through issue titles.
-3. **Pull Requests tab** — Press `G` then `P`. Are there any open PRs?
-4. **Find a file** — Press `T` (in Focus Mode) to open the file finder. Type `README` and press `Enter`. You just navigated straight to a file without scrolling.
-5. **Read the README** — Press `1` to find the page title, then `2` to scan sections.
+1. **Code tab** - Press `D` to the "Repository navigation" landmark, then `K` to find "Code". Press `Enter`. You're on the file list.
+2. **Issues tab** - Press `G` then `I` (Focus Mode first: `NVDA+Space`). How many open issues are there? Press `3` to jump through issue titles.
+3. **Pull Requests tab** - Press `G` then `P`. Are there any open PRs?
+4. **Find a file** - Press `T` (in Focus Mode) to open the file finder. Type `README` and press `Enter`. You just navigated straight to a file without scrolling.
+5. **Read the README** - Press `1` to find the page title, then `2` to scan sections.
 
 **You're done.** You just toured a real repository using only your keyboard.
 
-> **What success feels like:** You visited four tabs and opened a file without touching a mouse. Every repository on GitHub has this same layout — you now know how to navigate all of them.
+> **What success feels like:** You visited four tabs and opened a file without touching a mouse. Every repository on GitHub has this same layout - you now know how to navigate all of them.
 
 ---
 
-> ### Day 2 Amplifier — Agent Forge: `@daily-briefing`
+> ### Day 2 Amplifier - Agent Forge: `@daily-briefing`
 >
-> **Navigate every folder of `agent-forge` manually today before using any agent.** Find `.github/agents/`, open a `.agent.md` file, and read it — that file is how an agent knows what to do. You must understand the structure before you can evaluate whether an agent understood it correctly.
+> **Navigate every folder of `agent-forge` manually today before using any agent.** Find `.github/agents/`, open a `.agent.md` file, and read it - that file is how an agent knows what to do. You must understand the structure before you can evaluate whether an agent understood it correctly.
 >
 > Once you have mastered manual repository navigation:
-> - **In VS Code** — `@daily-briefing morning briefing` sweeps every repository you have access to and delivers one prioritized document: open issues, PR status, CI results, security alerts, community reactions — all without opening a browser tab
-> - **In your repo** — Fork [agent-forge](https://github.com/accesswatch/agent-forge) and the `.github/agents/` folder travels with every clone; every collaborator on your fork has access to the same agents you do
-> - **In the cloud** — GitHub Agentic Workflows can generate daily status reports on a schedule, running inside GitHub Actions and posting digests to a designated issue thread — no VS Code, no local setup required
+> - **In VS Code** - `@daily-briefing morning briefing` sweeps every repository you have access to and delivers one prioritized document: open issues, PR status, CI results, security alerts, community reactions - all without opening a browser tab
+> - **In your repo** - Fork [agent-forge](https://github.com/accesswatch/agent-forge) and the `.github/agents/` folder travels with every clone; every collaborator on your fork has access to the same agents you do
+> - **In the cloud** - GitHub Agentic Workflows can generate daily status reports on a schedule, running inside GitHub Actions and posting digests to a designated issue thread - no VS Code, no local setup required
 >
 > *An agent's output only makes sense when you already know what it is describing. You are building that knowledge right now.*
 

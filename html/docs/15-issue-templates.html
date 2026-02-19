@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GIT Going with GitHub — A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
-  <title>Issue Templates — GIT Going with GitHub</title>
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
+  <title>Issue Templates - GIT Going with GitHub</title>
   <link rel="stylesheet" href="./styles/github-markdown.css">
   <link rel="stylesheet" href="./styles/highlight.css">
   <link rel="stylesheet" href="./styles/custom.css">
@@ -32,15 +32,15 @@
     <h1>Issue Templates</h1>
 <h2>Structuring Contributions for Clarity and Quality</h2>
 <blockquote>
-<p>Issue templates turn a blank text box into a guided form. They help contributors provide the information maintainers need, reduce back-and-forth, and make every issue immediately actionable. This guide teaches you what templates are, how to use the ones in <code>agent-forge</code>, and how to create your own — including an accessibility-specific bug report template.</p>
+<p>Issue templates turn a blank text box into a guided form. They help contributors provide the information maintainers need, reduce back-and-forth, and make every issue immediately actionable. This guide teaches you what templates are, how to use the ones in <code>agent-forge</code>, and how to create your own - including an accessibility-specific bug report template.</p>
 </blockquote>
 <hr>
 <h2>Prerequisites Checklist</h2>
 <p><strong>Before starting this chapter, verify you have completed:</strong></p>
 <ul>
-<li><input disabled="" type="checkbox"> Chapter 4: <a href="04-working-with-issues.md">Working with Issues</a> — Know how to create, read, and navigate issues</li>
-<li><input disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.md">GitHub Copilot</a> — VS Code installed with YAML syntax highlighting enabled</li>
-<li><input disabled="" type="checkbox"> Chapter 9: <a href="09-notifications.md">Notifications</a> — Basic understanding of workflow triggers</li>
+<li><input disabled="" type="checkbox"> Chapter 4: <a href="04-working-with-issues.md">Working with Issues</a> - Know how to create, read, and navigate issues</li>
+<li><input disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.md">GitHub Copilot</a> - VS Code installed with YAML syntax highlighting enabled</li>
+<li><input disabled="" type="checkbox"> Chapter 9: <a href="09-notifications.md">Notifications</a> - Basic understanding of workflow triggers</li>
 <li><input disabled="" type="checkbox"> A GitHub repository where you have write access (your fork or personal repo)</li>
 <li><input disabled="" type="checkbox"> Terminal/Command line basic comfort (Chapter 5 mentions git workflows)</li>
 </ul>
@@ -53,7 +53,7 @@
 <li><a href="#2-how-templates-work-on-github">How Templates Work on GitHub</a></li>
 <li><a href="#3-navigating-the-template-picker">Navigating the Template Picker</a></li>
 <li><a href="#4-the-agent-forge-issue-templates">The Agent Forge Issue Templates</a></li>
-<li><a href="#5-creating-a-new-template--step-by-step">Creating a New Template — Step by Step</a></li>
+<li><a href="#5-creating-a-new-template--step-by-step">Creating a New Template - Step by Step</a></li>
 <li><a href="#6-yaml-form-based-templates">YAML Form-Based Templates</a></li>
 <li><a href="#7-building-an-accessibility-bug-report-template">Building an Accessibility Bug Report Template</a></li>
 <li><a href="#8-pull-request-templates">Pull Request Templates</a></li>
@@ -77,7 +77,7 @@
 <li>Which WCAG success criterion is affected?</li>
 <li>Does the issue affect all users or only those with specific assistive technology?</li>
 </ul>
-<p>Without this context, maintainers ask follow-up questions — which delays the fix and uses everyone&#39;s time. A good accessibility template captures it all on the first submission.</p>
+<p>Without this context, maintainers ask follow-up questions - which delays the fix and uses everyone&#39;s time. A good accessibility template captures it all on the first submission.</p>
 <hr>
 <h2>2. How Templates Work on GitHub</h2>
 <p>Templates live in a specific folder in your repository:</p>
@@ -91,14 +91,14 @@
     └── pull_request_template.md  ← PR <span class="hljs-keyword">template</span> (singular)</code></pre>
 <p><strong>Markdown templates (<code>.md</code>):</strong> Traditional template format. Pre-fills a text editor with structured Markdown content. Contributors edit the template directly, replacing instructions and placeholder text with their own content.</p>
 <p><strong>YAML form templates (<code>.yml</code>):</strong> Modern form-based templates. Creates a proper form interface with labeled fields, dropdowns, checkboxes, and validation. Contributors fill in fields rather than editing freeform Markdown. Better for accessibility because each field has an explicit label announced by screen readers.</p>
-<p><strong><code>config.yml</code>:</strong> Controls the template chooser page — what templates appear, what their descriptions say, whether an external link (like a discussion forum) appears as an option, and crucially, <strong>whether contributors can bypass templates entirely with a blank issue</strong>.</p>
-<p>For accessibility projects, <code>config.yml</code> is important: disabling the blank issue option means every report arrives with the structure your project needs. A screen reader bug report without reproduction steps and AT version information is almost impossible to triage — the form prevents that by making those fields required.</p>
+<p><strong><code>config.yml</code>:</strong> Controls the template chooser page - what templates appear, what their descriptions say, whether an external link (like a discussion forum) appears as an option, and crucially, <strong>whether contributors can bypass templates entirely with a blank issue</strong>.</p>
+<p>For accessibility projects, <code>config.yml</code> is important: disabling the blank issue option means every report arrives with the structure your project needs. A screen reader bug report without reproduction steps and AT version information is almost impossible to triage - the form prevents that by making those fields required.</p>
 <p><strong>Example <code>config.yml</code>:</strong></p>
 <pre><code class="hljs language-yaml"><span class="hljs-attr">blank_issues_enabled:</span> <span class="hljs-literal">false</span>
 <span class="hljs-attr">contact_links:</span>
   <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Community</span> <span class="hljs-string">Discussion</span>
     <span class="hljs-attr">url:</span> <span class="hljs-string">https://github.com/accesswatch/agent-forge/discussions</span>
-    <span class="hljs-attr">about:</span> <span class="hljs-string">For</span> <span class="hljs-string">questions</span> <span class="hljs-string">and</span> <span class="hljs-string">general</span> <span class="hljs-string">discussion</span> <span class="hljs-string">—</span> <span class="hljs-string">not</span> <span class="hljs-string">bugs</span>
+    <span class="hljs-attr">about:</span> <span class="hljs-string">For</span> <span class="hljs-string">questions</span> <span class="hljs-string">and</span> <span class="hljs-string">general</span> <span class="hljs-string">discussion</span> <span class="hljs-bullet">-</span> <span class="hljs-string">not</span> <span class="hljs-string">bugs</span>
   <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Security</span> <span class="hljs-string">Vulnerability</span>
     <span class="hljs-attr">url:</span> <span class="hljs-string">https://github.com/accesswatch/agent-forge/security/advisories/new</span>
     <span class="hljs-attr">about:</span> <span class="hljs-string">Please</span> <span class="hljs-string">use</span> <span class="hljs-string">private</span> <span class="hljs-string">reporting</span> <span class="hljs-string">for</span> <span class="hljs-string">security</span> <span class="hljs-string">issues</span></code></pre>
@@ -112,14 +112,14 @@
 <ol>
 <li>Click the <strong>Issues</strong> tab on any repository</li>
 <li>Click the <strong>New issue</strong> button</li>
-<li>The template chooser page loads — templates appear as cards with a title, description, and &quot;Get started&quot; button</li>
+<li>The template chooser page loads - templates appear as cards with a title, description, and &quot;Get started&quot; button</li>
 <li>Click <strong>&quot;Get started&quot;</strong> on the template you want</li>
 <li>The issue editor opens with that template&#39;s content pre-filled</li>
 </ol>
 </details>
 
 <details>
-<summary>Screen reader users — NVDA / JAWS (Windows)</summary>
+<summary>Screen reader users - NVDA / JAWS (Windows)</summary>
 
 <ol>
 <li>Navigate to the Issues tab (press <code>T</code> from the repository tabs landmark)</li>
@@ -133,12 +133,12 @@
 </details>
 
 <details>
-<summary>Screen reader users — VoiceOver (macOS)</summary>
+<summary>Screen reader users - VoiceOver (macOS)</summary>
 
 <ol>
 <li>Navigate to the Issues tab (<code>VO+Right</code> from the tab bar landmark)</li>
 <li><code>VO+Space</code> to activate &quot;New issue&quot;</li>
-<li>The chooser page loads — templates appear as list items</li>
+<li>The chooser page loads - templates appear as list items</li>
 <li><code>VO+Right</code> to move between templates</li>
 <li><code>VO+Space</code> on &quot;Get started&quot; for your chosen template</li>
 </ol>
@@ -161,7 +161,7 @@
 <li>Click the <strong>Code</strong> tab on the repository</li>
 <li>Click the <code>.github</code> folder in the file listing</li>
 <li>Click <code>ISSUE_TEMPLATE</code></li>
-<li>You&#39;ll see the template files — click any to read it</li>
+<li>You&#39;ll see the template files - click any to read it</li>
 </ol>
 </details>
 
@@ -178,7 +178,7 @@
 </details>
 
 <h3>Reading a Template File</h3>
-<p>Open any template file (e.g., <code>bug_report.md</code>) in VS Code or in the GitHub web editor (pencil button — screen readers announce it as &quot;Edit this file&quot;).</p>
+<p>Open any template file (e.g., <code>bug_report.md</code>) in VS Code or in the GitHub web editor (pencil button - screen readers announce it as &quot;Edit this file&quot;).</p>
 <p>Look for:</p>
 <ul>
 <li><strong>Frontmatter</strong> (between <code>---</code> delimiters): name, about, title, labels, assignees</li>
@@ -194,7 +194,7 @@
 <span class="hljs-meta">---</span></code></pre>
 <p>The <code>about</code> text appears in the template chooser. The <code>title</code> pre-fills the issue title field (the contributor replaces the placeholder). The <code>labels</code> array auto-applies labels when the issue is created.</p>
 <hr>
-<h2>5. Creating a New Template — Step by Step</h2>
+<h2>5. Creating a New Template - Step by Step</h2>
 <h3>Choosing Between Markdown and YAML Templates</h3>
 <p>Before creating a template, decide which format best suits your needs:</p>
 <table>
@@ -222,7 +222,7 @@
 </tr>
 <tr>
 <td><strong>Validation</strong></td>
-<td>None — contributors can delete anything</td>
+<td>None - contributors can delete anything</td>
 <td>Can mark fields as required, validate input</td>
 </tr>
 <tr>
@@ -232,8 +232,8 @@
 </tr>
 <tr>
 <td><strong>Data consistency</strong></td>
-<td>Varies — contributors may skip sections</td>
-<td>High — dropdowns ensure consistent values</td>
+<td>Varies - contributors may skip sections</td>
+<td>High - dropdowns ensure consistent values</td>
 </tr>
 <tr>
 <td><strong>Learning curve</strong></td>
@@ -242,8 +242,8 @@
 </tr>
 <tr>
 <td><strong>Maintenance</strong></td>
-<td>Easy — just edit Markdown</td>
-<td>More involved — must update YAML structure</td>
+<td>Easy - just edit Markdown</td>
+<td>More involved - must update YAML structure</td>
 </tr>
 </tbody></table>
 <p><strong>Use Markdown templates when:</strong></p>
@@ -414,7 +414,7 @@ Screen reader and browser information is especially important for us to reproduc
 <li>Scroll to the &quot;Features&quot; section → click the checkmark next to &quot;Issues&quot; → click <strong>&quot;Set up templates&quot;</strong></li>
 <li>Or navigate directly to <code>.github/ISSUE_TEMPLATE/</code> in your fork → click the <code>+</code> button → &quot;Create new file&quot;</li>
 <li>GitHub opens a template editor. Fill in the template name, about description, and body</li>
-<li>GitHub auto-populates the filename — you can change it</li>
+<li>GitHub auto-populates the filename - you can change it</li>
 <li>Click <strong>&quot;Propose changes&quot;</strong> → create a PR to add the template</li>
 </ol>
 </details>
@@ -460,7 +460,7 @@ Screen reader and browser information is especially important for us to reproduc
 </ul>
 <hr>
 <h2>6. YAML Form-Based Templates</h2>
-<p>YAML templates create a proper form interface — labeled fields, dropdowns, checkboxes — rather than a pre-filled text editor. This is the preferred format for modern GitHub projects, especially those focused on accessibility.</p>
+<p>YAML templates create a proper form interface - labeled fields, dropdowns, checkboxes - rather than a pre-filled text editor. This is the preferred format for modern GitHub projects, especially those focused on accessibility.</p>
 <h3>Why YAML Forms Are Better for Accessibility</h3>
 <p><strong>Explicit labels:</strong> Each field has a <code>label:</code> that screen readers announce. In Markdown templates, users must infer structure from headings and placeholder text.</p>
 <p><strong>Structured navigation:</strong> Screen readers can navigate form fields with standard form navigation commands (<code>F</code> key in NVDA/JAWS, form controls in VoiceOver rotor).</p>
@@ -538,7 +538,7 @@ Screen reader and browser information is especially important for us to reproduc
           <span class="hljs-attr">required:</span> <span class="hljs-literal">false</span></code></pre>
 <h3>YAML Field Types Reference</h3>
 <p>GitHub supports several field types in YAML form templates. Each has specific attributes and uses:</p>
-<h4>1. <code>markdown</code> — Instructional Text</h4>
+<h4>1. <code>markdown</code> - Instructional Text</h4>
 <p>Displays formatted Markdown content. Not editable by the contributor. Use for instructions, warnings, or explanations.</p>
 <pre><code class="hljs language-yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">markdown</span>
   <span class="hljs-attr">attributes:</span>
@@ -554,7 +554,7 @@ Screen reader and browser information is especially important for us to reproduc
 <p><strong>No validation options</strong> (static content)</p>
 <p><strong>Screen reader note:</strong> This content is announced as regular text. Screen reader users can read it with their reading commands before moving to the next field.</p>
 <hr>
-<h4>2. <code>input</code> — Single-line Text Field</h4>
+<h4>2. <code>input</code> - Single-line Text Field</h4>
 <p>A single-line text input. Best for short answers like version numbers, URLs, or names.</p>
 <pre><code class="hljs language-yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">input</span>
   <span class="hljs-attr">id:</span> <span class="hljs-string">version</span>
@@ -576,7 +576,7 @@ Screen reader and browser information is especially important for us to reproduc
 </ul>
 <p><strong>Screen reader announcement:</strong> &quot;Version Number, required, edit text, Which version of the software are you using?&quot;</p>
 <hr>
-<h4>3. <code>textarea</code> — Multi-line Text Area</h4>
+<h4>3. <code>textarea</code> - Multi-line Text Area</h4>
 <p>A multi-line text input. Best for descriptions, reproduction steps, code snippets, or any long-form content.</p>
 <pre><code class="hljs language-yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">textarea</span>
   <span class="hljs-attr">id:</span> <span class="hljs-string">description</span>
@@ -607,7 +607,7 @@ Screen reader and browser information is especially important for us to reproduc
 </ul>
 <p><strong>Accessibility tip:</strong> Use <code>placeholder</code> for examples, <code>value</code> for pre-filled template text that contributors should edit.</p>
 <hr>
-<h4>4. <code>dropdown</code> — Select Menu</h4>
+<h4>4. <code>dropdown</code> - Select Menu</h4>
 <p>A dropdown menu with predefined options. Contributors select one choice. Best for bounded answer spaces like OS, browser, or severity.</p>
 <pre><code class="hljs language-yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">dropdown</span>
   <span class="hljs-attr">id:</span> <span class="hljs-string">browser</span>
@@ -644,7 +644,7 @@ Screen reader and browser information is especially important for us to reproduc
 </ol>
 <p><strong>Accessibility note:</strong> Dropdowns are more accessible than free text for bounded choices. Screen reader users can hear all options and select precisely.</p>
 <hr>
-<h4>5. <code>checkboxes</code> — Checkbox Group</h4>
+<h4>5. <code>checkboxes</code> - Checkbox Group</h4>
 <p>A group of checkboxes. Contributors can select multiple options or use as a verification checklist.</p>
 <pre><code class="hljs language-yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">checkboxes</span>
   <span class="hljs-attr">id:</span> <span class="hljs-string">prerequisites</span>
@@ -669,7 +669,7 @@ Screen reader and browser information is especially important for us to reproduc
 <li><code>label</code> (required): Checkbox label (what the user sees)</li>
 <li><code>required</code> (boolean, default <code>false</code>): Whether this checkbox must be checked</li>
 </ul>
-<p><strong>No top-level validation</strong> — validation is per-checkbox in <code>options</code></p>
+<p><strong>No top-level validation</strong> - validation is per-checkbox in <code>options</code></p>
 <p><strong>Screen reader experience:</strong></p>
 <ol>
 <li>Group label announced: &quot;Before Submitting, Please verify these items&quot;</li>
@@ -901,7 +901,7 @@ Screen reader and browser information is especially important for us to reproduc
     <span class="hljs-attr">id:</span> <span class="hljs-string">context</span>
     <span class="hljs-attr">attributes:</span>
       <span class="hljs-attr">label:</span> <span class="hljs-string">Additional</span> <span class="hljs-string">Context</span>
-      <span class="hljs-attr">description:</span> <span class="hljs-string">Anything</span> <span class="hljs-string">else</span> <span class="hljs-string">—</span> <span class="hljs-string">screenshots</span> <span class="hljs-string">(with</span> <span class="hljs-string">alt</span> <span class="hljs-string">text),</span> <span class="hljs-string">links</span> <span class="hljs-string">to</span> <span class="hljs-string">related</span> <span class="hljs-string">issues,</span> <span class="hljs-string">workarounds</span> <span class="hljs-string">you</span> <span class="hljs-string">found,</span> <span class="hljs-string">or</span> <span class="hljs-string">suggestions</span> <span class="hljs-string">for</span> <span class="hljs-string">a</span> <span class="hljs-string">fix</span>
+      <span class="hljs-attr">description:</span> <span class="hljs-string">Anything</span> <span class="hljs-string">else</span> <span class="hljs-bullet">-</span> <span class="hljs-string">screenshots</span> <span class="hljs-string">(with</span> <span class="hljs-string">alt</span> <span class="hljs-string">text),</span> <span class="hljs-string">links</span> <span class="hljs-string">to</span> <span class="hljs-string">related</span> <span class="hljs-string">issues,</span> <span class="hljs-string">workarounds</span> <span class="hljs-string">you</span> <span class="hljs-string">found,</span> <span class="hljs-string">or</span> <span class="hljs-string">suggestions</span> <span class="hljs-string">for</span> <span class="hljs-string">a</span> <span class="hljs-string">fix</span>
 
   <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">checkboxes</span>
     <span class="hljs-attr">id:</span> <span class="hljs-string">checklist</span>
@@ -921,11 +921,11 @@ Screen reader and browser information is especially important for us to reproduc
 <li>The &quot;Before Submitting&quot; checklist uses explicit checkbox labels, not just text</li>
 <li>The textarea placeholders model the format of a good answer, not just describe it</li>
 <li>The WCAG dropdown educates as it collects data</li>
-<li>The &quot;Additional Context&quot; field is optional — a contributor with limited time can still file a useful report without this field</li>
+<li>The &quot;Additional Context&quot; field is optional - a contributor with limited time can still file a useful report without this field</li>
 </ul>
 <hr>
 <h3>A Second Template: Feature Request Form</h3>
-<p>The bug report template above is specific to accessibility issues. Once you understand the pattern, you can create templates for any contribution type. Here is a Feature Request template you can add to your own projects — it follows the exact same YAML structure.</p>
+<p>The bug report template above is specific to accessibility issues. Once you understand the pattern, you can create templates for any contribution type. Here is a Feature Request template you can add to your own projects - it follows the exact same YAML structure.</p>
 <p>Save as <code>.github/ISSUE_TEMPLATE/feature-request.yml</code>:</p>
 <pre><code class="hljs language-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Feature</span> <span class="hljs-string">Request</span>
 <span class="hljs-attr">description:</span> <span class="hljs-string">Suggest</span> <span class="hljs-string">a</span> <span class="hljs-string">new</span> <span class="hljs-string">agent,</span> <span class="hljs-string">slash</span> <span class="hljs-string">command,</span> <span class="hljs-string">or</span> <span class="hljs-string">improvement</span> <span class="hljs-string">to</span> <span class="hljs-string">Agent</span> <span class="hljs-string">Forge</span>
@@ -992,23 +992,23 @@ Screen reader and browser information is especially important for us to reproduc
     <span class="hljs-attr">attributes:</span>
       <span class="hljs-attr">label:</span> <span class="hljs-string">Before</span> <span class="hljs-string">Submitting</span>
       <span class="hljs-attr">options:</span>
-        <span class="hljs-bullet">-</span> <span class="hljs-attr">label:</span> <span class="hljs-string">I</span> <span class="hljs-string">searched</span> <span class="hljs-string">existing</span> <span class="hljs-string">issues</span> <span class="hljs-string">and</span> <span class="hljs-string">discussions</span> <span class="hljs-string">—</span> <span class="hljs-string">this</span> <span class="hljs-string">has</span> <span class="hljs-string">not</span> <span class="hljs-string">been</span> <span class="hljs-string">suggested</span> <span class="hljs-string">before</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">label:</span> <span class="hljs-string">I</span> <span class="hljs-string">searched</span> <span class="hljs-string">existing</span> <span class="hljs-string">issues</span> <span class="hljs-string">and</span> <span class="hljs-string">discussions</span> <span class="hljs-bullet">-</span> <span class="hljs-string">this</span> <span class="hljs-string">has</span> <span class="hljs-string">not</span> <span class="hljs-string">been</span> <span class="hljs-string">suggested</span> <span class="hljs-string">before</span>
           <span class="hljs-attr">required:</span> <span class="hljs-literal">true</span>
         <span class="hljs-bullet">-</span> <span class="hljs-attr">label:</span> <span class="hljs-string">This</span> <span class="hljs-string">feature</span> <span class="hljs-string">would</span> <span class="hljs-string">benefit</span> <span class="hljs-string">contributors</span> <span class="hljs-string">beyond</span> <span class="hljs-string">my</span> <span class="hljs-string">personal</span> <span class="hljs-string">workflow</span>
           <span class="hljs-attr">required:</span> <span class="hljs-literal">false</span></code></pre>
-<p><strong>Why this matters for your own projects:</strong> Every open source project you create or maintain can have issue templates. A project with good templates gets better bug reports and feature requests — which means less back-and-forth and faster, more confident triage. The templates you create here are skills you carry to every repository you own.</p>
+<p><strong>Why this matters for your own projects:</strong> Every open source project you create or maintain can have issue templates. A project with good templates gets better bug reports and feature requests - which means less back-and-forth and faster, more confident triage. The templates you create here are skills you carry to every repository you own.</p>
 <hr>
 <h3>Designing Templates for Your Own Projects</h3>
 <p>When designing templates for a project you maintain, use these principles:</p>
 <p><strong>Ask for the minimum that makes the report actionable.</strong> Every optional field you add is a reason for a contributor with limited time to stop and not finish. Required fields should be information you genuinely cannot triage without.</p>
 <p><strong>Use dropdowns over free text when the answer space is bounded.</strong> &quot;Which operating system?&quot; should be a dropdown, not a text field. Bounded dropdowns reduce typos, inconsistent labeling, and fields left blank.</p>
 <p><strong>Write textarea placeholders as examples, not instructions.</strong> A placeholder that says &quot;e.g., When I navigate to the Issues tab using NVDA in Chrome on Windows 11...&quot; teaches the contributor what a good answer looks like. A placeholder that says &quot;Describe the issue here&quot; does not.</p>
-<p><strong>Include a pre-submission checklist.</strong> Even one checkbox — &quot;I searched for existing issues&quot; — reduces duplicate reports significantly. The checklist also reinforces community norms: the act of checking a box is more memorable than reading a line of text.</p>
+<p><strong>Include a pre-submission checklist.</strong> Even one checkbox - &quot;I searched for existing issues&quot; - reduces duplicate reports significantly. The checklist also reinforces community norms: the act of checking a box is more memorable than reading a line of text.</p>
 <p><strong>Test every template with your screen reader before committing.</strong> Navigate through the form, tab through all fields, confirm every label is announced correctly, and verify that required-field errors are surfaced in a way a screen reader user will encounter before submitting.</p>
 <hr>
 <h2>8. Pull Request Templates</h2>
 <p>A pull request template appears as the default body of every new PR in your repository.</p>
-<p><strong>File location:</strong> <code>.github/pull_request_template.md</code> (singular — only one PR template per repo)</p>
+<p><strong>File location:</strong> <code>.github/pull_request_template.md</code> (singular - only one PR template per repo)</p>
 <h3>Reading the Agent Forge PR Template</h3>
 <p>Open <code>.github/pull_request_template.md</code> in VS Code. You will see the standard sections the project expects:</p>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Description</span>
@@ -1031,10 +1031,10 @@ Screen reader and browser information is especially important for us to reproduc
 </span>
 <span class="hljs-section">## Related Issues</span>
 &lt;!-- Use &quot;Closes #N&quot; to auto-close the issue when this PR is merged --&gt;</code></pre>
-<p><strong>Using it when opening a PR:</strong> The template auto-fills the PR description field. Tab through the sections with your screen reader and fill in each one. Delete placeholder comments (<code>&lt;!-- ... --&gt;</code>) — they will not appear in the rendered PR but can confuse screen readers if left in.</p>
+<p><strong>Using it when opening a PR:</strong> The template auto-fills the PR description field. Tab through the sections with your screen reader and fill in each one. Delete placeholder comments (<code>&lt;!-- ... --&gt;</code>) - they will not appear in the rendered PR but can confuse screen readers if left in.</p>
 <hr>
 <h2>9. Hands-On Activity</h2>
-<h3>Exercise A — Use an Existing Template</h3>
+<h3>Exercise A - Use an Existing Template</h3>
 <p><strong>Your Mission:</strong> File your first issue using a structured template. You&#39;ll experience the template as an end-user, which teaches you what good template design feels like.</p>
 <p><strong>What You&#39;ll Learn:</strong> How templates guide contributors, what fields are required vs optional, and whether screen reader announced all fields clearly.</p>
 <hr>
@@ -1072,8 +1072,8 @@ Screen reader and browser information is especially important for us to reproduc
 </ul>
 </li>
 <li>Count the templates and read their descriptions aloud (or write them down):<ul>
-<li>Template 1: [name] — [description]</li>
-<li>Template 2: [name] — [description]</li>
+<li>Template 1: [name] - [description]</li>
+<li>Template 2: [name] - [description]</li>
 <li>And so on...</li>
 </ul>
 </li>
@@ -1124,7 +1124,7 @@ Screen reader and browser information is especially important for us to reproduc
 </ul>
 </li>
 <li><strong>Write down at least 3 fields and whether each is required:</strong><ul>
-<li>Field: [name] — Required? [Yes/No]</li>
+<li>Field: [name] - Required? [Yes/No]</li>
 </ul>
 </li>
 </ol>
@@ -1139,7 +1139,7 @@ Screen reader and browser information is especially important for us to reproduc
 </li>
 <li><strong>For required fields marked with <code>*</code>:</strong> Fill them in completely</li>
 <li><strong>For optional fields:</strong> Choose at least one and fill it in (so you test optional fields)</li>
-<li>Don&#39;t worry about filling in <em>every</em> field — the point is to test the form</li>
+<li>Don&#39;t worry about filling in <em>every</em> field - the point is to test the form</li>
 </ol>
 <p><strong>What to expect:</strong></p>
 <ul>
@@ -1190,7 +1190,7 @@ Screen reader and browser information is especially important for us to reproduc
 <li>Your issue is visible to all repository members</li>
 </ul>
 <hr>
-<h4>Step 8: Checkpoint — Reflect on the Template</h4>
+<h4>Step 8: Checkpoint - Reflect on the Template</h4>
 <p>After submitting, answer:</p>
 <ol>
 <li><strong>Template Clarity:</strong> Did the template guide you toward providing useful information, or did fields feel confusing or unnecessary?</li>
@@ -1200,7 +1200,7 @@ Screen reader and browser information is especially important for us to reproduc
 </ol>
 <p><strong>Record these answers.</strong> You&#39;ll use them in Exercise D when you design your own template.</p>
 <hr>
-<h3>Exercise B — Add the Accessibility Bug Report Template to Your Fork</h3>
+<h3>Exercise B - Add the Accessibility Bug Report Template to Your Fork</h3>
 <p><strong>Your Mission:</strong> Create your own instance of the accessibility bug report template in your personal fork. This teaches you the file structure and gives you hands-on experience with YAML syntax.</p>
 <p><strong>What You&#39;ll Learn:</strong> How templates are stored as files, what YAML syntax looks like, and how to test templates locally.</p>
 <p><strong>Prerequisites:</strong></p>
@@ -1307,7 +1307,7 @@ Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</li>
 <p><strong>What to do:</strong></p>
 <ol>
 <li>Save the file (<code>Ctrl+S</code>)</li>
-<li><strong>Look at the bottom right of VS Code</strong> — you may see some notifications</li>
+<li><strong>Look at the bottom right of VS Code</strong> - you may see some notifications</li>
 <li>Check if VS Code shows any red squiggly lines (indicating syntax errors)</li>
 </ol>
 <p><strong>Common YAML errors to watch for:</strong></p>
@@ -1319,7 +1319,7 @@ Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</li>
 <p><strong>If you see red squiggles:</strong></p>
 <ol>
 <li>Hover over the error to see what VS Code suggests</li>
-<li>Compare your file with Section 7&#39;s template — look for extra/missing spaces or colons</li>
+<li>Compare your file with Section 7&#39;s template - look for extra/missing spaces or colons</li>
 <li>Make corrections and save again</li>
 </ol>
 <p><strong>If you see no errors:</strong></p>
@@ -1394,7 +1394,7 @@ Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</li>
 </ul>
 </li>
 </ol>
-<p><strong>Record your findings</strong> — you&#39;ll use this for Exercise D.</p>
+<p><strong>Record your findings</strong> - you&#39;ll use this for Exercise D.</p>
 <hr>
 <h4>Step 10: Merge Your Branch (Optional)</h4>
 <p><strong>What to do:</strong></p>
@@ -1426,7 +1426,7 @@ Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</li>
 <li>You tested it with your screen reader and noted any issues</li>
 </ol>
 <p>You&#39;re ready for Exercise C!</p>
-<h3>Exercise C — Submit It Upstream</h3>
+<h3>Exercise C - Submit It Upstream</h3>
 <p><strong>Your Mission:</strong> Contribute your tested template to the upstream <code>accesswatch/agent-forge</code> repository. This is a real open source contribution!</p>
 <p><strong>What You&#39;ll Learn:</strong> The PR process for submitting contributions upstream, working with maintainers, and seeing your code merged into an open source project.</p>
 <p><strong>Prerequisites:</strong></p>
@@ -1450,7 +1450,7 @@ Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</li>
 <li>Required fields are marked</li>
 </ul>
 </li>
-<li>Don&#39;t submit this test issue — just close the tab</li>
+<li>Don&#39;t submit this test issue - just close the tab</li>
 </ol>
 <p><strong>What success looks like:</strong></p>
 <ul>
@@ -1476,7 +1476,7 @@ Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</li>
 <li><strong>Head:</strong> <code>[your-username]/agent-forge</code> / <code>feat/add-accessibility-template</code> (your fork/branch)</li>
 </ul>
 </li>
-<li>Confirm this is correct — you&#39;re sending your branch to the upstream repository</li>
+<li>Confirm this is correct - you&#39;re sending your branch to the upstream repository</li>
 </ol>
 <p><strong>What you should see:</strong></p>
 <ul>
@@ -1542,7 +1542,7 @@ Closes <span class="hljs-comment">#[issue number] (if there is an open issue req
 </ul>
 </li>
 <li>Make any corrections needed</li>
-<li>Do not submit yet — continue to Step 5</li>
+<li>Do not submit yet - continue to Step 5</li>
 </ol>
 <hr>
 <h4>Step 5: Submit the PR</h4>
@@ -1590,7 +1590,7 @@ in commit <span class="hljs-comment">[commit hash]</span>. The template now incl
 </ol>
 <p><strong>If no feedback after 48 hours:</strong></p>
 <ul>
-<li>You can leave a polite comment: &quot;Friendly ping — is there anything else needed from my end?&quot;</li>
+<li>You can leave a polite comment: &quot;Friendly ping - is there anything else needed from my end?&quot;</li>
 </ul>
 <hr>
 <h4>Step 7: Celebrate Your Contribution!</h4>
@@ -1623,7 +1623,7 @@ in commit <span class="hljs-comment">[commit hash]</span>. The template now incl
 <li>What did the maintainers&#39; feedback teach you about accessibility templates?</li>
 <li>Would you do this again for other projects?</li>
 </ul>
-<h3>Exercise D — Design a Template for Your Own Project</h3>
+<h3>Exercise D - Design a Template for Your Own Project</h3>
 <p><strong>Your Mission:</strong> Apply everything you&#39;ve learned to design a template for a repository you own, maintain, or plan to create.</p>
 <p><strong>What You&#39;ll Learn:</strong> How to make design decisions about required vs. optional fields, field types, and how to test your template with real users.</p>
 <p><strong>Time estimate:</strong> 30-45 minutes (can be done after the workshop)</p>
@@ -1901,7 +1901,7 @@ Required Field <span class="hljs-number">2</span>: [<span class="hljs-type">name
 <h4>Part 7: (Optional) Deploy to GitHub and Test with a Friend</h4>
 <p><strong>Your task:</strong> Upload your template to a GitHub repository and test it with a colleague or friend.</p>
 <p><strong>What to do:</strong></p>
-<p>This is optional but powerful — real user testing is the best validation.</p>
+<p>This is optional but powerful - real user testing is the best validation.</p>
 <ol>
 <li><p><strong>Upload your template</strong> to a test repository:</p>
 <ul>
@@ -1978,7 +1978,7 @@ Why it <span class="hljs-params">helped:</span> [what improved<span class="hljs-
 <li>Reflected on your design decisions</li>
 </ul>
 <p><strong>You now understand the thinking that separates &quot;a blank text box&quot; from &quot;structured, actionable contributions.&quot;</strong></p>
-<p>This skill — understanding what information <em>actually</em> matters — is what makes great templates. The YAML syntax is just the delivery mechanism. The hard part is the thinking you did in Parts 1-5.</p>
+<p>This skill - understanding what information <em>actually</em> matters - is what makes great templates. The YAML syntax is just the delivery mechanism. The hard part is the thinking you did in Parts 1-5.</p>
 <hr>
 <h3>You&#39;ve Completed the Template Exercises!</h3>
 <p>You now:</p>
@@ -1988,10 +1988,10 @@ Why it <span class="hljs-params">helped:</span> [what improved<span class="hljs-
 <li>Know how to contribute upstream (Exercise C)</li>
 <li>Can design templates with real thinking behind them (Exercise D)</li>
 </ol>
-<p>In <strong>Chapter 16 (Agent Forge)</strong>, you&#39;ll see how the <code>@template-builder</code> agent automates the YAML writing part — but <em>you</em> bring the design thinking from this exercise. The agent generates YAML; you decide what questions to ask.</p>
+<p>In <strong>Chapter 16 (Agent Forge)</strong>, you&#39;ll see how the <code>@template-builder</code> agent automates the YAML writing part - but <em>you</em> bring the design thinking from this exercise. The agent generates YAML; you decide what questions to ask.</p>
 <hr>
 <h2>10. Day 2 Amplifier: The Template Builder Agent</h2>
-<p>Everything you just learned — field types, YAML structure, accessibility testing — is core GitHub knowledge. Now see how Agent Forge amplifies it.</p>
+<p>Everything you just learned - field types, YAML structure, accessibility testing - is core GitHub knowledge. Now see how Agent Forge amplifies it.</p>
 <p>Our 6th agent, <strong>@template-builder</strong>, is an interactive wizard that generates issue templates guided by your answers to simple questions. Instead of writing YAML by hand, you answer prompts and the agent produces a production-ready template in seconds.</p>
 <h3>How It Works</h3>
 <p><strong>In VS Code:</strong></p>
@@ -2034,11 +2034,11 @@ Why it <span class="hljs-params">helped:</span> [what improved<span class="hljs-
 <td>Very Low (structured output)</td>
 </tr>
 </tbody></table>
-<p>The Template Builder does not teach you to design templates — Section 5 taught you that. It automates the mechanical part: translating your decisions into working YAML.</p>
+<p>The Template Builder does not teach you to design templates - Section 5 taught you that. It automates the mechanical part: translating your decisions into working YAML.</p>
 <h3>Using the Template Builder</h3>
 <p><strong>Prerequisite:</strong> Complete Exercise D above. You should understand what fields you want to ask for and why.</p>
 <p><strong>Chapter 16 Exercise (Agent Forge):</strong> Use <code>@template-builder</code> to generate a template for a real project, then customize or extend it. See <a href="16-agent-forge.md#5-building-your-own-agent">Agent Forge: Building Your Own Agent</a>.</p>
-<p><strong>After the Workshop:</strong> Any repetitive GitHub task — templates, checklists, workflows — can be Agent Forged. The Template Builder shows how.</p>
+<p><strong>After the Workshop:</strong> Any repetitive GitHub task - templates, checklists, workflows - can be Agent Forged. The Template Builder shows how.</p>
 <hr>
 <p><em>Next: <a href="16-agent-forge.md">Agent Forge</a></em>
 <em>Back: <a href="14-accessible-code-review.md">Accessible Code Review</a></em>
@@ -2046,8 +2046,8 @@ Why it <span class="hljs-params">helped:</span> [what improved<span class="hljs-
 
   </main>
   <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
-    <p><strong>GIT Going with GitHub</strong> — A workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
-    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="http://www.joinbits.org">joinbits.org</a></p>
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
+    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="https://www.joinbits.org">joinbits.org</a></p>
   </footer>
   </body>
 </html>

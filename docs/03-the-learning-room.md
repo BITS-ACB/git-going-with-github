@@ -15,10 +15,10 @@ learning-room (SHARED)
 ```
 
 **Why one shared repo?**
-- **Realistic** — Open source projects are shared spaces
-- **Community** — You see each other's work and learn from each other
-- **Peer review** — You review the people sitting next to you
-- **Automation** — The bot serves one repo, coordinating all contributions
+- **Realistic** - Open source projects are shared spaces
+- **Community** - You see each other's work and learn from each other
+- **Peer review** - You review the people sitting next to you
+- **Automation** - The bot serves one repo, coordinating all contributions
 
 ---
 
@@ -27,9 +27,9 @@ learning-room (SHARED)
 Throughout Day 1, you work on **two parallel learning tracks**:
 
 ### Track 1: GitHub Skills Modules (Your Account)
-- **[Introduction to GitHub](https://github.com/skills/introduction-to-github)** — Create branch, open PR, merge
-- **[Communicate Using Markdown](https://github.com/skills/communicate-using-markdown)** — Write headings, links, code, tables
-- **[Review Pull Requests](https://github.com/skills/review-pull-requests)** — Comment, approve, suggest changes
+- **[Introduction to GitHub](https://github.com/skills/introduction-to-github)** - Create branch, open PR, merge
+- **[Communicate Using Markdown](https://github.com/skills/communicate-using-markdown)** - Write headings, links, code, tables
+- **[Review Pull Requests](https://github.com/skills/review-pull-requests)** - Comment, approve, suggest changes
 
 **Scope:** Your personal account (private to you unless you make it public)  
 **Bot:** Mona (GitHub's automated learning bot) guides each step  
@@ -128,7 +128,7 @@ learning-room/
 ### Step 3: Peer Reviewer Is Assigned
 
 **Pairing Bot (`.github/workflows/student-grouping.yml`):**
-- Automatically selects a reviewer (uses `least_reviews` strategy — balances workload)
+- Automatically selects a reviewer (uses `least_reviews` strategy - balances workload)
 - Requests review via GitHub API
 - Posts assignment comment explaining what to look for
 - **Example:**
@@ -248,10 +248,10 @@ When you open a PR in the Learning Room, you get **three types of feedback**:
 
 If your facilitator creates study groups, you'll be assigned with 2-3 other students:
 
-1. **Group Issue Thread** — Private communication space for your group
-2. **Shared Review Responsibility** — You review each other's work
-3. **Collaborative Challenges** — Optional group exercises
-4. **Peer Support** — Tag each other with questions
+1. **Group Issue Thread** - Private communication space for your group
+2. **Shared Review Responsibility** - You review each other's work
+3. **Collaborative Challenges** - Optional group exercises
+4. **Peer Support** - Tag each other with questions
 
 **Example:**
 ```
@@ -311,7 +311,7 @@ This is your collaboration space!
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 ```
 1. Go to github.com/[org]/learning-room
@@ -356,7 +356,7 @@ Files Changed Tab (what actually changed):
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 ```
 Conversation Tab (reading reviews):
@@ -406,7 +406,7 @@ Files Changed Tab (what actually changed):
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 ```
 1. On Conversation tab, Quick Nav F or VO+U → Landmarks → "Add a comment"
@@ -451,7 +451,7 @@ Files Changed Tab (what actually changed):
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 ```
 1. Open your PR (find in Pull Requests tab → Quick Nav H to navigate PR titles)
@@ -470,7 +470,7 @@ Files Changed Tab (what actually changed):
 ## FAQ: PR Sharing in Learning Room
 
 ### "Can I see other students' PRs?"
-**Yes!** All PRs in the shared repo are visible. This is intentional — you learn by seeing how others approach problems.
+**Yes!** All PRs in the shared repo are visible. This is intentional - you learn by seeing how others approach problems.
 
 ### "What if I don't agree with my assigned reviewer?"
 You can request additional reviewers manually. The bot's assignment is a convenience, not a mandate. Click "Reviewers" → select someone else.
@@ -491,7 +491,7 @@ Your study group will be created by facilitator, but you likely know your review
 Typically 15-60 minutes during the workshop. If a reviewer is slow, your facilitator can help or assign someone else.
 
 ### "What if bot feedback is wrong?"
-Comment explaining why. Request human review. The bot isn't perfect — that's why you have humans too.
+Comment explaining why. Request human review. The bot isn't perfect - that's why you have humans too.
 
 ### "Do I need to complete every challenge?"
 No! The Learning Room has challenges for all skill levels. You can pick what interests you, complete at your pace, and continue after the workshop.

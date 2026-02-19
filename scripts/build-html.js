@@ -35,14 +35,14 @@ const htmlTemplate = (content, title, relativePath) => {
   const prefix = depth > 0 ? '../'.repeat(depth) : './';
   const isHome = relativePath === 'index.html';
   const siteName = 'GIT Going with GitHub';
-  const pageTitle = isHome ? `${siteName} — BITS` : `${title} — ${siteName}`;
+  const pageTitle = isHome ? `${siteName} - BITS` : `${title} - ${siteName}`;
 
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GIT Going with GitHub — A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
   <title>${pageTitle}</title>
   <link rel="stylesheet" href="${prefix}styles/github-markdown.css">
   <link rel="stylesheet" href="${prefix}styles/highlight.css">
@@ -74,8 +74,8 @@ const htmlTemplate = (content, title, relativePath) => {
     ${content}
   </main>
   <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
-    <p><strong>GIT Going with GitHub</strong> — A workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
-    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="http://www.joinbits.org">joinbits.org</a></p>
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
+    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="https://www.joinbits.org">joinbits.org</a></p>
   </footer>
   ${isHome ? `<script>
 (function() {

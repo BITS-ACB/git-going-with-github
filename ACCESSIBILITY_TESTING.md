@@ -26,7 +26,7 @@ Use before deploying any new issue template or form.
 ### Instructions & Guidance
 - [ ] Markdown section explains what's needed and why
 - [ ] Instructions use simple language (8th grade reading level)
-- [ ] Headings are in order (H2, H3, H4 — not H2, H4)
+- [ ] Headings are in order (H2, H3, H4 - not H2, H4)
 - [ ] Links have descriptive text (not "click here")
 - [ ] Code examples are formatted clearly (not in plain text)
 
@@ -261,7 +261,7 @@ Test WITHOUT using the mouse.
 - **NVDA (free):** https://www.nvaccess.org/ (Windows)
 - **JAWS (trial available):** https://www.freedomscientific.com/ (Windows)
 - **VoiceOver (built-in):** macOS/iOS
-- **Keyboard Testing:** No tools needed — just don't use mouse!
+- **Keyboard Testing:** No tools needed - just don't use mouse!
 
 ### Feedback
 - **Screen Reader Commands:** See `docs/appendix-b-screen-reader-cheatsheet.md`
@@ -319,8 +319,8 @@ This repository includes a build system that converts all Markdown files to HTML
 - [ ] Screen reader can identify page regions using landmarks (`D` key in NVDA/JAWS)
 
 ### Validation
-- [ ] Run pages through the [W3C HTML Validator](https://validator.w3.org/) — check for errors
-- [ ] Run pages through [WAVE](https://wave.webaim.org/) — check for accessibility errors
+- [ ] Run pages through the [W3C HTML Validator](https://validator.w3.org/) - check for errors
+- [ ] Run pages through [WAVE](https://wave.webaim.org/) - check for accessibility errors
 - [ ] Verify syntax-highlighted code blocks are readable (not color-only)
 
 **Quick test:** Open `html/index.html` in a browser, enable your screen reader, and navigate using `H` (headings) and `K` (links). Every heading and link should be announced clearly.

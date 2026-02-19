@@ -27,7 +27,7 @@ GitHub has a hidden feature: if you create a repository named exactly **your-use
 - **Current focus:** What projects or technologies you're learning
 - **Skills:** Languages, frameworks, tools (optional)
 - **How to reach you:** Email, LinkedIn, personal site
-- **Fun facts:** Hobbies, interests (optional—keeps it human)
+- **Fun facts:** Hobbies, interests (optional-keeps it human)
 
 **Example profile README:**
 
@@ -56,20 +56,20 @@ I've been using screen readers for 8 years and believe accessible design is bett
 
 ### Profile README Best Practices
 
-**Keep it concise** — visitors skim, not read  
-**Update occasionally** — a README from 2019 looks stale  
-**Be authentic** — people connect with real humans, not buzzwords  
-**Include links** — make it easy to learn more or get in touch  
+**Keep it concise** - visitors skim, not read  
+**Update occasionally** - a README from 2019 looks stale  
+**Be authentic** - people connect with real humans, not buzzwords  
+**Include links** - make it easy to learn more or get in touch  
 
-**Avoid excessive badges** — 50 skill badges is visual clutter and screen reader noise  
-**Skip auto-generated stats** — "commits per day" widgets are often inaccessible  
-**Don't overthink it** — a simple paragraph is better than nothing  
+**Avoid excessive badges** - 50 skill badges is visual clutter and screen reader noise  
+**Skip auto-generated stats** - "commits per day" widgets are often inaccessible  
+**Don't overthink it** - a simple paragraph is better than nothing  
 
 ### Screen Reader Considerations
 
 - **Use headings** (`##`) for structure
 - **Provide alt text** for any images: `![Description of image](url)`
-- **Avoid ASCII art** — screen readers read it character by character (annoying)
+- **Avoid ASCII art** - screen readers read it character by character (annoying)
 - **Test your README** with a screen reader before publishing
 
 ### Other Profile Customizations
@@ -140,7 +140,7 @@ Many accessibility advocates successfully use Sponsors to fund their work improv
 
 ### What Is a GitHub Wiki?
 
-Every repository can have a wiki — a space for documentation separate from the code. It's lightweight and Markdown-based.
+Every repository can have a wiki - a space for documentation separate from the code. It's lightweight and Markdown-based.
 
 **When to use a wiki:**
 - Multi-page documentation (tutorials, guides, FAQs)
@@ -173,8 +173,8 @@ Wiki pages automatically appear in a sidebar for navigation.
 - All Markdown features work (headings, lists, links, code blocks)
 - Use proper heading hierarchy (`##`, `###`) for screen reader navigation
 - Link between wiki pages: `[[Page Title]]`
-- **Screen reader caveat:** Wiki pages are a separate Git repository. Any changes pushed directly to the wiki's git remote are not tracked by the main repository's branch protection — meaning no PR review process applies. Treat wikis as community-editable supplementary docs, not your primary critical documentation source.
+- **Screen reader caveat:** Wiki pages are a separate Git repository. Any changes pushed directly to the wiki's git remote are not tracked by the main repository's branch protection - meaning no PR review process applies. Treat wikis as community-editable supplementary docs, not your primary critical documentation source.
 
 ---
 
-*Return to: [Resources](appendix-u-resources.md) | [Appendix S — Organizations and Templates](appendix-s-github-organizations-templates.md) | [Appendix G — GitHub Discussions](appendix-g-github-discussions.md) | [Appendix T — Contributing to Open Source](appendix-t-contributing-to-open-source.md) | [Appendix A — Glossary](appendix-a-glossary.md)*
+*Return to: [Resources](appendix-u-resources.md) | [Appendix S - Organizations and Templates](appendix-s-github-organizations-templates.md) | [Appendix G - GitHub Discussions](appendix-g-github-discussions.md) | [Appendix T - Contributing to Open Source](appendix-t-contributing-to-open-source.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

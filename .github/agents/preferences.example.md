@@ -1,7 +1,7 @@
 # My Agent Forge Preferences
 
 > Copy this file to `preferences.md` (same folder) and fill it in.
-> `preferences.md` is in `.gitignore` — your personal settings stay in your fork only.
+> `preferences.md` is in `.gitignore` - your personal settings stay in your fork only.
 
 ## My GitHub Username
 
@@ -18,9 +18,9 @@ your-username
 
 <!-- 
 Options:
-  - "concise" — bullet points and short summaries, minimal prose
-  - "detailed" — full context, more explanation
-  - "screen-reader-optimized" — heading-heavy structure, no tables, explicit empty-state messages
+  - "concise" - bullet points and short summaries, minimal prose
+  - "detailed" - full context, more explanation
+  - "screen-reader-optimized" - heading-heavy structure, no tables, explicit empty-state messages
 -->
 screen-reader-optimized
 

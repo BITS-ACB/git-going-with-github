@@ -212,7 +212,7 @@ Currently the agent outputs YAML. Add a follow-up step:
 ### Exercise 4: Create a Template Showcase
 Collect anonymous templates built by workshop participants:
 
-1. Your template works — share it
+1. Your template works - share it
 2. Create a PR to `.github/community-templates/`
 3. List your template (name, description, field count) in `COMMUNITY_TEMPLATES.md`
 4. Other participants can reference or fork your template
@@ -302,10 +302,10 @@ This agent creates GitHub issue templates, but the same pattern works for:
 
 ## Related Resources
 
-- [Chapter 15: Issue Templates](../docs/15-issue-templates.md) — Learn to design templates manually
-- [Chapter 04: Working with Issues](../docs/04-working-with-issues.md) — Understand what good issues look like
-- [Chapter 14: Accessible Code Review](../docs/14-accessible-code-review.md) — Learn what accessibility issues to prevent via templates
-- [YAML Field Types Reference](../docs/15-issue-templates.md#6-yaml-form-based-templates) — Deep-dive on every field type
+- [Chapter 15: Issue Templates](../docs/15-issue-templates.md) - Learn to design templates manually
+- [Chapter 04: Working with Issues](../docs/04-working-with-issues.md) - Understand what good issues look like
+- [Chapter 14: Accessible Code Review](../docs/14-accessible-code-review.md) - Learn what accessibility issues to prevent via templates
+- [YAML Field Types Reference](../docs/15-issue-templates.md#6-yaml-form-based-templates) - Deep-dive on every field type
 
 ---
 

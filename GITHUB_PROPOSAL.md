@@ -43,7 +43,7 @@ Many organizations need structured, repeatable, accessible training that:
 
 **Three-Part Modular Design:**
 
-#### Part 1: Foundation (Day 1 — 7.5 hours)
+#### Part 1: Foundation (Day 1 - 7.5 hours)
 Chapters 0-9 teach GitHub essentials and collaborative workflows.
 
 | Chapter | Duration | Focus | Hands-On |
@@ -63,7 +63,7 @@ Chapters 0-9 teach GitHub essentials and collaborative workflows.
 
 **Note:** Day 1 and Day 2 agenda files provided separately for facilitators (not counted in learner time).
 
-#### Part 2: VS Code & Development Environment (Day 2 Foundation — 2.5 hours)
+#### Part 2: VS Code & Development Environment (Day 2 Foundation - 2.5 hours)
 Chapters 10-13 introduce VS Code, Git integration, and GitHub Copilot.
 
 | Chapter | Duration | Focus | New Concepts |
@@ -75,7 +75,7 @@ Chapters 10-13 introduce VS Code, Git integration, and GitHub Copilot.
 
 **Outcome:** Users comfortable with development environment; ready for advanced workflows.
 
-#### Part 3: Accessibility & Advanced Workflows (Day 2 Advanced — 4 hours)
+#### Part 3: Accessibility & Advanced Workflows (Day 2 Advanced - 4 hours)
 Chapters 14-16 teach accessible code review, issue templates, and AI agent automation.
 
 | Chapter | Duration | Focus | New Concepts |
@@ -154,9 +154,9 @@ Comprehensive breakdown of every hands-on exercise across the curriculum:
 - Full-scope exercise for practitioners building organizational templates
 
 **Chapter 16 Exercises (Agent Integration - 3 additional exercises):**
-- **Exercise 1: Generate Template with @template-builder** (8 steps) — Interactive Ask Questions workflow
-- **Exercise 2: Extend Agent Capabilities** (6 steps) — Edit agent, add security workflow variant
-- **Exercise 3: Iterative Refinement with Agent** (4 steps) — Generate → Modify → Refine → Observe pattern
+- **Exercise 1: Generate Template with @template-builder** (8 steps) - Interactive Ask Questions workflow
+- **Exercise 2: Extend Agent Capabilities** (6 steps) - Edit agent, add security workflow variant
+- **Exercise 3: Iterative Refinement with Agent** (4 steps) - Generate → Modify → Refine → Observe pattern
 
 **Exercise Structure (All 10+):**
 - 300-900 lines per exercise
@@ -249,7 +249,7 @@ Accessibility is woven into every chapter.
 ## Implementation & Deployment
 
 ### Current Assets
-- **34 Markdown documents** (16 core chapters + 1 setup guide + 16 appendices A–Q + Agent Forge)
+- **34 Markdown documents** (16 core chapters + 1 setup guide + 16 appendices A-Q + Agent Forge)
 - **6 AI agents** fully defined and integrated
 - **10 hands-on exercises** with detailed walkthroughs
 - **4 supporting guides** (Quick Reference, Troubleshooting, Resources, FAQ)
@@ -430,7 +430,7 @@ Open curriculum invites contributions:
 - **34 Markdown chapters** (~110,000 words total)
   - 16 core chapters (01-16)
   - 1 pre-workshop setup guide (00)
-  - 16 appendices A–Q (no M) with reference material
+  - 16 appendices A-Q (no M) with reference material
     - A: Glossary, B: Screen Reader Cheatsheet, C: Git Authentication
     - D: Gists, E: Advanced Features, F: VS Code A11y Reference
     - G: GitHub Actions, H: GitHub Projects, I: GitHub Discussions
@@ -449,13 +449,13 @@ Open curriculum invites contributions:
   - 3 exercises in Chapter 16 (Agent Forge)
   - All include checkpoints, screen reader guidance, troubleshooting
 - **7 supporting guides** (HTML + Markdown formats)
-  - QUICK_REFERENCE.md — 1-page cheat sheet
-  - TROUBLESHOOTING.md — 20+ solutions
-  - appendix-u-resources.md — comprehensive manifest
-  - FAQ.md — 50+ questions
-  - PROGRESS_TRACKER.md — printable checklist
-  - ACCESSIBILITY_TESTING.md — testing workflow
-  - GITHUB_PROPOSAL.md — this document
+  - QUICK_REFERENCE.md - 1-page cheat sheet
+  - TROUBLESHOOTING.md - 20+ solutions
+  - appendix-u-resources.md - comprehensive manifest
+  - FAQ.md - 50+ questions
+  - PROGRESS_TRACKER.md - printable checklist
+  - ACCESSIBILITY_TESTING.md - testing workflow
+  - GITHUB_PROPOSAL.md - this document
 - **Complete HTML conversion** (545KB web-ready files)
   - All guides converted to HTML
   - All advanced chapters converted to HTML
@@ -516,7 +516,7 @@ See `README.md` for full chapter list and quick links.
   - Ch 14: 3 exercises (accessible code review)
   - Ch 15: 4 exercises (issue templates, including optional custom template)
   - Ch 16: 3 exercises (agent integration)
-- **Appendices:** 16 (A–Q, no M) — security, GFM, branch protection, resources, and more added February 2026
+- **Appendices:** 16 (A-Q, no M) - security, GFM, branch protection, resources, and more added February 2026
 - **Agents:** 6 (ready to use)
   - @daily-briefing, @issue-tracker, @pr-review, @analytics, @insiders-a11y-tracker, @template-builder
 - **Slash commands:** 28 (documented & organized by use case)

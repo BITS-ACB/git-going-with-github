@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GIT Going with GitHub — A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
-  <title>Appendix C: Accessibility Standards Reference — GIT Going with GitHub</title>
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
+  <title>Appendix C: Accessibility Standards Reference - GIT Going with GitHub</title>
   <link rel="stylesheet" href="./styles/github-markdown.css">
   <link rel="stylesheet" href="./styles/highlight.css">
   <link rel="stylesheet" href="./styles/custom.css">
@@ -32,15 +32,15 @@
     <h1>Appendix C: Accessibility Standards Reference</h1>
 <h2>WCAG, ARIA, and What They Mean for Your Contributions</h2>
 <blockquote>
-<p>This appendix gives you a working understanding of the accessibility standards that govern the web, GitHub&#39;s interface, and the projects you will contribute to. You do not need to memorize these — use this as a lookup when a PR review mentions a specific standard or success criterion.</p>
+<p>This appendix gives you a working understanding of the accessibility standards that govern the web, GitHub&#39;s interface, and the projects you will contribute to. You do not need to memorize these - use this as a lookup when a PR review mentions a specific standard or success criterion.</p>
 </blockquote>
 <hr>
 <h2>Table of Contents</h2>
 <ol>
-<li><a href="#1-wcag-22--the-four-principles">WCAG 2.2 — The Four Principles</a></li>
+<li><a href="#1-wcag-22--the-four-principles">WCAG 2.2 - The Four Principles</a></li>
 <li><a href="#2-conformance-levels-a-aa-aaa">Conformance Levels: A, AA, AAA</a></li>
 <li><a href="#3-key-success-criteria-for-web-contributions">Key Success Criteria for Web Contributions</a></li>
-<li><a href="#4-aria--roles-states-and-properties">ARIA — Roles, States, and Properties</a></li>
+<li><a href="#4-aria--roles-states-and-properties">ARIA - Roles, States, and Properties</a></li>
 <li><a href="#5-aria-landmark-roles">ARIA Landmark Roles</a></li>
 <li><a href="#6-common-aria-patterns">Common ARIA Patterns</a></li>
 <li><a href="#7-how-standards-apply-to-github-contributions">How Standards Apply to GitHub Contributions</a></li>
@@ -49,7 +49,7 @@
 <li><a href="#10-official-references">Official References</a></li>
 </ol>
 <hr>
-<h2>1. WCAG 2.2 — The Four Principles</h2>
+<h2>1. WCAG 2.2 - The Four Principles</h2>
 <p>WCAG (Web Content Accessibility Guidelines) is organized around four principles, often abbreviated <strong>POUR</strong>:</p>
 <table>
 <thead>
@@ -62,12 +62,12 @@
 <tbody><tr>
 <td><strong>Perceivable</strong></td>
 <td>Information must be presentable to users in ways they can perceive</td>
-<td>An image with no alt text — a screen reader user gets nothing</td>
+<td>An image with no alt text - a screen reader user gets nothing</td>
 </tr>
 <tr>
 <td><strong>Operable</strong></td>
 <td>UI components and navigation must be operable</td>
-<td>A button that only works on hover — keyboard users cannot activate it</td>
+<td>A button that only works on hover - keyboard users cannot activate it</td>
 </tr>
 <tr>
 <td><strong>Understandable</strong></td>
@@ -77,7 +77,7 @@
 <tr>
 <td><strong>Robust</strong></td>
 <td>Content must be robust enough to be interpreted by assistive technologies</td>
-<td>Custom JavaScript widgets with no ARIA roles — screen readers cannot determine what they are</td>
+<td>Custom JavaScript widgets with no ARIA roles - screen readers cannot determine what they are</td>
 </tr>
 </tbody></table>
 <p>Every WCAG success criterion belongs to one of these four principles.</p>
@@ -93,17 +93,17 @@
 </thead>
 <tbody><tr>
 <td><strong>A</strong></td>
-<td>Minimum accessibility — the baseline that removes the most severe barriers</td>
+<td>Minimum accessibility - the baseline that removes the most severe barriers</td>
 <td>Required by most accessibility laws</td>
 </tr>
 <tr>
 <td><strong>AA</strong></td>
-<td>Enhanced accessibility — removes significant barriers</td>
+<td>Enhanced accessibility - removes significant barriers</td>
 <td>Required by WCAG 2.2 compliance targets, most government and enterprise standards, GitHub&#39;s own accessibility commitment</td>
 </tr>
 <tr>
 <td><strong>AAA</strong></td>
-<td>Highest level — removes remaining barriers for the most niche cases</td>
+<td>Highest level - removes remaining barriers for the most niche cases</td>
 <td>Not universally required; applied where feasible</td>
 </tr>
 </tbody></table>
@@ -292,7 +292,7 @@
 </tr>
 </tbody></table>
 <hr>
-<h2>4. ARIA — Roles, States, and Properties</h2>
+<h2>4. ARIA - Roles, States, and Properties</h2>
 <p>WAI-ARIA (Accessible Rich Internet Applications) fills the gap between what HTML natively expresses and what complex interactive widgets require.</p>
 <p><strong>Three categories:</strong></p>
 <table>
@@ -321,9 +321,9 @@
 </tbody></table>
 <p><strong>Important rules:</strong></p>
 <ol>
-<li><strong>Don&#39;t use ARIA if native HTML suffices.</strong> A <code>&lt;button&gt;</code> is already a button — adding <code>role=&quot;button&quot;</code> to a <code>&lt;div&gt;</code> is only needed when HTML semantics cannot be used.</li>
+<li><strong>Don&#39;t use ARIA if native HTML suffices.</strong> A <code>&lt;button&gt;</code> is already a button - adding <code>role=&quot;button&quot;</code> to a <code>&lt;div&gt;</code> is only needed when HTML semantics cannot be used.</li>
 <li><strong>All interactive ARIA widgets must be keyboard operable.</strong> Adding <code>role=&quot;button&quot;</code> means you must also handle <code>Enter</code> and <code>Space</code> keypresses in JavaScript.</li>
-<li><strong>ARIA only affects the accessibility tree.</strong> It does not add visual styling or behavior — it only changes what assistive technologies announce.</li>
+<li><strong>ARIA only affects the accessibility tree.</strong> It does not add visual styling or behavior - it only changes what assistive technologies announce.</li>
 </ol>
 <hr>
 <h2>5. ARIA Landmark Roles</h2>
@@ -429,7 +429,7 @@
 </ul>
 <hr>
 <h2>8. Testing Against Standards</h2>
-<h3>Automated Tools (catch ~30–40% of issues)</h3>
+<h3>Automated Tools (catch ~30-40% of issues)</h3>
 <table>
 <thead>
 <tr>
@@ -439,15 +439,15 @@
 </thead>
 <tbody><tr>
 <td><a href="https://www.deque.com/axe/">axe DevTools</a></td>
-<td>Browser extension — run on any page, get WCAG violations with criterion references</td>
+<td>Browser extension - run on any page, get WCAG violations with criterion references</td>
 </tr>
 <tr>
 <td><a href="https://wave.webaim.org/">WAVE</a></td>
-<td>Browser extension or web service — visual overlay showing issues</td>
+<td>Browser extension or web service - visual overlay showing issues</td>
 </tr>
 <tr>
 <td><a href="https://developer.chrome.com/docs/lighthouse/">Lighthouse</a></td>
-<td>Built into Chrome DevTools — accessibility audit with scores</td>
+<td>Built into Chrome DevTools - accessibility audit with scores</td>
 </tr>
 <tr>
 <td><a href="https://www.ibm.com/able/toolkit/tools/">IBM Equal Access Checker</a></td>
@@ -456,11 +456,11 @@
 </tbody></table>
 <h3>Manual Testing (catches the rest)</h3>
 <ol>
-<li><strong>Keyboard-only navigation</strong> — unplug your mouse; can you do everything?</li>
-<li><strong>Screen reader walkthrough</strong> — navigate the feature with NVDA, JAWS, or VoiceOver</li>
-<li><strong>200% zoom</strong> — does content reflow without horizontal scrolling?</li>
-<li><strong>High contrast mode</strong> — Windows High Contrast or macOS Increase Contrast; are all elements still visible?</li>
-<li><strong>Disable CSS</strong> — does the content still make sense in reading order?</li>
+<li><strong>Keyboard-only navigation</strong> - unplug your mouse; can you do everything?</li>
+<li><strong>Screen reader walkthrough</strong> - navigate the feature with NVDA, JAWS, or VoiceOver</li>
+<li><strong>200% zoom</strong> - does content reflow without horizontal scrolling?</li>
+<li><strong>High contrast mode</strong> - Windows High Contrast or macOS Increase Contrast; are all elements still visible?</li>
+<li><strong>Disable CSS</strong> - does the content still make sense in reading order?</li>
 </ol>
 <hr>
 <h2>9. Quick Reference: What to Check in a PR</h2>
@@ -555,12 +555,12 @@
 </tr>
 </tbody></table>
 <hr>
-<p><em>Return to: <a href="appendix-u-resources.md">Resources</a> | <a href="appendix-b-screen-reader-cheatsheet.md">Appendix B — Screen Reader Cheat Sheet</a> | <a href="appendix-a-glossary.md">Appendix A — Glossary</a></em></p>
+<p><em>Return to: <a href="appendix-u-resources.md">Resources</a> | <a href="appendix-b-screen-reader-cheatsheet.md">Appendix B - Screen Reader Cheat Sheet</a> | <a href="appendix-a-glossary.md">Appendix A - Glossary</a></em></p>
 
   </main>
   <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
-    <p><strong>GIT Going with GitHub</strong> — A workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
-    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="http://www.joinbits.org">joinbits.org</a></p>
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
+    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="https://www.joinbits.org">joinbits.org</a></p>
   </footer>
   </body>
 </html>

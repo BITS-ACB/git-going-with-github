@@ -15,7 +15,7 @@
 
 ## 1. Overview
 
-GitHub Copilot offers access to AI models from multiple providers including OpenAI, Anthropic, Google, and xAI. The model you choose affects response quality, speed, and premium request consumption. Different models excel at different tasks — understanding these trade-offs helps you get better results.
+GitHub Copilot offers access to AI models from multiple providers including OpenAI, Anthropic, Google, and xAI. The model you choose affects response quality, speed, and premium request consumption. Different models excel at different tasks - understanding these trade-offs helps you get better results.
 
 **Models are updated frequently.** This appendix reflects the model landscape as of February 2026. For the latest additions and retirements, see the [GitHub Copilot changelog](https://github.blog/changelog/label/copilot/) and [GitHub's official supported models documentation](https://docs.github.com/en/copilot/reference/ai-models/supported-models).
 
@@ -27,13 +27,13 @@ GitHub Docs organizes models by task. Match your task to the right model to get 
 
 ### General-Purpose Coding and Writing
 
-For everyday tasks — code completions, explanations, refactoring, writing documentation.
+For everyday tasks - code completions, explanations, refactoring, writing documentation.
 
 | Model | Provider | Strengths | Cost |
 |-------|----------|-----------|------|
 | **GPT-4.1** | OpenAI | Fast, accurate code completions and explanations. Reliable default for most tasks. | Free |
 | **GPT-5 mini** | OpenAI | Reliable for most coding and writing tasks. Fast and accurate across languages and frameworks. Also supports image input. | Free |
-| **GPT-5.1-Codex** | OpenAI | Higher-quality code on complex engineering tasks like features, tests, debugging, refactors, and reviews — without requiring lengthy prompts. | 1× |
+| **GPT-5.1-Codex** | OpenAI | Higher-quality code on complex engineering tasks like features, tests, debugging, refactors, and reviews - without requiring lengthy prompts. | 1× |
 | **Grok Code Fast 1** | xAI | Specialized for coding. Performs well on code generation and debugging across multiple languages. | 0.25× |
 | **Raptor mini** | OpenAI (fine-tuned) | Specialized for fast, accurate inline suggestions and explanations. Optimized for completions. | Free |
 
@@ -63,7 +63,7 @@ For complex problems, architecture decisions, multi-file analysis, tricky bugs, 
 
 ### Agentic Software Development
 
-For autonomous coding tasks in Agent mode — when Copilot writes code, runs terminal commands, and iterates without step-by-step guidance from you.
+For autonomous coding tasks in Agent mode - when Copilot writes code, runs terminal commands, and iterates without step-by-step guidance from you.
 
 | Model | Provider | Strengths | Cost |
 |-------|----------|-----------|------|
@@ -73,7 +73,7 @@ For autonomous coding tasks in Agent mode — when Copilot writes code, runs ter
 
 ### Working with Visuals
 
-For tasks that involve images, screenshots, diagrams, or UI mockups — paste an image directly into the chat input.
+For tasks that involve images, screenshots, diagrams, or UI mockups - paste an image directly into the chat input.
 
 | Model | Supports Images |
 |-------|----------------|
@@ -139,9 +139,9 @@ Models marked with a premium multiplier consume premium requests proportionally.
 
 **Tips for managing premium request usage:**
 
-- Use **GPT-4.1** or **GPT-5 mini** (both free) for everyday questions, quick explanations, and simple completions — they're fast and capable
+- Use **GPT-4.1** or **GPT-5 mini** (both free) for everyday questions, quick explanations, and simple completions - they're fast and capable
 - Upgrade to **Claude Sonnet** or **GPT-5.2** (1×) only when the task genuinely requires deeper reasoning
-- Save **Claude Opus** (3×) for the most demanding analyses — architecture decisions, complex debugging, sophisticated design review
+- Save **Claude Opus** (3×) for the most demanding analyses - architecture decisions, complex debugging, sophisticated design review
 - Use **Auto** mode (see below) and let Copilot allocate model selection intelligently
 
 ---
@@ -152,7 +152,7 @@ Models marked with a premium multiplier consume premium requests proportionally.
 
 1. Open the **Chat** panel (`Ctrl+Shift+I` / `Cmd+Shift+I`)
 2. At the bottom of the chat input area, you'll see the current model name as a button (e.g., "Auto" or "Claude Sonnet 4.6")
-3. Activate the model picker button — this opens a dropdown list of available models
+3. Activate the model picker button - this opens a dropdown list of available models
 4. Arrow through the list and press `Enter` to select a model
 5. For screen reader users: the chat input will announce the newly selected model after switching
 
@@ -167,7 +167,7 @@ Models marked with a premium multiplier consume premium requests proportionally.
 In the Chat panel, the model picker button is near the **bottom** of the chat view. If you're having trouble locating it:
 
 - Tab through the bottom toolbar of the chat panel
-- Listen for the model name announced — it appears between the "Attach" button and the send button
+- Listen for the model name announced - it appears between the "Attach" button and the send button
 - Press `Space` or `Enter` to open the picker
 
 ---
@@ -203,7 +203,7 @@ GitHub regularly updates the model roster. Older model versions are retired when
 - Claude Opus 4.1
 - GPT-5 (base), GPT-5-Codex
 
-To stay current, watch the [GitHub Copilot changelog](https://github.blog/changelog/label/copilot/) — model additions and retirements are announced there.
+To stay current, watch the [GitHub Copilot changelog](https://github.blog/changelog/label/copilot/) - model additions and retirements are announced there.
 
 ---
 

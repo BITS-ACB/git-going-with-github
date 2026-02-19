@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GIT Going with GitHub — A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
-  <title>Appendix V: Agent Forge Reference — GIT Going with GitHub</title>
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
+  <title>Appendix V: Agent Forge Reference - GIT Going with GitHub</title>
   <link rel="stylesheet" href="./styles/github-markdown.css">
   <link rel="stylesheet" href="./styles/highlight.css">
   <link rel="stylesheet" href="./styles/custom.css">
@@ -30,7 +30,7 @@
   </nav>
   <main id="main-content" class="markdown-body">
     <h1>Appendix V: Agent Forge Reference</h1>
-<h2>Complete Reference — Agents, Slash Commands, Instructions, Configuration Levels, and All File Formats</h2>
+<h2>Complete Reference - Agents, Slash Commands, Instructions, Configuration Levels, and All File Formats</h2>
 <blockquote>
 <p>This is your comprehensive reference for Agent Forge and the full VS Code Copilot customization system. For the lesson, see <a href="16-agent-forge.md">Chapter 16: Agent Forge</a>. For Copilot keyboard shortcuts and Chat features, see <a href="appendix-w-github-copilot-reference.md">Appendix W: GitHub Copilot Reference</a>.</p>
 </blockquote>
@@ -39,15 +39,15 @@
 <ol>
 <li><a href="#1-the-six-agents">The Six Agents</a></li>
 <li><a href="#2-the-28-slash-commands">The 28 Slash Commands</a></li>
-<li><a href="#3-customization-primitives--decision-guide">Customization Primitives — Decision Guide</a></li>
-<li><a href="#4-scope-and-priority--all-levels">Scope and Priority — All Levels</a></li>
-<li><a href="#5-always-on-instructions--all-file-types">Always-On Instructions — All File Types</a></li>
+<li><a href="#3-customization-primitives--decision-guide">Customization Primitives - Decision Guide</a></li>
+<li><a href="#4-scope-and-priority--all-levels">Scope and Priority - All Levels</a></li>
+<li><a href="#5-always-on-instructions--all-file-types">Always-On Instructions - All File Types</a></li>
 <li><a href="#6-file-based-instructions-instructionsmd">File-Based Instructions (.instructions.md)</a></li>
-<li><a href="#7-agentmd--complete-format-reference">.agent.md — Complete Format Reference</a></li>
-<li><a href="#8-promptmd--complete-format-reference">.prompt.md — Complete Format Reference</a></li>
-<li><a href="#9-agent-skills-skillmd--complete-format-reference">Agent Skills (SKILL.md) — Complete Format Reference</a></li>
-<li><a href="#10-hooks-json--lifecycle-automation">Hooks (.json) — Lifecycle Automation</a></li>
-<li><a href="#11-preferencesmd--agent-forge-personal-settings">preferences.md — Agent Forge Personal Settings</a></li>
+<li><a href="#7-agentmd--complete-format-reference">.agent.md - Complete Format Reference</a></li>
+<li><a href="#8-promptmd--complete-format-reference">.prompt.md - Complete Format Reference</a></li>
+<li><a href="#9-agent-skills-skillmd--complete-format-reference">Agent Skills (SKILL.md) - Complete Format Reference</a></li>
+<li><a href="#10-hooks-json--lifecycle-automation">Hooks (.json) - Lifecycle Automation</a></li>
+<li><a href="#11-preferencesmd--agent-forge-personal-settings">preferences.md - Agent Forge Personal Settings</a></li>
 <li><a href="#12-diagnostics-and-troubleshooting">Diagnostics and Troubleshooting</a></li>
 <li><a href="#13-further-reading">Further Reading</a></li>
 </ol>
@@ -102,7 +102,7 @@
 </tr>
 </tbody></table>
 <hr>
-<h3><code>@daily-briefing</code> — Morning Briefing</h3>
+<h3><code>@daily-briefing</code> - Morning Briefing</h3>
 <p><strong>Agent file:</strong> <code>.github/agents/daily-briefing.agent.md</code></p>
 <table>
 <thead>
@@ -124,7 +124,7 @@
 <td>Weekly digest</td>
 </tr>
 </tbody></table>
-<p><strong>Output sections (H2 headings — navigate with <code>H</code>):</strong></p>
+<p><strong>Output sections (H2 headings - navigate with <code>H</code>):</strong></p>
 <ul>
 <li>Needs Your Action<ul>
 <li>Pull Requests Waiting for Your Review</li>
@@ -141,7 +141,7 @@
 <li>All Clear (confirms checked but empty categories)</li>
 </ul>
 <hr>
-<h3><code>@issue-tracker</code> — Issue Management</h3>
+<h3><code>@issue-tracker</code> - Issue Management</h3>
 <p><strong>Agent file:</strong> <code>.github/agents/issue-tracker.agent.md</code></p>
 <table>
 <thead>
@@ -169,7 +169,7 @@
 </tbody></table>
 <p><strong>Important:</strong> The agent drafts replies. You post. Always review tone against the <a href="07-culture-etiquette.md">Culture &amp; Etiquette guide</a>.</p>
 <hr>
-<h3><code>@pr-review</code> — Pull Request Review</h3>
+<h3><code>@pr-review</code> - Pull Request Review</h3>
 <p><strong>Agent file:</strong> <code>.github/agents/pr-review.agent.md</code></p>
 <table>
 <thead>
@@ -207,7 +207,7 @@
 </ul>
 <p><strong>Critical rule:</strong> The agent produces a starting point. Read it, edit it, post it under your own name.</p>
 <hr>
-<h3><code>@analytics</code> — Team Analytics</h3>
+<h3><code>@analytics</code> - Team Analytics</h3>
 <p><strong>Agent file:</strong> <code>.github/agents/analytics.agent.md</code></p>
 <table>
 <thead>
@@ -234,7 +234,7 @@
 </tr>
 </tbody></table>
 <hr>
-<h3><code>@insiders-a11y-tracker</code> — Accessibility Change Monitor</h3>
+<h3><code>@insiders-a11y-tracker</code> - Accessibility Change Monitor</h3>
 <p><strong>Agent file:</strong> <code>.github/agents/insiders-a11y-tracker.agent.md</code></p>
 <table>
 <thead>
@@ -283,7 +283,7 @@
 </tbody></table>
 <p><strong>Risk levels:</strong> High (regression), Medium (degraded), Low (improvement opportunity)</p>
 <hr>
-<h3><code>@template-builder</code> — Issue Template Wizard</h3>
+<h3><code>@template-builder</code> - Issue Template Wizard</h3>
 <p><strong>Agent file:</strong> <code>.github/agents/template-builder.agent.md</code></p>
 <table>
 <thead>
@@ -389,7 +389,7 @@
 </tr>
 <tr>
 <td><code>/onboard-repo</code></td>
-<td>First-time scan of a repo — health, quick wins, recommended actions</td>
+<td>First-time scan of a repo - health, quick wins, recommended actions</td>
 </tr>
 <tr>
 <td><code>/pr-author-checklist</code></td>
@@ -405,7 +405,7 @@
 </tr>
 <tr>
 <td><code>/project-status</code></td>
-<td>GitHub Projects board overview — columns, blocked, stale</td>
+<td>GitHub Projects board overview - columns, blocked, stale</td>
 </tr>
 <tr>
 <td><code>/react</code></td>
@@ -450,35 +450,35 @@
 </thead>
 <tbody><tr>
 <td><code>/my-issues</code></td>
-<td><code>/my-issues</code> — see all your open issues with priority signals</td>
+<td><code>/my-issues</code> - see all your open issues with priority signals</td>
 </tr>
 <tr>
 <td><code>/review-pr</code></td>
-<td><code>/review-pr #14</code> — AI-generated review with inline suggestions</td>
+<td><code>/review-pr #14</code> - AI-generated review with inline suggestions</td>
 </tr>
 <tr>
 <td><code>/triage</code></td>
-<td><code>/triage #22</code> — get label and priority suggestions for a new issue</td>
+<td><code>/triage #22</code> - get label and priority suggestions for a new issue</td>
 </tr>
 <tr>
 <td><code>/issue-reply</code></td>
-<td><code>/issue-reply #15</code> — draft a reply to an issue thread</td>
+<td><code>/issue-reply #15</code> - draft a reply to an issue thread</td>
 </tr>
 <tr>
 <td><code>/a11y-update</code></td>
-<td><code>/a11y-update insiders</code> — latest a11y improvements with WCAG refs</td>
+<td><code>/a11y-update insiders</code> - latest a11y improvements with WCAG refs</td>
 </tr>
 <tr>
 <td><code>/daily-briefing</code></td>
-<td><code>/daily-briefing</code> — same output as <code>@daily-briefing</code></td>
+<td><code>/daily-briefing</code> - same output as <code>@daily-briefing</code></td>
 </tr>
 <tr>
 <td><code>/draft-release</code></td>
-<td><code>/draft-release v2.0</code> — generate release notes from merged PRs</td>
+<td><code>/draft-release v2.0</code> - generate release notes from merged PRs</td>
 </tr>
 </tbody></table>
 <hr>
-<h2>3. Customization Primitives — Decision Guide</h2>
+<h2>3. Customization Primitives - Decision Guide</h2>
 <p>Before creating any file, choose the right primitive for the job. Each primitive is a different file type with a different purpose, scope, and trigger.</p>
 <table>
 <thead>
@@ -491,37 +491,37 @@
 <tbody><tr>
 <td><strong>Always-on instructions</strong></td>
 <td><code>copilot-instructions.md</code>, <code>AGENTS.md</code>, <code>CLAUDE.md</code></td>
-<td>Standards that apply to every request — coding conventions, project context, tone</td>
+<td>Standards that apply to every request - coding conventions, project context, tone</td>
 </tr>
 <tr>
 <td><strong>File-based instructions</strong></td>
 <td><code>*.instructions.md</code></td>
-<td>Rules that only apply to specific file types or folders — Python style, test conventions, docs standards</td>
+<td>Rules that only apply to specific file types or folders - Python style, test conventions, docs standards</td>
 </tr>
 <tr>
 <td><strong>Prompts / Slash Commands</strong></td>
 <td><code>*.prompt.md</code></td>
-<td>Single repeatable task invoked with <code>/command</code> — scaffolding, triage, PR prep</td>
+<td>Single repeatable task invoked with <code>/command</code> - scaffolding, triage, PR prep</td>
 </tr>
 <tr>
 <td><strong>Agent Skills</strong></td>
 <td><code>SKILL.md</code> in a named folder</td>
-<td>Multi-step workflow with bundled scripts and reference files — testing, deployment, auditing</td>
+<td>Multi-step workflow with bundled scripts and reference files - testing, deployment, auditing</td>
 </tr>
 <tr>
 <td><strong>Custom Agents</strong></td>
 <td><code>*.agent.md</code></td>
-<td>Specialized persona with tool restrictions — orchestrates tasks, can invoke subagents</td>
+<td>Specialized persona with tool restrictions - orchestrates tasks, can invoke subagents</td>
 </tr>
 <tr>
 <td><strong>Hooks</strong></td>
 <td><code>*.json</code></td>
-<td>Deterministic lifecycle automation — block dangerous commands, run formatters, enforce policy</td>
+<td>Deterministic lifecycle automation - block dangerous commands, run formatters, enforce policy</td>
 </tr>
 <tr>
 <td><strong>Personal Preferences</strong></td>
 <td><code>preferences.md</code></td>
-<td>Agent Forge fork-local personal settings — repos, output format, timezone</td>
+<td>Agent Forge fork-local personal settings - repos, output format, timezone</td>
 </tr>
 </tbody></table>
 <h3>Choosing Between Primitives</h3>
@@ -539,10 +539,10 @@
 </ul>
 <p><strong>Instructions vs Hooks?</strong></p>
 <ul>
-<li>Instructions <em>guide</em> the agent (non-deterministic). Hooks <em>enforce</em> behavior via shell commands at lifecycle events — they run regardless of what the agent was prompted to do.</li>
+<li>Instructions <em>guide</em> the agent (non-deterministic). Hooks <em>enforce</em> behavior via shell commands at lifecycle events - they run regardless of what the agent was prompted to do.</li>
 </ul>
 <hr>
-<h2>4. Scope and Priority — All Levels</h2>
+<h2>4. Scope and Priority - All Levels</h2>
 <p>Every customization file exists at one of three scopes. VS Code combines all matching files from all scopes and sends them to the model.</p>
 <h3>The Three Scopes</h3>
 <table>
@@ -556,7 +556,7 @@
 <tbody><tr>
 <td><strong>User / Personal</strong></td>
 <td>VS Code profile folder</td>
-<td>You only — follows Settings Sync across devices</td>
+<td>You only - follows Settings Sync across devices</td>
 </tr>
 <tr>
 <td><strong>Workspace</strong></td>
@@ -571,9 +571,9 @@
 </tbody></table>
 <h3>Priority Order (highest wins in conflicts)</h3>
 <ol>
-<li><strong>Personal / User-level</strong> — your profile instructions override everything</li>
-<li><strong>Workspace / Repository-level</strong> — <code>.github/copilot-instructions.md</code>, <code>AGENTS.md</code>, <code>.github/agents/*.agent.md</code></li>
-<li><strong>Organization-level</strong> — organization-defined custom instructions (lowest priority)</li>
+<li><strong>Personal / User-level</strong> - your profile instructions override everything</li>
+<li><strong>Workspace / Repository-level</strong> - <code>.github/copilot-instructions.md</code>, <code>AGENTS.md</code>, <code>.github/agents/*.agent.md</code></li>
+<li><strong>Organization-level</strong> - organization-defined custom instructions (lowest priority)</li>
 </ol>
 <h3>User-Level File Locations (Personal, Cross-Workspace)</h3>
 <p>All of these files roam with your VS Code Settings Sync.</p>
@@ -592,12 +592,12 @@
 </tr>
 <tr>
 <td>Prompts</td>
-<td>Same folder — <code>*.prompt.md</code></td>
+<td>Same folder - <code>*.prompt.md</code></td>
 <td>Same folder</td>
 </tr>
 <tr>
 <td>Agents</td>
-<td>Same folder — <code>*.agent.md</code></td>
+<td>Same folder - <code>*.agent.md</code></td>
 <td>Same folder</td>
 </tr>
 </tbody></table>
@@ -622,7 +622,7 @@
 <tbody><tr>
 <td>Always-on instructions</td>
 <td><code>.github/copilot-instructions.md</code></td>
-<td>— (fixed path)</td>
+<td>- (fixed path)</td>
 </tr>
 <tr>
 <td>Always-on (multi-tool)</td>
@@ -642,39 +642,39 @@
 <tr>
 <td>Claude-format instructions</td>
 <td><code>.claude/rules/*.instructions.md</code></td>
-<td>—</td>
+<td>-</td>
 </tr>
 <tr>
 <td>Agents</td>
 <td><code>.github/agents/*.agent.md</code></td>
-<td>—</td>
+<td>-</td>
 </tr>
 <tr>
 <td>Prompts</td>
 <td><code>.github/prompts/*.prompt.md</code></td>
-<td>—</td>
+<td>-</td>
 </tr>
 <tr>
 <td>Skills</td>
 <td><code>.github/skills/&lt;name&gt;/SKILL.md</code></td>
-<td>—</td>
+<td>-</td>
 </tr>
 <tr>
 <td>Hooks</td>
 <td><code>.github/hooks/*.json</code></td>
-<td>—</td>
+<td>-</td>
 </tr>
 <tr>
 <td>Personal preferences</td>
 <td><code>.github/agents/preferences.md</code> (gitignored)</td>
-<td>—</td>
+<td>-</td>
 </tr>
 </tbody></table>
 <h3>How Multiple Files Are Combined</h3>
-<p>VS Code collects <strong>all</strong> matching instruction files from all scopes and includes them all in the chat context. There is no single winner — all are combined. Priority only resolves conflicts between contradictory instructions.</p>
+<p>VS Code collects <strong>all</strong> matching instruction files from all scopes and includes them all in the chat context. There is no single winner - all are combined. Priority only resolves conflicts between contradictory instructions.</p>
 <hr>
-<h2>5. Always-On Instructions — All File Types</h2>
-<p>Always-on instructions are automatically included in every chat request. You never invoke them — Copilot simply follows them.</p>
+<h2>5. Always-On Instructions - All File Types</h2>
+<p>Always-on instructions are automatically included in every chat request. You never invoke them - Copilot simply follows them.</p>
 <h3>Option A: <code>.github/copilot-instructions.md</code> (Recommended)</h3>
 <p><strong>Best for:</strong> Most projects. Cross-editor compatible. Version-controlled and team-shared.</p>
 <pre><code class="hljs"><span class="hljs-title">.github/</span>
@@ -700,20 +700,20 @@
 <span class="hljs-section">## Tone</span>
 <span class="hljs-bullet">-</span> Direct, friendly, professional
 <span class="hljs-bullet">-</span> Assume readers are competent but new to this specific tool</code></pre>
-<p><strong>Auto-generate with:</strong> Type <code>/init</code> in Copilot Chat — VS Code analyzes your workspace and generates a tailored <code>copilot-instructions.md</code>.</p>
+<p><strong>Auto-generate with:</strong> Type <code>/init</code> in Copilot Chat - VS Code analyzes your workspace and generates a tailored <code>copilot-instructions.md</code>.</p>
 <hr>
 <h3>Option B: <code>AGENTS.md</code> (Multi-Tool / Monorepo)</h3>
 <p><strong>Best for:</strong> Projects that use multiple AI tools (Copilot, Claude Code, Gemini CLI, etc.) where a single instruction file should work across all of them. Also best for monorepos where different folders need different rules.</p>
 <p><strong>Root-level (applies everywhere):</strong></p>
 <pre><code class="hljs">AGENTS.<span class="hljs-built_in">md</span>           ← root of workspace</code></pre>
-<p><strong>Nested (per subfolder — experimental):</strong></p>
+<p><strong>Nested (per subfolder - experimental):</strong></p>
 <pre><code class="hljs">AGENTS.<span class="hljs-built_in">md</span>                  ← root defaults
 frontend/AGENTS.<span class="hljs-built_in">md</span>         ← frontend-specific rules (overrides root <span class="hljs-keyword">for</span> frontend/)
 backend/AGENTS.<span class="hljs-built_in">md</span>          ← backend-specific rules (overrides root <span class="hljs-keyword">for</span> backend/)</code></pre>
 <p>Enable nested file support: <code>chat.useNestedAgentsMdFiles: true</code> in VS Code settings.</p>
-<p><strong>File structure:</strong> Same as <code>copilot-instructions.md</code> — plain Markdown, no frontmatter.</p>
+<p><strong>File structure:</strong> Same as <code>copilot-instructions.md</code> - plain Markdown, no frontmatter.</p>
 <p><strong>Cross-tool compatibility:</strong> AGENTS.md is an open standard. GitHub Copilot, Claude Code, Gemini CLI, and other AI tools all recognize it. Use it instead of <code>copilot-instructions.md</code> when you work with multiple AI tools.</p>
-<p><strong>Rule:</strong> Use either <code>AGENTS.md</code> or <code>copilot-instructions.md</code> — not both.</p>
+<p><strong>Rule:</strong> Use either <code>AGENTS.md</code> or <code>copilot-instructions.md</code> - not both.</p>
 <hr>
 <h3>Option C: <code>CLAUDE.md</code> (Claude Code Compatibility)</h3>
 <p><strong>Best for:</strong> Teams that use Claude Code alongside VS Code. One file, recognized by both.</p>
@@ -726,19 +726,19 @@ backend/AGENTS.<span class="hljs-built_in">md</span>          ← backend-specif
 </thead>
 <tbody><tr>
 <td><code>CLAUDE.md</code> (workspace root)</td>
-<td>Workspace — shared via git</td>
+<td>Workspace - shared via git</td>
 </tr>
 <tr>
 <td><code>.claude/CLAUDE.md</code></td>
-<td>Workspace — shared via git</td>
+<td>Workspace - shared via git</td>
 </tr>
 <tr>
 <td><code>CLAUDE.local.md</code> (workspace root)</td>
-<td>Workspace — local only, not committed</td>
+<td>Workspace - local only, not committed</td>
 </tr>
 <tr>
 <td><code>~/.claude/CLAUDE.md</code></td>
-<td>User-level — personal, all workspaces</td>
+<td>User-level - personal, all workspaces</td>
 </tr>
 </tbody></table>
 <p>VS Code recognizes all four locations when <code>chat.useClaudeMdFile</code> is enabled (default: on).</p>
@@ -780,10 +780,10 @@ Follow PEP 8. Use type hints. Write docstrings for public functions.</span></spa
 <span class="hljs-punctuation">{</span>
   <span class="hljs-attr">&quot;github.copilot.chat.organizationInstructions.enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span>
 <span class="hljs-punctuation">}</span></code></pre>
-<p>Organization instructions are the lowest priority — workspace and user instructions override them when they conflict.</p>
+<p>Organization instructions are the lowest priority - workspace and user instructions override them when they conflict.</p>
 <hr>
 <h2>6. File-Based Instructions (<code>.instructions.md</code>)</h2>
-<p>File-based instructions load conditionally — either when the files you are editing match a glob pattern, or when the agent determines the instruction is relevant to the current task.</p>
+<p>File-based instructions load conditionally - either when the files you are editing match a glob pattern, or when the agent determines the instruction is relevant to the current task.</p>
 <p><strong>Use for:</strong> Language-specific rules, framework conventions, module-specific standards that only apply to part of the codebase.</p>
 <h3>File Locations</h3>
 <table>
@@ -808,17 +808,17 @@ Follow PEP 8. Use type hints. Write docstrings for public functions.</span></spa
 </tbody></table>
 <h3>Frontmatter Fields</h3>
 <pre><code class="hljs language-yaml"><span class="hljs-meta">---</span>
-<span class="hljs-attr">name:</span> <span class="hljs-string">&quot;Display Name&quot;</span>           <span class="hljs-comment"># Optional — defaults to filename; shown in UI</span>
-<span class="hljs-attr">description:</span> <span class="hljs-string">&quot;Use when...&quot;</span>     <span class="hljs-comment"># Optional — enables on-demand discovery; be keyword-rich</span>
-<span class="hljs-attr">applyTo:</span> <span class="hljs-string">&quot;**/*.py&quot;</span>             <span class="hljs-comment"># Optional — glob pattern(s) for automatic application</span>
+<span class="hljs-attr">name:</span> <span class="hljs-string">&quot;Display Name&quot;</span>           <span class="hljs-comment"># Optional - defaults to filename; shown in UI</span>
+<span class="hljs-attr">description:</span> <span class="hljs-string">&quot;Use when...&quot;</span>     <span class="hljs-comment"># Optional - enables on-demand discovery; be keyword-rich</span>
+<span class="hljs-attr">applyTo:</span> <span class="hljs-string">&quot;**/*.py&quot;</span>             <span class="hljs-comment"># Optional - glob pattern(s) for automatic application</span>
 <span class="hljs-meta">---</span></code></pre>
 <h3>The <code>applyTo</code> Glob Pattern</h3>
 <p><code>applyTo</code> specifies which files trigger automatic inclusion of these instructions. When a file matching the pattern is part of the chat context, the instructions are included automatically.</p>
-<pre><code class="hljs language-yaml"><span class="hljs-attr">applyTo:</span> <span class="hljs-string">&quot;**&quot;</span>                          <span class="hljs-comment"># ALWAYS included (use carefully — applies everywhere)</span>
+<pre><code class="hljs language-yaml"><span class="hljs-attr">applyTo:</span> <span class="hljs-string">&quot;**&quot;</span>                          <span class="hljs-comment"># ALWAYS included (use carefully - applies everywhere)</span>
 <span class="hljs-attr">applyTo:</span> <span class="hljs-string">&quot;**/*.py&quot;</span>                     <span class="hljs-comment"># All Python files</span>
 <span class="hljs-attr">applyTo:</span> <span class="hljs-string">&quot;**/*.{ts,tsx}&quot;</span>               <span class="hljs-comment"># TypeScript and TSX files</span>
 <span class="hljs-attr">applyTo:</span> <span class="hljs-string">&quot;docs/**&quot;</span>                     <span class="hljs-comment"># Everything under docs/</span>
-<span class="hljs-attr">applyTo:</span> [<span class="hljs-string">&quot;src/**&quot;</span>, <span class="hljs-string">&quot;lib/**&quot;</span>]          <span class="hljs-comment"># Multiple patterns (OR — either match triggers inclusion)</span>
+<span class="hljs-attr">applyTo:</span> [<span class="hljs-string">&quot;src/**&quot;</span>, <span class="hljs-string">&quot;lib/**&quot;</span>]          <span class="hljs-comment"># Multiple patterns (OR - either match triggers inclusion)</span>
 <span class="hljs-attr">applyTo:</span> <span class="hljs-string">src/**,</span> <span class="hljs-string">lib/**</span>                <span class="hljs-comment"># Same without array syntax</span>
 <span class="hljs-attr">applyTo:</span> <span class="hljs-string">&quot;**/*.test.{js,ts}&quot;</span>          <span class="hljs-comment"># Only test files</span>
 <span class="hljs-attr">applyTo:</span> <span class="hljs-string">&quot;.github/ISSUE_TEMPLATE/**&quot;</span>  <span class="hljs-comment"># Only issue template files</span></code></pre>
@@ -889,7 +889,7 @@ description: &quot;Use when writing or reviewing GitHub issue templates in YAML 
 <p><strong>Quick creation method:</strong>
 Type <code>/instructions</code> in the Chat input to open the Configure Instructions menu.</p>
 <hr>
-<h2>7. <code>.agent.md</code> — Complete Format Reference</h2>
+<h2>7. <code>.agent.md</code> - Complete Format Reference</h2>
 <h3>File Locations</h3>
 <table>
 <thead>
@@ -909,16 +909,16 @@ Type <code>/instructions</code> in the Chat input to open the Configure Instruct
 </tbody></table>
 <h3>Complete Frontmatter Reference</h3>
 <pre><code class="hljs language-yaml"><span class="hljs-meta">---</span>
-<span class="hljs-attr">name:</span> <span class="hljs-string">&quot;agent-name&quot;</span>                        <span class="hljs-comment"># Required — what you type after @ in Chat</span>
-<span class="hljs-attr">description:</span> <span class="hljs-string">&quot;Use when...&quot;</span>               <span class="hljs-comment"># Required — triggers subagent delegation; keyword-rich</span>
-<span class="hljs-attr">tools:</span> [<span class="hljs-string">&quot;read&quot;</span>, <span class="hljs-string">&quot;search&quot;</span>, <span class="hljs-string">&quot;githubRepo&quot;</span>]  <span class="hljs-comment"># Optional — tools this agent can use; omit = defaults; [] = none</span>
-<span class="hljs-attr">model:</span> <span class="hljs-string">&quot;Claude Sonnet 4.5 (copilot)&quot;</span>     <span class="hljs-comment"># Optional — specific model to use</span>
-<span class="hljs-attr">agent:</span> <span class="hljs-string">&quot;ask&quot;</span>                              <span class="hljs-comment"># Optional — agent mode: ask | agent | plan | or custom name</span>
-<span class="hljs-attr">argument-hint:</span> <span class="hljs-string">&quot;Repo or PR ref...&quot;</span>       <span class="hljs-comment"># Optional — hint shown in chat input when agent is selected</span>
-<span class="hljs-attr">agents:</span> [<span class="hljs-string">&quot;SubagentA&quot;</span>, <span class="hljs-string">&quot;SubagentB&quot;</span>]       <span class="hljs-comment"># Optional — restrict which subagents this agent can invoke (omit = all allowed)</span>
-<span class="hljs-attr">user-invocable:</span> <span class="hljs-literal">true</span>                      <span class="hljs-comment"># Optional — show in agent picker (default: true); false = subagent only</span>
-<span class="hljs-attr">disable-model-invocation:</span> <span class="hljs-literal">false</span>          <span class="hljs-comment"># Optional — prevent other agents from invoking this as subagent (default: false)</span>
-<span class="hljs-attr">handoffs:</span> [<span class="hljs-string">&quot;AgentB&quot;</span>, <span class="hljs-string">&quot;AgentC&quot;</span>]           <span class="hljs-comment"># Optional — agents this agent can hand off to</span>
+<span class="hljs-attr">name:</span> <span class="hljs-string">&quot;agent-name&quot;</span>                        <span class="hljs-comment"># Required - what you type after @ in Chat</span>
+<span class="hljs-attr">description:</span> <span class="hljs-string">&quot;Use when...&quot;</span>               <span class="hljs-comment"># Required - triggers subagent delegation; keyword-rich</span>
+<span class="hljs-attr">tools:</span> [<span class="hljs-string">&quot;read&quot;</span>, <span class="hljs-string">&quot;search&quot;</span>, <span class="hljs-string">&quot;githubRepo&quot;</span>]  <span class="hljs-comment"># Optional - tools this agent can use; omit = defaults; [] = none</span>
+<span class="hljs-attr">model:</span> <span class="hljs-string">&quot;Claude Sonnet 4.5 (copilot)&quot;</span>     <span class="hljs-comment"># Optional - specific model to use</span>
+<span class="hljs-attr">agent:</span> <span class="hljs-string">&quot;ask&quot;</span>                              <span class="hljs-comment"># Optional - agent mode: ask | agent | plan | or custom name</span>
+<span class="hljs-attr">argument-hint:</span> <span class="hljs-string">&quot;Repo or PR ref...&quot;</span>       <span class="hljs-comment"># Optional - hint shown in chat input when agent is selected</span>
+<span class="hljs-attr">agents:</span> [<span class="hljs-string">&quot;SubagentA&quot;</span>, <span class="hljs-string">&quot;SubagentB&quot;</span>]       <span class="hljs-comment"># Optional - restrict which subagents this agent can invoke (omit = all allowed)</span>
+<span class="hljs-attr">user-invocable:</span> <span class="hljs-literal">true</span>                      <span class="hljs-comment"># Optional - show in agent picker (default: true); false = subagent only</span>
+<span class="hljs-attr">disable-model-invocation:</span> <span class="hljs-literal">false</span>          <span class="hljs-comment"># Optional - prevent other agents from invoking this as subagent (default: false)</span>
+<span class="hljs-attr">handoffs:</span> [<span class="hljs-string">&quot;AgentB&quot;</span>, <span class="hljs-string">&quot;AgentC&quot;</span>]           <span class="hljs-comment"># Optional - agents this agent can hand off to</span>
 <span class="hljs-meta">---</span></code></pre>
 <h3>Model Fallback Array</h3>
 <pre><code class="hljs language-yaml"><span class="hljs-attr">model:</span> [<span class="hljs-string">&quot;Claude Sonnet 4.5 (copilot)&quot;</span>, <span class="hljs-string">&quot;GPT-5 (copilot)&quot;</span>]</code></pre>
@@ -939,7 +939,7 @@ Type <code>/instructions</code> in the Chat input to open the Configure Instruct
 </tr>
 <tr>
 <td><code>user-invocable: false</code></td>
-<td>—</td>
+<td>-</td>
 <td>Hidden from picker; only callable as a subagent from another agent</td>
 </tr>
 <tr>
@@ -949,7 +949,7 @@ Type <code>/instructions</code> in the Chat input to open the Configure Instruct
 </tr>
 <tr>
 <td><code>disable-model-invocation: true</code></td>
-<td>—</td>
+<td>-</td>
 <td>This agent cannot be invoked as a subagent; user-invoked only</td>
 </tr>
 </tbody></table>
@@ -1001,11 +1001,11 @@ Type <code>/instructions</code> in the Chat input to open the Configure Instruct
 </thead>
 <tbody><tr>
 <td><code>githubRepo</code></td>
-<td>GitHub API — search issues, PRs, code</td>
+<td>GitHub API - search issues, PRs, code</td>
 </tr>
 <tr>
 <td><code>fetch</code></td>
-<td>HTTP fetch — read external URLs</td>
+<td>HTTP fetch - read external URLs</td>
 </tr>
 <tr>
 <td><code>createFile</code></td>
@@ -1088,8 +1088,8 @@ When asked to [task]:
 <pre><code class="hljs">
 ## Accessibility Requirements
 - Use heading <span class="hljs-keyword">level</span> <span class="hljs-number">2</span> <span class="hljs-keyword">for</span> the document title, <span class="hljs-keyword">level</span> <span class="hljs-number">3</span> <span class="hljs-keyword">for</span> sections
-- Never use <span class="hljs-keyword">tables</span> <span class="hljs-keyword">for</span> lists — ordered <span class="hljs-keyword">or</span> unordered lists are more predictable <span class="hljs-keyword">for</span> screen reader navigation
-- <span class="hljs-keyword">Always</span> <span class="hljs-keyword">include</span> &quot;empty state&quot; messages — never omit a section silently
+- Never use <span class="hljs-keyword">tables</span> <span class="hljs-keyword">for</span> lists - ordered <span class="hljs-keyword">or</span> unordered lists are more predictable <span class="hljs-keyword">for</span> screen reader navigation
+- <span class="hljs-keyword">Always</span> <span class="hljs-keyword">include</span> &quot;empty state&quot; messages - never omit a section silently
 
 ## Scope Boundaries
 - You [<span class="hljs-keyword">do</span> X]. You <span class="hljs-keyword">do</span> <span class="hljs-keyword">NOT</span> [<span class="hljs-keyword">do</span> Y].
@@ -1107,7 +1107,7 @@ When asked to [task]:
 </ol>
 <p><strong>Tip:</strong> Write keyword-rich descriptions. The description is how other agents decide whether to delegate to yours. &quot;A helpful agent&quot; will never get delegated to. &quot;Use when auditing Markdown files for accessibility violations (missing alt text, heading skips, bare URLs)&quot; will.</p>
 <hr>
-<h2>8. <code>.prompt.md</code> — Complete Format Reference</h2>
+<h2>8. <code>.prompt.md</code> - Complete Format Reference</h2>
 <h3>File Locations</h3>
 <table>
 <thead>
@@ -1127,12 +1127,12 @@ When asked to [task]:
 </tbody></table>
 <h3>Complete Frontmatter Reference</h3>
 <pre><code class="hljs language-yaml"><span class="hljs-meta">---</span>
-<span class="hljs-attr">name:</span> <span class="hljs-string">&quot;command-name&quot;</span>                    <span class="hljs-comment"># Optional — defaults to filename; the /command name</span>
-<span class="hljs-attr">description:</span> <span class="hljs-string">&quot;One-sentence description&quot;</span> <span class="hljs-comment"># Optional — shown in slash command picker</span>
-<span class="hljs-attr">argument-hint:</span> <span class="hljs-string">&quot;PR ref or repo name&quot;</span>   <span class="hljs-comment"># Optional — hint in chat input when command is selected</span>
-<span class="hljs-attr">agent:</span> <span class="hljs-string">&quot;agent&quot;</span>                          <span class="hljs-comment"># Optional — agent mode: ask | agent | plan | or custom @agent-name</span>
-<span class="hljs-attr">model:</span> <span class="hljs-string">&quot;GPT-5 (copilot)&quot;</span>               <span class="hljs-comment"># Optional — override model for this command</span>
-<span class="hljs-attr">tools:</span> [<span class="hljs-string">&quot;github/*&quot;</span>, <span class="hljs-string">&quot;createFile&quot;</span>]       <span class="hljs-comment"># Optional — tools this command can use</span>
+<span class="hljs-attr">name:</span> <span class="hljs-string">&quot;command-name&quot;</span>                    <span class="hljs-comment"># Optional - defaults to filename; the /command name</span>
+<span class="hljs-attr">description:</span> <span class="hljs-string">&quot;One-sentence description&quot;</span> <span class="hljs-comment"># Optional - shown in slash command picker</span>
+<span class="hljs-attr">argument-hint:</span> <span class="hljs-string">&quot;PR ref or repo name&quot;</span>   <span class="hljs-comment"># Optional - hint in chat input when command is selected</span>
+<span class="hljs-attr">agent:</span> <span class="hljs-string">&quot;agent&quot;</span>                          <span class="hljs-comment"># Optional - agent mode: ask | agent | plan | or custom @agent-name</span>
+<span class="hljs-attr">model:</span> <span class="hljs-string">&quot;GPT-5 (copilot)&quot;</span>               <span class="hljs-comment"># Optional - override model for this command</span>
+<span class="hljs-attr">tools:</span> [<span class="hljs-string">&quot;github/*&quot;</span>, <span class="hljs-string">&quot;createFile&quot;</span>]       <span class="hljs-comment"># Optional - tools this command can use</span>
 <span class="hljs-meta">---</span></code></pre>
 <h3>Model Fallback</h3>
 <pre><code class="hljs language-yaml"><span class="hljs-attr">model:</span> [<span class="hljs-string">&quot;GPT-5 (copilot)&quot;</span>, <span class="hljs-string">&quot;Claude Sonnet 4.5 (copilot)&quot;</span>]</code></pre>
@@ -1146,20 +1146,20 @@ When asked to [task]:
 <h3>Input Parameters</h3>
 <pre><code class="hljs">${<span class="hljs-keyword">input</span>:parameterName:Prompt <span class="hljs-type">text</span> shown <span class="hljs-keyword">to</span> the <span class="hljs-keyword">user</span>}</code></pre>
 <ul>
-<li><code>parameterName</code> — internal identifier (no spaces)</li>
+<li><code>parameterName</code> - internal identifier (no spaces)</li>
 <li>The text after the second <code>:</code> is shown to the user as a placeholder or tooltip</li>
 <li>Multiple parameters are supported in one prompt file</li>
 </ul>
-<pre><code class="hljs">${<span class="hljs-keyword">input</span>:repo:Target repository — e.g. <span class="hljs-keyword">owner</span>/repo <span class="hljs-keyword">or</span> leave blank <span class="hljs-keyword">for</span> <span class="hljs-keyword">current</span> workspace}
+<pre><code class="hljs">${<span class="hljs-keyword">input</span>:repo:Target repository - e.g. <span class="hljs-keyword">owner</span>/repo <span class="hljs-keyword">or</span> leave blank <span class="hljs-keyword">for</span> <span class="hljs-keyword">current</span> workspace}
 ${<span class="hljs-keyword">input</span>:scope:Optional <span class="hljs-keyword">filter</span>: label <span class="hljs-type">name</span>, <span class="hljs-type">date</span> range, <span class="hljs-keyword">or</span> org:orgname}</code></pre>
-<h3>Body — Referencing Tools and Files</h3>
+<h3>Body - Referencing Tools and Files</h3>
 <pre><code class="hljs language-markdown">Use #tool:<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">tool-name</span>&gt;</span></span> to explicitly invoke a tool:
 
 Fetch issue #42 with #tool:mcp<span class="hljs-emphasis">_github_</span>github<span class="hljs-emphasis">_issue_</span>read.
 
 Reference workspace files with Markdown links:
 See the configuration in [<span class="hljs-string">preferences.md</span>](<span class="hljs-link">.github/agents/preferences.md</span>).</code></pre>
-<h3>Example — Accessibility Update Command</h3>
+<h3>Example - Accessibility Update Command</h3>
 <pre><code class="hljs language-markdown">---
 name: a11y-update
 description: &quot;Get latest accessibility improvements with WCAG cross-references&quot;
@@ -1192,8 +1192,8 @@ For each finding include:
 </ol>
 <p><strong>Both prompts and agent skills appear as <code>/</code> slash commands.</strong> The difference: prompts are single-task Markdown files; skills are folders with bundled scripts and references.</p>
 <hr>
-<h2>9. Agent Skills (<code>SKILL.md</code>) — Complete Format Reference</h2>
-<p>A Skill is a folder — not a single file. The folder contains <code>SKILL.md</code> plus any scripts, templates, and reference documents the skill needs.</p>
+<h2>9. Agent Skills (<code>SKILL.md</code>) - Complete Format Reference</h2>
+<p>A Skill is a folder - not a single file. The folder contains <code>SKILL.md</code> plus any scripts, templates, and reference documents the skill needs.</p>
 <h3>Folder Structure</h3>
 <pre><code class="hljs">.github/skills/
   my-skill/
@@ -1239,11 +1239,11 @@ For each finding include:
 </tbody></table>
 <h3>Complete Frontmatter Reference</h3>
 <pre><code class="hljs language-yaml"><span class="hljs-meta">---</span>
-<span class="hljs-attr">name:</span> <span class="hljs-string">skill-name</span>                      <span class="hljs-comment"># Required — 1-64 chars; lowercase alphanumeric + hyphens; must match folder name</span>
-<span class="hljs-attr">description:</span> <span class="hljs-string">&quot;Use when...&quot;</span>           <span class="hljs-comment"># Required — keyword-rich trigger phrases for on-demand discovery</span>
-<span class="hljs-attr">argument-hint:</span> <span class="hljs-string">&quot;Optional input...&quot;</span>   <span class="hljs-comment"># Optional — hint shown when skill is selected as slash command</span>
-<span class="hljs-attr">user-invocable:</span> <span class="hljs-literal">true</span>                  <span class="hljs-comment"># Optional — appear as slash command (default: true)</span>
-<span class="hljs-attr">disable-model-invocation:</span> <span class="hljs-literal">false</span>       <span class="hljs-comment"># Optional — prevent automatic loading by agents (default: false)</span>
+<span class="hljs-attr">name:</span> <span class="hljs-string">skill-name</span>                      <span class="hljs-comment"># Required - 1-64 chars; lowercase alphanumeric + hyphens; must match folder name</span>
+<span class="hljs-attr">description:</span> <span class="hljs-string">&quot;Use when...&quot;</span>           <span class="hljs-comment"># Required - keyword-rich trigger phrases for on-demand discovery</span>
+<span class="hljs-attr">argument-hint:</span> <span class="hljs-string">&quot;Optional input...&quot;</span>   <span class="hljs-comment"># Optional - hint shown when skill is selected as slash command</span>
+<span class="hljs-attr">user-invocable:</span> <span class="hljs-literal">true</span>                  <span class="hljs-comment"># Optional - appear as slash command (default: true)</span>
+<span class="hljs-attr">disable-model-invocation:</span> <span class="hljs-literal">false</span>       <span class="hljs-comment"># Optional - prevent automatic loading by agents (default: false)</span>
 <span class="hljs-meta">---</span></code></pre>
 <h3>Slash Command Behavior</h3>
 <table>
@@ -1275,7 +1275,7 @@ For each finding include:
 <td>Neither <code>/command</code> nor auto-load</td>
 </tr>
 </tbody></table>
-<h3>Progressive Loading — How VS Code Loads Skills</h3>
+<h3>Progressive Loading - How VS Code Loads Skills</h3>
 <ol>
 <li><strong>Discovery (~100 tokens):</strong> Reads <code>name</code> and <code>description</code> to decide if the skill is relevant</li>
 <li><strong>Instructions (&lt;5000 tokens):</strong> Loads the full <code>SKILL.md</code> body when the skill is relevant</li>
@@ -1300,7 +1300,7 @@ name: a11y-audit
 
 <span class="hljs-bullet">1.</span> Run the audit script: [<span class="hljs-string">audit.sh</span>](<span class="hljs-link">./scripts/audit.sh</span>)
 <span class="hljs-bullet">2.</span> Review output for heading hierarchy violations (H1→H3 skips)
-<span class="hljs-bullet">3.</span> Check all links — flag bare URLs and non-descriptive text
+<span class="hljs-bullet">3.</span> Check all links - flag bare URLs and non-descriptive text
 <span class="hljs-bullet">4.</span> Verify alt text on all images
 <span class="hljs-bullet">5.</span> Review the [<span class="hljs-string">WCAG reference</span>](<span class="hljs-link">./references/wcag-quick-ref.md</span>) for remediation guidance
 <span class="hljs-bullet">6.</span> Report findings by risk level: High | Medium | Low
@@ -1311,9 +1311,9 @@ name: a11y-audit
 <span class="hljs-bullet">-</span> Low risk: improvement opportunities
 <span class="hljs-bullet">-</span> Include WCAG criterion for each finding</code></pre>
 <hr>
-<h2>10. Hooks (<code>.json</code>) — Lifecycle Automation</h2>
-<p>Hooks execute shell commands at specific points in an agent&#39;s lifecycle. They are deterministic — they run regardless of what the agent was prompted to do.</p>
-<p><strong>Use hooks for enforcement, not guidance.</strong> For behavior you want to enforce — blocking commands, auto-running formatters, requiring approval — use hooks. For behavior you want to encourage — coding standards, tone, output format — use instructions.</p>
+<h2>10. Hooks (<code>.json</code>) - Lifecycle Automation</h2>
+<p>Hooks execute shell commands at specific points in an agent&#39;s lifecycle. They are deterministic - they run regardless of what the agent was prompted to do.</p>
+<p><strong>Use hooks for enforcement, not guidance.</strong> For behavior you want to enforce - blocking commands, auto-running formatters, requiring approval - use hooks. For behavior you want to encourage - coding standards, tone, output format - use instructions.</p>
 <h3>File Locations</h3>
 <table>
 <thead>
@@ -1344,7 +1344,7 @@ name: a11y-audit
 <td>Personal only</td>
 </tr>
 </tbody></table>
-<p>Hooks from all locations are combined — workspace and user hooks do not override each other.</p>
+<p>Hooks from all locations are combined - workspace and user hooks do not override each other.</p>
 <h3>Hook Events</h3>
 <table>
 <thead>
@@ -1474,13 +1474,13 @@ name: a11y-audit
 <p>Permission decisions: <code>&quot;allow&quot;</code> | <code>&quot;ask&quot;</code> (prompt user) | <code>&quot;deny&quot;</code> (block the tool call)</p>
 <p><strong>Exit codes:</strong></p>
 <ul>
-<li><code>0</code> — success; agent continues</li>
-<li><code>2</code> — blocking error; agent stops</li>
-<li>Other — non-blocking warning</li>
+<li><code>0</code> - success; agent continues</li>
+<li><code>2</code> - blocking error; agent stops</li>
+<li>Other - non-blocking warning</li>
 </ul>
 <hr>
-<h2>11. <code>preferences.md</code> — Agent Forge Personal Settings</h2>
-<p>Copy <code>.github/agents/preferences.example.md</code> to <code>.github/agents/preferences.md</code>. The file is in <code>.gitignore</code> — your private settings stay only in your local fork.</p>
+<h2>11. <code>preferences.md</code> - Agent Forge Personal Settings</h2>
+<p>Copy <code>.github/agents/preferences.example.md</code> to <code>.github/agents/preferences.md</code>. The file is in <code>.gitignore</code> - your private settings stay only in your local fork.</p>
 <h3>Full File Template</h3>
 <pre><code class="hljs language-markdown"><span class="hljs-section"># My Agent Forge Preferences</span>
 
@@ -1630,7 +1630,7 @@ I <span class="hljs-keyword">use</span> TalkBack <span class="hljs-keyword">on</
 </tbody></table>
 <hr>
 <h2>13. Further Reading</h2>
-<p>For the broader ecosystem — the community plugin marketplace, MCP server integrations, and running agents in the cloud via GitHub Actions — see <a href="appendix-w-github-copilot-reference.md">Appendix W: GitHub Copilot &amp; Agentic Reference</a>.</p>
+<p>For the broader ecosystem - the community plugin marketplace, MCP server integrations, and running agents in the cloud via GitHub Actions - see <a href="appendix-w-github-copilot-reference.md">Appendix W: GitHub Copilot &amp; Agentic Reference</a>.</p>
 <h3>Official accessibility.github.com Guides</h3>
 <table>
 <thead>
@@ -1658,8 +1658,8 @@ I <span class="hljs-keyword">use</span> TalkBack <span class="hljs-keyword">on</
 
   </main>
   <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
-    <p><strong>GIT Going with GitHub</strong> — A workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
-    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="http://www.joinbits.org">joinbits.org</a></p>
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
+    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="https://www.joinbits.org">joinbits.org</a></p>
   </footer>
   </body>
 </html>

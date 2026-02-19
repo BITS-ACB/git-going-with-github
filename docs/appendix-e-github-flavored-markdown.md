@@ -1,7 +1,7 @@
-# Appendix E: GitHub Flavored Markdown — Advanced Reference
+# Appendix E: GitHub Flavored Markdown - Advanced Reference
 ## Beyond the Basics: Tables, Alerts, Diagrams, Math, and Accessibility
 
-> **Who this is for:** You know how to write basic Markdown (bold, italic, links, code blocks). This appendix covers the GitHub-specific extensions and features you will encounter in real repositories — the things that make a file look polished but that aren't documented in standard Markdown guides.
+> **Who this is for:** You know how to write basic Markdown (bold, italic, links, code blocks). This appendix covers the GitHub-specific extensions and features you will encounter in real repositories - the things that make a file look polished but that aren't documented in standard Markdown guides.
 
 ---
 
@@ -11,7 +11,7 @@
 2. [Collapsible Sections with `<details>`](#2-collapsible-sections-with-details)
 3. [Task List Checkboxes](#3-task-list-checkboxes)
 4. [Mermaid Diagrams](#4-mermaid-diagrams)
-5. [Math Expressions — LaTeX](#5-math-expressions--latex)
+5. [Math Expressions - LaTeX](#5-math-expressions--latex)
 6. [Footnotes](#6-footnotes)
 7. [Linked Heading Anchors](#7-linked-heading-anchors)
 8. [Syntax Highlighting in Code Blocks](#8-syntax-highlighting-in-code-blocks)
@@ -23,7 +23,7 @@
 
 ## 1. Alert / Callout Blocks (2023+)
 
-GitHub introduced **alert blocks** in 2023. They render as colored, bordered callout boxes — great for emphasizing warnings, tips, or critical information.
+GitHub introduced **alert blocks** in 2023. They render as colored, bordered callout boxes - great for emphasizing warnings, tips, or critical information.
 
 ### Syntax
 
@@ -94,9 +94,9 @@ The error occurs on line 15 when `data` is null.
 ### Screen Reader Behavior
 
 The `<details>` element renders as a disclosure widget:
-- NVDA: announces "button collapsed" for the `<summary>` — press Enter or Space to expand
-- JAWS: announces "collapsed" — press Enter on the summary link to expand
-- VoiceOver: announces "collapsed, button" — press VO+Space to activate
+- NVDA: announces "button collapsed" for the `<summary>` - press Enter or Space to expand
+- JAWS: announces "collapsed" - press Enter on the summary link to expand
+- VoiceOver: announces "collapsed, button" - press VO+Space to activate
 
 **After expanding:** The revealed content is immediately readable. No page reload occurs.
 
@@ -124,7 +124,7 @@ Task lists in GitHub issues and PRs render as **real interactive checkboxes**. A
 
 - **In issues:** Unchecked tasks count toward GitHub's progress bar in the issue list (`2 of 7 tasks completed`)
 - **Checked by clicking:** In the rendered view, any user with triage+ permissions can check items without editing the comment
-- **Linked issues:** You can embed an issue number in a task: `- [ ] Fix #42` — the task shows the issue title and its open/closed state
+- **Linked issues:** You can embed an issue number in a task: `- [ ] Fix #42` - the task shows the issue title and its open/closed state
 
 ### Screen Reader Interaction
 
@@ -182,7 +182,7 @@ flowchart LR
 2. Consider duplicating critical flow information as a numbered list or table
 3. Use the diagram for visual learners; use the text list for screen reader users
 
-**Example — accessible Mermaid usage:**
+**Example - accessible Mermaid usage:**
 ```markdown
 The PR workflow follows these steps:
 
@@ -203,7 +203,7 @@ flowchart LR
 
 ---
 
-## 5. Math Expressions — LaTeX
+## 5. Math Expressions - LaTeX
 
 GitHub renders LaTeX math expressions using MathJax. Common in data science, research, and documentation for algorithms.
 
@@ -254,7 +254,7 @@ You can also use named footnotes[^accessibility-note].
 
 ### How They Render
 
-The superscript `[^1]` becomes a link: **¹** — clicking it jumps to the footnote definition at the bottom. The definition includes a back-link () that returns to where the footnote was referenced.
+The superscript `[^1]` becomes a link: **¹** - clicking it jumps to the footnote definition at the bottom. The definition includes a back-link () that returns to where the footnote was referenced.
 
 ### Screen Reader Behavior
 
@@ -293,7 +293,7 @@ GitHub converts the heading text to lowercase, replaces spaces with hyphens, and
 
 ### Finding the Anchor for Any Heading
 
-1. On GitHub, hover over any heading — a chain link icon () appears to the left
+1. On GitHub, hover over any heading - a chain link icon () appears to the left
 2. Right-click the icon → "Copy link address" to get the full URL with the anchor
 3. For screen reader users: navigate to the heading → Tab once → a link button appears → activate it → the URL in the address bar updates to show the anchor
 
@@ -332,7 +332,7 @@ Use `plaintext` or just omit the language for content where no highlighting is n
 
 ### Screen Reader Note
 
-Syntax highlighting is visual only — screen readers read the code text without announcing color changes. The code block itself is announced as `code` region. This means the text content of well-written code is equally accessible whether highlighted or not.
+Syntax highlighting is visual only - screen readers read the code text without announcing color changes. The code block itself is announced as `code` region. This means the text content of well-written code is equally accessible whether highlighted or not.
 
 ---
 
@@ -351,7 +351,7 @@ H<sub>2</sub>O    CO<sub>2</sub>    x<sup>2</sup>
 
 <!-- Centered content (README badges, logos) -->
 <div align="center">
-  <img src="logo.png" alt="Project logo — a stylized 'A' symbol representing accessibility" width="200">
+  <img src="logo.png" alt="Project logo - a stylized 'A' symbol representing accessibility" width="200">
 </div>
 
 <!-- Line break without a paragraph gap -->
@@ -369,10 +369,10 @@ Line two on the next line, same paragraph.
 
 | Element | Accessibility requirement |
 |---------|--------------------------|
-| `<img>` | Must have a descriptive `alt` attribute — never use `alt=""` for informative images |
+| `<img>` | Must have a descriptive `alt` attribute - never use `alt=""` for informative images |
 | `<table>` | Needs `<th>` headers with `scope` for complex tables |
 | `<div align="center">` | Purely visual; no accessibility impact |
-| `<kbd>` | Announced as "code" or the text content — no special handling needed |
+| `<kbd>` | Announced as "code" or the text content - no special handling needed |
 
 ---
 
@@ -382,14 +382,14 @@ Line two on the next line, same paragraph.
 
 | Feature | Screen Reader Behavior | Author Responsibility |
 |---------|----------------------|----------------------|
-| Alert blocks | Type label read before content | None — GitHub handles it |
+| Alert blocks | Type label read before content | None - GitHub handles it |
 | `<details>` | Announced as collapsed/expanded disclosure | Write clear `<summary>` text |
 | Task checkboxes | Read as standard checkbox | Use meaningful task descriptions |
 | Mermaid diagrams | SVG may be skipped or read as container | Always provide text equivalent |
 | Math expressions | aria-label read | Supplement complex math with plain English |
 | Footnotes | Links and back-links read correctly | Use descriptive footnote text |
 | Heading anchors | Headings read normally | Use meaningful headings for navigation |
-| Syntax highlighting | Visual only — no AT impact | Write clear variable/function names |
+| Syntax highlighting | Visual only - no AT impact | Write clear variable/function names |
 | HTML `<img>` | Alt text read | Always write alt text |
 | HTML `<table>` | Table structure announced | Use `<th>` headers |
 
@@ -456,4 +456,4 @@ H<sub>2</sub>O  |  x<sup>2</sup>
 
 ---
 
-*Return to: [Resources](appendix-u-resources.md) | [Appendix B — Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Appendix A — Glossary](appendix-a-glossary.md)*
+*Return to: [Resources](appendix-u-resources.md) | [Appendix B - Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

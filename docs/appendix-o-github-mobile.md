@@ -23,10 +23,10 @@
 
 | Platform | Download |
 |----------|----------|
-| iOS (iPhone / iPad) | [App Store — GitHub](https://apps.apple.com/app/github/id1477376905) |
-| Android | [Google Play — GitHub](https://play.google.com/store/apps/details?id=com.github.android) |
+| iOS (iPhone / iPad) | [App Store - GitHub](https://apps.apple.com/app/github/id1477376905) |
+| Android | [Google Play - GitHub](https://play.google.com/store/apps/details?id=com.github.android) |
 
-After installing, sign in with your GitHub account. Enable notifications when prompted — these are essential for staying on top of PR reviews and issue activity without constantly checking the web.
+After installing, sign in with your GitHub account. Enable notifications when prompted - these are essential for staying on top of PR reviews and issue activity without constantly checking the web.
 
 ---
 
@@ -69,10 +69,10 @@ Navigate between tabs with a single tap (or swipe on iOS with VoiceOver active).
 
 Open the Rotor by rotating two fingers on the screen as if turning a dial. Useful rotor settings for GitHub Mobile:
 
-- **Headings** — jump between section headings on an issue or PR description
-- **Links** — navigate to linked issues, commits, or external URLs
-- **Form Controls** — jump to input fields when writing a comment
-- **Actions** — available actions for the focused element (assign, label, close)
+- **Headings** - jump between section headings on an issue or PR description
+- **Links** - navigate to linked issues, commits, or external URLs
+- **Form Controls** - jump to input fields when writing a comment
+- **Actions** - available actions for the focused element (assign, label, close)
 
 ### Writing Comments with VoiceOver
 
@@ -112,7 +112,7 @@ Tap with three fingers (or swipe down then right) to open the TalkBack menu. Fro
 
 ### Writing Comments with TalkBack
 
-1. Locate the comment field — TalkBack announces "Edit text, double tap to edit"
+1. Locate the comment field - TalkBack announces "Edit text, double tap to edit"
 2. Double tap to enter the field
 3. Use the on-screen keyboard or dictation to type
 4. Locate the **Comment** button and double tap to submit
@@ -121,7 +121,7 @@ Tap with three fingers (or swipe down then right) to open the TalkBack menu. Fro
 
 ## 5. Working with Notifications
 
-GitHub Mobile's Notifications tab is one of its strongest features for AT users — it surfaces all activity in a clean, linear list that is much easier to navigate than the GitHub web notifications page.
+GitHub Mobile's Notifications tab is one of its strongest features for AT users - it surfaces all activity in a clean, linear list that is much easier to navigate than the GitHub web notifications page.
 
 ### Inbox Management
 
@@ -142,15 +142,15 @@ With VoiceOver or TalkBack, the filter controls are accessible form elements. Op
 
 ## 6. Reviewing Pull Requests
 
-Mobile is well suited for quick PR reviews — approving straightforward changes, leaving a comment, or checking CI status while away from your desk.
+Mobile is well suited for quick PR reviews - approving straightforward changes, leaving a comment, or checking CI status while away from your desk.
 
 ### Navigating a PR
 
 When you open a pull request, the screen is divided into sections:
-- **Description** — the PR body with any images or checklists
-- **Commits** — individual commits in this PR
-- **Files changed** — a simplified diff view
-- **Checks** — CI/CD status
+- **Description** - the PR body with any images or checklists
+- **Commits** - individual commits in this PR
+- **Files changed** - a simplified diff view
+- **Checks** - CI/CD status
 
 VoiceOver and TalkBack announce these as headings. Use heading navigation (Rotor on iOS, swipe granularity on Android) to jump between sections.
 
@@ -164,7 +164,7 @@ VoiceOver and TalkBack announce these as headings. Use heading navigation (Rotor
 
 ### Viewing Diffs
 
-The Files Changed tab shows a simplified diff — additions and removals are text-only (no table layout). Each changed line is announced as "Added: [content]" or "Removed: [content]", which is generally more accessible than the web diff table on small screens.
+The Files Changed tab shows a simplified diff - additions and removals are text-only (no table layout). Each changed line is announced as "Added: [content]" or "Removed: [content]", which is generally more accessible than the web diff table on small screens.
 
 ---
 
@@ -175,7 +175,7 @@ The Files Changed tab shows a simplified diff — additions and removals are tex
 1. Navigate to the repository
 2. Tap **Issues** → the **+** button or **New Issue**
 3. Fill in the title and body
-4. Optionally assign labels, assignees, and milestone — each is a tappable field
+4. Optionally assign labels, assignees, and milestone - each is a tappable field
 5. Tap **Submit**
 
 ### Finding Your Issues
@@ -189,14 +189,14 @@ The Files Changed tab shows a simplified diff — additions and removals are tex
 
 | Task | Mobile | Desktop |
 |------|--------|---------|
-| Triage notifications | Excellent — linear list, swipe actions | Good |
+| Triage notifications | Excellent - linear list, swipe actions | Good |
 | Quick review / approve a PR | Good | Good |
-| Writing long PR descriptions | Fair — small keyboard | Better |
-| Reviewing large diffs | Fair — simplified view | Better |
+| Writing long PR descriptions | Fair - small keyboard | Better |
+| Reviewing large diffs | Fair - simplified view | Better |
 | Filing a simple issue | Good | Good |
 | Complex issue templates | Fair | Better |
 | Managing labels and milestones | Good | Good |
-| Reading code | Fair — no syntax highlighting | Better |
+| Reading code | Fair - no syntax highlighting | Better |
 | Running Codespace / editing code | Not supported | Supported |
 
 **Best use of GitHub Mobile:** notification triage, quick approvals and comments, catching up on activity between sessions. For writing substantial code, descriptions, or reviewing complex diffs, use the web or VS Code.
@@ -206,13 +206,13 @@ The Files Changed tab shows a simplified diff — additions and removals are tex
 ## 9. Common Issues and Workarounds
 
 **VoiceOver skips some PR descriptions:**
-Long PR descriptions with images, tables, or embedded videos may not read cleanly. Open the PR in Safari instead — tap the **…** menu → **Open in Browser**.
+Long PR descriptions with images, tables, or embedded videos may not read cleanly. Open the PR in Safari instead - tap the **…** menu → **Open in Browser**.
 
 **TalkBack does not announce new notifications badge:**
 The badge count on the Notifications tab updates live but may not be announced. Navigate directly to the Notifications tab to get the current count read aloud.
 
 **The keyboard covers the comment field:**
-Usual iOS/Android behavior — scroll up slightly after the keyboard appears, or rotate to landscape mode to gain more visible space.
+Usual iOS/Android behavior - scroll up slightly after the keyboard appears, or rotate to landscape mode to gain more visible space.
 
 **Can't find the Submit button after writing a review:**
 Scroll down past the text field; buttons are below the keyboard dismiss area. On iOS, tap elsewhere to dismiss the keyboard first, then scroll to Submit.
@@ -222,4 +222,4 @@ Force close the app and reopen. If the problem persists, sign out and back in vi
 
 ---
 
-*Return to: [Resources](appendix-u-resources.md) | [Appendix B — Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Appendix A — Glossary](appendix-a-glossary.md)*
+*Return to: [Resources](appendix-u-resources.md) | [Appendix B - Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

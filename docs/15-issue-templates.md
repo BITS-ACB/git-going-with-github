@@ -1,7 +1,7 @@
 # Issue Templates
 ## Structuring Contributions for Clarity and Quality
 
-> Issue templates turn a blank text box into a guided form. They help contributors provide the information maintainers need, reduce back-and-forth, and make every issue immediately actionable. This guide teaches you what templates are, how to use the ones in `agent-forge`, and how to create your own — including an accessibility-specific bug report template.
+> Issue templates turn a blank text box into a guided form. They help contributors provide the information maintainers need, reduce back-and-forth, and make every issue immediately actionable. This guide teaches you what templates are, how to use the ones in `agent-forge`, and how to create your own - including an accessibility-specific bug report template.
 
 ---
 
@@ -9,9 +9,9 @@
 
 **Before starting this chapter, verify you have completed:**
 
-- [ ] Chapter 4: [Working with Issues](04-working-with-issues.md) — Know how to create, read, and navigate issues
-- [ ] Chapter 13: [GitHub Copilot](13-github-copilot.md) — VS Code installed with YAML syntax highlighting enabled
-- [ ] Chapter 9: [Notifications](09-notifications.md) — Basic understanding of workflow triggers
+- [ ] Chapter 4: [Working with Issues](04-working-with-issues.md) - Know how to create, read, and navigate issues
+- [ ] Chapter 13: [GitHub Copilot](13-github-copilot.md) - VS Code installed with YAML syntax highlighting enabled
+- [ ] Chapter 9: [Notifications](09-notifications.md) - Basic understanding of workflow triggers
 - [ ] A GitHub repository where you have write access (your fork or personal repo)
 - [ ] Terminal/Command line basic comfort (Chapter 5 mentions git workflows)
 
@@ -27,7 +27,7 @@
 2. [How Templates Work on GitHub](#2-how-templates-work-on-github)
 3. [Navigating the Template Picker](#3-navigating-the-template-picker)
 4. [The Agent Forge Issue Templates](#4-the-agent-forge-issue-templates)
-5. [Creating a New Template — Step by Step](#5-creating-a-new-template--step-by-step)
+5. [Creating a New Template - Step by Step](#5-creating-a-new-template--step-by-step)
 6. [YAML Form-Based Templates](#6-yaml-form-based-templates)
 7. [Building an Accessibility Bug Report Template](#7-building-an-accessibility-bug-report-template)
 8. [Pull Request Templates](#8-pull-request-templates)
@@ -53,7 +53,7 @@ Accessibility bugs require specific context that general bug templates often omi
 - Which WCAG success criterion is affected?
 - Does the issue affect all users or only those with specific assistive technology?
 
-Without this context, maintainers ask follow-up questions — which delays the fix and uses everyone's time. A good accessibility template captures it all on the first submission.
+Without this context, maintainers ask follow-up questions - which delays the fix and uses everyone's time. A good accessibility template captures it all on the first submission.
 
 ---
 
@@ -76,9 +76,9 @@ your-repo/
 
 **YAML form templates (`.yml`):** Modern form-based templates. Creates a proper form interface with labeled fields, dropdowns, checkboxes, and validation. Contributors fill in fields rather than editing freeform Markdown. Better for accessibility because each field has an explicit label announced by screen readers.
 
-**`config.yml`:** Controls the template chooser page — what templates appear, what their descriptions say, whether an external link (like a discussion forum) appears as an option, and crucially, **whether contributors can bypass templates entirely with a blank issue**.
+**`config.yml`:** Controls the template chooser page - what templates appear, what their descriptions say, whether an external link (like a discussion forum) appears as an option, and crucially, **whether contributors can bypass templates entirely with a blank issue**.
 
-For accessibility projects, `config.yml` is important: disabling the blank issue option means every report arrives with the structure your project needs. A screen reader bug report without reproduction steps and AT version information is almost impossible to triage — the form prevents that by making those fields required.
+For accessibility projects, `config.yml` is important: disabling the blank issue option means every report arrives with the structure your project needs. A screen reader bug report without reproduction steps and AT version information is almost impossible to triage - the form prevents that by making those fields required.
 
 **Example `config.yml`:**
 
@@ -87,7 +87,7 @@ blank_issues_enabled: false
 contact_links:
   - name: Community Discussion
     url: https://github.com/accesswatch/agent-forge/discussions
-    about: For questions and general discussion — not bugs
+    about: For questions and general discussion - not bugs
   - name: Security Vulnerability
     url: https://github.com/accesswatch/agent-forge/security/advisories/new
     about: Please use private reporting for security issues
@@ -106,14 +106,14 @@ When a repository has multiple templates, GitHub shows a template chooser page b
 
 1. Click the **Issues** tab on any repository
 2. Click the **New issue** button
-3. The template chooser page loads — templates appear as cards with a title, description, and "Get started" button
+3. The template chooser page loads - templates appear as cards with a title, description, and "Get started" button
 4. Click **"Get started"** on the template you want
 5. The issue editor opens with that template's content pre-filled
 
 </details>
 
 <details>
-<summary>Screen reader users — NVDA / JAWS (Windows)</summary>
+<summary>Screen reader users - NVDA / JAWS (Windows)</summary>
 
 1. Navigate to the Issues tab (press `T` from the repository tabs landmark)
 2. Activate "New issue" button
@@ -126,11 +126,11 @@ When a repository has multiple templates, GitHub shows a template chooser page b
 </details>
 
 <details>
-<summary>Screen reader users — VoiceOver (macOS)</summary>
+<summary>Screen reader users - VoiceOver (macOS)</summary>
 
 1. Navigate to the Issues tab (`VO+Right` from the tab bar landmark)
 2. `VO+Space` to activate "New issue"
-3. The chooser page loads — templates appear as list items
+3. The chooser page loads - templates appear as list items
 4. `VO+Right` to move between templates
 5. `VO+Space` on "Get started" for your chosen template
 
@@ -156,7 +156,7 @@ Agent Forge uses templates to structure contributions. Navigate to `.github/ISSU
 1. Click the **Code** tab on the repository
 2. Click the `.github` folder in the file listing
 3. Click `ISSUE_TEMPLATE`
-4. You'll see the template files — click any to read it
+4. You'll see the template files - click any to read it
 
 </details>
 
@@ -173,7 +173,7 @@ Agent Forge uses templates to structure contributions. Navigate to `.github/ISSU
 
 ### Reading a Template File
 
-Open any template file (e.g., `bug_report.md`) in VS Code or in the GitHub web editor (pencil button — screen readers announce it as "Edit this file").
+Open any template file (e.g., `bug_report.md`) in VS Code or in the GitHub web editor (pencil button - screen readers announce it as "Edit this file").
 
 Look for:
 - **Frontmatter** (between `---` delimiters): name, about, title, labels, assignees
@@ -195,7 +195,7 @@ The `about` text appears in the template chooser. The `title` pre-fills the issu
 
 ---
 
-## 5. Creating a New Template — Step by Step
+## 5. Creating a New Template - Step by Step
 
 ### Choosing Between Markdown and YAML Templates
 
@@ -206,11 +206,11 @@ Before creating a template, decide which format best suits your needs:
 | **Best for** | Simple templates, freeform text | Structured data collection, accessibility |
 | **Complexity** | Very simple to create | More complex, requires YAML knowledge |
 | **Screen reader UX** | Announces as pre-filled text editor | Announces each field with explicit labels |
-| **Validation** | None — contributors can delete anything | Can mark fields as required, validate input |
+| **Validation** | None - contributors can delete anything | Can mark fields as required, validate input |
 | **Flexibility** | Full Markdown formatting freedom | Limited to defined field types |
-| **Data consistency** | Varies — contributors may skip sections | High — dropdowns ensure consistent values |
+| **Data consistency** | Varies - contributors may skip sections | High - dropdowns ensure consistent values |
 | **Learning curve** | Minimal | Moderate |
-| **Maintenance** | Easy — just edit Markdown | More involved — must update YAML structure |
+| **Maintenance** | Easy - just edit Markdown | More involved - must update YAML structure |
 
 **Use Markdown templates when:**
 - You want contributors to have maximum flexibility in how they write
@@ -397,7 +397,7 @@ Screen reader and browser information is especially important for us to reproduc
 3. Scroll to the "Features" section → click the checkmark next to "Issues" → click **"Set up templates"**
 4. Or navigate directly to `.github/ISSUE_TEMPLATE/` in your fork → click the `+` button → "Create new file"
 5. GitHub opens a template editor. Fill in the template name, about description, and body
-6. GitHub auto-populates the filename — you can change it
+6. GitHub auto-populates the filename - you can change it
 7. Click **"Propose changes"** → create a PR to add the template
 
 </details>
@@ -437,7 +437,7 @@ Screen reader and browser information is especially important for us to reproduc
 
 ## 6. YAML Form-Based Templates
 
-YAML templates create a proper form interface — labeled fields, dropdowns, checkboxes — rather than a pre-filled text editor. This is the preferred format for modern GitHub projects, especially those focused on accessibility.
+YAML templates create a proper form interface - labeled fields, dropdowns, checkboxes - rather than a pre-filled text editor. This is the preferred format for modern GitHub projects, especially those focused on accessibility.
 
 ### Why YAML Forms Are Better for Accessibility
 
@@ -533,7 +533,7 @@ body:
 
 GitHub supports several field types in YAML form templates. Each has specific attributes and uses:
 
-#### 1. `markdown` — Instructional Text
+#### 1. `markdown` - Instructional Text
 
 Displays formatted Markdown content. Not editable by the contributor. Use for instructions, warnings, or explanations.
 
@@ -556,7 +556,7 @@ Displays formatted Markdown content. Not editable by the contributor. Use for in
 
 ---
 
-#### 2. `input` — Single-line Text Field
+#### 2. `input` - Single-line Text Field
 
 A single-line text input. Best for short answers like version numbers, URLs, or names.
 
@@ -583,7 +583,7 @@ A single-line text input. Best for short answers like version numbers, URLs, or 
 
 ---
 
-#### 3. `textarea` — Multi-line Text Area
+#### 3. `textarea` - Multi-line Text Area
 
 A multi-line text input. Best for descriptions, reproduction steps, code snippets, or any long-form content.
 
@@ -619,7 +619,7 @@ A multi-line text input. Best for descriptions, reproduction steps, code snippet
 
 ---
 
-#### 4. `dropdown` — Select Menu
+#### 4. `dropdown` - Select Menu
 
 A dropdown menu with predefined options. Contributors select one choice. Best for bounded answer spaces like OS, browser, or severity.
 
@@ -660,7 +660,7 @@ A dropdown menu with predefined options. Contributors select one choice. Best fo
 
 ---
 
-#### 5. `checkboxes` — Checkbox Group
+#### 5. `checkboxes` - Checkbox Group
 
 A group of checkboxes. Contributors can select multiple options or use as a verification checklist.
 
@@ -688,7 +688,7 @@ A group of checkboxes. Contributors can select multiple options or use as a veri
 - `label` (required): Checkbox label (what the user sees)
 - `required` (boolean, default `false`): Whether this checkbox must be checked
 
-**No top-level validation** — validation is per-checkbox in `options`
+**No top-level validation** - validation is per-checkbox in `options`
 
 **Screen reader experience:**
 1. Group label announced: "Before Submitting, Please verify these items"
@@ -890,7 +890,7 @@ body:
     id: context
     attributes:
       label: Additional Context
-      description: Anything else — screenshots (with alt text), links to related issues, workarounds you found, or suggestions for a fix
+      description: Anything else - screenshots (with alt text), links to related issues, workarounds you found, or suggestions for a fix
 
   - type: checkboxes
     id: checklist
@@ -912,13 +912,13 @@ This template is itself an accessibility contribution:
 - The "Before Submitting" checklist uses explicit checkbox labels, not just text
 - The textarea placeholders model the format of a good answer, not just describe it
 - The WCAG dropdown educates as it collects data
-- The "Additional Context" field is optional — a contributor with limited time can still file a useful report without this field
+- The "Additional Context" field is optional - a contributor with limited time can still file a useful report without this field
 
 ---
 
 ### A Second Template: Feature Request Form
 
-The bug report template above is specific to accessibility issues. Once you understand the pattern, you can create templates for any contribution type. Here is a Feature Request template you can add to your own projects — it follows the exact same YAML structure.
+The bug report template above is specific to accessibility issues. Once you understand the pattern, you can create templates for any contribution type. Here is a Feature Request template you can add to your own projects - it follows the exact same YAML structure.
 
 Save as `.github/ISSUE_TEMPLATE/feature-request.yml`:
 
@@ -988,13 +988,13 @@ body:
     attributes:
       label: Before Submitting
       options:
-        - label: I searched existing issues and discussions — this has not been suggested before
+        - label: I searched existing issues and discussions - this has not been suggested before
           required: true
         - label: This feature would benefit contributors beyond my personal workflow
           required: false
 ```
 
-**Why this matters for your own projects:** Every open source project you create or maintain can have issue templates. A project with good templates gets better bug reports and feature requests — which means less back-and-forth and faster, more confident triage. The templates you create here are skills you carry to every repository you own.
+**Why this matters for your own projects:** Every open source project you create or maintain can have issue templates. A project with good templates gets better bug reports and feature requests - which means less back-and-forth and faster, more confident triage. The templates you create here are skills you carry to every repository you own.
 
 ---
 
@@ -1008,7 +1008,7 @@ When designing templates for a project you maintain, use these principles:
 
 **Write textarea placeholders as examples, not instructions.** A placeholder that says "e.g., When I navigate to the Issues tab using NVDA in Chrome on Windows 11..." teaches the contributor what a good answer looks like. A placeholder that says "Describe the issue here" does not.
 
-**Include a pre-submission checklist.** Even one checkbox — "I searched for existing issues" — reduces duplicate reports significantly. The checklist also reinforces community norms: the act of checking a box is more memorable than reading a line of text.
+**Include a pre-submission checklist.** Even one checkbox - "I searched for existing issues" - reduces duplicate reports significantly. The checklist also reinforces community norms: the act of checking a box is more memorable than reading a line of text.
 
 **Test every template with your screen reader before committing.** Navigate through the form, tab through all fields, confirm every label is announced correctly, and verify that required-field errors are surfaced in a way a screen reader user will encounter before submitting.
 
@@ -1018,7 +1018,7 @@ When designing templates for a project you maintain, use these principles:
 
 A pull request template appears as the default body of every new PR in your repository.
 
-**File location:** `.github/pull_request_template.md` (singular — only one PR template per repo)
+**File location:** `.github/pull_request_template.md` (singular - only one PR template per repo)
 
 ### Reading the Agent Forge PR Template
 
@@ -1047,13 +1047,13 @@ Open `.github/pull_request_template.md` in VS Code. You will see the standard se
 <!-- Use "Closes #N" to auto-close the issue when this PR is merged -->
 ```
 
-**Using it when opening a PR:** The template auto-fills the PR description field. Tab through the sections with your screen reader and fill in each one. Delete placeholder comments (`<!-- ... -->`) — they will not appear in the rendered PR but can confuse screen readers if left in.
+**Using it when opening a PR:** The template auto-fills the PR description field. Tab through the sections with your screen reader and fill in each one. Delete placeholder comments (`<!-- ... -->`) - they will not appear in the rendered PR but can confuse screen readers if left in.
 
 ---
 
 ## 9. Hands-On Activity
 
-### Exercise A — Use an Existing Template
+### Exercise A - Use an Existing Template
 
 **Your Mission:** File your first issue using a structured template. You'll experience the template as an end-user, which teaches you what good template design feels like.
 
@@ -1090,8 +1090,8 @@ Open `.github/pull_request_template.md` in VS Code. You will see the standard se
    - NVDA/JAWS: Press `Tab` to move between templates, `Enter` to select one
    - VoiceOver: Use `VO+Right Arrow` to move between elements, then `VO+Space` to activate
 4. Count the templates and read their descriptions aloud (or write them down):
-   - Template 1: [name] — [description]
-   - Template 2: [name] — [description]
+   - Template 1: [name] - [description]
+   - Template 2: [name] - [description]
    - And so on...
 
 **What you're listening for:**
@@ -1134,7 +1134,7 @@ Open `.github/pull_request_template.md` in VS Code. You will see the standard se
    - Help text or placeholder (hints about what to enter)
    - Whether it's marked as required (usually with a red `*` or the word "required")
 4. **Write down at least 3 fields and whether each is required:**
-   - Field: [name] — Required? [Yes/No]
+   - Field: [name] - Required? [Yes/No]
 
 ---
 
@@ -1146,7 +1146,7 @@ Open `.github/pull_request_template.md` in VS Code. You will see the standard se
    - If it asks "Steps to reproduce," write 2-3 specific steps
 2. **For required fields marked with `*`:** Fill them in completely
 3. **For optional fields:** Choose at least one and fill it in (so you test optional fields)
-4. Don't worry about filling in *every* field — the point is to test the form
+4. Don't worry about filling in *every* field - the point is to test the form
 
 **What to expect:**
 - As you fill fields, you may see tooltips or error messages if you make a mistake
@@ -1195,7 +1195,7 @@ Open `.github/pull_request_template.md` in VS Code. You will see the standard se
 
 ---
 
-#### Step 8: Checkpoint — Reflect on the Template
+#### Step 8: Checkpoint - Reflect on the Template
 
 After submitting, answer:
 
@@ -1208,7 +1208,7 @@ After submitting, answer:
 
 ---
 
-### Exercise B — Add the Accessibility Bug Report Template to Your Fork
+### Exercise B - Add the Accessibility Bug Report Template to Your Fork
 
 **Your Mission:** Create your own instance of the accessibility bug report template in your personal fork. This teaches you the file structure and gives you hands-on experience with YAML syntax.
 
@@ -1325,7 +1325,7 @@ After submitting, answer:
 
 **What to do:**
 1. Save the file (`Ctrl+S`)
-2. **Look at the bottom right of VS Code** — you may see some notifications
+2. **Look at the bottom right of VS Code** - you may see some notifications
 3. Check if VS Code shows any red squiggly lines (indicating syntax errors)
 
 **Common YAML errors to watch for:**
@@ -1335,7 +1335,7 @@ After submitting, answer:
 
 **If you see red squiggles:**
 1. Hover over the error to see what VS Code suggests
-2. Compare your file with Section 7's template — look for extra/missing spaces or colons
+2. Compare your file with Section 7's template - look for extra/missing spaces or colons
 3. Make corrections and save again
 
 **If you see no errors:**
@@ -1412,7 +1412,7 @@ After submitting, answer:
    - Did you encounter any accessibility barriers?
    - Would a screen reader user find this template easy to use?
 
-**Record your findings** — you'll use this for Exercise D.
+**Record your findings** - you'll use this for Exercise D.
 
 ---
 
@@ -1445,7 +1445,7 @@ After completing Steps 1-9, verify:
 
 You're ready for Exercise C!
 
-### Exercise C — Submit It Upstream
+### Exercise C - Submit It Upstream
 
 **Your Mission:** Contribute your tested template to the upstream `accesswatch/agent-forge` repository. This is a real open source contribution!
 
@@ -1471,7 +1471,7 @@ Before submitting upstream, make sure your template is production-ready:
    - No broken formatting
    - Dropdowns work properly
    - Required fields are marked
-5. Don't submit this test issue — just close the tab
+5. Don't submit this test issue - just close the tab
 
 **What success looks like:**
 - The template is clean, no error messages
@@ -1493,7 +1493,7 @@ Before submitting upstream, make sure your template is production-ready:
 4. A PR creation page opens showing:
    - **Base:** `accesswatch/agent-forge` / `main` (the upstream repo)
    - **Head:** `[your-username]/agent-forge` / `feat/add-accessibility-template` (your fork/branch)
-5. Confirm this is correct — you're sending your branch to the upstream repository
+5. Confirm this is correct - you're sending your branch to the upstream repository
 
 **What you should see:**
 - A comparison showing your new file: `.github/ISSUE_TEMPLATE/accessibility-bug.yml`
@@ -1564,7 +1564,7 @@ Closes #[issue number] (if there is an open issue requesting this feature)
    - Does the description explain the value of this template?
    - Are all checkmarks (``) and formatting visible?
 3. Make any corrections needed
-4. Do not submit yet — continue to Step 5
+4. Do not submit yet - continue to Step 5
 
 ---
 
@@ -1614,7 +1614,7 @@ Closes #[issue number] (if there is an open issue requesting this feature)
 5. Click **Reply**
 
 **If no feedback after 48 hours:**
-- You can leave a polite comment: "Friendly ping — is there anything else needed from my end?"
+- You can leave a polite comment: "Friendly ping - is there anything else needed from my end?"
 
 ---
 
@@ -1648,7 +1648,7 @@ After completing Steps 1-7, verify:
 - What did the maintainers' feedback teach you about accessibility templates?
 - Would you do this again for other projects?
 
-### Exercise D — Design a Template for Your Own Project
+### Exercise D - Design a Template for Your Own Project
 
 **Your Mission:** Apply everything you've learned to design a template for a repository you own, maintain, or plan to create.
 
@@ -1919,7 +1919,7 @@ Placeholder: [example]
 
 **What to do:**
 
-This is optional but powerful — real user testing is the best validation.
+This is optional but powerful - real user testing is the best validation.
 
 1. **Upload your template** to a test repository:
    - Create a test branch in a personal repo
@@ -2001,7 +2001,7 @@ After completing Parts 1-8, you have:
 
 **You now understand the thinking that separates "a blank text box" from "structured, actionable contributions."**
 
-This skill — understanding what information *actually* matters — is what makes great templates. The YAML syntax is just the delivery mechanism. The hard part is the thinking you did in Parts 1-5.
+This skill - understanding what information *actually* matters - is what makes great templates. The YAML syntax is just the delivery mechanism. The hard part is the thinking you did in Parts 1-5.
 
 ---
 
@@ -2013,13 +2013,13 @@ You now:
 3. Know how to contribute upstream (Exercise C)
 4. Can design templates with real thinking behind them (Exercise D)
 
-In **Chapter 16 (Agent Forge)**, you'll see how the `@template-builder` agent automates the YAML writing part — but *you* bring the design thinking from this exercise. The agent generates YAML; you decide what questions to ask.
+In **Chapter 16 (Agent Forge)**, you'll see how the `@template-builder` agent automates the YAML writing part - but *you* bring the design thinking from this exercise. The agent generates YAML; you decide what questions to ask.
 
 ---
 
 ## 10. Day 2 Amplifier: The Template Builder Agent
 
-Everything you just learned — field types, YAML structure, accessibility testing — is core GitHub knowledge. Now see how Agent Forge amplifies it.
+Everything you just learned - field types, YAML structure, accessibility testing - is core GitHub knowledge. Now see how Agent Forge amplifies it.
 
 Our 6th agent, **@template-builder**, is an interactive wizard that generates issue templates guided by your answers to simple questions. Instead of writing YAML by hand, you answer prompts and the agent produces a production-ready template in seconds.
 
@@ -2048,7 +2048,7 @@ Then you copy, paste to `.github/ISSUE_TEMPLATE/your-template.yml`, commit, and 
 | Copy-Paste Example | 10-15 min | Medium | Low (if example is good) |
 | Agent-Guided | 2-3 min | Low (just describe) | Very Low (structured output) |
 
-The Template Builder does not teach you to design templates — Section 5 taught you that. It automates the mechanical part: translating your decisions into working YAML.
+The Template Builder does not teach you to design templates - Section 5 taught you that. It automates the mechanical part: translating your decisions into working YAML.
 
 ### Using the Template Builder
 
@@ -2056,7 +2056,7 @@ The Template Builder does not teach you to design templates — Section 5 taught
 
 **Chapter 16 Exercise (Agent Forge):** Use `@template-builder` to generate a template for a real project, then customize or extend it. See [Agent Forge: Building Your Own Agent](16-agent-forge.md#5-building-your-own-agent).
 
-**After the Workshop:** Any repetitive GitHub task — templates, checklists, workflows — can be Agent Forged. The Template Builder shows how.
+**After the Workshop:** Any repetitive GitHub task - templates, checklists, workflows - can be Agent Forged. The Template Builder shows how.
 
 ---
 

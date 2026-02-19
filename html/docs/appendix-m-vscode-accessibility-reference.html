@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GIT Going with GitHub — A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
-  <title>Appendix M: VS Code Accessibility Reference — GIT Going with GitHub</title>
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
+  <title>Appendix M: VS Code Accessibility Reference - GIT Going with GitHub</title>
   <link rel="stylesheet" href="./styles/github-markdown.css">
   <link rel="stylesheet" href="./styles/highlight.css">
   <link rel="stylesheet" href="./styles/custom.css">
@@ -39,8 +39,8 @@
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-complete-accessibility-settings-reference">Complete Accessibility Settings Reference</a></li>
-<li><a href="#2-audio-cues--all-options">Audio Cues — All Options</a></li>
-<li><a href="#3-accessible-diff-viewer--complete-guide">Accessible Diff Viewer — Complete Guide</a></li>
+<li><a href="#2-audio-cues--all-options">Audio Cues - All Options</a></li>
+<li><a href="#3-accessible-diff-viewer--complete-guide">Accessible Diff Viewer - Complete Guide</a></li>
 <li><a href="#4-screen-reader-specific-configurations">Screen Reader-Specific Configurations</a></li>
 <li><a href="#5-complete-keyboard-shortcuts">Complete Keyboard Shortcuts</a></li>
 <li><a href="#6-accessibility-signals-types-and-customization">Accessibility Signals Types and Customization</a></li>
@@ -298,7 +298,7 @@
 </tr>
 </tbody></table>
 <hr>
-<h2>2. Audio Cues — All Options</h2>
+<h2>2. Audio Cues - All Options</h2>
 <p>Audio cues provide non-verbal feedback through sound. Each cue can be configured independently.</p>
 <h3>Accessing Audio Cue Settings</h3>
 <p><strong>Settings UI:</strong> <code>Ctrl+,</code> → search &quot;audio cue&quot;</p>
@@ -487,7 +487,7 @@
 <li>Volume: Normalize to avoid clipping</li>
 </ul>
 <hr>
-<h2>3. Accessible Diff Viewer — Complete Guide</h2>
+<h2>3. Accessible Diff Viewer - Complete Guide</h2>
 <p>The Accessible Diff Viewer presents file diffs as a structured, line-by-line list instead of a visual side-by-side view.</p>
 <h3>When to Use Accessible Diff Viewer</h3>
 <ul>
@@ -611,7 +611,7 @@
 <h3>Understanding Context Lines</h3>
 <p>The diff shows 3 unchanged lines before and after each change for context. These are announced as &quot;Unchanged: [content]&quot;.</p>
 <p><strong>Example:</strong></p>
-<pre><code class="hljs">Hunk <span class="hljs-number">1</span> of <span class="hljs-number">3</span> — lines <span class="hljs-number">4</span>2-<span class="hljs-number">48</span>
+<pre><code class="hljs">Hunk <span class="hljs-number">1</span> of <span class="hljs-number">3</span> <span class="hljs-operator">-</span> lines <span class="hljs-number">4</span>2-<span class="hljs-number">48</span>
 
   <span class="hljs-params">Unchanged:</span> <span class="hljs-comment">## Screen Reader Setup</span>
   <span class="hljs-params">Unchanged:</span>
@@ -673,8 +673,8 @@
 </ol>
 <p><strong>NVDA add-ons for VS Code:</strong></p>
 <ul>
-<li><strong>Focus Highlight</strong> — shows focus location visually (helpful for sighted trainers)</li>
-<li><strong>IndentNav</strong> — navigate by indentation level (useful for Python, YAML)</li>
+<li><strong>Focus Highlight</strong> - shows focus location visually (helpful for sighted trainers)</li>
+<li><strong>IndentNav</strong> - navigate by indentation level (useful for Python, YAML)</li>
 </ul>
 <p><strong>VS Code-specific NVDA commands:</strong></p>
 <table>
@@ -869,7 +869,7 @@
 <hr>
 <h2>5. Complete Keyboard Shortcuts</h2>
 <blockquote>
-<p>For screen reader navigation shortcuts when using GitHub in a browser (NVDA, JAWS, VoiceOver), see <a href="appendix-b-screen-reader-cheatsheet.md">Appendix B — Screen Reader Cheat Sheet</a>.</p>
+<p>For screen reader navigation shortcuts when using GitHub in a browser (NVDA, JAWS, VoiceOver), see <a href="appendix-b-screen-reader-cheatsheet.md">Appendix B - Screen Reader Cheat Sheet</a>.</p>
 </blockquote>
 <h3>Global Navigation</h3>
 <table>
@@ -966,7 +966,7 @@
 <td><code>Cmd+Shift+X</code></td>
 </tr>
 </tbody></table>
-<h3>Editor — File Operations</h3>
+<h3>Editor - File Operations</h3>
 <table>
 <thead>
 <tr>
@@ -1036,7 +1036,7 @@
 <td><code>Cmd+\</code></td>
 </tr>
 </tbody></table>
-<h3>Editor — Navigation</h3>
+<h3>Editor - Navigation</h3>
 <table>
 <thead>
 <tr>
@@ -1121,7 +1121,7 @@
 <td><code>Shift+Option+Left</code></td>
 </tr>
 </tbody></table>
-<h3>Editor — Editing</h3>
+<h3>Editor - Editing</h3>
 <table>
 <thead>
 <tr>
@@ -1216,7 +1216,7 @@
 <td><code>Cmd+K Cmd+F</code></td>
 </tr>
 </tbody></table>
-<h3>Editor — Find and Replace</h3>
+<h3>Editor - Find and Replace</h3>
 <table>
 <thead>
 <tr>
@@ -1271,7 +1271,7 @@
 <td><code>Option+R</code></td>
 </tr>
 </tbody></table>
-<h3>Editor — Multi-Cursor</h3>
+<h3>Editor - Multi-Cursor</h3>
 <table>
 <thead>
 <tr>
@@ -1620,10 +1620,10 @@
 <h3>Signal Priorities</h3>
 <p>When multiple signals occur simultaneously, VS Code prioritizes them:</p>
 <ol>
-<li><strong>Errors</strong> (highest priority) — always announced</li>
-<li><strong>Warnings</strong> — announced after errors</li>
-<li><strong>Completions</strong> — announced if no errors/warnings</li>
-<li><strong>Focus changes</strong> — announced last</li>
+<li><strong>Errors</strong> (highest priority) - always announced</li>
+<li><strong>Warnings</strong> - announced after errors</li>
+<li><strong>Completions</strong> - announced if no errors/warnings</li>
+<li><strong>Focus changes</strong> - announced last</li>
 </ol>
 <p>This prevents overlapping announcements.</p>
 <hr>
@@ -1765,8 +1765,8 @@
 
   </main>
   <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
-    <p><strong>GIT Going with GitHub</strong> — A workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
-    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="http://www.joinbits.org">joinbits.org</a></p>
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
+    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="https://www.joinbits.org">joinbits.org</a></p>
   </footer>
   </body>
 </html>

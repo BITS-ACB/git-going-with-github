@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GIT Going with GitHub — A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
-  <title>Troubleshooting Guide — GIT Going with GitHub</title>
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
+  <title>Troubleshooting Guide - GIT Going with GitHub</title>
   <link rel="stylesheet" href="./styles/github-markdown.css">
   <link rel="stylesheet" href="./styles/highlight.css">
   <link rel="stylesheet" href="./styles/custom.css">
@@ -48,7 +48,7 @@
 <li><a href="#vs-code-setup-and-configuration">VS Code Setup and Configuration</a></li>
 <li><a href="#vs-code-extensions">VS Code Extensions</a></li>
 <li><a href="#vs-code-source-control">VS Code Source Control</a></li>
-<li><a href="#screen-readers--general">Screen Readers — General</a></li>
+<li><a href="#screen-readers--general">Screen Readers - General</a></li>
 <li><a href="#nvda-specific-issues">NVDA-Specific Issues</a></li>
 <li><a href="#jaws-specific-issues">JAWS-Specific Issues</a></li>
 <li><a href="#voiceover-specific-issues">VoiceOver-Specific Issues</a></li>
@@ -120,7 +120,7 @@
 <li>Verify you are signed in to GitHub</li>
 <li>Check if you already have a fork: Go to your profile → Repositories → search for the repo name</li>
 <li>If you already forked it, navigate to your existing fork instead</li>
-<li>If the Fork button is not visible, the repository may be restricted — contact the facilitator</li>
+<li>If the Fork button is not visible, the repository may be restricted - contact the facilitator</li>
 </ol>
 <hr>
 <h3>Problem: VS Code cannot be installed</h3>
@@ -204,7 +204,7 @@ git merge upstream/main</code></pre>
 <ol>
 <li>This is informational, not an error. Git is converting line endings for your platform.</li>
 <li>To suppress the warning: <code>git config --global core.autocrlf true</code> (Windows) or <code>git config --global core.autocrlf input</code> (macOS/Linux)</li>
-<li>In VS Code, the bottom-right shows &quot;LF&quot; or &quot;CRLF&quot; — click to change per file if needed</li>
+<li>In VS Code, the bottom-right shows &quot;LF&quot; or &quot;CRLF&quot; - click to change per file if needed</li>
 </ol>
 <hr>
 <h2>GitHub Authentication</h2>
@@ -242,8 +242,8 @@ git merge upstream/main</code></pre>
 </ol>
 <p><strong>Cause D: Expired token or revoked SSH key</strong></p>
 <ol>
-<li>Check SSH keys: <a href="https://github.com/settings/keys">https://github.com/settings/keys</a> — is your key listed and not expired?</li>
-<li>Check tokens: <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> — is your token still active?</li>
+<li>Check SSH keys: <a href="https://github.com/settings/keys">https://github.com/settings/keys</a> - is your key listed and not expired?</li>
+<li>Check tokens: <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> - is your token still active?</li>
 <li>Regenerate if expired</li>
 </ol>
 <p>See <a href="docs/appendix-d-git-authentication.md">Appendix D (Git Authentication)</a> for complete setup instructions.</p>
@@ -316,7 +316,7 @@ ssh-add ~/.ssh/id_ed25519</code></pre>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>The Fork button is near the top of the repository page, after the Star and Watch buttons</li>
-<li>Screen reader: Press <code>B</code> repeatedly to find buttons — look for &quot;Fork&quot;</li>
+<li>Screen reader: Press <code>B</code> repeatedly to find buttons - look for &quot;Fork&quot;</li>
 <li>If the button says &quot;Forked from...&quot; instead, you already have a fork. Navigate to your fork at <code>github.com/YOUR-USERNAME/REPO-NAME</code></li>
 </ol>
 <hr>
@@ -336,9 +336,9 @@ ssh-add ~/.ssh/id_ed25519</code></pre>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>The repository may be very large. Try a shallow clone: <code>git clone --depth 1 URL</code></li>
-<li>Check your internet connection — try cloning a small test repo first</li>
+<li>Check your internet connection - try cloning a small test repo first</li>
 <li>If behind a corporate proxy, configure Git: <code>git config --global http.proxy http://proxy-address:port</code></li>
-<li>Try switching between HTTPS and SSH — one may be faster on your network</li>
+<li>Try switching between HTTPS and SSH - one may be faster on your network</li>
 </ol>
 <hr>
 <h3>Problem: Cannot find a file that the chapter references</h3>
@@ -347,21 +347,21 @@ ssh-add ~/.ssh/id_ed25519</code></pre>
 <ol>
 <li>Verify you are on the correct branch: <code>git branch</code> → <code>git checkout main</code></li>
 <li>Pull the latest changes: <code>git pull origin main</code></li>
-<li>Check spelling and case — filenames are case-sensitive on macOS and Linux</li>
-<li>The file may be in a subfolder — use <code>git ls-files | grep -i filename</code> to search</li>
+<li>Check spelling and case - filenames are case-sensitive on macOS and Linux</li>
+<li>The file may be in a subfolder - use <code>git ls-files | grep -i filename</code> to search</li>
 <li>In VS Code, use <code>Ctrl+P</code> and type part of the filename</li>
 </ol>
 <hr>
 <h2>Branches, Merging, and Conflicts</h2>
-<h3>Problem: Large merge conflict — do not know how to resolve</h3>
+<h3>Problem: Large merge conflict - do not know how to resolve</h3>
 <p><strong>Symptoms:</strong> File shows <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ... ======= ... &gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name</code> markers. Multiple files may be affected.</p>
-<p><strong>Solution — Quick approach (choose one version):</strong></p>
+<p><strong>Solution - Quick approach (choose one version):</strong></p>
 <ul>
 <li>Keep YOUR changes: <code>git checkout --ours [filename]</code> → <code>git add [filename]</code></li>
 <li>Keep THEIR changes: <code>git checkout --theirs [filename]</code> → <code>git add [filename]</code></li>
 <li>Abort the merge entirely: <code>git merge --abort</code> (returns to pre-merge state, nothing lost)</li>
 </ul>
-<p><strong>Solution — Manual merge (combine both):</strong></p>
+<p><strong>Solution - Manual merge (combine both):</strong></p>
 <ol>
 <li>Open the file in VS Code</li>
 <li>Screen reader users: search for <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> to find each conflict</li>
@@ -390,7 +390,7 @@ ssh-add ~/.ssh/id_ed25519</code></pre>
 <li>Resolve any conflicts if prompted</li>
 <li>Then push: <code>git push origin your-branch</code></li>
 </ol>
-<p><strong>Do not force-push</strong> (<code>git push --force</code>) unless you understand the consequences — it overwrites the remote branch and can destroy other people&#39;s work.</p>
+<p><strong>Do not force-push</strong> (<code>git push --force</code>) unless you understand the consequences - it overwrites the remote branch and can destroy other people&#39;s work.</p>
 <hr>
 <h3>Problem: Accidentally deleted a branch with unmerged work</h3>
 <p><strong>Symptoms:</strong> You ran <code>git branch -D branch-name</code> and lost commits.</p>
@@ -398,7 +398,7 @@ ssh-add ~/.ssh/id_ed25519</code></pre>
 <pre><code class="hljs language-bash">git reflog                    <span class="hljs-comment"># Find the commit hash of your work</span>
 git checkout -b recovered-branch COMMIT-HASH</code></pre>
 <hr>
-<h3>Problem: Cannot switch branches — &quot;Please commit or stash your changes&quot;</h3>
+<h3>Problem: Cannot switch branches - &quot;Please commit or stash your changes&quot;</h3>
 <p><strong>Symptoms:</strong> <code>git checkout other-branch</code> fails because you have uncommitted changes.</p>
 <p><strong>Solution (choose one):</strong></p>
 <ol>
@@ -408,7 +408,7 @@ git checkout -b recovered-branch COMMIT-HASH</code></pre>
 </ol>
 <hr>
 <h2>Issues and Pull Requests</h2>
-<h3>Problem: Cannot create an issue — &quot;Issues are disabled&quot;</h3>
+<h3>Problem: Cannot create an issue - &quot;Issues are disabled&quot;</h3>
 <p><strong>Symptoms:</strong> The Issues tab is missing or says issues are disabled.</p>
 <p><strong>Solution:</strong> The repository owner has disabled issues. You can:</p>
 <ol>
@@ -449,7 +449,7 @@ git checkout -b recovered-branch COMMIT-HASH</code></pre>
 </ol>
 <hr>
 <h3>Problem: PR &quot;Files Changed&quot; tab shows too many changes</h3>
-<p><strong>Symptoms:</strong> Your PR shows changes you did not make — dozens or hundreds of files.</p>
+<p><strong>Symptoms:</strong> Your PR shows changes you did not make - dozens or hundreds of files.</p>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>Your branch likely diverged from main. Update it:<pre><code class="hljs language-bash">git checkout your-branch
@@ -463,7 +463,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <hr>
 <h2>Templates and YAML</h2>
 <h3>Problem: Template not showing in GitHub issue creation</h3>
-<p><strong>Symptoms:</strong> Click &quot;New Issue&quot; but your custom template does not appear — only &quot;Blank&quot; shows.</p>
+<p><strong>Symptoms:</strong> Click &quot;New Issue&quot; but your custom template does not appear - only &quot;Blank&quot; shows.</p>
 <p><strong>Cause A: File in wrong location</strong></p>
 <ul>
 <li>Must be: <code>.github/ISSUE_TEMPLATE/your-template.yml</code></li>
@@ -495,7 +495,7 @@ git push --force-with-lease origin your-branch</code></pre>
 </ul>
 <p><strong>Cause E: <code>config.yml</code> blocks blank issues but no templates exist</strong></p>
 <ul>
-<li>Check <code>.github/ISSUE_TEMPLATE/config.yml</code> — if <code>blank_issues_enabled: false</code> and no valid templates exist, the &quot;New Issue&quot; page will be empty</li>
+<li>Check <code>.github/ISSUE_TEMPLATE/config.yml</code> - if <code>blank_issues_enabled: false</code> and no valid templates exist, the &quot;New Issue&quot; page will be empty</li>
 </ul>
 <hr>
 <h3>Problem: &quot;Required field&quot; validation not working in template</h3>
@@ -534,15 +534,15 @@ git push --force-with-lease origin your-branch</code></pre>
 <p><strong>Symptoms:</strong> Template fails to load or GitHub shows a YAML parse error.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li>YAML uses spaces only — never tabs. Configure your editor to insert spaces for tabs.</li>
-<li>In VS Code: look at the bottom-right status bar — click &quot;Spaces: 2&quot; or &quot;Tab Size&quot; to set to spaces</li>
+<li>YAML uses spaces only - never tabs. Configure your editor to insert spaces for tabs.</li>
+<li>In VS Code: look at the bottom-right status bar - click &quot;Spaces: 2&quot; or &quot;Tab Size&quot; to set to spaces</li>
 <li>Each nesting level should be 2 spaces</li>
 <li>Validate your YAML at <a href="https://www.yamllint.com/">https://www.yamllint.com/</a> before committing</li>
 </ol>
 <hr>
 <h2>VS Code Setup and Configuration</h2>
 <h3>Problem: VS Code does not detect screen reader</h3>
-<p><strong>Symptoms:</strong> VS Code opens but screen reader mode is not active — announcements are minimal or missing.</p>
+<p><strong>Symptoms:</strong> VS Code opens but screen reader mode is not active - announcements are minimal or missing.</p>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>Press <code>Shift+Alt+F1</code> to manually enable screen reader mode</li>
@@ -567,7 +567,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <ol>
 <li>Open Command Palette: <code>Ctrl+Shift+P</code></li>
 <li>Start typing any part of the command name</li>
-<li>Arrow through results — your screen reader announces each one</li>
+<li>Arrow through results - your screen reader announces each one</li>
 <li>Press Enter to execute</li>
 <li>If still not found, the command may require an extension to be installed</li>
 </ol>
@@ -605,7 +605,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <li>If still broken, uninstall and reinstall the extension</li>
 </ul>
 </li>
-<li>Check VS Code version: <code>Ctrl+Shift+P</code> → &quot;About&quot; — some extensions require recent VS Code versions</li>
+<li>Check VS Code version: <code>Ctrl+Shift+P</code> → &quot;About&quot; - some extensions require recent VS Code versions</li>
 </ol>
 <hr>
 <h3>Problem: GitHub Pull Requests extension not showing PRs</h3>
@@ -619,7 +619,7 @@ git push --force-with-lease origin your-branch</code></pre>
 </ol>
 <hr>
 <h3>Problem: Extension conflicts</h3>
-<p><strong>Symptoms:</strong> Two extensions interfere with each other — duplicate features, broken shortcuts, or errors.</p>
+<p><strong>Symptoms:</strong> Two extensions interfere with each other - duplicate features, broken shortcuts, or errors.</p>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>Open Extensions: <code>Ctrl+Shift+X</code></li>
@@ -648,7 +648,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <li>If the diff shows no visible changes, it is likely a line ending or trailing whitespace issue</li>
 </ol>
 <hr>
-<h3>Problem: Cannot stage or commit — &quot;No changes to commit&quot;</h3>
+<h3>Problem: Cannot stage or commit - &quot;No changes to commit&quot;</h3>
 <p><strong>Symptoms:</strong> You made changes but Git does not see them.</p>
 <p><strong>Solution:</strong></p>
 <ol>
@@ -658,17 +658,17 @@ git push --force-with-lease origin your-branch</code></pre>
 <li>If the file is new, it needs to be staged with <code>git add [filename]</code> before it appears</li>
 </ol>
 <hr>
-<h2>Screen Readers — General</h2>
+<h2>Screen Readers - General</h2>
 <h3>Problem: Screen reader does not read GitHub page content</h3>
 <p><strong>Symptoms:</strong> Screen reader launches but GitHub content is silent or skips sections.</p>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>Verify you are in Browse Mode (document/virtual mode), not Focus Mode</li>
-<li>Wait for the page to fully load — GitHub uses JavaScript rendering that may take a few seconds</li>
+<li>Wait for the page to fully load - GitHub uses JavaScript rendering that may take a few seconds</li>
 <li>Try refreshing: <code>Ctrl+R</code> or <code>F5</code></li>
-<li>Use heading navigation (<code>H</code>) to find the main content — skip past the navigation menus</li>
+<li>Use heading navigation (<code>H</code>) to find the main content - skip past the navigation menus</li>
 <li>Use landmark navigation (<code>D</code>) to jump to the <code>main</code> landmark</li>
-<li>If a specific section is empty, it may be in a dynamically loaded area — press <code>Tab</code> to see if interactive elements appear</li>
+<li>If a specific section is empty, it may be in a dynamically loaded area - press <code>Tab</code> to see if interactive elements appear</li>
 </ol>
 <hr>
 <h3>Problem: Screen reader reads too much navigation before content</h3>
@@ -677,7 +677,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <ol>
 <li>Press <code>D</code> (landmark navigation) to jump directly to the <code>main</code> content area</li>
 <li>Or press <code>1</code> to jump to the first H1 heading (usually the page title)</li>
-<li>GitHub pages have a &quot;Skip to content&quot; link — it is the first focusable element. Press <code>Enter</code> on it.</li>
+<li>GitHub pages have a &quot;Skip to content&quot; link - it is the first focusable element. Press <code>Enter</code> on it.</li>
 </ol>
 <hr>
 <h3>Problem: Screen reader announces &quot;[number] results&quot; but does not read them</h3>
@@ -686,7 +686,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <ol>
 <li>The search results are usually in a list below the search bar</li>
 <li>Press <code>L</code> to jump to the next list, then use arrow keys to navigate items</li>
-<li>Or use <code>K</code> to jump through links — each result is a link</li>
+<li>Or use <code>K</code> to jump through links - each result is a link</li>
 <li>On the Issues/PRs page, press <code>J</code> and <code>Shift+J</code> to navigate between items (GitHub shortcut)</li>
 </ol>
 <hr>
@@ -697,7 +697,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <li>For dropdown menus: activate the button, then use <code>Arrow Down</code> to navigate options</li>
 <li>For dialog popups: press <code>Tab</code> to move between elements inside the dialog</li>
 <li>If the popup closes on focus loss, try <code>Escape</code> to close it, then <code>Enter</code> to reopen, and immediately arrow into it</li>
-<li>Some GitHub menus require Focus Mode — press <code>NVDA+Space</code> (NVDA) or <code>Insert+Z</code> (JAWS) to switch</li>
+<li>Some GitHub menus require Focus Mode - press <code>NVDA+Space</code> (NVDA) or <code>Insert+Z</code> (JAWS) to switch</li>
 </ol>
 <hr>
 <h3>Problem: Interactive elements are announced as &quot;clickable&quot; without a specific role</h3>
@@ -705,7 +705,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>Try pressing <code>Enter</code> or <code>Space</code> to activate the element</li>
-<li>This indicates a potential accessibility issue with the page — the element is missing proper ARIA roles</li>
+<li>This indicates a potential accessibility issue with the page - the element is missing proper ARIA roles</li>
 <li>If this happens consistently on a specific page, file an accessibility issue on the project with the page URL and element description</li>
 </ol>
 <hr>
@@ -715,7 +715,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>Press <code>NVDA+Space</code> to verify you are in Browse Mode</li>
-<li>Press <code>NVDA+F7</code> to open the Elements List — if it shows headings and links, NVDA can see the page</li>
+<li>Press <code>NVDA+F7</code> to open the Elements List - if it shows headings and links, NVDA can see the page</li>
 <li>Press <code>Ctrl+Home</code> to go to the top of the page, then <code>Down Arrow</code> through content</li>
 <li>Try a different browser (Firefox often works best with NVDA)</li>
 <li>Check NVDA preferences → Browse Mode → verify &quot;Use browse mode on page load&quot; is checked</li>
@@ -747,7 +747,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <li>Toggle Forms Mode: <code>Insert+Z</code></li>
 <li>List all form controls on the page: <code>Insert+F6</code></li>
 <li>Navigate form fields with <code>F</code> (next form field) or <code>Tab</code></li>
-<li>If labels are not announced, the HTML may be missing proper <code>&lt;label&gt;</code> elements — this is a page accessibility issue</li>
+<li>If labels are not announced, the HTML may be missing proper <code>&lt;label&gt;</code> elements - this is a page accessibility issue</li>
 <li>Check JAWS version: ensure you are running JAWS 2026 or later for best GitHub compatibility</li>
 </ol>
 <hr>
@@ -777,16 +777,16 @@ git push --force-with-lease origin your-branch</code></pre>
 <li>Open Rotor: <code>VO+U</code> (VO key is usually <code>Caps Lock</code> or <code>Control+Option</code>)</li>
 <li>Use Left/Right arrows to switch rotor categories (Headings, Links, Form Controls)</li>
 <li>Use Up/Down arrows to navigate within a category</li>
-<li>If the rotor shows fewer elements than expected, the page may need to finish loading — wait and try again</li>
-<li>Test in Safari first — it has the best VoiceOver compatibility among browsers</li>
+<li>If the rotor shows fewer elements than expected, the page may need to finish loading - wait and try again</li>
+<li>Test in Safari first - it has the best VoiceOver compatibility among browsers</li>
 </ol>
 <hr>
 <h3>Problem: VoiceOver Quick Nav conflicts with GitHub shortcuts</h3>
 <p><strong>Symptoms:</strong> Single-letter navigation (H, B, K) is consumed by VoiceOver Quick Nav instead of GitHub.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li><strong>Quick Nav on (default for web):</strong> Single letters are VoiceOver navigation commands (H for headings, etc.) — this is usually what you want for web browsing</li>
-<li><strong>Quick Nav off:</strong> Toggle with <code>Left Arrow + Right Arrow</code> simultaneously. With Quick Nav off, single letters type into the page — needed for some GitHub shortcuts</li>
+<li><strong>Quick Nav on (default for web):</strong> Single letters are VoiceOver navigation commands (H for headings, etc.) - this is usually what you want for web browsing</li>
+<li><strong>Quick Nav off:</strong> Toggle with <code>Left Arrow + Right Arrow</code> simultaneously. With Quick Nav off, single letters type into the page - needed for some GitHub shortcuts</li>
 <li>For GitHub shortcuts like <code>G</code> then <code>I</code>: turn Quick Nav off first</li>
 </ol>
 <hr>
@@ -816,7 +816,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>Check your subscription at <a href="https://github.com/settings/copilot">https://github.com/settings/copilot</a></li>
-<li>GitHub Copilot offers a free tier with limited usage — verify you have not exceeded limits</li>
+<li>GitHub Copilot offers a free tier with limited usage - verify you have not exceeded limits</li>
 <li>For full access: Copilot Individual (~$10/month), Copilot Business (via organization), or Copilot Enterprise</li>
 <li><strong>Students/educators:</strong> Free access at <a href="https://education.github.com/">https://education.github.com/</a></li>
 <li>If your organization provides Copilot, ask your admin to enable it for your account</li>
@@ -826,10 +826,10 @@ git push --force-with-lease origin your-branch</code></pre>
 <p><strong>Symptoms:</strong> Copilot is installed and signed in, but no code suggestions appear while typing.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li>Verify Copilot is enabled for the current file type: check the Copilot icon in the status bar — it should show a checkmark</li>
+<li>Verify Copilot is enabled for the current file type: check the Copilot icon in the status bar - it should show a checkmark</li>
 <li>Click the Copilot icon to see if suggestions are enabled or disabled for this language</li>
 <li>Check Settings: <code>Ctrl+,</code> → search <code>github.copilot.enable</code> → verify your language is not disabled</li>
-<li>Open a new file and type a comment like <code>// function to add two numbers</code> — suggestions should appear below</li>
+<li>Open a new file and type a comment like <code>// function to add two numbers</code> - suggestions should appear below</li>
 <li>Copilot needs an active internet connection</li>
 </ol>
 <hr>
@@ -837,7 +837,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <p><strong>Symptoms:</strong> Copilot generates irrelevant or incorrect code/text.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li>This is normal — Copilot is a suggestion tool, not a decision-maker. Always review its output.</li>
+<li>This is normal - Copilot is a suggestion tool, not a decision-maker. Always review its output.</li>
 <li>Press <code>Alt+]</code> or <code>Alt+[</code> to cycle through alternative suggestions</li>
 <li>Provide more context: add comments explaining what you want, open related files, or use Copilot Chat for more detailed instructions</li>
 <li>Reject suggestions with <code>Escape</code></li>
@@ -848,7 +848,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <p><strong>Symptoms:</strong> Chat input becomes unresponsive, or it shows a loading spinner indefinitely.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li>Wait 10–15 seconds — the API may be processing a complex request</li>
+<li>Wait 10-15 seconds - the API may be processing a complex request</li>
 <li>Close and reopen Chat: click the X on the Chat panel → reopen with <code>Ctrl+Shift+I</code></li>
 <li>Check your internet connection</li>
 <li>Check for errors: View → Output → select &quot;GitHub Copilot&quot; from the dropdown → look for error messages</li>
@@ -861,7 +861,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <ol>
 <li>Type &quot;continue&quot; in the chat to ask Copilot to continue its response</li>
 <li>If the response is consistently too long, break your question into smaller parts</li>
-<li>Try a different model (click the model selector in Chat) — some models handle longer outputs better</li>
+<li>Try a different model (click the model selector in Chat) - some models handle longer outputs better</li>
 </ol>
 <hr>
 <h3>Problem: Chat does not know about my files or project</h3>
@@ -869,8 +869,8 @@ git push --force-with-lease origin your-branch</code></pre>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>Use <code>@workspace</code> before your question: <code>@workspace how is authentication handled?</code></li>
-<li>Open relevant files in the editor before asking — Copilot uses open files as context</li>
-<li>Select specific code, then ask about it — Copilot uses the selection as context</li>
+<li>Open relevant files in the editor before asking - Copilot uses open files as context</li>
+<li>Select specific code, then ask about it - Copilot uses the selection as context</li>
 <li>Make sure you opened the correct folder in VS Code (not a parent folder)</li>
 </ol>
 <hr>
@@ -878,7 +878,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <p><strong>Symptoms:</strong> Copilot Chat outputs formatted content that the screen reader does not navigate well.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li>Press <code>Alt+F2</code> (Accessible View) — this renders the response as plain, navigable text</li>
+<li>Press <code>Alt+F2</code> (Accessible View) - this renders the response as plain, navigable text</li>
 <li>In the Accessible View, use standard screen reader commands (arrows, H for headings) to read the response</li>
 <li>This is the recommended workflow for all screen reader users using Copilot Chat</li>
 </ol>
@@ -894,7 +894,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <li>Open Copilot Chat: <code>Ctrl+Shift+I</code> → type <code>@</code> → scroll through available agents</li>
 <li>If the file exists but the agent does not appear:<ul>
 <li>Verify the file is on your current branch</li>
-<li>Wait 2–3 minutes for the agent index to refresh</li>
+<li>Wait 2-3 minutes for the agent index to refresh</li>
 <li>Check that the YAML frontmatter in the <code>.agent.md</code> file is valid</li>
 </ul>
 </li>
@@ -916,7 +916,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>Verify you are signed in to GitHub in VS Code</li>
-<li>Check <code>.github/agents/preferences.md</code> — is it configured with your repositories?</li>
+<li>Check <code>.github/agents/preferences.md</code> - is it configured with your repositories?</li>
 <li>If <code>preferences.md</code> does not exist, copy from <code>preferences.example.md</code> and customize it</li>
 <li>The agent needs read access to the repositories listed in preferences</li>
 </ol>
@@ -928,7 +928,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <li>Custom slash commands come from <code>.github/prompts/</code> in your repository</li>
 <li>Verify the prompt files exist and are on your current branch</li>
 <li>Reload VS Code: <code>Ctrl+Shift+P</code> → &quot;Developer: Reload Window&quot;</li>
-<li>Type <code>/</code> in Chat and wait — the list may take a moment to populate</li>
+<li>Type <code>/</code> in Chat and wait - the list may take a moment to populate</li>
 </ol>
 <hr>
 <h2>Exercises and the Learning Room</h2>
@@ -936,7 +936,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <p><strong>Symptoms:</strong> An exercise says &quot;open the template file&quot; but the file is not in the expected location.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li>Check the exercise prerequisites — some files are created in earlier exercises</li>
+<li>Check the exercise prerequisites - some files are created in earlier exercises</li>
 <li>For templates: check <code>.github/ISSUE_TEMPLATE/</code> folder</li>
 <li>For agents: check <code>.github/agents/</code> folder</li>
 <li>List all files: <code>git ls-files</code> or in VS Code use <code>Ctrl+P</code> and type part of the filename</li>
@@ -951,7 +951,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <li>Read the prerequisites section at the start of each exercise</li>
 <li>Each exercise follows a pattern: <strong>Try It</strong> → <strong>You&#39;re done when</strong> → <strong>What success feels like</strong></li>
 <li>Look for the &quot;What you should see&quot; checkpoint after each step</li>
-<li>If your results do not match, re-read the step — the issue is usually a small detail</li>
+<li>If your results do not match, re-read the step - the issue is usually a small detail</li>
 <li>Check if there is an &quot;If you&#39;re stuck&quot; section within the exercise</li>
 <li>Ask for help: open an issue describing the step you are on and what you see</li>
 </ol>
@@ -960,21 +960,21 @@ git push --force-with-lease origin your-branch</code></pre>
 <p><strong>Symptoms:</strong> You opened a PR but the automated bot did not post a review comment.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li>Wait 30–60 seconds — the bot runs via GitHub Actions and may take a moment</li>
-<li>Check the Actions tab on the repository — is there a workflow run for your PR?</li>
+<li>Wait 30-60 seconds - the bot runs via GitHub Actions and may take a moment</li>
+<li>Check the Actions tab on the repository - is there a workflow run for your PR?</li>
 <li>If the workflow failed, click it to see the error</li>
 <li>Verify your PR targets the correct branch (usually <code>main</code>)</li>
-<li>If the bot still does not respond, ask the facilitator — the automation may need to be configured</li>
+<li>If the bot still does not respond, ask the facilitator - the automation may need to be configured</li>
 </ol>
 <hr>
 <h3>Problem: Learning Room challenges are too easy or too hard</h3>
 <p><strong>Symptoms:</strong> Individual challenges do not match your skill level.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li>Challenges are progressive — start with #1 and work up</li>
+<li>Challenges are progressive - start with #1 and work up</li>
 <li><strong>Too easy:</strong> Skip ahead to the group challenges in <code>learning-room/docs/GROUP_CHALLENGES.md</code></li>
 <li><strong>Too hard:</strong> Go back to the relevant chapter and review the concepts</li>
-<li>The 12 individual challenges span four skill levels — find the range that stretches you without frustrating you</li>
+<li>The 12 individual challenges span four skill levels - find the range that stretches you without frustrating you</li>
 </ol>
 <hr>
 <h2>HTML Build System</h2>
@@ -998,7 +998,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>Verify <code>github-markdown-css</code> is installed: check <code>node_modules/github-markdown-css/</code></li>
-<li>Open an HTML file in your browser — if styles are missing, the CSS link may be broken</li>
+<li>Open an HTML file in your browser - if styles are missing, the CSS link may be broken</li>
 <li>Check <code>scripts/build-html.js</code> for any custom configuration that may have been changed</li>
 <li>Try a clean rebuild: delete the <code>html/</code> folder contents → <code>npm run build:html</code></li>
 </ol>
@@ -1008,7 +1008,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>Rebuild: <code>npm run build:html</code></li>
-<li>The HTML build is manual — it does not auto-update when you edit markdown</li>
+<li>The HTML build is manual - it does not auto-update when you edit markdown</li>
 <li>After rebuilding, commit both the <code>.md</code> and <code>html/</code> changes together</li>
 <li>For live preview during editing, use <code>npm run watch</code> if available, or use VS Code&#39;s built-in Markdown preview (<code>Ctrl+Shift+V</code>)</li>
 </ol>
@@ -1018,7 +1018,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <p><strong>Symptoms:</strong> You pushed changes but the live site still shows old content.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li>GitHub Pages can take 2–10 minutes to rebuild after a push</li>
+<li>GitHub Pages can take 2-10 minutes to rebuild after a push</li>
 <li>Check build status: repository Settings → Pages → look for build status</li>
 <li>Hard refresh in your browser: <code>Ctrl+Shift+R</code></li>
 <li>Check that GitHub Pages is configured to serve from the correct branch and folder</li>
@@ -1043,7 +1043,7 @@ git push --force-with-lease origin your-branch</code></pre>
 <li>Check GitHub&#39;s status page: <a href="https://www.githubstatus.com/">https://www.githubstatus.com/</a></li>
 <li>Try a different browser</li>
 <li>Check your internet connection by visiting other sites</li>
-<li>If behind a corporate network, some GitHub features may be blocked — check with your IT department</li>
+<li>If behind a corporate network, some GitHub features may be blocked - check with your IT department</li>
 <li>Disable browser extensions that may interfere (ad blockers, privacy tools)</li>
 </ol>
 <hr>
@@ -1065,17 +1065,17 @@ git push --force-with-lease origin your-branch</code></pre>
 <li>Configure Git proxy: <code>git config --global http.proxy http://proxy:port</code></li>
 <li>Configure npm proxy: <code>npm config set proxy http://proxy:port</code></li>
 <li>If SSH is blocked, use HTTPS for Git operations: <code>git remote set-url origin https://github.com/...</code></li>
-<li>Some firewalls block VS Code&#39;s telemetry or extension marketplace — ask IT to whitelist <code>*.visualstudio.com</code>, <code>*.github.com</code>, and <code>*.githubusercontent.com</code></li>
+<li>Some firewalls block VS Code&#39;s telemetry or extension marketplace - ask IT to whitelist <code>*.visualstudio.com</code>, <code>*.github.com</code>, and <code>*.githubusercontent.com</code></li>
 </ol>
 <hr>
 <h2>Getting More Help</h2>
 <p>If your issue is not listed here:</p>
 <ol>
-<li><strong><a href="FAQ.md">FAQ</a></strong> — Answers to common questions about the workshop</li>
-<li><strong><a href="QUICK_REFERENCE.md">Quick Reference</a></strong> — Condensed keyboard shortcuts and commands</li>
-<li><strong><a href="docs/appendix-a-glossary.md">Glossary</a></strong> — Term definitions</li>
-<li><strong><a href="docs/appendix-b-screen-reader-cheatsheet.md">Screen Reader Cheat Sheet</a></strong> — NVDA, JAWS, VoiceOver commands</li>
-<li><strong><a href="docs/appendix-u-resources.md">Resources</a></strong> — External documentation and links</li>
+<li><strong><a href="FAQ.md">FAQ</a></strong> - Answers to common questions about the workshop</li>
+<li><strong><a href="QUICK_REFERENCE.md">Quick Reference</a></strong> - Condensed keyboard shortcuts and commands</li>
+<li><strong><a href="docs/appendix-a-glossary.md">Glossary</a></strong> - Term definitions</li>
+<li><strong><a href="docs/appendix-b-screen-reader-cheatsheet.md">Screen Reader Cheat Sheet</a></strong> - NVDA, JAWS, VoiceOver commands</li>
+<li><strong><a href="docs/appendix-u-resources.md">Resources</a></strong> - External documentation and links</li>
 <li><strong>Open an issue</strong> on this repository with:<ul>
 <li>What you tried</li>
 <li>What happened (exact error messages)</li>
@@ -1090,8 +1090,8 @@ git push --force-with-lease origin your-branch</code></pre>
 
   </main>
   <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
-    <p><strong>GIT Going with GitHub</strong> — A workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
-    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="http://www.joinbits.org">joinbits.org</a></p>
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
+    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="https://www.joinbits.org">joinbits.org</a></p>
   </footer>
   </body>
 </html>

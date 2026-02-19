@@ -1,7 +1,7 @@
 # Appendix B: Screen Reader Cheat Sheet
 ## GitHub Navigation with NVDA, JAWS, and VoiceOver
 
-> **How to use this sheet:** Keep it open in a second window or print it. Commands are organized by task so you can find what you need quickly while you work. All commands are keyboard-only — no mouse required.
+> **How to use this sheet:** Keep it open in a second window or print it. Commands are organized by task so you can find what you need quickly while you work. All commands are keyboard-only - no mouse required.
 
 ---
 
@@ -11,13 +11,13 @@ Before navigating GitHub, understand the two fundamental modes that all screen r
 
 ### Browse Mode (also called Virtual Cursor / Reading Mode)
 
-This is your primary mode for **reading and navigating** pages. The screen reader intercepts keystrokes and uses them as navigation commands — for example, pressing `H` jumps to the next heading rather than typing the letter H.
+This is your primary mode for **reading and navigating** pages. The screen reader intercepts keystrokes and uses them as navigation commands - for example, pressing `H` jumps to the next heading rather than typing the letter H.
 
 | Screen Reader | How to know you're in Browse Mode |
 |---------------|----------------------------------|
 | **NVDA** | Lower-pitched sound when switching; NVDA says "browse mode" |
 | **JAWS** | JAWS says "virtual cursor on" |
-| **VoiceOver** | No mode switching needed — VoiceOver uses the VO modifier keys |
+| **VoiceOver** | No mode switching needed - VoiceOver uses the VO modifier keys |
 
 ### Focus Mode (also called Forms or Application Mode)
 
@@ -37,7 +37,7 @@ This mode is for **typing and interacting** with form fields, text areas, button
 
 These single-key shortcuts work in Browse Mode (NVDA and JAWS). VoiceOver users with Quick Nav enabled use the same keys.
 
-### Heading Navigation — Your Most-Used Tool
+### Heading Navigation - Your Most-Used Tool
 
 GitHub structures pages with headings. Jumping between headings is the fastest way to navigate.
 
@@ -50,7 +50,7 @@ GitHub structures pages with headings. Jumping between headings is the fastest w
 | `3` | Next h3 (issue/PR titles are h3) | `3` |
 | `4` | Next h4 (commit titles in PRs) | `4` |
 
-### Landmark Navigation — Jump Between Page Regions
+### Landmark Navigation - Jump Between Page Regions
 
 Landmarks are named regions of a page (navigation, main content, sidebar, etc.). GitHub uses landmarks heavily.
 
@@ -77,9 +77,9 @@ Landmarks are named regions of a page (navigation, main content, sidebar, etc.).
 | Key | Action | JAWS Equivalent | VoiceOver |
 |-----|--------|-----------------|-----------|
 | `K` | Next link | `Tab` or `U` | `VO+U` → Links rotor |
-| `Shift+K` | Previous link | `Shift+U` | — |
+| `Shift+K` | Previous link | `Shift+U` | - |
 | `B` | Next button | `B` | `VO+U` → Buttons rotor |
-| `Shift+B` | Previous button | `Shift+B` | — |
+| `Shift+B` | Previous button | `Shift+B` | - |
 | `F` or `E` | Next edit/form field | `F` | `VO+U` → Form Controls |
 | `Tab` | Next interactive element (any type) | `Tab` | `Tab` |
 | `Shift+Tab` | Previous interactive element | `Shift+Tab` | `Shift+Tab` |
@@ -99,7 +99,7 @@ Landmarks are named regions of a page (navigation, main content, sidebar, etc.).
 
 ---
 
-## The Elements List — Your Navigation Superpower
+## The Elements List - Your Navigation Superpower
 
 This is one of the most powerful tools for navigating complex pages. It opens a dialog listing all headings, links, buttons, form fields, or landmarks on the page.
 
@@ -107,7 +107,7 @@ This is one of the most powerful tools for navigating complex pages. It opens a 
 |---------------|-------------------|---------------|
 | **NVDA** | `NVDA+F7` (Insert+F7 or CapsLock+F7) | Headings, Links, Form fields, Buttons, Landmarks (tabs within the dialog) |
 | **JAWS** | `Insert+F6` (headings) / `Insert+F7` (links) | Headings list / Links list |
-| **VoiceOver** | `VO+U` | Rotor — switch between Headings, Links, Landmarks, Form Controls |
+| **VoiceOver** | `VO+U` | Rotor - switch between Headings, Links, Landmarks, Form Controls |
 
 **How to use it:**
 1. Press the keyboard shortcut above
@@ -128,7 +128,7 @@ A compact reference organized by screen reader. For task-based navigation guides
 | Key | Moves to |
 |-----|----------|
 | `H` / `Shift+H` | Next / previous heading |
-| `1`–`6` | Next heading of that level |
+| `1`-`6` | Next heading of that level |
 | `K` | Next link |
 | `B` | Next button |
 | `F` or `E` | Next form field |
@@ -154,7 +154,7 @@ A compact reference organized by screen reader. For task-based navigation guides
 | Key | Moves to |
 |-----|----------|
 | `H` / `Shift+H` | Next / previous heading |
-| `1`–`6` | Next heading of that level |
+| `1`-`6` | Next heading of that level |
 | `U` | Next unvisited link |
 | `K` | Next link |
 | `B` | Next button |
@@ -201,7 +201,7 @@ Activate VoiceOver: `Cmd+F5`. The VO modifier key is `Control+Option` (abbreviat
 
 | Goal | Key Sequence |
 |------|-------------|
-| Find the repo name and description | `1` — jumps to the h1 heading (the repo name) |
+| Find the repo name and description | `1` - jumps to the h1 heading (the repo name) |
 | Jump to repo navigation tabs | `D` to "Repository navigation" landmark |
 | Open the files table | `T` (next table) |
 | Navigate files | `Ctrl+Alt+Down Arrow` for next row, `Ctrl+Alt+Right Arrow` for next column |
@@ -231,7 +231,7 @@ Activate VoiceOver: `Cmd+F5`. The VO modifier key is `Control+Option` (abbreviat
 | Read activity and comments | `2` to "Activity" heading, then `Down Arrow` to read |
 | Jump to the comment box | `D` to "Add a comment", then `E` to the edit field |
 | Type a comment | Switch to Focus mode (`NVDA+Space`), then type |
-| Submit the comment | `Tab` to the "Comment" button then `Enter` — or `Ctrl+Enter` from the text area |
+| Submit the comment | `Tab` to the "Comment" button then `Enter` - or `Ctrl+Enter` from the text area |
 | Close the issue | `Tab` to the "Close" button, then `Enter` |
 | Navigate assignees and labels sidebar | `3` (sidebar items are h3 headings) |
 
@@ -240,12 +240,12 @@ Activate VoiceOver: `Cmd+F5`. The VO modifier key is `Control+Option` (abbreviat
 | Goal | Key Sequence |
 |------|-------------|
 | Find the PR list | `D` to "Pull requests list" landmark |
-| Navigate PR titles | `Tab` (no per-item heading semantics — tab through) |
+| Navigate PR titles | `Tab` (no per-item heading semantics - tab through) |
 | Open a PR | `Enter` on the PR title |
 | Create a new pull request | `K` to the "New pull request" link |
 | Filter PRs | `F` to the search field, then `Enter` |
 
-### Pull Request Detail — Conversation Tab
+### Pull Request Detail - Conversation Tab
 
 | Goal | Key Sequence |
 |------|-------------|
@@ -255,7 +255,7 @@ Activate VoiceOver: `Cmd+F5`. The VO modifier key is `Control+Option` (abbreviat
 | Add a comment | `D` to "Add a comment", then `E`, then Focus mode, then type |
 | Submit review | `B` to the "Submit review" button |
 
-### Pull Request Detail — Commits Tab
+### Pull Request Detail - Commits Tab
 
 | Goal | Key Sequence |
 |------|-------------|
@@ -264,7 +264,7 @@ Activate VoiceOver: `Cmd+F5`. The VO modifier key is `Control+Option` (abbreviat
 | Navigate individual commits | `4` (commit names are h4) or `I` (list items) |
 | Open a commit | `Enter` on the commit heading or link |
 
-### Pull Request Detail — Files Changed Tab
+### Pull Request Detail - Files Changed Tab
 
 | Goal | Key Sequence |
 |------|-------------|
@@ -280,7 +280,7 @@ Activate VoiceOver: `Cmd+F5`. The VO modifier key is `Control+Option` (abbreviat
 
 ### Checking and Enabling Feature Previews
 
-GitHub Feature Previews are opt-in UI improvements. For screen reader users, two are especially important: **New Issues Experience** and **New Files Changed Experience**. Both may already be active — or may have graduated out of Feature Preview entirely.
+GitHub Feature Previews are opt-in UI improvements. For screen reader users, two are especially important: **New Issues Experience** and **New Files Changed Experience**. Both may already be active - or may have graduated out of Feature Preview entirely.
 
 **NVDA / JAWS (Browse Mode):**
 
@@ -291,7 +291,7 @@ GitHub Feature Previews are opt-in UI improvements. For screen reader users, two
 | Navigate the feature list | `↓` or `I` (list items) |
 | Check if a feature is enabled | Toggle announces **"Pressed"** or **"Disable"** = enabled; **"not Pressed"** or **"Enable"** = disabled |
 | Enable a feature | `Enter` or `Space` on the toggle when it is not Pressed |
-| Feature not listed | Feature has graduated — active automatically, no action needed |
+| Feature not listed | Feature has graduated - active automatically, no action needed |
 
 **VoiceOver (macOS):**
 
@@ -343,10 +343,10 @@ GitHub uses popup flyout menus for labels, assignees, reviewers, and branch sele
 
 ```
 Step 1: Navigate to the button (D for landmark, B for button, or Tab)
-Step 2: Activate the button (Enter or Space) — flyout opens
+Step 2: Activate the button (Enter or Space) - flyout opens
 Step 3: Type to filter results OR use ↑/↓ arrow keys to navigate
 Step 4: Select an item (Enter)
-Step 5: Close the flyout (Esc) — selections apply on close
+Step 5: Close the flyout (Esc) - selections apply on close
 ```
 
 **VoiceOver users:**
@@ -362,7 +362,7 @@ Step 5: VO+Space to select, Esc to close
 
 ## GitHub Built-In Keyboard Shortcuts
 
-GitHub has a dedicated keyboard shortcut system built into every page. These are completely separate from your screen reader's navigation keys — they are JavaScript-powered shortcuts that trigger GitHub actions directly without using the mouse.
+GitHub has a dedicated keyboard shortcut system built into every page. These are completely separate from your screen reader's navigation keys - they are JavaScript-powered shortcuts that trigger GitHub actions directly without using the mouse.
 
 ### Using GitHub shortcuts alongside a screen reader
 
@@ -372,21 +372,21 @@ The key issue: when your screen reader is in Browse Mode, it intercepts keystrok
 |---|---|
 | **NVDA** | Press `NVDA+Space` to enter Focus Mode, use the shortcut, then `NVDA+Space` to return to Browse Mode |
 | **JAWS** | Press `Insert+Z` to toggle Virtual Cursor off, use the shortcut, then `Insert+Z` to turn it back on |
-| **VoiceOver** | GitHub shortcuts generally work without mode switching — VoiceOver handles this differently |
+| **VoiceOver** | GitHub shortcuts generally work without mode switching - VoiceOver handles this differently |
 
 **Exceptions that always work in Browse Mode:** `?` (shows all shortcuts) and `S`/`/` (focus the search bar) work at any time because they immediately move browser focus to an interactive element.
 
 **Practical sequence for `G` shortcuts:**
 ```
-Step 1: Press NVDA+Space (or Insert+Z in JAWS) — enter Focus Mode
+Step 1: Press NVDA+Space (or Insert+Z in JAWS) - enter Focus Mode
 Step 2: Press G, pause half a second
 Step 3: Press the second key (I, P, A, etc.)
 Step 4: Press NVDA+Space to return to Browse Mode on the new page
 ```
 
-### Discover shortcuts on any page — The `?` Key
+### Discover shortcuts on any page - The `?` Key
 
-> **Start here every time you're on an unfamiliar GitHub page.** The `?` key opens GitHub's built-in keyboard shortcut help dialog. It lists every shortcut for the exact page you are on — the set changes depending on whether you are on a repository, an issue, a PR, the notifications inbox, etc.
+> **Start here every time you're on an unfamiliar GitHub page.** The `?` key opens GitHub's built-in keyboard shortcut help dialog. It lists every shortcut for the exact page you are on - the set changes depending on whether you are on a repository, an issue, a PR, the notifications inbox, etc.
 
 Press `?` (Shift+/) from any GitHub page **when not inside a text field** to open the shortcut dialog.
 
@@ -420,14 +420,14 @@ Step 4: Press Escape or navigate to the Close button (VO+Space)
 ```
 
 **Key facts about the shortcut dialog:**
-- It is **context-aware** — the shortcuts shown change based on your current page
-- It is **always current** — GitHub automatically updates it when they add new shortcuts
-- The dialog is divided into sections: Site-wide, Source code browsing, Issues, Pull requests, Notifications, etc. — only sections relevant to the current page appear
-- You do not need to be in Focus Mode to open it — `?` works from Browse Mode
+- It is **context-aware** - the shortcuts shown change based on your current page
+- It is **always current** - GitHub automatically updates it when they add new shortcuts
+- The dialog is divided into sections: Site-wide, Source code browsing, Issues, Pull requests, Notifications, etc. - only sections relevant to the current page appear
+- You do not need to be in Focus Mode to open it - `?` works from Browse Mode
 
 ---
 
-### Site-wide — work on every GitHub page
+### Site-wide - work on every GitHub page
 
 | Shortcut | Action |
 |---|---|
@@ -437,35 +437,35 @@ Step 4: Press Escape or navigate to the Close button (VO+Space)
 
 ---
 
-### Repository navigation — on any repository page
+### Repository navigation - on any repository page
 
 | Shortcut | Action | Screen reader note |
 |---|---|---|
-| `G` then `C` | Go to the Code tab | Safe — use Focus Mode first |
-| `G` then `I` | Go to the Issues tab | Safe — use Focus Mode first |
-| `G` then `P` | Go to the Pull Requests tab | Safe — use Focus Mode first |
-| `G` then `A` | Go to the Actions tab | Safe — use Focus Mode first |
-| `G` then `W` | Go to the Wiki tab | Safe — use Focus Mode first |
-| `G` then `G` | Go to the Discussions tab | Safe — use Focus Mode first |
+| `G` then `C` | Go to the Code tab | Safe - use Focus Mode first |
+| `G` then `I` | Go to the Issues tab | Safe - use Focus Mode first |
+| `G` then `P` | Go to the Pull Requests tab | Safe - use Focus Mode first |
+| `G` then `A` | Go to the Actions tab | Safe - use Focus Mode first |
+| `G` then `W` | Go to the Wiki tab | Safe - use Focus Mode first |
+| `G` then `G` | Go to the Discussions tab | Safe - use Focus Mode first |
 | `.` (period) | Open repository in github.dev, same tab | Opens VS Code in your browser |
-| `>` (Shift+Period) | Open repository in github.dev, new tab | Preserves your GitHub page — preferred |
-| `T` | Open file finder (Go to File) | Conflicts with NVDA `T` = next table — use `F` to find the field instead |
+| `>` (Shift+Period) | Open repository in github.dev, new tab | Preserves your GitHub page - preferred |
+| `T` | Open file finder (Go to File) | Conflicts with NVDA `T` = next table - use `F` to find the field instead |
 
-> **Shortcut spotlight — `.` and `>`:** These open github.dev, which is VS Code running inside your browser — same keyboard shortcuts, same screen reader mode. `>` opens a new tab so you keep your current GitHub page. This is the fastest way to start editing a file without installing anything.
+> **Shortcut spotlight - `.` and `>`:** These open github.dev, which is VS Code running inside your browser - same keyboard shortcuts, same screen reader mode. `>` opens a new tab so you keep your current GitHub page. This is the fastest way to start editing a file without installing anything.
 
 ---
 
-### Source code browsing — viewing a file
+### Source code browsing - viewing a file
 
 | Shortcut | Action | Screen reader note |
 |---|---|---|
-| `T` | Activate the file finder | Conflicts with NVDA table nav — use `F` for the field instead |
-| `L` | Jump to a specific line number | Conflicts with NVDA `L` = next list — use Focus Mode first |
-| `W` | Switch to a new branch or tag | — |
-| `Y` | Expand URL to its permanent canonical form | Useful for linking to a specific commit of a file — the URL never changes |
-| `I` | Show or hide comments on diffs | — |
-| `A` | Show or hide annotations on diffs | — |
-| `B` | Open blame view (who changed each line, and when) | Conflicts with NVDA `B` = next button — use Focus Mode first |
+| `T` | Activate the file finder | Conflicts with NVDA table nav - use `F` for the field instead |
+| `L` | Jump to a specific line number | Conflicts with NVDA `L` = next list - use Focus Mode first |
+| `W` | Switch to a new branch or tag | - |
+| `Y` | Expand URL to its permanent canonical form | Useful for linking to a specific commit of a file - the URL never changes |
+| `I` | Show or hide comments on diffs | - |
+| `A` | Show or hide annotations on diffs | - |
+| `B` | Open blame view (who changed each line, and when) | Conflicts with NVDA `B` = next button - use Focus Mode first |
 
 ---
 
@@ -476,12 +476,12 @@ These shortcuts work on the Issues list page and the Pull Requests list page:
 | Shortcut | Action | Screen reader note |
 |---|---|---|
 | `C` | Create a new issue | Use Focus Mode first |
-| `Ctrl+/` (Win) or `Cmd+/` (Mac) | Focus the issues or PR search bar | Works in Browse Mode — uses Ctrl |
+| `Ctrl+/` (Win) or `Cmd+/` (Mac) | Focus the issues or PR search bar | Works in Browse Mode - uses Ctrl |
 | `U` | Filter by author | Use Focus Mode first |
-| `L` | Filter by or edit labels | Conflicts with NVDA `L` = next list — use Focus Mode |
+| `L` | Filter by or edit labels | Conflicts with NVDA `L` = next list - use Focus Mode |
 | `M` | Filter by or edit milestones | Use Focus Mode first |
 | `A` | Filter by or edit assignee | Use Focus Mode first |
-| `O` or `Enter` | Open the currently selected issue or PR | — |
+| `O` or `Enter` | Open the currently selected issue or PR | - |
 
 ---
 
@@ -497,13 +497,13 @@ When viewing an open issue or pull request:
 | `A` | Set an assignee |
 | `X` | Link an issue from the same repository |
 | `Ctrl+Shift+P` (Win) or `Cmd+Shift+P` (Mac) | Toggle Write and Preview tabs in the comment editor |
-| `R` | Quote selected text in your reply — select text first, then press `R` |
+| `R` | Quote selected text in your reply - select text first, then press `R` |
 
-> **Tip for `R` — quote a specific part of a comment:** In Browse Mode, select the text you want to quote by holding `Shift` and pressing arrow keys. Then press `R` — GitHub puts it directly into the comment box as a Markdown blockquote, with the author attributed. This is much faster than manually typing `> `.
+> **Tip for `R` - quote a specific part of a comment:** In Browse Mode, select the text you want to quote by holding `Shift` and pressing arrow keys. Then press `R` - GitHub puts it directly into the comment box as a Markdown blockquote, with the author attributed. This is much faster than manually typing `> `.
 
 ---
 
-### Comments — inside any text area (Focus Mode required)
+### Comments - inside any text area (Focus Mode required)
 
 These shortcuts work while typing in any GitHub comment or description field:
 
@@ -522,7 +522,7 @@ These shortcuts work while typing in any GitHub comment or description field:
 | Insert a code suggestion block | `Ctrl+G` | `Cmd+G` |
 | **Submit comment** | **`Ctrl+Enter`** | **`Cmd+Enter`** |
 
-> **The most important one:** `Ctrl+Enter` submits a comment from inside the text area — you do not have to Tab to the Submit button and press Enter. Your focus stays in context.
+> **The most important one:** `Ctrl+Enter` submits a comment from inside the text area - you do not have to Tab to the Submit button and press Enter. Your focus stays in context.
 
 > **Insert suggestion (`Ctrl+G`):** Select the code you want to suggest a change to (in the diff), then press `Ctrl+G`. GitHub wraps it in a ` ```suggestion ` block. The PR author can apply your exact change with one button press.
 
@@ -532,7 +532,7 @@ These shortcuts work while typing in any GitHub comment or description field:
 
 | Shortcut | Action |
 |---|---|
-| `C` | Open the commits dropdown — filter which commits are shown in the diffs |
+| `C` | Open the commits dropdown - filter which commits are shown in the diffs |
 | `T` | Move focus to the "Filter changed files" search field |
 | `Ctrl+Shift+Enter` (Win) or `Cmd+Shift+Enter` (Mac) | Submit a review comment |
 
@@ -579,11 +579,11 @@ On any Actions page in a repository:
 
 ---
 
-> **Keep the official reference handy:** [github.com/keyboard-shortcuts](https://docs.github.com/en/get-started/accessibility/keyboard-shortcuts) — and press `?` on any GitHub page for the context-specific subset.
+> **Keep the official reference handy:** [github.com/keyboard-shortcuts](https://docs.github.com/en/get-started/accessibility/keyboard-shortcuts) - and press `?` on any GitHub page for the context-specific subset.
 
 ---
 
-## Common Navigation Patterns — Quick Reference
+## Common Navigation Patterns - Quick Reference
 
 Print or bookmark this section:
 
@@ -620,7 +620,7 @@ Print or bookmark this section:
 
 ### "I pressed H but it's typing the letter H"
 
-- You are in **Focus Mode** — press `NVDA+Space` (or `JAWS+Z`) to return to Browse Mode
+- You are in **Focus Mode** - press `NVDA+Space` (or `JAWS+Z`) to return to Browse Mode
 - In Browse Mode, H is a navigation key, not a typing key
 
 ### "I can't find the comment box"
@@ -658,10 +658,10 @@ This cheat sheet covers GitHub web navigation and screen reader commands. Additi
 
 | Topic | Location |
 |-------|----------|
-| VS Code keyboard navigation and accessibility | [Appendix M — VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md) |
-| GitHub Copilot Chat and inline suggestions | [Appendix W — GitHub Copilot Reference](appendix-w-github-copilot-reference.md) |
-| VS Code setup and configuration shortcuts | [Chapter 10 — VS Code Basics](10-vscode-basics.md) |
-| GitHub Copilot activation and model switching | [Chapter 13 — GitHub Copilot](13-github-copilot.md) |
+| VS Code keyboard navigation and accessibility | [Appendix M - VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md) |
+| GitHub Copilot Chat and inline suggestions | [Appendix W - GitHub Copilot Reference](appendix-w-github-copilot-reference.md) |
+| VS Code setup and configuration shortcuts | [Chapter 10 - VS Code Basics](10-vscode-basics.md) |
+| GitHub Copilot activation and model switching | [Chapter 13 - GitHub Copilot](13-github-copilot.md) |
 
 ---
 
@@ -677,12 +677,12 @@ The commands in this cheat sheet have been written for and tested with the follo
 
 **If a command doesn't work as described:**
 1. Check that you are in the correct mode (Browse Mode vs. Focus Mode)
-2. Verify your screen reader version — older versions may use different key assignments
+2. Verify your screen reader version - older versions may use different key assignments
 3. Check GitHub's own shortcut dialog (`?` key) for the current page's shortcuts
 4. See [Troubleshooting](#troubleshooting-common-issues) above for common fixes
 
 ---
 
-*Appendix B — keep this open as a reference throughout both days.*
+*Appendix B - keep this open as a reference throughout both days.*
 *Return to: [Day 1 Agenda](../DAY1_AGENDA.md) | [Understanding GitHub's Web Structure](01-understanding-github-web-structure.md)*
 *See also: [GitHub Concepts Glossary](appendix-a-glossary.md)*

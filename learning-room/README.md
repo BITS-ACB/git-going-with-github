@@ -24,12 +24,12 @@ Everything in this repository is designed for learning. The files in `docs/` hav
 ## How to Contribute
 
 1. Find your assigned issue (Issues tab → filter by "Assignee: me")
-2. Read the issue description — it tells you which file to edit and what to fix
+2. Read the issue description - it tells you which file to edit and what to fix
 3. Click the file → the edit pencil button → make your change
 4. Commit to a new branch with a descriptive name: `fix/[your-name]-[issue-number]`
 5. Open a pull request using the PR template
-6. **Wait for the bot** (~30 seconds) — it will check your changes and provide feedback
-7. **Read bot feedback carefully** — it explains any issues and links to resources
+6. **Wait for the bot** (~30 seconds) - it will check your changes and provide feedback
+7. **Read bot feedback carefully** - it explains any issues and links to resources
 8. Make changes if needed based on feedback
 9. Request a review from your assigned peer reviewer
 10. Respond to review feedback and make final improvements
@@ -60,9 +60,9 @@ When you open a pull request, an automated bot will:
 
 **Getting Help from the Bot:**
 Comment on your PR with keywords:
-- `@bot help` — Get help information
-- Mention "merge conflict" — Get conflict resolution guide  
-- Mention "request review" — Get instructions for requesting human review
+- `@bot help` - Get help information
+- Mention "merge conflict" - Get conflict resolution guide  
+- Mention "request review" - Get instructions for requesting human review
 
 **When You Disagree:**
 The bot isn't always right! If you believe feedback is incorrect:

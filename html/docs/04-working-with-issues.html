@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GIT Going with GitHub — A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
-  <title>Working with Issues — GIT Going with GitHub</title>
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
+  <title>Working with Issues - GIT Going with GitHub</title>
   <link rel="stylesheet" href="./styles/github-markdown.css">
   <link rel="stylesheet" href="./styles/highlight.css">
   <link rel="stylesheet" href="./styles/custom.css">
@@ -32,26 +32,26 @@
     <h1>Working with Issues</h1>
 <h2>Filing, Managing, and Participating in GitHub Issues</h2>
 <blockquote>
-<p>Issues are where open source collaboration begins. This guide covers everything from finding the right issue to file a perfect bug report — all with your keyboard and screen reader.</p>
-<p><strong>Screen reader note — New Issues Experience:</strong> This guide uses GitHub&#39;s improved Issues experience, which provides better ARIA landmark structure and live-region announcements for screen readers. This feature may already be active for your account — it has been broadly rolled out and may no longer appear as a Feature Preview toggle at all.</p>
+<p>Issues are where open source collaboration begins. This guide covers everything from finding the right issue to file a perfect bug report - all with your keyboard and screen reader.</p>
+<p><strong>Screen reader note - New Issues Experience:</strong> This guide uses GitHub&#39;s improved Issues experience, which provides better ARIA landmark structure and live-region announcements for screen readers. This feature may already be active for your account - it has been broadly rolled out and may no longer appear as a Feature Preview toggle at all.</p>
 <p><strong>To verify:</strong> Activate the <strong>User Menu</strong> button (top-right of any GitHub page) → activate <strong>&quot;Feature preview&quot;</strong> → scan the list for <strong>&quot;New Issues Experience&quot;</strong>:</p>
 <ul>
-<li>If listed and the toggle announces <strong>&quot;Pressed&quot;</strong> (or <strong>&quot;Disable&quot;</strong>) — already enabled, no action needed</li>
-<li>If listed but <strong>not Pressed</strong> (or <strong>&quot;Enable&quot;</strong>) — activate the toggle to enable it</li>
-<li>If not listed at all — the feature has graduated to the standard interface; it is active automatically</li>
+<li>If listed and the toggle announces <strong>&quot;Pressed&quot;</strong> (or <strong>&quot;Disable&quot;</strong>) - already enabled, no action needed</li>
+<li>If listed but <strong>not Pressed</strong> (or <strong>&quot;Enable&quot;</strong>) - activate the toggle to enable it</li>
+<li>If not listed at all - the feature has graduated to the standard interface; it is active automatically</li>
 </ul>
 <p>Full step-by-step instructions with per-screen-reader commands are in <a href="00-pre-workshop-setup.md#6-step-4--check-github-feature-preview-settings">Pre-Workshop Setup, Step 4</a>.</p>
-<p><strong>Browse vs Focus Mode (NVDA):</strong> Toggle between modes with <code>NVDA+Space</code> (NVDA key = <code>Insert</code> or <code>Caps Lock</code>). Use <strong>Browse Mode</strong> (the default) for reading lists, headings, and issue content. Switch to <strong>Focus Mode</strong> when typing in text fields and search boxes. Use <code>NVDA+F7</code> at any time to open a list of all headings, links, form fields, buttons, and landmarks on the page — this is your orientation tool.</p>
+<p><strong>Browse vs Focus Mode (NVDA):</strong> Toggle between modes with <code>NVDA+Space</code> (NVDA key = <code>Insert</code> or <code>Caps Lock</code>). Use <strong>Browse Mode</strong> (the default) for reading lists, headings, and issue content. Switch to <strong>Focus Mode</strong> when typing in text fields and search boxes. Use <code>NVDA+F7</code> at any time to open a list of all headings, links, form fields, buttons, and landmarks on the page - this is your orientation tool.</p>
 </blockquote>
 <hr>
 <h2>What Is a GitHub Issue?</h2>
 <p>An issue is a discussion thread attached to a repository. Issues are used for:</p>
 <ul>
-<li><strong>Bug reports</strong> — &quot;This feature doesn&#39;t work when using a screen reader&quot;</li>
-<li><strong>Feature requests</strong> — &quot;It would help if the submit button had an accessible label&quot;</li>
-<li><strong>Questions</strong> — &quot;How do I configure X for Y use case?&quot;</li>
-<li><strong>Tasks</strong> — &quot;Update the README with screen reader instructions&quot;</li>
-<li><strong>Accessibility reports</strong> — &quot;The infinite scroll carousel is not keyboard accessible&quot;</li>
+<li><strong>Bug reports</strong> - &quot;This feature doesn&#39;t work when using a screen reader&quot;</li>
+<li><strong>Feature requests</strong> - &quot;It would help if the submit button had an accessible label&quot;</li>
+<li><strong>Questions</strong> - &quot;How do I configure X for Y use case?&quot;</li>
+<li><strong>Tasks</strong> - &quot;Update the README with screen reader instructions&quot;</li>
+<li><strong>Accessibility reports</strong> - &quot;The infinite scroll carousel is not keyboard accessible&quot;</li>
 </ul>
 <p>Every issue has a <strong>number</strong> (<code>#42</code>), a <strong>state</strong> (Open or Closed), a <strong>title</strong>, a <strong>description</strong>, and a <strong>comment thread</strong>. Issues are public by default on public repositories.</p>
 <hr>
@@ -64,23 +64,23 @@
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 <ol>
 <li>Press <code>D</code> to navigate to the &quot;Repository navigation&quot; landmark</li>
 <li>Press <code>K</code> or <code>Tab</code> to move through the tab links</li>
-<li>Find &quot;Issues&quot; — it will be announced with the count: &quot;Issues, 14 open&quot;</li>
+<li>Find &quot;Issues&quot; - it will be announced with the count: &quot;Issues, 14 open&quot;</li>
 <li>Press <code>Enter</code> to open the Issues tab</li>
 </ol>
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 <ol>
 <li><code>VO+U</code> → Landmarks → navigate to &quot;Repository navigation&quot;</li>
 <li><code>VO+Right</code> or Quick Nav <code>K</code> to move through tab links</li>
-<li>Find &quot;Issues&quot; — VoiceOver announces the count: &quot;Issues 14&quot;</li>
+<li>Find &quot;Issues&quot; - VoiceOver announces the count: &quot;Issues 14&quot;</li>
 <li><code>VO+Space</code> to activate the Issues tab</li>
 </ol>
 </details>
@@ -106,7 +106,7 @@
 
 <ol>
 <li>Press <code>D</code> to reach the “Search Results List” landmark</li>
-<li>Press <code>3</code> (h3) to navigate by issue titles — each issue title is an h3 link</li>
+<li>Press <code>3</code> (h3) to navigate by issue titles - each issue title is an h3 link</li>
 <li>Press <code>I</code> to move between list items if you want more detail per item</li>
 <li>Press <code>Enter</code> on a title to open that issue</li>
 </ol>
@@ -158,7 +158,7 @@ mentions:<span class="hljs-meta">@me</span>                        ← <span cla
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 <ol>
 <li>Press <code>Tab</code> from the search bar (or <code>Shift+Tab</code> from the issue list) to reach the actions toolbar</li>
@@ -171,7 +171,7 @@ mentions:<span class="hljs-meta">@me</span>                        ← <span cla
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 <ol>
 <li><code>Tab</code> forward from the search bar to reach the filter buttons, or use Quick Nav to find them</li>
@@ -189,19 +189,19 @@ mentions:<span class="hljs-meta">@me</span>                        ← <span cla
 <h2>Reading an Issue</h2>
 <h3>Landing on an issue page</h3>
 <p>When you open an issue, the page structure is:</p>
-<pre><code class="hljs">[<span class="hljs-symbol">Issue</span> title — h1]
+<pre><code class="hljs">[<span class="hljs-symbol">Issue</span> title - h1]
 [<span class="hljs-symbol">Open</span>/<span class="hljs-symbol">Closed</span> status badge]
 [<span class="hljs-symbol">Author</span>, timestamp, comment count]
 ─────────────────────────────────
-[<span class="hljs-symbol">Issue</span> description — <span class="hljs-symbol">Main</span> content]   ← the original post
-[<span class="hljs-symbol">Labels</span>, <span class="hljs-symbol">Assignees</span> sidebar — h3s]
+[<span class="hljs-symbol">Issue</span> description - <span class="hljs-symbol">Main</span> content]   ← the original post
+[<span class="hljs-symbol">Labels</span>, <span class="hljs-symbol">Assignees</span> sidebar - h3s]
 ─────────────────────────────────
 [<span class="hljs-symbol">Activity</span> / <span class="hljs-symbol">Timeline</span>]                ← comments and events
-  [<span class="hljs-symbol">First</span> comment — h3]
-  [<span class="hljs-symbol">Second</span> comment — h3]
+  [<span class="hljs-symbol">First</span> comment - h3]
+  [<span class="hljs-symbol">Second</span> comment - h3]
   ...
 ─────────────────────────────────
-[<span class="hljs-symbol">Add</span> a comment — landmark]
+[<span class="hljs-symbol">Add</span> a comment - landmark]
 [<span class="hljs-symbol">Comment</span> text area]
 [<span class="hljs-symbol">Close</span> issue / <span class="hljs-symbol">Submit</span> button]</code></pre>
 <h3>Quick navigation</h3>
@@ -244,7 +244,7 @@ mentions:<span class="hljs-meta">@me</span>                        ← <span cla
 <li>Use <code>NVDA+↓</code> (NVDA say all) to have it read continuously</li>
 </ol>
 <blockquote>
-<p><strong>Browse Mode recommended:</strong> The issue detail page is primarily text-based. Stay in <strong>Browse Mode</strong> (not Focus Mode) for reading — it gives you full heading (<code>H</code>), section (<code>D</code>), and link (<code>K</code>) navigation throughout the page. Only switch to Focus Mode when you need to type in a comment box.</p>
+<p><strong>Browse Mode recommended:</strong> The issue detail page is primarily text-based. Stay in <strong>Browse Mode</strong> (not Focus Mode) for reading - it gives you full heading (<code>H</code>), section (<code>D</code>), and link (<code>K</code>) navigation throughout the page. Only switch to Focus Mode when you need to type in a comment box.</p>
 </blockquote>
 <p>Markdown in the description renders as proper HTML: headings become actual headings, bullets become lists, code blocks become <code>&lt;code&gt;</code> elements with the text &quot;code block&quot; announced.</p>
 <h3>Reading comments and activity</h3>
@@ -254,7 +254,7 @@ mentions:<span class="hljs-meta">@me</span>                        ← <span cla
 <li>Commenter&#39;s username</li>
 <li>Timestamp (&quot;2 days ago&quot;)</li>
 <li>Body text</li>
-<li>Reactions (if any — announced as a button with an emoji and count)</li>
+<li>Reactions (if any - announced as a button with an emoji and count)</li>
 <li>A &quot;Reply&quot; link</li>
 </ul>
 <p>Other timeline events (label added, PR linked, issue closed) appear between comments in the activity stream. They are typically announced as text paragraphs.</p>
@@ -267,7 +267,7 @@ mentions:<span class="hljs-meta">@me</span>                        ← <span cla
 <ol>
 <li>Scroll to the bottom of the issue page</li>
 <li>Click in the <strong>Leave a comment</strong> text area</li>
-<li>Type your comment (Markdown is supported — use the toolbar buttons above the text for bold, italic, code, etc.)</li>
+<li>Type your comment (Markdown is supported - use the toolbar buttons above the text for bold, italic, code, etc.)</li>
 <li>Optionally click <strong>Preview</strong> to see how it will render</li>
 <li>Click the green <strong>Comment</strong> button to post</li>
 </ol>
@@ -275,7 +275,7 @@ mentions:<span class="hljs-meta">@me</span>                        ← <span cla
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 <ol>
 <li>Navigate to the comment box: <code>D</code> → &quot;Add a comment&quot; landmark, or press <code>E</code> or <code>F</code> to focus the text area</li>
@@ -287,7 +287,7 @@ mentions:<span class="hljs-meta">@me</span>                        ← <span cla
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 <ol>
 <li>Navigate to the comment box: <code>VO+U</code> → Landmarks → &quot;Add a comment&quot;, or Quick Nav <code>F</code> to jump to the text area</li>
@@ -406,12 +406,12 @@ mentions:<span class="hljs-meta">@me</span>                        ← <span cla
 <blockquote>
 <p><strong><code>R</code> to quote is a power move:</strong> Select any text in a comment while in Browse Mode (<code>Shift+Arrow</code> to select), then press <code>R</code>. GitHub puts the quoted text in the comment box as a Markdown blockquote. Much faster than typing <code>&gt; </code> manually.</p>
 </blockquote>
-<p>For the full shortcut system, see <a href="appendix-b-screen-reader-cheatsheet.md#github-built-in-keyboard-shortcuts">Screen Reader Cheat Sheet — GitHub Shortcuts section</a>.</p>
+<p>For the full shortcut system, see <a href="appendix-b-screen-reader-cheatsheet.md#github-built-in-keyboard-shortcuts">Screen Reader Cheat Sheet - GitHub Shortcuts section</a>.</p>
 <ol>
 <li>Navigate to your comment (<code>3</code> to jump to comments)</li>
 <li>Find the &quot;...&quot; (ellipsis) menu button near your comment</li>
 <li>Press <code>Enter</code> on &quot;Edit&quot; from that menu</li>
-<li>The comment turns into a text area — switch to Focus Mode</li>
+<li>The comment turns into a text area - switch to Focus Mode</li>
 <li>Make your changes</li>
 <li>Tab to &quot;Update comment&quot; button → Enter</li>
 </ol>
@@ -421,28 +421,28 @@ mentions:<span class="hljs-meta">@me</span>                        ← <span cla
 <details>
 <summary>Visual / mouse users</summary>
 
-<p>From the Issues list page, click the green <strong>New issue</strong> button in the top-right of the issue list. If the repository has templates, a template picker page appears — click <strong>Get started</strong> next to the template that fits your needs, or click <strong>Open a blank issue</strong> to skip templates.</p>
+<p>From the Issues list page, click the green <strong>New issue</strong> button in the top-right of the issue list. If the repository has templates, a template picker page appears - click <strong>Get started</strong> next to the template that fits your needs, or click <strong>Open a blank issue</strong> to skip templates.</p>
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 <p>From the Issues list:</p>
 <ol>
 <li>Press <code>K</code> to navigate links and find the &quot;New issue&quot; button/link</li>
 <li>Press <code>Enter</code></li>
-<li>If a template picker appears: press <code>3</code> to navigate template names, read the description below each, then press <code>Enter</code> on &quot;Get started&quot; for the right template — or find &quot;Open a blank issue.&quot; link if no template fits</li>
+<li>If a template picker appears: press <code>3</code> to navigate template names, read the description below each, then press <code>Enter</code> on &quot;Get started&quot; for the right template - or find &quot;Open a blank issue.&quot; link if no template fits</li>
 </ol>
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 <p>From the Issues list:</p>
 <ol>
 <li>Quick Nav <code>B</code> or <code>VO+U</code> → Buttons to find the &quot;New issue&quot; button</li>
 <li><code>VO+Space</code> to activate it</li>
-<li>If a template picker appears: Quick Nav <code>H</code> or <code>VO+Cmd+H</code> to navigate template names, then <code>VO+Space</code> on &quot;Get started&quot; for the right template — or Quick Nav <code>K</code> to find the &quot;Open a blank issue&quot; link</li>
+<li>If a template picker appears: Quick Nav <code>H</code> or <code>VO+Cmd+H</code> to navigate template names, then <code>VO+Space</code> on &quot;Get started&quot; for the right template - or Quick Nav <code>K</code> to find the &quot;Open a blank issue&quot; link</li>
 </ol>
 </details>
 
@@ -490,15 +490,15 @@ Any other information, screenshots (with alt text), or links.</code></pre>
 <details>
 <summary>Visual / mouse users</summary>
 
-<p>In the right sidebar, click the gear icon () next to <strong>Labels</strong>. A dropdown opens — click a label to select it. Click outside to close. Repeat for <strong>Assignees</strong> and <strong>Milestone</strong>.</p>
+<p>In the right sidebar, click the gear icon () next to <strong>Labels</strong>. A dropdown opens - click a label to select it. Click outside to close. Repeat for <strong>Assignees</strong> and <strong>Milestone</strong>.</p>
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 <ol>
 <li><code>Tab</code> away from the text area (or press <code>Escape</code> to leave Focus Mode)</li>
-<li>Navigate to the sidebar — press <code>H</code> to find &quot;Labels&quot; heading</li>
+<li>Navigate to the sidebar - press <code>H</code> to find &quot;Labels&quot; heading</li>
 <li>Press <code>Enter</code> on the Labels gear/button</li>
 <li>Dropdown opens → <code>↑/↓</code> to navigate labels</li>
 <li><code>Enter</code> to select/deselect</li>
@@ -507,7 +507,7 @@ Any other information, screenshots (with alt text), or links.</code></pre>
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 <ol>
 <li><code>VO+Shift+Up</code> to stop interacting with the text area</li>
@@ -542,11 +542,11 @@ Any other information, screenshots (with alt text), or links.</code></pre>
 </tr>
 <tr>
 <td><code>Fixes #42</code></td>
-<td>Same — typically for bugs</td>
+<td>Same - typically for bugs</td>
 </tr>
 <tr>
 <td><code>Resolves #42</code></td>
-<td>Same — general use</td>
+<td>Same - general use</td>
 </tr>
 <tr>
 <td><code>refs #42</code></td>
@@ -564,9 +564,9 @@ Any other information, screenshots (with alt text), or links.</code></pre>
 <span class="hljs-keyword">Step</span> <span class="hljs-number">3</span>: ↑/↓ <span class="hljs-keyword">to</span> navigate, <span class="hljs-built_in">or</span> <span class="hljs-built_in">type</span> more numbers <span class="hljs-keyword">to</span> filter
 <span class="hljs-keyword">Step</span> <span class="hljs-number">4</span>: Enter <span class="hljs-keyword">to</span> <span class="hljs-built_in">insert</span> the reference</code></pre>
 <h3>Cross-repo references</h3>
-<p><code>owner/repo#42</code> — references issue #42 in a different repository.</p>
+<p><code>owner/repo#42</code> - references issue #42 in a different repository.</p>
 <hr>
-<h2>Sub-Issues — Parent and Child Relationships</h2>
+<h2>Sub-Issues - Parent and Child Relationships</h2>
 <p><strong>Sub-issues</strong> (released 2025) let you nest issues inside a parent issue to break large work into tracked pieces. A &quot;parent&quot; issue contains a list of child issues; each child is a full issue with its own discussion, labels, and assignees.</p>
 <h3>When to Use Sub-Issues</h3>
 <table>
@@ -654,7 +654,7 @@ Tab → <span class="hljs-string">&quot;Add sub-issue&quot;</span> button (if yo
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 <ol>
 <li><strong>Keyboard shortcut (fastest):</strong> Navigate to the comment text area (<code>D</code> → &quot;Add a comment&quot; landmark), switch to Focus Mode, then press <code>Ctrl+Shift+Enter</code> to close the issue</li>
@@ -664,7 +664,7 @@ Tab → <span class="hljs-string">&quot;Add sub-issue&quot;</span> button (if yo
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 <ol>
 <li><strong>Keyboard shortcut (fastest):</strong> <code>VO+U</code> → Landmarks → &quot;Add a comment&quot;, interact with the text area (<code>VO+Shift+Down</code>), then press <code>Cmd+Shift+Return</code> to close the issue</li>
@@ -674,7 +674,7 @@ Tab → <span class="hljs-string">&quot;Add sub-issue&quot;</span> button (if yo
 </details>
 
 <h3>Reopening a closed issue</h3>
-<p>If an issue is Closed, the &quot;Close issue&quot; button becomes &quot;Reopen issue&quot; — navigate and activate to reopen.</p>
+<p>If an issue is Closed, the &quot;Close issue&quot; button becomes &quot;Reopen issue&quot; - navigate and activate to reopen.</p>
 <h3>Assigning an issue</h3>
 <p>From the issue sidebar:</p>
 <ol>
@@ -692,9 +692,9 @@ Tab → <span class="hljs-string">&quot;Add sub-issue&quot;</span> button (if yo
 <li>Press Escape to save</li>
 </ol>
 <h3>Transferring or deleting an issue</h3>
-<p>Available from the &quot;...&quot; (ellipsis) button at the top of the issue — navigate buttons with <code>B</code> to find it.</p>
+<p>Available from the &quot;...&quot; (ellipsis) button at the top of the issue - navigate buttons with <code>B</code> to find it.</p>
 <hr>
-<h2>The &quot;good first issue&quot; Label — Your Entry Point</h2>
+<h2>The &quot;good first issue&quot; Label - Your Entry Point</h2>
 <p>When looking for your first open source contribution:</p>
 <ol>
 <li>Navigate to any project&#39;s Issues tab</li>
@@ -708,15 +708,15 @@ Tab → <span class="hljs-string">&quot;Add sub-issue&quot;</span> button (if yo
 <h2>Accessibility-Specific Issue Writing Tips</h2>
 <p>When filing accessibility bugs, these details help maintainers reproduce and fix the problem:</p>
 <ol>
-<li><strong>Screen reader and version</strong> — &quot;NVDA 2025.3.3&quot; not just &quot;screen reader&quot;</li>
-<li><strong>OS and version</strong> — &quot;Windows 11 22H2&quot;</li>
-<li><strong>Browser and version</strong> — &quot;Chrome 124.0.6367.82&quot;</li>
-<li><strong>GitHub interface</strong> — &quot;Modern experience (default since Jan 2026)&quot; or &quot;Classic experience (opted out)&quot;</li>
-<li><strong>What was announced</strong> — quote the exact text your screen reader spoke</li>
-<li><strong>What should have been announced</strong> — describe the expected behavior</li>
-<li><strong>ARIA issue if known</strong> — e.g., &quot;The button has no accessible name&quot;</li>
-<li><strong>Steps to reproduce</strong> — numbered, step-by-step</li>
-<li><strong>Frequency</strong> — &quot;This happens every time&quot; vs &quot;intermittent&quot;</li>
+<li><strong>Screen reader and version</strong> - &quot;NVDA 2025.3.3&quot; not just &quot;screen reader&quot;</li>
+<li><strong>OS and version</strong> - &quot;Windows 11 22H2&quot;</li>
+<li><strong>Browser and version</strong> - &quot;Chrome 124.0.6367.82&quot;</li>
+<li><strong>GitHub interface</strong> - &quot;Modern experience (default since Jan 2026)&quot; or &quot;Classic experience (opted out)&quot;</li>
+<li><strong>What was announced</strong> - quote the exact text your screen reader spoke</li>
+<li><strong>What should have been announced</strong> - describe the expected behavior</li>
+<li><strong>ARIA issue if known</strong> - e.g., &quot;The button has no accessible name&quot;</li>
+<li><strong>Steps to reproduce</strong> - numbered, step-by-step</li>
+<li><strong>Frequency</strong> - &quot;This happens every time&quot; vs &quot;intermittent&quot;</li>
 </ol>
 <p><strong>Example of a well-filed accessibility issue:</strong></p>
 <pre><code class="hljs">Title: Issues <span class="hljs-built_in">list</span> <span class="hljs-keyword">does</span> <span class="hljs-keyword">not</span> announce label filtering results <span class="hljs-keyword">to</span> screen readers
@@ -756,23 +756,23 @@ so <span class="hljs-keyword">the</span> macOS behavior appears correct.</code><
 <ol>
 <li>Navigate to the Issues tab (press <code>G</code> then <code>I</code> in Focus Mode)</li>
 <li>Find and activate the &quot;New issue&quot; button (<code>K</code> to links, or <code>Tab</code> to it)</li>
-<li>In the title field, type: <strong>&quot;Introduce myself — [Your Name]&quot;</strong></li>
+<li>In the title field, type: <strong>&quot;Introduce myself - [Your Name]&quot;</strong></li>
 <li>In the description, write 2-3 sentences: who you are, what screen reader you use, and one thing you&#39;re hoping to learn today</li>
 <li>Press <code>Ctrl+Enter</code> to submit (or Tab to the Submit button and press <code>Enter</code>)</li>
 </ol>
-<p><strong>You&#39;re done.</strong> You just filed your first GitHub issue. Go read someone else&#39;s introduction and leave a friendly comment — press <code>3</code> to jump between issue titles on the Issues list.</p>
+<p><strong>You&#39;re done.</strong> You just filed your first GitHub issue. Go read someone else&#39;s introduction and leave a friendly comment - press <code>3</code> to jump between issue titles on the Issues list.</p>
 <blockquote>
-<p><strong>What success feels like:</strong> Your issue is live. Other participants can see it. You just contributed to a real repository — and it took less than three minutes.</p>
+<p><strong>What success feels like:</strong> Your issue is live. Other participants can see it. You just contributed to a real repository - and it took less than three minutes.</p>
 </blockquote>
 <hr>
 <blockquote>
-<h3>Day 2 Amplifier — Agent Forge: <code>@issue-tracker</code></h3>
-<p><strong>File, read, comment on, and triage real issues manually before using any agent.</strong> If you have not done the triage work yourself — reading descriptions, assigning labels, identifying duplicates — you cannot evaluate whether an agent&#39;s priority scoring is correct. The skill must exist before the amplifier is useful.</p>
+<h3>Day 2 Amplifier - Agent Forge: <code>@issue-tracker</code></h3>
+<p><strong>File, read, comment on, and triage real issues manually before using any agent.</strong> If you have not done the triage work yourself - reading descriptions, assigning labels, identifying duplicates - you cannot evaluate whether an agent&#39;s priority scoring is correct. The skill must exist before the amplifier is useful.</p>
 <p>Once you have mastered manual issue management:</p>
 <ul>
-<li><strong>In VS Code</strong> — <code>@issue-tracker find open issues labeled good-first-issue</code> searches cross-repository with community sentiment scoring, release-awareness prioritization, and batch-reply capability across every repo you have access to</li>
-<li><strong>In your repo</strong> — The issue templates in <code>agent-forge/.github/ISSUE_TEMPLATE/</code> structure both human filing and automated triage; fork <code>agent-forge</code> and that structure travels into any project you lead</li>
-<li><strong>In the cloud</strong> — GitHub Agentic Workflows triage new issues the moment they are opened: applying labels, posting first-response comments, adding to Project boards — the same triage actions you practiced manually today, running at scale</li>
+<li><strong>In VS Code</strong> - <code>@issue-tracker find open issues labeled good-first-issue</code> searches cross-repository with community sentiment scoring, release-awareness prioritization, and batch-reply capability across every repo you have access to</li>
+<li><strong>In your repo</strong> - The issue templates in <code>agent-forge/.github/ISSUE_TEMPLATE/</code> structure both human filing and automated triage; fork <code>agent-forge</code> and that structure travels into any project you lead</li>
+<li><strong>In the cloud</strong> - GitHub Agentic Workflows triage new issues the moment they are opened: applying labels, posting first-response comments, adding to Project boards - the same triage actions you practiced manually today, running at scale</li>
 </ul>
 <p><em>Today you are the triage engine. On Day 2, you understand the engine well enough to direct it.</em></p>
 </blockquote>
@@ -783,8 +783,8 @@ so <span class="hljs-keyword">the</span> macOS behavior appears correct.</code><
 
   </main>
   <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
-    <p><strong>GIT Going with GitHub</strong> — A workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
-    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="http://www.joinbits.org">joinbits.org</a></p>
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
+    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="https://www.joinbits.org">joinbits.org</a></p>
   </footer>
   </body>
 </html>

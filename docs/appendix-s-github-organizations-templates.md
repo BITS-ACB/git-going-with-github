@@ -7,7 +7,7 @@
 
 ## Repository Templates
 
-### Template vs. Fork — Which One?
+### Template vs. Fork - Which One?
 
 These are two very different actions that both appear near the "Code" button:
 
@@ -16,7 +16,7 @@ These are two very different actions that both appear near the "Code" button:
 | **Fork** | Contributing back to the original project | Full git history; your changes can be PRed upstream |
 | **Use this template** | Starting a *new* project based on the structure | Clean git history; no connection to the original repo |
 
-GitHub Skills courses use **"Use this template"** — you start fresh with the course scaffold but your copy has no upstream connection.
+GitHub Skills courses use **"Use this template"** - you start fresh with the course scaffold but your copy has no upstream connection.
 
 Agent-forge could serve as a template if you want to build your own agent suite starting from its structure without forking.
 
@@ -44,11 +44,11 @@ B → navigate buttons → find "Use this template" → Enter
 
 ---
 
-## GitHub Organizations — A Contributor's View
+## GitHub Organizations - A Contributor's View
 
 ### What Is an Organization?
 
-A GitHub organization is an account that multiple people share. Instead of `github.com/username/repo`, organization repos live at `github.com/org-name/repo`. The workshop's central project lives at `github.com/accesswatch/agent-forge` — `accesswatch` is an organization.
+A GitHub organization is an account that multiple people share. Instead of `github.com/username/repo`, organization repos live at `github.com/org-name/repo`. The workshop's central project lives at `github.com/accesswatch/agent-forge` - `accesswatch` is an organization.
 
 | Personal Account | Organization Account |
 |-----------------|---------------------|
@@ -64,7 +64,7 @@ Maintainers can invite you to join. When invited:
 2. Navigate to [github.com/settings/organizations](https://github.com/settings/organizations) to accept
 3. Or click the link in the invitation email
 
-You can also be a **public contributor** to an org repo without being a member — you fork the repo and submit PRs without needing an invitation.
+You can also be a **public contributor** to an org repo without being a member - you fork the repo and submit PRs without needing an invitation.
 
 ### Organization Membership Visibility
 
@@ -75,7 +75,7 @@ You can also be a **public contributor** to an org repo without being a member �
 
 ### Teams Inside Organizations
 
-Organizations can create **teams** (e.g., `@accesswatch/accessibility-reviewers`). When you see a team mentioned in a PR or issue, that `@mention` notifies everyone on that team. As a contributor, you don't need to create teams — just understand why you see them.
+Organizations can create **teams** (e.g., `@accesswatch/accessibility-reviewers`). When you see a team mentioned in a PR or issue, that `@mention` notifies everyone on that team. As a contributor, you don't need to create teams - just understand why you see them.
 
 ### Navigating an Organization Profile Page
 
@@ -90,7 +90,7 @@ Organization-level Projects (like the `accesswatch` project board) appear in the
 
 ---
 
-## Repository Settings — What Contributors Need to Know
+## Repository Settings - What Contributors Need to Know
 
 You may not have Settings access to most repositories (that requires maintainer role). But knowing what's there helps you understand why a repository behaves the way it does.
 
@@ -130,4 +130,4 @@ The default branch name appears in the branch selector at the top of the Code ta
 
 ---
 
-*Return to: [Resources](appendix-u-resources.md) | [Appendix R — GitHub Profile, Sponsors, and Wikis](appendix-r-github-profile-sponsors-wikis.md) | [Appendix A — Glossary](appendix-a-glossary.md)*
+*Return to: [Resources](appendix-u-resources.md) | [Appendix R - GitHub Profile, Sponsors, and Wikis](appendix-r-github-profile-sponsors-wikis.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

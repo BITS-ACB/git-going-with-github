@@ -1,7 +1,7 @@
 # Appendix Y: Accessing and Downloading Workshop Materials
 ## How to Get, Read, and Keep These Documents
 
-> **Why this appendix exists:** The workshop content is available in multiple formats — Markdown source files, pre-built HTML pages, and a live GitHub Pages site. This guide explains how to access each format, download materials for offline use, and keep your copy up to date.
+> **Why this appendix exists:** The workshop content is available in multiple formats - Markdown source files, pre-built HTML pages, and a live GitHub Pages site. This guide explains how to access each format, download materials for offline use, and keep your copy up to date.
 
 ---
 
@@ -29,14 +29,14 @@ https://<organization>.github.io/Learning-Room/
 Your facilitator will share the exact URL. Once you have it:
 
 1. Open the URL in your browser
-2. The landing page (`index.html`) is the workshop homepage — equivalent to the README
+2. The landing page (`index.html`) is the workshop homepage - equivalent to the README
 3. Use headings (`H` key in NVDA/JAWS browse mode) to navigate within any page
-4. All internal links between chapters and appendices work — click any cross-reference to go directly to that page
+4. All internal links between chapters and appendices work - click any cross-reference to go directly to that page
 5. Bookmark the URL for quick access during the workshop
 
 **Screen reader tip:** The HTML pages include skip-to-content links, breadcrumb navigation, and ARIA landmarks. Press `D` (NVDA) or `R` (JAWS) to jump to the main landmark on any page.
 
-For details on how GitHub Pages works, see [Appendix P — Publishing with GitHub Pages](appendix-p-github-pages.md).
+For details on how GitHub Pages works, see [Appendix P - Publishing with GitHub Pages](appendix-p-github-pages.md).
 
 ---
 
@@ -47,14 +47,14 @@ You can read every file directly on GitHub.com without downloading anything:
 1. Go to the repository page (your facilitator will share the link)
 2. The README renders automatically as the repository homepage
 3. Click into the `docs/` folder to see all chapters and appendices
-4. Click any `.md` file — GitHub renders it as formatted text with headings, links, and code blocks
+4. Click any `.md` file - GitHub renders it as formatted text with headings, links, and code blocks
 
 **Navigating the repository with a screen reader:**
 
 - **File list:** The repository file listing is a grid. Use `T` to jump to the file table, then arrow keys to navigate rows
 - **File content:** Once inside a file, GitHub renders the Markdown. Use `H` to navigate headings
 - **Breadcrumbs:** At the top of each file view, breadcrumb links show the path (e.g., `Learning-Room / docs / 05-working-with-pull-requests.md`). Use these to navigate back
-- **Go to File shortcut:** Press `T` on the repository's main page to open the file finder — type any filename to jump to it
+- **Go to File shortcut:** Press `T` on the repository's main page to open the file finder - type any filename to jump to it
 
 ---
 
@@ -82,7 +82,7 @@ If you do not have Git installed or prefer not to use the command line:
 
 1. Go to the repository page on GitHub.com
 2. Press `T` to find the file finder, or navigate to the green **Code** button (it is a dropdown button near the top of the file listing)
-3. Activate the **Code** button — a dropdown menu opens
+3. Activate the **Code** button - a dropdown menu opens
 4. Choose **Download ZIP**
 5. Save the file and extract it to a folder on your computer
 
@@ -90,9 +90,9 @@ If you do not have Git installed or prefer not to use the command line:
 - The **Code** button is near the repository description, after the branch selector
 - In NVDA/JAWS browse mode, press `B` to jump between buttons until you reach "Code"
 - Activate it with `Enter` or `Space`
-- The dropdown contains options including "Download ZIP" — arrow down to find it
+- The dropdown contains options including "Download ZIP" - arrow down to find it
 
-**Note:** A ZIP download is a snapshot. It does not update automatically — see [Section 7](#7-keeping-your-copy-updated) for how to get updates.
+**Note:** A ZIP download is a snapshot. It does not update automatically - see [Section 7](#7-keeping-your-copy-updated) for how to get updates.
 
 ---
 
@@ -119,7 +119,7 @@ If you have already cloned the repo, every file is already on your computer. Ope
 
 | Folder | Contents | Format |
 |--------|----------|--------|
-| `docs/` | All 17 chapters (00–16) and 25 appendices (A–Y) | Markdown (`.md`) |
+| `docs/` | All 17 chapters (00-16) and 25 appendices (A-Y) | Markdown (`.md`) |
 | `html/` | Pre-built HTML versions of every Markdown file | HTML (`.html`) |
 | `html/docs/` | HTML versions of all chapters and appendices | HTML (`.html`) |
 | `learning-room/` | Practice repository files: challenges, group exercises, setup guides | Markdown (`.md`) |
@@ -141,7 +141,7 @@ Open `.md` files in any text editor. They are plain text with lightweight format
 ### Reading HTML files
 
 1. Open `html/index.html` in any web browser
-2. All internal links between pages work locally — no internet connection required
+2. All internal links between pages work locally - no internet connection required
 3. Navigate between chapters using the links at the bottom of each page
 
 **Screen reader tip:** The HTML files work the same offline as online. All ARIA landmarks, heading structure, and skip links are embedded in each file.
@@ -149,7 +149,7 @@ Open `.md` files in any text editor. They are plain text with lightweight format
 ### Recommended offline reading setup
 
 - **VS Code with Markdown:** Open the repo folder in VS Code, browse the Explorer, and read files directly in the editor. Use `Ctrl+Shift+V` to open the rendered preview
-- **Browser with HTML:** Open `html/index.html` and navigate from there — this gives the most polished reading experience
+- **Browser with HTML:** Open `html/index.html` and navigate from there - this gives the most polished reading experience
 
 ---
 
@@ -165,7 +165,7 @@ cd Learning-Room
 git pull
 ```
 
-If you have not made local changes, this updates your copy cleanly. If you have local edits, Git will attempt to merge — see [Chapter 6 — Merge Conflicts](06-merge-conflicts.md) if needed.
+If you have not made local changes, this updates your copy cleanly. If you have local edits, Git will attempt to merge - see [Chapter 6 - Merge Conflicts](06-merge-conflicts.md) if needed.
 
 After pulling, rebuild the HTML to ensure it matches:
 
@@ -185,11 +185,11 @@ Download a fresh ZIP from the repository and replace your local copy. There is n
 |------|-------------|-----|
 | Reading during the workshop | **GitHub Pages** (online HTML) | No setup, always current, fully accessible |
 | Offline reference | **Local HTML** (`html/` folder) | Works in any browser, no internet needed, styled and navigable |
-| Editing or contributing | **Markdown** (`.md` files) | The source format — edit these, then rebuild HTML |
+| Editing or contributing | **Markdown** (`.md` files) | The source format - edit these, then rebuild HTML |
 | Quick lookup of one section | **GitHub.com** | Navigate directly in the browser, no download |
 | Archiving a copy | **ZIP download** or **Git clone** | Full snapshot of all materials |
 | Staying updated long-term | **Git clone** | One-command updates with `git pull` |
 
 ---
 
-*Return to: [Appendix X — Copilot AI Models](appendix-x-copilot-models.md) | [Appendix A — Glossary](appendix-a-glossary.md) | [README](../README.md)*
+*Return to: [Appendix X - Copilot AI Models](appendix-x-copilot-models.md) | [Appendix A - Glossary](appendix-a-glossary.md) | [README](../README.md)*

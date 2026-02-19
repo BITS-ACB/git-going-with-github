@@ -14,16 +14,16 @@
 ## Table of Contents
 
 1. [Cloning a Repository in VS Code](#1-cloning-a-repository-in-vs-code)
-2. [The Source Control Panel — Complete Walkthrough](#2-the-source-control-panel--complete-walkthrough)
+2. [The Source Control Panel - Complete Walkthrough](#2-the-source-control-panel--complete-walkthrough)
 3. [Branch Management](#3-branch-management)
-4. [Staging Changes — Files, Lines, and Chunks](#4-staging-changes--files-lines-and-chunks)
+4. [Staging Changes - Files, Lines, and Chunks](#4-staging-changes--files-lines-and-chunks)
 5. [Committing with Screen Readers](#5-committing-with-screen-readers)
 6. [Push and Pull Operations](#6-push-and-pull-operations)
 7. [Discarding Changes](#7-discarding-changes)
-8. [Timeline View — File History and Blame](#8-timeline-view--file-history-and-blame)
+8. [Timeline View - File History and Blame](#8-timeline-view--file-history-and-blame)
 9. [Resolving Merge Conflicts in VS Code](#9-resolving-merge-conflicts-in-vs-code)
 10. [Stash Management](#10-stash-management)
-11. [Emergency Recovery — git reflog](#10b-emergency-recovery--git-reflog)
+11. [Emergency Recovery - git reflog](#10b-emergency-recovery--git-reflog)
 12. [Alternative Git Interfaces](#11-alternative-git-interfaces)
 
 ---
@@ -40,17 +40,17 @@
 4. Paste the repository URL (example: `https://github.com/accesswatch/agent-forge.git`)
 5. Press `Enter`
 6. Choose a local folder where the repository should be cloned
-7. VS Code asks: "Would you like to open the cloned repository?" — select "Open"
+7. VS Code asks: "Would you like to open the cloned repository?" - select "Open"
 
 **Screen reader navigation:**
-- The Command Palette is a searchable list — type to filter, `Up/Down Arrow` to navigate results
-- The folder picker is a standard file dialog — navigate with `Arrow` keys, `Enter` to select
+- The Command Palette is a searchable list - type to filter, `Up/Down Arrow` to navigate results
+- The folder picker is a standard file dialog - navigate with `Arrow` keys, `Enter` to select
 
 ### Method 2: Start Page Clone Button
 
 1. Open VS Code (no folder open)
 2. The Start page appears
-3. Navigate to "Clone Git Repository" button — press `Enter`
+3. Navigate to "Clone Git Repository" button - press `Enter`
 4. Paste repository URL → `Enter`
 5. Choose destination folder
 6. Open when prompted
@@ -69,9 +69,9 @@
 
 ---
 
-## 2. The Source Control Panel — Complete Walkthrough
+## 2. The Source Control Panel - Complete Walkthrough
 
-The Source Control panel (`Ctrl+Shift+G` — Mac: `Cmd+Shift+G`) is where all Git operations happen in VS Code. This section provides a complete screen reader walkthrough of every interactive element.
+The Source Control panel (`Ctrl+Shift+G` - Mac: `Cmd+Shift+G`) is where all Git operations happen in VS Code. This section provides a complete screen reader walkthrough of every interactive element.
 
 ### Opening the Source Control Panel
 
@@ -131,12 +131,12 @@ When a file appears in the Changes or Staged Changes list, VS Code shows a statu
 
 | Letter | Meaning |
 |--------|---------|
-| M | Modified — file exists and was changed |
-| A | Added — new file, not in Git yet |
-| D | Deleted — file was removed |
-| R | Renamed — file was moved or renamed |
-| U | Untracked — file exists but Git is ignoring it |
-| C | Conflict — file has merge conflicts (see Section 9) |
+| M | Modified - file exists and was changed |
+| A | Added - new file, not in Git yet |
+| D | Deleted - file was removed |
+| R | Renamed - file was moved or renamed |
+| U | Untracked - file exists but Git is ignoring it |
+| C | Conflict - file has merge conflicts (see Section 9) |
 
 **Screen reader announcement:** "docs/GUIDE.md, Modified" or "README.md, Added"
 
@@ -150,7 +150,7 @@ When focused on any file in the Source Control panel:
 | Open Changes | Opens side-by-side diff view (same as `Enter`) |
 | Stage Changes | Moves file from Changes → Staged Changes |
 | Unstage Changes | Moves file from Staged Changes → Changes |
-| Discard Changes | **Dangerous** — deletes your local edits, restores file to last commit |
+| Discard Changes | **Dangerous** - deletes your local edits, restores file to last commit |
 | Stage Selected Ranges | Stage only specific lines (see Section 4) |
 | Revert Selected Ranges | Discard changes to specific lines only |
 
@@ -165,7 +165,7 @@ Branches are how you organize work in Git. Every repository starts with a `main`
 ### Viewing the Current Branch
 
 **Where it's shown:**
-1. Bottom-left corner of VS Code (status bar) — visual users see it immediately
+1. Bottom-left corner of VS Code (status bar) - visual users see it immediately
 2. Source Control panel title bar
 3. Command Palette: `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`) → "Git: Show Git Output"
 
@@ -237,7 +237,7 @@ git branch -a       # All branches (including remote)
 
 ---
 
-## 4. Staging Changes — Files, Lines, and Chunks
+## 4. Staging Changes - Files, Lines, and Chunks
 
 Git has a two-step commit process:
 1. **Stage** the changes you want to include
@@ -251,7 +251,7 @@ This lets you commit only part of your work, leaving the rest for a later commit
 <summary>Visual / mouse users</summary>
 
 1. Open Source Control: `Ctrl+Shift+G` (Mac: `Cmd+Shift+G`)
-2. Hover over a file in the "Changes" list — a **+** icon appears to its right
+2. Hover over a file in the "Changes" list - a **+** icon appears to its right
 3. Click the **+** to stage that file
 4. Or right-click a file → "Stage Changes"
 
@@ -335,7 +335,7 @@ All modified files move to "Staged Changes."
 
 **NVDA/JAWS:**
 - The commit input is announced as "Source Control Input, edit, multi-line"
-- You're automatically in Forms Mode — just start typing
+- You're automatically in Forms Mode - just start typing
 - The input expands as you type (supports multi-line messages)
 - Press `Ctrl+Enter` (Mac: `Cmd+Enter`) to commit (not `Enter`, which adds a new line)
 
@@ -370,7 +370,7 @@ Fixes #42
 
 - The "Staged Changes" section clears
 - Your changes are now part of Git history
-- The commit exists locally only — you must **push** to send it to GitHub (see Section 6)
+- The commit exists locally only - you must **push** to send it to GitHub (see Section 6)
 
 ---
 
@@ -401,7 +401,7 @@ Fixes #42
 **What to do if push fails:**
 - **Error: "No upstream branch"** → You need to publish the branch first (Command Palette → "Git: Publish Branch")
 - **Error: "Permission denied"** → Check your authentication (see [Appendix D: Git Authentication](appendix-d-git-authentication.md))
-- **Error: "Rejected — non-fast-forward"** → Someone else pushed changes; you need to pull first
+- **Error: "Rejected - non-fast-forward"** → Someone else pushed changes; you need to pull first
 
 ### Pulling Changes from GitHub
 
@@ -421,7 +421,7 @@ Fixes #42
 
 **Auto-fetch setting:**
 - VS Code can check for remote changes automatically every few minutes
-- Enable: Settings (`Ctrl+,` — Mac: `Cmd+,`) → search "git autofetch" → set to `true`
+- Enable: Settings (`Ctrl+,` - Mac: `Cmd+,`) → search "git autofetch" → set to `true`
 
 ---
 
@@ -497,7 +497,7 @@ Ctrl+Shift+P → "Git: Push"
 
 ### When Conflicts Occur During Sync
 
-If you've made changes to the same files the upstream has changed, merge conflicts can occur during sync. The same conflict resolution flow applies — see Section 9 of this chapter.
+If you've made changes to the same files the upstream has changed, merge conflicts can occur during sync. The same conflict resolution flow applies - see Section 9 of this chapter.
 
 **Best practice:** Always sync before starting new work on a fork. A quick `git fetch upstream` at the start of each session prevents conflicts from accumulating.
 
@@ -539,7 +539,7 @@ If you're not sure whether you'll need these changes later, use **stash** (Secti
 
 ### Deleting a File from the Repository (Git Delete / git rm)
 
-**Git Delete** removes a file from both your working directory AND Git's tracking. This is different from discarding changes — it permanently removes the file from the repository history going forward.
+**Git Delete** removes a file from both your working directory AND Git's tracking. This is different from discarding changes - it permanently removes the file from the repository history going forward.
 
 **How to use:**
 
@@ -548,7 +548,7 @@ If you're not sure whether you'll need these changes later, use **stash** (Secti
 3. Type "Git: Delete"
 4. Confirm the deletion
 
-The file is staged for deletion — you still need to commit to record the removal.
+The file is staged for deletion - you still need to commit to record the removal.
 
 **When to use Git Delete vs. just deleting the file:**
 - Simply deleting a file from Explorer leaves it as an "untracked deletion" in Git
@@ -557,7 +557,7 @@ The file is staged for deletion — you still need to commit to record the remov
 
 ---
 
-## 8. Timeline View — File History and Blame
+## 8. Timeline View - File History and Blame
 
 The **Timeline view** shows the Git history of the currently open file: every commit that touched this file, who made it, and when.
 
@@ -599,7 +599,7 @@ This is incredibly useful for understanding:
 - Why a section was removed
 - What the file looked like at any point in history
 
-### Git Blame — Line-by-Line History
+### Git Blame - Line-by-Line History
 
 **Git Blame** shows who last modified each line of the file.
 
@@ -623,8 +623,8 @@ This is incredibly useful for understanding:
 
 | Setting | Default | What It Does |
 |---------|---------|-------------|
-| `git.blame.ignoreWhitespace` | `false` | When `true`, whitespace-only changes (reformatting) are excluded from blame — useful when code was reformatted without logic changes |
-| `git.blame.editorDecoration.disableHover` | `false` | When `true`, disables the hover tooltip on blame annotations — reduces screen reader noise if you find the blame decorations intrusive |
+| `git.blame.ignoreWhitespace` | `false` | When `true`, whitespace-only changes (reformatting) are excluded from blame - useful when code was reformatted without logic changes |
+| `git.blame.editorDecoration.disableHover` | `false` | When `true`, disables the hover tooltip on blame annotations - reduces screen reader noise if you find the blame decorations intrusive |
 
 ---
 
@@ -640,9 +640,9 @@ When you open a file with conflicts, you see something like:
 
 ```markdown
 <<<<<<< HEAD
-## Timeline View — File History
+## Timeline View - File History
 =======
-## Timeline View — Git History and Blame
+## Timeline View - Git History and Blame
 >>>>>>> feature/improve-timeline-guide
 ```
 
@@ -782,11 +782,11 @@ If you no longer need what's in a stash:
 
 ---
 
-## 10b. Emergency Recovery — git reflog
+## 10b. Emergency Recovery - git reflog
 
 `git reflog` is the safety net you reach for when something goes seriously wrong: an accidental hard reset, a lost branch, a rebase that destroyed commits you needed. It is the most underused recovery tool in Git.
 
-**What reflog records:** Every time the `HEAD` pointer moves — from commits, resets, rebases, checkouts, merges — Git quietly records it in the reflog. These entries are kept for 90 days by default.
+**What reflog records:** Every time the `HEAD` pointer moves - from commits, resets, rebases, checkouts, merges - Git quietly records it in the reflog. These entries are kept for 90 days by default.
 
 ### When to Use Reflog
 
@@ -814,27 +814,27 @@ def4567 HEAD@{3}: checkout: moving from main to feature/docs
 
 Each line: `<SHA> HEAD@{N}: <what happened>`
 
-**Screen reader tip:** Run this in the integrated terminal (`Ctrl+Backtick`). The output is plain text — read line by line with ↓. You are looking for the SHA just before the action that caused the problem.
+**Screen reader tip:** Run this in the integrated terminal (`Ctrl+Backtick`). The output is plain text - read line by line with ↓. You are looking for the SHA just before the action that caused the problem.
 
 ### Recovering Lost Commits
 
 **If you need to restore a commit that has been lost:**
 
 ```bash
-# Step 1 — Find the last good commit SHA in reflog
+# Step 1 - Find the last good commit SHA in reflog
 git reflog
 
-# Step 2 — Preview what that commit looked like
+# Step 2 - Preview what that commit looked like
 git show abc1234
 
-# Step 3a — Create a new branch at that point (safest)
+# Step 3a - Create a new branch at that point (safest)
 git branch recovery/my-lost-work abc1234
 
-# Step 3b — OR reset the current branch to that point
+# Step 3b - OR reset the current branch to that point
 git reset --hard abc1234
 ```
 
-> **Use `git branch` over `git reset --hard` when recovering** — creating a branch is non-destructive; you keep both the current state and the recovered state, then decide which to keep.
+> **Use `git branch` over `git reset --hard` when recovering** - creating a branch is non-destructive; you keep both the current state and the recovered state, then decide which to keep.
 
 ### Recovering a Deleted Branch
 
@@ -848,7 +848,7 @@ git checkout -b feature/deleted-branch-name abc1234
 
 ### Why Reflog Is Local-Only
 
-Reflog records are stored in your local `.git/` directory and are **not pushed to GitHub**. If your entire local clone is destroyed (hard drive failure, `rm -rf`), reflog cannot help — but GitHub retains the pushed commits in the remote history.
+Reflog records are stored in your local `.git/` directory and are **not pushed to GitHub**. If your entire local clone is destroyed (hard drive failure, `rm -rf`), reflog cannot help - but GitHub retains the pushed commits in the remote history.
 
 **Workshop tip:** If you run a reset or rebase during the workshop and lose something, immediately run `git reflog` before doing anything else. The recovery window is open as long as you haven't run `git gc`.
 
@@ -863,7 +863,7 @@ VS Code's Source Control panel is one way to use Git. These alternatives exist f
 - **Graphical Git client**
 - Download: [desktop.github.com](https://desktop.github.com)
 - Strengths: Visual diff review, simpler branch management for beginners
-- Screen reader support: Partial — keyboard navigation works for core flows but some visual-only elements exist
+- Screen reader support: Partial - keyboard navigation works for core flows but some visual-only elements exist
 
 ### GitHub CLI (`gh`)
 
@@ -899,11 +899,11 @@ git pull                       # Pull from GitHub
 git log                        # View commit history
 ```
 
-**Screen reader tip:** Terminal output is plain text — more predictable than GUI elements for some operations.
+**Screen reader tip:** Terminal output is plain text - more predictable than GUI elements for some operations.
 
 ---
 
-## VS Code Keyboard Shortcuts — Git Operations Quick Reference
+## VS Code Keyboard Shortcuts - Git Operations Quick Reference
 
 | Action | Shortcut |
 |--------|----------|
@@ -928,12 +928,12 @@ git log                        # View commit history
 
 Do the complete Git workflow once, start to finish:
 
-1. **Clone** — Press `Ctrl+Shift+P`, type `Git: Clone`, press `Enter`. Paste the Learning Room URL and choose a folder. VS Code opens the repo.
-2. **Create a branch** — Click the branch name in the status bar (bottom left) or press `Ctrl+Shift+P` → `Git: Create Branch`. Name it `practice/your-name`.
-3. **Make a change** — Open `learning-room/docs/welcome.md`. Add a line at the bottom: `- [Your Name] was here!`
-4. **Stage** — Press `Ctrl+Shift+G` to open Source Control. Navigate to your changed file and press `Enter` to stage it (or use the `+` button).
-5. **Commit** — Tab to the message input, type `Add my name to the welcome file`, press `Ctrl+Enter`.
-6. **Push** — Press `Ctrl+Shift+P` → `Git: Push`.
+1. **Clone** - Press `Ctrl+Shift+P`, type `Git: Clone`, press `Enter`. Paste the Learning Room URL and choose a folder. VS Code opens the repo.
+2. **Create a branch** - Click the branch name in the status bar (bottom left) or press `Ctrl+Shift+P` → `Git: Create Branch`. Name it `practice/your-name`.
+3. **Make a change** - Open `learning-room/docs/welcome.md`. Add a line at the bottom: `- [Your Name] was here!`
+4. **Stage** - Press `Ctrl+Shift+G` to open Source Control. Navigate to your changed file and press `Enter` to stage it (or use the `+` button).
+5. **Commit** - Tab to the message input, type `Add my name to the welcome file`, press `Ctrl+Enter`.
+6. **Push** - Press `Ctrl+Shift+P` → `Git: Push`.
 
 **You're done.** You just completed the full Git cycle: clone → branch → edit → stage → commit → push.
 

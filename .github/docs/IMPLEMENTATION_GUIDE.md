@@ -46,9 +46,9 @@ mkdir -p learning-room/docs
 
 Copy these three workflow files into `.github/workflows/`:
 
-1. **`learning-room-pr-bot.yml`** — Main PR validation and feedback
-2. **`skills-progression.yml`** — Progress tracking and achievements
-3. **`student-grouping.yml`** — Peer pairing and study groups
+1. **`learning-room-pr-bot.yml`** - Main PR validation and feedback
+2. **`skills-progression.yml`** - Progress tracking and achievements
+3. **`student-grouping.yml`** - Peer pairing and study groups
 
 ### 1.3 Copy Validation Script
 
@@ -60,17 +60,17 @@ This script performs the actual PR validation that the bot workflow calls.
 
 Copy these templates into `.github/data/`:
 
-1. **`challenge-progression.json`** — Skill levels, badges, and milestones
-2. **`student-roster.json`** — Student information (update with your cohort)
+1. **`challenge-progression.json`** - Skill levels, badges, and milestones
+2. **`student-roster.json`** - Student information (update with your cohort)
 
 ### 1.5 Copy Documentation
 
 Copy these docs:
 
-- **`learning-room/AUTOMATION.md`** — Student guide to automation
-- **`.github/docs/LEARNING_PATHS.md`** — Detailed skill progression paths
-- **`learning-room/docs/CHALLENGES.md`** — Available challenge list
-- **`learning-room/docs/GROUP_CHALLENGES.md`** — Collaborative exercises
+- **`learning-room/AUTOMATION.md`** - Student guide to automation
+- **`.github/docs/LEARNING_PATHS.md`** - Detailed skill progression paths
+- **`learning-room/docs/CHALLENGES.md`** - Available challenge list
+- **`learning-room/docs/GROUP_CHALLENGES.md`** - Collaborative exercises
 
 ---
 
@@ -104,11 +104,11 @@ Edit `.github/data/student-roster.json`:
 ```
 
 **For each student, provide:**
-- `username` (required) — actual GitHub username
-- `name` (optional) — display name for friendly messages
-- `timezone` (optional) — for timezone-based grouping
-- `interests` (optional) — for skill-based pairing
-- `screenReader` (optional) — tracks accessibility needs
+- `username` (required) - actual GitHub username
+- `name` (optional) - display name for friendly messages
+- `timezone` (optional) - for timezone-based grouping
+- `interests` (optional) - for skill-based pairing
+- `screenReader` (optional) - tracks accessibility needs
 
 ### 2.2 Customize Skill Progression (Optional)
 
@@ -128,8 +128,8 @@ Edit `.github/data/challenge-progression.json` if you want to:
 ### 2.3 Verify File Paths
 
 The validation script expects files in:
-- `learning-room/docs/` — practice documentation files
-- `docs/` — workshop materials
+- `learning-room/docs/` - practice documentation files
+- `docs/` - workshop materials
 
 If your structure differs, update paths in:
 - `.github/scripts/validate-pr.js` → `checkFileLocation()` function
@@ -182,9 +182,9 @@ If no comment appears:
 
 In your test PR, add comments:
 
-- `@bot help` — Bot should respond with help information
-- Comment with "merge conflict" — Bot should provide conflict resolution guide
-- Comment with "how do I request review" — Bot should respond with instructions
+- `@bot help` - Bot should respond with help information
+- Comment with "merge conflict" - Bot should provide conflict resolution guide
+- Comment with "how do I request review" - Bot should respond with instructions
 
 If bot doesn't respond to keywords:
 - Check `respond-to-questions` job in workflow logs
@@ -300,10 +300,10 @@ Students will fix these during challenges.
 
 In all documentation, ensure links point correctly:
 
-- `../../docs/` — Workshop materials
-- `../../learning-room/docs/` — Practice files
-- `../../.github/docs/` — Learning paths
-- `AUTOMATION.md` — Bot guide
+- `../../docs/` - Workshop materials
+- `../../learning-room/docs/` - Practice files
+- `../../.github/docs/` - Learning paths
+- `AUTOMATION.md` - Bot guide
 
 Test all internal links before workshop.
 
@@ -325,7 +325,7 @@ In `docs/02-day1-agenda.md` (or your Day 1 materials):
 
 **Block 5 - The Contribution Sprint:**
 
-> When you open your PR, an automated bot will check your changes and provide feedback within 30 seconds. Read the bot's feedback carefully — it explains what to fix and links to resources for learning.
+> When you open your PR, an automated bot will check your changes and provide feedback within 30 seconds. Read the bot's feedback carefully - it explains what to fix and links to resources for learning.
 >
 > The bot is NOT a substitute for peer review. After addressing bot feedback, always request review from your assigned peer reviewer.
 >
@@ -582,14 +582,14 @@ Create GitHub Pages site that reads `student-roster.json` and displays:
 ## Additional Resources
 
 ### For Students
-- [Automation Guide](../../learning-room/AUTOMATION.md) — How the bot works
-- [Learning Paths](LEARNING_PATHS.md) — Skill progression details
-- [Available Challenges](../../learning-room/docs/CHALLENGES.md) — Challenge list
+- [Automation Guide](../../learning-room/AUTOMATION.md) - How the bot works
+- [Learning Paths](LEARNING_PATHS.md) - Skill progression details
+- [Available Challenges](../../learning-room/docs/CHALLENGES.md) - Challenge list
 
 ### For Facilitators
-- [FACILITATOR.md](../../FACILITATOR.md) — Workshop facilitation guide
-- [GitHub Actions Docs](https://docs.github.com/en/actions) — Workflow reference
-- [GitHub GraphQL API](https://docs.github.com/en/graphql) — For advanced automation
+- [FACILITATOR.md](../../FACILITATOR.md) - Workshop facilitation guide
+- [GitHub Actions Docs](https://docs.github.com/en/actions) - Workflow reference
+- [GitHub GraphQL API](https://docs.github.com/en/graphql) - For advanced automation
 
 ### Example Implementation
 See this repository as working example of full system.

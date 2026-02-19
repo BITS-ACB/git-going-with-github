@@ -24,7 +24,7 @@
 
 ## 1. Projects v2: What Changed
 
-GitHub has two generations of project tooling. The current generation — called **Projects (v2)** — is what you'll find on any repository or organization page today.
+GitHub has two generations of project tooling. The current generation - called **Projects (v2)** - is what you'll find on any repository or organization page today.
 
 | Feature | Classic Projects (v1) | Projects v2 (current) |
 |---|---|---|
@@ -126,7 +126,7 @@ A horizontal timeline. Items appear as bars spanning their start/due dates. Iter
 
 **What it's best for:** Release planning, sprint capacity planning, communicating timelines to stakeholders.
 
-**Screen reader note:** Roadmap is chart-based. The underlying data is still fully accessible via the Table view — treat Roadmap as a visual summary, and use Table for all editing.
+**Screen reader note:** Roadmap is chart-based. The underlying data is still fully accessible via the Table view - treat Roadmap as a visual summary, and use Table for all editing.
 
 **Setting dates:**
 - Add a **Date** custom field (e.g., "Start Date", "Due Date") or use a **Milestone** field
@@ -155,7 +155,7 @@ From any project view:
 2. Activate the `+` button
 3. Select a field type
 4. Name the field and configure options (for select fields, type each option, press Enter to add more)
-5. Confirm — the field appears as a new column
+5. Confirm - the field appears as a new column
 
 **Screen reader path:**
 ```
@@ -183,7 +183,7 @@ From any project view:
 1. Activate the **"+ Add item"** button at the bottom of a table/column
 2. Type `#` to trigger the issue/PR search
 3. Type a keyword or issue number
-4. Select the item — it's added to the project
+4. Select the item - it's added to the project
 5. The issue/PR is now tracked in the project; it still lives in its repository
 
 **Tip:** The issue itself will now show which projects it belongs to in its sidebar.
@@ -194,7 +194,7 @@ Draft issues live only inside the project (not in any repository) until you prom
 
 1. Activate **"+ Add item"**
 2. Type the title directly (no `#`)
-3. Press `Enter` — a draft row appears
+3. Press `Enter` - a draft row appears
 4. Open the draft → **"Convert to issue"** button → select the repository
 
 **When to use drafts:** Capturing ideas during planning before you're ready to commit them to a repo.
@@ -204,7 +204,7 @@ Draft issues live only inside the project (not in any repository) until you prom
 1. Open the draft item (`Enter` on the row)
 2. Activate **"Convert to issue"** in the panel
 3. Select the target repository from the dropdown
-4. Confirm — the draft becomes a real issue in that repo
+4. Confirm - the draft becomes a real issue in that repo
 
 ### Bulk Edit Items
 
@@ -217,7 +217,7 @@ In Table view:
 
 ## 6. Built-In Automations
 
-Projects v2 has native automation rules — no GitHub Actions YAML required.
+Projects v2 has native automation rules - no GitHub Actions YAML required.
 
 ### Accessing Automations
 
@@ -245,7 +245,7 @@ This is the most powerful workflow for maintainers:
 3. Configure the filter: e.g., `label:accessibility is:issue` adds any new issue with the accessibility label automatically
 4. Save
 
-Now any matching issue in linked repos is added to your project the moment it's filed — no manual triage step required.
+Now any matching issue in linked repos is added to your project the moment it's filed - no manual triage step required.
 
 ### GitHub Actions Integration
 
@@ -260,7 +260,7 @@ See [Appendix Q: GitHub Actions and Workflows](appendix-q-github-actions-workflo
 
 ## 7. Iterations (Sprints)
 
-An **iteration** field lets you group work into time-boxed cycles — sprints, weeks, or any cadence you choose.
+An **iteration** field lets you group work into time-boxed cycles - sprints, weeks, or any cadence you choose.
 
 ### Creating an Iteration Field
 
@@ -295,7 +295,7 @@ A **view** is a saved configuration of layout + filters + grouping + sort. You c
 1. Activate the **"+ New view"** button in the view tab bar
 2. Choose layout (Table, Board, Roadmap)
 3. Configure filters, grouping, sort
-4. The view saves automatically with a default name — rename by clicking/activating the tab label
+4. The view saves automatically with a default name - rename by clicking/activating the tab label
 
 ### Filter Syntax
 
@@ -330,7 +330,7 @@ Multiple sort levels are supported. Primary sort → secondary sort:
 
 ## 9. Cross-Repository Projects
 
-A single project can track issues and PRs from **multiple repositories** — including repos in different organizations (if you have access).
+A single project can track issues and PRs from **multiple repositories** - including repos in different organizations (if you have access).
 
 ### Add a Repository to a Project
 
@@ -341,7 +341,7 @@ A single project can track issues and PRs from **multiple repositories** — inc
 
 ### Using the Repository Field
 
-When a project spans multiple repos, the **"Repository"** field lets you see — and filter by — which repo each item belongs to:
+When a project spans multiple repos, the **"Repository"** field lets you see - and filter by - which repo each item belongs to:
 
 ```
 Filter: repo:accesswatch/agent-forge
@@ -361,7 +361,7 @@ Filter: repo:accesswatch/agent-forge
 Enter → Open a project
 ```
 
-### Inside a Project — General
+### Inside a Project - General
 
 ```
 Tab → Move between interactive elements (view tabs, filters, fields, buttons)
@@ -426,7 +426,7 @@ The **`/project-status`** command from Agent Forge gives you a live project boar
 
 - Items per column (Todo, In Progress, Done, etc.) with assignees and average age
 - Blocked items (labeled "blocked" or flagged with a field value)
-- Stale items — in the same column for 7+ days with no activity
+- Stale items - in the same column for 7+ days with no activity
 - Unassigned items in active columns
 - Team member workload (anyone with 5+ items in progress)
 - Sprint/iteration progress if an Iteration field is configured
@@ -447,7 +447,7 @@ Column Breakdown:
 └─────────────┴───────┴──────────────────┴─────────┴──────────────┘
 
 Attention Items:
-  Stale: "Update screen reader navigation guide" — In Review for 9 days, no activity
+  Stale: "Update screen reader navigation guide" - In Review for 9 days, no activity
   Unassigned: "Triage accessibility bug backlog" in In Progress
 
 After the overview: "Want to see a specific column or check a team member's workload?"
@@ -483,7 +483,7 @@ After the overview: "Want to see a specific column or check a team member's work
 
 1. Add an **Iteration** field named "Sprint" with 2-week iterations
 2. Assign your existing project items to the current sprint
-3. Switch to **Roadmap** view — observe the items on the timeline
+3. Switch to **Roadmap** view - observe the items on the timeline
 4. Check **Insights** to see the current iteration burndown
 
 ### Exercise 4: Cross-Repo Project (Advanced)

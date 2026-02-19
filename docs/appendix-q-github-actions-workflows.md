@@ -25,7 +25,7 @@
 
 ## 1. What Is GitHub Actions?
 
-**GitHub Actions** is GitHub's built-in automation system. It lets repository maintainers define automated tasks that run in response to things that happen in the repository — like someone opening a pull request, pushing a commit, or filing an issue.
+**GitHub Actions** is GitHub's built-in automation system. It lets repository maintainers define automated tasks that run in response to things that happen in the repository - like someone opening a pull request, pushing a commit, or filing an issue.
 
 Think of it as a robot assistant that every repository can optionally configure. That robot watches for specific events and then automatically runs jobs: testing code, checking spelling, scanning for accessibility issues, building documentation, deploying a website, and more.
 
@@ -39,13 +39,13 @@ Think of it as a robot assistant that every repository can optionally configure.
 |------|---------------|
 | **Workflow** | A complete automated process defined in a YAML file. A repo can have many workflows. |
 | **Job** | A group of steps that run together, usually on the same machine. A workflow can have multiple jobs. |
-| **Step** | A single task within a job — running a command, calling an action, etc. |
+| **Step** | A single task within a job - running a command, calling an action, etc. |
 | **Action** | A reusable unit of automation. Like a plugin. Many are shared publicly on [GitHub Marketplace](https://github.com/marketplace?type=actions). |
 | **Runner** | The machine (virtual server) that executes a job. GitHub provides free runners. |
-| **Trigger / Event** | The thing that causes a workflow to start — a push, a PR, a schedule, etc. |
+| **Trigger / Event** | The thing that causes a workflow to start - a push, a PR, a schedule, etc. |
 | **Status check** | The pass/fail result of a workflow shown on a pull request. |
 | **Artifact** | A file produced by a workflow (a build output, a test report, etc.) that can be downloaded. |
-| **Secret** | An encrypted variable stored in a repo's settings — used in workflows without exposing sensitive values. |
+| **Secret** | An encrypted variable stored in a repo's settings - used in workflows without exposing sensitive values. |
 | **YAML** | The file format used to write workflow files. Indentation matters. |
 | **`on:`** | The YAML key that defines what triggers a workflow. |
 | **`runs-on:`** | The YAML key that specifies the runner OS (`ubuntu-latest`, `windows-latest`, `macos-latest`). |
@@ -68,8 +68,8 @@ your-repository/
 
 The `.github/` folder is hidden by convention (starts with a dot). To find it:
 
-- **On GitHub.com:** The file browser shows it — use `T` (go to file) or navigate the file table with `Ctrl+Alt+Arrow` keys
-- **In VS Code:** It appears in the Explorer panel — enable "Show Hidden Files" if needed
+- **On GitHub.com:** The file browser shows it - use `T` (go to file) or navigate the file table with `Ctrl+Alt+Arrow` keys
+- **In VS Code:** It appears in the Explorer panel - enable "Show Hidden Files" if needed
 
 > **Screen reader tip:** The `.github` folder reads as "dot github." The `workflows` folder is inside it. File names ending in `.yml` are YAML workflow files.
 
@@ -95,7 +95,7 @@ jobs:
     runs-on: ubuntu-latest        # What operating system to use
     steps:
       - name: Check out code
-        uses: actions/checkout@v4 # A reusable action — downloads your repo code
+        uses: actions/checkout@v4 # A reusable action - downloads your repo code
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -125,12 +125,12 @@ The most common triggers you will encounter as a contributor:
 | `pull_request` | A PR is opened, updated, synchronized, or reopened |
 | `pull_request_review` | A review is submitted on a PR |
 | `issue_comment` | A comment is posted on an issue or PR |
-| `schedule` | A recurring timer (like a cron job) — e.g., every Monday at 9am |
-| `workflow_dispatch` | A manual trigger — someone activates a button in the Actions tab |
+| `schedule` | A recurring timer (like a cron job) - e.g., every Monday at 9am |
+| `workflow_dispatch` | A manual trigger - someone activates a button in the Actions tab |
 | `release` | When a new release is published |
 | `merge_group` | When a PR enters a merge queue |
 
-**The most important one for you:** `pull_request` — this is what triggers checks on your PR.
+**The most important one for you:** `pull_request` - this is what triggers checks on your PR.
 
 ---
 
@@ -142,10 +142,10 @@ When you open a pull request on a repo that uses GitHub Actions, you will see a 
 
 | Symbol | Color | Meaning | What to do |
 |--------|-------|---------|-----------|
-| ● spinning | Yellow/Orange | Checks are running — wait | Wait for them to complete |
-| ✓ checkmark | Green | All required checks passed | Good — you may be able to merge |
-| ✗ cross | Red | One or more checks failed | Do not merge — read the failure |
-| ⊘ | Grey | Check was skipped | Usually fine — skipped by design |
+| ● spinning | Yellow/Orange | Checks are running - wait | Wait for them to complete |
+| ✓ checkmark | Green | All required checks passed | Good - you may be able to merge |
+| ✗ cross | Red | One or more checks failed | Do not merge - read the failure |
+| ⊘ | Grey | Check was skipped | Usually fine - skipped by design |
 | | Yellow | Non-blocking warning | Review but may not block merge |
 
 ### Navigating status checks with a screen reader
@@ -165,7 +165,7 @@ When you open a pull request on a repo that uses GitHub Actions, you will see a 
 ### Required vs. non-required checks
 
 - **Required checks** must pass before a PR can be merged. A maintainer configures which checks are required in Branch Protection Rules.
-- **Non-required checks** are informational — a failure shown in grey/yellow usually won't block a merge.
+- **Non-required checks** are informational - a failure shown in grey/yellow usually won't block a merge.
 - If you're not sure whether a check is required, look for the phrase **"Required"** next to the check name.
 
 ---
@@ -209,7 +209,7 @@ When you open a workflow run, you see:
 To find out **why a step failed:**
 1. Navigate to the failed step
 2. Activate it to expand the log output
-3. The log is a large text area — switch to focus mode to read it
+3. The log is a large text area - switch to focus mode to read it
 4. Look for lines containing `Error:`, `FAILED`, `exit code`, or `AssertionError`
 
 > **Tip:** Log output can be very long. Use your screen reader's search (`NVDA+Ctrl+F`, `JAWS: Insert+F`, `VO+F`) to search for "error" or "failed" to jump directly to the problem.
@@ -230,7 +230,7 @@ As you contribute to open source repositories, you will see these types of workf
 
 ### Linting / Code Style
 
-**What it does:** Checks that code follows the project's formatting and style rules — things like indentation, line length, or consistent import ordering.
+**What it does:** Checks that code follows the project's formatting and style rules - things like indentation, line length, or consistent import ordering.
 
 **What you see:** A check called "Lint", "ESLint", "Prettier", "Flake8", or similar.
 
@@ -258,7 +258,7 @@ As you contribute to open source repositories, you will see these types of workf
 
 **What you see:** A check called "CodeQL", "Dependabot", "Snyk", or similar.
 
-**If it fails:** A security issue was detected — inform the maintainer and do not merge.
+**If it fails:** A security issue was detected - inform the maintainer and do not merge.
 
 ### Deployment / Preview Builds
 
@@ -266,7 +266,7 @@ As you contribute to open source repositories, you will see these types of workf
 
 **What you see:** A bot comment on your PR with a preview URL, and a check called "Deploy", "Netlify", "Vercel", "GitHub Pages", or similar.
 
-**What it gives you:** A live preview of what the site will look like with your changes — very useful for visual review and for accessibility testing with your screen reader on the actual rendered output.
+**What it gives you:** A live preview of what the site will look like with your changes - very useful for visual review and for accessibility testing with your screen reader on the actual rendered output.
 
 ---
 
@@ -294,10 +294,10 @@ In the workflow run:
 ### Step 4: Read the error message
 
 Look for:
-- `Error:` — describes what went wrong
-- `FAILED` or `FAIL` — test failure summary
-- File name and line number — where exactly the problem is
-- `exit code 1` (or non-zero) — the command failed
+- `Error:` - describes what went wrong
+- `FAILED` or `FAIL` - test failure summary
+- File name and line number - where exactly the problem is
+- `exit code 1` (or non-zero) - the command failed
 
 ### Step 5: Fix the issue locally (or in the web editor)
 
@@ -330,7 +330,7 @@ If you are contributing to a repository for the first time, GitHub may hold your
 
 > "Workflows aren't being run on this pull request. A maintainer must approve this."
 
-This is a **security feature** — it prevents malicious code from running on the maintainer's infrastructure before they have reviewed it. Do not be alarmed. Simply add a comment like:
+This is a **security feature** - it prevents malicious code from running on the maintainer's infrastructure before they have reviewed it. Do not be alarmed. Simply add a comment like:
 
 > "Ready for review. Could a maintainer approve the workflow runs?"
 
@@ -348,7 +348,7 @@ This is a **security feature** — it prevents malicious code from running on th
 
 ## 11. Accessibility-Focused Workflows
 
-This is relevant to our event specifically. The open source accessibility community actively uses GitHub Actions to **automatically catch accessibility regressions** — meaning, to ensure that new code does not introduce new accessibility barriers.
+This is relevant to our event specifically. The open source accessibility community actively uses GitHub Actions to **automatically catch accessibility regressions** - meaning, to ensure that new code does not introduce new accessibility barriers.
 
 ### GitHub's Accessibility Scanner Action
 
@@ -386,13 +386,13 @@ jobs:
 
 **What these tools catch (and what they do not):**
 
-Automated tools catch approximately **30–40% of accessibility issues** — things like missing alt attributes, insufficient color contrast ratios, or unlabeled form fields. The remaining issues require human testing, especially with actual assistive technology like your screen reader.
+Automated tools catch approximately **30-40% of accessibility issues** - things like missing alt attributes, insufficient color contrast ratios, or unlabeled form fields. The remaining issues require human testing, especially with actual assistive technology like your screen reader.
 
 This is precisely why **manual testing by people who use screen readers is so valuable and irreplaceable.**
 
 ### Preparing the Environment for GitHub-Hosted Agents
 
-When custom agents run on GitHub.com — triggered by an issue assignment or a Copilot Chat task — they need any external tools pre-installed before they start working. GitHub recognizes a special setup workflow for this: a workflow file with a single job named `copilot-setup-steps`.
+When custom agents run on GitHub.com - triggered by an issue assignment or a Copilot Chat task - they need any external tools pre-installed before they start working. GitHub recognizes a special setup workflow for this: a workflow file with a single job named `copilot-setup-steps`.
 
 **Location:** `.github/workflows/copilot-setup-steps.yml`
 
@@ -416,9 +416,9 @@ jobs:
 
 **What this does:** Before a Copilot coding agent begins working, GitHub runs this job to prepare the environment. Without it, an agent that needs `markdownlint-cli2` (for the Markdown Accessibility Assistant) or `@axe-core/cli` (for WCAG scanning) will fail because those tools are not present.
 
-**The job name `copilot-setup-steps` is required** — GitHub won't recognize any other name for agent environment preparation.
+**The job name `copilot-setup-steps` is required** - GitHub won't recognize any other name for agent environment preparation.
 
-**Connection to Section 13 of the VS Code guide:** This is the infrastructure that enables Scope 3 (cloud execution) of the three-layer Agent Forge model. The same agent you run in VS Code with `@markdown-accessibility-assistant` can run on GitHub.com automatically — but only if the environment is prepared with this workflow.
+**Connection to Section 13 of the VS Code guide:** This is the infrastructure that enables Scope 3 (cloud execution) of the three-layer Agent Forge model. The same agent you run in VS Code with `@markdown-accessibility-assistant` can run on GitHub.com automatically - but only if the environment is prepared with this workflow.
 
 ---
 
@@ -481,22 +481,22 @@ When you are ready to go deeper, these are the best places to start:
 | Workflows live in `.github/workflows/` | YAML files that define automation |
 | Triggers fire workflows | `push`, `pull_request`, `schedule` are the most common |
 | Status checks appear on your PR | Green ✓, Red ✗, Yellow ● = pass, fail, running |
-| Required checks must pass | Configured by maintainers — blocks merging if failing |
+| Required checks must pass | Configured by maintainers - blocks merging if failing |
 | Failing checks are normal | Read the log, fix the issue, push again |
-| a11y workflows catch ~30–40% of issues | Human screen reader testing catches the rest |
-| First-time contributors may need approval | A security feature — ask a maintainer politely |
+| a11y workflows catch ~30-40% of issues | Human screen reader testing catches the rest |
+| First-time contributors may need approval | A security feature - ask a maintainer politely |
 
 ---
 
-> ### Day 2 Bridge — From Actions to Agentic Workflows
+> ### Day 2 Bridge - From Actions to Agentic Workflows
 >
-> **Understand standard YAML workflow files before engaging with agentic workflows.** GitHub Agentic Workflows are not a separate technology — they are the next layer on top of what you learned here. They share the same trigger model, the same permissions system, and the same `.github/workflows/` directory. You cannot evaluate whether an agentic workflow is safe or correct unless you can already read a standard one.
+> **Understand standard YAML workflow files before engaging with agentic workflows.** GitHub Agentic Workflows are not a separate technology - they are the next layer on top of what you learned here. They share the same trigger model, the same permissions system, and the same `.github/workflows/` directory. You cannot evaluate whether an agentic workflow is safe or correct unless you can already read a standard one.
 >
-> The three layers, in sequence — each builds on the one before it:
+> The three layers, in sequence - each builds on the one before it:
 >
-> 1. **Standard GitHub Actions** — YAML files in `.github/workflows/`; define triggers and structured shell steps; what you mastered in this guide
-> 2. **Agent Forge in VS Code** — `.agent.md` files in `.github/agents/`; define behavior in plain English; GitHub Copilot Chat executes them on demand in your editor — same `.github/` folder, plain text, no YAML required
-> 3. **GitHub Agentic Workflows in the cloud** — `.md` files in `.github/workflows/`; define intent in plain Markdown frontmatter; a coding agent (Copilot CLI, Claude Code, OpenAI Codex) executes them inside GitHub Actions on any trigger — no VS Code, no local setup required
+> 1. **Standard GitHub Actions** - YAML files in `.github/workflows/`; define triggers and structured shell steps; what you mastered in this guide
+> 2. **Agent Forge in VS Code** - `.agent.md` files in `.github/agents/`; define behavior in plain English; GitHub Copilot Chat executes them on demand in your editor - same `.github/` folder, plain text, no YAML required
+> 3. **GitHub Agentic Workflows in the cloud** - `.md` files in `.github/workflows/`; define intent in plain Markdown frontmatter; a coding agent (Copilot CLI, Claude Code, OpenAI Codex) executes them inside GitHub Actions on any trigger - no VS Code, no local setup required
 >
 > All three live in `.github/`. All three are plain text. All three run on your behalf. The only difference is where they run and how sophisticated their executor is.
 >

@@ -34,23 +34,23 @@
 ## About This Workshop
 
 ### Q: Is this guide only for programmers?
-**A:** No. While it focuses on GitHub (a platform developers use), the concepts apply to anyone collaborating on projects. Documentation improvements, issue filing, accessibility testing, and code reviews are all valuable contributions that require no coding. **Start:** [Chapter 1](docs/01-understanding-github-web-structure.md) — no coding required.
+**A:** No. While it focuses on GitHub (a platform developers use), the concepts apply to anyone collaborating on projects. Documentation improvements, issue filing, accessibility testing, and code reviews are all valuable contributions that require no coding. **Start:** [Chapter 1](docs/01-understanding-github-web-structure.md) - no coding required.
 
 ### Q: Do I need to know how to code to understand this guide?
-**A:** Not for most chapters. Chapters 0–9 teach GitHub concepts without requiring code knowledge. Chapters 10–16 introduce programming tools and concepts but explain them for beginners. If you are non-technical, you can skip code examples and still understand the workflows.
+**A:** Not for most chapters. Chapters 0-9 teach GitHub concepts without requiring code knowledge. Chapters 10-16 introduce programming tools and concepts but explain them for beginners. If you are non-technical, you can skip code examples and still understand the workflows.
 
 ### Q: How long will this take?
 **A:** Depends on your path:
 - **Core path (Day 1 only):** ~7.5 hours of structured time
 - **Full curriculum (Day 1 + Day 2):** ~15 hours total
-- **Just the essentials:** 3–4 hours (Chapters 0, 1, 4, 5)
-- **Self-paced:** Read at your own speed — there is no timer
+- **Just the essentials:** 3-4 hours (Chapters 0, 1, 4, 5)
+- **Self-paced:** Read at your own speed - there is no timer
 
 ### Q: Can I do this workshop on my own, or do I need a group?
 **A:** You can do most of the workshop solo. The chapters, exercises, and appendices are self-contained. A few exercises in the Learning Room (Chapter 3) involve peer review and are designed for groups, but you can still practice the individual challenges on your own.
 
 ### Q: What is the difference between Day 1 and Day 2?
-**A:** Day 1 uses the GitHub web interface only — everything happens in your browser. Day 2 moves to VS Code on the desktop and introduces GitHub Copilot and Agent Forge. Day 1 skills are prerequisite for Day 2 — the agents only make sense when you understand what they automate.
+**A:** Day 1 uses the GitHub web interface only - everything happens in your browser. Day 2 moves to VS Code on the desktop and introduces GitHub Copilot and Agent Forge. Day 1 skills are prerequisite for Day 2 - the agents only make sense when you understand what they automate.
 
 ### Q: Is there a certificate or badge for completing this workshop?
 **A:** The GitHub Skills modules (used during Day 1) award completion badges on your GitHub profile. These are visible to anyone who visits your profile. The workshop itself does not issue a separate certificate, but your merged PR to `accesswatch/agent-forge` on Day 2 is permanent proof of contribution.
@@ -84,7 +84,7 @@
 **A:** All technical terms are defined in [Appendix A (Glossary)](docs/appendix-a-glossary.md). The language is intentionally simple and direct. If anything is unclear, open an issue on GitHub or check [QUICK_REFERENCE.md](QUICK_REFERENCE.md).
 
 ### Q: I only have a few hours. What is the minimum I should read?
-**A:** Read Chapters 0, 1, 4, and 5. That covers setup, GitHub structure, issues, and pull requests — enough to start contributing to any project.
+**A:** Read Chapters 0, 1, 4, and 5. That covers setup, GitHub structure, issues, and pull requests - enough to start contributing to any project.
 
 ---
 
@@ -151,9 +151,9 @@ Detailed setup is in [Chapter 0 (Pre-Workshop Setup)](docs/00-pre-workshop-setup
 
 ### Q: GitHub is not announcing headings or landmarks. What is wrong?
 **A:** Several possible causes:
-1. You may be in Focus Mode instead of Browse Mode — press `NVDA+Space` (NVDA) or `Insert+Z` (JAWS) to toggle
-2. Hovercards may be enabled — go to GitHub Settings → Accessibility → turn off "Hovercards"
-3. The page may not have loaded fully — wait a few seconds and try again
+1. You may be in Focus Mode instead of Browse Mode - press `NVDA+Space` (NVDA) or `Insert+Z` (JAWS) to toggle
+2. Hovercards may be enabled - go to GitHub Settings → Accessibility → turn off "Hovercards"
+3. The page may not have loaded fully - wait a few seconds and try again
 4. See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) → "Screen Readers & Accessibility" for more solutions
 
 ### Q: Can I use a braille display?
@@ -161,14 +161,14 @@ Detailed setup is in [Chapter 0 (Pre-Workshop Setup)](docs/00-pre-workshop-setup
 
 ### Q: What keyboard shortcuts do I need to know?
 **A:** The most important ones:
-- `H` — Jump to next heading (Browse Mode)
-- `D` — Jump to next landmark
-- `B` — Jump to next button
-- `K` — Jump to next link
-- `F` — Jump to next form field
-- `Tab` — Move to next interactive element
-- `Ctrl+Enter` — Submit text on GitHub
-- `NVDA+F7` / `Insert+F3` / `VO+U` — Elements List / Rotor
+- `H` - Jump to next heading (Browse Mode)
+- `D` - Jump to next landmark
+- `B` - Jump to next button
+- `K` - Jump to next link
+- `F` - Jump to next form field
+- `Tab` - Move to next interactive element
+- `Ctrl+Enter` - Submit text on GitHub
+- `NVDA+F7` / `Insert+F3` / `VO+U` - Elements List / Rotor
 
 Full reference: [Appendix B (Screen Reader Cheat Sheet)](docs/appendix-b-screen-reader-cheatsheet.md)
 
@@ -182,7 +182,7 @@ Full reference: [Appendix B (Screen Reader Cheat Sheet)](docs/appendix-b-screen-
 **A:** Yes. GitHub's web interface is responsive. Use `Ctrl++` (or `Cmd++` on Mac) to zoom in. The HTML versions of workshop documents (in the `html/` folder) are also responsive and work at any zoom level.
 
 ### Q: How do I know if a page element is interactive?
-**A:** Your screen reader announces the role of each element — "button," "link," "edit text," "checkbox," etc. If it announces "clickable" without a more specific role, it may not be fully accessible. In that case, try `Enter` or `Space` to activate it.
+**A:** Your screen reader announces the role of each element - "button," "link," "edit text," "checkbox," etc. If it announces "clickable" without a more specific role, it may not be fully accessible. In that case, try `Enter` or `Space` to activate it.
 
 ---
 
@@ -198,18 +198,18 @@ Full reference: [Appendix B (Screen Reader Cheat Sheet)](docs/appendix-b-screen-
 - **Recommendation:** Use SSH if you can. See [Appendix D (Git Authentication)](docs/appendix-d-git-authentication.md) for setup instructions for both.
 
 ### Q: What is a Personal Access Token (PAT) and why do I need one?
-**A:** GitHub no longer allows password authentication for Git operations over HTTPS. A PAT is a generated string that replaces your password. Create one at https://github.com/settings/tokens. Give it `repo` scope for full repository access. Treat it like a password — do not share it.
+**A:** GitHub no longer allows password authentication for Git operations over HTTPS. A PAT is a generated string that replaces your password. Create one at https://github.com/settings/tokens. Give it `repo` scope for full repository access. Treat it like a password - do not share it.
 
 ### Q: How do I store my credentials so I do not have to enter them every time?
 **A:**
 - **Windows:** `git config --global credential.helper manager` (stores securely in Windows Credential Manager)
 - **macOS:** `git config --global credential.helper osxkeychain` (stores securely in Keychain)
-- **Linux:** `git config --global credential.helper cache` (temporary — expires after 15 minutes by default) or use a keyring-based helper
+- **Linux:** `git config --global credential.helper cache` (temporary - expires after 15 minutes by default) or use a keyring-based helper
 
-Never use `credential.helper store` on shared or multi-user systems — it saves credentials in plaintext.
+Never use `credential.helper store` on shared or multi-user systems - it saves credentials in plaintext.
 
 ### Q: How do I set up two-factor authentication?
-**A:** Go to https://github.com/settings/security → "Enable two-factor authentication." GitHub supports authenticator apps (recommended), security keys, and SMS. After enabling 2FA, you will need recovery codes — save them somewhere safe.
+**A:** Go to https://github.com/settings/security → "Enable two-factor authentication." GitHub supports authenticator apps (recommended), security keys, and SMS. After enabling 2FA, you will need recovery codes - save them somewhere safe.
 
 ### Q: My organization uses SSO (Single Sign-On). Does that affect anything?
 **A:** Yes. After authenticating with SSO, you may need to authorize your SSH key or PAT for that organization. Go to https://github.com/settings/tokens → find your token → click "Configure SSO" → authorize for your org.
@@ -220,17 +220,17 @@ Never use `credential.helper store` on shared or multi-user systems — it saves
 
 ### Q: What are the main sections of a GitHub repository page?
 **A:** Every repository has these tabs:
-- **Code** — File tree, README, branch selector
-- **Issues** — Bug reports, feature requests, discussions
-- **Pull Requests** — Proposed changes waiting for review
-- **Actions** — Automated workflows (CI/CD)
-- **Projects** — Project boards for organizing work
-- **Settings** — Repository configuration (owner/admin only)
+- **Code** - File tree, README, branch selector
+- **Issues** - Bug reports, feature requests, discussions
+- **Pull Requests** - Proposed changes waiting for review
+- **Actions** - Automated workflows (CI/CD)
+- **Projects** - Project boards for organizing work
+- **Settings** - Repository configuration (owner/admin only)
 
 Navigate between tabs using the `D` key to find the "Repository navigation" landmark, then arrow through the tabs.
 
 ### Q: How do I quickly find a file in a repository?
-**A:** Press `T` on any repository page to open the file finder. Start typing the filename — results filter as you type. Press `Enter` to open the file. This works with your screen reader in Browse Mode.
+**A:** Press `T` on any repository page to open the file finder. Start typing the filename - results filter as you type. Press `Enter` to open the file. This works with your screen reader in Browse Mode.
 
 ### Q: How do I read a file on GitHub?
 **A:** Navigate to the file in the Code tab and click (or press Enter) on its name. The file opens in a rendered view (for Markdown) or a code view (for code files). Use `H` to navigate headings in Markdown files.
@@ -240,11 +240,11 @@ Navigate between tabs using the `D` key to find the "Repository navigation" land
 
 ### Q: What are GitHub keyboard shortcuts?
 **A:** GitHub has built-in keyboard shortcuts. Press `?` on any GitHub page to see the full list. Key shortcuts:
-- `G` then `I` — Go to Issues
-- `G` then `P` — Go to Pull Requests
-- `T` — Open file finder
-- `.` — Open the repository in github.dev (VS Code in your browser)
-- `/` — Focus the search bar
+- `G` then `I` - Go to Issues
+- `G` then `P` - Go to Pull Requests
+- `T` - Open file finder
+- `.` - Open the repository in github.dev (VS Code in your browser)
+- `/` - Focus the search bar
 
 Full reference: [Appendix B (Screen Reader Cheat Sheet)](docs/appendix-b-screen-reader-cheatsheet.md)
 
@@ -253,9 +253,9 @@ Full reference: [Appendix B (Screen Reader Cheat Sheet)](docs/appendix-b-screen-
 
 ### Q: How do I use GitHub search effectively?
 **A:** Use the search bar (`/` to focus it) with qualifiers:
-- `is:issue is:open label:bug` — Find open bug issues
-- `is:pr is:open review-requested:@me` — Find PRs awaiting your review
-- `language:python stars:>100` — Find popular Python repositories
+- `is:issue is:open label:bug` - Find open bug issues
+- `is:pr is:open review-requested:@me` - Find PRs awaiting your review
+- `language:python stars:>100` - Find popular Python repositories
 
 Full reference: [Appendix J (Advanced Search)](docs/appendix-j-advanced-search.md)
 
@@ -266,7 +266,7 @@ Full reference: [Appendix J (Advanced Search)](docs/appendix-j-advanced-search.m
 ### Q: What is the difference between an issue and a pull request?
 **A:**
 - **Issue** = A problem or request (e.g., "Fix login bug" or "Add dark mode")
-- **Pull request** = Your solution — the actual changed code or documentation that fixes the issue
+- **Pull request** = Your solution - the actual changed code or documentation that fixes the issue
 - An issue describes what needs to happen. A PR makes it happen.
 - See [Chapter 4](docs/04-working-with-issues.md) for issues and [Chapter 5](docs/05-working-with-pull-requests.md) for PRs.
 
@@ -278,11 +278,11 @@ Full reference: [Appendix J (Advanced Search)](docs/appendix-j-advanced-search.m
 
 ### Q: How do I file a good issue?
 **A:** A good issue includes:
-1. **Clear title** — Describe the problem, not the solution ("Screen reader skips navigation landmark" not "Fix thing")
-2. **Steps to reproduce** — What did you do? What happened? What did you expect?
-3. **Environment** — Your operating system, browser, screen reader, and versions
-4. **Screenshots or recordings** — If possible and relevant
-5. **Labels** — Apply the most relevant label (bug, enhancement, accessibility, etc.)
+1. **Clear title** - Describe the problem, not the solution ("Screen reader skips navigation landmark" not "Fix thing")
+2. **Steps to reproduce** - What did you do? What happened? What did you expect?
+3. **Environment** - Your operating system, browser, screen reader, and versions
+4. **Screenshots or recordings** - If possible and relevant
+5. **Labels** - Apply the most relevant label (bug, enhancement, accessibility, etc.)
 
 ### Q: What is a "good first issue"?
 **A:** A label that maintainers add to issues that are suitable for first-time contributors. These issues are typically well-defined, small in scope, and have clear instructions. Filter for them: Issues tab → filter by label → `good first issue`.
@@ -317,9 +317,9 @@ When the PR is merged, the issue closes automatically.
 
 ### Q: What are the three tabs of a pull request?
 **A:**
-1. **Conversation** — Title, description, comments, timeline, status checks
-2. **Commits** — Individual commits in the PR, with author and message
-3. **Files Changed** — The diff showing every line added, modified, or removed
+1. **Conversation** - Title, description, comments, timeline, status checks
+2. **Commits** - Individual commits in the PR, with author and message
+3. **Files Changed** - The diff showing every line added, modified, or removed
 
 Navigate between tabs using your screen reader's heading navigation or landmark navigation.
 
@@ -364,7 +364,7 @@ Navigate between tabs using your screen reader's heading navigation or landmark 
 ## Merge Conflicts
 
 ### Q: What is a merge conflict?
-**A:** A merge conflict happens when two people edit the same lines of the same file on different branches. Git cannot decide which version to keep, so it asks you to choose. It is not an error — it is a normal part of collaboration.
+**A:** A merge conflict happens when two people edit the same lines of the same file on different branches. Git cannot decide which version to keep, so it asks you to choose. It is not an error - it is a normal part of collaboration.
 
 ### Q: How do I recognize a merge conflict?
 **A:** Git marks the conflicting sections with these markers:
@@ -422,7 +422,7 @@ After resolving: `git add [filename]` → `git commit -m "Resolved merge conflic
 ### Q: How do I delete a branch after my PR is merged?
 **A:** 
 - **On GitHub:** After merging, GitHub shows a "Delete branch" button on the PR page
-- **Locally:** `git branch -d branch-name` (safe delete — only works if merged) or `git branch -D branch-name` (force delete)
+- **Locally:** `git branch -d branch-name` (safe delete - only works if merged) or `git branch -D branch-name` (force delete)
 
 ---
 
@@ -527,7 +527,7 @@ See [Chapter 9 (Notifications)](docs/09-notifications.md).
 **A:** VS Code has the best built-in accessibility support of any mainstream code editor: dedicated screen reader mode, Accessible Help dialog, Accessible View, Accessible Diff Viewer, and audio cues for editor events. It also has first-party GitHub and Copilot integration.
 
 ### Q: What is github.dev?
-**A:** VS Code running in your browser — no installation needed. Press `.` on any GitHub repository to open it in github.dev. The keyboard shortcuts and screen reader mode are identical to desktop VS Code. github.dev cannot run a terminal, Copilot agents, or local extensions — that is what desktop VS Code adds.
+**A:** VS Code running in your browser - no installation needed. Press `.` on any GitHub repository to open it in github.dev. The keyboard shortcuts and screen reader mode are identical to desktop VS Code. github.dev cannot run a terminal, Copilot agents, or local extensions - that is what desktop VS Code adds.
 
 ### Q: How do I enable screen reader mode in VS Code?
 **A:** VS Code detects NVDA and JAWS automatically. If it does not, press `Shift+Alt+F1` to manually enable screen reader mode. Verify: `Ctrl+Shift+P` → type "accessibility" → look for "Toggle Screen Reader Accessibility Mode" with a checkmark.
@@ -536,8 +536,8 @@ See [Chapter 9 (Notifications)](docs/09-notifications.md).
 **A:**
 | Shortcut | Action |
 |----------|--------|
-| `Ctrl+Shift+P` | Command Palette — search for any command |
-| `Ctrl+P` | Quick Open — search for any file |
+| `Ctrl+Shift+P` | Command Palette - search for any command |
+| `Ctrl+P` | Quick Open - search for any file |
 | `Ctrl+Shift+E` | Explorer sidebar (file tree) |
 | `Ctrl+Shift+G` | Source Control panel |
 | `Ctrl+Shift+I` | Open Copilot Chat |
@@ -554,11 +554,11 @@ Full reference: [Appendix M (VS Code Accessibility Reference)](docs/appendix-m-v
 
 ### Q: How do I navigate the VS Code sidebar with a screen reader?
 **A:** The sidebar has five main views, each with a keyboard shortcut:
-- `Ctrl+Shift+E` — Explorer (files)
-- `Ctrl+Shift+F` — Search
-- `Ctrl+Shift+G` — Source Control
-- `Ctrl+Shift+D` — Debug
-- `Ctrl+Shift+X` — Extensions
+- `Ctrl+Shift+E` - Explorer (files)
+- `Ctrl+Shift+F` - Search
+- `Ctrl+Shift+G` - Source Control
+- `Ctrl+Shift+D` - Debug
+- `Ctrl+Shift+X` - Extensions
 
 Within each view, use `Tab`, `Arrow keys`, and `Enter` to navigate.
 
@@ -592,9 +592,9 @@ Within each view, use `Tab`, `Arrow keys`, and `Enter` to navigate.
 
 ### Q: What is the Source Control panel telling me?
 **A:** The Source Control panel (`Ctrl+Shift+G`) shows:
-- **Changes** — Files you have modified but not staged
-- **Staged Changes** — Files ready to be committed
-- **Merge Changes** — Files with merge conflicts (if any)
+- **Changes** - Files you have modified but not staged
+- **Staged Changes** - Files ready to be committed
+- **Merge Changes** - Files with merge conflicts (if any)
 - The commit message input box
 - Buttons for Commit, Sync, and more
 
@@ -607,8 +607,8 @@ Within each view, use `Tab`, `Arrow keys`, and `Enter` to navigate.
 
 ### Q: What is GitHub Copilot?
 **A:** An AI-powered coding assistant that runs inside VS Code. It offers two main features:
-1. **Inline suggestions** — Copilot predicts what you will type next and offers completions. Press `Tab` to accept.
-2. **Copilot Chat** — A conversational interface (`Ctrl+Shift+I`) where you can ask questions, get explanations, and generate content.
+1. **Inline suggestions** - Copilot predicts what you will type next and offers completions. Press `Tab` to accept.
+2. **Copilot Chat** - A conversational interface (`Ctrl+Shift+I`) where you can ask questions, get explanations, and generate content.
 
 See [Chapter 13 (GitHub Copilot)](docs/13-github-copilot.md).
 
@@ -629,17 +629,17 @@ See [Chapter 13 (GitHub Copilot)](docs/13-github-copilot.md).
 
 ### Q: What are chat participants?
 **A:** Prefixes like `@workspace`, `@vscode`, `@terminal` that tell Copilot to focus on a specific context:
-- `@workspace` — Ask about your entire project
-- `@vscode` — Ask about VS Code settings and commands
-- `@terminal` — Ask about terminal commands
-- Agent names like `@daily-briefing` — Use a specific Agent Forge agent
+- `@workspace` - Ask about your entire project
+- `@vscode` - Ask about VS Code settings and commands
+- `@terminal` - Ask about terminal commands
+- Agent names like `@daily-briefing` - Use a specific Agent Forge agent
 
 ### Q: What are slash commands in Copilot Chat?
 **A:** Commands starting with `/` that trigger specific behaviors:
-- `/explain` — Explain the selected code
-- `/fix` — Suggest a fix for the selected code
-- `/tests` — Generate tests
-- `/doc` — Generate documentation
+- `/explain` - Explain the selected code
+- `/fix` - Suggest a fix for the selected code
+- `/tests` - Generate tests
+- `/doc` - Generate documentation
 - Custom commands from Agent Forge (28 available)
 
 Full reference: [Appendix W (GitHub Copilot Reference)](docs/appendix-w-github-copilot-reference.md)
@@ -672,7 +672,7 @@ Full reference: [Appendix W (GitHub Copilot Reference)](docs/appendix-w-github-c
 **A:** No separate installation. Agents are defined as `.agent.md` files in your repository's `.github/agents/` folder. When you fork `agent-forge`, the agents come with it. You need GitHub Copilot (paid subscription) for agents to function.
 
 ### Q: Can I use agents without understanding GitHub first?
-**A:** The agents automate skills you learn in the workshop. Using them without understanding what they do is like using a calculator without understanding math — you cannot tell when it is wrong. That is why Day 1 comes first.
+**A:** The agents automate skills you learn in the workshop. Using them without understanding what they do is like using a calculator without understanding math - you cannot tell when it is wrong. That is why Day 1 comes first.
 
 ### Q: How do I personalize agents for my own repositories?
 **A:** Copy `.github/agents/preferences.example.md` to `.github/agents/preferences.md` and edit it with your GitHub username, preferred repositories, and output format preferences.
@@ -697,7 +697,7 @@ Full reference: [Appendix W (GitHub Copilot Reference)](docs/appendix-w-github-c
 See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) → "Template not showing in GitHub" for full diagnostics.
 
 ### Q: What is YAML and why is it used for templates?
-**A:** YAML is a simple format for writing structured data — easier to read than JSON or XML. GitHub uses it for issue form templates because it is human-readable and supports validation. You do not need to be an expert — [Chapter 15](docs/15-issue-templates.md) teaches you everything you need.
+**A:** YAML is a simple format for writing structured data - easier to read than JSON or XML. GitHub uses it for issue form templates because it is human-readable and supports validation. You do not need to be an expert - [Chapter 15](docs/15-issue-templates.md) teaches you everything you need.
 
 ### Q: Can I use the @template-builder agent to create templates?
 **A:** Yes. The `@template-builder` agent in Copilot Chat walks you through creating templates interactively. It asks questions and generates the YAML for you. See [Chapter 16 (Agent Forge)](docs/16-agent-forge.md).
@@ -728,7 +728,7 @@ See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) → "Template not showing in GitHub
 Example: "The `alt` attribute on this image is empty. Screen readers will skip it entirely, which means blind users miss the chart. A description like 'Bar chart showing monthly downloads' would help."
 
 ### Q: What does "LGTM" mean?
-**A:** "Looks Good To Me" — a common shorthand for approval. However, a more descriptive comment explaining what you checked is more helpful, especially for the PR author's learning.
+**A:** "Looks Good To Me" - a common shorthand for approval. However, a more descriptive comment explaining what you checked is more helpful, especially for the PR author's learning.
 
 ### Q: What is the difference between "Comment," "Approve," and "Request Changes"?
 **A:**
@@ -745,8 +745,8 @@ Example: "The `alt` attribute on this image is empty. Screen readers will skip i
 
 ### Q: What are the challenges?
 **A:** Two types:
-- **12 individual challenges** — Progressive tasks you complete on your own (find broken links, fix headings, add alt text, etc.)
-- **7 group challenges** — Collaborative exercises requiring coordination with other participants
+- **12 individual challenges** - Progressive tasks you complete on your own (find broken links, fix headings, add alt text, etc.)
+- **7 group challenges** - Collaborative exercises requiring coordination with other participants
 
 Details in `learning-room/docs/CHALLENGES.md` and `learning-room/docs/GROUP_CHALLENGES.md`.
 
@@ -761,13 +761,13 @@ Details in `learning-room/docs/CHALLENGES.md` and `learning-room/docs/GROUP_CHAL
 ## Workshop Logistics
 
 ### Q: What if I fall behind the group?
-**A:** This is completely normal. Each chapter is self-contained — you can continue at your own pace. The facilitator will provide catch-up guidance during breaks. The GitHub Skills modules (Day 1) are yours permanently — Mona is always waiting for you.
+**A:** This is completely normal. Each chapter is self-contained - you can continue at your own pace. The facilitator will provide catch-up guidance during breaks. The GitHub Skills modules (Day 1) are yours permanently - Mona is always waiting for you.
 
 ### Q: Can I take breaks?
 **A:** Yes. Screen reader listening is cognitively demanding work. The schedule includes regular breaks. Take additional breaks whenever you need them.
 
 ### Q: Do I need to attend both days?
-**A:** Day 1 is self-contained — you can use GitHub confidently after completing it alone. Day 2 builds on Day 1 and requires its skills. You cannot meaningfully attend Day 2 without Day 1.
+**A:** Day 1 is self-contained - you can use GitHub confidently after completing it alone. Day 2 builds on Day 1 and requires its skills. You cannot meaningfully attend Day 2 without Day 1.
 
 ### Q: Can I work ahead?
 **A:** Yes. The chapters are designed to be read sequentially, but nothing stops you from reading ahead. Just be aware that some Day 2 exercises depend on having completed Day 1 activities.
@@ -776,7 +776,7 @@ Details in `learning-room/docs/CHALLENGES.md` and `learning-room/docs/GROUP_CHAL
 **A:** Yes. All materials are in the repository and can be read at any time. The GitHub Skills modules are available indefinitely. The only thing you miss is live interaction and facilitated group exercises.
 
 ### Q: What if I have accessibility needs not covered by the workshop setup?
-**A:** Contact the facilitator. This workshop is designed for flexibility — if you need a specific accommodation (higher contrast, different font size, alternative input method, longer break time), ask.
+**A:** Contact the facilitator. This workshop is designed for flexibility - if you need a specific accommodation (higher contrast, different font size, alternative input method, longer break time), ask.
 
 ---
 
@@ -786,7 +786,7 @@ Details in `learning-room/docs/CHALLENGES.md` and `learning-room/docs/GROUP_CHAL
 **A:** Yes. See [CONTRIBUTING.md](CONTRIBUTING.md) for how to submit improvements, suggest new topics, or fix issues.
 
 ### Q: I want to share this guide with my team. Can I?
-**A:** Yes. The curriculum is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — you are free to share and adapt with attribution required.
+**A:** Yes. The curriculum is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) - you are free to share and adapt with attribution required.
 
 ### Q: Can I modify the guide for my organization?
 **A:** Yes. Fork this repository and customize it for your needs. Attribution to the original is required under CC BY 4.0.
@@ -804,13 +804,13 @@ Then rebuild the HTML: `npm run build:html`
 
 ### Q: Where can I continue learning after this workshop?
 **A:**
-- Contribute to open-source accessibility projects — see [Appendix T (Contributing to Open Source)](docs/appendix-t-contributing-to-open-source.md)
+- Contribute to open-source accessibility projects - see [Appendix T (Contributing to Open Source)](docs/appendix-t-contributing-to-open-source.md)
 - Explore [GitHub Skills](https://skills.github.com/) for more guided modules
 - Browse the [GitHub Accessibility Discussions](https://github.com/orgs/community/discussions/categories/accessibility)
 - Read our [Resources appendix](docs/appendix-u-resources.md) for comprehensive links
 
 ### Q: How do I download all the workshop materials for offline reading?
-**A:** See [Appendix Y (Accessing Workshop Materials)](docs/appendix-y-accessing-workshop-materials.md) for complete instructions — clone via Git, download as ZIP, or read individual files on GitHub.com.
+**A:** See [Appendix Y (Accessing Workshop Materials)](docs/appendix-y-accessing-workshop-materials.md) for complete instructions - clone via Git, download as ZIP, or read individual files on GitHub.com.
 
 ---
 
@@ -838,19 +838,19 @@ See [Chapter 1](docs/01-understanding-github-web-structure.md) for detailed expl
 **A:** A snapshot of your changes at a point in time. Each commit has a message describing what changed and why. Think of it as a save point with a note.
 
 ### Q: What is `main` (or `master`)?
-**A:** The default branch of a repository — the official, current version of the project. New branches are created from `main`, and finished work is merged back into `main`. Older repositories may use `master` instead.
+**A:** The default branch of a repository - the official, current version of the project. New branches are created from `main`, and finished work is merged back into `main`. Older repositories may use `master` instead.
 
 ### Q: What is a diff?
 **A:** A comparison showing what changed between two versions of a file. Added lines are marked with `+` (green), removed lines with `-` (red), and unchanged lines provide context. Screen readers announce additions and deletions.
 
 ### Q: What is CI/CD?
-**A:** **Continuous Integration / Continuous Deployment** — automated systems that run tests, build code, and deploy software when you push changes. On GitHub, this is done through GitHub Actions. See [Appendix Q (GitHub Actions)](docs/appendix-q-github-actions-workflows.md).
+**A:** **Continuous Integration / Continuous Deployment** - automated systems that run tests, build code, and deploy software when you push changes. On GitHub, this is done through GitHub Actions. See [Appendix Q (GitHub Actions)](docs/appendix-q-github-actions-workflows.md).
 
 ### Q: What is WCAG?
-**A:** **Web Content Accessibility Guidelines** — the international standard for web accessibility. WCAG 2.2 defines criteria in three levels: A (minimum), AA (recommended), and AAA (highest). See [Appendix C (Accessibility Standards Reference)](docs/appendix-c-accessibility-standards.md).
+**A:** **Web Content Accessibility Guidelines** - the international standard for web accessibility. WCAG 2.2 defines criteria in three levels: A (minimum), AA (recommended), and AAA (highest). See [Appendix C (Accessibility Standards Reference)](docs/appendix-c-accessibility-standards.md).
 
 ### Q: What is ARIA?
-**A:** **Accessible Rich Internet Applications** — A set of HTML attributes that add accessibility information to web elements. For example, `aria-label` provides a text description for screen readers, and `role` identifies the purpose of an element (button, navigation, main content, etc.).
+**A:** **Accessible Rich Internet Applications** - A set of HTML attributes that add accessibility information to web elements. For example, `aria-label` provides a text description for screen readers, and `role` identifies the purpose of an element (button, navigation, main content, etc.).
 
 ---
 
@@ -858,13 +858,13 @@ See [Chapter 1](docs/01-understanding-github-web-structure.md) for detailed expl
 
 This FAQ does not cover your question? Try these resources in order:
 
-1. [**QUICK_REFERENCE.md**](QUICK_REFERENCE.md) — Commands, keyboard shortcuts, file locations
-2. [**TROUBLESHOOTING.md**](TROUBLESHOOTING.md) — Common problems and step-by-step solutions
-3. [**Appendix A (Glossary)**](docs/appendix-a-glossary.md) — Term definitions
-4. [**Appendix B (Screen Reader Cheat Sheet)**](docs/appendix-b-screen-reader-cheatsheet.md) — NVDA, JAWS, VoiceOver keyboard commands
-5. [**Appendix U (Resources)**](docs/appendix-u-resources.md) — External documentation and links
-6. **GitHub Issues** — Search existing issues or [open a new one](../../issues)
-7. [**FACILITATOR.md**](FACILITATOR.md) — If you are leading a workshop
+1. [**QUICK_REFERENCE.md**](QUICK_REFERENCE.md) - Commands, keyboard shortcuts, file locations
+2. [**TROUBLESHOOTING.md**](TROUBLESHOOTING.md) - Common problems and step-by-step solutions
+3. [**Appendix A (Glossary)**](docs/appendix-a-glossary.md) - Term definitions
+4. [**Appendix B (Screen Reader Cheat Sheet)**](docs/appendix-b-screen-reader-cheatsheet.md) - NVDA, JAWS, VoiceOver keyboard commands
+5. [**Appendix U (Resources)**](docs/appendix-u-resources.md) - External documentation and links
+6. **GitHub Issues** - Search existing issues or [open a new one](../../issues)
+7. [**FACILITATOR.md**](FACILITATOR.md) - If you are leading a workshop
 
 ---
 

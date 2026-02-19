@@ -15,15 +15,15 @@ body:
       label: Type of Accessibility Issue
       description: Which category best describes what you encountered?
       options:
-        - Keyboard navigation — cannot reach or operate a control with keyboard only
-        - Screen reader — missing, incorrect, or confusing announcements
-        - Focus management — focus jumps unexpectedly or is lost
-        - Heading structure — headings skipped, missing, or in wrong order
-        - Link / button labels — unlabeled, ambiguous, or "click here"
-        - Color / contrast — text or controls are hard to distinguish
-        - Images — missing or inadequate alternative text
-        - Forms — fields not labeled or error messages not announced
-        - Time limits — content changes or disappears before I can act
+        - Keyboard navigation - cannot reach or operate a control with keyboard only
+        - Screen reader - missing, incorrect, or confusing announcements
+        - Focus management - focus jumps unexpectedly or is lost
+        - Heading structure - headings skipped, missing, or in wrong order
+        - Link / button labels - unlabeled, ambiguous, or "click here"
+        - Color / contrast - text or controls are hard to distinguish
+        - Images - missing or inadequate alternative text
+        - Forms - fields not labeled or error messages not announced
+        - Time limits - content changes or disappears before I can act
         - Other (describe below)
     validations:
       required: true
@@ -89,7 +89,7 @@ body:
     id: os
     attributes:
       label: Operating System and Version
-      description: For example — Windows 11, macOS Sonoma 14.3, iOS 17.2
+      description: For example - Windows 11, macOS Sonoma 14.3, iOS 17.2
       placeholder: Windows 11
     validations:
       required: true
@@ -98,7 +98,7 @@ body:
     id: wcag
     attributes:
       label: Relevant WCAG Success Criterion (if known)
-      description: If you know which WCAG criterion applies, select it. Leave blank if unsure — the team will assess.
+      description: If you know which WCAG criterion applies, select it. Leave blank if unsure - the team will assess.
       options:
         - "1.1.1 Non-text Content (alt text)"
         - "1.3.1 Info and Relationships (semantic structure)"
@@ -135,6 +135,6 @@ body:
     id: additional
     attributes:
       label: Additional Context
-      description: Anything else that might help — screenshots with alt text, screen reader log excerpts, or links to related issues.
+      description: Anything else that might help - screenshots with alt text, screen reader log excerpts, or links to related issues.
     validations:
       required: false

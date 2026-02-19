@@ -1,7 +1,7 @@
 # Merge Conflicts
 ## Understanding, Preventing, and Resolving Conflicts
 
-> Merge conflicts sound intimidating but are a normal, manageable part of collaborative development. This guide explains what conflicts are, how to read conflict markers, and how to resolve them — step by step.
+> Merge conflicts sound intimidating but are a normal, manageable part of collaborative development. This guide explains what conflicts are, how to read conflict markers, and how to resolve them - step by step.
 
 ---
 
@@ -9,7 +9,7 @@
 
 A merge conflict occurs when two people have both changed the **same part of the same file** in **different ways**, and Git cannot automatically decide which version is correct.
 
-Git can merge changes automatically when they touch different parts of a file. Conflicts only happen when two changes overlap — for example:
+Git can merge changes automatically when they touch different parts of a file. Conflicts only happen when two changes overlap - for example:
 - Person A changed line 12 to say "Submit form"
 - Person B changed line 12 to say "Send message"
 - Git asks: which one do you want to keep?
@@ -102,7 +102,7 @@ Open your PR as a draft while still working. Others can see what you're changing
 
 ## Advanced Prevention: Understanding Fast-Forward Merges
 
-When your branch is perfectly up to date with main and adds new commits on top, GitHub can do a "fast-forward" merge — main simply moves forward to your latest commit. No merge commit needed. No possibility of conflicts.
+When your branch is perfectly up to date with main and adds new commits on top, GitHub can do a "fast-forward" merge - main simply moves forward to your latest commit. No merge commit needed. No possibility of conflicts.
 
 **How to achieve this:** Rebase your branch on main right before merging:
 
@@ -148,7 +148,7 @@ Scroll to the bottom of the Conversation tab. The conflict message appears as a 
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 1. Press `D` to reach the bottom of the Conversation tab
 2. Navigate down with `H` or `↓` past the comment threads
@@ -158,7 +158,7 @@ Scroll to the bottom of the Conversation tab. The conflict message appears as a 
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 1. `VO+U` → Landmarks or `VO+Down` to move toward the bottom of the Conversation tab
 2. Quick Nav `H` or `VO+Cmd+H` past comment headings until you reach the conflict notice
@@ -168,7 +168,7 @@ Scroll to the bottom of the Conversation tab. The conflict message appears as a 
 
 ---
 
-## Conflict Markers — What They Mean
+## Conflict Markers - What They Mean
 
 When conflict markers appear in a file, your editor is showing you both versions of the conflicted content so you can choose. The format is always:
 
@@ -181,9 +181,9 @@ The content coming from the OTHER branch (or main)
 ```
 
 **Breakdown:**
-- `<<<<<<< HEAD` — the start of YOUR version (HEAD = "the branch you are currently on")
-- `=======` — the dividing line between the two versions
-- `>>>>>>> branch-name` — the end of the INCOMING version (from the branch being merged in)
+- `<<<<<<< HEAD` - the start of YOUR version (HEAD = "the branch you are currently on")
+- `=======` - the dividing line between the two versions
+- `>>>>>>> branch-name` - the end of the INCOMING version (from the branch being merged in)
 
 ### Example in a real file
 
@@ -219,7 +219,7 @@ GitHub has a built-in conflict editor that you can use without any local tools.
 
 1. Click **Resolve conflicts** on the PR Conversation tab
 2. GitHub opens a full-page text editor showing each conflicted file
-3. The conflict markers are highlighted — everything between `<<<<<<` and `=======` is your version; between `=======` and `>>>>>>>` is the incoming version
+3. The conflict markers are highlighted - everything between `<<<<<<` and `=======` is your version; between `=======` and `>>>>>>>` is the incoming version
 4. Edit the content directly: delete the lines you don’t want, including the three marker lines (`<<<`, `===`, `>>>`)
 5. When the file looks correct, click **Mark as resolved** (top-right of the file)
 6. If there are multiple conflicted files, a file list on the left lets you jump between them
@@ -228,17 +228,17 @@ GitHub has a built-in conflict editor that you can use without any local tools.
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 1. Activate the **Resolve conflicts** button from the PR Conversation tab
-2. GitHub opens the conflict editor — a full-page text editor
+2. GitHub opens the conflict editor - a full-page text editor
 3. Navigate between conflicted files using the file list (press `NVDA+F7` or `VO+U` to find the file navigation panel)
 4. Switch to Focus Mode (`NVDA+Space`) to enter the text editor
 5. Read the conflict markers line by line with `↓`:
    - `<<<<<<< HEAD` marks the start of your version
    - `=======` is the dividing line
    - `>>>>>>> branch-name` marks the end of the incoming version
-6. Edit to keep the desired content — delete the conflict marker lines and the version you don't want
+6. Edit to keep the desired content - delete the conflict marker lines and the version you don't want
 7. `Tab` to **Mark as resolved** button → `Enter`
 8. Repeat for all conflicted files
 9. `Tab` to **Commit merge** button → `Enter`
@@ -246,17 +246,17 @@ GitHub has a built-in conflict editor that you can use without any local tools.
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 1. Activate the **Resolve conflicts** button from the PR Conversation tab
-2. GitHub opens the conflict editor — a full-page text editor
+2. GitHub opens the conflict editor - a full-page text editor
 3. `VO+U` → navigate to the file navigation panel to switch between conflicted files
 4. `VO+Shift+Down` to interact with the text editor
 5. `VO+Down` to read the conflict markers line by line:
    - `<<<<<<< HEAD` marks the start of your version
    - `=======` is the dividing line
    - `>>>>>>> branch-name` marks the end of the incoming version
-6. Edit to keep the desired content — delete the conflict marker lines and the version you don't want
+6. Edit to keep the desired content - delete the conflict marker lines and the version you don't want
 7. `VO+Shift+Up` to stop interacting, then `Tab` to **Mark as resolved** → `VO+Space`
 8. Repeat for all conflicted files
 9. `Tab` to **Commit merge** → `VO+Space`
@@ -275,7 +275,7 @@ When the conflict editor opens, your screen reader will announce a text editor. 
 >  >  >  >  >  >  >  f  e  a  t  u  r  e  /  f  o  r  m - i  m  p  r  o  v  e  m  e  n  t  s
 ```
 
-*(Note: screen readers may spell out the `<` and `>` characters letter by letter — this is normal)*
+*(Note: screen readers may spell out the `<` and `>` characters letter by letter - this is normal)*
 
 ---
 
@@ -301,42 +301,42 @@ Incoming version
 <summary>Visual / mouse users</summary>
 
 When your cursor is on a conflict region, VS Code shows **CodeLens action links** above the conflict block in the editor:
-- **Accept Current Change** — keeps your version (HEAD)
-- **Accept Incoming Change** — keeps the branch version being merged
-- **Accept Both Changes** — keeps both (stacked one after the other)
-- **Compare Changes** — opens a side-by-side diff
+- **Accept Current Change** - keeps your version (HEAD)
+- **Accept Incoming Change** - keeps the branch version being merged
+- **Accept Both Changes** - keeps both (stacked one after the other)
+- **Compare Changes** - opens a side-by-side diff
 
 Click the link you want. The conflict markers disappear and your chosen content remains. Save the file with `Ctrl+S`.
 
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 1. Open the conflicted file
 2. Press `↓` to navigate to a conflict marker (`<<<<<<<`)
-3. The CodeLens links appear above — press `Tab` to reach them
+3. The CodeLens links appear above - press `Tab` to reach them
 4. Press `Enter` on your chosen action
 5. Save the file (`Ctrl+S`)
 6. Stage the resolved file: `Ctrl+Shift+G` → find the file → **Stage changes**
 7. Commit the merge
 
-**GitHub Copilot can help:** With the cursor in a conflict region, open Copilot Chat (`Ctrl+Shift+I`) and type: "Resolve this merge conflict — keep meaningful changes from both sides." Copilot will suggest a resolution that you can review and accept.
+**GitHub Copilot can help:** With the cursor in a conflict region, open Copilot Chat (`Ctrl+Shift+I`) and type: "Resolve this merge conflict - keep meaningful changes from both sides." Copilot will suggest a resolution that you can review and accept.
 
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 1. Open the conflicted file
 2. `VO+Down` or arrow keys to navigate to a conflict marker (`<<<<<<<`)
-3. The CodeLens links appear above — `Tab` to reach them
+3. The CodeLens links appear above - `Tab` to reach them
 4. `VO+Space` on your chosen action
 5. Save the file (`Cmd+S`)
 6. Stage the resolved file: `Cmd+Shift+G` → find the file → **Stage changes**
 7. Commit the merge
 
-**GitHub Copilot can help:** With the cursor in a conflict region, open Copilot Chat (`Cmd+Option+I`) and type: "Resolve this merge conflict — keep meaningful changes from both sides." Copilot will suggest a resolution that you can review and accept.
+**GitHub Copilot can help:** With the cursor in a conflict region, open Copilot Chat (`Cmd+Option+I`) and type: "Resolve this merge conflict - keep meaningful changes from both sides." Copilot will suggest a resolution that you can review and accept.
 
 </details>
 
@@ -344,10 +344,10 @@ Click the link you want. The conflict markers disappear and your chosen content 
 
 ## When You Feel Stuck
 
-### Ask for help — it's normal
+### Ask for help - it's normal
 
 If you are unsure which version to keep:
-1. Leave a comment on the PR: "I have a merge conflict in `filename.js` and I'm not sure which version to keep — could someone help me understand the intent of these two changes?"
+1. Leave a comment on the PR: "I have a merge conflict in `filename.js` and I'm not sure which version to keep - could someone help me understand the intent of these two changes?"
 2. Tag the PR author or a maintainer with `@username`
 
 ### Abandon and start fresh (nuclear option)
@@ -358,7 +358,7 @@ If a conflict is severe (the branch diverged a lot from main):
 3. Apply only your intended changes to the new branch
 4. Open a new PR
 
-This is legitimate — not a failure.
+This is legitimate - not a failure.
 
 ---
 
@@ -377,7 +377,7 @@ And `git status` will show:
 both modified: src/index.html
 ```
 
-These are normal outputs. The conflict markers are inserted into the file by Git — open the file and follow the steps above.
+These are normal outputs. The conflict markers are inserted into the file by Git - open the file and follow the steps above.
 
 ---
 
@@ -389,7 +389,7 @@ Before you start:
   □ I checked that others aren't editing the same files
 
 When you see a conflict:
-  □ Don't panic — conflicts are normal
+  □ Don't panic - conflicts are normal
   □ Read both versions (between <<< and ===, and between === and >>>)
   □ Decide: keep one, keep both, or combine intelligently
   □ Remove ALL three conflict marker lines (<<<, ===, >>>)
@@ -398,7 +398,7 @@ When you see a conflict:
 
 After resolving:
   □ Re-check that the PR description and issue link are still accurate
-  □ Comment on the PR: "Resolved merge conflict — kept both the aria-label and type attribute"
+  □ Comment on the PR: "Resolved merge conflict - kept both the aria-label and type attribute"
   □ Request re-review if reviewers already approved before the conflict was introduced
 ```
 
@@ -408,7 +408,7 @@ After resolving:
 
 **Time:** 2 minutes | **What you need:** Any text editor or just read below
 
-Read this merge conflict aloud. The goal is not to resolve it — just to understand what you're hearing:
+Read this merge conflict aloud. The goal is not to resolve it - just to understand what you're hearing:
 
 ```
 The button should have an
@@ -425,20 +425,20 @@ Answer these three questions:
 2. **What does the other branch say?** (The text between `=======` and `>>>>>>>`)
 3. **Which version would you keep, and why?**
 
-**You're done.** You just read a merge conflict. That's the entire skill — everything else is just choosing which lines to keep and deleting the three marker lines.
+**You're done.** You just read a merge conflict. That's the entire skill - everything else is just choosing which lines to keep and deleting the three marker lines.
 
 > **What success feels like:** Conflicts aren't mysterious anymore. They're just two versions side by side with markers telling you which is which. You already know how to pick the right one.
 
 ---
 
-> ### Day 2 Amplifier — Copilot Chat & Conflict Prevention
+> ### Day 2 Amplifier - Copilot Chat & Conflict Prevention
 >
-> **Resolve at least one conflict completely by hand before using any AI assistance.** You must be able to read `<<<<<<<`, `=======`, and `>>>>>>>` markers and understand what each version represents. An AI-suggested resolution you cannot independently verify is a liability — you are accepting a change you do not understand into a codebase other people depend on.
+> **Resolve at least one conflict completely by hand before using any AI assistance.** You must be able to read `<<<<<<<`, `=======`, and `>>>>>>>` markers and understand what each version represents. An AI-suggested resolution you cannot independently verify is a liability - you are accepting a change you do not understand into a codebase other people depend on.
 >
 > Once you have mastered manual conflict resolution:
-> - **In VS Code** — Copilot Chat (`Ctrl+Shift+I`) can explain a conflict in plain language — *"Person A renamed the button to 'Submit Form'; Person B renamed it to 'Send Message'. Which intent should take priority?"* — but you decide what survives
-> - **In your repo** — Agent Forge's `@pr-review` can identify high-risk overlapping changes before a conflict occurs, flagging when two contributors are editing the same file area and giving you time to coordinate before it escalates
-> - **In the cloud** — GitHub Agentic Workflows can detect stale PRs diverging from `main` and automatically notify contributors with a suggested rebase checklist — preventing the conflict before it is ever introduced
+> - **In VS Code** - Copilot Chat (`Ctrl+Shift+I`) can explain a conflict in plain language - *"Person A renamed the button to 'Submit Form'; Person B renamed it to 'Send Message'. Which intent should take priority?"* - but you decide what survives
+> - **In your repo** - Agent Forge's `@pr-review` can identify high-risk overlapping changes before a conflict occurs, flagging when two contributors are editing the same file area and giving you time to coordinate before it escalates
+> - **In the cloud** - GitHub Agentic Workflows can detect stale PRs diverging from `main` and automatically notify contributors with a suggested rebase checklist - preventing the conflict before it is ever introduced
 >
 > *Understanding conflict markers is not a stepping stone to letting AI handle conflicts. It is the skill that tells you when AI got it wrong.*
 

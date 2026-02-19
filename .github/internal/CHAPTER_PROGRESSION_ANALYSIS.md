@@ -4,7 +4,7 @@
 
 **Current structure IS properly progressive.** The 20 chapters (including new Learning Room guide) form a clear learning arc from absolute beginner (GitHub web) through intermediate (collaborative GitHub) to advanced (VS Code + AI/Agents). Chapter dependencies are logical. No reorganization needed.
 
-**New "The Learning Room" chapter (02a) fills a critical gap** — students now understand the shared environment before learning individual skills.
+**New "The Learning Room" chapter (02a) fills a critical gap** - students now understand the shared environment before learning individual skills.
 
 ---
 
@@ -146,7 +146,7 @@ IDE Integration: PR Extension
     └─ Dependency: 12 (git status visible in extension)
        Skills: Viewing PRs, reviewing in IDE, checking out branches
        Prerequisite for: Nothing (can use browser instead)
-       Amplifies: Chapter 05 (PRs) — same mechanics, IDE-local view
+       Amplifies: Chapter 05 (PRs) - same mechanics, IDE-local view
        Why here not earlier: Need IDE + git working first
 
 AI Assistance: Copilot Inline
@@ -183,7 +183,7 @@ Expert: Agentic Automation Synthesis
        Skills: Custom agents, slash commands, async cloud workflows, code review automation
        Prerequisite for: Nothing (advanced optional amplification)
        Why last: Shows how to automate everything learned in 14-17; complete synthesis chapter
-       Pedagogical arc: FINISH — "Agent Forge does not replace what you learn. It amplifies it."
+       Pedagogical arc: FINISH - "Agent Forge does not replace what you learn. It amplifies it."
        Quote from README: This is the final synthesis showing automation of all manual skills
 
 ---
@@ -192,25 +192,25 @@ Expert: Agentic Automation Synthesis
 
 ```
 A. Glossary
-   └─ Can be opened anytime — define any term, any time
+   └─ Can be opened anytime - define any term, any time
 
 B. Screen Reader Cheat Sheet
-   └─ Reference during exercises — keyboard shortcuts, elements list, modes
+   └─ Reference during exercises - keyboard shortcuts, elements list, modes
 
 C. Git Authentication
-   └─ Setup reference — SSH keys, PATs, credential managers
+   └─ Setup reference - SSH keys, PATs, credential managers
 
 D. GitHub Gists
-   └─ Optional feature — code snippets, sharing, embedding
+   └─ Optional feature - code snippets, sharing, embedding
 
 E. Advanced GitHub Features
-   └─ Post-workshop exploration — CLI, API, advanced settings, mobile
+   └─ Post-workshop exploration - CLI, API, advanced settings, mobile
 
 F. VS Code Accessibility Reference
-   └─ Technical deep dive — settings, audio cues, accessibility configurations
+   └─ Technical deep dive - settings, audio cues, accessibility configurations
 
 G. Resources
-   └─ Can be opened anytime — every link, tool, and reference from the event
+   └─ Can be opened anytime - every link, tool, and reference from the event
 ```
 ```
 
@@ -233,22 +233,22 @@ G. Resources
 
 ```
 A. Glossary
-   └─ Can be opened anytime — define any term, any time
+   └─ Can be opened anytime - define any term, any time
 
 B. Screen Reader Cheat Sheet
-   └─ Reference during exercises — keyboard shortcuts, elements list, modes
+   └─ Reference during exercises - keyboard shortcuts, elements list, modes
 
 C. Git Authentication
-   └─ Setup reference — SSH keys, PATs, credential managers
+   └─ Setup reference - SSH keys, PATs, credential managers
 
 D. GitHub Gists
-   └─ Optional feature — code snippets, sharing, embedding
+   └─ Optional feature - code snippets, sharing, embedding
 
 E. Advanced GitHub Features
-   └─ Post-workshop exploration — CLI, API, advanced settings, mobile
+   └─ Post-workshop exploration - CLI, API, advanced settings, mobile
 
 F. VS Code Accessibility Reference
-   └─ Technical deep dive — settings, audio cues, accessibility configurations
+   └─ Technical deep dive - settings, audio cues, accessibility configurations
 ```
 
 **Why Appendices Have No Dependencies:**
@@ -273,7 +273,7 @@ FOUNDATION (Understand the Tool)
     ↓
    ================================
    
-SKILL BUILDING (Hands-On Practice) — DAY 1
+SKILL BUILDING (Hands-On Practice) - DAY 1
    03 Navigate Repos
     ↓
    04 File Issues
@@ -295,7 +295,7 @@ TRANSITION (Tool Change)
     ↓
    ================================
    
-SKILL AMPLIFICATION (Same Skills, New Tool) — DAY 2
+SKILL AMPLIFICATION (Same Skills, New Tool) - DAY 2
    11 VS Code Setup
     ↓
    12 Git in VS Code
@@ -371,36 +371,36 @@ Optional post-workshop:
 ## Verification: Is This Truly Progressive?
 
 ### Criterion 1: Foundation Before Complexity
-- **PASS** — Chapters 00-02a establish context; chapters 03-05 teach basic mechanics
-- **PASS** — Chapters 06-09 assume all prior skills understood
-- **PASS** — Chapter 10 explicitly marks transition
+- **PASS** - Chapters 00-02a establish context; chapters 03-05 teach basic mechanics
+- **PASS** - Chapters 06-09 assume all prior skills understood
+- **PASS** - Chapter 10 explicitly marks transition
 
 ### Criterion 2: Prerequisites Met
-- **PASS** — 04 (issues) comes after 03 (navigation); can't manage issues without finding them
-- **PASS** — 05 (PRs) comes after 04 (issues); PRs reference issues
-- **PASS** — 06 (conflicts) comes after 05 (PRs); conflicts only happen in PR merges
-- **PASS** — 12 (git) comes after 11 (setup); git requires VS Code operational
-- **PASS** — 13 (PR extension) comes after 12 (git state); extension depends on git
-- **PASS** — 14 (Copilot) comes after 11 (setup); Copilot runs in VS Code
-- **PASS** — 15 (Code Review) comes after 14 (Copilot context) + 05,12,13 (foundational skills)
-- **PASS** — 17 (Agent Forge) comes after 14 (Copilot) + 15 (mastery of code review); automates what students have learned
-- **PASS** — Appendix F (GitHub Actions) is heavy infrastructure, appropriately moved to optional post-workshop reference
+- **PASS** - 04 (issues) comes after 03 (navigation); can't manage issues without finding them
+- **PASS** - 05 (PRs) comes after 04 (issues); PRs reference issues
+- **PASS** - 06 (conflicts) comes after 05 (PRs); conflicts only happen in PR merges
+- **PASS** - 12 (git) comes after 11 (setup); git requires VS Code operational
+- **PASS** - 13 (PR extension) comes after 12 (git state); extension depends on git
+- **PASS** - 14 (Copilot) comes after 11 (setup); Copilot runs in VS Code
+- **PASS** - 15 (Code Review) comes after 14 (Copilot context) + 05,12,13 (foundational skills)
+- **PASS** - 17 (Agent Forge) comes after 14 (Copilot) + 15 (mastery of code review); automates what students have learned
+- **PASS** - Appendix F (GitHub Actions) is heavy infrastructure, appropriately moved to optional post-workshop reference
 
 ### Criterion 3: No Jumps or Leaps
-- **PASS** — Adjacent chapters reinforce each other
-- **PASS** — Each chapter builds incrementally on prior knowledge
-- **PASS** — Cross-chapter references are backward (newer chapter references prior chapter), never forward
+- **PASS** - Adjacent chapters reinforce each other
+- **PASS** - Each chapter builds incrementally on prior knowledge
+- **PASS** - Cross-chapter references are backward (newer chapter references prior chapter), never forward
 
 ### Criterion 4: Day 1 → Day 2 Bridge
-- **PASS** — Chapter 10 explicitly marks the transition
-- **PASS** — Chapter 11 repeats Day 1 foundations in new tool (accessibility, keyboard nav, landmarks)
-- **PASS** — Chapters 12-15 show Day 1 skills (PR, git, review) amplified in VS Code
+- **PASS** - Chapter 10 explicitly marks the transition
+- **PASS** - Chapter 11 repeats Day 1 foundations in new tool (accessibility, keyboard nav, landmarks)
+- **PASS** - Chapters 12-15 show Day 1 skills (PR, git, review) amplified in VS Code
 
 ### Criterion 5: Soft Skills Appropriately Placed
-- **PASS** — Chapter 07 (culture) comes AFTER 03-06 (students have experience)
-- **PASS** — Chapter 08 (organization) comes AFTER 07 (assumes team coordination)
-- **PASS** — Chapter 14 (code review) comes BEFORE Chapter 16 (students learn manual skill first, then automation)
-- **PASS** — Chapter 16 (Agent Forge) is FINAL (student mastery of all prior skills gets automated and amplified)
+- **PASS** - Chapter 07 (culture) comes AFTER 03-06 (students have experience)
+- **PASS** - Chapter 08 (organization) comes AFTER 07 (assumes team coordination)
+- **PASS** - Chapter 14 (code review) comes BEFORE Chapter 16 (students learn manual skill first, then automation)
+- **PASS** - Chapter 16 (Agent Forge) is FINAL (student mastery of all prior skills gets automated and amplified)
 
 ---
 
@@ -414,15 +414,15 @@ Optional post-workshop:
 5. **Integrated PR sharing:** Day 1 agenda Block 5 now assumes students understand the Learning Room
 
 ### Updated Documents
-- [README.md](README.md) — Added 02a to chapter navigation
-- [docs/02-day1-agenda.md](docs/02-day1-agenda.md) — Added "Read This BEFORE Day 1" section pointing to 02a
-- [docs/03a-the-learning-room.md](docs/03a-the-learning-room.md) — New comprehensive guide
+- [README.md](README.md) - Added 02a to chapter navigation
+- [docs/02-day1-agenda.md](docs/02-day1-agenda.md) - Added "Read This BEFORE Day 1" section pointing to 02a
+- [docs/03a-the-learning-room.md](docs/03a-the-learning-room.md) - New comprehensive guide
 
 ---
 
 ## Final Recommendation
 
-### **Move GitHub Actions to Appendix E — Lighter Path for Intro Course**
+### **Move GitHub Actions to Appendix E - Lighter Path for Intro Course**
 
 **Why This Change Is Correct:**
 
@@ -430,13 +430,13 @@ GitHub Actions is infrastructure-heavy (YAML, triggers, CI/CD) and doesn't belon
 
 1. **Core chapters end at 17:** Agent Forge synthesis (final culminating chapter)
 2. **GitHub Actions moves to Appendix E:** Available as optional post-workshop reference for advanced practitioners
-3. **Resources stays as Appendix O:** Final appendix with links and tools (17 appendices A–Q, no M)
+3. **Resources stays as Appendix O:** Final appendix with links and tools (17 appendices A-Q, no M)
 
 **Benefits of This Reordering:**
 - **Lighter path for intro students**: No heavy infrastructure learning before they ship their first code
 - **Agent Forge becomes the natural finale**: Students master code review (Ch 15) → then see it automated (Ch 17)
 - **Smart optional learning**: GitHub Actions available for students who want deeper automation knowledge post-workshop
-- **Clear boundaries**: Main curriculum (00-17) vs. Advanced References (Appendices A–Q)
+- **Clear boundaries**: Main curriculum (00-17) vs. Advanced References (Appendices A-Q)
 - **Security coverage**: New Appendix N covers Dependabot, secret scanning, code scanning, and private vulnerability reporting
 - **GFM authoring reference**: New Appendix M covers alert blocks, Mermaid diagrams, math, and screen reader guidance
 - **Branch protection guide**: New Appendix O helps contributors diagnose why PRs are blocked
@@ -448,13 +448,13 @@ GitHub Actions is infrastructure-heavy (YAML, triggers, CI/CD) and doesn't belon
 - Appendices serve learners at their own pace post-workshop
 
 **Files Updated:**
-- `README.md` — Chapter count now 17 (vs 18); GitHub Actions moved to Appendix F
-- `CHAPTER_PROGRESSION_ANALYSIS.md` — Complete dependency re-verification
-- `docs/` — Files renamed to reflect new chapter/appendix structure
+- `README.md` - Chapter count now 17 (vs 18); GitHub Actions moved to Appendix F
+- `CHAPTER_PROGRESSION_ANALYSIS.md` - Complete dependency re-verification
+- `docs/` - Files renamed to reflect new chapter/appendix structure
 
 ### Suggested Optional Enhancements
 
-1. **Add a "Prerequisites" section to each chapter** — at the top, list which chapters should be read first
+1. **Add a "Prerequisites" section to each chapter** - at the top, list which chapters should be read first
    
    Example:
    ```
@@ -464,11 +464,11 @@ GitHub Actions is infrastructure-heavy (YAML, triggers, CI/CD) and doesn't belon
    **Recommended before:** Chapter 05 (pull requests)
    ```
 
-2. **Add forward references in chapters** — hint at what's coming next
+2. **Add forward references in chapters** - hint at what's coming next
    
    Example:
    ```
-   Next chapter: Chapter 05 (Pull Requests) — you'll create PRs to resolve your issues
+   Next chapter: Chapter 05 (Pull Requests) - you'll create PRs to resolve your issues
    ```
 
 3. **Add difficulty badges to the chapter list in README**
@@ -479,7 +479,7 @@ GitHub Actions is infrastructure-heavy (YAML, triggers, CI/CD) and doesn't belon
    | 04 | Working with Issues |☆☆☆ Beginner |
    | 05 | Working with Pull Requests |☆☆ Intermediate |
 
-These are "nice to have" — not necessary, since the structure is already progressive.
+These are "nice to have" - not necessary, since the structure is already progressive.
 
 ---
 
@@ -519,4 +519,4 @@ These are "nice to have" — not necessary, since the structure is already progr
 
 ---
 
-*Chapter Structure: 18 core chapters (00-17) plus 16 appendices (A–Q, no M). GitHub Actions moved to appendix for lighter intro course path. New appendices N, O, P added February 2026. All dependencies verified. Ship with confidence!*
+*Chapter Structure: 18 core chapters (00-17) plus 16 appendices (A-Q, no M). GitHub Actions moved to appendix for lighter intro course path. New appendices N, O, P added February 2026. All dependencies verified. Ship with confidence!*

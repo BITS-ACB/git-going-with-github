@@ -41,7 +41,7 @@ Go to the **Issues** tab, then click the **Labels** link/button (it’s in the f
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 1. Navigate to the Issues tab
 2. Press `K` to find the "Labels" link (near the "Milestones" link in the toolbar)
@@ -50,7 +50,7 @@ Go to the **Issues** tab, then click the **Labels** link/button (it’s in the f
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 1. Navigate to the Issues tab
 2. Quick Nav `K` to find the "Labels" link (near the "Milestones" link in the toolbar)
@@ -65,29 +65,29 @@ From an open issue or PR:
 <details>
 <summary>Visual / mouse users</summary>
 
-In the right sidebar, click the gear icon () next to **Labels**. A dropdown opens showing all labels. Click a label to apply it (a checkmark appears). Click outside to close — the label appears immediately on the issue.
+In the right sidebar, click the gear icon () next to **Labels**. A dropdown opens showing all labels. Click a label to apply it (a checkmark appears). Click outside to close - the label appears immediately on the issue.
 
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 1. Navigate to the sidebar → press `H` or `3` to find the "Labels" heading
 2. Activate the Labels gear/edit button (`B` until you hear "Labels" button → `Enter`)
 3. Dropdown opens showing all available labels: use `↑/↓` to navigate
 4. `Enter` to select or deselect a label; type to filter (e.g., type "access" to find "accessibility")
-5. Press `Escape` to close — selections save automatically
+5. Press `Escape` to close - selections save automatically
 
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 1. `VO+U` → Headings or Quick Nav `H` to find the "Labels" heading in the sidebar
 2. Quick Nav `B` to find the "Labels" gear/edit button → `VO+Space`
 3. Dropdown opens: `VO+Down` or arrow keys to navigate labels
 4. `VO+Space` to select or deselect; type to filter
-5. `Escape` to close — selections save automatically
+5. `Escape` to close - selections save automatically
 
 </details>
 
@@ -102,24 +102,24 @@ In the right sidebar, click the gear icon () next to **Labels**. A dropdown open
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
-**Option A — Filter bar:** Press `F` → type `is:open label:accessibility` → `Enter`
+**Option A - Filter bar:** Press `F` → type `is:open label:accessibility` → `Enter`
 
-**Option B — Filter button:** `B` → "Label" dropdown button → `Enter` → `↑/↓` to choose → `Enter` → `Esc`
+**Option B - Filter button:** `B` → "Label" dropdown button → `Enter` → `↑/↓` to choose → `Enter` → `Esc`
 
-**Option C — Combining labels:** `is:open label:accessibility label:"good first issue"`
+**Option C - Combining labels:** `is:open label:accessibility label:"good first issue"`
 
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
-**Option A — Filter bar:** Quick Nav `F` to find the search bar → `VO+Shift+Down` to interact → type `is:open label:accessibility` → `Return`
+**Option A - Filter bar:** Quick Nav `F` to find the search bar → `VO+Shift+Down` to interact → type `is:open label:accessibility` → `Return`
 
-**Option B — Filter button:** Quick Nav `B` → "Label" dropdown button → `VO+Space` → arrow keys to choose → `VO+Space` to select → `Esc`
+**Option B - Filter button:** Quick Nav `B` → "Label" dropdown button → `VO+Space` → arrow keys to choose → `VO+Space` to select → `Esc`
 
-**Option C — Combining labels:** `is:open label:accessibility label:"good first issue"`
+**Option C - Combining labels:** `is:open label:accessibility label:"good first issue"`
 
 </details>
 
@@ -131,7 +131,7 @@ If you have write access:
 3. Fill in: Label name (F for form field), Color (use the color picker or hex code), Description
 4. Tab to "Create label" button → Enter
 
-**Accessibility note for color:** Labels have color, but they also have a text name and description — the color is supplementary information. Screen readers announce the label name, not the color, so labels are fully accessible.
+**Accessibility note for color:** Labels have color, but they also have a text name and description - the color is supplementary information. Screen readers announce the label name, not the color, so labels are fully accessible.
 
 ---
 
@@ -166,12 +166,12 @@ Each milestone is announced as a heading + progress information:
 <details>
 <summary>Visual / mouse users</summary>
 
-From the open issue, find the **Milestone** section in the right sidebar and click the gear icon. A dropdown lists available milestones — click one to assign it.
+From the open issue, find the **Milestone** section in the right sidebar and click the gear icon. A dropdown lists available milestones - click one to assign it.
 
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 1. Navigate to the sidebar → "Milestone" heading (`H` or `3`)
 2. Activate the Milestone gear button
@@ -181,7 +181,7 @@ From the open issue, find the **Milestone** section in the right sidebar and cli
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 1. Quick Nav `H` or `VO+Cmd+H` to find the "Milestone" heading in the sidebar
 2. Quick Nav `B` to find and activate the Milestone gear button (`VO+Space`)
@@ -203,7 +203,7 @@ Requires write access:
 - Or use arrow keys to adjust month/day/year if spin buttons are provided
 - Or press `Space` or `Enter` to open a calendar widget (if your screen reader supports it) and arrow through dates
 
-Screen readers handle date pickers inconsistently — typing the date is most reliable across browsers.
+Screen readers handle date pickers inconsistently - typing the date is most reliable across browsers.
 
 ---
 
@@ -220,14 +220,14 @@ Cross-references are links between issues, PRs, and commits. GitHub automaticall
 | `a1b2c3d` | Links to a specific commit by its SHA hash |
 | `@username` | Notifies and links to a GitHub user's profile |
 | `Closes #42` | Closes issue #42 when the PR merges |
-| `Fixes #42` | Same as Closes — conventional for bugs |
-| `Resolves #42` | Same as Closes — general use |
+| `Fixes #42` | Same as Closes - conventional for bugs |
+| `Resolves #42` | Same as Closes - general use |
 | `Refs #42` | Links without auto-closing |
 
 ### Typing a Cross-Reference
 
 Inside any comment or PR description text area (Focus Mode):
-1. Type `#` — a live-search dropdown appears
+1. Type `#` - a live-search dropdown appears
 2. Continue typing the issue number or title fragment
 3. Use `↓` to navigate the dropdown → `Enter` to select
 4. The `#42` link is inserted automatically
@@ -266,7 +266,7 @@ From an organization page or repository:
 2. Press `3` to navigate project titles (they are h3 links)
 3. `Enter` to open a project
 
-### Navigating a Project — Table View
+### Navigating a Project - Table View
 
 ```
 Step 1: The main content is a large grid/table
@@ -279,7 +279,7 @@ Step 5: Enter on a row to open the issue/PR detail panel
 **What is announced per row:**
 "Add keyboard navigation to carousel | Status: In Progress | Assignee: username | Priority: High"
 
-### Navigating a Project — Board View
+### Navigating a Project - Board View
 
 ```
 Step 1: Switch to Board view using the view selector button
@@ -309,13 +309,13 @@ Here is a recommended structure for the `learning-room` sandbox project:
 
 ### Labels to create
 ```
-accessibility      — all a11y-related work
-documentation      — docs-only changes
-good first issue   — for new contributors
-in progress        — being actively worked on
-needs review       — PR is open, review needed
-blocked            — waiting on something external
-help wanted        — community assistance requested
+accessibility      - all a11y-related work
+documentation      - docs-only changes
+good first issue   - for new contributors
+in progress        - being actively worked on
+needs review       - PR is open, review needed
+blocked            - waiting on something external
+help wanted        - community assistance requested
 ```
 
 ### Milestone to create
@@ -341,23 +341,23 @@ Description: All contributions made during Day 1 of the Open Source AT Hackathon
 
 Go to the Learning Room repository and do two things:
 
-1. **Add a label to an issue** — Open any issue (press `G` then `I`, then `Enter` on an issue title). Press `L` (in Focus Mode) to open the label picker. Type `documentation` to filter, then press `Enter` to apply it. Press `Esc` to close.
-2. **Use a cross-reference** — Leave a comment on that issue mentioning another issue number: `Related to #1` (or any issue number you've seen). Press `Ctrl+Enter` to submit.
+1. **Add a label to an issue** - Open any issue (press `G` then `I`, then `Enter` on an issue title). Press `L` (in Focus Mode) to open the label picker. Type `documentation` to filter, then press `Enter` to apply it. Press `Esc` to close.
+2. **Use a cross-reference** - Leave a comment on that issue mentioning another issue number: `Related to #1` (or any issue number you've seen). Press `Ctrl+Enter` to submit.
 
 **You're done.** You just organized work using labels and connected two issues with a cross-reference.
 
-> **What success feels like:** The label now appears on the issue, and your cross-reference is a clickable link that connects the two issues. That's project management on GitHub — and you did it in under two minutes.
+> **What success feels like:** The label now appears on the issue, and your cross-reference is a clickable link that connects the two issues. That's project management on GitHub - and you did it in under two minutes.
 
 ---
 
-> ### Day 2 Amplifier — Agent Forge: `@issue-tracker` with Labels
+> ### Day 2 Amplifier - Agent Forge: `@issue-tracker` with Labels
 >
-> **Apply labels and milestones manually in today's exercises before using any agent.** Labels are the language that automation uses to filter, route, and prioritize work. If you have not designed and applied them yourself, you cannot configure them correctly for automated use — and you cannot tell when automation is applying the wrong ones.
+> **Apply labels and milestones manually in today's exercises before using any agent.** Labels are the language that automation uses to filter, route, and prioritize work. If you have not designed and applied them yourself, you cannot configure them correctly for automated use - and you cannot tell when automation is applying the wrong ones.
 >
 > Once you have mastered manual organization:
-> - **In VS Code** — `@issue-tracker find open issues labeled accessibility, severity-high` uses the exact label vocabulary you configured today, delivering prioritized cross-repository results with community engagement and release-impact scoring
-> - **In your repo** — Agent Forge forks carry the label schema in `.github/ISSUE_TEMPLATE/`; your project's organizational language travels with every clone and does not require manual recreation
-> - **In the cloud** — GitHub Agentic Workflows apply labels automatically when issues are opened, routing work into the right milestone and Project view without manual triage on every item — but only if your labels were designed with clear, consistent intent
+> - **In VS Code** - `@issue-tracker find open issues labeled accessibility, severity-high` uses the exact label vocabulary you configured today, delivering prioritized cross-repository results with community engagement and release-impact scoring
+> - **In your repo** - Agent Forge forks carry the label schema in `.github/ISSUE_TEMPLATE/`; your project's organizational language travels with every clone and does not require manual recreation
+> - **In the cloud** - GitHub Agentic Workflows apply labels automatically when issues are opened, routing work into the right milestone and Project view without manual triage on every item - but only if your labels were designed with clear, consistent intent
 >
 > *Labeling today is not overhead. It is configuring the input layer that every agent downstream depends on.*
 

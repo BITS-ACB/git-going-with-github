@@ -5,7 +5,7 @@
 
 ---
 
-## GitHub Flow — The Standard Contribution Workflow
+## GitHub Flow - The Standard Contribution Workflow
 
 Before diving into communication norms, it helps to understand the workflow that gives all of those conversations their context. **GitHub Flow** is the lightweight branching model recommended for open source contribution. It is simple by design and works whether you are making a one-line documentation fix or a major feature addition.
 
@@ -21,7 +21,7 @@ Before diving into communication norms, it helps to understand the workflow that
       Each commit should represent one coherent, complete change
 
 3. Open a Pull Request
-   └─ Share your work early — even as a Draft PR
+   └─ Share your work early - even as a Draft PR
       Describe what you changed, why, and how to test it
       Link to the related issue (Closes #42)
 
@@ -41,14 +41,14 @@ Before diving into communication norms, it helps to understand the workflow that
 
 ### Why This Model Works
 
-- **`main` is always deployable.** Nothing goes into `main` directly — every change goes through a PR and review. This protects the project and all its users.
+- **`main` is always deployable.** Nothing goes into `main` directly - every change goes through a PR and review. This protects the project and all its users.
 - **Branches are cheap and disposable.** Create a branch per task. Delete it after merging. There is no overhead to starting fresh.
-- **PRs are the unit of conversation.** Everything about a change — the why, the tradeoffs, the review, the approval — lives in one place.
+- **PRs are the unit of conversation.** Everything about a change - the why, the tradeoffs, the review, the approval - lives in one place.
 - **Small changes move faster.** A 5-file PR gets reviewed in an hour. A 50-file PR sits for days. The most effective contributors keep PRs small and focused.
 
 ### GitHub Flow vs Git Flow
 
-You may encounter "Git Flow" in older projects or enterprise environments. It uses longer-lived branches (`develop`, `release/`, `hotfix/`) and is more complex. For open source contribution — especially at a hackathon — **GitHub Flow is what you want**. It is what GitHub itself uses and what most modern open source projects follow.
+You may encounter "Git Flow" in older projects or enterprise environments. It uses longer-lived branches (`develop`, `release/`, `hotfix/`) and is more complex. For open source contribution - especially at a hackathon - **GitHub Flow is what you want**. It is what GitHub itself uses and what most modern open source projects follow.
 
 ### The Unwritten Rule: One Thing Per Branch
 
@@ -62,10 +62,10 @@ When you fork a repository, you get a snapshot of the project at that moment. Th
 
 ### Why Sync Your Fork?
 
-- **Stay compatible** — upstream changes may affect your work
-- **Avoid conflicts** — the longer you wait, the more conflicts you'll face when merging
-- **Get bug fixes** — benefit from improvements made while you worked
-- **Keep branches clean** — start new PRs from an up-to-date main branch
+- **Stay compatible** - upstream changes may affect your work
+- **Avoid conflicts** - the longer you wait, the more conflicts you'll face when merging
+- **Get bug fixes** - benefit from improvements made while you worked
+- **Keep branches clean** - start new PRs from an up-to-date main branch
 
 ### Method 1: GitHub Web Interface (Easiest)
 
@@ -88,7 +88,7 @@ GitHub merges the upstream changes into your fork automatically.
 2. The sync button appears in the landmark that contains the branch selector
 3. Press `D` to cycle through landmarks until you reach that region
 4. Press `B` to cycle buttons until you hear "Sync fork" → press `Enter`
-5. A dialog or page update presents "Update branch" — activate it
+5. A dialog or page update presents "Update branch" - activate it
 
 </details>
 
@@ -96,7 +96,7 @@ GitHub merges the upstream changes into your fork automatically.
 
 If you're working locally in VS Code:
 
-**One-time setup — add the upstream remote:**
+**One-time setup - add the upstream remote:**
 
 ```bash
 git remote add upstream https://github.com/original-owner/repo-name.git
@@ -158,21 +158,21 @@ Every commit you make includes a message describing what changed. Good commit me
 "Add alt text to hero image"  
 "Remove deprecated function"  
 
-"Fixed broken link" — past tense  
-"Fixing broken link" — gerund  
-"I fixed the broken link" — too personal  
+"Fixed broken link" - past tense  
+"Fixing broken link" - gerund  
+"I fixed the broken link" - too personal  
 
 **Why imperative?** It matches Git's autogen messages: "Merge pull request #42" or "Revert commit abc123."
 
 **Optional prefixes** (common in some projects):
 
-- `fix:` — bug fix
-- `feat:` — new feature
-- `docs:` — documentation only
-- `style:` — formatting, no code change
-- `refactor:` — code restructuring
-- `test:` — adding or updating tests
-- `chore:` — maintenance (bump dependencies, etc.)
+- `fix:` - bug fix
+- `feat:` - new feature
+- `docs:` - documentation only
+- `style:` - formatting, no code change
+- `refactor:` - code restructuring
+- `test:` - adding or updating tests
+- `chore:` - maintenance (bump dependencies, etc.)
 
 Example: `fix: correct ARIA label on submit button`
 
@@ -216,13 +216,13 @@ Each commit should represent **one logical change**. Don't bundle unrelated fixe
 Good: One commit adds alt text; another fixes a typo  
 Bad: One commit adds alt text, fixes a typo, reformats code, and updates dependencies  
 
-**Why?** If a commit introduces a bug, you want to revert just that change—not everything.
+**Why?** If a commit introduces a bug, you want to revert just that change-not everything.
 
 ### Common mistakes to avoid:
 
-- "WIP" or "more changes" — not descriptive
-- "Update file.js" — GitHub already knows that
-- "Fixed it" — doesn't say what "it" is
+- "WIP" or "more changes" - not descriptive
+- "Update file.js" - GitHub already knows that
+- "Fixed it" - doesn't say what "it" is
 - Commit messages filled with expletives or frustration
 - Extremely long summaries that get cut off in logs
 
@@ -257,11 +257,11 @@ Open source collaboration happens primarily **in writing**, **asynchronously**, 
 ### In writing
 - There is no tone of voice, body language, or immediate clarification
 - A message that sounds terse in your head may read as hostile to the reader
-- Sarcasm and irony are nearly impossible to convey safely — avoid them
+- Sarcasm and irony are nearly impossible to convey safely - avoid them
 - **Solution:** Be explicit. "I think this might cause a problem because..." is clearer than "This is problematic."
 
 ### Asynchronously  
-- Comments are not instant messages — the reader may see your post hours or days later
+- Comments are not instant messages - the reader may see your post hours or days later
 - You may be in a rush; they are not receiving urgency from your message
 - Comments exist without the context of what you were thinking when you wrote them
 - **Solution:** Provide all necessary context in every message. Do not assume continuity.
@@ -280,20 +280,20 @@ Whether commenting on an issue, reviewing a PR, or responding to a question, eff
 
 ### 1. Acknowledge what's working
 
-Before identifying problems, name what is good. This is not flattery — it is accuracy. Most contributions have real strengths.
+Before identifying problems, name what is good. This is not flattery - it is accuracy. Most contributions have real strengths.
 
-> "The approach of separating the icon from the button text is exactly right — makes the screen reader label much cleaner."
+> "The approach of separating the icon from the button text is exactly right - makes the screen reader label much cleaner."
 
 ### 2. Identify the specific concern
 
 Be precise. Vague feedback is not actionable.
 
 "This code is inaccessible."  
-"This button has no accessible name — `aria-label` or visible text is needed for screen readers to announce its purpose."
+"This button has no accessible name - `aria-label` or visible text is needed for screen readers to announce its purpose."
 
 ### 3. Explain why it matters
 
-Context turns a complaint into a lesson. It also respects the contributor — they deserve to understand, not just comply.
+Context turns a complaint into a lesson. It also respects the contributor - they deserve to understand, not just comply.
 
 > "Without an accessible name, screen readers will announce the button as simply 'button,' which gives the user no information about what activating it will do."
 
@@ -307,10 +307,10 @@ If you have an idea for a solution, offer it as a suggestion, not a mandate.
 
 Help contributors understand what is a blocker versus a preference.
 
-- `nit:` — minor, optional suggestion ("nit: there's a trailing space here")
-- No qualifier — normal concern, should be addressed
-- "This is a blocker because..."  — must be fixed before merge
-- "Just a thought, not a blocker..." — feedback but no requirement
+- `nit:` - minor, optional suggestion ("nit: there's a trailing space here")
+- No qualifier - normal concern, should be addressed
+- "This is a blocker because..."  - must be fixed before merge
+- "Just a thought, not a blocker..." - feedback but no requirement
 
 ---
 
@@ -324,7 +324,7 @@ Help contributors understand what is a blocker versus a preference.
 ### Use tentative language for uncertainty
 
 "This will crash on mobile."  
-"I think this might cause issues on mobile — have you tested with a narrower viewport?"
+"I think this might cause issues on mobile - have you tested with a narrower viewport?"
 
 ### Acknowledge cultural and language diversity
 
@@ -339,14 +339,14 @@ Open source is global. Contributors may be:
 ### Avoid urgency markers unless genuinely urgent
 
 "I need this fixed ASAP"  
-"This is blocking our release scheduled for next Friday — is there capacity to look at it this week?"
+"This is blocking our release scheduled for next Friday - is there capacity to look at it this week?"
 
 ---
 
 ## Commenting Etiquette
 
 ### Keep comments focused
-Each comment should address one concern. If you have three issues, leave three comments — unless they are closely related.
+Each comment should address one concern. If you have three issues, leave three comments - unless they are closely related.
 
 ### Don't leave comments unresolved
 If you asked a question and got an answer, respond. "Thanks, that makes sense" or resolving the conversation thread signals that the thread is complete.
@@ -360,28 +360,28 @@ If five people already said the same thing about an issue, you don't need to add
 ### Reactions
 GitHub reactions () are an efficient way to express agreement, appreciation, or concern without adding noise to a thread.
 
-### Saved Replies — Your Accessibility Win
+### Saved Replies - Your Accessibility Win
 
-GitHub lets you save frequently used responses as **Saved Replies** — reusable text snippets you can insert into any comment box with a few keystrokes. This is a significant accessibility win for anyone who types the same comments repeatedly during triage, reviews, or issue management.
+GitHub lets you save frequently used responses as **Saved Replies** - reusable text snippets you can insert into any comment box with a few keystrokes. This is a significant accessibility win for anyone who types the same comments repeatedly during triage, reviews, or issue management.
 
 **Common uses:**
 - "Thank you for your contribution! I'll take a look this week."
-- "This looks like a duplicate of #N — closing, please continue the discussion there."
+- "This looks like a duplicate of #N - closing, please continue the discussion there."
 - "I've labeled this `good first issue`. To claim it, leave a comment saying you'd like to work on it and I'll assign you."
 - Your team's standard accessibility issue acknowledgement template
 
 **Creating a Saved Reply:**
 1. Navigate to `github.com/settings/replies`
 2. Activate **"Add a saved reply"**
-3. Give it a title (e.g., "Good first issue claim") — this is what you search for
+3. Give it a title (e.g., "Good first issue claim") - this is what you search for
 4. Type the full reply text in the body (Markdown is supported)
 5. Save
 
 **Using a Saved Reply in a comment:**
 1. Navigate to any comment text area
 2. Activate the **Saved Replies button** (the speech bubble icon in the comment toolbar, or press `Ctrl+.` if enabled)
-3. A dropdown appears showing your saved replies — type to filter by title
-4. Select the reply — it inserts into the text area
+3. A dropdown appears showing your saved replies - type to filter by title
+4. Select the reply - it inserts into the text area
 5. Edit as needed before submitting
 
 **Screen reader path:**
@@ -397,11 +397,11 @@ In a comment text area:
 
 ---
 
-## Code Review Etiquette — For Reviewers
+## Code Review Etiquette - For Reviewers
 
 ### Review the code, not the person
 "You clearly don't understand accessibility."  
-"This implementation doesn't account for keyboard navigation — here's how to add it."
+"This implementation doesn't account for keyboard navigation - here's how to add it."
 
 ### Don't gatekeep knowledge
 If a contributor makes a mistake because they didn't know something, explain the concept. They're here to learn.
@@ -413,19 +413,19 @@ If a contributor makes a mistake because they didn't know something, explain the
 ### Distinguish opinion from requirement
 If something is your stylistic preference but NOT a bug or correctness issue, say so.
 
-> "The current implementation is correct. I personally prefer the pattern in utils/helpers.js, but this is a nit — feel free to keep it as-is."
+> "The current implementation is correct. I personally prefer the pattern in utils/helpers.js, but this is a nit - feel free to keep it as-is."
 
 ### Approve explicitly
-When a PR is ready to merge, say so clearly — either by using the Approve review option, or in a comment: "This looks great to me! No blockers on my end."
+When a PR is ready to merge, say so clearly - either by using the Approve review option, or in a comment: "This looks great to me! No blockers on my end."
 
 ---
 
-## Code Review Etiquette — For Authors
+## Code Review Etiquette - For Authors
 
 ### Say thank you
-When someone takes time to review your work, acknowledge it — even if you disagree with some feedback.
+When someone takes time to review your work, acknowledge it - even if you disagree with some feedback.
 
-> "Thanks so much for the thorough review! I've addressed all but the last comment — see my note there."
+> "Thanks so much for the thorough review! I've addressed all but the last comment - see my note there."
 
 ### Don't take feedback personally
 Code review is about the code, not your worth as a person or developer. Even the most senior contributors receive change requests.
@@ -444,33 +444,33 @@ Don't wait until you have finished a 500-line PR to mention that you weren't sur
 
 When filing or discussing accessibility bugs, additional context helps:
 
-- **Describe what was announced** — quote your screen reader's exact output when possible
-- **Do not assume all users experience the same thing** — NVDA users, JAWS users, and VoiceOver users may have different experiences
-- **Be precise about versions** — accessibility behavior changes between OS and screen reader versions
-- **Represent the gap** — "This means that [group of people] cannot [do the thing]" — frame in impact, not just symptoms
-- **Don't catastrophize or be dismissive** — "No blind person can use this" may be inaccurate; be precise about the specific failure and its scope
+- **Describe what was announced** - quote your screen reader's exact output when possible
+- **Do not assume all users experience the same thing** - NVDA users, JAWS users, and VoiceOver users may have different experiences
+- **Be precise about versions** - accessibility behavior changes between OS and screen reader versions
+- **Represent the gap** - "This means that [group of people] cannot [do the thing]" - frame in impact, not just symptoms
+- **Don't catastrophize or be dismissive** - "No blind person can use this" may be inaccurate; be precise about the specific failure and its scope
 
 ---
 
 ## The "Good First Issue" Social Contract
 
 When a maintainer labels an issue `good first issue`, they are:
-- **Investing time** — good first issues require extra documentation and mentorship
-- **Signaling welcome** — they want to support a new contributor
+- **Investing time** - good first issues require extra documentation and mentorship
+- **Signaling welcome** - they want to support a new contributor
 
 When you take a good first issue, your responsibilities:
-1. **Comment to claim it** — "Hi, I'd like to work on this. Can I be assigned?"
-2. **Wait for assignment** — do not start until assigned; two people working in parallel wastes everyone's time
-3. **Check in if stuck** — "I've been working on this for a day and I'm stuck on X — can you point me in the right direction?"
-4. **Check in if unavailable** — "Life got busy and I can't finish this by the original estimate — is it okay if I extend by a week, or should you reassign?"
-5. **Don't disappear** — if you claim an issue, see it through or explicitly hand it back
+1. **Comment to claim it** - "Hi, I'd like to work on this. Can I be assigned?"
+2. **Wait for assignment** - do not start until assigned; two people working in parallel wastes everyone's time
+3. **Check in if stuck** - "I've been working on this for a day and I'm stuck on X - can you point me in the right direction?"
+4. **Check in if unavailable** - "Life got busy and I can't finish this by the original estimate - is it okay if I extend by a week, or should you reassign?"
+5. **Don't disappear** - if you claim an issue, see it through or explicitly hand it back
 
 ---
 
 ## Handling Difficult Situations
 
 ### When you receive harsh feedback
-1. Take a breath before responding — there is no urgency; the thread will wait
+1. Take a breath before responding - there is no urgency; the thread will wait
 2. Look for the valid concern underneath the harsh words
 3. Respond to the concern, not the tone
 4. If the behavior crosses into harassment, report it via the "..." button on the comment → "Report"
@@ -478,7 +478,7 @@ When you take a good first issue, your responsibilities:
 ### When you disagree with a decision
 1. Make your case once, clearly and with evidence
 2. Accept that the maintainer has the final say in their project
-3. If you strongly disagree, you can fork the project and take it in a different direction — this is legitimate in open source
+3. If you strongly disagree, you can fork the project and take it in a different direction - this is legitimate in open source
 
 ### When someone is rude to you
 1. You do not have to engage
@@ -486,7 +486,7 @@ When you take a good first issue, your responsibilities:
 3. Report via GitHub's reporting tools if the behavior is abusive
 
 ### When you accidentally caused offense
-1. Acknowledge it directly: "I can see how that came across as dismissive — that wasn't my intention."
+1. Acknowledge it directly: "I can see how that came across as dismissive - that wasn't my intention."
 2. Do not over-explain or defend excessively
 3. Adjust going forward
 
@@ -531,9 +531,9 @@ Specific instructions for how to contribute to this project:
 
 | Instead of... | Try... |
 |---------------|--------|
-| "This is wrong." | "This looks like it might cause X — is that intended?" |
+| "This is wrong." | "This looks like it might cause X - is that intended?" |
 | "Everyone knows you should..." | "A common pattern for this is..." |
-| "This is terrible." | "I think this approach has some drawbacks — here's what I'm seeing." |
+| "This is terrible." | "I think this approach has some drawbacks - here's what I'm seeing." |
 | "Fix this." | "What do you think about changing this to X?" |
 | "Obviously..." | *(just omit the word "obviously")* |
 | "This is a major issue." | "This is a blocker for users who rely on keyboard navigation." |
@@ -559,7 +559,7 @@ Use the five-step feedback anatomy from this chapter:
 
 Here's one way:
 
-> **Rewritten:** "The alt text on this image says 'image1.png' — screen reader users will hear the filename instead of what's in the image. Could you describe what the screenshot shows, like 'Settings page with the Accessibility section expanded'? That way everyone gets the same information. Nice catch adding the image though — it really helps illustrate the step!"
+> **Rewritten:** "The alt text on this image says 'image1.png' - screen reader users will hear the filename instead of what's in the image. Could you describe what the screenshot shows, like 'Settings page with the Accessibility section expanded'? That way everyone gets the same information. Nice catch adding the image though - it really helps illustrate the step!"
 
 Notice: same feedback, completely different experience for the person receiving it.
 
@@ -567,16 +567,16 @@ Notice: same feedback, completely different experience for the person receiving 
 
 ---
 
-> ### Day 2 Amplifier — Agent Forge Outputs Are Your Responsibility
+> ### Day 2 Amplifier - Agent Forge Outputs Are Your Responsibility
 >
-> **Every communication principle in this guide applies with extra force when agents are involved.** When `@pr-review` generates review comments, *you* are responsible for their tone before you post them. When `@issue-tracker` drafts a triage reply, *your* name appears on it in the repository's public history. The agent writes — the contributor publishes.
+> **Every communication principle in this guide applies with extra force when agents are involved.** When `@pr-review` generates review comments, *you* are responsible for their tone before you post them. When `@issue-tracker` drafts a triage reply, *your* name appears on it in the repository's public history. The agent writes - the contributor publishes.
 >
 > As you work with agents on Day 2, use this guide as your editing checklist:
-> - **In VS Code** — Review every agent-generated comment against the "anatomy of helpful feedback" section before posting; use the "phrases that work" table to refine anything that reads as automated, generic, or cold
-> - **In your repo** — Agent Forge outputs are first drafts, not final words; the community you contribute to experiences your judgment, not the agent's draft
-> - **In the cloud** — GitHub Agentic Workflow comments must be designed with the same care as human comments: clear purpose, respectful language, and a transparent signal that automation posted them
+> - **In VS Code** - Review every agent-generated comment against the "anatomy of helpful feedback" section before posting; use the "phrases that work" table to refine anything that reads as automated, generic, or cold
+> - **In your repo** - Agent Forge outputs are first drafts, not final words; the community you contribute to experiences your judgment, not the agent's draft
+> - **In the cloud** - GitHub Agentic Workflow comments must be designed with the same care as human comments: clear purpose, respectful language, and a transparent signal that automation posted them
 >
-> *A community's culture is shaped by every message posted in its name — including the ones an agent wrote for you.*
+> *A community's culture is shaped by every message posted in its name - including the ones an agent wrote for you.*
 
 ---
 

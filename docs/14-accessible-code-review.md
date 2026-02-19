@@ -1,7 +1,7 @@
 # Accessible Code Review
 ## Conducting Pull Request Reviews with a Screen Reader
 
-> This guide is focused entirely on the **reviewer experience** — navigating diffs, reading changes, leaving comments, and submitting a review — using only your keyboard and screen reader. For the full pull request lifecycle (opening PRs, merge options, conflict resolution), see [Working with Pull Requests](05-working-with-pull-requests.md).
+> This guide is focused entirely on the **reviewer experience** - navigating diffs, reading changes, leaving comments, and submitting a review - using only your keyboard and screen reader. For the full pull request lifecycle (opening PRs, merge options, conflict resolution), see [Working with Pull Requests](05-working-with-pull-requests.md).
 
 ---
 
@@ -9,9 +9,9 @@
 
 **Before starting this chapter, verify you have completed:**
 
-- [ ] Chapter 5: [Working with Pull Requests](05-working-with-pull-requests.md) — Understand PR structure, diffs, and comment workflows
-- [ ] Chapter 13: [GitHub Copilot](13-github-copilot.md) — VS Code installed and configured
-- [ ] Screen Reader Setup — NVDA, JAWS, or VoiceOver installed and ready to use
+- [ ] Chapter 5: [Working with Pull Requests](05-working-with-pull-requests.md) - Understand PR structure, diffs, and comment workflows
+- [ ] Chapter 13: [GitHub Copilot](13-github-copilot.md) - VS Code installed and configured
+- [ ] Screen Reader Setup - NVDA, JAWS, or VoiceOver installed and ready to use
 - [ ] Access to at least one pull request to review (your own fork or a practice repo)
 
 **Estimated time for this chapter:** 1 hour (including exercises)
@@ -20,7 +20,7 @@
 
 ## Two Environments for Code Review
 
-You can review pull requests in two places — each with different strengths:
+You can review pull requests in two places - each with different strengths:
 
 | Environment | Best For | Key Accessibility Feature |
 |-------------|----------|--------------------------|
@@ -31,7 +31,7 @@ Both environments give you full keyboard and screen reader access. Your choice d
 
 ---
 
-## Part 1 — Reviewing on GitHub.com
+## Part 1 - Reviewing on GitHub.com
 
 ### Good News: Modern Interface is Default
 
@@ -65,7 +65,7 @@ The tab label announces the number of changed files: *"Files changed, 4 files ch
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 ```
 VO+U → Landmarks → navigate to "Pull request navigation tabs"
@@ -95,19 +95,19 @@ The file tree is the left panel on the Files Changed page. Each file shows its n
 ```
 Press D → navigate to "File tree" region
 Press ↓ to move through files
-Each file reads: "[filename] — [N additions, N deletions]"
+Each file reads: "[filename] - [N additions, N deletions]"
 Press Enter on a file to scroll its diff into view
 ```
 
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 ```
 VO+U → Landmarks → navigate to "File tree" region
 VO+Down to move through files
-Each file reads: "[filename] — [N additions, N deletions]"
+Each file reads: "[filename] - [N additions, N deletions]"
 VO+Space on a file to scroll its diff into view
 ```
 
@@ -136,7 +136,7 @@ Scroll through the page or click a filename in the file tree on the left. Collap
 
 ```
 Press 3 to jump file-by-file through the diff
-Listen for: "learning-room/docs/keyboard-shortcuts.md — collapsed" or "expanded"
+Listen for: "learning-room/docs/keyboard-shortcuts.md - collapsed" or "expanded"
 Press Enter or Space to expand a collapsed file
 ```
 
@@ -145,11 +145,11 @@ If a diff is very long, the file tree is usually faster than pressing `3` repeat
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 ```
 Quick Nav H or VO+Cmd+H to jump file-by-file through the diff
-Listen for: "learning-room/docs/keyboard-shortcuts.md — collapsed" or "expanded"
+Listen for: "learning-room/docs/keyboard-shortcuts.md - collapsed" or "expanded"
 VO+Space to expand a collapsed file
 ```
 
@@ -174,7 +174,7 @@ Each file's diff is a table. Every row is one line of code.
 </details>
 
 <details>
-<summary>Screen reader users — NVDA</summary>
+<summary>Screen reader users - NVDA</summary>
 
 ```
 Press T to jump to the diff table → Insert+Space (Focus Mode)
@@ -185,7 +185,7 @@ Press Ctrl+Alt+→ to read across columns: [line number] | [change type] | [code
 </details>
 
 <details>
-<summary>Screen reader users — JAWS</summary>
+<summary>Screen reader users - JAWS</summary>
 
 ```
 Press T to jump to the diff table → Insert+Z (Virtual PC Cursor off)
@@ -196,7 +196,7 @@ Press Ctrl+Alt+→ for column-by-column reading
 </details>
 
 <details>
-<summary>Screen reader users — VoiceOver (macOS)</summary>
+<summary>Screen reader users - VoiceOver (macOS)</summary>
 
 ```
 Press T or VO+U → Tables → select the diff table
@@ -207,8 +207,8 @@ VO+→/← to navigate columns, VO+↑/↓ to navigate rows
 </details>
 
 **What each line announces / shows:**
-- Added lines: `"+ [code content]"` — or announced as "inserted"
-- Removed lines: `"- [code content]"` — or announced as "deleted"
+- Added lines: `"+ [code content]"` - or announced as "inserted"
+- Removed lines: `"- [code content]"` - or announced as "deleted"
 - Context lines: code without a `+` or `-`
 
 **Tip:** If the code on a line is very long, the screen reader will read the full line. For minified or generated files, consider collapsing the file in the tree and skipping it.
@@ -222,10 +222,10 @@ When you have a specific observation about a particular line, place an inline co
 <details>
 <summary>Visual / mouse users</summary>
 
-1. Hover your mouse over a line in the diff — a **blue `+`** (comment) button appears on the left
+1. Hover your mouse over a line in the diff - a **blue `+`** (comment) button appears on the left
 2. Click it to open the inline comment box
 3. Type your comment
-4. Click **"Start a review"** (not "Add single comment" — see note below)
+4. Click **"Start a review"** (not "Add single comment" - see note below)
 
 </details>
 
@@ -239,14 +239,14 @@ Step 3: Alternatively: press B to navigate buttons → look for "Add a comment t
 Step 4: Press Enter to open the inline comment box
 Step 5: Insert+Space (NVDA) or Insert+Z (JAWS) → switch to Focus Mode
 Step 6: Type your comment
-Step 7: Tab to "Start a review" button (not "Add single comment" — see note below)
+Step 7: Tab to "Start a review" button (not "Add single comment" - see note below)
 Step 8: Press Enter
 ```
 
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 ```
 Step 1: Navigate to the target line in the diff table (see Step 4)
@@ -261,7 +261,7 @@ Step 8: VO+Space
 
 </details>
 
-> **Why "Start a review" instead of "Add single comment":** A single comment posts immediately and sends a notification for each one. "Start a review" batches all your comments and sends one notification when you submit — far less disruptive for the author.
+> **Why "Start a review" instead of "Add single comment":** A single comment posts immediately and sends a notification for each one. "Start a review" batches all your comments and sends one notification when you submit - far less disruptive for the author.
 
 **Placing a multi-line comment:**
 
@@ -285,7 +285,7 @@ Step 4: Proceed as above
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 ```
 Step 1: Navigate to the first line of the range
@@ -330,7 +330,7 @@ Tab to the "Resolve conversation" button → Enter
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 Navigate with Quick Nav `H` or `VO+Cmd+H` (jump to headings in the diff).
 
@@ -383,7 +383,7 @@ Step 8: Tab to "Submit review" button → Enter
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 ```
 Step 1: VO+U → Landmarks → navigate to "Pull request navigation tabs"
@@ -431,27 +431,27 @@ Step 3: This re-notifies the reviewer that you've made changes
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 ```
 Step 1: From your PR's Conversation tab, Quick Nav H or VO+Cmd+H to find the "Reviewers" heading in the sidebar
 Step 2: Tab or Quick Nav B to find the re-request icon ("Re-request review") next to the reviewer's name
-Step 3: VO+Space to activate — this re-notifies the reviewer that you've made changes
+Step 3: VO+Space to activate - this re-notifies the reviewer that you've made changes
 ```
 
 </details>
 
 ---
 
-## Part 2 — Reviewing in VS Code with the Accessible Diff Viewer
+## Part 2 - Reviewing in VS Code with the Accessible Diff Viewer
 
-When you check out a branch locally, VS Code's diff editor offers the **Accessible Diff Viewer** — a purpose-built, line-by-line reading mode designed specifically for screen readers.
+When you check out a branch locally, VS Code's diff editor offers the **Accessible Diff Viewer** - a purpose-built, line-by-line reading mode designed specifically for screen readers.
 
 ### Opening a Diff in VS Code
 
 If you have the GitHub Pull Requests extension:
 1. Open the GitHub Pull Requests view (Explorer sidebar or Ctrl+Shift+P → "GitHub Pull Requests: View Pull Request")
-2. Find the PR and open it — changed files appear in the file tree
+2. Find the PR and open it - changed files appear in the file tree
 3. Navigate to any file in the tree and press `Enter` to open its diff view
 
 Without the extension, any `git diff` operation also opens the diff editor.
@@ -478,15 +478,15 @@ Added:
 ```
 
 **Navigation:**
-- `F7` — jump to next change (next hunk)
-- `Shift+F7` — jump to previous change
-- `Alt+F2` — open VS Code's Accessible View for additional context on the current item
-- `Escape` — close the Accessible Diff Viewer
+- `F7` - jump to next change (next hunk)
+- `Shift+F7` - jump to previous change
+- `Alt+F2` - open VS Code's Accessible View for additional context on the current item
+- `Escape` - close the Accessible Diff Viewer
 
 **What makes this better than the raw diff editor:**
 - Each change is announced as a discrete unit with clear "Removed:" and "Added:" labels
 - You hear the change number of total changes ("Change 3 of 12")
-- No table navigation required — purpose-built for sequential listening
+- No table navigation required - purpose-built for sequential listening
 - Works with all three major screen readers without any special configuration
 
 ### Placing Comments in VS Code (GitHub PR Extension)
@@ -496,11 +496,11 @@ From the diff editor with the GitHub PR extension:
 Step 1: In the diff gutter, navigate to the line you want to comment on
 Step 2: Ctrl+Shift+P → "GitHub Pull Requests: Add Comment"
 Step 3: Or press Shift+F10 (Windows) or Control+Return (macOS) on the line → context menu → "GitHub Pull Requests: Add Comment"
-Step 4: A text area opens — type your comment
+Step 4: A text area opens - type your comment
 Step 5: Submit from the inline UI
 ```
 
-Comments placed in VS Code sync to GitHub — they appear in the PR's Files Changed tab and the author receives the same notification.
+Comments placed in VS Code sync to GitHub - they appear in the PR's Files Changed tab and the author receives the same notification.
 
 ---
 
@@ -509,9 +509,9 @@ Comments placed in VS Code sync to GitHub — they appear in the PR's Files Chan
 ### The Anatomy of a Useful Review Comment
 
 A comment that helps the author is:
-1. **Specific** — link to the exact line and name the pattern you see
-2. **Educational** — say *why* something matters, not just what to change
-3. **Graduated** — signal whether this is blocking, or a preference
+1. **Specific** - link to the exact line and name the pattern you see
+2. **Educational** - say *why* something matters, not just what to change
+3. **Graduated** - signal whether this is blocking, or a preference
 
 **Blocking example:**
 > "The heading on line 34 jumps from `##` (level 2) to `####` (level 4), skipping heading level 3. Screen reader users who navigate by heading level will miss any content between those two levels. Please change `####` to `###` before this merges."
@@ -533,7 +533,7 @@ Using shorthand prefixes helps authors parse many comments quickly:
 | `suggestion:` | Alternative to consider; take it or leave it |
 | `important:` | Should be addressed; may block |
 | `blocking:` | Must be addressed before merge |
-| `praise:` | Positive callout — works well, good pattern |
+| `praise:` | Positive callout - works well, good pattern |
 
 ### How Many Comments Is Too Many?
 
@@ -588,11 +588,11 @@ There is no hard limit, but quantity without prioritization is noise. If you hav
 3. Or on GitHub: file tree → expand that file → T → navigate the diff table
 ```
 
-### "I agreed but then the author made more changes — did anything new appear?"
+### "I agreed but then the author made more changes - did anything new appear?"
 
 ```
 1. Go to the Commits tab (D → PR tabs → "Commits" → Enter)
-2. 3 to navigate commits — find any commits after your last review
+2. 3 to navigate commits - find any commits after your last review
 3. Press `Enter` on the commit to see only what changed in that push (not the full diff)
 ```
 
@@ -609,11 +609,11 @@ There is no hard limit, but quantity without prioritization is noise. If you hav
 
 ## Exercises
 
-These exercises use the files in `learning-room/docs/` in this repository. All examples involve documentation changes — no code required.
+These exercises use the files in `learning-room/docs/` in this repository. All examples involve documentation changes - no code required.
 
 ---
 
-### Exercise A — Complete a Web Review
+### Exercise A - Complete a Web Review
 
 **Scenario:** A contributor has submitted a pull request titled "Add screen reader tips to the setup guide." The PR modifies `learning-room/docs/setup-guide.md`. Your job is to review it before it merges.
 
@@ -626,7 +626,7 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 **What to do:**
 1. Open GitHub in your browser and navigate to the workshop repository (`github.com/[your-fork]/[workshop-repo]` or `accesswatch/agent-forge`)
 2. Click the **Pull Requests** tab (top navigation)
-3. Look for a PR titled "Add screen reader tips to the setup guide" — click it to open
+3. Look for a PR titled "Add screen reader tips to the setup guide" - click it to open
 4. You should now see the PR page with sections: Conversation, Commits, Files Changed
 
 **How to know you're in the right place:**
@@ -636,7 +636,7 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 
 **If you can't find the PR:**
 - Use `Ctrl+F` to search the PR list for "screen reader tips"
-- Or ask in the workshop Slack — someone can share the exact URL
+- Or ask in the workshop Slack - someone can share the exact URL
 
 ---
 
@@ -685,7 +685,7 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 
 **What happens in Focus Mode:**
 - The page simplifies: sidebars disappear
-- Only the diff is visible — easier for screen reader navigation and less cognitive load
+- Only the diff is visible - easier for screen reader navigation and less cognitive load
 - The diff is now the main content area
 
 **With screen reader (once in Focus Mode):**
@@ -726,7 +726,7 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 **What to do:**
 1. Find the diff line with the problematic `####` heading
 2. **Hover your mouse over the line number** on the left side of that line (or if using keyboard, navigate to that line in the table)
-3. A button should appear (or press the Add Comment hotkey — usually `C` in GitHub)
+3. A button should appear (or press the Add Comment hotkey - usually `C` in GitHub)
 4. Click it or press `Enter` to open a comment box
 
 **In the comment box:**
@@ -758,7 +758,7 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 3. **Note the line number**
 
 **Why this matters:**
-- Screen reader users can ask their reader to "list all links on this page" — they hear only the link text
+- Screen reader users can ask their reader to "list all links on this page" - they hear only the link text
 - If the text is "click here," they have no context about where it goes
 - Descriptive link text is WCAG 2.4.4 (Link Purpose)
 
@@ -791,9 +791,9 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 1. Look for a button labeled **"Review changes"** (usually at the top right of the page or bottom of comments)
 2. Click it (or navigate with keyboard and press `Enter`)
 3. A dialog appears with options:
-   - **Comment** — provide feedback but don't block (for minor notes)
-   - **Approve** — the PR is ready to merge
-   - **Request changes** — this PR cannot merge until changes are made
+   - **Comment** - provide feedback but don't block (for minor notes)
+   - **Approve** - the PR is ready to merge
+   - **Request changes** - this PR cannot merge until changes are made
 
 **For this exercise:**
 1. Select **"Request changes"** (you found two things to fix)
@@ -816,15 +816,15 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 #### Reflect on This Exercise
 
 After submitting, answer:
-1. **Did heading-level navigation help?** When you were looking for the `####` issue, was it easier to navigate by heading level (`1`–`6`) than to scan every line?
+1. **Did heading-level navigation help?** When you were looking for the `####` issue, was it easier to navigate by heading level (`1`-`6`) than to scan every line?
 2. **Would you have caught this without the exercise prompt?** If you were a real reviewer not specifically looking for heading issues, would the diff have been obvious?
 3. **Why does screen reader navigation matter?** In one sentence, explain why a screen reader user's ability to jump through heading levels is important for this document.
 
-Keep your answers — you'll need them for Chapter 16's Agent Forge exercise to compare manual review with agent-assisted review.
+Keep your answers - you'll need them for Chapter 16's Agent Forge exercise to compare manual review with agent-assisted review.
 
 ---
 
-### Exercise B — Use the VS Code Accessible Diff Viewer
+### Exercise B - Use the VS Code Accessible Diff Viewer
 
 **Scenario:** Review the same pull request from Exercise A, this time entirely in VS Code. You'll compare the browser experience with the VS Code experience.
 
@@ -860,10 +860,10 @@ Before starting:
 #### Step 2: Open the Pull Requests Sidebar
 
 **What to do:**
-1. Look for a **GitHub-themed icon** on the left sidebar (circle with octocat logo) — click it
+1. Look for a **GitHub-themed icon** on the left sidebar (circle with octocat logo) - click it
    - **With keyboard:** The icon may not be keyboard-reachable directly; instead go to Step 3
 2. A sidebar appears showing open pull requests on repositories you have access to
-3. **Find the PR titled "Add screen reader tips to the setup guide"** — it should appear in a list
+3. **Find the PR titled "Add screen reader tips to the setup guide"** - it should appear in a list
 4. Click it to open
 
 **What happens:**
@@ -892,7 +892,7 @@ Before starting:
 - The file name appears at the top: `setup-guide.md`
 
 **With screen reader:**
-- NVDA/JAWS: The editor announces "Diff Editor — setup-guide.md"
+- NVDA/JAWS: The editor announces "Diff Editor - setup-guide.md"
 - Use `Ctrl+Home` to jump to the start of the diff
 - Use `Ctrl+End` to jump to the end
 
@@ -922,7 +922,7 @@ Before starting:
 
 **What to do:**
 1. The first change is automatically announced when you open the Accessible Diff Viewer
-2. **Let your screen reader read it completely** — don't interrupt
+2. **Let your screen reader read it completely** - don't interrupt
 3. Write down the exact text announced:
    ```
    Removed: [write what the viewer said]
@@ -1052,7 +1052,7 @@ After completing Steps 1-9, answer:
 
 ---
 
-### Exercise C — Compare and Reflect
+### Exercise C - Compare and Reflect
 
 **Your Mission:** Synthesize what you learned from the manual code reviews (Exercises A & B) and document your findings.
 
@@ -1076,7 +1076,7 @@ Before writing your reflection, collect all the information you gathered:
 - Did you need to switch between the Accessible Diff Viewer and the regular editor?
 - How many steps to find the problem?
 
-**Write these down** (in a text editor, on paper, or mentally) — you'll reference them in Steps 2-4.
+**Write these down** (in a text editor, on paper, or mentally) - you'll reference them in Steps 2-4.
 
 ---
 
@@ -1098,7 +1098,7 @@ Before writing your reflection, collect all the information you gathered:
 #### Step 3: Write Your Comparison
 
 **What to do:**
-Type your response to these three questions. Be specific — reference exact tools, steps, and what you discovered:
+Type your response to these three questions. Be specific - reference exact tools, steps, and what you discovered:
 
 **Question 1: Environment Preference**
 ```
@@ -1141,7 +1141,7 @@ This breaks the information hierarchy."
 **Full template to copy into the comment box:**
 
 ```
-## Code Review Reflection — Browser vs VS Code
+## Code Review Reflection - Browser vs VS Code
 
 After reviewing this PR using both the browser and VS Code environments, 
 here's what I found:
@@ -1180,7 +1180,7 @@ The heading hierarchy skip in the published document matters because:
    - Am I describing the real-world impact accurately?
    - Would someone else reading this understand how I caught the issue?
 3. Make any corrections needed
-4. **Do not submit yet** — continue to Step 5
+4. **Do not submit yet** - continue to Step 5
 
 ---
 
@@ -1204,7 +1204,7 @@ The heading hierarchy skip in the published document matters because:
 
 ---
 
-#### Step 6: Checkpoint — Validate Your Learning
+#### Step 6: Checkpoint - Validate Your Learning
 
 Before moving forward, verify you understand:
 
@@ -1223,14 +1223,14 @@ If you can answer all three, you're ready for the next chapter.
 
 ### What Comes Next
 
-Your manual code review skills — identifying heading issues, catching link text problems, understanding screen reader navigation — are the **foundation** for understanding automated review.
+Your manual code review skills - identifying heading issues, catching link text problems, understanding screen reader navigation - are the **foundation** for understanding automated review.
 
 In **Chapter 16 (Agent Forge)**, you'll use the `@pr-review` agent to generate a *draft* review of this same PR. The agent will:
 - Suggest changes automatically
 - Identify accessibility issues
 - Create a review checklist
 
-**But** — and this is critical — the agent's suggestions will only make sense *because you already know what to look for*. You'll be able to:
+**But** - and this is critical - the agent's suggestions will only make sense *because you already know what to look for*. You'll be able to:
 - Verify the agent didn't miss anything
 - Add context the agent can't see
 - Decide whether the agent's suggestions are correct
@@ -1239,14 +1239,14 @@ That's the power of "manual skill first, agent second." You're building that ski
 
 ---
 
-> ### Day 2 Amplifier — Agent Forge: `@pr-review`
+> ### Day 2 Amplifier - Agent Forge: `@pr-review`
 >
-> **Review at least two pull requests manually — using the techniques in this guide — before running `@pr-review`.** The agent generates a first-draft review: a line-numbered diff map, risk assessment, before/after snapshots, and suggested inline comments. Your job as reviewer is to read that draft, correct it, enrich it with context the diff cannot contain, and decide what is actually worth saying to the author.
+> **Review at least two pull requests manually - using the techniques in this guide - before running `@pr-review`.** The agent generates a first-draft review: a line-numbered diff map, risk assessment, before/after snapshots, and suggested inline comments. Your job as reviewer is to read that draft, correct it, enrich it with context the diff cannot contain, and decide what is actually worth saying to the author.
 >
 > Once you have that manual foundation:
-> - **In VS Code** — `@pr-review review PR #N` produces a structured, annotated review draft
-> - **In your repo** — Agent Forge's review capabilities work in any repository you can access; fork `agent-forge` and those capabilities travel with your project
-> - **In the cloud** — GitHub Agentic Workflows can auto-post PR summaries and accessibility impact assessments the moment a PR is opened, without anyone being online
+> - **In VS Code** - `@pr-review review PR #N` produces a structured, annotated review draft
+> - **In your repo** - Agent Forge's review capabilities work in any repository you can access; fork `agent-forge` and those capabilities travel with your project
+> - **In the cloud** - GitHub Agentic Workflows can auto-post PR summaries and accessibility impact assessments the moment a PR is opened, without anyone being online
 >
 > *The Accessible Diff Viewer teaches you to hear changes. The agent drafts the notes. You bring the judgment.*
 

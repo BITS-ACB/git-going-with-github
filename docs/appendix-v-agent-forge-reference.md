@@ -1,5 +1,5 @@
 # Appendix V: Agent Forge Reference
-## Complete Reference — Agents, Slash Commands, Instructions, Configuration Levels, and All File Formats
+## Complete Reference - Agents, Slash Commands, Instructions, Configuration Levels, and All File Formats
 
 > This is your comprehensive reference for Agent Forge and the full VS Code Copilot customization system. For the lesson, see [Chapter 16: Agent Forge](16-agent-forge.md). For Copilot keyboard shortcuts and Chat features, see [Appendix W: GitHub Copilot Reference](appendix-w-github-copilot-reference.md).
 
@@ -9,15 +9,15 @@
 
 1. [The Six Agents](#1-the-six-agents)
 2. [The 28 Slash Commands](#2-the-28-slash-commands)
-3. [Customization Primitives — Decision Guide](#3-customization-primitives--decision-guide)
-4. [Scope and Priority — All Levels](#4-scope-and-priority--all-levels)
-5. [Always-On Instructions — All File Types](#5-always-on-instructions--all-file-types)
+3. [Customization Primitives - Decision Guide](#3-customization-primitives--decision-guide)
+4. [Scope and Priority - All Levels](#4-scope-and-priority--all-levels)
+5. [Always-On Instructions - All File Types](#5-always-on-instructions--all-file-types)
 6. [File-Based Instructions (.instructions.md)](#6-file-based-instructions-instructionsmd)
-7. [.agent.md — Complete Format Reference](#7-agentmd--complete-format-reference)
-8. [.prompt.md — Complete Format Reference](#8-promptmd--complete-format-reference)
-9. [Agent Skills (SKILL.md) — Complete Format Reference](#9-agent-skills-skillmd--complete-format-reference)
-10. [Hooks (.json) — Lifecycle Automation](#10-hooks-json--lifecycle-automation)
-11. [preferences.md — Agent Forge Personal Settings](#11-preferencesmd--agent-forge-personal-settings)
+7. [.agent.md - Complete Format Reference](#7-agentmd--complete-format-reference)
+8. [.prompt.md - Complete Format Reference](#8-promptmd--complete-format-reference)
+9. [Agent Skills (SKILL.md) - Complete Format Reference](#9-agent-skills-skillmd--complete-format-reference)
+10. [Hooks (.json) - Lifecycle Automation](#10-hooks-json--lifecycle-automation)
+11. [preferences.md - Agent Forge Personal Settings](#11-preferencesmd--agent-forge-personal-settings)
 12. [Diagnostics and Troubleshooting](#12-diagnostics-and-troubleshooting)
 13. [Further Reading](#13-further-reading)
 
@@ -40,7 +40,7 @@ Invoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
 
 ---
 
-### `@daily-briefing` — Morning Briefing
+### `@daily-briefing` - Morning Briefing
 
 **Agent file:** `.github/agents/daily-briefing.agent.md`
 
@@ -50,7 +50,7 @@ Invoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
 | `@daily-briefing what needs my attention today in agent-forge?` | Repo-scoped briefing |
 | `@daily-briefing summarize activity from the last week` | Weekly digest |
 
-**Output sections (H2 headings — navigate with `H`):**
+**Output sections (H2 headings - navigate with `H`):**
 - Needs Your Action
   - Pull Requests Waiting for Your Review
   - @Mentions Requiring Response
@@ -63,7 +63,7 @@ Invoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
 
 ---
 
-### `@issue-tracker` — Issue Management
+### `@issue-tracker` - Issue Management
 
 **Agent file:** `.github/agents/issue-tracker.agent.md`
 
@@ -78,7 +78,7 @@ Invoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
 
 ---
 
-### `@pr-review` — Pull Request Review
+### `@pr-review` - Pull Request Review
 
 **Agent file:** `.github/agents/pr-review.agent.md`
 
@@ -102,7 +102,7 @@ Invoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
 
 ---
 
-### `@analytics` — Team Analytics
+### `@analytics` - Team Analytics
 
 **Agent file:** `.github/agents/analytics.agent.md`
 
@@ -115,7 +115,7 @@ Invoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
 
 ---
 
-### `@insiders-a11y-tracker` — Accessibility Change Monitor
+### `@insiders-a11y-tracker` - Accessibility Change Monitor
 
 **Agent file:** `.github/agents/insiders-a11y-tracker.agent.md`
 
@@ -138,7 +138,7 @@ Invoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
 
 ---
 
-### `@template-builder` — Issue Template Wizard
+### `@template-builder` - Issue Template Wizard
 
 **Agent file:** `.github/agents/template-builder.agent.md`
 
@@ -181,11 +181,11 @@ Type `/` in Copilot Chat to open the command menu. Each command corresponds to a
 | `/my-prs` | Your open PRs with CI and review status |
 | `/my-stats` | Your contribution stats across repos |
 | `/notifications` | Manage GitHub notifications without opening a browser |
-| `/onboard-repo` | First-time scan of a repo — health, quick wins, recommended actions |
+| `/onboard-repo` | First-time scan of a repo - health, quick wins, recommended actions |
 | `/pr-author-checklist` | Pre-merge checklist for PR authors |
 | `/pr-comment` | Draft a response to a PR comment |
 | `/pr-report` | Detailed PR analysis report |
-| `/project-status` | GitHub Projects board overview — columns, blocked, stale |
+| `/project-status` | GitHub Projects board overview - columns, blocked, stale |
 | `/react` | Suggest or add a reaction to an issue or comment |
 | `/refine-issue` | Improve issue title, description, and labels |
 | `/release-prep` | Complete release preparation workflow |
@@ -199,29 +199,29 @@ Type `/` in Copilot Chat to open the command menu. Each command corresponds to a
 
 | Command | Example Usage |
 |---------|-------------|
-| `/my-issues` | `/my-issues` — see all your open issues with priority signals |
-| `/review-pr` | `/review-pr #14` — AI-generated review with inline suggestions |
-| `/triage` | `/triage #22` — get label and priority suggestions for a new issue |
-| `/issue-reply` | `/issue-reply #15` — draft a reply to an issue thread |
-| `/a11y-update` | `/a11y-update insiders` — latest a11y improvements with WCAG refs |
-| `/daily-briefing` | `/daily-briefing` — same output as `@daily-briefing` |
-| `/draft-release` | `/draft-release v2.0` — generate release notes from merged PRs |
+| `/my-issues` | `/my-issues` - see all your open issues with priority signals |
+| `/review-pr` | `/review-pr #14` - AI-generated review with inline suggestions |
+| `/triage` | `/triage #22` - get label and priority suggestions for a new issue |
+| `/issue-reply` | `/issue-reply #15` - draft a reply to an issue thread |
+| `/a11y-update` | `/a11y-update insiders` - latest a11y improvements with WCAG refs |
+| `/daily-briefing` | `/daily-briefing` - same output as `@daily-briefing` |
+| `/draft-release` | `/draft-release v2.0` - generate release notes from merged PRs |
 
 ---
 
-## 3. Customization Primitives — Decision Guide
+## 3. Customization Primitives - Decision Guide
 
 Before creating any file, choose the right primitive for the job. Each primitive is a different file type with a different purpose, scope, and trigger.
 
 | Primitive | File Type | When to Use |
 |-----------|-----------|-------------|
-| **Always-on instructions** | `copilot-instructions.md`, `AGENTS.md`, `CLAUDE.md` | Standards that apply to every request — coding conventions, project context, tone |
-| **File-based instructions** | `*.instructions.md` | Rules that only apply to specific file types or folders — Python style, test conventions, docs standards |
-| **Prompts / Slash Commands** | `*.prompt.md` | Single repeatable task invoked with `/command` — scaffolding, triage, PR prep |
-| **Agent Skills** | `SKILL.md` in a named folder | Multi-step workflow with bundled scripts and reference files — testing, deployment, auditing |
-| **Custom Agents** | `*.agent.md` | Specialized persona with tool restrictions — orchestrates tasks, can invoke subagents |
-| **Hooks** | `*.json` | Deterministic lifecycle automation — block dangerous commands, run formatters, enforce policy |
-| **Personal Preferences** | `preferences.md` | Agent Forge fork-local personal settings — repos, output format, timezone |
+| **Always-on instructions** | `copilot-instructions.md`, `AGENTS.md`, `CLAUDE.md` | Standards that apply to every request - coding conventions, project context, tone |
+| **File-based instructions** | `*.instructions.md` | Rules that only apply to specific file types or folders - Python style, test conventions, docs standards |
+| **Prompts / Slash Commands** | `*.prompt.md` | Single repeatable task invoked with `/command` - scaffolding, triage, PR prep |
+| **Agent Skills** | `SKILL.md` in a named folder | Multi-step workflow with bundled scripts and reference files - testing, deployment, auditing |
+| **Custom Agents** | `*.agent.md` | Specialized persona with tool restrictions - orchestrates tasks, can invoke subagents |
+| **Hooks** | `*.json` | Deterministic lifecycle automation - block dangerous commands, run formatters, enforce policy |
+| **Personal Preferences** | `preferences.md` | Agent Forge fork-local personal settings - repos, output format, timezone |
 
 ### Choosing Between Primitives
 
@@ -235,11 +235,11 @@ Before creating any file, choose the right primitive for the job. Each primitive
 - Both appear as `/` slash commands. Use a prompt for one well-defined task. Use a skill when the workflow bundles scripts, templates, or reference docs alongside the instructions.
 
 **Instructions vs Hooks?**
-- Instructions *guide* the agent (non-deterministic). Hooks *enforce* behavior via shell commands at lifecycle events — they run regardless of what the agent was prompted to do.
+- Instructions *guide* the agent (non-deterministic). Hooks *enforce* behavior via shell commands at lifecycle events - they run regardless of what the agent was prompted to do.
 
 ---
 
-## 4. Scope and Priority — All Levels
+## 4. Scope and Priority - All Levels
 
 Every customization file exists at one of three scopes. VS Code combines all matching files from all scopes and sends them to the model.
 
@@ -247,15 +247,15 @@ Every customization file exists at one of three scopes. VS Code combines all mat
 
 | Scope | Where Files Live | Who Shares It |
 |-------|-----------------|---------------|
-| **User / Personal** | VS Code profile folder | You only — follows Settings Sync across devices |
+| **User / Personal** | VS Code profile folder | You only - follows Settings Sync across devices |
 | **Workspace** | `.github/` and related folders in the repo | Everyone who clones the repo |
 | **Organization** | GitHub organization settings (Enterprise/Team) | Everyone in the org |
 
 ### Priority Order (highest wins in conflicts)
 
-1. **Personal / User-level** — your profile instructions override everything
-2. **Workspace / Repository-level** — `.github/copilot-instructions.md`, `AGENTS.md`, `.github/agents/*.agent.md`
-3. **Organization-level** — organization-defined custom instructions (lowest priority)
+1. **Personal / User-level** - your profile instructions override everything
+2. **Workspace / Repository-level** - `.github/copilot-instructions.md`, `AGENTS.md`, `.github/agents/*.agent.md`
+3. **Organization-level** - organization-defined custom instructions (lowest priority)
 
 ### User-Level File Locations (Personal, Cross-Workspace)
 
@@ -264,8 +264,8 @@ All of these files roam with your VS Code Settings Sync.
 | File Type | Location on Windows | Location on macOS/Linux |
 |-----------|---------------------|------------------------|
 | Instructions | `%APPDATA%\Code - Insiders\User\prompts\*.instructions.md` | `~/Library/Application Support/Code - Insiders/User/prompts/` |
-| Prompts | Same folder — `*.prompt.md` | Same folder |
-| Agents | Same folder — `*.agent.md` | Same folder |
+| Prompts | Same folder - `*.prompt.md` | Same folder |
+| Agents | Same folder - `*.agent.md` | Same folder |
 
 > On this machine: `C:\Users\jeffb\AppData\Roaming\Code - Insiders\User\prompts\`
 
@@ -278,26 +278,26 @@ To sync user instructions/prompts/agents across devices:
 
 | File Type | Default Location | Override Setting |
 |-----------|-----------------|-----------------|
-| Always-on instructions | `.github/copilot-instructions.md` | — (fixed path) |
+| Always-on instructions | `.github/copilot-instructions.md` | - (fixed path) |
 | Always-on (multi-tool) | `AGENTS.md` (root) or nested per subfolder | `chat.useAgentsMdFile` to enable/disable |
 | Always-on (Claude compat) | `CLAUDE.md`, `.claude/CLAUDE.md`, `CLAUDE.local.md` (local only) | `chat.useClaudeMdFile` to enable/disable |
 | File-based instructions | `.github/instructions/*.instructions.md` | `chat.instructionsFilesLocations` |
-| Claude-format instructions | `.claude/rules/*.instructions.md` | — |
-| Agents | `.github/agents/*.agent.md` | — |
-| Prompts | `.github/prompts/*.prompt.md` | — |
-| Skills | `.github/skills/<name>/SKILL.md` | — |
-| Hooks | `.github/hooks/*.json` | — |
-| Personal preferences | `.github/agents/preferences.md` (gitignored) | — |
+| Claude-format instructions | `.claude/rules/*.instructions.md` | - |
+| Agents | `.github/agents/*.agent.md` | - |
+| Prompts | `.github/prompts/*.prompt.md` | - |
+| Skills | `.github/skills/<name>/SKILL.md` | - |
+| Hooks | `.github/hooks/*.json` | - |
+| Personal preferences | `.github/agents/preferences.md` (gitignored) | - |
 
 ### How Multiple Files Are Combined
 
-VS Code collects **all** matching instruction files from all scopes and includes them all in the chat context. There is no single winner — all are combined. Priority only resolves conflicts between contradictory instructions.
+VS Code collects **all** matching instruction files from all scopes and includes them all in the chat context. There is no single winner - all are combined. Priority only resolves conflicts between contradictory instructions.
 
 ---
 
-## 5. Always-On Instructions — All File Types
+## 5. Always-On Instructions - All File Types
 
-Always-on instructions are automatically included in every chat request. You never invoke them — Copilot simply follows them.
+Always-on instructions are automatically included in every chat request. You never invoke them - Copilot simply follows them.
 
 ### Option A: `.github/copilot-instructions.md` (Recommended)
 
@@ -333,7 +333,7 @@ Always-on instructions are automatically included in every chat request. You nev
 - Assume readers are competent but new to this specific tool
 ```
 
-**Auto-generate with:** Type `/init` in Copilot Chat — VS Code analyzes your workspace and generates a tailored `copilot-instructions.md`.
+**Auto-generate with:** Type `/init` in Copilot Chat - VS Code analyzes your workspace and generates a tailored `copilot-instructions.md`.
 
 ---
 
@@ -346,7 +346,7 @@ Always-on instructions are automatically included in every chat request. You nev
 AGENTS.md           ← root of workspace
 ```
 
-**Nested (per subfolder — experimental):**
+**Nested (per subfolder - experimental):**
 ```
 AGENTS.md                  ← root defaults
 frontend/AGENTS.md         ← frontend-specific rules (overrides root for frontend/)
@@ -355,11 +355,11 @@ backend/AGENTS.md          ← backend-specific rules (overrides root for backen
 
 Enable nested file support: `chat.useNestedAgentsMdFiles: true` in VS Code settings.
 
-**File structure:** Same as `copilot-instructions.md` — plain Markdown, no frontmatter.
+**File structure:** Same as `copilot-instructions.md` - plain Markdown, no frontmatter.
 
 **Cross-tool compatibility:** AGENTS.md is an open standard. GitHub Copilot, Claude Code, Gemini CLI, and other AI tools all recognize it. Use it instead of `copilot-instructions.md` when you work with multiple AI tools.
 
-**Rule:** Use either `AGENTS.md` or `copilot-instructions.md` — not both.
+**Rule:** Use either `AGENTS.md` or `copilot-instructions.md` - not both.
 
 ---
 
@@ -369,10 +369,10 @@ Enable nested file support: `chat.useNestedAgentsMdFiles: true` in VS Code setti
 
 | Location | Scope |
 |----------|-------|
-| `CLAUDE.md` (workspace root) | Workspace — shared via git |
-| `.claude/CLAUDE.md` | Workspace — shared via git |
-| `CLAUDE.local.md` (workspace root) | Workspace — local only, not committed |
-| `~/.claude/CLAUDE.md` | User-level — personal, all workspaces |
+| `CLAUDE.md` (workspace root) | Workspace - shared via git |
+| `.claude/CLAUDE.md` | Workspace - shared via git |
+| `CLAUDE.local.md` (workspace root) | Workspace - local only, not committed |
+| `~/.claude/CLAUDE.md` | User-level - personal, all workspaces |
 
 VS Code recognizes all four locations when `chat.useClaudeMdFile` is enabled (default: on).
 
@@ -430,13 +430,13 @@ Organization administrators can define custom instructions that apply to all rep
 }
 ```
 
-Organization instructions are the lowest priority — workspace and user instructions override them when they conflict.
+Organization instructions are the lowest priority - workspace and user instructions override them when they conflict.
 
 ---
 
 ## 6. File-Based Instructions (`.instructions.md`)
 
-File-based instructions load conditionally — either when the files you are editing match a glob pattern, or when the agent determines the instruction is relevant to the current task.
+File-based instructions load conditionally - either when the files you are editing match a glob pattern, or when the agent determines the instruction is relevant to the current task.
 
 **Use for:** Language-specific rules, framework conventions, module-specific standards that only apply to part of the codebase.
 
@@ -452,9 +452,9 @@ File-based instructions load conditionally — either when the files you are edi
 
 ```yaml
 ---
-name: "Display Name"           # Optional — defaults to filename; shown in UI
-description: "Use when..."     # Optional — enables on-demand discovery; be keyword-rich
-applyTo: "**/*.py"             # Optional — glob pattern(s) for automatic application
+name: "Display Name"           # Optional - defaults to filename; shown in UI
+description: "Use when..."     # Optional - enables on-demand discovery; be keyword-rich
+applyTo: "**/*.py"             # Optional - glob pattern(s) for automatic application
 ---
 ```
 
@@ -463,11 +463,11 @@ applyTo: "**/*.py"             # Optional — glob pattern(s) for automatic appl
 `applyTo` specifies which files trigger automatic inclusion of these instructions. When a file matching the pattern is part of the chat context, the instructions are included automatically.
 
 ```yaml
-applyTo: "**"                          # ALWAYS included (use carefully — applies everywhere)
+applyTo: "**"                          # ALWAYS included (use carefully - applies everywhere)
 applyTo: "**/*.py"                     # All Python files
 applyTo: "**/*.{ts,tsx}"               # TypeScript and TSX files
 applyTo: "docs/**"                     # Everything under docs/
-applyTo: ["src/**", "lib/**"]          # Multiple patterns (OR — either match triggers inclusion)
+applyTo: ["src/**", "lib/**"]          # Multiple patterns (OR - either match triggers inclusion)
 applyTo: src/**, lib/**                # Same without array syntax
 applyTo: "**/*.test.{js,ts}"          # Only test files
 applyTo: ".github/ISSUE_TEMPLATE/**"  # Only issue template files
@@ -534,7 +534,7 @@ Type `/instructions` in the Chat input to open the Configure Instructions menu.
 
 ---
 
-## 7. `.agent.md` — Complete Format Reference
+## 7. `.agent.md` - Complete Format Reference
 
 ### File Locations
 
@@ -547,16 +547,16 @@ Type `/instructions` in the Chat input to open the Configure Instructions menu.
 
 ```yaml
 ---
-name: "agent-name"                        # Required — what you type after @ in Chat
-description: "Use when..."               # Required — triggers subagent delegation; keyword-rich
-tools: ["read", "search", "githubRepo"]  # Optional — tools this agent can use; omit = defaults; [] = none
-model: "Claude Sonnet 4.5 (copilot)"     # Optional — specific model to use
-agent: "ask"                              # Optional — agent mode: ask | agent | plan | or custom name
-argument-hint: "Repo or PR ref..."       # Optional — hint shown in chat input when agent is selected
-agents: ["SubagentA", "SubagentB"]       # Optional — restrict which subagents this agent can invoke (omit = all allowed)
-user-invocable: true                      # Optional — show in agent picker (default: true); false = subagent only
-disable-model-invocation: false          # Optional — prevent other agents from invoking this as subagent (default: false)
-handoffs: ["AgentB", "AgentC"]           # Optional — agents this agent can hand off to
+name: "agent-name"                        # Required - what you type after @ in Chat
+description: "Use when..."               # Required - triggers subagent delegation; keyword-rich
+tools: ["read", "search", "githubRepo"]  # Optional - tools this agent can use; omit = defaults; [] = none
+model: "Claude Sonnet 4.5 (copilot)"     # Optional - specific model to use
+agent: "ask"                              # Optional - agent mode: ask | agent | plan | or custom name
+argument-hint: "Repo or PR ref..."       # Optional - hint shown in chat input when agent is selected
+agents: ["SubagentA", "SubagentB"]       # Optional - restrict which subagents this agent can invoke (omit = all allowed)
+user-invocable: true                      # Optional - show in agent picker (default: true); false = subagent only
+disable-model-invocation: false          # Optional - prevent other agents from invoking this as subagent (default: false)
+handoffs: ["AgentB", "AgentC"]           # Optional - agents this agent can hand off to
 ---
 ```
 
@@ -573,9 +573,9 @@ The first available model in the array is used. Useful for environments where no
 | Setting | Default | Effect |
 |---------|---------|--------|
 | `user-invocable: true` | Default | Agent appears in `@` picker; users can invoke it directly |
-| `user-invocable: false` | — | Hidden from picker; only callable as a subagent from another agent |
+| `user-invocable: false` | - | Hidden from picker; only callable as a subagent from another agent |
 | `disable-model-invocation: false` | Default | Other agents can delegate to this agent based on description matching |
-| `disable-model-invocation: true` | — | This agent cannot be invoked as a subagent; user-invoked only |
+| `disable-model-invocation: true` | - | This agent cannot be invoked as a subagent; user-invoked only |
 
 ### All Tool Names
 
@@ -595,8 +595,8 @@ The first available model in the array is used. Useful for environments where no
 
 | Tool | What It Provides |
 |------|-----------------|
-| `githubRepo` | GitHub API — search issues, PRs, code |
-| `fetch` | HTTP fetch — read external URLs |
+| `githubRepo` | GitHub API - search issues, PRs, code |
+| `fetch` | HTTP fetch - read external URLs |
 | `createFile` | Create new files in the workspace |
 | `createDirectory` | Create new directories |
 | `editFiles` | Edit multiple files |
@@ -663,8 +663,8 @@ When asked to [task]:
 
 ## Accessibility Requirements
 - Use heading level 2 for the document title, level 3 for sections
-- Never use tables for lists — ordered or unordered lists are more predictable for screen reader navigation
-- Always include "empty state" messages — never omit a section silently
+- Never use tables for lists - ordered or unordered lists are more predictable for screen reader navigation
+- Always include "empty state" messages - never omit a section silently
 
 ## Scope Boundaries
 - You [do X]. You do NOT [do Y].
@@ -686,7 +686,7 @@ When asked to [task]:
 
 ---
 
-## 8. `.prompt.md` — Complete Format Reference
+## 8. `.prompt.md` - Complete Format Reference
 
 ### File Locations
 
@@ -699,12 +699,12 @@ When asked to [task]:
 
 ```yaml
 ---
-name: "command-name"                    # Optional — defaults to filename; the /command name
-description: "One-sentence description" # Optional — shown in slash command picker
-argument-hint: "PR ref or repo name"   # Optional — hint in chat input when command is selected
-agent: "agent"                          # Optional — agent mode: ask | agent | plan | or custom @agent-name
-model: "GPT-5 (copilot)"               # Optional — override model for this command
-tools: ["github/*", "createFile"]       # Optional — tools this command can use
+name: "command-name"                    # Optional - defaults to filename; the /command name
+description: "One-sentence description" # Optional - shown in slash command picker
+argument-hint: "PR ref or repo name"   # Optional - hint in chat input when command is selected
+agent: "agent"                          # Optional - agent mode: ask | agent | plan | or custom @agent-name
+model: "GPT-5 (copilot)"               # Optional - override model for this command
+tools: ["github/*", "createFile"]       # Optional - tools this command can use
 ---
 ```
 
@@ -728,16 +728,16 @@ When both the prompt and the referenced agent define tools, VS Code uses this pr
 ${input:parameterName:Prompt text shown to the user}
 ```
 
-- `parameterName` — internal identifier (no spaces)
+- `parameterName` - internal identifier (no spaces)
 - The text after the second `:` is shown to the user as a placeholder or tooltip
 - Multiple parameters are supported in one prompt file
 
 ```
-${input:repo:Target repository — e.g. owner/repo or leave blank for current workspace}
+${input:repo:Target repository - e.g. owner/repo or leave blank for current workspace}
 ${input:scope:Optional filter: label name, date range, or org:orgname}
 ```
 
-### Body — Referencing Tools and Files
+### Body - Referencing Tools and Files
 
 ```markdown
 Use #tool:<tool-name> to explicitly invoke a tool:
@@ -748,7 +748,7 @@ Reference workspace files with Markdown links:
 See the configuration in [preferences.md](.github/agents/preferences.md).
 ```
 
-### Example — Accessibility Update Command
+### Example - Accessibility Update Command
 
 ```markdown
 ---
@@ -787,9 +787,9 @@ For each finding include:
 
 ---
 
-## 9. Agent Skills (`SKILL.md`) — Complete Format Reference
+## 9. Agent Skills (`SKILL.md`) - Complete Format Reference
 
-A Skill is a folder — not a single file. The folder contains `SKILL.md` plus any scripts, templates, and reference documents the skill needs.
+A Skill is a folder - not a single file. The folder contains `SKILL.md` plus any scripts, templates, and reference documents the skill needs.
 
 ### Folder Structure
 
@@ -820,11 +820,11 @@ A Skill is a folder — not a single file. The folder contains `SKILL.md` plus a
 
 ```yaml
 ---
-name: skill-name                      # Required — 1-64 chars; lowercase alphanumeric + hyphens; must match folder name
-description: "Use when..."           # Required — keyword-rich trigger phrases for on-demand discovery
-argument-hint: "Optional input..."   # Optional — hint shown when skill is selected as slash command
-user-invocable: true                  # Optional — appear as slash command (default: true)
-disable-model-invocation: false       # Optional — prevent automatic loading by agents (default: false)
+name: skill-name                      # Required - 1-64 chars; lowercase alphanumeric + hyphens; must match folder name
+description: "Use when..."           # Required - keyword-rich trigger phrases for on-demand discovery
+argument-hint: "Optional input..."   # Optional - hint shown when skill is selected as slash command
+user-invocable: true                  # Optional - appear as slash command (default: true)
+disable-model-invocation: false       # Optional - prevent automatic loading by agents (default: false)
 ---
 ```
 
@@ -837,7 +837,7 @@ disable-model-invocation: false       # Optional — prevent automatic loading b
 | true | true | Appears as `/command`; does NOT auto-load |
 | false | true | Neither `/command` nor auto-load |
 
-### Progressive Loading — How VS Code Loads Skills
+### Progressive Loading - How VS Code Loads Skills
 
 1. **Discovery (~100 tokens):** Reads `name` and `description` to decide if the skill is relevant
 2. **Instructions (<5000 tokens):** Loads the full `SKILL.md` body when the skill is relevant
@@ -865,7 +865,7 @@ description: "Audit Markdown files for accessibility violations. Use for heading
 
 1. Run the audit script: [audit.sh](./scripts/audit.sh)
 2. Review output for heading hierarchy violations (H1→H3 skips)
-3. Check all links — flag bare URLs and non-descriptive text
+3. Check all links - flag bare URLs and non-descriptive text
 4. Verify alt text on all images
 5. Review the [WCAG reference](./references/wcag-quick-ref.md) for remediation guidance
 6. Report findings by risk level: High | Medium | Low
@@ -879,11 +879,11 @@ description: "Audit Markdown files for accessibility violations. Use for heading
 
 ---
 
-## 10. Hooks (`.json`) — Lifecycle Automation
+## 10. Hooks (`.json`) - Lifecycle Automation
 
-Hooks execute shell commands at specific points in an agent's lifecycle. They are deterministic — they run regardless of what the agent was prompted to do.
+Hooks execute shell commands at specific points in an agent's lifecycle. They are deterministic - they run regardless of what the agent was prompted to do.
 
-**Use hooks for enforcement, not guidance.** For behavior you want to enforce — blocking commands, auto-running formatters, requiring approval — use hooks. For behavior you want to encourage — coding standards, tone, output format — use instructions.
+**Use hooks for enforcement, not guidance.** For behavior you want to enforce - blocking commands, auto-running formatters, requiring approval - use hooks. For behavior you want to encourage - coding standards, tone, output format - use instructions.
 
 ### File Locations
 
@@ -894,7 +894,7 @@ Hooks execute shell commands at specific points in an agent's lifecycle. They ar
 | Workspace | `.claude/settings.json` | Yes |
 | User / Personal | `~/.claude/settings.json` | Personal only |
 
-Hooks from all locations are combined — workspace and user hooks do not override each other.
+Hooks from all locations are combined - workspace and user hooks do not override each other.
 
 ### Hook Events
 
@@ -973,15 +973,15 @@ Hooks receive JSON on `stdin`. They can return JSON on `stdout`:
 Permission decisions: `"allow"` | `"ask"` (prompt user) | `"deny"` (block the tool call)
 
 **Exit codes:**
-- `0` — success; agent continues
-- `2` — blocking error; agent stops
-- Other — non-blocking warning
+- `0` - success; agent continues
+- `2` - blocking error; agent stops
+- Other - non-blocking warning
 
 ---
 
-## 11. `preferences.md` — Agent Forge Personal Settings
+## 11. `preferences.md` - Agent Forge Personal Settings
 
-Copy `.github/agents/preferences.example.md` to `.github/agents/preferences.md`. The file is in `.gitignore` — your private settings stay only in your local fork.
+Copy `.github/agents/preferences.example.md` to `.github/agents/preferences.md`. The file is in `.gitignore` - your private settings stay only in your local fork.
 
 ### Full File Template
 
@@ -1114,7 +1114,7 @@ This shows: which files were found, which were loaded, which have errors, and fr
 
 ## 13. Further Reading
 
-For the broader ecosystem — the community plugin marketplace, MCP server integrations, and running agents in the cloud via GitHub Actions — see [Appendix W: GitHub Copilot & Agentic Reference](appendix-w-github-copilot-reference.md).
+For the broader ecosystem - the community plugin marketplace, MCP server integrations, and running agents in the cloud via GitHub Actions - see [Appendix W: GitHub Copilot & Agentic Reference](appendix-w-github-copilot-reference.md).
 
 ### Official accessibility.github.com Guides
 

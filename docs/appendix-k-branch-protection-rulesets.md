@@ -9,10 +9,10 @@
 
 1. [What Branch Protection Does](#1-what-branch-protection-does)
 2. [Common Branch Protection Rules](#2-common-branch-protection-rules)
-3. [Repository Rulesets — The Modern Approach](#3-repository-rulesets--the-modern-approach)
-4. [Why Your PR Cannot Be Merged — Diagnosis Guide](#4-why-your-pr-cannot-be-merged--diagnosis-guide)
+3. [Repository Rulesets - The Modern Approach](#3-repository-rulesets--the-modern-approach)
+4. [Why Your PR Cannot Be Merged - Diagnosis Guide](#4-why-your-pr-cannot-be-merged--diagnosis-guide)
 5. [Navigating the Merge Box with a Screen Reader](#5-navigating-the-merge-box-with-a-screen-reader)
-6. [Status Checks — What They Are and What They Mean](#6-status-checks--what-they-are-and-what-they-mean)
+6. [Status Checks - What They Are and What They Mean](#6-status-checks--what-they-are-and-what-they-mean)
 7. [Who Can Configure Branch Protection](#7-who-can-configure-branch-protection)
 8. [Workshop Repository Configuration Reference](#8-workshop-repository-configuration-reference)
 
@@ -42,22 +42,22 @@ The most common rule. The maintainer requires a minimum number of approving revi
 
 What this means for you:
 - Your PR shows a "1 review required" notice in the merge box
-- If a reviewer requests changes, their approval is revoked — you need at least one new approval after your latest push
+- If a reviewer requests changes, their approval is revoked - you need at least one new approval after your latest push
 - After you push new commits, re-request review from the original reviewer
 
-**Dismiss stale reviews:** Some repos have this enabled — whenever you push a new commit, all existing approvals are automatically withdrawn and you need a fresh review. This prevents sneaking in bad code after approval.
+**Dismiss stale reviews:** Some repos have this enabled - whenever you push a new commit, all existing approvals are automatically withdrawn and you need a fresh review. This prevents sneaking in bad code after approval.
 
 ### Required Status Checks
 
 Automated workflows (GitHub Actions or third-party CI) must complete successfully before merging is allowed.
 
 **Example checks you may see:**
-- `ci / build` — compiles the code
-- `ci / test` — runs the test suite
-- `lint` — code style checks
-- `accessibility-check` — automated accessibility scanning
-- `CodeQL` — security analysis
-- `netlify/deploy-preview` — preview deployment must succeed
+- `ci / build` - compiles the code
+- `ci / test` - runs the test suite
+- `lint` - code style checks
+- `accessibility-check` - automated accessibility scanning
+- `CodeQL` - security analysis
+- `netlify/deploy-preview` - preview deployment must succeed
 
 **What "Required" means:** The merge button is grayed out (or shows an error) until all required checks show a green checkmark. A failing or pending check blocks the merge.
 
@@ -67,7 +67,7 @@ Before merging, your PR branch must include all changes from `main`. This preven
 
 If your PR is behind `main`:
 - The merge box shows: "This branch is out of date with the base branch"
-- Button: "Update branch" — merges current `main` into your branch
+- Button: "Update branch" - merges current `main` into your branch
 - Alternative: Rebase your branch (only if the maintainer permits rebase merges)
 
 ### Require Signed Commits
@@ -76,25 +76,25 @@ All commits in the PR must have a Verified badge (see [Appendix D: Git Authentic
 
 ### Require Linear History
 
-Only squash merges or rebase merges are permitted — no merge commits. This keeps the commit history linear and readable.
+Only squash merges or rebase merges are permitted - no merge commits. This keeps the commit history linear and readable.
 
-If you see: "This repository requires a linear history" — the maintainer will squash or rebase merge your PR, not create a merge commit.
+If you see: "This repository requires a linear history" - the maintainer will squash or rebase merge your PR, not create a merge commit.
 
 ### Lock Branch
 
-A locked branch cannot receive any merges — it is effectively read-only. This is sometimes used for archived repositories or during release freezes.
+A locked branch cannot receive any merges - it is effectively read-only. This is sometimes used for archived repositories or during release freezes.
 
 ---
 
-## 3. Repository Rulesets — The Modern Approach
+## 3. Repository Rulesets - The Modern Approach
 
 **Repository Rulesets** (introduced in late 2023) are the next generation of branch protection. They extend branch protection rules with:
 
-- **Organization-level rules** — apply across all repos in an org from one place
-- **Bypass lists** — specific users or roles can be exempted from rules (e.g., release bots)
-- **Target multiple branches** — one ruleset can target a pattern like `release/*` or `v*`
-- **Violation insights** — audit log of when rules were bypassed and by whom
-- **Rule enforcement** — Active (enforced), Evaluate (only log violations, don't block), Disabled
+- **Organization-level rules** - apply across all repos in an org from one place
+- **Bypass lists** - specific users or roles can be exempted from rules (e.g., release bots)
+- **Target multiple branches** - one ruleset can target a pattern like `release/*` or `v*`
+- **Violation insights** - audit log of when rules were bypassed and by whom
+- **Rule enforcement** - Active (enforced), Evaluate (only log violations, don't block), Disabled
 
 ### Rulesets vs. Branch Protection Rules
 
@@ -113,15 +113,15 @@ Most repositories you encounter still use classic branch protection rules. Rules
 If you want to understand why certain rules apply to a branch:
 
 ```
-Repository → Insights tab → Rulesets (if you have access — contributors usually don't)
+Repository → Insights tab → Rulesets (if you have access - contributors usually don't)
 Or: Repository → Settings → Rules → Rulesets (admin only)
 ```
 
-Alternatively, PR merge box messages describe which rules are blocking — you don't need admin access to understand what's required.
+Alternatively, PR merge box messages describe which rules are blocking - you don't need admin access to understand what's required.
 
 ---
 
-## 4. Why Your PR Cannot Be Merged — Diagnosis Guide
+## 4. Why Your PR Cannot Be Merged - Diagnosis Guide
 
 When you open a PR and the merge button is grayed out or shows an error, the merge box tells you exactly what needs to happen. Here is how to read it.
 
@@ -131,7 +131,7 @@ When you open a PR and the merge button is grayed out or shows an error, the mer
 
 **What to do:**
 1. Request review from a codeowner or maintainer (right sidebar → Reviewers → request)
-2. Check if any reviews exist but requested changes — those count against you
+2. Check if any reviews exist but requested changes - those count against you
 3. Wait for the reviewer to submit their review
 4. Respond to requested changes by pushing new commits, then re-requesting review
 
@@ -140,22 +140,22 @@ When you open a PR and the merge button is grayed out or shows an error, the mer
 **What it means:** A required status check is pending or failing.
 
 **What to do:**
-1. Scroll down to the merge box — expand "Show all checks"
+1. Scroll down to the merge box - expand "Show all checks"
 2. Find the failing check → click "Details" to see the full log
 3. Fix the underlying issue (test failure, lint error, build error) in your branch
-4. Push new commits — checks re-run automatically
-5. Wait for checks to complete (typically 1–5 minutes for most CI)
+4. Push new commits - checks re-run automatically
+5. Wait for checks to complete (typically 1-5 minutes for most CI)
 
 **If checks pass on `main` but fail on your PR:** The issue is specific to your changes. Read the check log carefully.
 
-**If checks are stuck "in progress" for over 30 minutes:** The workflow runner may have an issue — contact the maintainer.
+**If checks are stuck "in progress" for over 30 minutes:** The workflow runner may have an issue - contact the maintainer.
 
 ### "This branch is out of date with the base branch"
 
 **What it means:** New commits were pushed to `main` after you created your PR branch. The maintainer requires everything to be current.
 
 **What to do:**
-- Click **"Update branch"** in the merge box — GitHub does a merge commit from `main` into your branch
+- Click **"Update branch"** in the merge box - GitHub does a merge commit from `main` into your branch
 - Or locally: `git fetch upstream && git rebase upstream/main` then force-push (only if you are comfortable with rebase)
 
 ### "Commits must have verified signatures"
@@ -164,7 +164,7 @@ When you open a PR and the merge button is grayed out or shows an error, the mer
 
 **What to do:**
 1. Enable commit signing locally before making more commits
-2. For existing unsigned commits, you need to rebase-rewrite them — this is advanced; ask the maintainer if there is a workaround
+2. For existing unsigned commits, you need to rebase-rewrite them - this is advanced; ask the maintainer if there is a workaround
 
 ### "Merging is blocked"
 
@@ -227,7 +227,7 @@ Log content is usually in a scrollable region: ↓ key scrolls through lines
 
 ---
 
-## 6. Status Checks — What They Are and What They Mean
+## 6. Status Checks - What They Are and What They Mean
 
 Status checks come from two sources:
 
@@ -247,7 +247,7 @@ jobs:
 
 ### Third-Party Status Checks
 
-Services like Netlify, Vercel, Codecov, and Snyk post status checks via the GitHub API. You will recognize them by their app name prefix (e.g., `netlify/deploy-preview — Deploy Preview ready`).
+Services like Netlify, Vercel, Codecov, and Snyk post status checks via the GitHub API. You will recognize them by their app name prefix (e.g., `netlify/deploy-preview - Deploy Preview ready`).
 
 ### Status Check States
 
@@ -255,10 +255,10 @@ Services like Netlify, Vercel, Codecov, and Snyk post status checks via the GitH
 |------|-------|---------|
 | Yellow circle | Pending | Running now or queued |
 | Green checkmark | Success | Passed, no issues |
-| Red X | Failure | Failed — PR cannot be merged until fixed |
+| Red X | Failure | Failed - PR cannot be merged until fixed |
 | Red circle | Error | Unexpected error in the check runner (not your code's fault) |
 | Grey circle | Skipped | Not relevant for this PR (conditional run) |
-| Neutral | Neutral | Informational — does not block merge |
+| Neutral | Neutral | Informational - does not block merge |
 
 ---
 
@@ -271,10 +271,10 @@ Services like Netlify, Vercel, Codecov, and Snyk post status checks via the GitH
 | Triage | PR merge box only | No |
 | Write | Settings → Rules (read-only in most cases) | No |
 | Maintain | Yes | Partial |
-| Admin | Yes | Yes — full control |
-| Org admin | Yes | Yes — including org-level rulesets |
+| Admin | Yes | Yes - full control |
+| Org admin | Yes | Yes - including org-level rulesets |
 
-As a workshop participant, you are typically a **contributor** to the main `accesswatch/agent-forge` repo and an **admin** of your own fork. On your fork, you can configure branch protection however you like — including disabling it entirely for practice purposes.
+As a workshop participant, you are typically a **contributor** to the main `accesswatch/agent-forge` repo and an **admin** of your own fork. On your fork, you can configure branch protection however you like - including disabling it entirely for practice purposes.
 
 ---
 
@@ -285,11 +285,11 @@ The `accesswatch/agent-forge` repository uses the following branch protection co
 | Rule | Setting |
 |------|---------|
 | Required reviews | 1 approving review |
-| Dismiss stale reviews | Yes — new commits require re-review |
+| Dismiss stale reviews | Yes - new commits require re-review |
 | Require status checks | `ci / build` and `ci / test` |
 | Up-to-date requirement | Yes |
 | Signed commits | No (to reduce friction for workshop participants) |
-| Restrict direct pushes | Yes — all changes must come through PRs |
+| Restrict direct pushes | Yes - all changes must come through PRs |
 
 **Workshop tip:** Your personal fork of `agent-forge` has no branch protection by default. If you want to practice the full "review before merge" workflow with a partner, you can add branch protection to your fork:
 
@@ -307,12 +307,12 @@ Then practice opening a PR on your fork and requesting your workshop partner's r
 
 ## Related Resources
 
-- [Appendix D — Git Authentication and Commit Signing](appendix-d-git-authentication.md)
-- [Appendix Q — GitHub Actions Workflows](appendix-q-github-actions-workflows.md)
-- [Appendix L — GitHub Security Features](appendix-l-github-security-features.md)
-- [Chapter 05 — Working with Pull Requests](../docs/05-working-with-pull-requests.md)
-- [Chapter 06 — Merge Conflicts](../docs/06-merge-conflicts.md)
+- [Appendix D - Git Authentication and Commit Signing](appendix-d-git-authentication.md)
+- [Appendix Q - GitHub Actions Workflows](appendix-q-github-actions-workflows.md)
+- [Appendix L - GitHub Security Features](appendix-l-github-security-features.md)
+- [Chapter 05 - Working with Pull Requests](../docs/05-working-with-pull-requests.md)
+- [Chapter 06 - Merge Conflicts](../docs/06-merge-conflicts.md)
 
 ---
 
-*Return to: [Resources](appendix-u-resources.md) | [Appendix L — Security Features](appendix-l-github-security-features.md)*
+*Return to: [Resources](appendix-u-resources.md) | [Appendix L - Security Features](appendix-l-github-security-features.md)*

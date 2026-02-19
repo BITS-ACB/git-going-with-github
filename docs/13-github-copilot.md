@@ -15,8 +15,8 @@
 
 1. [What is GitHub Copilot](#1-what-is-github-copilot)
 2. [Installing GitHub Copilot](#2-installing-github-copilot)
-3. [Inline Suggestions — Ghost Text Completions](#3-inline-suggestions--ghost-text-completions)
-4. [GitHub Copilot Chat — Conversational Assistance](#4-github-copilot-chat--conversational-assistance)
+3. [Inline Suggestions - Ghost Text Completions](#3-inline-suggestions--ghost-text-completions)
+4. [GitHub Copilot Chat - Conversational Assistance](#4-github-copilot-chat--conversational-assistance)
 5. [Effective Prompting for Documentation Work](#5-effective-prompting-for-documentation-work)
 6. [Custom Instructions vs Custom Agents](#6-custom-instructions-vs-custom-agents)
 7. [Using Accessible View with Copilot Responses](#7-using-accessible-view-with-copilot-responses)
@@ -35,7 +35,7 @@ GitHub Copilot is an AI pair programmer that suggests code and text completions 
 - Draft documentation, issue responses, and commit messages
 - Search for files and symbols across your workspace
 
-**For this workshop:** Copilot helps with Markdown documentation, issue triage, PR descriptions, and commit messages — not just code.
+**For this workshop:** Copilot helps with Markdown documentation, issue triage, PR descriptions, and commit messages - not just code.
 
 **Copilot Free tier:** Available for all GitHub users. Provides access to inline suggestions and Copilot Chat with usage limits. No payment required for this workshop.
 
@@ -86,7 +86,7 @@ After installation:
 
 ---
 
-## 3. Inline Suggestions — Ghost Text Completions
+## 3. Inline Suggestions - Ghost Text Completions
 
 Copilot suggests completions as you type, displayed as gray "ghost text" after your cursor. In screen reader mode, VS Code announces suggestions rather than showing them visually.
 
@@ -100,18 +100,18 @@ Copilot suggests completions as you type, displayed as gray "ghost text" after y
 <details>
 <summary>Visual / mouse users</summary>
 
-The suggestion appears as **gray "ghost text"** after your cursor — a preview of what Copilot thinks you want to type next. It's there but not inserted; press `Tab` to accept it or `Escape` to dismiss.
+The suggestion appears as **gray "ghost text"** after your cursor - a preview of what Copilot thinks you want to type next. It's there but not inserted; press `Tab` to accept it or `Escape` to dismiss.
 
 </details>
 
 <details>
 <summary>Screen reader users (NVDA / JAWS / VoiceOver)</summary>
 
-Suggestions are **announced via ARIA live regions** — ghost text is not visually meaningful to you so VS Code reads it instead:
+Suggestions are **announced via ARIA live regions** - ghost text is not visually meaningful to you so VS Code reads it instead:
 - **NVDA/JAWS:** "Suggestion available" (or reads the suggestion text, depending on verbosity settings)
 - **VoiceOver:** Announces suggestions in accessible form
 
-Press `Alt+F2` (Mac: `Option+F2`) to open the suggestion in **Accessible View** — this gives you the complete suggestion text in a static, fully readable panel without streaming.
+Press `Alt+F2` (Mac: `Option+F2`) to open the suggestion in **Accessible View** - this gives you the complete suggestion text in a static, fully readable panel without streaming.
 
 </details>
 
@@ -138,7 +138,7 @@ Press `Alt+F2` (Mac: `Option+F2`) to open the suggestion in **Accessible View** 
 > **Visual users:** If Copilot's ghost text is getting in the way, skip to "Disabling Inline Suggestions" below.
 
 <details>
-<summary>Screen reader users — tuning announcement verbosity</summary>
+<summary>Screen reader users - tuning announcement verbosity</summary>
 
 **If suggestions are announced too frequently or are intrusive:**
 
@@ -212,7 +212,7 @@ If suggestions are distracting:
 
 ---
 
-## 4. GitHub Copilot Chat — Conversational Assistance
+## 4. GitHub Copilot Chat - Conversational Assistance
 
 Copilot Chat is a full conversation interface where you ask questions, request explanations, and have content drafted.
 
@@ -236,9 +236,9 @@ Copilot Chat has four modes, selected from a dropdown at the bottom of the Chat 
 
 | Mode | How It Works | Best For |
 |------|-------------|----------|
-| **Ask** (default) | Conversational Q&A — Copilot explains, suggests, and answers but does not edit files directly | Questions, explanations, understanding unfamiliar code, reviewing content |
-| **Edit** | You define a "working set" of files; Copilot proposes edits and shows a diff you approve or reject — nothing changes without your confirmation | Targeted, multi-file changes where you want full control |
-| **Agent** | Copilot works autonomously — it decides which files to open, reads and writes code, and runs terminal commands to complete the task | Larger tasks where you want Copilot to drive end-to-end |
+| **Ask** (default) | Conversational Q&A - Copilot explains, suggests, and answers but does not edit files directly | Questions, explanations, understanding unfamiliar code, reviewing content |
+| **Edit** | You define a "working set" of files; Copilot proposes edits and shows a diff you approve or reject - nothing changes without your confirmation | Targeted, multi-file changes where you want full control |
+| **Agent** | Copilot works autonomously - it decides which files to open, reads and writes code, and runs terminal commands to complete the task | Larger tasks where you want Copilot to drive end-to-end |
 | **Plan** | Copilot produces a step-by-step implementation plan before writing any code; you review and approve the plan first | Complex features where you want to validate the approach before any changes are made |
 
 **Switching modes:**
@@ -248,19 +248,19 @@ Copilot Chat has four modes, selected from a dropdown at the bottom of the Chat 
 
 **Recommended mode for beginners:** Start with **Ask** to learn how Copilot responds to your questions, then explore **Edit** mode for making changes with full visibility into what Copilot touches. **Agent** mode is powerful but works best once you're comfortable reviewing its output.
 
-> **Note:** **Plan** mode was introduced in October 2025 (VS Code 1.106) and is available as a public preview. Plan mode lets you get an AI-generated implementation plan before any code is written — useful for understanding what a complex change will involve.
+> **Note:** **Plan** mode was introduced in October 2025 (VS Code 1.106) and is available as a public preview. Plan mode lets you get an AI-generated implementation plan before any code is written - useful for understanding what a complex change will involve.
 
 ### Choosing a Model
 
 Copilot gives you access to AI models from OpenAI, Anthropic (Claude), Google (Gemini), xAI (Grok), and others. The **model picker** is a button at the bottom of the Chat input area, next to the mode selector, showing the current model name (e.g., "Auto" or "Claude Sonnet 4.6").
 
-**When "Auto" is selected** (the default), Copilot automatically chooses the best model for each request — lighter models for quick questions, more capable models for complex reasoning. Auto mode has been generally available since December 2025. You can override it whenever you want a specific model.
+**When "Auto" is selected** (the default), Copilot automatically chooses the best model for each request - lighter models for quick questions, more capable models for complex reasoning. Auto mode has been generally available since December 2025. You can override it whenever you want a specific model.
 
 **Quick guidance:**
 - **Free-tier users:** GPT-4.1 and GPT-5 mini are available at no cost and handle most everyday tasks well
 - **Need deep reasoning/debugging?** Try Claude Sonnet 4.6 or GPT-5.2 (1× premium requests)
 - **Running Agent mode?** GPT-5.1-Codex-Max or GPT-5.2-Codex are optimized for autonomous tasks
-- **High cost to avoid unless needed:** Claude Opus 4.6 (3× cost) — powerful but reserve for the most demanding work
+- **High cost to avoid unless needed:** Claude Opus 4.6 (3× cost) - powerful but reserve for the most demanding work
 
 For the complete model comparison, strengths, weaknesses, and plan availability, see [Appendix X: GitHub Copilot AI Models Reference](appendix-x-copilot-models.md).
 
@@ -282,8 +282,8 @@ For the complete model comparison, strengths, weaknesses, and plan availability,
    - Each message is a separate element
 
 4. **Action buttons**
-   - "Clear Chat" — start a new conversation
-   - "View in Editor" — open response in a new file
+   - "Clear Chat" - start a new conversation
+   - "View in Editor" - open response in a new file
 
 ### Screen Reader Navigation in Chat
 
@@ -438,7 +438,7 @@ Check this Markdown for accessibility problems:
 ```
 Write a section based on this outline:
 
-## Timeline View — File History
+## Timeline View - File History
 - What Timeline shows
 - How to open it (keyboard)
 - How screen readers announce each commit
@@ -454,7 +454,7 @@ Copilot's first response is a draft. Refine it:
 **Follow-up prompts:**
 
 ```
-Make it shorter — reduce to 5 bullet points
+Make it shorter - reduce to 5 bullet points
 
 Add more detail about what NVDA announces at each step
 
@@ -465,7 +465,7 @@ Add a "Common Mistakes" section at the end
 Format this as a table instead of a bulleted list
 ```
 
-Copilot remembers the conversation context — just say what to change.
+Copilot remembers the conversation context - just say what to change.
 
 ---
 
@@ -514,7 +514,7 @@ Two distinct tools shape how Copilot behaves. Understanding the difference is cr
 
 **When active:** Every time Copilot generates a suggestion (inline or in Chat)
 
-**You never have to ask for these — Copilot simply follows them.**
+**You never have to ask for these - Copilot simply follows them.**
 
 ### Custom Agents
 
@@ -529,11 +529,11 @@ Two distinct tools shape how Copilot behaves. Understanding the difference is cr
 - Execute multi-step workflows
 
 **Example agent names:**
-- `@daily-briefing` — Summarize repository activity
-- `@issue-tracker` — Find and prioritize issues
-- `@pr-review` — Generate PR review documentation
-- `@analytics` — Team contribution metrics
-- `@insiders-a11y-tracker` — Monitor accessibility changes
+- `@daily-briefing` - Summarize repository activity
+- `@issue-tracker` - Find and prioritize issues
+- `@pr-review` - Generate PR review documentation
+- `@analytics` - Team contribution metrics
+- `@insiders-a11y-tracker` - Monitor accessibility changes
 
 **When active:** Only when you type `@agent-name` in Copilot Chat
 
@@ -543,11 +543,11 @@ See [Chapter 16: Agent Forge](16-agent-forge.md) for complete agent documentatio
 
 | | Custom Instructions | Custom Agent |
 |---|---|---|
-| **When active** | Background — every interaction | On-demand — you type `@agent-name` |
+| **When active** | Background - every interaction | On-demand - you type `@agent-name` |
 | **Defined in** | `.github/copilot-instructions.md` | `.github/agents/[name].agent.md` |
 | **Tool access** | Standard Copilot tools | Can restrict or grant specific permissions |
 | **Best for** | Broad coding standards and preferences | Focused, repeatable, specialized tasks |
-| **Requires invocation** | No — always on | Yes — explicit trigger |
+| **Requires invocation** | No - always on | Yes - explicit trigger |
 
 ### Using Both Together
 
@@ -562,7 +562,7 @@ See [Chapter 16: Agent Forge](16-agent-forge.md) for complete agent documentatio
 4. You ask Copilot Chat to fix it: "Fix the heading hierarchy in this file"
 5. Copilot's fix follows your custom instructions (uses semantic HTML, adds ARIA where needed)
 
-**Both work together — instructions guide every response, agents automate specific workflows.**
+**Both work together - instructions guide every response, agents automate specific workflows.**
 
 ---
 
@@ -578,11 +578,11 @@ Custom instructions can be set at three levels. Each level cascades to narrower 
 | **Repository** | `.github/copilot-instructions.md` | Overrides org instructions; applies to one repo |
 | **Personal** | GitHub.com → Settings → Copilot → Instructions | Your own preferences; highest priority |
 
-#### Do's — What Makes Instructions Effective
+#### Do's - What Makes Instructions Effective
 
 **Use normative language: MUST, MUST NOT, SHOULD, SHOULD NOT**
 
-Most language models respond well to normative language. These terms reduce ambiguity and make rules clearly mandatory versus optional — the same approach WCAG itself uses:
+Most language models respond well to normative language. These terms reduce ambiguity and make rules clearly mandatory versus optional - the same approach WCAG itself uses:
 
 ```
 ## Keyboard Navigation
@@ -602,7 +602,7 @@ DeprecatedButton SHOULD NOT be used; use NewAccessibleButton instead.
 
 **Use lists and checklists to structure instructions**
 
-Lists provide clear guardrails — Copilot follows them step by step:
+Lists provide clear guardrails - Copilot follows them step by step:
 
 ```
 ## Checklist for evaluating 1.3.1 Info and Relationships
@@ -613,14 +613,14 @@ Lists provide clear guardrails — Copilot follows them step by step:
 
 **Reference and enforce your design system**
 
-Document which components to use and which are deprecated. Design systems evolve — keep instructions current:
+Document which components to use and which are deprecated. Design systems evolve - keep instructions current:
 
 ```
 Use AccessibleModal from @company/ui-kit@3.x.
 LegacyDialog MUST NOT be used in any new code.
 ```
 
-#### Don'ts — Common Instruction Mistakes
+#### Don'ts - Common Instruction Mistakes
 
 **Don't paste entire WCAG guidelines**
 
@@ -628,7 +628,7 @@ Copilot is already trained on WCAG. Pasting the full text wastes context space a
 
 **Don't reference external links**
 
-By default, Copilot does not access external links in custom instructions — this is a deliberate security feature. A URL like `https://www.w3.org/WAI/WCAG21/` will not be fetched. Write the relevant rule directly.
+By default, Copilot does not access external links in custom instructions - this is a deliberate security feature. A URL like `https://www.w3.org/WAI/WCAG21/` will not be fetched. Write the relevant rule directly.
 
 **Don't reference private repositories**
 
@@ -636,7 +636,7 @@ Copilot cannot access private repository content from within custom instructions
 
 #### Additional Guidance
 
-**Role-based prompting** — You can give Copilot a persona to shape how it responds:
+**Role-based prompting** - You can give Copilot a persona to shape how it responds:
 
 ```
 As the lead accessibility expert on your team, your primary focus is ensuring
@@ -676,12 +676,12 @@ Copilot Chat responses stream in token by token. This is visually nice but can f
 
 1. Type your prompt in Chat input
 2. Press `Ctrl+Enter` (Mac: `Cmd+Enter`) to send
-3. Press `Alt+F2` (Mac: `Option+F2`) to open Accessible View — you can open it immediately after sending, before the response finishes
+3. Press `Alt+F2` (Mac: `Option+F2`) to open Accessible View - you can open it immediately after sending, before the response finishes
 4. Follow along as the response streams in the Accessible View in real-time
 5. Read or re-read any section with `Arrow` keys
 6. Press `Escape` to close Accessible View and return to Chat
 
-> **VS Code December 2025 update:** The Accessible View now updates dynamically as responses stream in. You no longer need to wait for a response to finish before opening it — open `Alt+F2` right after sending and follow the response as it arrives.
+> **VS Code December 2025 update:** The Accessible View now updates dynamically as responses stream in. You no longer need to wait for a response to finish before opening it - open `Alt+F2` right after sending and follow the response as it arrives.
 
 **Benefits:**
 - Follow responses live without waiting
@@ -700,7 +700,7 @@ Copilot Chat responses stream in token by token. This is visually nice but can f
 5. To insert the suggestion at your cursor: press `Ctrl+/` (Mac: `Cmd+/`)
 6. To close without inserting: press `Escape`, then `Tab` to accept or `Escape` to reject
 
-**`Ctrl+/` (Mac: `Cmd+/`) inserts the suggestion directly from Accessible View** — you don’t need to close the view first and then press `Tab`. This is the recommended workflow for screen reader users.
+**`Ctrl+/` (Mac: `Cmd+/`) inserts the suggestion directly from Accessible View** - you don’t need to close the view first and then press `Tab`. This is the recommended workflow for screen reader users.
 
 **This is especially useful for multi-line suggestions where the ghost text is hard to review.**
 
@@ -818,14 +818,14 @@ When Copilot suggests code or Markdown:
 
 **Time:** 3 minutes | **What you need:** VS Code with Copilot Chat extension installed
 
-1. **Open Copilot Chat** — Press `Ctrl+Shift+I` (Mac: `Cmd+Shift+I`). Your screen reader announces the chat panel.
-2. **Ask a question** — Type: `What does the CONTRIBUTING.md file in this repository say about how to submit a pull request?` Press `Enter`.
-3. **Read the response** — Press `Ctrl+Shift+A` to open the Accessible View if your screen reader doesn't read the response automatically. The response appears as plain text you can arrow through.
-4. **Try a follow-up** — Type: `Summarize that in 3 bullet points` and press `Enter`. Copilot remembers the context from your first question.
+1. **Open Copilot Chat** - Press `Ctrl+Shift+I` (Mac: `Cmd+Shift+I`). Your screen reader announces the chat panel.
+2. **Ask a question** - Type: `What does the CONTRIBUTING.md file in this repository say about how to submit a pull request?` Press `Enter`.
+3. **Read the response** - Press `Ctrl+Shift+A` to open the Accessible View if your screen reader doesn't read the response automatically. The response appears as plain text you can arrow through.
+4. **Try a follow-up** - Type: `Summarize that in 3 bullet points` and press `Enter`. Copilot remembers the context from your first question.
 
 **You're done.** You just had a conversation with an AI about your codebase.
 
-> **What success feels like:** Copilot answered a real question about real files in your repository. You can use this same pattern to ask about code, documentation, or anything else in the project — and the Accessible View ensures you can always read the response.
+> **What success feels like:** Copilot answered a real question about real files in your repository. You can use this same pattern to ask about code, documentation, or anything else in the project - and the Accessible View ensures you can always read the response.
 
 ---
 

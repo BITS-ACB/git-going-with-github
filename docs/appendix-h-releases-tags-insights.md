@@ -7,7 +7,7 @@
 
 ## Table of Contents
 
-**Part 1 — Releases and Tags**
+**Part 1 - Releases and Tags**
 
 1. [What Is a Release?](#1-what-is-a-release)
 2. [Releases vs. Tags vs. Branches](#2-releases-vs-tags-vs-branches)
@@ -18,13 +18,13 @@
 7. [Draft and Pre-Release States](#7-draft-and-pre-release-states)
 8. [Agent Forge: `/draft-release`](#8-agent-forge-draft-release)
 
-**Part 2 — Repository Insights**
+**Part 2 - Repository Insights**
 
 9. [What Is the Insights Tab?](#9-what-is-the-insights-tab)
 10. [Navigating to Insights](#10-navigating-to-insights)
-11. [Pulse — Recent Activity Summary](#11-pulse--recent-activity-summary)
-12. [Contributors — Who Builds the Project](#12-contributors--who-builds-the-project)
-13. [Traffic — Who Visits the Repo](#13-traffic--who-visits-the-repo)
+11. [Pulse - Recent Activity Summary](#11-pulse--recent-activity-summary)
+12. [Contributors - Who Builds the Project](#12-contributors--who-builds-the-project)
+13. [Traffic - Who Visits the Repo](#13-traffic--who-visits-the-repo)
 14. [Commits and Code Frequency](#14-commits-and-code-frequency)
 15. [Dependency Graph](#15-dependency-graph)
 16. [Network and Forks](#16-network-and-forks)
@@ -34,7 +34,7 @@
 
 ---
 
-## Part 1 — Releases and Tags
+## Part 1 - Releases and Tags
 
 ## 1. What Is a Release?
 
@@ -48,7 +48,7 @@ For software projects, a release typically includes:
 
 For documentation-only or non-software projects, releases are often used to mark stable checkpoints or versions of a document.
 
-**When your PR gets merged:** Your change becomes part of the code on the default branch. It will be *included* in the next release whenever the maintainer decides to publish one — this might be days, weeks, or months away depending on the project's release cadence.
+**When your PR gets merged:** Your change becomes part of the code on the default branch. It will be *included* in the next release whenever the maintainer decides to publish one - this might be days, weeks, or months away depending on the project's release cadence.
 
 ---
 
@@ -59,7 +59,7 @@ These three concepts are closely related:
 | Concept | What It Is | Lives |
 |---|---|---|
 | **Branch** | A movable pointer to the latest commit on a line of work | Permanently moves as commits are added |
-| **Tag** | A fixed pointer to a single specific commit | Never moves — always points to the same commit |
+| **Tag** | A fixed pointer to a single specific commit | Never moves - always points to the same commit |
 | **Release** | A tag + release notes + optional downloadable assets published on GitHub | Based on a tag |
 
 **The relationship:**
@@ -95,7 +95,7 @@ Each release appears as a section with:
 - The tag name
 - Release notes (the main body)
 - Asset downloads (if included)
-- Source code download links (always present — auto-generated zip/tar.gz)
+- Source code download links (always present - auto-generated zip/tar.gz)
 
 **Navigation:**
 ```
@@ -145,7 +145,7 @@ Release notes document what changed. High-quality release notes categorize chang
 ## What's New in v2.1.0
 
 ### Breaking Changes
-- The `preferences.md` format has changed — see the migration guide
+- The `preferences.md` format has changed - see the migration guide
 
 ### New Features
 - Added `/project-status` command (#42, @alice)
@@ -172,10 +172,10 @@ This section is relevant if you become a maintainer or contribute to a project t
 ### Creating a Release from the GitHub UI
 
 1. Navigate to `github.com/owner/repo/releases/new`
-2. **Choose a tag:** Type a new version tag (e.g., `v2.1.0`) — GitHub will create it on publish, or select an existing tag if you already created one
+2. **Choose a tag:** Type a new version tag (e.g., `v2.1.0`) - GitHub will create it on publish, or select an existing tag if you already created one
 3. **Choose a target branch:** The branch the tag will be applied to (usually `main`)
 4. **Release title:** Usually the same as the tag (e.g., `v2.1.0`)
-5. **Release notes:** Write manually, or click **"Generate release notes"** — GitHub auto-generates from merged PR titles since the last release
+5. **Release notes:** Write manually, or click **"Generate release notes"** - GitHub auto-generates from merged PR titles since the last release
 6. **Assets:** Optionally attach compiled binaries or other files
 7. **Pre-release toggle:** Mark as pre-release if it's alpha/beta
 8. **Draft toggle:** Save as draft to prepare without publishing immediately
@@ -183,7 +183,7 @@ This section is relevant if you become a maintainer or contribute to a project t
 
 ### Using Agent Forge for Release Notes
 
-The `/draft-release` command generates structured release notes automatically from your merged PRs — much faster and more consistent than writing them manually. See [Section 8](#8-agent-forge-draft-release).
+The `/draft-release` command generates structured release notes automatically from your merged PRs - much faster and more consistent than writing them manually. See [Section 8](#8-agent-forge-draft-release).
 
 ---
 
@@ -231,15 +231,15 @@ The `/draft-release` command automates release note generation from your merged 
 **Full Changelog:** https://github.com/accesswatch/agent-forge/compare/v2.0.0...v2.1.0
 ```
 
-> **See also:** The `/release-prep` command runs a complete pre-release checklist (milestone status, open PRs, CI health, security, and then generates release notes) — useful when preparing a release from scratch rather than just generating notes.
+> **See also:** The `/release-prep` command runs a complete pre-release checklist (milestone status, open PRs, CI health, security, and then generates release notes) - useful when preparing a release from scratch rather than just generating notes.
 
 ---
 
-## Part 2 — Repository Insights
+## Part 2 - Repository Insights
 
 ## 9. What Is the Insights Tab?
 
-The Insights tab shows quantitative activity data for a repository. It is primarily read-only and chart-heavy — but all underlying data is also presented in tables that screen readers can navigate.
+The Insights tab shows quantitative activity data for a repository. It is primarily read-only and chart-heavy - but all underlying data is also presented in tables that screen readers can navigate.
 
 **Who can see Insights:**
 - Anyone can see Insights on a public repository
@@ -269,12 +269,12 @@ T → navigate the repository tab bar
 
 ---
 
-## 11. Pulse — Recent Activity Summary
+## 11. Pulse - Recent Activity Summary
 
 **Pulse** is the Insights landing page. It summarizes activity in a chosen time period (last 24 hours, 7 days, or 30 days):
 
-- **Open issues / Closed issues** — net change in the time period
-- **Open pull requests / Merged pull requests / Closed pull requests** — with counts
+- **Open issues / Closed issues** - net change in the time period
+- **Open pull requests / Merged pull requests / Closed pull requests** - with counts
 - **Authors:** N contributors pushed M commits to N branches
 - A list of merged PRs (each linked to the PR)
 - A list of proposed PRs (open)
@@ -294,7 +294,7 @@ K → Navigate all links
 
 ---
 
-## 12. Contributors — Who Builds the Project
+## 12. Contributors - Who Builds the Project
 
 The Contributors view shows a bar chart of commits over time, with each contributor represented by a different color. Below the chart is a sortable table.
 
@@ -311,7 +311,7 @@ The Contributors view shows a bar chart of commits over time, with each contribu
 - You can link to your section (`github.com/owner/repo/graphs/contributors`) as proof of contribution
 
 **Screen reader:**
-The chart is a canvas graphic — not directly readable. The table below it is fully accessible. Navigate with `T` to reach the table, then `Tab` for sorting controls.
+The chart is a canvas graphic - not directly readable. The table below it is fully accessible. Navigate with `T` to reach the table, then `Tab` for sorting controls.
 
 ```
 T → Contributors table
@@ -322,7 +322,7 @@ K → Links to each contributor's filtered commit list
 
 ---
 
-## 13. Traffic — Who Visits the Repo
+## 13. Traffic - Who Visits the Repo
 
 **Traffic** shows who is viewing and cloning the repository. Available only to repository owners and collaborators with push access.
 
@@ -345,7 +345,7 @@ K → Links to each contributor's filtered commit list
 
 **Commits** shows commit frequency over the past year, by week. Useful for identifying:
 - Active development periods (many commits)
-- Dormant periods (no commits) — a project with 6+ months of inactivity may be unmaintained
+- Dormant periods (no commits) - a project with 6+ months of inactivity may be unmaintained
 - Release sprints (burst of commits before a release tag)
 
 **Code Frequency** shows additions and deletions per week as an area chart. A healthy codebase has more additions than deletions until it matures, then stabilizes.
@@ -365,7 +365,7 @@ The **Dependency Graph** shows:
 - What your project depends on (libraries, packages)
 - What depends on your project (if others import your repo)
 
-**Dependents** — repositories that depend on this one — is the "used by" count you see on the right sidebar of popular packages.
+**Dependents** - repositories that depend on this one - is the "used by" count you see on the right sidebar of popular packages.
 
 **Enabling/viewing:**
 - Settings → Security & Analysis → Dependency graph → Enable
@@ -377,11 +377,11 @@ The **Dependency Graph** shows:
 
 ## 16. Network and Forks
 
-The **Network** view shows a graphical branch/fork network — who has forked the repo, what branches exist, and how they diverge.
+The **Network** view shows a graphical branch/fork network - who has forked the repo, what branches exist, and how they diverge.
 
 **Screen reader note:** The network graph is a canvas visualization not accessible to screen readers. The underlying fork list is accessible separately at `github.com/owner/repo/forks`.
 
-**The forks list** (at `/forks`) is a simple table of who forked the repo — navigable with standard table navigation.
+**The forks list** (at `/forks`) is a simple table of who forked the repo - navigable with standard table navigation.
 
 ---
 
@@ -454,7 +454,7 @@ K → Navigate sidebar links: Pulse, Contributors, Traffic, Commits, Code freque
 Enter → Open that Insights view
 ```
 
-**Charts and graphs — general strategy:**
+**Charts and graphs - general strategy:**
 
 Most Insights charts are canvas or SVG visuals. They announce as "image" or "graphic" to screen readers. **Skip the chart and use the data table or list below it**, which contains the same information in accessible form.
 ```
@@ -495,7 +495,7 @@ Output includes:
 
 ### `/team-dashboard`
 
-Shows team-wide activity across tracked repos — who contributed what, response times, review coverage:
+Shows team-wide activity across tracked repos - who contributed what, response times, review coverage:
 
 ```
 /team-dashboard

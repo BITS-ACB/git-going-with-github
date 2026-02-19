@@ -6,7 +6,7 @@ This guide is for people who are new to contributing to open source software. It
 
 ## What Is Open Source?
 
-Open source software is software whose source code is publicly available. Anyone can read it, use it, and — in most cases — contribute to it. Contributions can include:
+Open source software is software whose source code is publicly available. Anyone can read it, use it, and - in most cases - contribute to it. Contributions can include:
 
 - Fixing bugs in the software
 - Writing or improving documentation
@@ -21,7 +21,7 @@ You do not need to be a professional developer to contribute. Documentation, acc
 
 ## Who Can Contribute?
 
-[TODO: Add a paragraph explaining that contributors come from all backgrounds, skill levels, and countries. Emphasize that using assistive technology is not a barrier to contribution — in fact, AT users bring a perspective that improves projects for everyone.]
+[TODO: Add a paragraph explaining that contributors come from all backgrounds, skill levels, and countries. Emphasize that using assistive technology is not a barrier to contribution - in fact, AT users bring a perspective that improves projects for everyone.]
 
 ---
 
@@ -29,10 +29,10 @@ You do not need to be a professional developer to contribute. Documentation, acc
 
 A good first contribution is:
 
-- **Specific** — it addresses one problem clearly
-- **Scoped** — it does not try to fix everything at once
-- **Described** — the PR or issue explains what changed and why
-- **Tested** — for documentation, this means reading it aloud with your screen reader before submitting
+- **Specific** - it addresses one problem clearly
+- **Scoped** - it does not try to fix everything at once
+- **Described** - the PR or issue explains what changed and why
+- **Tested** - for documentation, this means reading it aloud with your screen reader before submitting
 
 ---
 

@@ -1,15 +1,15 @@
 # Appendix L: GitHub Security Features
 ## Dependabot, Secret Scanning, Code Scanning, and Private Advisories
 
-> **Who this is for:** Anyone contributing to open source repositories needs to understand how GitHub protects code and what security alerts mean. This appendix explains the GitHub Security tab, how to interpret and respond to alerts, and how to responsibly report vulnerabilities — including in `accesswatch/agent-forge`.
+> **Who this is for:** Anyone contributing to open source repositories needs to understand how GitHub protects code and what security alerts mean. This appendix explains the GitHub Security tab, how to interpret and respond to alerts, and how to responsibly report vulnerabilities - including in `accesswatch/agent-forge`.
 
 ---
 
 ## Quick Navigation
 
-1. [The Security Tab — What It Contains](#1-the-security-tab--what-it-contains)
-2. [Dependabot — Automated Dependency Updates](#2-dependabot--automated-dependency-updates)
-3. [Secret Scanning — Preventing Credential Leaks](#3-secret-scanning--preventing-credential-leaks)
+1. [The Security Tab - What It Contains](#1-the-security-tab--what-it-contains)
+2. [Dependabot - Automated Dependency Updates](#2-dependabot--automated-dependency-updates)
+3. [Secret Scanning - Preventing Credential Leaks](#3-secret-scanning--preventing-credential-leaks)
 4. [Code Scanning and CodeQL](#4-code-scanning-and-codeql)
 5. [Private Vulnerability Reporting](#5-private-vulnerability-reporting)
 6. [The SECURITY.md File](#6-the-securitymd-file)
@@ -19,7 +19,7 @@
 
 ---
 
-## 1. The Security Tab — What It Contains
+## 1. The Security Tab - What It Contains
 
 Every GitHub repository has a **Security tab** in its navigation bar. What you see there depends on whether you are a contributor with elevated access or a public viewer.
 
@@ -39,27 +39,27 @@ Every GitHub repository has a **Security tab** in its navigation bar. What you s
 ```
 On any repository page:
 Tab navigation → secondary nav region → "Security" link → Enter
-Or: G then S (GitHub keyboard shortcut — enable Focus Mode first)
+Or: G then S (GitHub keyboard shortcut - enable Focus Mode first)
 ```
 
 ---
 
-## 2. Dependabot — Automated Dependency Updates
+## 2. Dependabot - Automated Dependency Updates
 
 Dependabot is GitHub's automated dependency monitoring and update system. It does two things:
 
 ### Dependabot Alerts
 
-When a known security vulnerability (CVE — Common Vulnerability and Exposure) is discovered in a package your project depends on, GitHub creates a **Dependabot alert**.
+When a known security vulnerability (CVE - Common Vulnerability and Exposure) is discovered in a package your project depends on, GitHub creates a **Dependabot alert**.
 
 **Alert severity levels:**
 
 | Level | CVSS Score Range | What it means |
 |-------|-----------------|---------------|
-| **Critical** | 9.0–10.0 | Exploit likely, wide impact — fix immediately |
-| **High** | 7.0–8.9 | Significant risk — fix this sprint |
-| **Medium** | 4.0–6.9 | Some risk with specific conditions — schedule fix |
-| **Low** | 0.1–3.9 | Low likelihood of exploitation — fix when convenient |
+| **Critical** | 9.0-10.0 | Exploit likely, wide impact - fix immediately |
+| **High** | 7.0-8.9 | Significant risk - fix this sprint |
+| **Medium** | 4.0-6.9 | Some risk with specific conditions - schedule fix |
+| **Low** | 0.1-3.9 | Low likelihood of exploitation - fix when convenient |
 
 **What a dependency alert looks like:**
 
@@ -79,7 +79,7 @@ modify Object.prototype leading to denial of service or remote code execution.
 1. Read the advisory to understand the vulnerability scope
 2. Check whether the project actually uses the vulnerable code path
 3. The fix is almost always: update the dependency to the fixed version
-4. Dependabot Security Updates may have already opened a PR — check the PRs tab
+4. Dependabot Security Updates may have already opened a PR - check the PRs tab
 
 ### Dependabot Security Updates
 
@@ -113,7 +113,7 @@ updates:
 
 ---
 
-## 3. Secret Scanning — Preventing Credential Leaks
+## 3. Secret Scanning - Preventing Credential Leaks
 
 Secret scanning detects if you accidentally commit tokens, API keys, passwords, or other credentials to a repository.
 
@@ -136,12 +136,12 @@ remote:   location: line 5
 
 1. Remove the secret from the file immediately
 2. Rotate the exposed credential (GitHub will automatically revoke detected GitHub tokens)
-3. If it was a false positive, you can bypass with justification — but investigate first
+3. If it was a false positive, you can bypass with justification - but investigate first
 
 **Best practice:** Use environment variables for secrets, never hardcode them. Example:
 
 ```javascript
-// BAD — never do this
+// BAD - never do this
 const token = "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
 // GOOD
@@ -152,7 +152,7 @@ const token = process.env.GITHUB_TOKEN;
 
 For public repositories, GitHub scans all existing commits and creates alerts for any detected secrets. These appear in Security → Secret scanning.
 
-**Priority action:** If you find a secret scanning alert in a project you contribute to — especially a token or API key — treat it as urgent. The credential may have been exposed for a long time.
+**Priority action:** If you find a secret scanning alert in a project you contribute to - especially a token or API key - treat it as urgent. The credential may have been exposed for a long time.
 
 ---
 
@@ -197,7 +197,7 @@ Security tab → Code scanning → filter by severity, rule, or file.
 
 When you discover a security vulnerability in a project, **never report it as a public issue**. A public issue immediately broadcasts the vulnerability to anyone who could exploit it.
 
-GitHub provides **Private Vulnerability Reporting** — a disclosure form that sends your report only to the repository's security team, not to the public.
+GitHub provides **Private Vulnerability Reporting** - a disclosure form that sends your report only to the repository's security team, not to the public.
 
 ### How to Submit a Private Report
 
@@ -208,23 +208,23 @@ GitHub provides **Private Vulnerability Reporting** — a disclosure form that s
    - **Description:** Detailed explanation, how to reproduce it, and impact
    - **Severity:** Your assessment
    - **Affected versions:** Which versions are vulnerable
-   - **CVSS score:** Optional — the Common Vulnerability Scoring System rating
-4. Submit — only the maintainers see your report
+   - **CVSS score:** Optional - the Common Vulnerability Scoring System rating
+4. Submit - only the maintainers see your report
 
 ### The Responsible Disclosure Process
 
 After you submit:
-1. Maintainers acknowledge your report (typically within 1–7 days for active projects)
+1. Maintainers acknowledge your report (typically within 1-7 days for active projects)
 2. They may ask follow-up questions in the private advisory thread
 3. They develop and test a fix
 4. They request a CVE (Common Vulnerability and Exposure) number from GitHub
 5. They publish a new release with the fix
-6. They publish a public security advisory — you may be credited as the reporter
+6. They publish a public security advisory - you may be credited as the reporter
 7. The CVE is published publicly (usually 90 days after report or after the fix is released)
 
 ### What If the Maintainer Doesn't Respond?
 
-If a maintainer doesn't respond within a reasonable time (30–90 days is the standard window):
+If a maintainer doesn't respond within a reasonable time (30-90 days is the standard window):
 1. Send a follow-up in the private advisory thread
 2. Contact GitHub directly if the issue is critical (GitHub can assist with coordinated disclosure)
 3. Follow the project's SECURITY.md for their stated disclosure policy
@@ -240,7 +240,7 @@ A `SECURITY.md` file at the repository root defines the project's security polic
 - **Response timeline:** How quickly maintainers aim to respond
 - **Disclosure policy:** When the project will publish a fix publicly
 
-**Agent-forge's security policy:** `accesswatch/agent-forge` has a `SECURITY.md` that points to GitHub's private advisory form. If you find a security issue in agent-forge — even a potential one — use the private advisory form rather than opening a public issue.
+**Agent-forge's security policy:** `accesswatch/agent-forge` has a `SECURITY.md` that points to GitHub's private advisory form. If you find a security issue in agent-forge - even a potential one - use the private advisory form rather than opening a public issue.
 
 ### Navigating to a Repository's SECURITY.md
 
@@ -330,7 +330,7 @@ Agent Forge's `/security-dashboard` slash command gives you a quick security ove
 **Sample output:**
 
 ```
-## Security Dashboard — accesswatch/agent-forge
+## Security Dashboard - accesswatch/agent-forge
 
 ### Dependabot Alerts
 - 0 Critical
@@ -341,18 +341,18 @@ Agent Forge's `/security-dashboard` slash command gives you a quick security ove
 - No active alerts
 
 ### Code Scanning
-- Last scan: 2 days ago — 0 new alerts
+- Last scan: 2 days ago - 0 new alerts
 
 ### Dependabot PRs Open
 - #47: Bump actions/cache from 3.3.1 to 3.3.3
   "Review and merge to resolve the High severity alert"
 
 ### Recommendation
-Action needed: Review PR #47 (5 minutes — single file change)
+Action needed: Review PR #47 (5 minutes - single file change)
 ```
 
-**Workshop exercise:** Run `/security-dashboard` on your fork after Day 2. Review any Dependabot PRs open on the upstream `accesswatch/agent-forge` — merging one is a real security contribution.
+**Workshop exercise:** Run `/security-dashboard` on your fork after Day 2. Review any Dependabot PRs open on the upstream `accesswatch/agent-forge` - merging one is a real security contribution.
 
 ---
 
-*Return to: [Resources](appendix-u-resources.md) | [Appendix Q — GitHub Actions](appendix-q-github-actions-workflows.md) | [Appendix K — Branch Protection](appendix-k-branch-protection-rulesets.md)*
+*Return to: [Resources](appendix-u-resources.md) | [Appendix Q - GitHub Actions](appendix-q-github-actions-workflows.md) | [Appendix K - Branch Protection](appendix-k-branch-protection-rulesets.md)*

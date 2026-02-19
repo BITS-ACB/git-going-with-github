@@ -17,7 +17,7 @@
 - [ ] Created GitHub account (free tier is fine)
 - [ ] Installed Git (https://git-scm.com/download/)
 - [ ] Installed/configured VS Code or preferred editor
-- [ ] Installed GitHub CLI (`gh`) — *optional but recommended*
+- [ ] Installed GitHub CLI (`gh`) - *optional but recommended*
 - [ ] Set up SSH key or HTTPS authentication
 - [ ] Verified: `git --version` shows v2.20+
 - [ ] Verified: `gh auth status` shows you're logged in
@@ -254,12 +254,12 @@
 
 ### The Six Agents
 Know what each does (read Chapter 16 for details):
-- [ ] `@daily-briefing` — Daily activity summary
-- [ ] `@issue-tracker` — Issue management
-- [ ] `@pr-review` — PR assistant
-- [ ] `@analytics` — Repository metrics
-- [ ] `@insiders-a11y-tracker` — Accessibility focus
-- [ ] `@template-builder` — Template wizard (NEW!)
+- [ ] `@daily-briefing` - Daily activity summary
+- [ ] `@issue-tracker` - Issue management
+- [ ] `@pr-review` - PR assistant
+- [ ] `@analytics` - Repository metrics
+- [ ] `@insiders-a11y-tracker` - Accessibility focus
+- [ ] `@template-builder` - Template wizard (NEW!)
 
 ### Exercises
 - [ ] **Exercise 1:** Generate a template with @template-builder
@@ -285,10 +285,10 @@ Know what each does (read Chapter 16 for details):
 
 ## Appendices (Reference)
 
-- [ ] **Appendix A: Glossary** — Read as needed for term definitions
+- [ ] **Appendix A: Glossary** - Read as needed for term definitions
   - [ ] Saved link or printed for reference
-- [ ] **Appendix B: Screen Reader Cheatsheet** — Bookmark this!
-- [ ] **Appendix Y: Accessing Workshop Materials** — How to download, read offline, and keep updated
+- [ ] **Appendix B: Screen Reader Cheatsheet** - Bookmark this!
+- [ ] **Appendix Y: Accessing Workshop Materials** - How to download, read offline, and keep updated
   - [ ] NVDA commands bookmarked
   - [ ] JAWS commands bookmarked
   - [ ] VoiceOver commands bookmarked
@@ -303,7 +303,7 @@ The workshop includes structured exercises in the following chapters. Use this t
 
 | Chapter | Exercise | Description | Done? |
 |---------|----------|-------------|-------|
-| **Ch 1** | 60-Second Orientation | Press `1`, `D`, `2`, `H` on a repo page — prove you can navigate by ear | |
+| **Ch 1** | 60-Second Orientation | Press `1`, `D`, `2`, `H` on a repo page - prove you can navigate by ear | |
 | **Ch 2** | Five-Tab Tour | Visit Code, Issues, PRs, file finder, and README on a real repo | |
 | **Ch 3** | Individual Challenges | 12 progressive challenges in `learning-room/docs/CHALLENGES.md` | |
 | **Ch 3** | Group Challenges | 7 collaborative exercises in `learning-room/docs/GROUP_CHALLENGES.md` | |
@@ -358,28 +358,28 @@ The workshop includes structured exercises in the following chapters. Use this t
 
 ### If You're a **Contributor** (New to collaborative coding)
 **Recommended order:**
-1. Ch 0 (Setup) — 30 min
-2. Ch 1 (Structure) — 1 hr
-3. Ch 4 (Issues) — 1 hr
-4. Ch 5 (PRs) — 1 hr
-5. Ch 14 (Accessible Review) — 1.5 hrs
-6. Ch 16 (Agent Forge) — 1.5 hrs
+1. Ch 0 (Setup) - 30 min
+2. Ch 1 (Structure) - 1 hr
+3. Ch 4 (Issues) - 1 hr
+4. Ch 5 (PRs) - 1 hr
+5. Ch 14 (Accessible Review) - 1.5 hrs
+6. Ch 16 (Agent Forge) - 1.5 hrs
 
 **Total: ~6.5 hours**
 
 ### If You're a **Maintainer** (Manage projects)
 **Recommended order:**
-1. Ch 0 (Setup) — 30 min
-2. Ch 8 (Labels/Milestones) — 45 min
-3. Ch 15 (Issue Templates) — 1.5 hrs
-4. Ch 14 (Accessible Code Review) — 1.5 hrs
-5. Ch 16 (Agent Forge) — 1.5 hrs
+1. Ch 0 (Setup) - 30 min
+2. Ch 8 (Labels/Milestones) - 45 min
+3. Ch 15 (Issue Templates) - 1.5 hrs
+4. Ch 14 (Accessible Code Review) - 1.5 hrs
+5. Ch 16 (Agent Forge) - 1.5 hrs
 
 **Total: ~5.5 hours**
 
 ### If You're a **Facilitator** (Teaching others)
 **Recommended order:**
-1. Full curriculum (0-16) — **11+ hours**
+1. Full curriculum (0-16) - **11+ hours**
 2. Read FACILITATOR.md
 3. Practice all exercises before leading workshop
 

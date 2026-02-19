@@ -1,4 +1,4 @@
-name: Registration — Welcome & CSV Export
+name: Registration - Welcome & CSV Export
 
 on:
   issues:
@@ -32,15 +32,15 @@ jobs:
 
             **Workshop details:**
             - **Dates:** Friday, March 6 & Saturday, March 7, 2026
-            - 🕛 **Time:** 12:00 PM — 8:00 PM Eastern (both days)
-            - 📍 **Location:** Online via Zoom (link will be emailed before the event)
+            - **Time:** 12:00 PM - 8:00 PM Eastern (both days)
+            - **Location:** Online via Zoom (link will be emailed before the event)
 
             **What to do next:**
             1. Complete the [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/docs/00-pre-workshop-setup.html) before March 6
             2. Watch for an email with your Zoom join link
             3. Questions? Email [support@bits-acb.org](mailto:support@bits-acb.org)
 
-            You just filed a GitHub issue — your first open source contribution. Welcome to the community.`
+            You just filed a GitHub issue - your first open source contribution. Welcome to the community.`
             });
 
       - name: Add registration label

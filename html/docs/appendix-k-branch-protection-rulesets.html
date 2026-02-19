@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GIT Going with GitHub — A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
-  <title>Appendix K: Branch Protection Rules and Repository Rulesets — GIT Going with GitHub</title>
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
+  <title>Appendix K: Branch Protection Rules and Repository Rulesets - GIT Going with GitHub</title>
   <link rel="stylesheet" href="./styles/github-markdown.css">
   <link rel="stylesheet" href="./styles/highlight.css">
   <link rel="stylesheet" href="./styles/custom.css">
@@ -39,10 +39,10 @@
 <ol>
 <li><a href="#1-what-branch-protection-does">What Branch Protection Does</a></li>
 <li><a href="#2-common-branch-protection-rules">Common Branch Protection Rules</a></li>
-<li><a href="#3-repository-rulesets--the-modern-approach">Repository Rulesets — The Modern Approach</a></li>
-<li><a href="#4-why-your-pr-cannot-be-merged--diagnosis-guide">Why Your PR Cannot Be Merged — Diagnosis Guide</a></li>
+<li><a href="#3-repository-rulesets--the-modern-approach">Repository Rulesets - The Modern Approach</a></li>
+<li><a href="#4-why-your-pr-cannot-be-merged--diagnosis-guide">Why Your PR Cannot Be Merged - Diagnosis Guide</a></li>
 <li><a href="#5-navigating-the-merge-box-with-a-screen-reader">Navigating the Merge Box with a Screen Reader</a></li>
-<li><a href="#6-status-checks--what-they-are-and-what-they-mean">Status Checks — What They Are and What They Mean</a></li>
+<li><a href="#6-status-checks--what-they-are-and-what-they-mean">Status Checks - What They Are and What They Mean</a></li>
 <li><a href="#7-who-can-configure-branch-protection">Who Can Configure Branch Protection</a></li>
 <li><a href="#8-workshop-repository-configuration-reference">Workshop Repository Configuration Reference</a></li>
 </ol>
@@ -65,20 +65,20 @@
 <p>What this means for you:</p>
 <ul>
 <li>Your PR shows a &quot;1 review required&quot; notice in the merge box</li>
-<li>If a reviewer requests changes, their approval is revoked — you need at least one new approval after your latest push</li>
+<li>If a reviewer requests changes, their approval is revoked - you need at least one new approval after your latest push</li>
 <li>After you push new commits, re-request review from the original reviewer</li>
 </ul>
-<p><strong>Dismiss stale reviews:</strong> Some repos have this enabled — whenever you push a new commit, all existing approvals are automatically withdrawn and you need a fresh review. This prevents sneaking in bad code after approval.</p>
+<p><strong>Dismiss stale reviews:</strong> Some repos have this enabled - whenever you push a new commit, all existing approvals are automatically withdrawn and you need a fresh review. This prevents sneaking in bad code after approval.</p>
 <h3>Required Status Checks</h3>
 <p>Automated workflows (GitHub Actions or third-party CI) must complete successfully before merging is allowed.</p>
 <p><strong>Example checks you may see:</strong></p>
 <ul>
-<li><code>ci / build</code> — compiles the code</li>
-<li><code>ci / test</code> — runs the test suite</li>
-<li><code>lint</code> — code style checks</li>
-<li><code>accessibility-check</code> — automated accessibility scanning</li>
-<li><code>CodeQL</code> — security analysis</li>
-<li><code>netlify/deploy-preview</code> — preview deployment must succeed</li>
+<li><code>ci / build</code> - compiles the code</li>
+<li><code>ci / test</code> - runs the test suite</li>
+<li><code>lint</code> - code style checks</li>
+<li><code>accessibility-check</code> - automated accessibility scanning</li>
+<li><code>CodeQL</code> - security analysis</li>
+<li><code>netlify/deploy-preview</code> - preview deployment must succeed</li>
 </ul>
 <p><strong>What &quot;Required&quot; means:</strong> The merge button is grayed out (or shows an error) until all required checks show a green checkmark. A failing or pending check blocks the merge.</p>
 <h3>Require Branches to Be Up to Date</h3>
@@ -86,25 +86,25 @@
 <p>If your PR is behind <code>main</code>:</p>
 <ul>
 <li>The merge box shows: &quot;This branch is out of date with the base branch&quot;</li>
-<li>Button: &quot;Update branch&quot; — merges current <code>main</code> into your branch</li>
+<li>Button: &quot;Update branch&quot; - merges current <code>main</code> into your branch</li>
 <li>Alternative: Rebase your branch (only if the maintainer permits rebase merges)</li>
 </ul>
 <h3>Require Signed Commits</h3>
 <p>All commits in the PR must have a Verified badge (see <a href="appendix-d-git-authentication.md">Appendix D: Git Authentication</a>). If your commits are unverified, the PR cannot be merged until you re-commit with signing enabled.</p>
 <h3>Require Linear History</h3>
-<p>Only squash merges or rebase merges are permitted — no merge commits. This keeps the commit history linear and readable.</p>
-<p>If you see: &quot;This repository requires a linear history&quot; — the maintainer will squash or rebase merge your PR, not create a merge commit.</p>
+<p>Only squash merges or rebase merges are permitted - no merge commits. This keeps the commit history linear and readable.</p>
+<p>If you see: &quot;This repository requires a linear history&quot; - the maintainer will squash or rebase merge your PR, not create a merge commit.</p>
 <h3>Lock Branch</h3>
-<p>A locked branch cannot receive any merges — it is effectively read-only. This is sometimes used for archived repositories or during release freezes.</p>
+<p>A locked branch cannot receive any merges - it is effectively read-only. This is sometimes used for archived repositories or during release freezes.</p>
 <hr>
-<h2>3. Repository Rulesets — The Modern Approach</h2>
+<h2>3. Repository Rulesets - The Modern Approach</h2>
 <p><strong>Repository Rulesets</strong> (introduced in late 2023) are the next generation of branch protection. They extend branch protection rules with:</p>
 <ul>
-<li><strong>Organization-level rules</strong> — apply across all repos in an org from one place</li>
-<li><strong>Bypass lists</strong> — specific users or roles can be exempted from rules (e.g., release bots)</li>
-<li><strong>Target multiple branches</strong> — one ruleset can target a pattern like <code>release/*</code> or <code>v*</code></li>
-<li><strong>Violation insights</strong> — audit log of when rules were bypassed and by whom</li>
-<li><strong>Rule enforcement</strong> — Active (enforced), Evaluate (only log violations, don&#39;t block), Disabled</li>
+<li><strong>Organization-level rules</strong> - apply across all repos in an org from one place</li>
+<li><strong>Bypass lists</strong> - specific users or roles can be exempted from rules (e.g., release bots)</li>
+<li><strong>Target multiple branches</strong> - one ruleset can target a pattern like <code>release/*</code> or <code>v*</code></li>
+<li><strong>Violation insights</strong> - audit log of when rules were bypassed and by whom</li>
+<li><strong>Rule enforcement</strong> - Active (enforced), Evaluate (only log violations, don&#39;t block), Disabled</li>
 </ul>
 <h3>Rulesets vs. Branch Protection Rules</h3>
 <table>
@@ -144,18 +144,18 @@
 <p>Most repositories you encounter still use classic branch protection rules. Rulesets will become more common as maintainers migrate.</p>
 <h3>Finding and Reading Rulesets</h3>
 <p>If you want to understand why certain rules apply to a branch:</p>
-<pre><code class="hljs">Repository → Insights tab → Rulesets (<span class="hljs-keyword">if</span> you have <span class="hljs-keyword">access</span> — contributors usually don<span class="hljs-symbol">&#x27;t</span>)
+<pre><code class="hljs">Repository → Insights tab → Rulesets (<span class="hljs-keyword">if</span> you have <span class="hljs-keyword">access</span> - contributors usually don<span class="hljs-symbol">&#x27;t</span>)
 <span class="hljs-keyword">Or</span>: Repository → Settings → Rules → Rulesets (admin only)</code></pre>
-<p>Alternatively, PR merge box messages describe which rules are blocking — you don&#39;t need admin access to understand what&#39;s required.</p>
+<p>Alternatively, PR merge box messages describe which rules are blocking - you don&#39;t need admin access to understand what&#39;s required.</p>
 <hr>
-<h2>4. Why Your PR Cannot Be Merged — Diagnosis Guide</h2>
+<h2>4. Why Your PR Cannot Be Merged - Diagnosis Guide</h2>
 <p>When you open a PR and the merge button is grayed out or shows an error, the merge box tells you exactly what needs to happen. Here is how to read it.</p>
 <h3>&quot;X review required / X reviews required&quot;</h3>
 <p><strong>What it means:</strong> The required number of approvals hasn&#39;t been reached yet.</p>
 <p><strong>What to do:</strong></p>
 <ol>
 <li>Request review from a codeowner or maintainer (right sidebar → Reviewers → request)</li>
-<li>Check if any reviews exist but requested changes — those count against you</li>
+<li>Check if any reviews exist but requested changes - those count against you</li>
 <li>Wait for the reviewer to submit their review</li>
 <li>Respond to requested changes by pushing new commits, then re-requesting review</li>
 </ol>
@@ -163,19 +163,19 @@
 <p><strong>What it means:</strong> A required status check is pending or failing.</p>
 <p><strong>What to do:</strong></p>
 <ol>
-<li>Scroll down to the merge box — expand &quot;Show all checks&quot;</li>
+<li>Scroll down to the merge box - expand &quot;Show all checks&quot;</li>
 <li>Find the failing check → click &quot;Details&quot; to see the full log</li>
 <li>Fix the underlying issue (test failure, lint error, build error) in your branch</li>
-<li>Push new commits — checks re-run automatically</li>
-<li>Wait for checks to complete (typically 1–5 minutes for most CI)</li>
+<li>Push new commits - checks re-run automatically</li>
+<li>Wait for checks to complete (typically 1-5 minutes for most CI)</li>
 </ol>
 <p><strong>If checks pass on <code>main</code> but fail on your PR:</strong> The issue is specific to your changes. Read the check log carefully.</p>
-<p><strong>If checks are stuck &quot;in progress&quot; for over 30 minutes:</strong> The workflow runner may have an issue — contact the maintainer.</p>
+<p><strong>If checks are stuck &quot;in progress&quot; for over 30 minutes:</strong> The workflow runner may have an issue - contact the maintainer.</p>
 <h3>&quot;This branch is out of date with the base branch&quot;</h3>
 <p><strong>What it means:</strong> New commits were pushed to <code>main</code> after you created your PR branch. The maintainer requires everything to be current.</p>
 <p><strong>What to do:</strong></p>
 <ul>
-<li>Click <strong>&quot;Update branch&quot;</strong> in the merge box — GitHub does a merge commit from <code>main</code> into your branch</li>
+<li>Click <strong>&quot;Update branch&quot;</strong> in the merge box - GitHub does a merge commit from <code>main</code> into your branch</li>
 <li>Or locally: <code>git fetch upstream &amp;&amp; git rebase upstream/main</code> then force-push (only if you are comfortable with rebase)</li>
 </ul>
 <h3>&quot;Commits must have verified signatures&quot;</h3>
@@ -183,7 +183,7 @@
 <p><strong>What to do:</strong></p>
 <ol>
 <li>Enable commit signing locally before making more commits</li>
-<li>For existing unsigned commits, you need to rebase-rewrite them — this is advanced; ask the maintainer if there is a workaround</li>
+<li>For existing unsigned commits, you need to rebase-rewrite them - this is advanced; ask the maintainer if there is a workaround</li>
 </ol>
 <h3>&quot;Merging is blocked&quot;</h3>
 <p><strong>What it means:</strong> A ruleset or branch protection has explicitly blocked merging for a reason not covered by other messages. Check the PR for a pinned comment from the mergeable status check or a GitHub Actions check that posts a comment explaining the block.</p>
@@ -217,7 +217,7 @@ Tab through each<span class="hljs-built_in"> check </span>→ <span class="hljs-
 <span class="hljs-keyword">Or</span>: Tab → <span class="hljs-keyword">each</span> step accordion → Enter <span class="hljs-keyword">to</span> expand → ↓ <span class="hljs-keyword">to</span> <span class="hljs-keyword">read</span> <span class="hljs-keyword">log</span> lines
 <span class="hljs-keyword">Log</span> content <span class="hljs-keyword">is</span> usually <span class="hljs-keyword">in</span> a scrollable region: ↓ key scrolls through lines</code></pre>
 <hr>
-<h2>6. Status Checks — What They Are and What They Mean</h2>
+<h2>6. Status Checks - What They Are and What They Mean</h2>
 <p>Status checks come from two sources:</p>
 <h3>GitHub Actions Status Checks</h3>
 <p>Defined in <code>.github/workflows/*.yml</code> in the repository. Each <code>job:</code> in a workflow file becomes a status check. Example:</p>
@@ -229,7 +229,7 @@ Tab through each<span class="hljs-built_in"> check </span>→ <span class="hljs-
       <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Run</span> <span class="hljs-string">tests</span>
         <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">test</span></code></pre>
 <h3>Third-Party Status Checks</h3>
-<p>Services like Netlify, Vercel, Codecov, and Snyk post status checks via the GitHub API. You will recognize them by their app name prefix (e.g., <code>netlify/deploy-preview — Deploy Preview ready</code>).</p>
+<p>Services like Netlify, Vercel, Codecov, and Snyk post status checks via the GitHub API. You will recognize them by their app name prefix (e.g., <code>netlify/deploy-preview - Deploy Preview ready</code>).</p>
 <h3>Status Check States</h3>
 <table>
 <thead>
@@ -252,7 +252,7 @@ Tab through each<span class="hljs-built_in"> check </span>→ <span class="hljs-
 <tr>
 <td>Red X</td>
 <td>Failure</td>
-<td>Failed — PR cannot be merged until fixed</td>
+<td>Failed - PR cannot be merged until fixed</td>
 </tr>
 <tr>
 <td>Red circle</td>
@@ -267,7 +267,7 @@ Tab through each<span class="hljs-built_in"> check </span>→ <span class="hljs-
 <tr>
 <td>Neutral</td>
 <td>Neutral</td>
-<td>Informational — does not block merge</td>
+<td>Informational - does not block merge</td>
 </tr>
 </tbody></table>
 <hr>
@@ -308,15 +308,15 @@ Tab through each<span class="hljs-built_in"> check </span>→ <span class="hljs-
 <tr>
 <td>Admin</td>
 <td>Yes</td>
-<td>Yes — full control</td>
+<td>Yes - full control</td>
 </tr>
 <tr>
 <td>Org admin</td>
 <td>Yes</td>
-<td>Yes — including org-level rulesets</td>
+<td>Yes - including org-level rulesets</td>
 </tr>
 </tbody></table>
-<p>As a workshop participant, you are typically a <strong>contributor</strong> to the main <code>accesswatch/agent-forge</code> repo and an <strong>admin</strong> of your own fork. On your fork, you can configure branch protection however you like — including disabling it entirely for practice purposes.</p>
+<p>As a workshop participant, you are typically a <strong>contributor</strong> to the main <code>accesswatch/agent-forge</code> repo and an <strong>admin</strong> of your own fork. On your fork, you can configure branch protection however you like - including disabling it entirely for practice purposes.</p>
 <hr>
 <h2>8. Workshop Repository Configuration Reference</h2>
 <p>The <code>accesswatch/agent-forge</code> repository uses the following branch protection configuration on <code>main</code>:</p>
@@ -333,7 +333,7 @@ Tab through each<span class="hljs-built_in"> check </span>→ <span class="hljs-
 </tr>
 <tr>
 <td>Dismiss stale reviews</td>
-<td>Yes — new commits require re-review</td>
+<td>Yes - new commits require re-review</td>
 </tr>
 <tr>
 <td>Require status checks</td>
@@ -349,7 +349,7 @@ Tab through each<span class="hljs-built_in"> check </span>→ <span class="hljs-
 </tr>
 <tr>
 <td>Restrict direct pushes</td>
-<td>Yes — all changes must come through PRs</td>
+<td>Yes - all changes must come through PRs</td>
 </tr>
 </tbody></table>
 <p><strong>Workshop tip:</strong> Your personal fork of <code>agent-forge</code> has no branch protection by default. If you want to practice the full &quot;review before merge&quot; workflow with a partner, you can add branch protection to your fork:</p>
@@ -362,19 +362,19 @@ Branch name <span class="hljs-built_in">pattern</span>: main
 <hr>
 <h2>Related Resources</h2>
 <ul>
-<li><a href="appendix-d-git-authentication.md">Appendix D — Git Authentication and Commit Signing</a></li>
-<li><a href="appendix-q-github-actions-workflows.md">Appendix Q — GitHub Actions Workflows</a></li>
-<li><a href="appendix-l-github-security-features.md">Appendix L — GitHub Security Features</a></li>
-<li><a href="../docs/05-working-with-pull-requests.md">Chapter 05 — Working with Pull Requests</a></li>
-<li><a href="../docs/06-merge-conflicts.md">Chapter 06 — Merge Conflicts</a></li>
+<li><a href="appendix-d-git-authentication.md">Appendix D - Git Authentication and Commit Signing</a></li>
+<li><a href="appendix-q-github-actions-workflows.md">Appendix Q - GitHub Actions Workflows</a></li>
+<li><a href="appendix-l-github-security-features.md">Appendix L - GitHub Security Features</a></li>
+<li><a href="../docs/05-working-with-pull-requests.md">Chapter 05 - Working with Pull Requests</a></li>
+<li><a href="../docs/06-merge-conflicts.md">Chapter 06 - Merge Conflicts</a></li>
 </ul>
 <hr>
-<p><em>Return to: <a href="appendix-u-resources.md">Resources</a> | <a href="appendix-l-github-security-features.md">Appendix L — Security Features</a></em></p>
+<p><em>Return to: <a href="appendix-u-resources.md">Resources</a> | <a href="appendix-l-github-security-features.md">Appendix L - Security Features</a></em></p>
 
   </main>
   <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
-    <p><strong>GIT Going with GitHub</strong> — A workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
-    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="http://www.joinbits.org">joinbits.org</a></p>
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
+    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="https://www.joinbits.org">joinbits.org</a></p>
   </footer>
   </body>
 </html>

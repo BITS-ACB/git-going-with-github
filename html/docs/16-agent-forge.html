@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GIT Going with GitHub — A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
-  <title>Agent Forge — GIT Going with GitHub</title>
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
+  <title>Agent Forge - GIT Going with GitHub</title>
   <link rel="stylesheet" href="./styles/github-markdown.css">
   <link rel="stylesheet" href="./styles/highlight.css">
   <link rel="stylesheet" href="./styles/custom.css">
@@ -35,7 +35,7 @@
 <p><strong>Day 2, Block 3 Material</strong></p>
 <p><strong>Before you read this guide:</strong></p>
 <p>Agent Forge covers six AI-powered agents and 28 slash commands. These are Day 2, Block 3 material. They are not where you start.</p>
-<p><strong>The agents are only useful if you have already done the work manually.</strong> An agent that summarizes issues is useless to someone who has never read an issue. An agent that reviews a diff is useless to someone who has never read a diff. The agent does not teach you the skill — it multiplies a skill you already have.</p>
+<p><strong>The agents are only useful if you have already done the work manually.</strong> An agent that summarizes issues is useless to someone who has never read an issue. An agent that reviews a diff is useless to someone who has never read a diff. The agent does not teach you the skill - it multiplies a skill you already have.</p>
 <p>Day 1 built those skills. This chapter shows how to amplify them with automation.</p>
 </blockquote>
 <hr>
@@ -43,8 +43,8 @@
 <p><strong>Before starting this chapter, verify you have completed:</strong></p>
 <h3>Core Prerequisites (Required for All Agents)</h3>
 <ul>
-<li><input disabled="" type="checkbox"> Chapter 0: <a href="00-pre-workshop-setup.md">Pre-Workshop Setup</a> — Git, VS Code, and GitHub account</li>
-<li><input disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.md">GitHub Copilot</a> — GitHub Copilot Chat installed and working</li>
+<li><input disabled="" type="checkbox"> Chapter 0: <a href="00-pre-workshop-setup.md">Pre-Workshop Setup</a> - Git, VS Code, and GitHub account</li>
+<li><input disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.md">GitHub Copilot</a> - GitHub Copilot Chat installed and working</li>
 <li><input disabled="" type="checkbox"> GitHub Copilot subscription or organization access (classroom/free tier)</li>
 <li><input disabled="" type="checkbox"> <code>.github/agents/</code> folder exists in your repository (or will create custom agents)</li>
 </ul>
@@ -94,7 +94,7 @@
 <ol>
 <li><a href="#1-the-principle-skill-first-agent-second">The Principle: Skill First, Agent Second</a></li>
 <li><a href="#2-setup-and-configuration">Setup and Configuration</a></li>
-<li><a href="#3-the-six-agents--complete-reference">The Six Agents — Complete Reference</a></li>
+<li><a href="#3-the-six-agents--complete-reference">The Six Agents - Complete Reference</a></li>
 <li><a href="#4-the-28-slash-commands">The 28 Slash Commands</a></li>
 <li><a href="#5-building-your-own-agent">Building Your Own Agent</a></li>
 <li><a href="#6-the-cloud-extension-agents-beyond-vs-code">The Cloud Extension: Agents Beyond VS Code</a></li>
@@ -110,7 +110,7 @@
 <li>Edit the agent&#39;s drafts into something worth posting under your name</li>
 <li>Know when the agent is confidently wrong</li>
 </ul>
-<p><strong>Every agent has a Day 1 prerequisite. If you have not done the corresponding skill by hand, the agent is not ready for you yet — and you are not ready for it.</strong></p>
+<p><strong>Every agent has a Day 1 prerequisite. If you have not done the corresponding skill by hand, the agent is not ready for you yet - and you are not ready for it.</strong></p>
 <table>
 <thead>
 <tr>
@@ -131,7 +131,7 @@
 </tr>
 <tr>
 <td><code>@pr-review</code></td>
-<td>Manually review at least one PR diff in the browser — read changed lines, leave inline comments</td>
+<td>Manually review at least one PR diff in the browser - read changed lines, leave inline comments</td>
 <td><a href="05-working-with-pull-requests.md">Working with Pull Requests</a></td>
 </tr>
 <tr>
@@ -200,16 +200,16 @@ Long-form with sections and headings (screen reader optimized)
 <span class="hljs-section">## Notification Priority</span>
 Accessibility issues first, then review requests, then CI failures</code></pre>
 <p>Commit <code>preferences.md</code> to your fork. Now the agents know who you are and what you care about most.</p>
-<p><strong>Note:</strong> <code>preferences.md</code> is in <code>.gitignore</code> in the upstream repo — your personal preferences will not be included if you submit a PR. They stay in your fork only.</p>
+<p><strong>Note:</strong> <code>preferences.md</code> is in <code>.gitignore</code> in the upstream repo - your personal preferences will not be included if you submit a PR. They stay in your fork only.</p>
 <h3>How Agents Travel with Your Repo</h3>
 <p>When you fork <code>agent-forge</code>, the <code>.github/agents/</code> folder comes with it. This means:</p>
 <ul>
 <li>Any collaborator who clones your fork gets the same six agents</li>
 <li>You can customize the agents for your specific project by editing the <code>.agent.md</code> files in your fork</li>
-<li>Any project can have agents — you could create a <code>.github/agents/</code> folder in any repository and add <code>.agent.md</code> files using the same pattern</li>
+<li>Any project can have agents - you could create a <code>.github/agents/</code> folder in any repository and add <code>.agent.md</code> files using the same pattern</li>
 </ul>
 <h3>Invoking Agents on GitHub.com</h3>
-<p>Agent Forge agents run in VS Code. But the same <code>.agent.md</code> files can also be invoked directly on GitHub.com — no VS Code, no local clone required.</p>
+<p>Agent Forge agents run in VS Code. But the same <code>.agent.md</code> files can also be invoked directly on GitHub.com - no VS Code, no local clone required.</p>
 <p><strong>Option 1: Copilot Chat with Task mode</strong></p>
 <details>
 <summary>Visual / mouse users</summary>
@@ -228,8 +228,8 @@ Accessibility issues first, then review requests, then CI failures</code></pre>
 
 <ol>
 <li>Open Copilot Chat on GitHub.com (navigate to icon in top-right navigation → <code>Enter</code>)</li>
-<li>The mode picker (Task vs Chat) is a set of radio buttons — navigate with <code>Arrow</code> keys to select &quot;Task&quot;</li>
-<li>The agent picker is a listbox — <code>Up/Down Arrow</code> to navigate, <code>Enter</code> to select</li>
+<li>The mode picker (Task vs Chat) is a set of radio buttons - navigate with <code>Arrow</code> keys to select &quot;Task&quot;</li>
+<li>The agent picker is a listbox - <code>Up/Down Arrow</code> to navigate, <code>Enter</code> to select</li>
 <li>Type your request in the chat input and press <code>Enter</code></li>
 <li>Copilot response appears in the chat thread; press <code>H</code> to navigate to the response heading</li>
 </ol>
@@ -243,7 +243,7 @@ Accessibility issues first, then review requests, then CI failures</code></pre>
 <li>Open any issue (or create a new one describing the task)</li>
 <li>In the <strong>Assignees</strong> sidebar section, click the gear icon</li>
 <li>In the dropdown, click <strong>Copilot</strong> as the assignee</li>
-<li>A dialog opens — optionally provide additional instructions and select a custom agent</li>
+<li>A dialog opens - optionally provide additional instructions and select a custom agent</li>
 <li>Click <strong>Assign</strong> to confirm</li>
 </ol>
 </details>
@@ -255,15 +255,15 @@ Accessibility issues first, then review requests, then CI failures</code></pre>
 <li>Open any issue in the repository</li>
 <li>Press <code>B</code> to navigate to the Assignees gear button → <code>Enter</code> to open the popup</li>
 <li>Navigate the popup with <code>Arrow</code> keys → find &quot;Copilot&quot; → <code>Enter</code> to select</li>
-<li>A dialog opens with instruction text area and agent picker — fill as needed</li>
+<li>A dialog opens with instruction text area and agent picker - fill as needed</li>
 <li><code>Tab</code> to the <strong>Assign</strong> button → <code>Enter</code></li>
 </ol>
 </details>
 
 <p>This is the bridge to Section 6 (The Cloud Extension). The same agent file, three execution contexts: your editor, GitHub.com interactively, and GitHub Actions on a schedule.</p>
 <hr>
-<h3>Copilot on GitHub.com — Browser-Native Features</h3>
-<p>Beyond assigning Copilot to issues and using Task mode in Chat, GitHub.com now has several standalone Copilot features built directly into the web interface. These work <strong>entirely in your browser</strong> — no VS Code, no local clone needed.</p>
+<h3>Copilot on GitHub.com - Browser-Native Features</h3>
+<p>Beyond assigning Copilot to issues and using Task mode in Chat, GitHub.com now has several standalone Copilot features built directly into the web interface. These work <strong>entirely in your browser</strong> - no VS Code, no local clone needed.</p>
 <h4>Copilot PR Summary</h4>
 <p>On any open pull request, GitHub adds a <strong>&quot;Summarize&quot; button</strong> in the PR description area. Selecting it generates a plain-language summary of what the PR changes, why, and what reviewers should focus on.</p>
 <p><strong>When to use it:</strong> Before doing a full accessible diff review (Chapter 14), read the Copilot summary first to orient yourself. This is especially helpful with large PRs.</p>
@@ -278,19 +278,19 @@ Accessibility issues first, then review requests, then CI failures</code></pre>
 
 <pre><code class="hljs">On <span class="hljs-keyword">any</span> PR page:
 B → navigate buttons → find <span class="hljs-string">&quot;Summarize&quot;</span> <span class="hljs-keyword">or</span> <span class="hljs-string">&quot;Copilot summary&quot;</span> button → Enter
-Wait <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> summary <span class="hljs-built_in">to</span> render (usually <span class="hljs-number">5</span>–<span class="hljs-number">10</span> <span class="hljs-built_in">seconds</span>)
+Wait <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> summary <span class="hljs-built_in">to</span> render (usually <span class="hljs-number">5</span><span class="hljs-number">-10</span> <span class="hljs-built_in">seconds</span>)
 Copilot summary appears <span class="hljs-keyword">as</span> <span class="hljs-keyword">a</span> <span class="hljs-built_in">new</span> blockquote <span class="hljs-keyword">or</span> section above/below <span class="hljs-keyword">the</span> description
 H <span class="hljs-keyword">or</span> <span class="hljs-number">2</span> → navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> summary heading <span class="hljs-built_in">to</span> <span class="hljs-built_in">read</span> <span class="hljs-keyword">it</span></code></pre>
 </details>
 
 <h4>Copilot PR Review</h4>
 <p>On open PRs you have write access to review, a <strong>&quot;Review&quot;</strong> button (or Copilot icon) appears in the Files changed tab. Copilot generates inline review comments across the diff.</p>
-<p><strong>When to use it:</strong> As a starting point for a code review. Always read the Copilot-generated comments critically before adopting them — Copilot can miss context that a human reviewer would catch.</p>
+<p><strong>When to use it:</strong> As a starting point for a code review. Always read the Copilot-generated comments critically before adopting them - Copilot can miss context that a human reviewer would catch.</p>
 <h4>Copilot in Issues</h4>
 <p>On any issue page, Copilot adds sidebar buttons that appear once the page loads:</p>
 <ul>
-<li><strong>&quot;Explain this issue&quot;</strong> — generates a plain-language explanation of a complex technical issue</li>
-<li><strong>&quot;Suggest fix&quot;</strong> — proposes an approach to resolving the issue (opens a task/PR workflow)</li>
+<li><strong>&quot;Explain this issue&quot;</strong> - generates a plain-language explanation of a complex technical issue</li>
+<li><strong>&quot;Suggest fix&quot;</strong> - proposes an approach to resolving the issue (opens a task/PR workflow)</li>
 </ul>
 <details>
 <summary>Visual / mouse users</summary>
@@ -307,7 +307,7 @@ B → activate <span class="hljs-string">&quot;Explain&quot;</span> <span class=
 Copilot response appears below <span class="hljs-keyword">the</span> button; use H <span class="hljs-built_in">to</span> navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">it</span></code></pre>
 </details>
 
-<h4>GitHub Models — Free AI Playground</h4>
+<h4>GitHub Models - Free AI Playground</h4>
 <p><a href="https://github.com/marketplace/models">github.com/marketplace/models</a> is a free playground where you can test AI models (OpenAI GPT-4o, Meta Llama 3, Mistral, Phi-4 Mini, and others) directly in your browser.</p>
 <p><strong>What you can do:</strong></p>
 <ul>
@@ -316,7 +316,7 @@ Copilot response appears below <span class="hljs-keyword">the</span> button; use
 <li>Use the code sample generator to get API code for your chosen model</li>
 <li>All free with a GitHub account (rate-limited for free tier)</li>
 </ul>
-<p><strong>Why it matters for Agent Forge:</strong> When you build custom agents and prompts, you can test your system prompts and prompt templates in GitHub Models before adding them to your <code>.prompt.md</code> files — rapid iteration without burning API credits.</p>
+<p><strong>Why it matters for Agent Forge:</strong> When you build custom agents and prompts, you can test your system prompts and prompt templates in GitHub Models before adding them to your <code>.prompt.md</code> files - rapid iteration without burning API credits.</p>
 <details>
 <summary>Visual / mouse users</summary>
 
@@ -336,17 +336,17 @@ Response appears below <span class="hljs-keyword">the</span> Send button; use H 
 
 <h4>Copilot-Drafted Release Notes</h4>
 <p>When creating a release (Releases tab → Draft a new release), GitHub provides a <strong>&quot;Generate release notes&quot;</strong> button. It scans merged PRs since the last release and drafts categorized release notes automatically.</p>
-<p>This directly connects to the <code>/draft-release</code> slash command in Agent Forge — use the browser button for one-click generation, or use the agent when you want to customize the structure and add narrative context.</p>
+<p>This directly connects to the <code>/draft-release</code> slash command in Agent Forge - use the browser button for one-click generation, or use the agent when you want to customize the structure and add narrative context.</p>
 <hr>
-<h2>3. The Six Agents — Complete Reference</h2>
+<h2>3. The Six Agents - Complete Reference</h2>
 <p>Open each agent file in VS Code to read its full instructions before using it: <code>.github/agents/[name].agent.md</code></p>
 <h3>Two Types of Agents</h3>
-<p>Before diving in, it helps to know that custom agents fall into two categories — this distinction affects what tool permissions they need and what they can do:</p>
-<p><strong>Informational agents</strong> search, analyze, and report. They respond in chat without modifying files. Examples: <code>@daily-briefing</code>, <code>@issue-tracker</code>, <code>@analytics</code>. These agents need only read and search tools (like <code>github/search_issues</code>, <code>github/issue_read</code>) — they are safer to trust with broad repository access and are simpler to build.</p>
-<p><strong>Task-oriented agents</strong> take action. They can read and edit files, run shell commands, create commits, and open pull requests. Examples: <code>@pr-review</code>, <code>@insiders-a11y-tracker</code>. These agents need a broader toolset (<code>read</code>, <code>edit</code>, <code>execute</code>, <code>github/*</code>) — and because they can make changes, their output always warrants human review before anything is posted or merged.</p>
-<p>Many agents do both — they explain what they found (informational) and optionally make changes if you ask (task-oriented). The key question when you build your own is: <em>does this agent need to change files, or only to report?</em> Start informational. Expand to task-oriented only when the reporting alone is not enough.</p>
+<p>Before diving in, it helps to know that custom agents fall into two categories - this distinction affects what tool permissions they need and what they can do:</p>
+<p><strong>Informational agents</strong> search, analyze, and report. They respond in chat without modifying files. Examples: <code>@daily-briefing</code>, <code>@issue-tracker</code>, <code>@analytics</code>. These agents need only read and search tools (like <code>github/search_issues</code>, <code>github/issue_read</code>) - they are safer to trust with broad repository access and are simpler to build.</p>
+<p><strong>Task-oriented agents</strong> take action. They can read and edit files, run shell commands, create commits, and open pull requests. Examples: <code>@pr-review</code>, <code>@insiders-a11y-tracker</code>. These agents need a broader toolset (<code>read</code>, <code>edit</code>, <code>execute</code>, <code>github/*</code>) - and because they can make changes, their output always warrants human review before anything is posted or merged.</p>
+<p>Many agents do both - they explain what they found (informational) and optionally make changes if you ask (task-oriented). The key question when you build your own is: <em>does this agent need to change files, or only to report?</em> Start informational. Expand to task-oriented only when the reporting alone is not enough.</p>
 <hr>
-<h3>Agent 1: <code>@daily-briefing</code> — Morning Briefing</h3>
+<h3>Agent 1: <code>@daily-briefing</code> - Morning Briefing</h3>
 <p><strong>Type:</strong> Informational</p>
 <p><strong>File:</strong> <code>.github/agents/daily-briefing.agent.md</code></p>
 <p><strong>Before you run this agent:</strong> You should have manually navigated a repository&#39;s Issues tab, read your GitHub Notifications page, understood what a pull request waiting for review looks like, and know the difference between subscribed and participating notifications. If those steps are not familiar yet, return to <a href="02-navigating-repositories.md">Navigating Repositories</a> and <a href="09-notifications.md">Notifications</a> first. The briefing output only makes sense when you already know what each section of it is describing.</p>
@@ -375,7 +375,7 @@ Response appears below <span class="hljs-keyword">the</span> Send button; use H 
 <span class="hljs-bullet">-</span> #14 [agent-forge] Improve screen reader navigation guide (jeffb, 2 days old)
 
 <span class="hljs-section">## CI Failures on Your Branches</span>
-<span class="hljs-bullet">-</span> feature/add-timeline-guide — Tests failing on line 42 of timeline-test.md
+<span class="hljs-bullet">-</span> feature/add-timeline-guide - Tests failing on line 42 of timeline-test.md
 
 <span class="hljs-section">## Security Alerts</span>
 <span class="hljs-bullet">-</span> No new security alerts
@@ -383,10 +383,10 @@ Response appears below <span class="hljs-keyword">the</span> Send button; use H 
 <span class="hljs-section">## Community Activity</span>
 <span class="hljs-bullet">-</span> Your comment on #38 received 3 reactions (×2, ×1)</code></pre>
 <hr>
-<h3>Agent 2: <code>@issue-tracker</code> — Issue Management</h3>
+<h3>Agent 2: <code>@issue-tracker</code> - Issue Management</h3>
 <p><strong>Type:</strong> Both (Informational + Task-oriented)</p>
 <p><strong>File:</strong> <code>.github/agents/issue-tracker.agent.md</code></p>
-<p><strong>Before you run this agent:</strong> You should have filed at least one issue using the full manual process — writing a title, description, and reproduction steps; applying labels and a milestone; and reading at least five existing issues to understand what a well-formed issue looks like. If you have not done this, the agent&#39;s priority scores and draft replies will mean nothing to you. Return to <a href="04-working-with-issues.md">Working with Issues</a> and <a href="08-labels-milestones-projects.md">Labels, Milestones &amp; Projects</a> first.</p>
+<p><strong>Before you run this agent:</strong> You should have filed at least one issue using the full manual process - writing a title, description, and reproduction steps; applying labels and a milestone; and reading at least five existing issues to understand what a well-formed issue looks like. If you have not done this, the agent&#39;s priority scores and draft replies will mean nothing to you. Return to <a href="04-working-with-issues.md">Working with Issues</a> and <a href="08-labels-milestones-projects.md">Labels, Milestones &amp; Projects</a> first.</p>
 <p><strong>What it does:</strong></p>
 <p>Finds, prioritizes, and helps you manage issues across all your repositories:</p>
 <ul>
@@ -427,12 +427,12 @@ Thanks for opening this issue. To help us reproduce the problem, could you provi
 
 This will help us diagnose the issue faster.
 
-— Draft by @issue-tracker (review before posting)</code></pre>
+<span class="hljs-bullet">-</span> Draft by @issue-tracker (review before posting)</code></pre>
 <hr>
-<h3>Agent 3: <code>@pr-review</code> — Pull Request Review</h3>
+<h3>Agent 3: <code>@pr-review</code> - Pull Request Review</h3>
 <p><strong>Type:</strong> Both (Informational + Task-oriented)</p>
 <p><strong>File:</strong> <code>.github/agents/pr-review.agent.md</code></p>
-<p><strong>Before you run this agent:</strong> You should have manually reviewed at least one pull request diff in the GitHub browser interface — navigating the Files Changed tab with your screen reader, reading added and removed lines, leaving at least one inline comment, and submitting a review. The agent generates a review document; you need to know what a good review looks like in order to edit, improve, and take ownership of what it produces. Return to <a href="05-working-with-pull-requests.md">Working with Pull Requests</a> if this is not yet familiar.</p>
+<p><strong>Before you run this agent:</strong> You should have manually reviewed at least one pull request diff in the GitHub browser interface - navigating the Files Changed tab with your screen reader, reading added and removed lines, leaving at least one inline comment, and submitting a review. The agent generates a review document; you need to know what a good review looks like in order to edit, improve, and take ownership of what it produces. Return to <a href="05-working-with-pull-requests.md">Working with Pull Requests</a> if this is not yet familiar.</p>
 <p><strong>What it does:</strong></p>
 <p>Generates full review documents for pull requests:</p>
 <ul>
@@ -450,9 +450,9 @@ This will help us diagnose the issue faster.
 <span class="hljs-variable">@pr-review</span> generate inline comments for PR #<span class="hljs-number">14</span>
 
 <span class="hljs-variable">@pr-review</span> summarize what changed in PR #<span class="hljs-number">14</span> in two sentences</code></pre>
-<p><strong>Critical rule:</strong> Read the agent&#39;s review. Edit it. Make it yours. Post your edited version. The agent produces a starting point — it does not know the project&#39;s history, the contributor&#39;s background, or the community&#39;s implicit standards the way you do.</p>
+<p><strong>Critical rule:</strong> Read the agent&#39;s review. Edit it. Make it yours. Post your edited version. The agent produces a starting point - it does not know the project&#39;s history, the contributor&#39;s background, or the community&#39;s implicit standards the way you do.</p>
 <p><strong>Output example:</strong></p>
-<pre><code class="hljs language-markdown"><span class="hljs-section">## PR Review: #14 — Improve screen reader navigation guide</span>
+<pre><code class="hljs language-markdown"><span class="hljs-section">## PR Review: #14 - Improve screen reader navigation guide</span>
 
 <span class="hljs-section">### Summary</span>
 This PR adds 3 new sections to the screen reader navigation guide and updates 2 existing sections with NVDA-specific keyboard shortcuts.
@@ -465,44 +465,44 @@ This PR adds 3 new sections to the screen reader navigation guide and updates 2 
 <span class="hljs-strong">**Risk Level:**</span> Low
 
 <span class="hljs-strong">**What Could Break:**</span>
-<span class="hljs-bullet">-</span> None identified — documentation-only change
+<span class="hljs-bullet">-</span> None identified - documentation-only change
 
 <span class="hljs-strong">**High-Impact Areas:**</span>
-<span class="hljs-bullet">-</span> Section 3 (Keyboard Navigation) — heavily referenced by other guides
+<span class="hljs-bullet">-</span> Section 3 (Keyboard Navigation) - heavily referenced by other guides
 
 <span class="hljs-section">### Change Map</span>
 
 <span class="hljs-section">#### docs/navigation-guide.md</span>
 
-<span class="hljs-strong">**Lines 42-65: ADDED — NVDA Browse Mode shortcuts**</span>
+<span class="hljs-strong">**Lines 42-65: ADDED - NVDA Browse Mode shortcuts**</span>
 <span class="hljs-bullet">+</span> New content explaining Browse Mode vs Focus Mode
 <span class="hljs-bullet">+</span> Table of NVDA-specific shortcuts
 <span class="hljs-bullet">+</span> Screen reader announcements examples
 
-<span class="hljs-strong">**Lines 88-92: MODIFIED — Updated heading hierarchy example**</span>
+<span class="hljs-strong">**Lines 88-92: MODIFIED - Updated heading hierarchy example**</span>
 <span class="hljs-bullet">-</span> Old: Basic example with 2 levels
 <span class="hljs-bullet">+</span> New: Comprehensive example with 3 levels and explanations
 
-<span class="hljs-strong">**Lines 120-145: ADDED — Common navigation mistakes section**</span>
+<span class="hljs-strong">**Lines 120-145: ADDED - Common navigation mistakes section**</span>
 <span class="hljs-bullet">+</span> Lists 5 common mistakes with solutions
 
 <span class="hljs-section">### Suggested Inline Comments</span>
 
 <span class="hljs-strong">**Line 48:**</span> Consider adding a note that Browse Mode is called &quot;Virtual Cursor&quot; in JAWS
-<span class="hljs-strong">**Line 127:**</span> Typo — &quot;anounced&quot; should be &quot;announced&quot;
-<span class="hljs-strong">**Line 143:**</span> This mistake applies to VoiceOver too — expand to include VO+Arrow navigation
+<span class="hljs-strong">**Line 127:**</span> Typo - &quot;anounced&quot; should be &quot;announced&quot;
+<span class="hljs-strong">**Line 143:**</span> This mistake applies to VoiceOver too - expand to include VO+Arrow navigation
 
 <span class="hljs-section">### Recommendation</span>
 <span class="hljs-strong">**Approve with Minor Changes**</span>
 
 This is a valuable addition to the guide. The three typos and one clarification request are minor. Once those are addressed, this is ready to merge.
 
-— Review generated by @pr-review (edit before posting)</code></pre>
+<span class="hljs-bullet">-</span> Review generated by @pr-review (edit before posting)</code></pre>
 <hr>
-<h3>Agent 4: <code>@analytics</code> — Team Analytics</h3>
+<h3>Agent 4: <code>@analytics</code> - Team Analytics</h3>
 <p><strong>Type:</strong> Informational</p>
 <p><strong>File:</strong> <code>.github/agents/analytics.agent.md</code></p>
-<p><strong>Before you run this agent:</strong> You should have explored the Insights tab of at least one repository — looked at the contribution graph, understood what commit frequency means, and thought about what &quot;high-churn files&quot; implies for a project&#39;s stability. The analytics output describes patterns in data you should already be able to read manually. Return to <a href="02-navigating-repositories.md">Navigating Repositories</a> if the Insights tab is unfamiliar.</p>
+<p><strong>Before you run this agent:</strong> You should have explored the Insights tab of at least one repository - looked at the contribution graph, understood what commit frequency means, and thought about what &quot;high-churn files&quot; implies for a project&#39;s stability. The analytics output describes patterns in data you should already be able to read manually. Return to <a href="02-navigating-repositories.md">Navigating Repositories</a> if the Insights tab is unfamiliar.</p>
 <p><strong>What it does:</strong></p>
 <p>Surfaces team contribution patterns, velocity metrics, and bottleneck detection:</p>
 <ul>
@@ -521,7 +521,7 @@ This is a valuable addition to the guide. The three typos and one clarification 
 <span class="hljs-variable">@analytics</span> how long does PR review take on average in agent-forge?</code></pre>
 <p><strong>Accessibility use case:</strong> After Day 2&#39;s contribution wave, run <code>@analytics team velocity in agent-forge today</code> to see the hackathon&#39;s collective output. A moment of real-time team celebration.</p>
 <p><strong>Output example:</strong></p>
-<pre><code class="hljs language-markdown"><span class="hljs-section">## Team Velocity — agent-forge (January 2026)</span>
+<pre><code class="hljs language-markdown"><span class="hljs-section">## Team Velocity - agent-forge (January 2026)</span>
 
 <span class="hljs-section">### Contribution Summary</span>
 <span class="hljs-bullet">-</span> <span class="hljs-strong">**Total Commits:**</span> 47
@@ -530,29 +530,29 @@ This is a valuable addition to the guide. The three typos and one clarification 
 <span class="hljs-bullet">-</span> <span class="hljs-strong">**Average Commits per Day:**</span> 1.5
 
 <span class="hljs-section">### Most Active Contributors</span>
-<span class="hljs-bullet">1.</span> <span class="hljs-strong">**jeffb**</span> — 18 commits, 5 PRs merged
-<span class="hljs-bullet">2.</span> <span class="hljs-strong">**alex-a11y**</span> — 12 commits, 3 PRs merged
-<span class="hljs-bullet">3.</span> <span class="hljs-strong">**sara-docs**</span> — 8 commits, 2 PRs merged
+<span class="hljs-bullet">1.</span> <span class="hljs-strong">**jeffb**</span> - 18 commits, 5 PRs merged
+<span class="hljs-bullet">2.</span> <span class="hljs-strong">**alex-a11y**</span> - 12 commits, 3 PRs merged
+<span class="hljs-bullet">3.</span> <span class="hljs-strong">**sara-docs**</span> - 8 commits, 2 PRs merged
 
 <span class="hljs-section">### High-Churn Files (Most Frequently Changed)</span>
-<span class="hljs-bullet">1.</span> <span class="hljs-strong">**docs/GUIDE.md**</span> — 14 changes (documentation updates)
-<span class="hljs-bullet">2.</span> <span class="hljs-strong">**README.md**</span> — 8 changes (feature additions, fixes)
-<span class="hljs-bullet">3.</span> <span class="hljs-strong">**.github/agents/pr-review.agent.md**</span> — 6 changes (agent refinement)
+<span class="hljs-bullet">1.</span> <span class="hljs-strong">**docs/GUIDE.md**</span> - 14 changes (documentation updates)
+<span class="hljs-bullet">2.</span> <span class="hljs-strong">**README.md**</span> - 8 changes (feature additions, fixes)
+<span class="hljs-bullet">3.</span> <span class="hljs-strong">**.github/agents/pr-review.agent.md**</span> - 6 changes (agent refinement)
 
 <span class="hljs-section">### PR Review Turnaround Time</span>
 <span class="hljs-bullet">-</span> <span class="hljs-strong">**Average:**</span> 18 hours
 <span class="hljs-bullet">-</span> <span class="hljs-strong">**Fastest:**</span> 2 hours (PR #14)
-<span class="hljs-bullet">-</span> <span class="hljs-strong">**Slowest:**</span> 72 hours (PR #8 — awaiting maintainer review)
+<span class="hljs-bullet">-</span> <span class="hljs-strong">**Slowest:**</span> 72 hours (PR #8 - awaiting maintainer review)
 
 <span class="hljs-section">### Trends</span>
 <span class="hljs-bullet">-</span> Commit velocity up 40% compared to December 2025
 <span class="hljs-bullet">-</span> New contributors joining at healthy rate (3 this month)
 <span class="hljs-bullet">-</span> Review times improving (down from 24-hour average last month)</code></pre>
 <hr>
-<h3>Agent 5: <code>@insiders-a11y-tracker</code> — Accessibility Change Monitoring</h3>
+<h3>Agent 5: <code>@insiders-a11y-tracker</code> - Accessibility Change Monitoring</h3>
 <p><strong>Type:</strong> Both (Informational + Task-oriented)</p>
 <p><strong>File:</strong> <code>.github/agents/insiders-a11y-tracker.agent.md</code></p>
-<p><strong>Before you run this agent:</strong> You should have filed at least one accessibility bug report using the workshop&#39;s issue template, applied a WCAG label to an issue, and manually reviewed a Markdown file for heading hierarchy — knowing what H1 → H2 → H3 means, what a skip means, and why it matters to screen reader navigation. The tracker flags accessibility issues in your contributions; you need to understand the standard it is measuring against before you can act on its output. Return to <a href="15-issue-templates.md">Issue Templates</a> and <a href="04-working-with-issues.md">Working with Issues</a> if these are not yet familiar.</p>
+<p><strong>Before you run this agent:</strong> You should have filed at least one accessibility bug report using the workshop&#39;s issue template, applied a WCAG label to an issue, and manually reviewed a Markdown file for heading hierarchy - knowing what H1 → H2 → H3 means, what a skip means, and why it matters to screen reader navigation. The tracker flags accessibility issues in your contributions; you need to understand the standard it is measuring against before you can act on its output. Return to <a href="15-issue-templates.md">Issue Templates</a> and <a href="04-working-with-issues.md">Working with Issues</a> if these are not yet familiar.</p>
 <p><strong>What it does:</strong></p>
 <p>Monitors accessibility-sensitive changes across configured repositories:</p>
 <ul>
@@ -567,9 +567,9 @@ This is a valuable addition to the guide. The three typos and one clarification 
 <span class="hljs-variable">@insiders-a11y-tracker</span> review my PR #<span class="hljs-number">14</span> for accessibility impact
 
 <span class="hljs-variable">@insiders-a11y-tracker</span> are there any accessibility regressions in the last <span class="hljs-number">5</span> commits?</code></pre>
-<p><strong>Day 2 workflow:</strong> Run this before submitting any PR. If the agent flags an issue, fix it before requesting review — not after.</p>
+<p><strong>Day 2 workflow:</strong> Run this before submitting any PR. If the agent flags an issue, fix it before requesting review - not after.</p>
 <p><strong>Output example:</strong></p>
-<pre><code class="hljs language-markdown"><span class="hljs-section">## Accessibility Changes — agent-forge (Last 5 Commits)</span>
+<pre><code class="hljs language-markdown"><span class="hljs-section">## Accessibility Changes - agent-forge (Last 5 Commits)</span>
 
 <span class="hljs-section">### Issues Found: 2</span>
 
@@ -607,19 +607,19 @@ This is a valuable addition to the guide. The three typos and one clarification 
 <h2>Recommendations</h2>
 <ol>
 <li>Fix heading hierarchy skip in docs/11-vscode-basics.md before merging PR #14</li>
-<li>Update link text in README.md (low priority — not in active workflow path)</li>
+<li>Update link text in README.md (low priority - not in active workflow path)</li>
 <li>Continue using descriptive ARIA labels for icon-only controls (positive trend)</li>
 </ol>
 <pre><code class="hljs">
 ---
 
-<span class="hljs-meta">### Agent 6: `<span class="hljs-comment">@template-builder` — Interactive Issue Template Wizard
+<span class="hljs-meta">### Agent 6: `<span class="hljs-comment">@template-builder` - Interactive Issue Template Wizard
 
 **Type:** Informational with guided output
 
 **File:** `.github/agents/template-builder.agent.md`
 
-**Before you run this agent:** You should have read [Issue Templates](15-issue-templates.md) thoroughly — understanding YAML field types, creating a template manually (Exercise B), and designing your own template (Exercise D). The Template Builder does not teach template design — it automates the YAML writing. You need to know what you want to ask for before the agent can guide you through the form structure.
+**Before you run this agent:** You should have read [Issue Templates](15-issue-templates.md) thoroughly - understanding YAML field types, creating a template manually (Exercise B), and designing your own template (Exercise D). The Template Builder does not teach template design - it automates the YAML writing. You need to know what you want to ask for before the agent can guide you through the form structure.
 
 **What it does:**
 
@@ -651,13 +651,13 @@ An interactive wizard that guides you through building GitHub issue templates st
 <pre><code class="hljs">
 <span class="hljs-symbol">*</span><span class="hljs-symbol">*</span>Why use it?<span class="hljs-symbol">*</span><span class="hljs-symbol">*</span> Manual YAML template creation takes 15-20 minutes and is error-prone. The <span class="hljs-keyword">Template</span> Builder generates correct, tested templates in 2-3 minutes via guided questions.
 
-<span class="hljs-symbol">*</span><span class="hljs-symbol">*</span>Advanced:<span class="hljs-symbol">*</span><span class="hljs-symbol">*</span> After generating a template, you can ask: `<span class="hljs-meta">@template-builder</span> reorder the fields` or `<span class="hljs-meta">@template-builder</span> add a checkbox field for version compatibility` — the agent regenerates your YAML with the changes applied.
+<span class="hljs-symbol">*</span><span class="hljs-symbol">*</span>Advanced:<span class="hljs-symbol">*</span><span class="hljs-symbol">*</span> After generating a template, you can ask: `<span class="hljs-meta">@template-builder</span> reorder the fields` or `<span class="hljs-meta">@template-builder</span> add a checkbox field for version compatibility` - the agent regenerates your YAML with the changes applied.
 
 ---
 
 <span class="hljs-comment">## 4. The 28 Slash Commands</span>
 
-Slash commands are simpler than agents — they&#x27;re single-purpose prompts defined in `.github/prompts/`. Type `/` in Copilot Chat to see the full command menu.
+Slash commands are simpler than agents - they&#x27;re single-purpose prompts defined in `.github/prompts/`. Type `/` in Copilot Chat to see the full command menu.
 
 <span class="hljs-comment">### Most Useful for This Workshop</span>
 
@@ -669,7 +669,7 @@ Slash commands are simpler than agents — they&#x27;re single-purpose prompts d
 |<span class="hljs-string"> `/a11y-update` </span>|<span class="hljs-string"> Latest accessibility improvements with WCAG cross-references </span>|<span class="hljs-string"> `/a11y-update insiders` </span>|
 |<span class="hljs-string"> `/triage` </span>|<span class="hljs-string"> Triage a new issue with label and priority suggestions </span>|<span class="hljs-string"> `/triage #22` </span>|
 |<span class="hljs-string"> `/issue-reply` </span>|<span class="hljs-string"> Draft a reply to an issue thread </span>|<span class="hljs-string"> `/issue-reply #15` </span>|
-|<span class="hljs-string"> `/daily-briefing` </span>|<span class="hljs-string"> Same as `@daily-briefing` — your morning activity snapshot </span>|<span class="hljs-string"> `/daily-briefing` </span>|
+|<span class="hljs-string"> `/daily-briefing` </span>|<span class="hljs-string"> Same as `@daily-briefing` - your morning activity snapshot </span>|<span class="hljs-string"> `/daily-briefing` </span>|
 |<span class="hljs-string"> `/draft-release` </span>|<span class="hljs-string"> Generate release notes from merged PRs </span>|<span class="hljs-string"> `/draft-release v2.0` </span>|
 |<span class="hljs-string"> `/my-prs` </span>|<span class="hljs-string"> Your open PRs with CI and review status </span>|<span class="hljs-string"> `/my-prs` </span>|
 
@@ -690,11 +690,11 @@ Slash commands are simpler than agents — they&#x27;re single-purpose prompts d
 /my-prs               Your open PRs with CI and review status
 /my-stats             Your contribution stats across repos
 /notifications        Manage GitHub notifications without opening a browser
-/onboard-repo         First-time scan of a repo — health, quick wins, recommended actions
+/onboard-repo         First-time scan of a repo - health, quick wins, recommended actions
 /pr-author-checklist  Pre-merge checklist for PR authors
 /pr-comment           Draft a response to a PR comment
 /pr-report            Detailed PR analysis report
-/project-status       GitHub Projects board overview — columns, blocked, stale
+/project-status       GitHub Projects board overview - columns, blocked, stale
 /react                Suggest or add a reaction to an issue or comment
 /refine-issue         Improve issue title, description, and labels
 /release-prep         Complete release preparation workflow
@@ -733,21 +733,21 @@ Slash commands are simpler than agents — they&#x27;re single-purpose prompts d
 <span class="hljs-string">Load</span> <span class="hljs-string">accessibility</span> <span class="hljs-string">tracking</span> <span class="hljs-string">configuration</span> <span class="hljs-string">from</span> <span class="hljs-string">`.github/agents/preferences.md`</span>
 <span class="hljs-string">(repos,</span> <span class="hljs-string">labels,</span> <span class="hljs-string">channels).</span> <span class="hljs-string">If</span> <span class="hljs-literal">no</span> <span class="hljs-string">preferences</span> <span class="hljs-string">exist,</span> <span class="hljs-string">use</span> <span class="hljs-string">defaults</span>
 <span class="hljs-string">(microsoft/vscode</span> <span class="hljs-string">with</span> <span class="hljs-string">accessibility</span> <span class="hljs-string">labels).</span></code></pre>
-<p><strong>This is how you learn to write your own.</strong> Copy an existing file, edit the instructions, save it with a new name — you have just created a new slash command for your fork.</p>
+<p><strong>This is how you learn to write your own.</strong> Copy an existing file, edit the instructions, save it with a new name - you have just created a new slash command for your fork.</p>
 <hr>
 <h2>5. Building Your Own Agent</h2>
-<p>The six Agent Forge agents and 28 slash commands are starting points. The <code>.agent.md</code> format is open — you can create your own agents for any repeatable workflow.</p>
+<p>The six Agent Forge agents and 28 slash commands are starting points. The <code>.agent.md</code> format is open - you can create your own agents for any repeatable workflow.</p>
 <blockquote>
 <p>Source: <a href="https://accessibility.github.com/documentation/guide/getting-started-with-agents/">accessibility.github.com/documentation/guide/getting-started-with-agents/</a></p>
 </blockquote>
 <h3>Two Types of Custom Agents</h3>
-<p><strong>Informational agents</strong> — conversational; search, analyze, and present results:</p>
+<p><strong>Informational agents</strong> - conversational; search, analyze, and present results:</p>
 <ul>
 <li>Perform GitHub searches with predefined scopes and filters</li>
 <li>Present results in specific structured formats</li>
 <li>Query GitHub API tools to answer questions</li>
 </ul>
-<p><strong>Task-oriented agents</strong> — active; edit files, run commands, submit PRs:</p>
+<p><strong>Task-oriented agents</strong> - active; edit files, run commands, submit PRs:</p>
 <ul>
 <li>Execute external tools (linters, test suites, axe-core)</li>
 <li>Make direct file edits based on findings</li>
@@ -803,18 +803,18 @@ How to format output</code></pre>
 <td>Restricts tool access; omit to grant all tools</td>
 </tr>
 </tbody></table>
-<p><strong>Restricting tool access</strong> is a security best practice — only grant what the agent actually needs:</p>
-<pre><code class="hljs language-yaml"><span class="hljs-comment"># Informational agent — read-only GitHub tools only</span>
+<p><strong>Restricting tool access</strong> is a security best practice - only grant what the agent actually needs:</p>
+<pre><code class="hljs language-yaml"><span class="hljs-comment"># Informational agent - read-only GitHub tools only</span>
 <span class="hljs-attr">tools:</span> [<span class="hljs-string">&quot;github/search_issues&quot;</span>, <span class="hljs-string">&quot;github/issue_read&quot;</span>]
 
-<span class="hljs-comment"># Task-oriented agent — file editing, shell execution, and GitHub API</span>
+<span class="hljs-comment"># Task-oriented agent - file editing, shell execution, and GitHub API</span>
 <span class="hljs-attr">tools:</span>
   <span class="hljs-bullet">-</span> <span class="hljs-string">read</span>
   <span class="hljs-bullet">-</span> <span class="hljs-string">edit</span>
   <span class="hljs-bullet">-</span> <span class="hljs-string">search</span>
   <span class="hljs-bullet">-</span> <span class="hljs-string">execute</span>
   <span class="hljs-bullet">-</span> <span class="hljs-string">github/*</span></code></pre>
-<h3>Example: Informational Agent — <code>@insiders-a11y-tracker</code></h3>
+<h3>Example: Informational Agent - <code>@insiders-a11y-tracker</code></h3>
 <p>This agent monitors VS Code Insiders releases for accessibility improvements. It searches the <code>microsoft/vscode</code> repository using predefined GitHub query syntax, so you never have to remember the exact filter parameters.</p>
 <p><strong>Use it:</strong></p>
 <ol>
@@ -823,8 +823,8 @@ How to format output</code></pre>
 <li>The agent searches with <code>repo:microsoft/vscode is:closed milestone:&quot;[Month] [Year]&quot; label:accessibility label:insiders-released</code> and returns formatted results</li>
 </ol>
 <p><strong>Prerequisite:</strong> GitHub MCP server installed (<a href="https://github.com/github/github-mcp-server">github.com/github/github-mcp-server</a>)</p>
-<h3>Example: Task-Oriented Agent — The Markdown Accessibility Assistant</h3>
-<p>The GitHub Accessibility team published a complete walkthrough for building a <strong>Markdown Accessibility Assistant</strong> — a task-oriented agent that reviews Markdown files for accessibility issues and makes direct fixes. It:</p>
+<h3>Example: Task-Oriented Agent - The Markdown Accessibility Assistant</h3>
+<p>The GitHub Accessibility team published a complete walkthrough for building a <strong>Markdown Accessibility Assistant</strong> - a task-oriented agent that reviews Markdown files for accessibility issues and makes direct fixes. It:</p>
 <ul>
 <li>Runs <code>markdownlint-cli2</code> to catch structural problems (heading skips, bare URLs, missing blank lines)</li>
 <li>Reviews link text for descriptiveness</li>
@@ -833,7 +833,7 @@ How to format output</code></pre>
 <li>Works both locally in VS Code (editing files) and on GitHub.com (reviewing PRs and committing fixes)</li>
 </ul>
 <p>This agent is the automated version of the accessibility review skills you built during Day 1. The five principles it enforces are directly from GitHub&#39;s accessibility documentation.</p>
-<p><strong>To build it:</strong> Follow the step-by-step guide at <a href="https://accessibility.github.com/documentation/guide/getting-started-with-agents/">accessibility.github.com/documentation/guide/getting-started-with-agents</a> — the YAML frontmatter, each section of the system prompt, and the complete agent file are all shown.</p>
+<p><strong>To build it:</strong> Follow the step-by-step guide at <a href="https://accessibility.github.com/documentation/guide/getting-started-with-agents/">accessibility.github.com/documentation/guide/getting-started-with-agents</a> - the YAML frontmatter, each section of the system prompt, and the complete agent file are all shown.</p>
 <h3>Key Pattern: Tiered Decision-Making</h3>
 <p>From the guide:</p>
 <pre><code class="hljs">For objective issues (link <span class="hljs-keyword">text</span>, heading hierarchy, list structure):
@@ -842,7 +842,7 @@ How to format output</code></pre>
 For subjective issues (alt <span class="hljs-keyword">text</span>, plain language):
   → Agent flags <span class="hljs-keyword">the</span> issue, explains why <span class="hljs-keyword">it</span> matters, suggests <span class="hljs-keyword">a</span> fix,
     <span class="hljs-keyword">and</span> waits <span class="hljs-keyword">for</span> human approval <span class="hljs-keyword">before</span> making changes</code></pre>
-<p>This tiered approach — automate what can be objectively evaluated, flag what needs human judgment — is the right model for any accessibility agent. It maximizes the agent&#39;s value while keeping humans in control of decisions that require context.</p>
+<p>This tiered approach - automate what can be objectively evaluated, flag what needs human judgment - is the right model for any accessibility agent. It maximizes the agent&#39;s value while keeping humans in control of decisions that require context.</p>
 <h3>Required Prerequisites for the Markdown Accessibility Assistant</h3>
 <ul>
 <li>GitHub MCP server installed and configured (<a href="https://github.com/github/github-mcp-server">github.com/github/github-mcp-server</a>)</li>
@@ -854,20 +854,20 @@ For subjective issues (alt <span class="hljs-keyword">text</span>, plain languag
 <li>Open Copilot Chat (<code>Ctrl+Shift+I</code> / <code>Cmd+Shift+I</code> on macOS)</li>
 <li>In the Chat input toolbar, select the <strong>Set Agent</strong> button</li>
 <li>Select your custom agent from the agent picker</li>
-<li>Type your request — the agent executes in your local workspace</li>
+<li>Type your request - the agent executes in your local workspace</li>
 </ol>
 <p><strong>From GitHub.com (Task mode):</strong></p>
 <ol>
 <li>Open Copilot Chat on GitHub.com</li>
 <li>Select <strong>Task</strong> from the mode picker</li>
 <li>Optionally select a custom agent from the agent picker</li>
-<li>Submit your request — the agent can create a PR automatically</li>
+<li>Submit your request - the agent can create a PR automatically</li>
 </ol>
 <p><strong>From an issue (Issue Assignment):</strong></p>
 <ol>
 <li>Open any issue → <strong>Assignees</strong> → assign <strong>Copilot</strong></li>
 <li>In the dialog, optionally select a custom agent</li>
-<li>Select <strong>Assign</strong> — Copilot creates a branch, makes changes, and opens a PR</li>
+<li>Select <strong>Assign</strong> - Copilot creates a branch, makes changes, and opens a PR</li>
 </ol>
 <h3>Environment Setup for GitHub (Cloud Agents)</h3>
 <p>When agents run on GitHub (not locally), they may need additional tools. Create a workflow file at <code>.github/workflows/copilot-setup-steps.yml</code> with a single job named <code>copilot-setup-steps</code>. GitHub runs this before the agent starts:</p>
@@ -884,7 +884,7 @@ For subjective issues (alt <span class="hljs-keyword">text</span>, plain languag
 <ol>
 <li>Create <code>.github/agents/your-agent-name.agent.md</code></li>
 <li>Write YAML frontmatter (<code>name</code>, <code>description</code>, <code>tools</code>)</li>
-<li>Write the system prompt — identity, capabilities, domain knowledge, behavioral rules, output format</li>
+<li>Write the system prompt - identity, capabilities, domain knowledge, behavioral rules, output format</li>
 <li>Save and reload VS Code (<code>Ctrl+Shift+P</code> → &quot;Reload Window&quot;)</li>
 <li>Type <code>@your-agent-name</code> in Copilot Chat</li>
 </ol>
@@ -893,7 +893,7 @@ For subjective issues (alt <span class="hljs-keyword">text</span>, plain languag
 <p><strong>What You&#39;ll Learn:</strong> How agents work, how to interact with the <code>@template-builder</code> agent, and how to extend it for project-specific needs.</p>
 <p><strong>Prerequisites:</strong></p>
 <ul>
-<li>Complete Chapters 15-16 (especially Exercise D — designing your own template)</li>
+<li>Complete Chapters 15-16 (especially Exercise D - designing your own template)</li>
 <li>VS Code is installed and GitHub Copilot is active</li>
 <li>You have forked <code>agent-forge</code> to your GitHub account</li>
 <li>You have cloned your fork locally: <code>git clone https://github.com/[your-username]/agent-forge.git</code></li>
@@ -1019,7 +1019,7 @@ The <code>@template-builder</code> agent will ask (via Ask Questions UI):</p>
 <ul>
 <li>Read each question carefully</li>
 <li>Provide clear, brief answers</li>
-<li>Don&#39;t worry about perfect wording — the agent will format it correctly</li>
+<li>Don&#39;t worry about perfect wording - the agent will format it correctly</li>
 </ul>
 <p><strong>What success looks like:</strong></p>
 <ul>
@@ -1084,7 +1084,7 @@ The <code>@template-builder</code> agent will ask (via Ask Questions UI):</p>
 </ul>
 <p><strong>If something looks wrong:</strong></p>
 <ul>
-<li>Don&#39;t edit the YAML yet — just note what&#39;s off</li>
+<li>Don&#39;t edit the YAML yet - just note what&#39;s off</li>
 <li>You can ask the agent: &quot;@template-builder fix the browser field, should be an input not a dropdown&quot;</li>
 <li>The agent regenerates with corrections</li>
 </ul>
@@ -1377,7 +1377,7 @@ git push origin main</code></pre>
 <ul>
 <li>The agent <strong>modifies</strong> the YAML it generated</li>
 <li>The new checkbox appears in the YAML with proper formatting and indentation</li>
-<li>It doesn&#39;t regenerate from scratch — just adds your change</li>
+<li>It doesn&#39;t regenerate from scratch - just adds your change</li>
 </ul>
 <hr>
 <h5>Step 3: Request Another Refinement</h5>
@@ -1400,7 +1400,7 @@ git push origin main</code></pre>
 <li>The agent produced <strong>complete output</strong> (full YAML)</li>
 <li>You <strong>refined incrementally</strong> (add checkbox, enhance code support)</li>
 <li>At each step, the agent <strong>understood context</strong> (which field, how to modify it)</li>
-<li>You <strong>didn&#39;t start over</strong> — just evolved the template</li>
+<li>You <strong>didn&#39;t start over</strong> - just evolved the template</li>
 </ol>
 <p><strong>This is the pattern that scales:</strong></p>
 <ul>
@@ -1464,12 +1464,12 @@ git push origin main</code></pre>
 <h3>Scope 3: The Cloud (GitHub Agentic Workflows)</h3>
 <ul>
 <li><strong>File lives in:</strong> <code>.github/workflows/[name].md</code> (same folder as standard Actions YAML)</li>
-<li><strong>Triggered by:</strong> Any GitHub event — <code>issues: opened</code>, <code>pull_request: created</code>, <code>schedule:</code></li>
+<li><strong>Triggered by:</strong> Any GitHub event - <code>issues: opened</code>, <code>pull_request: created</code>, <code>schedule:</code></li>
 <li><strong>Runs on:</strong> GitHub Actions infrastructure, serverlessly</li>
 <li><strong>Reaches:</strong> The repository where the workflow is defined</li>
 </ul>
-<p>No VS Code required. No local machine required. The workflow runs whether or not anyone is watching — when an issue is opened at 3am, the agentic response fires.</p>
-<p><strong>The link between Agent Forge and Agentic Workflows:</strong> Both use Markdown-authored instructions. Both define intent in plain language. Both travel with the repository. The Agent Forge pattern <em>is</em> a conceptual precursor to GitHub Agentic Workflows — understanding one makes the other immediately readable.</p>
+<p>No VS Code required. No local machine required. The workflow runs whether or not anyone is watching - when an issue is opened at 3am, the agentic response fires.</p>
+<p><strong>The link between Agent Forge and Agentic Workflows:</strong> Both use Markdown-authored instructions. Both define intent in plain language. Both travel with the repository. The Agent Forge pattern <em>is</em> a conceptual precursor to GitHub Agentic Workflows - understanding one makes the other immediately readable.</p>
 <p><strong>Example: Auto-triage accessibility issues</strong></p>
 <p>File: <code>.github/workflows/auto-triage-a11y.md</code></p>
 <pre><code class="hljs language-markdown">---
@@ -1492,7 +1492,7 @@ When an issue is opened with &quot;accessibility&quot; or &quot;a11y&quot; or &q
 <span class="hljs-quote">&gt; - Steps to reproduce the issue</span>
 <span class="hljs-quote">&gt; - What you expected vs what actually happened</span>
 <span class="hljs-quote">&gt;
-&gt; — Auto-triage agent</span>
+&gt; - Auto-triage agent</span>
 
 <span class="hljs-bullet">4.</span> If the issue body already includes those details, remove the <span class="hljs-code">`needs-triage`</span> label</code></pre>
 <p>This runs automatically on every new issue. No human intervention required.</p>
@@ -1504,7 +1504,7 @@ When an issue is opened with &quot;accessibility&quot; or &quot;a11y&quot; or &q
 <ul>
 <li><strong>Download:</strong> <a href="https://desktop.github.com">desktop.github.com</a></li>
 <li><strong>Useful for:</strong> Visual diff review, simpler branch management</li>
-<li><strong>Screen reader support:</strong> Partial — keyboard navigation works for core flows</li>
+<li><strong>Screen reader support:</strong> Partial - keyboard navigation works for core flows</li>
 </ul>
 <p><strong>When to use:</strong> If command-line Git feels overwhelming, GitHub Desktop provides a GUI alternative.</p>
 <h3>GitHub CLI (<code>gh</code>)</h3>
@@ -1523,7 +1523,7 @@ gh <span class="hljs-built_in">pr</span> create                    <span class="
 gh <span class="hljs-built_in">pr</span> merge 14                  <span class="hljs-comment"># Merge PR #14</span>
 gh repo <span class="hljs-built_in">clone</span> owner/repo        <span class="hljs-comment"># Clone a repository</span>
 gh repo fork owner/repo         <span class="hljs-comment"># Fork a repository</span></code></pre>
-<p><strong>Screen reader advantage:</strong> <code>gh</code> output is plain text with no dynamic regions — more predictable than the browser for certain operations.</p>
+<p><strong>Screen reader advantage:</strong> <code>gh</code> output is plain text with no dynamic regions - more predictable than the browser for certain operations.</p>
 <h3>GitHub Copilot CLI (<code>gh copilot</code>)</h3>
 <p>An extension that adds Copilot to the terminal.</p>
 <p><strong>Install:</strong></p>
@@ -1545,7 +1545,7 @@ Suggestion: git <span class="hljs-built_in">log</span> --since=<span class="hljs
 
 Run this <span class="hljs-built_in">command</span>? (Y/n)</code></pre>
 <hr>
-<h2>Keyboard Shortcuts — Agent Forge Quick Reference</h2>
+<h2>Keyboard Shortcuts - Agent Forge Quick Reference</h2>
 <table>
 <thead>
 <tr>
@@ -1612,8 +1612,8 @@ Run this <span class="hljs-built_in">command</span>? (Y/n)</code></pre>
 
   </main>
   <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
-    <p><strong>GIT Going with GitHub</strong> — A workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
-    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="http://www.joinbits.org">joinbits.org</a></p>
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
+    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="https://www.joinbits.org">joinbits.org</a></p>
   </footer>
   </body>
 </html>

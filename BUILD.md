@@ -20,7 +20,7 @@ npm install
 # Build HTML once
 npm run build:html
 
-# Watch mode — auto-rebuild on markdown changes
+# Watch mode - auto-rebuild on markdown changes
 npm run watch:html
 
 # Clean generated files
@@ -29,7 +29,7 @@ npm run clean
 
 ## How It Works
 
-The build is run **locally** before committing. There is no CI pipeline — you build the HTML yourself and commit both the `.md` source and the `html/` output in the same commit.
+The build is run **locally** before committing. There is no CI pipeline - you build the HTML yourself and commit both the `.md` source and the `html/` output in the same commit.
 
 **Typical workflow:**
 1. Edit one or more `.md` files
@@ -68,8 +68,8 @@ The build is run **locally** before committing. There is no CI pipeline — you 
 
 ## Configuration Files
 
-- **Build script:** `scripts/build-html.js` — Conversion logic
-- **Dependencies:** `package.json` — Node.js packages (marked, highlight.js, etc.)
+- **Build script:** `scripts/build-html.js` - Conversion logic
+- **Dependencies:** `package.json` - Node.js packages (marked, highlight.js, etc.)
 
 ## Customization
 
@@ -124,9 +124,9 @@ When submitting pull requests:
 
 ## Additional Resources
 
-- [marked documentation](https://marked.js.org/) — Markdown parser
-- [highlight.js documentation](https://highlightjs.org/) — Syntax highlighting
-- [GitHub Markdown spec](https://github.github.com/gfm/) — GitHub Flavored Markdown
+- [marked documentation](https://marked.js.org/) - Markdown parser
+- [highlight.js documentation](https://highlightjs.org/) - Syntax highlighting
+- [GitHub Markdown spec](https://github.github.com/gfm/) - GitHub Flavored Markdown
 
 ---
 

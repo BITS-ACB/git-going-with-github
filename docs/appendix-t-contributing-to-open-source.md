@@ -21,16 +21,16 @@
 
 ## 1. What Is Open Source?
 
-Open source software is software whose source code is publicly available. Anyone can read it, use it, and — in most cases — contribute to it. Contributions can include:
+Open source software is software whose source code is publicly available. Anyone can read it, use it, and - in most cases - contribute to it. Contributions can include:
 
 - Fixing bugs in the software
 - Writing or improving documentation
 - Filing bug reports that help maintainers understand problems
 - Reviewing other people's changes and leaving thoughtful feedback
 - Translating content into other languages
-- Improving accessibility — adding alt text, fixing heading structure, testing with screen readers
+- Improving accessibility - adding alt text, fixing heading structure, testing with screen readers
 
-The projects that power much of today's web infrastructure — operating systems, programming languages, screen readers, and developer tools — are maintained by contributors who started exactly where you are now.
+The projects that power much of today's web infrastructure - operating systems, programming languages, screen readers, and developer tools - are maintained by contributors who started exactly where you are now.
 
 ---
 
@@ -38,7 +38,7 @@ The projects that power much of today's web infrastructure — operating systems
 
 Contributors come from all backgrounds, skill levels, and countries. A first contribution could be fixing a typo, adding a missing full stop, or filing a bug report that saves a maintainer hours of debugging.
 
-Assistive technology users bring a perspective that most sighted, mouse-first developers cannot — you notice when heading structure is broken, when a button has no accessible name, or when a form cannot be completed with a keyboard. These are real, high-value contributions that improve projects for everyone.
+Assistive technology users bring a perspective that most sighted, mouse-first developers cannot - you notice when heading structure is broken, when a button has no accessible name, or when a form cannot be completed with a keyboard. These are real, high-value contributions that improve projects for everyone.
 
 You do not need permission to start. If a repository's issues are public, you can file a bug or suggest an improvement today.
 
@@ -48,10 +48,10 @@ You do not need permission to start. If a repository's issues are public, you ca
 
 A good first contribution is:
 
-- **Specific** — it addresses one problem clearly, not a general "this could be better"
-- **Scoped** — it does not try to fix everything at once; one PR, one problem
-- **Described** — the PR or issue explains what changed and why, not just what
-- **Tested** — for documentation, this means reading it aloud with your screen reader before submitting; for code, it means verifying the fix works
+- **Specific** - it addresses one problem clearly, not a general "this could be better"
+- **Scoped** - it does not try to fix everything at once; one PR, one problem
+- **Described** - the PR or issue explains what changed and why, not just what
+- **Tested** - for documentation, this means reading it aloud with your screen reader before submitting; for code, it means verifying the fix works
 
 **Signs a contribution is too large for a first attempt:**
 - The PR touches more than three or four files
@@ -72,7 +72,7 @@ Most open source projects label issues that are suitable for new contributors. L
 | `first-timers-only` | Reserved for people making their first contribution to this project |
 | `help wanted` | Maintainers are actively looking for someone to pick this up |
 | `beginner` or `easy` | Lower complexity than average |
-| `documentation` | No coding required — writing or editing docs |
+| `documentation` | No coding required - writing or editing docs |
 | `accessibility` | Directly relevant to AT users; high-value work |
 
 **How to search:** On any GitHub repository, go to Issues → filter by label. Or use GitHub's global search: `label:"good first issue" is:open language:markdown` to find documentation issues across all public repositories.
@@ -96,14 +96,14 @@ If the issue looks right for you, comment briefly to let the team know you are w
 
 ### The Basic Workflow
 
-1. **Fork the repository** — creates your own copy on GitHub
-2. **Clone your fork** to your computer (or open a Codespace — see [Appendix N](appendix-n-github-codespaces.md))
-3. **Create a branch** — name it something descriptive: `fix/broken-link-setup-guide`
-4. **Make your change** — edit the file, save, verify
-5. **Commit with a clear message** — "Fix broken link in setup-guide.md line 34"
+1. **Fork the repository** - creates your own copy on GitHub
+2. **Clone your fork** to your computer (or open a Codespace - see [Appendix N](appendix-n-github-codespaces.md))
+3. **Create a branch** - name it something descriptive: `fix/broken-link-setup-guide`
+4. **Make your change** - edit the file, save, verify
+5. **Commit with a clear message** - "Fix broken link in setup-guide.md line 34"
 6. **Push to your fork**
 7. **Open a pull request** from your branch to the original repository's default branch
-8. **Respond to review feedback** — maintainers may ask for changes; this is normal and not a rejection
+8. **Respond to review feedback** - maintainers may ask for changes; this is normal and not a rejection
 
 ### Writing a Good PR Description
 
@@ -135,19 +135,19 @@ If you opened a PR and are waiting for a review, it is appropriate to leave one 
 
 When your pull request is merged:
 
-- Your name appears in the project's **commit history permanently** — it cannot be removed
+- Your name appears in the project's **commit history permanently** - it cannot be removed
 - The issue you fixed is closed
 - You are officially listed as a **contributor** to this project, visible on the repository's Contributors page
 
 This matters for your GitHub profile. Each merged contribution demonstrates real-world collaboration with a project team: you scoped a problem, communicated with maintainers, addressed feedback, and saw the work through. That record is visible to anyone who views your profile.
 
-Over time, a series of contributions builds a portfolio that shows how you work — not just what you can do in isolation.
+Over time, a series of contributions builds a portfolio that shows how you work - not just what you can do in isolation.
 
 ---
 
 ## 9. Building a Contribution Habit
 
-The hardest part of open source contribution is starting. Once you have one merged PR, the next is easier — you know the workflow, you have proof it is possible, and you have already navigated the social dynamics of working with a maintainer.
+The hardest part of open source contribution is starting. Once you have one merged PR, the next is easier - you know the workflow, you have proof it is possible, and you have already navigated the social dynamics of working with a maintainer.
 
 **Practical habits:**
 
@@ -158,4 +158,4 @@ The hardest part of open source contribution is starting. Once you have one merg
 
 ---
 
-*Return to: [Resources](appendix-u-resources.md) | [Appendix A — Glossary](appendix-a-glossary.md)*
+*Return to: [Resources](appendix-u-resources.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

@@ -1,7 +1,7 @@
 # Appendix G: GitHub Discussions
 ## Forum-Style Conversations Beyond Issues and Pull Requests
 
-> GitHub Discussions is a built-in community forum for repositories and organizations. It's where open-ended conversations live — questions, ideas, announcements, polls, and community Q&A — separate from the action-oriented world of issues and pull requests.
+> GitHub Discussions is a built-in community forum for repositories and organizations. It's where open-ended conversations live - questions, ideas, announcements, polls, and community Q&A - separate from the action-oriented world of issues and pull requests.
 
 ---
 
@@ -32,14 +32,14 @@
 | You need to track progress (labels, assign, close) | You want to have an open conversation without resolving it |
 | The answer is "fixed" or "won't fix" | The conversation might not have one right answer |
 
-**The signal for maintainers:** A question in an issue is noisier — it implies something needs to be done. The same question in Discussions doesn't trigger workflow automation and doesn't inflate the issue count.
+**The signal for maintainers:** A question in an issue is noisier - it implies something needs to be done. The same question in Discussions doesn't trigger workflow automation and doesn't inflate the issue count.
 
 **Common Discussions categories you'll encounter:**
-- **Q&A** — Support questions and answers (one answer can be marked correct)
-- **Ideas** — Feature brainstorming before a formal feature request
-- **Announcements** — Maintainer posts about releases, breaking changes, roadmaps
-- **General** — Everything else
-- **Show and Tell** — Community members showing what they built
+- **Q&A** - Support questions and answers (one answer can be marked correct)
+- **Ideas** - Feature brainstorming before a formal feature request
+- **Announcements** - Maintainer posts about releases, breaking changes, roadmaps
+- **General** - Everything else
+- **Show and Tell** - Community members showing what they built
 
 ---
 
@@ -86,10 +86,10 @@ Enter → Open a discussion
 ## 4. Creating a Discussion
 
 1. From the Discussions tab, activate **"New discussion"** button
-2. Select a category (required — affects which fields appear)
+2. Select a category (required - affects which fields appear)
 3. Fill in:
-   - **Title** — Clear and searchable. "How do I use the daily-briefing agent?" not "Help"
-   - **Body** — Use Markdown. Same editor as issues
+   - **Title** - Clear and searchable. "How do I use the daily-briefing agent?" not "Help"
+   - **Body** - Use Markdown. Same editor as issues
    - For **Q&A** category: phrase the title as a question
 4. Activate **"Start discussion"**
 
@@ -154,7 +154,7 @@ In the **Q&A** category, one reply can be marked as the accepted answer. This is
 **To mark an answer (as the discussion author):**
 1. Navigate to the reply you want to mark as the answer
 2. Look for the **"Mark as answer"** button below the reply
-3. Activate it — the reply is pinned to the top and the discussion shows a green "Answered" badge
+3. Activate it - the reply is pinned to the top and the discussion shows a green "Answered" badge
 
 **Why it matters:** Marked answers make Q&A discussions into searchable documentation. Anyone who searches for the same question later immediately sees the correct answer without reading the whole thread.
 
@@ -170,7 +170,7 @@ Some discussion categories support embedded polls. A poll lets you gather struct
 1. When creating a discussion, look for the "Add a poll" option below the body editor
 2. Type each poll option (up to 8 options)
 3. Set poll duration (optional)
-4. Submit the discussion — the poll appears inline
+4. Submit the discussion - the poll appears inline
 
 **Voting in a poll:**
 ```
@@ -210,10 +210,10 @@ Ctrl+Enter            → Submit a reply (when in text area)
 **NVDA note:**
 - Browse mode (NVDA+Space) to read the discussion
 - Enter application mode for the reply editor
-- Discussion replies are `<article>` elements — NVDA announces "article" as you navigate with H
+- Discussion replies are `<article>` elements - NVDA announces "article" as you navigate with H
 
 **JAWS note:**
-- `A` key navigates `<article>` elements — useful for jumping between replies
+- `A` key navigates `<article>` elements - useful for jumping between replies
 - Use Forms Mode for the reply editor
 
 **VoiceOver note:**
@@ -239,7 +239,7 @@ Find them at `github.com/ORGANIZATION/discussions`.
 
 ## 10. Agent Forge: What's Different Here
 
-Agent Forge prompts currently operate on **issues, PRs, and code** — not directly on Discussions. If you want to respond to a discussion using Agent Forge:
+Agent Forge prompts currently operate on **issues, PRs, and code** - not directly on Discussions. If you want to respond to a discussion using Agent Forge:
 
 1. Copy the discussion URL or content
 2. Use `/issue-reply` with the content pasted in: the agent will draft a thoughtful, accessible response

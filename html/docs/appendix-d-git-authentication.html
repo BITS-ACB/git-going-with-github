@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GIT Going with GitHub — A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
-  <title>Appendix D: Git Authentication — GIT Going with GitHub</title>
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
+  <title>Appendix D: Git Authentication - GIT Going with GitHub</title>
   <link rel="stylesheet" href="./styles/github-markdown.css">
   <link rel="stylesheet" href="./styles/highlight.css">
   <link rel="stylesheet" href="./styles/custom.css">
@@ -88,18 +88,18 @@
 <li>Give it a descriptive name in the <strong>Note</strong> field: &quot;Workshop Laptop Token&quot;</li>
 <li>Set expiration: <strong>30 days</strong> or <strong>60 days</strong> (recommended for temporary workshop use)</li>
 <li>Select scopes:<ul>
-<li><strong><code>repo</code></strong> — Full control of private repositories (includes public repo access)</li>
-<li><strong><code>workflow</code></strong> — Update GitHub Actions workflows (if you&#39;ll work with Actions)</li>
+<li><strong><code>repo</code></strong> - Full control of private repositories (includes public repo access)</li>
+<li><strong><code>workflow</code></strong> - Update GitHub Actions workflows (if you&#39;ll work with Actions)</li>
 </ul>
 </li>
 <li>Scroll down and activate <strong>&quot;Generate token&quot;</strong></li>
-<li><strong>CRITICAL:</strong> Copy the token immediately — you cannot see it again</li>
+<li><strong>CRITICAL:</strong> Copy the token immediately - you cannot see it again</li>
 </ol>
 <p><strong>Screen reader note:</strong> The token appears as a long string in a text field. Select all (<code>Ctrl+A</code>), copy (<code>Ctrl+C</code>), and paste it into a secure note or password manager.</p>
 <h3>Step 2: Store It Securely</h3>
 <p><strong>Options:</strong></p>
 <ul>
-<li><strong>Password manager</strong> (1Password, Bitwarden, LastPass) — best option</li>
+<li><strong>Password manager</strong> (1Password, Bitwarden, LastPass) - best option</li>
 <li><strong>Encrypted note</strong> in your operating system&#39;s secure notes</li>
 <li><strong>Plain text file</strong> in an encrypted folder (temporary only)</li>
 </ul>
@@ -176,7 +176,7 @@ https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ow
 <ul>
 <li>Generate a new PAT</li>
 <li>Clear your credential cache (Windows: Credential Manager; macOS: Keychain; Linux: <code>git credential-cache exit</code>)</li>
-<li>Try pushing again — Git will ask for credentials</li>
+<li>Try pushing again - Git will ask for credentials</li>
 </ul>
 <h3>&quot;Permission denied (publickey)&quot;</h3>
 <p><strong>Problem:</strong> SSH key not properly set up.</p>
@@ -193,20 +193,20 @@ https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ow
 <hr>
 <h2>Security Best Practices</h2>
 <ol>
-<li><strong>Never share your private key or PAT</strong> — treat them like passwords</li>
-<li><strong>Use scoped PATs</strong> — only grant the minimum permissions needed</li>
-<li><strong>Set expiration dates</strong> on PATs — regenerate periodically</li>
-<li><strong>Use a passphrase</strong> on SSH keys — adds another layer of security</li>
+<li><strong>Never share your private key or PAT</strong> - treat them like passwords</li>
+<li><strong>Use scoped PATs</strong> - only grant the minimum permissions needed</li>
+<li><strong>Set expiration dates</strong> on PATs - regenerate periodically</li>
+<li><strong>Use a passphrase</strong> on SSH keys - adds another layer of security</li>
 <li><strong>Revoke old tokens</strong> when you&#39;re done with a project or device</li>
-<li><strong>Don&#39;t commit tokens or keys to Git</strong> — use <code>.gitignore</code> for config files</li>
+<li><strong>Don&#39;t commit tokens or keys to Git</strong> - use <code>.gitignore</code> for config files</li>
 </ol>
 <hr>
-<h2>Commit Signing — Verified Badges and Vigilant Mode</h2>
-<p>When you push commits to GitHub, each commit shows a small badge: <strong>Verified</strong> or <strong>Unverified</strong>. This badge tells anyone viewing the commit history whether the commit was cryptographically signed — proving it came from you and was not tampered with.</p>
+<h2>Commit Signing - Verified Badges and Vigilant Mode</h2>
+<p>When you push commits to GitHub, each commit shows a small badge: <strong>Verified</strong> or <strong>Unverified</strong>. This badge tells anyone viewing the commit history whether the commit was cryptographically signed - proving it came from you and was not tampered with.</p>
 <h3>Why It Matters</h3>
 <p>Open source maintainers increasingly require signed commits before merging. Some repositories enforce this with branch protection rules. If you contribute to <code>agent-forge</code> and your commits show &quot;Unverified,&quot; a maintainer may ask you to sign them before the PR can be merged.</p>
 <h3>Two Methods for Signing Commits</h3>
-<h4>SSH Signing (simpler — reuses your existing SSH key)</h4>
+<h4>SSH Signing (simpler - reuses your existing SSH key)</h4>
 <p>If you already have an SSH key set up for authentication, you can use it for signing too.</p>
 <p><strong>Step 1: Configure Git to use SSH for signing:</strong></p>
 <pre><code class="hljs language-bash">git config --global gpg.format ssh
@@ -241,7 +241,7 @@ git config --global commit.gpgsign <span class="hljs-literal">true</span></code>
 <pre><code class="hljs language-bash">git config --global user.signingkey YOUR_KEY_ID
 git config --global commit.gpgsign <span class="hljs-literal">true</span></code></pre>
 <h3>Vigilant Mode</h3>
-<p>GitHub has an optional setting called <strong>Vigilant Mode</strong> (in Settings → SSH and GPG Keys → Vigilant mode). When enabled, GitHub marks <strong>all</strong> commits from your account as &quot;Unverified&quot; unless they are signed — even commits that were previously shown without a badge.</p>
+<p>GitHub has an optional setting called <strong>Vigilant Mode</strong> (in Settings → SSH and GPG Keys → Vigilant mode). When enabled, GitHub marks <strong>all</strong> commits from your account as &quot;Unverified&quot; unless they are signed - even commits that were previously shown without a badge.</p>
 <p><strong>Why some maintainers enable Vigilant Mode:</strong></p>
 <ul>
 <li>It makes tampered or spoofed commits immediately obvious</li>
@@ -250,7 +250,7 @@ git config --global commit.gpgsign <span class="hljs-literal">true</span></code>
 <p><strong>What you see as a contributor:</strong></p>
 <ul>
 <li>Every unsigned commit you push will show a yellow &quot;Unverified&quot; badge</li>
-<li>This is a visual signal — commits can still be pushed, but maintainers may block the merge</li>
+<li>This is a visual signal - commits can still be pushed, but maintainers may block the merge</li>
 </ul>
 <p><strong>To read verification badges with a screen reader:</strong></p>
 <ul>
@@ -259,7 +259,7 @@ git config --global commit.gpgsign <span class="hljs-literal">true</span></code>
 <li>NVDA/JAWS: the badge is inside the commit row; use <code>↓</code> to read through each row and the badge text is read inline</li>
 <li>VoiceOver: use <code>VO+Right</code> through the commit row; the badge is read as a button with the text &quot;Verified&quot; (clicking it shows the certificate)</li>
 </ul>
-<p><strong>Workshop recommendation:</strong> SSH signing is simpler to set up than GPG and reuses your existing key. If you have 10 minutes, configure it before Day 2 — every commit you push to agent-forge will show as Verified.</p>
+<p><strong>Workshop recommendation:</strong> SSH signing is simpler to set up than GPG and reuses your existing key. If you have 10 minutes, configure it before Day 2 - every commit you push to agent-forge will show as Verified.</p>
 <hr>
 <h2>For This Workshop</h2>
 <p><strong>Recommended approach:</strong></p>
@@ -275,8 +275,8 @@ git config --global commit.gpgsign <span class="hljs-literal">true</span></code>
 
   </main>
   <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
-    <p><strong>GIT Going with GitHub</strong> — A workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
-    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="http://www.joinbits.org">joinbits.org</a></p>
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
+    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="https://www.joinbits.org">joinbits.org</a></p>
   </footer>
   </body>
 </html>

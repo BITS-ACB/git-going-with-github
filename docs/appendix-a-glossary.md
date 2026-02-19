@@ -1,7 +1,7 @@
 # Appendix A: GitHub Concepts & Glossary
 ## Every Term You Need for Open Source Contribution
 
-> This glossary is your reference for the entire two-day workshop. When you hear a term you don't recognize — check here first. Terms are grouped by category and also sorted alphabetically at the end.
+> This glossary is your reference for the entire two-day workshop. When you hear a term you don't recognize - check here first. Terms are grouped by category and also sorted alphabetically at the end.
 
 ---
 
@@ -9,7 +9,7 @@
 
 ### Repository (Repo)
 
-A repository is the container for an entire project. It holds all the project's files, folders, documentation, and the complete history of every change ever made. Think of it as a project folder that has a time machine built in — you can see every version of every file going back to the beginning.
+A repository is the container for an entire project. It holds all the project's files, folders, documentation, and the complete history of every change ever made. Think of it as a project folder that has a time machine built in - you can see every version of every file going back to the beginning.
 
 A repository lives on GitHub at an address like: `https://github.com/owner/repo-name`
 
@@ -19,7 +19,7 @@ A repository lives on GitHub at an address like: `https://github.com/owner/repo-
 
 ### Organization (Org)
 
-An organization is a group account on GitHub that multiple people can belong to. Open source projects typically live inside an organization rather than under a personal account. For example: `https://github.com/microsoft/vscode` — here `microsoft` is the organization and `vscode` is the repository.
+An organization is a group account on GitHub that multiple people can belong to. Open source projects typically live inside an organization rather than under a personal account. For example: `https://github.com/microsoft/vscode` - here `microsoft` is the organization and `vscode` is the repository.
 
 ---
 
@@ -35,8 +35,8 @@ A fork is a personal copy of someone else's repository, living in your own GitHu
 
 A remote is a connection to a repository hosted elsewhere (usually on GitHub). Your local Git repository can have multiple remotes. The most common remotes are:
 
-- **`origin`** — your fork on GitHub
-- **`upstream`** — the original repository you forked from
+- **`origin`** - your fork on GitHub
+- **`upstream`** - the original repository you forked from
 
 When you run `git push origin main`, you're pushing your local `main` branch to the remote named `origin`.
 
@@ -62,7 +62,7 @@ Commands like `git push` and `git pull` default to using `origin` unless you spe
 
 ### .gitignore
 
-`.gitignore` is a special file in the root of your repository that tells Git which files or folders to ignore — meaning Git will not track or commit them.
+`.gitignore` is a special file in the root of your repository that tells Git which files or folders to ignore - meaning Git will not track or commit them.
 
 **Why use .gitignore?**
 
@@ -122,14 +122,14 @@ git clone https://github.com/your-username/repo-name.git
 
 A branch is a separate line of development inside a repository. The main branch (often called `main` or `master`) holds the stable, released version of the project. When you want to add a feature or fix a bug, you create a new branch so your work doesn't affect `main` until it's ready.
 
-Think of branches like parallel timelines — each branch is its own version of the project that can evolve independently and be merged back together later.
+Think of branches like parallel timelines - each branch is its own version of the project that can evolve independently and be merged back together later.
 
 **Common branch names:**
-- `main` — the primary, stable branch
-- `develop` — integration branch (not all projects have this)
-- `feature/my-new-thing` — convention for feature branches
-- `fix/broken-button` — convention for bug fix branches
-- `docs/update-readme` — convention for documentation-only branches
+- `main` - the primary, stable branch
+- `develop` - integration branch (not all projects have this)
+- `feature/my-new-thing` - convention for feature branches
+- `fix/broken-button` - convention for bug fix branches
+- `docs/update-readme` - convention for documentation-only branches
 
 ---
 
@@ -174,13 +174,13 @@ An issue is a discussion item in a GitHub repository. Issues are used for:
 - Discussing ideas
 - Tracking work items
 
-Every issue gets a sequential number (like `#42`) and can have labels, assignees, milestones, and comments. Issues are the starting point for most contributions — it's best practice to open or find an issue before making code changes.
+Every issue gets a sequential number (like `#42`) and can have labels, assignees, milestones, and comments. Issues are the starting point for most contributions - it's best practice to open or find an issue before making code changes.
 
 ---
 
 ### Pull Request (PR)
 
-A pull request is a proposal to merge changes from one branch into another. When you have finished working on your fork or feature branch, you open a PR to say "here is my work — please review it and consider merging it."
+A pull request is a proposal to merge changes from one branch into another. When you have finished working on your fork or feature branch, you open a PR to say "here is my work - please review it and consider merging it."
 
 A PR shows:
 - Which branch you want to merge into which target branch
@@ -195,9 +195,9 @@ The name "pull request" means you are requesting that the maintainers pull your 
 ### Code Review
 
 Code review is the process of one or more collaborators reading and providing feedback on a PR before it is merged. Reviewers can:
-- **Comment** — leave a note on a line (not a formal verdict)
-- **Approve** — signal that they are happy with the changes
-- **Request Changes** — indicate that specific things need to be addressed before merging
+- **Comment** - leave a note on a line (not a formal verdict)
+- **Approve** - signal that they are happy with the changes
+- **Request Changes** - indicate that specific things need to be addressed before merging
 
 Good code reviews are kind, specific, and constructive.
 
@@ -248,12 +248,12 @@ Your changes flow this way: Original Repo ← Pull Request ← Your Fork
 ### Label
 
 Labels are colored tags applied to issues and PRs to categorize them. Common labels:
-- `bug` — something isn't working
-- `enhancement` — new feature or request
-- `documentation` — documentation-only change
-- `good first issue` — good for newcomers (look for this when finding your first contribution!)
-- `help wanted` — maintainers want community help
-- `accessibility` — accessibility-related
+- `bug` - something isn't working
+- `enhancement` - new feature or request
+- `documentation` - documentation-only change
+- `good first issue` - good for newcomers (look for this when finding your first contribution!)
+- `help wanted` - maintainers want community help
+- `accessibility` - accessibility-related
 
 ---
 
@@ -301,9 +301,9 @@ These abbreviations appear frequently in GitHub comments, PR descriptions, and c
 
 | Term | Stands For | Meaning |
 |------|-----------|---------|
-| **LGTM** | Looks Good To Me | Informal approval — "I reviewed it and it looks correct" |
+| **LGTM** | Looks Good To Me | Informal approval - "I reviewed it and it looks correct" |
 | **WIP** | Work In Progress | This PR is not ready for review yet |
-| **nit** | Nitpick | A minor, optional suggestion — "not a blocker" |
+| **nit** | Nitpick | A minor, optional suggestion - "not a blocker" |
 | **RFC** | Request For Comments | Seeking broad feedback on an idea or approach |
 | **PTAL** | Please Take A Look | Asking someone to review something |
 | **IMO / IMHO** | In My (Humble) Opinion | Softening a suggestion |
@@ -311,17 +311,17 @@ These abbreviations appear frequently in GitHub comments, PR descriptions, and c
 | **TIL** | Today I Learned | Sharing a discovery |
 | **FYI** | For Your Information | Sharing information, no action needed |
 | **EOD / EOW** | End of Day / Week | Deadline |
-| **Closes #42** | — | When merged, this PR closes issue #42 (automatic linking) |
-| **Fixes #42** | — | Same as Closes — use when the PR fixes a bug |
-| **Resolves #42** | — | Same as Closes — general resolution |
+| **Closes #42** | - | When merged, this PR closes issue #42 (automatic linking) |
+| **Fixes #42** | - | Same as Closes - use when the PR fixes a bug |
+| **Resolves #42** | - | Same as Closes - general resolution |
 | **Refs #42** | References #42 | Links to the issue without closing it |
 | **cc @username** | Carbon copy | Notifying someone without requiring their action |
 | **/cc** | Same as cc | Alternative form |
-| **stale** | — | An issue or PR with no recent activity |
-| **WONTFIX** | — | The project won't address this issue (it's not a bug, or by design) |
-| **upstream** | — | The original repo you forked from |
-| **downstream** | — | A fork or project that depends on this one |
-| **breaking change** | — | A change that will break existing functionality for users |
+| **stale** | - | An issue or PR with no recent activity |
+| **WONTFIX** | - | The project won't address this issue (it's not a bug, or by design) |
+| **upstream** | - | The original repo you forked from |
+| **downstream** | - | A fork or project that depends on this one |
+| **breaking change** | - | A change that will break existing functionality for users |
 
 ---
 
@@ -345,7 +345,7 @@ git diff HEAD     # Show uncommitted changes
 
 ### Detached HEAD
 
-A "detached HEAD" occurs when you check out a specific commit instead of a branch. You're no longer "on" a branch — just looking at a snapshot in time.
+A "detached HEAD" occurs when you check out a specific commit instead of a branch. You're no longer "on" a branch - just looking at a snapshot in time.
 
 **Why it happens:**
 ```bash
@@ -382,11 +382,11 @@ git stash pop  # Restore your changes
 ```
 
 **Stash commands:**
-- `git stash` — save changes
-- `git stash list` — see what's stashed
-- `git stash pop` — restore and remove from stash
-- `git stash apply` — restore but keep in stash
-- `git stash drop` — delete a stash
+- `git stash` - save changes
+- `git stash list` - see what's stashed
+- `git stash pop` - restore and remove from stash
+- `git stash apply` - restore but keep in stash
+- `git stash drop` - delete a stash
 
 **Use case:** "I need to quickly switch branches to check something, but I'm in the middle of work I'm not ready to commit."
 
@@ -448,7 +448,7 @@ git cherry-pick a1b2c3d  # Apply commit a1b2c3d to main
 - Backport a bug fix to an older release branch
 - Undo a commit on one branch but keep it on another
 
-**Warning:** Cherry-picking duplicates commits (creates a new commit with the same changes). Avoid cherry-picking commits that are part of an active feature branch — it causes confusion.
+**Warning:** Cherry-picking duplicates commits (creates a new commit with the same changes). Avoid cherry-picking commits that are part of an active feature branch - it causes confusion.
 
 ---
 
@@ -510,19 +510,19 @@ When you rebase, Git rewrites commit history. The remote branch and your local b
 
 ### SHA / Hash
 
-Every commit, file, and tree in Git is identified by a SHA hash — a 40-character string of letters and numbers (e.g., `a1b2c3d4e5f6...`). You will see shortened versions like `a1b2c3d` in the GitHub UI. These are unique fingerprints.
+Every commit, file, and tree in Git is identified by a SHA hash - a 40-character string of letters and numbers (e.g., `a1b2c3d4e5f6...`). You will see shortened versions like `a1b2c3d` in the GitHub UI. These are unique fingerprints.
 
 ---
 
 ### Tag / Release
 
-A tag marks a specific commit as significant — usually a version release like `v1.0.0`. Tags are permanent references (unlike branches, which move with each new commit). GitHub Releases are built on top of tags and can include release notes and downloadable files.
+A tag marks a specific commit as significant - usually a version release like `v1.0.0`. Tags are permanent references (unlike branches, which move with each new commit). GitHub Releases are built on top of tags and can include release notes and downloadable files.
 
 ---
 
 ### Actions / Workflow / CI/CD
 
-GitHub Actions is an automation platform built into GitHub. Workflows are automated scripts (written in YAML) that run in response to events — like a PR being opened or code being pushed. CI/CD stands for Continuous Integration / Continuous Deployment.
+GitHub Actions is an automation platform built into GitHub. Workflows are automated scripts (written in YAML) that run in response to events - like a PR being opened or code being pushed. CI/CD stands for Continuous Integration / Continuous Deployment.
 
 In practice: when you open a PR, you will often see automated checks run (tests, linting, accessibility checks). These are GitHub Actions. See [GitHub Actions & Workflows](appendix-q-github-actions-workflows.md) for a full explanation.
 
@@ -531,9 +531,9 @@ In practice: when you open a PR, you will often see automated checks run (tests,
 ### Status Check
 
 A status check is the result of an automated test or workflow run on a PR. Status checks show as:
-- Green checkmark — all checks passed
-- Red X — one or more checks failed
-- Yellow dot — checks are still running
+- Green checkmark - all checks passed
+- Red X - one or more checks failed
+- Yellow dot - checks are still running
 
 Maintainers often require status checks to pass before merging.
 
@@ -541,13 +541,13 @@ Maintainers often require status checks to pass before merging.
 
 ### Webhook
 
-A webhook is an automated notification that GitHub sends to another service when something happens (a push, a PR opened, etc.). Webhooks power integrations with tools like Slack, project management systems, and CI services. As a contributor, you typically don't configure webhooks — they are set up by maintainers.
+A webhook is an automated notification that GitHub sends to another service when something happens (a push, a PR opened, etc.). Webhooks power integrations with tools like Slack, project management systems, and CI services. As a contributor, you typically don't configure webhooks - they are set up by maintainers.
 
 ---
 
 ### GitHub Discussions
 
-Discussions are a threaded forum built into GitHub, separate from Issues. They are used for open-ended conversation, Q&A, and community announcements. Not all projects use Discussions — some prefer issues or external forums.
+Discussions are a threaded forum built into GitHub, separate from Issues. They are used for open-ended conversation, Q&A, and community announcements. Not all projects use Discussions - some prefer issues or external forums.
 
 ---
 
@@ -570,7 +570,7 @@ Every healthy open source project has these files in the root of the repository:
 | File | Purpose |
 |------|---------|
 | `README.md` | Project overview, how to use it, how to contribute |
-| `CONTRIBUTING.md` | How to contribute — setup, workflow, PR guidelines |
+| `CONTRIBUTING.md` | How to contribute - setup, workflow, PR guidelines |
 | `CODE_OF_CONDUCT.md` | Community standards and expectations |
 | `LICENSE` | Legal terms for using the software |
 | `SECURITY.md` | How to report security vulnerabilities responsibly |
@@ -643,6 +643,6 @@ Every healthy open source project has these files in the root of the repository:
 
 ---
 
-*Appendix B — look up any term here at any point during the workshop.*
+*Appendix B - look up any term here at any point during the workshop.*
 *Return to: [Day 1 Agenda](02-day1-agenda.md) | [Understanding GitHub's Web Structure](01-understanding-github-web-structure.md)*
 *See also: [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md)*

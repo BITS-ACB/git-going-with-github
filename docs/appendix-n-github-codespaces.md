@@ -1,5 +1,5 @@
 # Appendix N: GitHub Codespaces
-## Cloud Development Environments — Accessibility Guide
+## Cloud Development Environments - Accessibility Guide
 
 > GitHub Codespaces gives you a full VS Code development environment in your browser or connected to your local VS Code, running on a cloud machine. For screen reader users, this means a consistent, pre-configured environment with no local setup required.
 
@@ -22,14 +22,14 @@
 
 ## 1. What Is GitHub Codespaces?
 
-A Codespace is a cloud-hosted development environment. When you open one, GitHub provisions a virtual machine, clones your repository into it, and connects it to a VS Code interface — either in your browser or via your local VS Code Desktop.
+A Codespace is a cloud-hosted development environment. When you open one, GitHub provisions a virtual machine, clones your repository into it, and connects it to a VS Code interface - either in your browser or via your local VS Code Desktop.
 
 **Why this matters for accessibility:**
 
 - No local installation of tools, compilers, or language runtimes required
 - Your screen reader and OS settings stay on your machine; only the editor runs in the cloud
 - VS Code's full accessibility features (audio cues, screen reader optimized mode, diff viewer) are available
-- The environment is identical for every workshop participant — facilitators can reproduce issues reliably
+- The environment is identical for every workshop participant - facilitators can reproduce issues reliably
 
 **Free tier:** GitHub provides a monthly free allowance of Codespace hours for personal accounts. Workshop usage typically falls well within the free tier.
 
@@ -40,10 +40,10 @@ A Codespace is a cloud-hosted development environment. When you open one, GitHub
 ### From a Repository Page
 
 1. Navigate to the repository on GitHub
-2. Press the **Code** button (keyboard shortcut: there is no direct shortcut — Tab to the button)
+2. Press the **Code** button (keyboard shortcut: there is no direct shortcut - Tab to the button)
 3. In the panel that opens, choose the **Codespaces** tab
 4. Activate **Create codespace on main** (or your branch name)
-5. The Codespace opens in a new browser tab after provisioning (typically 30–60 seconds)
+5. The Codespace opens in a new browser tab after provisioning (typically 30-60 seconds)
 
 ### From the Codespaces Dashboard
 
@@ -72,7 +72,7 @@ For workshop exercises, the default 2-core machine is sufficient.
 The Codespace opens directly in your browser as a fully functional VS Code interface.
 
 - Works in Chrome, Edge, Firefox, and Safari
-- Screen reader support varies slightly by browser — Chrome and Edge have the most consistent behavior with NVDA and JAWS
+- Screen reader support varies slightly by browser - Chrome and Edge have the most consistent behavior with NVDA and JAWS
 - No installation needed
 - Some VS Code extensions are not available in the browser version
 
@@ -86,7 +86,7 @@ If you prefer your local VS Code setup with your extensions and settings:
 4. Run **Codespaces: Connect to Codespace**
 5. Select an existing Codespace or create a new one
 
-When connected via local VS Code, your screen reader interacts with your local VS Code installation — all your familiar settings apply.
+When connected via local VS Code, your screen reader interacts with your local VS Code installation - all your familiar settings apply.
 
 ---
 
@@ -238,7 +238,7 @@ VS Code settings (themes, font size, keybindings) can be synchronized to Codespa
 | Feature | GitHub Codespaces | GitHub.dev |
 |---------|-----------------|------------|
 | Access | github.com/codespaces or press `.` then choose Codespaces | Press `.` on any repository |
-| Terminal | Yes — full terminal | No terminal |
+| Terminal | Yes - full terminal | No terminal |
 | Extensions | Most VS Code extensions | Web-compatible extensions only |
 | Run code | Yes | No |
 | Cost | Free tier, then usage-based | Free |
@@ -252,7 +252,7 @@ For workshop exercises that involve running scripts or tests, use Codespaces. Fo
 ## 10. Common Issues and Workarounds
 
 **The Codespace takes a long time to open:**
-Provisioning a new Codespace can take up to 90 seconds. If it hangs beyond that, refresh the browser tab and try again. Resuming an existing Codespace is much faster (5–10 seconds).
+Provisioning a new Codespace can take up to 90 seconds. If it hangs beyond that, refresh the browser tab and try again. Resuming an existing Codespace is much faster (5-10 seconds).
 
 **Screen reader stops reading after I switch to the terminal:**
 Switch to Browse Mode (NVDA: Insert+Space; JAWS: Insert+Z) to read the terminal output, then return to Focus Mode to type your next command.
@@ -271,4 +271,4 @@ You may have committed but not pushed. In the Source Control panel, look for the
 
 ---
 
-*Return to: [Resources](appendix-u-resources.md) | [Appendix M — VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md) | [Appendix A — Glossary](appendix-a-glossary.md)*
+*Return to: [Resources](appendix-u-resources.md) | [Appendix M - VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

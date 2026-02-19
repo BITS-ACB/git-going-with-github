@@ -1,9 +1,9 @@
 # Day 2 Agenda
-## From Contributor to Product Maker — Igniting the Forge
+## From Contributor to Product Maker - Igniting the Forge
 
-> **The premise of Day 2:** You spent Day 1 learning how GitHub works — by hand, in the browser, with your screen reader. You filed real issues. You opened a real pull request. You resolved a real merge conflict. Those skills are yours now.
+> **The premise of Day 2:** You spent Day 1 learning how GitHub works - by hand, in the browser, with your screen reader. You filed real issues. You opened a real pull request. You resolved a real merge conflict. Those skills are yours now.
 >
-> Day 2 is about what you can build with those skills. You will deepen your contributions using VS Code and GitHub Copilot. You will use Agent Forge — a live, public accessibility project built by your facilitator — not as a shortcut around the skills you learned, but as a **product you can understand, evaluate, critique, and improve** because you now know exactly what it is doing and why.
+> Day 2 is about what you can build with those skills. You will deepen your contributions using VS Code and GitHub Copilot. You will use Agent Forge - a live, public accessibility project built by your facilitator - not as a shortcut around the skills you learned, but as a **product you can understand, evaluate, critique, and improve** because you now know exactly what it is doing and why.
 >
 > You will leave with your name in the commit history of a real open source project and a set of tools you can use on any GitHub repository you ever work on.
 
@@ -13,28 +13,28 @@
 
 | Time | Block | Theme |
 |------|-------|-------|
-| 9:00–9:30 | Block 0 — Day 1 Debrief | Reinforce skills, surface questions, set goals |
-| 9:30–10:30 | Block 1 — VS Code Setup | Screen reader mode, Agent Forge as workspace, navigation |
-| 10:30–10:45 | Break | — |
-| 10:45–12:00 | Block 2 — Deep Contribution | Copilot Chat, inline suggestions, richer PR work |
-| 12:00–13:00 | Lunch | — |
-| 13:00–14:00 | Block 3 — Activate the Agents | First live agent commands — after earning them |
-| 14:00–15:00 | Block 4 — Agentic Workflows | Cloud agents, GitHub Actions, the full reach |
-| 15:00–15:15 | Break | — |
-| 15:15–16:15 | Block 5 — Ship Your Contribution | Real PR upstream to `accesswatch/agent-forge` |
-| 16:15–17:00 | Block 6 — Spec Kit: Design the Future | Group speccing session — what comes next |
-| 17:00–17:30 | Wrap-Up | Names in history, reflections, next steps |
+| 9:00-9:30 | Block 0 - Day 1 Debrief | Reinforce skills, surface questions, set goals |
+| 9:30-10:30 | Block 1 - VS Code Setup | Screen reader mode, Agent Forge as workspace, navigation |
+| 10:30-10:45 | Break | - |
+| 10:45-12:00 | Block 2 - Deep Contribution | Copilot Chat, inline suggestions, richer PR work |
+| 12:00-13:00 | Lunch | - |
+| 13:00-14:00 | Block 3 - Activate the Agents | First live agent commands - after earning them |
+| 14:00-15:00 | Block 4 - Agentic Workflows | Cloud agents, GitHub Actions, the full reach |
+| 15:00-15:15 | Break | - |
+| 15:15-16:15 | Block 5 - Ship Your Contribution | Real PR upstream to `accesswatch/agent-forge` |
+| 16:15-17:00 | Block 6 - Spec Kit: Design the Future | Group speccing session - what comes next |
+| 17:00-17:30 | Wrap-Up | Names in history, reflections, next steps |
 
 ---
 
-## Block 0 — Day 1 Debrief
-**9:00–9:30**
+## Block 0 - Day 1 Debrief
+**9:00-9:30**
 
 ### Purpose
-Close the loop on Day 1. Celebrate what was shipped. Surface anything incomplete. Set the Day 2 mindset: you are not a learner today — you are a product maker.
+Close the loop on Day 1. Celebrate what was shipped. Surface anything incomplete. Set the Day 2 mindset: you are not a learner today - you are a product maker.
 
 ### Facilitator-Led Discussion
-- *"Show me your merged PR from yesterday."* (30-second screen reader tour — navigate to pull requests tab, filter by closed, confirm the merge)
+- *"Show me your merged PR from yesterday."* (30-second screen reader tour - navigate to pull requests tab, filter by closed, confirm the merge)
 - *"What did you file an issue about? Is it still open or was it triaged?"*
 - *"What felt hard yesterday? What clicked?"*
 
@@ -48,29 +48,29 @@ Write it down. You will check it against reality at 5pm.
 
 ---
 
-## Block 1 — VS Code Setup
-**9:30–10:30**
+## Block 1 - VS Code Setup
+**9:30-10:30**
 
 > This block builds on [VS Code: Setup & Accessibility Basics](docs/10-vscode-basics.md), [Git & Source Control in VS Code](docs/11-git-source-control.md), and [GitHub Pull Requests Extension](docs/12-github-pull-requests-extension.md) for full reference.
 
 ### Purpose
 Move from browser-based GitHub to VS Code as your contribution environment. Set up screen reader mode. Open `agent-forge` as a workspace. Understand what you are looking at before any agent runs.
 
-### Step 0 — Bridge: Try github.dev Before Installing Anything
+### Step 0 - Bridge: Try github.dev Before Installing Anything
 
-Before touching the desktop install, spend five minutes in github.dev. This is VS Code — running in your browser — with no install required. The keyboard shortcuts and screen reader mode are identical to the desktop app.
+Before touching the desktop install, spend five minutes in github.dev. This is VS Code - running in your browser - with no install required. The keyboard shortcuts and screen reader mode are identical to the desktop app.
 
 1. Open [github.dev/accesswatch/agent-forge](https://github.dev/accesswatch/agent-forge) in your browser
 2. Press `Shift+Alt+F1` to enable screen reader mode inside github.dev
-3. Press `Ctrl+Shift+E` — the Explorer panel opens with the full file tree
+3. Press `Ctrl+Shift+E` - the Explorer panel opens with the full file tree
 4. Navigate to `.github/agents/daily-briefing.agent.md` and press `Enter` to open it
-5. Press `Ctrl+Shift+P` and type `markdown preview` — select "Markdown: Open Preview"
+5. Press `Ctrl+Shift+P` and type `markdown preview` - select "Markdown: Open Preview"
 
-You just used VS Code. The desktop is the same experience. The only differences: github.dev has no terminal, no Copilot, and no Agent Forge. Those are precisely what the desktop adds — and why the desktop is worth installing.
+You just used VS Code. The desktop is the same experience. The only differences: github.dev has no terminal, no Copilot, and no Agent Forge. Those are precisely what the desktop adds - and why the desktop is worth installing.
 
-> All keyboard shortcuts you practice here (`Ctrl+Shift+E`, `Ctrl+P`, `Ctrl+Shift+P`, `Ctrl+G`, `F3`) will work identically on the desktop. There is no ramp-up — you are already there.
+> All keyboard shortcuts you practice here (`Ctrl+Shift+E`, `Ctrl+P`, `Ctrl+Shift+P`, `Ctrl+G`, `F3`) will work identically on the desktop. There is no ramp-up - you are already there.
 
-### Step 1 — Enable Screen Reader Mode
+### Step 1 - Enable Screen Reader Mode
 VS Code has a dedicated screen reader accessibility mode that adjusts verbosity, focus behavior, and announcement patterns.
 
 | Screen Reader | How to Activate VS Code Screen Reader Mode |
@@ -83,7 +83,7 @@ VS Code has a dedicated screen reader accessibility mode that adjusts verbosity,
 
 **Key setting to check:** Open Settings (`Ctrl+,`) → search `accessibility support` → confirm it shows `on`.
 
-### Step 2 — Open Agent Forge as a Workspace
+### Step 2 - Open Agent Forge as a Workspace
 1. Open a terminal (`Ctrl+Backtick`)
 2. Navigate to wherever you cloned your fork: `cd path/to/agent-forge`
 3. Open VS Code in that folder: `code .`
@@ -99,9 +99,9 @@ VS Code has a dedicated screen reader accessibility mode that adjusts verbosity,
 | `Documentation/` folder | `Arrow keys` | `GETTING-STARTED.md`, `GUIDE.md` |
 | `ai-instructions/` folder | `Arrow keys` | Copilot, Claude, OpenAI integration guides |
 
-**Hands-on task:** Navigate to `.github/agents/daily-briefing.agent.md`. Open it. Read the first 20 lines using `Ctrl+Home` then `Down Arrow`. You are reading the instructions that tell Copilot how to think about your GitHub account. This is how agents work — plain language, no magic.
+**Hands-on task:** Navigate to `.github/agents/daily-briefing.agent.md`. Open it. Read the first 20 lines using `Ctrl+Home` then `Down Arrow`. You are reading the instructions that tell Copilot how to think about your GitHub account. This is how agents work - plain language, no magic.
 
-### Step 3 — Read One Agent File Before Anything Else
+### Step 3 - Read One Agent File Before Anything Else
 Before you issue a single agent command, read the `.agent.md` file for that agent.
 
 - What repositories does it target by default?
@@ -110,7 +110,7 @@ Before you issue a single agent command, read the `.agent.md` file for that agen
 
 This is the same quality check you would apply to any open source code: read it before you run it.
 
-### Step 4 — Open Copilot Chat
+### Step 4 - Open Copilot Chat
 Press `Ctrl+Shift+I` to open the Chat panel.
 
 **NVDA users:** The chat input field is announced as "Chat input." Use `Tab` to move between the input and the response area. Use `Ctrl+Alt+Arrow` to navigate within the response.
@@ -121,11 +121,11 @@ Press `Ctrl+Shift+I` to open the Chat panel.
 
 ---
 
-## Block 2 — Deep Contribution with Copilot
-**10:45–12:00**
+## Block 2 - Deep Contribution with Copilot
+**10:45-12:00**
 
 ### Purpose
-Make a richer contribution to your fork of `agent-forge` using Copilot as a writing partner — not a replacement for your judgment. Copilot helps you articulate ideas you already have. The idea — the product intention — is yours.
+Make a richer contribution to your fork of `agent-forge` using Copilot as a writing partner - not a replacement for your judgment. Copilot helps you articulate ideas you already have. The idea - the product intention - is yours.
 
 ### What "Product Maker" Means Here
 A product maker does not just report bugs or fix typos. A product maker looks at something that exists, understands what it is for, identifies a gap, and proposes a meaningful improvement.
@@ -156,7 +156,7 @@ Open the file you want to improve. Press `Ctrl+I` to open inline chat.
 1. Identify one file in `agent-forge` you want to improve
 2. Read the file completely using your screen reader before suggesting any changes
 3. Use Copilot Chat to help you draft your improvement
-4. Review Copilot's output critically — edit, improve, make it yours
+4. Review Copilot's output critically - edit, improve, make it yours
 5. Commit the change to your branch: `git add .` → `git commit -m "your message"`
 
 **Branch naming:** Follow the `agent-forge` contributing conventions:
@@ -166,16 +166,16 @@ Open the file you want to improve. Press `Ctrl+I` to open inline chat.
 
 ---
 
-## Block 3 — Activate the Agents
-**13:00–14:00**
+## Block 3 - Activate the Agents
+**13:00-14:00**
 
 > **This block is the payoff.** You earned it yesterday. You understand what GitHub is, how repositories work, what issues and pull requests are, and how notifications flow. Now you watch an agent do the work you know how to verify.
 >
-> **If you have any doubt about whether you have earned a particular agent: the prerequisite is simple.** Can you do the equivalent step manually, right now, from memory? If yes — the agent is ready to amplify you. If no — do the manual step first. The block is structured so this never happens, but the standard is worth knowing.
+> **If you have any doubt about whether you have earned a particular agent: the prerequisite is simple.** Can you do the equivalent step manually, right now, from memory? If yes - the agent is ready to amplify you. If no - do the manual step first. The block is structured so this never happens, but the standard is worth knowing.
 
 ### Why the Order Matters
 
-Agents are run in a specific sequence — from broadest to most specific, from observation to action. This is not arbitrary. Each agent in this block builds on the skill directly before it.
+Agents are run in a specific sequence - from broadest to most specific, from observation to action. This is not arbitrary. Each agent in this block builds on the skill directly before it.
 
 | Step | Agent | Skill It Amplifies | Day 1 Source |
 |------|-------|-------------------|-------------|
@@ -184,13 +184,13 @@ Agents are run in a specific sequence — from broadest to most specific, from o
 | 3 | `@pr-review` | Manually reviewing a PR diff and writing inline comments | [Working with Pull Requests](docs/05-working-with-pull-requests.md) |
 | 4 | `@insiders-a11y-tracker` | Filing accessibility bugs and applying WCAG labels | [Working with Issues](docs/04-working-with-issues.md) + [Issue Templates](docs/15-issue-templates.md) |
 
-`@analytics` is available as an extension if Block 3 runs ahead of schedule — it requires understanding contribution graphs and activity history.
+`@analytics` is available as an extension if Block 3 runs ahead of schedule - it requires understanding contribution graphs and activity history.
 
 ### The Demonstration Sequence
 The facilitator runs each command live. Participants follow along in their own VS Code + Copilot Chat.
 
 **Before each command, the facilitator asks:**
-*"If you ran this command manually — without an agent — what would you do? Where would you go? What would you look for?"*
+*"If you ran this command manually - without an agent - what would you do? Where would you go? What would you look for?"*
 
 Participants answer from their Day 1 knowledge. Then the command runs. Then the room compares the agent's output to the manual process.
 
@@ -198,13 +198,13 @@ Participants answer from their Day 1 knowledge. Then the command runs. Then the 
 
 ### 1. `@daily-briefing morning briefing`
 
-**What the agent does:** Sweeps every repository you have access to — issues opened in the last 24 hours, PR review requests awaiting you, CI failures on your branches, security alerts, community reactions to your comments — and delivers it as one prioritized document.
+**What the agent does:** Sweeps every repository you have access to - issues opened in the last 24 hours, PR review requests awaiting you, CI failures on your branches, security alerts, community reactions to your comments - and delivers it as one prioritized document.
 
-**What you already know:** You navigated each of these areas manually yesterday. The Issues tab. The Pull Requests tab. The Actions tab. The notification inbox. The agent is visiting all of those places — you know exactly what it found because you know where it went.
+**What you already know:** You navigated each of these areas manually yesterday. The Issues tab. The Pull Requests tab. The Actions tab. The notification inbox. The agent is visiting all of those places - you know exactly what it found because you know where it went.
 
 **Screen reader tip:** The briefing output is announced as a long document. Use `H` (heading navigation in virtual mode) to jump between sections: "Open Issues," "Review Requests," "CI Alerts," etc. Each section is a heading level 2.
 
-**Verify one item:** The agent lists an issue. Navigate to that issue in your browser using the link in the output. Confirm the information matches. This is your quality check — you still know how to verify independently.
+**Verify one item:** The agent lists an issue. Navigate to that issue in your browser using the link in the output. Confirm the information matches. This is your quality check - you still know how to verify independently.
 
 ---
 
@@ -214,7 +214,7 @@ Participants answer from their Day 1 knowledge. Then the command runs. Then the 
 
 **What you already know:** Yesterday you filtered the Issues tab by label. You read issue descriptions. You identified which ones had active discussion. The agent is applying a scoring algorithm to the same information.
 
-**Hands-on:** From the agent's list, pick one issue in a repository you have not contributed to before. Read the full issue — navigate to it in your browser. Is the agent's priority score reasonable? What context does the agent's summary miss?
+**Hands-on:** From the agent's list, pick one issue in a repository you have not contributed to before. Read the full issue - navigate to it in your browser. Is the agent's priority score reasonable? What context does the agent's summary miss?
 
 ---
 
@@ -233,28 +233,28 @@ Edit the agent's output before posting any of it. Your name goes on it.
 
 ---
 
-### 4. `@insiders-a11y-tracker` — Accessibility Change Monitoring
+### 4. `@insiders-a11y-tracker` - Accessibility Change Monitoring
 
-**What the agent does:** Monitors accessibility-relevant changes across your configured repositories — WCAG/ARIA cross-referenced, tracking anything that touches keyboard navigation, ARIA attributes, focus management, color contrast, or screen reader labels.
+**What the agent does:** Monitors accessibility-relevant changes across your configured repositories - WCAG/ARIA cross-referenced, tracking anything that touches keyboard navigation, ARIA attributes, focus management, color contrast, or screen reader labels.
 
 **Hands-on:** Run `@insiders-a11y-tracker check recent changes in agent-forge`. Look at the HTML output files. Does your Day 2 contribution affect any accessibility-sensitive areas? If yes, the agent flags it. If no, confirm that is accurate.
 
-This agent is quality assurance for the accessibility quality of your own contribution — before you submit it for review.
+This agent is quality assurance for the accessibility quality of your own contribution - before you submit it for review.
 
 ---
 
-## Block 4 — GitHub Agentic Workflows
-**14:00–15:00**
+## Block 4 - GitHub Agentic Workflows
+**14:00-15:00**
 
-> **Reference:** [GitHub Actions and Workflows](docs/appendix-q-github-actions-workflows.md) — read the "Day 2 Bridge" section at the bottom before this block.
+> **Reference:** [GitHub Actions and Workflows](docs/appendix-q-github-actions-workflows.md) - read the "Day 2 Bridge" section at the bottom before this block.
 
 ### The Cloud Extension: What Agentic Workflows Are
 
-Everything in Block 3 ran in VS Code — on your machine, on demand, when you asked for it. GitHub Agentic Workflows run in the cloud, inside GitHub Actions, on any trigger you define: when an issue is opened, on a schedule, when a PR is created.
+Everything in Block 3 ran in VS Code - on your machine, on demand, when you asked for it. GitHub Agentic Workflows run in the cloud, inside GitHub Actions, on any trigger you define: when an issue is opened, on a schedule, when a PR is created.
 
 The `.agent.md` pattern in Agent Forge and the GitHub Agentic Workflows `.md` pattern share the same philosophy: describe your intent in plain language, let a coding agent execute it. Both are plain text files in `.github/`. Both travel with every fork.
 
-### Reading a Workflow File — Step by Step
+### Reading a Workflow File - Step by Step
 
 Open `agent-forge/.github/` in VS Code Explorer. If a `.github/workflows/` directory exists, navigate to it. The facilitator will walk through an example agentic workflow file.
 
@@ -283,16 +283,16 @@ Do not close the issue. Do not merge anything. Do not modify any files.
 ```
 
 **What to notice:**
-- `on: issues: types: [opened]` — this is the same trigger system from standard GitHub Actions YAML
-- `permissions: issues: write` — explicit, minimal permissions; the agent cannot write to code or PRs
-- `safe-outputs` — a whitelist of what the agent is allowed to do; anything not listed is blocked
-- The instructions are plain English — readable, auditable, understandable by any contributor
+- `on: issues: types: [opened]` - this is the same trigger system from standard GitHub Actions YAML
+- `permissions: issues: write` - explicit, minimal permissions; the agent cannot write to code or PRs
+- `safe-outputs` - a whitelist of what the agent is allowed to do; anything not listed is blocked
+- The instructions are plain English - readable, auditable, understandable by any contributor
 
 ### Live Demonstration: File an Issue, Watch the Agent Respond
 
 1. The facilitator has a demo workflow configured in a test repository
 2. A participant files a new issue (using the manual process they learned on Day 1)
-3. The room watches the Actions tab — the agentic workflow triggers within 60 seconds
+3. The room watches the Actions tab - the agentic workflow triggers within 60 seconds
 4. The workflow reads the issue, applies a label, and posts a first-response comment
 5. The participant reads the agent's comment using their screen reader
 6. Discussion: *"Is the label correct? Is the comment tone right? What would you change in the workflow instructions?"*
@@ -321,11 +321,11 @@ Do not close the issue. Do not merge anything. Do not modify any files.
 
 ---
 
-## Block 5 — Ship Your Contribution
-**15:15–16:15**
+## Block 5 - Ship Your Contribution
+**15:15-16:15**
 
 ### Purpose
-Polish and submit your real pull request upstream to `accesswatch/agent-forge`. Not to your fork — to the original. This is the moment the product maker mindset becomes tangible.
+Polish and submit your real pull request upstream to `accesswatch/agent-forge`. Not to your fork - to the original. This is the moment the product maker mindset becomes tangible.
 
 ### Pre-Submission Checklist
 Before opening the PR, run through this with your screen reader:
@@ -347,7 +347,7 @@ Before opening the PR, run through this with your screen reader:
 
 ### Opening the PR to `accesswatch/agent-forge`
 
-**Option A — from your browser:**
+**Option A - from your browser:**
 1. Navigate to your fork on GitHub
 2. GitHub will show a yellow banner: "Your branch is N commits ahead of `accesswatch:main`"
 3. Activate "Contribute" → "Open a pull request"
@@ -355,7 +355,7 @@ Before opening the PR, run through this with your screen reader:
 5. Fill in the PR template
 6. Submit
 
-**Option B — from VS Code GitHub Pull Requests extension:**
+**Option B - from VS Code GitHub Pull Requests extension:**
 1. Open the Source Control panel (`Ctrl+Shift+G`)
 2. Navigate to "Pull Requests" in the sidebar
 3. Activate "Create Pull Request"
@@ -363,7 +363,7 @@ Before opening the PR, run through this with your screen reader:
 5. Fill in the title and description
 6. Submit
 
-**What happens next:** The maintainer (Jeff, your facilitator) reviews the PR. If it meets the contribution standards, it gets merged. Your name goes into the commit history of a live, public, accessibility-focused open source project — permanently.
+**What happens next:** The maintainer (Jeff, your facilitator) reviews the PR. If it meets the contribution standards, it gets merged. Your name goes into the commit history of a live, public, accessibility-focused open source project - permanently.
 
 ### Forge Partner Review
 While your PR is awaiting review, review a forge partner's PR:
@@ -374,10 +374,10 @@ While your PR is awaiting review, review a forge partner's PR:
 
 ---
 
-## Block 6 — Spec Kit: Design the Future
-**16:15–17:00**
+## Block 6 - Spec Kit: Design the Future
+**16:15-17:00**
 
-> **What is Spec-Driven Development?** It is the practice of writing the *intent* of a feature before anyone builds it. The specification becomes the source of truth — AI uses it to plan tasks, contributors use it to stay aligned, and the community uses it to evaluate whether the feature actually delivered what was intended.
+> **What is Spec-Driven Development?** It is the practice of writing the *intent* of a feature before anyone builds it. The specification becomes the source of truth - AI uses it to plan tasks, contributors use it to stay aligned, and the community uses it to evaluate whether the feature actually delivered what was intended.
 
 ### The Exercise: Specify the Next Version of Agent Forge
 
@@ -385,7 +385,7 @@ The facilitator opens Copilot Chat and types `/specify` to initiate a spec sessi
 
 - *What is missing from Agent Forge that would make it more useful for screen reader users?*
 - *What would a `@meetings` agent look like? What would `@accessibility-audit` do?*
-- *What if Agent Forge had a searchable web interface — what accessibility requirements would it need on day one?*
+- *What if Agent Forge had a searchable web interface - what accessibility requirements would it need on day one?*
 
 **How to participate (no typing required):**
 Speak your requirements aloud. The facilitator types them. Copilot helps convert them into a structured specification.
@@ -407,7 +407,7 @@ Speak your requirements aloud. The facilitator types them. Copilot helps convert
 ---
 
 ## Wrap-Up
-**17:00–17:30**
+**17:00-17:30**
 
 ### The Moment: Find Your Name in History
 
@@ -422,11 +422,11 @@ This is real. This is permanent. This is yours.
 
 | Artifact | Where It Lives | What You Can Do With It |
 |----------|---------------|------------------------|
-| Your fork of `agent-forge` | `github.com/[your-username]/agent-forge` | Use it on any GitHub repo — `@daily-briefing`, `@issue-tracker`, `@pr-review`, `@analytics`, `@insiders-a11y-tracker` |
-| Your name in the upstream commit history | `github.com/accesswatch/agent-forge` | Share it — it is a real open source contribution to an accessibility project |
+| Your fork of `agent-forge` | `github.com/[your-username]/agent-forge` | Use it on any GitHub repo - `@daily-briefing`, `@issue-tracker`, `@pr-review`, `@analytics`, `@insiders-a11y-tracker` |
+| Your name in the upstream commit history | `github.com/accesswatch/agent-forge` | Share it - it is a real open source contribution to an accessibility project |
 | VS Code + Copilot setup | Your machine | The development environment is configured; use it on your next contribution |
-| The GitHub skill set from Day 1 | Your knowledge | Navigate any repo, file any issue, open any PR — without an agent doing it for you |
-| Agent Forge as a model | Your thinking | Know that any project can have agents in `.github/agents/` — and you know how to write them |
+| The GitHub skill set from Day 1 | Your knowledge | Navigate any repo, file any issue, open any PR - without an agent doing it for you |
+| Agent Forge as a model | Your thinking | Know that any project can have agents in `.github/agents/` - and you know how to write them |
 
 ### Personalizing Agent Forge After the Workshop
 
@@ -434,13 +434,13 @@ Agent Forge is designed to be personalized. In `.github/agents/preferences.examp
 1. Copy it to `.github/agents/preferences.md`
 2. Add your GitHub username and the repositories you care about most
 3. Set your preferred output format
-4. Commit it to your fork — now your agents know who you are and what you work on
+4. Commit it to your fork - now your agents know who you are and what you work on
 
 This is your own instance. The agents respond to your preferences. Start with the example and make it yours.
 
 ### The Skills That Stay
 
-The most important thing you take home is not a tool. It is the ability to look at any GitHub repository — any open source project in the world — and know:
+The most important thing you take home is not a tool. It is the ability to look at any GitHub repository - any open source project in the world - and know:
 
 - How to find a good first issue
 - How to understand what the project needs
@@ -452,25 +452,25 @@ Those skills are yours. No one can take them. Every project you ever encounter i
 
 ---
 
-## Facilitator Notes — Day 2
+## Facilitator Notes - Day 2
 
 ### Pre-Day Setup
 - Clone `agent-forge` to a demo machine where the facilitator is signed into a GitHub account
 - Configure `preferences.md` with the facilitator's account and the demo repository
 - Pre-create one issue in the demo repo with an intentional gap for the agentic workflow to triage
-- Test all 5 agent commands the day before — especially `@daily-briefing` and `@pr-review`
+- Test all 5 agent commands the day before - especially `@daily-briefing` and `@pr-review`
 - Enable the agentic workflow on the demo repo (GitHub Agentic Workflows technical preview)
 - Have a backup: if the agentic workflow doesn't trigger in time, show the run from a pre-recorded session
 
 ### Pacing Adjustments
 - If Block 1 runs long (VS Code setup issues): compress Block 2 to 45 minutes, prioritize getting one commit per participant
-- If Block 3 runs short: extend with `@analytics` — team velocity, contribution patterns, what the agents say about the group's collective Day 1 work
+- If Block 3 runs short: extend with `@analytics` - team velocity, contribution patterns, what the agents say about the group's collective Day 1 work
 - If Block 5 produces a wave of PRs before Jeff can review: use the time to have participants review each other's PRs instead
 
 ### The Emotional Arc
 Day 2 has two peaks:
-1. **The first agent command** (Block 3) — participants recognize the output because they know the source material
-2. **The name in history** (Wrap-Up) — this should have a moment of silence and genuine acknowledgment
+1. **The first agent command** (Block 3) - participants recognize the output because they know the source material
+2. **The name in history** (Wrap-Up) - this should have a moment of silence and genuine acknowledgment
 
 Do not rush the wrap-up. The moment of seeing your name in a public commit history is one of the most meaningful things a first-time open source contributor experiences.
 

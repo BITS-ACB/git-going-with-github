@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GIT Going with GitHub — A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
-  <title>Appendix E: GitHub Flavored Markdown — Advanced Reference — GIT Going with GitHub</title>
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
+  <title>Appendix E: GitHub Flavored Markdown - Advanced Reference - GIT Going with GitHub</title>
   <link rel="stylesheet" href="./styles/github-markdown.css">
   <link rel="stylesheet" href="./styles/highlight.css">
   <link rel="stylesheet" href="./styles/custom.css">
@@ -26,13 +26,13 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix E: GitHub Flavored Markdown — Advanced Reference</span>
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix E: GitHub Flavored Markdown - Advanced Reference</span>
   </nav>
   <main id="main-content" class="markdown-body">
-    <h1>Appendix E: GitHub Flavored Markdown — Advanced Reference</h1>
+    <h1>Appendix E: GitHub Flavored Markdown - Advanced Reference</h1>
 <h2>Beyond the Basics: Tables, Alerts, Diagrams, Math, and Accessibility</h2>
 <blockquote>
-<p><strong>Who this is for:</strong> You know how to write basic Markdown (bold, italic, links, code blocks). This appendix covers the GitHub-specific extensions and features you will encounter in real repositories — the things that make a file look polished but that aren&#39;t documented in standard Markdown guides.</p>
+<p><strong>Who this is for:</strong> You know how to write basic Markdown (bold, italic, links, code blocks). This appendix covers the GitHub-specific extensions and features you will encounter in real repositories - the things that make a file look polished but that aren&#39;t documented in standard Markdown guides.</p>
 </blockquote>
 <hr>
 <h2>Quick Navigation</h2>
@@ -41,7 +41,7 @@
 <li><a href="#2-collapsible-sections-with-details">Collapsible Sections with <code>&lt;details&gt;</code></a></li>
 <li><a href="#3-task-list-checkboxes">Task List Checkboxes</a></li>
 <li><a href="#4-mermaid-diagrams">Mermaid Diagrams</a></li>
-<li><a href="#5-math-expressions--latex">Math Expressions — LaTeX</a></li>
+<li><a href="#5-math-expressions--latex">Math Expressions - LaTeX</a></li>
 <li><a href="#6-footnotes">Footnotes</a></li>
 <li><a href="#7-linked-heading-anchors">Linked Heading Anchors</a></li>
 <li><a href="#8-syntax-highlighting-in-code-blocks">Syntax Highlighting in Code Blocks</a></li>
@@ -51,7 +51,7 @@
 </ol>
 <hr>
 <h2>1. Alert / Callout Blocks (2023+)</h2>
-<p>GitHub introduced <strong>alert blocks</strong> in 2023. They render as colored, bordered callout boxes — great for emphasizing warnings, tips, or critical information.</p>
+<p>GitHub introduced <strong>alert blocks</strong> in 2023. They render as colored, bordered callout boxes - great for emphasizing warnings, tips, or critical information.</p>
 <h3>Syntax</h3>
 <pre><code class="hljs language-markdown"><span class="hljs-quote">&gt; [!NOTE]</span>
 <span class="hljs-quote">&gt; Useful information that users should know, even when skimming.</span>
@@ -139,9 +139,9 @@ The <span class="hljs-literal">error</span> occurs <span class="hljs-keyword">on
 <h3>Screen Reader Behavior</h3>
 <p>The <code>&lt;details&gt;</code> element renders as a disclosure widget:</p>
 <ul>
-<li>NVDA: announces &quot;button collapsed&quot; for the <code>&lt;summary&gt;</code> — press Enter or Space to expand</li>
-<li>JAWS: announces &quot;collapsed&quot; — press Enter on the summary link to expand</li>
-<li>VoiceOver: announces &quot;collapsed, button&quot; — press VO+Space to activate</li>
+<li>NVDA: announces &quot;button collapsed&quot; for the <code>&lt;summary&gt;</code> - press Enter or Space to expand</li>
+<li>JAWS: announces &quot;collapsed&quot; - press Enter on the summary link to expand</li>
+<li>VoiceOver: announces &quot;collapsed, button&quot; - press VO+Space to activate</li>
 </ul>
 <p><strong>After expanding:</strong> The revealed content is immediately readable. No page reload occurs.</p>
 <hr>
@@ -161,7 +161,7 @@ The <span class="hljs-literal">error</span> occurs <span class="hljs-keyword">on
 <ul>
 <li><strong>In issues:</strong> Unchecked tasks count toward GitHub&#39;s progress bar in the issue list (<code>2 of 7 tasks completed</code>)</li>
 <li><strong>Checked by clicking:</strong> In the rendered view, any user with triage+ permissions can check items without editing the comment</li>
-<li><strong>Linked issues:</strong> You can embed an issue number in a task: <code>- [ ] Fix #42</code> — the task shows the issue title and its open/closed state</li>
+<li><strong>Linked issues:</strong> You can embed an issue number in a task: <code>- [ ] Fix #42</code> - the task shows the issue title and its open/closed state</li>
 </ul>
 <h3>Screen Reader Interaction</h3>
 <p>In Browse Mode, checkboxes are read as <code>checkbox, not checked</code> or <code>checkbox, checked</code>.</p>
@@ -241,7 +241,7 @@ flowchart LR
 <li>Consider duplicating critical flow information as a numbered list or table</li>
 <li>Use the diagram for visual learners; use the text list for screen reader users</li>
 </ol>
-<p><strong>Example — accessible Mermaid usage:</strong></p>
+<p><strong>Example - accessible Mermaid usage:</strong></p>
 <pre><code class="hljs language-markdown">The PR workflow follows these steps:
 
 <span class="hljs-bullet">1.</span> Fork the repository
@@ -259,7 +259,7 @@ flowchart LR
 <pre><code class="hljs">
 <span class="hljs-meta">---
 </span>
-<span class="hljs-comment">## 5. Math Expressions — LaTeX</span>
+<span class="hljs-comment">## 5. Math Expressions - LaTeX</span>
 
 <span class="hljs-string">GitHub</span> <span class="hljs-string">renders</span> <span class="hljs-string">LaTeX</span> <span class="hljs-string">math</span> <span class="hljs-string">expressions</span> <span class="hljs-string">using</span> <span class="hljs-string">MathJax.</span> <span class="hljs-string">Common</span> <span class="hljs-string">in</span> <span class="hljs-string">data</span> <span class="hljs-string">science,</span> <span class="hljs-string">research,</span> <span class="hljs-string">and</span> <span class="hljs-string">documentation</span> <span class="hljs-string">for</span> <span class="hljs-string">algorithms.</span>
 
@@ -293,7 +293,7 @@ You can also use named footnotes[^accessibility-note].
 [<span class="hljs-symbol">^1</span>]: <span class="hljs-link">Based on WebAIM Screen Reader Survey 2024.</span>
 [<span class="hljs-symbol">^accessibility-note</span>]: <span class="hljs-link">See WCAG 2.2 Success Criterion 2.4.3.</span></code></pre>
 <h3>How They Render</h3>
-<p>The superscript <code>[^1]</code> becomes a link: <strong>¹</strong> — clicking it jumps to the footnote definition at the bottom. The definition includes a back-link () that returns to where the footnote was referenced.</p>
+<p>The superscript <code>[^1]</code> becomes a link: <strong>¹</strong> - clicking it jumps to the footnote definition at the bottom. The definition includes a back-link () that returns to where the footnote was referenced.</p>
 <h3>Screen Reader Behavior</h3>
 <ul>
 <li>The footnote reference is a link (<code>&lt;a&gt;</code> element) announcing its number</li>
@@ -339,7 +339,7 @@ You can also use named footnotes[^accessibility-note].
 <span class="hljs-bullet">3.</span> [<span class="hljs-string">VS Code Setup</span>](<span class="hljs-link">#vs-code-setup--accessibility-basics</span>)</code></pre>
 <h3>Finding the Anchor for Any Heading</h3>
 <ol>
-<li>On GitHub, hover over any heading — a chain link icon () appears to the left</li>
+<li>On GitHub, hover over any heading - a chain link icon () appears to the left</li>
 <li>Right-click the icon → &quot;Copy link address&quot; to get the full URL with the anchor</li>
 <li>For screen reader users: navigate to the heading → Tab once → a link button appears → activate it → the URL in the address bar updates to show the anchor</li>
 </ol>
@@ -368,7 +368,7 @@ git commit -m &quot;Add accessibility improvements&quot;
 <p><code>markdown</code>, <code>yaml</code>, <code>json</code>, <code>javascript</code>, <code>typescript</code>, <code>python</code>, <code>bash</code>, <code>shell</code>, <code>html</code>, <code>css</code>, <code>ruby</code>, <code>go</code>, <code>rust</code>, <code>java</code>, <code>c</code>, <code>cpp</code>, <code>csharp</code>, <code>php</code>, <code>sql</code>, <code>dockerfile</code>, <code>plaintext</code></p>
 <p>Use <code>plaintext</code> or just omit the language for content where no highlighting is needed.</p>
 <h3>Screen Reader Note</h3>
-<p>Syntax highlighting is visual only — screen readers read the code text without announcing color changes. The code block itself is announced as <code>code</code> region. This means the text content of well-written code is equally accessible whether highlighted or not.</p>
+<p>Syntax highlighting is visual only - screen readers read the code text without announcing color changes. The code block itself is announced as <code>code</code> region. This means the text content of well-written code is equally accessible whether highlighted or not.</p>
 <hr>
 <h2>9. HTML in Markdown</h2>
 <p>GitHub allows a subset of HTML in Markdown files. This is useful for semantic elements that don&#39;t have Markdown equivalents.</p>
@@ -381,7 +381,7 @@ H<span class="hljs-tag">&lt;<span class="hljs-name">sub</span>&gt;</span>2<span 
 
 <span class="hljs-comment">&lt;!-- Centered content (README badges, logos) --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">align</span>=<span class="hljs-string">&quot;center&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;logo.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Project logo — a stylized &#x27;A&#x27; symbol representing accessibility&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;200&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;logo.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Project logo - a stylized &#x27;A&#x27; symbol representing accessibility&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;200&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-comment">&lt;!-- Line break without a paragraph gap --&gt;</span>
@@ -403,7 +403,7 @@ Line two on the next line, same paragraph.
 </thead>
 <tbody><tr>
 <td><code>&lt;img&gt;</code></td>
-<td>Must have a descriptive <code>alt</code> attribute — never use <code>alt=&quot;&quot;</code> for informative images</td>
+<td>Must have a descriptive <code>alt</code> attribute - never use <code>alt=&quot;&quot;</code> for informative images</td>
 </tr>
 <tr>
 <td><code>&lt;table&gt;</code></td>
@@ -415,7 +415,7 @@ Line two on the next line, same paragraph.
 </tr>
 <tr>
 <td><code>&lt;kbd&gt;</code></td>
-<td>Announced as &quot;code&quot; or the text content — no special handling needed</td>
+<td>Announced as &quot;code&quot; or the text content - no special handling needed</td>
 </tr>
 </tbody></table>
 <hr>
@@ -432,7 +432,7 @@ Line two on the next line, same paragraph.
 <tbody><tr>
 <td>Alert blocks</td>
 <td>Type label read before content</td>
-<td>None — GitHub handles it</td>
+<td>None - GitHub handles it</td>
 </tr>
 <tr>
 <td><code>&lt;details&gt;</code></td>
@@ -466,7 +466,7 @@ Line two on the next line, same paragraph.
 </tr>
 <tr>
 <td>Syntax highlighting</td>
-<td>Visual only — no AT impact</td>
+<td>Visual only - no AT impact</td>
 <td>Write clear variable/function names</td>
 </tr>
 <tr>
@@ -525,12 +525,12 @@ $$</p>
 <pre><code class="hljs">
 <span class="hljs-meta">---
 </span>
-<span class="hljs-attr">*Return to:</span> [<span class="hljs-string">Resources</span>]<span class="hljs-string">(appendix-u-resources.md)</span> <span class="hljs-string">|</span> [<span class="hljs-string">Appendix</span> <span class="hljs-string">B</span> <span class="hljs-string">—</span> <span class="hljs-string">Screen</span> <span class="hljs-string">Reader</span> <span class="hljs-string">Cheat</span> <span class="hljs-string">Sheet</span>]<span class="hljs-string">(appendix-b-screen-reader-cheatsheet.md)</span> <span class="hljs-string">|</span> [<span class="hljs-string">Appendix</span> <span class="hljs-string">A</span> <span class="hljs-string">—</span> <span class="hljs-string">Glossary</span>]<span class="hljs-string">(appendix-a-glossary.md)*</span></code></pre>
+<span class="hljs-attr">*Return to:</span> [<span class="hljs-string">Resources</span>]<span class="hljs-string">(appendix-u-resources.md)</span> <span class="hljs-string">|</span> [<span class="hljs-string">Appendix</span> <span class="hljs-string">B</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Screen</span> <span class="hljs-string">Reader</span> <span class="hljs-string">Cheat</span> <span class="hljs-string">Sheet</span>]<span class="hljs-string">(appendix-b-screen-reader-cheatsheet.md)</span> <span class="hljs-string">|</span> [<span class="hljs-string">Appendix</span> <span class="hljs-string">A</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Glossary</span>]<span class="hljs-string">(appendix-a-glossary.md)*</span></code></pre>
 
   </main>
   <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
-    <p><strong>GIT Going with GitHub</strong> — A workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
-    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="http://www.joinbits.org">joinbits.org</a></p>
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
+    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="https://www.joinbits.org">joinbits.org</a></p>
   </footer>
   </body>
 </html>

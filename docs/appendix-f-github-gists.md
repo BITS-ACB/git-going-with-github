@@ -210,7 +210,7 @@ When answering questions, paste your code as a Gist and link to it. Readers get 
 
 ---
 
-## Gists vs GitHub Repositories — Quick Comparison
+## Gists vs GitHub Repositories - Quick Comparison
 
 | Feature | Gist | Repository |
 |---------|------|------------|

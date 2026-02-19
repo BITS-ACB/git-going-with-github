@@ -160,10 +160,10 @@ Adjust PR thresholds and challenge lists as needed.
 ### Validation Rules (`.github/scripts/validate-pr.js`)
 
 Customize checks:
-- `checkIssueReference()` — Require issue link patterns
-- `checkDescription()` — Minimum character count (default: 50)
-- `checkFileLocation()` — Allowed directories (default: learning-room/)
-- `validateMarkdownAccessibility()` — A11y rules (headings, links, alt text)
+- `checkIssueReference()` - Require issue link patterns
+- `checkDescription()` - Minimum character count (default: 50)
+- `checkFileLocation()` - Allowed directories (default: learning-room/)
+- `validateMarkdownAccessibility()` - A11y rules (headings, links, alt text)
 
 Add new validation functions to `required` or `suggestions` arrays.
 
@@ -371,16 +371,16 @@ Edit `.github/data/challenge-progression.json`:
 ## Documentation Map
 
 **For Students:**
-- [Automation Guide](../learning-room/AUTOMATION.md) — How bot works, interpreting feedback
-- [Learning Paths](docs/LEARNING_PATHS.md) — Skill progression, challenge details
-- [Challenges List](../learning-room/docs/CHALLENGES.md) — Available challenges
-- [Group Challenges](../learning-room/docs/GROUP_CHALLENGES.md) — Collaborative exercises
+- [Automation Guide](../learning-room/AUTOMATION.md) - How bot works, interpreting feedback
+- [Learning Paths](docs/LEARNING_PATHS.md) - Skill progression, challenge details
+- [Challenges List](../learning-room/docs/CHALLENGES.md) - Available challenges
+- [Group Challenges](../learning-room/docs/GROUP_CHALLENGES.md) - Collaborative exercises
 
 **For Facilitators:**
-- [Implementation Guide](docs/IMPLEMENTATION_GUIDE.md) — Setup instructions
-- [Facilitator Guide](../FACILITATOR.md) — Workshop facilitation (includes automation section)
-- [Workflow Files](workflows/) — Automation source code
-- [Data Files](data/) — Configuration (roster, progression)
+- [Implementation Guide](docs/IMPLEMENTATION_GUIDE.md) - Setup instructions
+- [Facilitator Guide](../FACILITATOR.md) - Workshop facilitation (includes automation section)
+- [Workflow Files](workflows/) - Automation source code
+- [Data Files](data/) - Configuration (roster, progression)
 
 ---
 
@@ -424,11 +424,11 @@ Found a bug? Have a suggestion?
 
 This automation system was designed with these principles:
 
-**Accessibility First** — Fully screen reader accessible  
-**Educational Focus** — Teaches, doesn't just check  
-**Human-Centered** — Augments, not replaces, human review  
-**Professional Experience** — Mirrors real CI/CD workflows  
-**Community Building** — Encourages collaboration and support  
+**Accessibility First** - Fully screen reader accessible  
+**Educational Focus** - Teaches, doesn't just check  
+**Human-Centered** - Augments, not replaces, human review  
+**Professional Experience** - Mirrors real CI/CD workflows  
+**Community Building** - Encourages collaboration and support  
 
 Built for the Open Source Assistive Technology Hackathon workshop.
 

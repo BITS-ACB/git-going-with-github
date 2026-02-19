@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GIT Going with GitHub — A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
-  <title>Appendix L: GitHub Security Features — GIT Going with GitHub</title>
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by BITS (Blind Information Technology Solutions)">
+  <title>Appendix L: GitHub Security Features - GIT Going with GitHub</title>
   <link rel="stylesheet" href="./styles/github-markdown.css">
   <link rel="stylesheet" href="./styles/highlight.css">
   <link rel="stylesheet" href="./styles/custom.css">
@@ -32,14 +32,14 @@
     <h1>Appendix L: GitHub Security Features</h1>
 <h2>Dependabot, Secret Scanning, Code Scanning, and Private Advisories</h2>
 <blockquote>
-<p><strong>Who this is for:</strong> Anyone contributing to open source repositories needs to understand how GitHub protects code and what security alerts mean. This appendix explains the GitHub Security tab, how to interpret and respond to alerts, and how to responsibly report vulnerabilities — including in <code>accesswatch/agent-forge</code>.</p>
+<p><strong>Who this is for:</strong> Anyone contributing to open source repositories needs to understand how GitHub protects code and what security alerts mean. This appendix explains the GitHub Security tab, how to interpret and respond to alerts, and how to responsibly report vulnerabilities - including in <code>accesswatch/agent-forge</code>.</p>
 </blockquote>
 <hr>
 <h2>Quick Navigation</h2>
 <ol>
-<li><a href="#1-the-security-tab--what-it-contains">The Security Tab — What It Contains</a></li>
-<li><a href="#2-dependabot--automated-dependency-updates">Dependabot — Automated Dependency Updates</a></li>
-<li><a href="#3-secret-scanning--preventing-credential-leaks">Secret Scanning — Preventing Credential Leaks</a></li>
+<li><a href="#1-the-security-tab--what-it-contains">The Security Tab - What It Contains</a></li>
+<li><a href="#2-dependabot--automated-dependency-updates">Dependabot - Automated Dependency Updates</a></li>
+<li><a href="#3-secret-scanning--preventing-credential-leaks">Secret Scanning - Preventing Credential Leaks</a></li>
 <li><a href="#4-code-scanning-and-codeql">Code Scanning and CodeQL</a></li>
 <li><a href="#5-private-vulnerability-reporting">Private Vulnerability Reporting</a></li>
 <li><a href="#6-the-securitymd-file">The SECURITY.md File</a></li>
@@ -48,7 +48,7 @@
 <li><a href="#9-security-and-agent-forge">Security and Agent Forge</a></li>
 </ol>
 <hr>
-<h2>1. The Security Tab — What It Contains</h2>
+<h2>1. The Security Tab - What It Contains</h2>
 <p>Every GitHub repository has a <strong>Security tab</strong> in its navigation bar. What you see there depends on whether you are a contributor with elevated access or a public viewer.</p>
 <p><strong>Public viewers see:</strong></p>
 <ul>
@@ -66,12 +66,12 @@
 <h3>Screen Reader Path to the Security Tab</h3>
 <pre><code class="hljs"><span class="hljs-built_in">On</span> <span class="hljs-variable">any</span> <span class="hljs-variable">repository</span> <span class="hljs-variable">page</span><span class="hljs-operator">:</span>
 <span class="hljs-built_in">Tab</span> <span class="hljs-variable">navigation</span> → <span class="hljs-variable">secondary</span> <span class="hljs-variable">nav</span> <span class="hljs-variable">region</span> → <span class="hljs-string">&quot;Security&quot;</span> <span class="hljs-variable">link</span> → <span class="hljs-built_in">Enter</span>
-<span class="hljs-built_in">Or</span><span class="hljs-operator">:</span> <span class="hljs-variable">G</span> <span class="hljs-variable">then</span> <span class="hljs-variable">S</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">GitHub</span> <span class="hljs-variable">keyboard</span> <span class="hljs-variable">shortcut</span> — <span class="hljs-variable">enable</span> <span class="hljs-variable">Focus</span> <span class="hljs-built_in">Mode</span> <span class="hljs-variable">first</span><span class="hljs-punctuation">)</span></code></pre>
+<span class="hljs-built_in">Or</span><span class="hljs-operator">:</span> <span class="hljs-variable">G</span> <span class="hljs-variable">then</span> <span class="hljs-variable">S</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">GitHub</span> <span class="hljs-variable">keyboard</span> <span class="hljs-variable">shortcut</span> <span class="hljs-operator">-</span> <span class="hljs-variable">enable</span> <span class="hljs-variable">Focus</span> <span class="hljs-built_in">Mode</span> <span class="hljs-variable">first</span><span class="hljs-punctuation">)</span></code></pre>
 <hr>
-<h2>2. Dependabot — Automated Dependency Updates</h2>
+<h2>2. Dependabot - Automated Dependency Updates</h2>
 <p>Dependabot is GitHub&#39;s automated dependency monitoring and update system. It does two things:</p>
 <h3>Dependabot Alerts</h3>
-<p>When a known security vulnerability (CVE — Common Vulnerability and Exposure) is discovered in a package your project depends on, GitHub creates a <strong>Dependabot alert</strong>.</p>
+<p>When a known security vulnerability (CVE - Common Vulnerability and Exposure) is discovered in a package your project depends on, GitHub creates a <strong>Dependabot alert</strong>.</p>
 <p><strong>Alert severity levels:</strong></p>
 <table>
 <thead>
@@ -83,23 +83,23 @@
 </thead>
 <tbody><tr>
 <td><strong>Critical</strong></td>
-<td>9.0–10.0</td>
-<td>Exploit likely, wide impact — fix immediately</td>
+<td>9.0-10.0</td>
+<td>Exploit likely, wide impact - fix immediately</td>
 </tr>
 <tr>
 <td><strong>High</strong></td>
-<td>7.0–8.9</td>
-<td>Significant risk — fix this sprint</td>
+<td>7.0-8.9</td>
+<td>Significant risk - fix this sprint</td>
 </tr>
 <tr>
 <td><strong>Medium</strong></td>
-<td>4.0–6.9</td>
-<td>Some risk with specific conditions — schedule fix</td>
+<td>4.0-6.9</td>
+<td>Some risk with specific conditions - schedule fix</td>
 </tr>
 <tr>
 <td><strong>Low</strong></td>
-<td>0.1–3.9</td>
-<td>Low likelihood of exploitation — fix when convenient</td>
+<td>0.1-3.9</td>
+<td>Low likelihood of exploitation - fix when convenient</td>
 </tr>
 </tbody></table>
 <p><strong>What a dependency alert looks like:</strong></p>
@@ -116,7 +116,7 @@
 <li>Read the advisory to understand the vulnerability scope</li>
 <li>Check whether the project actually uses the vulnerable code path</li>
 <li>The fix is almost always: update the dependency to the fixed version</li>
-<li>Dependabot Security Updates may have already opened a PR — check the PRs tab</li>
+<li>Dependabot Security Updates may have already opened a PR - check the PRs tab</li>
 </ol>
 <h3>Dependabot Security Updates</h3>
 <p>If enabled, Dependabot automatically opens a PR to update the vulnerable dependency. The PR will look like:</p>
@@ -138,7 +138,7 @@
       <span class="hljs-attr">interval:</span> <span class="hljs-string">&quot;weekly&quot;</span>
     <span class="hljs-attr">open-pull-requests-limit:</span> <span class="hljs-number">5</span></code></pre>
 <hr>
-<h2>3. Secret Scanning — Preventing Credential Leaks</h2>
+<h2>3. Secret Scanning - Preventing Credential Leaks</h2>
 <p>Secret scanning detects if you accidentally commit tokens, API keys, passwords, or other credentials to a repository.</p>
 <h3>Push Protection (Real-Time Prevention)</h3>
 <p><strong>Push Protection</strong> intercepts a <code>git push</code> before it reaches GitHub and blocks it if it detects a known secret pattern.</p>
@@ -153,17 +153,17 @@
 <ol>
 <li>Remove the secret from the file immediately</li>
 <li>Rotate the exposed credential (GitHub will automatically revoke detected GitHub tokens)</li>
-<li>If it was a false positive, you can bypass with justification — but investigate first</li>
+<li>If it was a false positive, you can bypass with justification - but investigate first</li>
 </ol>
 <p><strong>Best practice:</strong> Use environment variables for secrets, never hardcode them. Example:</p>
-<pre><code class="hljs language-javascript"><span class="hljs-comment">// BAD — never do this</span>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// BAD - never do this</span>
 <span class="hljs-keyword">const</span> token = <span class="hljs-string">&quot;ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>;
 
 <span class="hljs-comment">// GOOD</span>
 <span class="hljs-keyword">const</span> token = process.<span class="hljs-property">env</span>.<span class="hljs-property">GITHUB_TOKEN</span>;</code></pre>
 <h3>Secret Scanning Alerts</h3>
 <p>For public repositories, GitHub scans all existing commits and creates alerts for any detected secrets. These appear in Security → Secret scanning.</p>
-<p><strong>Priority action:</strong> If you find a secret scanning alert in a project you contribute to — especially a token or API key — treat it as urgent. The credential may have been exposed for a long time.</p>
+<p><strong>Priority action:</strong> If you find a secret scanning alert in a project you contribute to - especially a token or API key - treat it as urgent. The credential may have been exposed for a long time.</p>
 <hr>
 <h2>4. Code Scanning and CodeQL</h2>
 <p>Code scanning uses static analysis to find security vulnerabilities in the code itself (not dependencies). GitHub&#39;s built-in tool is <strong>CodeQL</strong>, which understands the code&#39;s logic and can detect:</p>
@@ -195,7 +195,7 @@ Details:
 <hr>
 <h2>5. Private Vulnerability Reporting</h2>
 <p>When you discover a security vulnerability in a project, <strong>never report it as a public issue</strong>. A public issue immediately broadcasts the vulnerability to anyone who could exploit it.</p>
-<p>GitHub provides <strong>Private Vulnerability Reporting</strong> — a disclosure form that sends your report only to the repository&#39;s security team, not to the public.</p>
+<p>GitHub provides <strong>Private Vulnerability Reporting</strong> - a disclosure form that sends your report only to the repository&#39;s security team, not to the public.</p>
 <h3>How to Submit a Private Report</h3>
 <ol>
 <li>Navigate to the repository&#39;s <strong>Security tab</strong></li>
@@ -205,24 +205,24 @@ Details:
 <li><strong>Description:</strong> Detailed explanation, how to reproduce it, and impact</li>
 <li><strong>Severity:</strong> Your assessment</li>
 <li><strong>Affected versions:</strong> Which versions are vulnerable</li>
-<li><strong>CVSS score:</strong> Optional — the Common Vulnerability Scoring System rating</li>
+<li><strong>CVSS score:</strong> Optional - the Common Vulnerability Scoring System rating</li>
 </ul>
 </li>
-<li>Submit — only the maintainers see your report</li>
+<li>Submit - only the maintainers see your report</li>
 </ol>
 <h3>The Responsible Disclosure Process</h3>
 <p>After you submit:</p>
 <ol>
-<li>Maintainers acknowledge your report (typically within 1–7 days for active projects)</li>
+<li>Maintainers acknowledge your report (typically within 1-7 days for active projects)</li>
 <li>They may ask follow-up questions in the private advisory thread</li>
 <li>They develop and test a fix</li>
 <li>They request a CVE (Common Vulnerability and Exposure) number from GitHub</li>
 <li>They publish a new release with the fix</li>
-<li>They publish a public security advisory — you may be credited as the reporter</li>
+<li>They publish a public security advisory - you may be credited as the reporter</li>
 <li>The CVE is published publicly (usually 90 days after report or after the fix is released)</li>
 </ol>
 <h3>What If the Maintainer Doesn&#39;t Respond?</h3>
-<p>If a maintainer doesn&#39;t respond within a reasonable time (30–90 days is the standard window):</p>
+<p>If a maintainer doesn&#39;t respond within a reasonable time (30-90 days is the standard window):</p>
 <ol>
 <li>Send a follow-up in the private advisory thread</li>
 <li>Contact GitHub directly if the issue is critical (GitHub can assist with coordinated disclosure)</li>
@@ -237,7 +237,7 @@ Details:
 <li><strong>Response timeline:</strong> How quickly maintainers aim to respond</li>
 <li><strong>Disclosure policy:</strong> When the project will publish a fix publicly</li>
 </ul>
-<p><strong>Agent-forge&#39;s security policy:</strong> <code>accesswatch/agent-forge</code> has a <code>SECURITY.md</code> that points to GitHub&#39;s private advisory form. If you find a security issue in agent-forge — even a potential one — use the private advisory form rather than opening a public issue.</p>
+<p><strong>Agent-forge&#39;s security policy:</strong> <code>accesswatch/agent-forge</code> has a <code>SECURITY.md</code> that points to GitHub&#39;s private advisory form. If you find a security issue in agent-forge - even a potential one - use the private advisory form rather than opening a public issue.</p>
 <h3>Navigating to a Repository&#39;s SECURITY.md</h3>
 <p>From the repository:</p>
 <ol>
@@ -295,7 +295,7 @@ Inside <span class="hljs-keyword">the</span> alert:
 <p>Agent Forge&#39;s <code>/security-dashboard</code> slash command gives you a quick security overview without visiting the Security tab in the browser:</p>
 <pre><code class="hljs">/security-dashboard</code></pre>
 <p><strong>Sample output:</strong></p>
-<pre><code class="hljs">## Security Dashboard — accesswatch/agent-forge
+<pre><code class="hljs">## Security Dashboard - accesswatch/agent-forge
 
 ### Dependabot Alerts
 - <span class="hljs-number">0</span> Critical
@@ -306,22 +306,22 @@ Inside <span class="hljs-keyword">the</span> alert:
 - No active alerts
 
 ### Code Scanning
-- Last scan: <span class="hljs-number">2</span> days ago — <span class="hljs-number">0</span> new alerts
+- Last scan: <span class="hljs-number">2</span> days ago - <span class="hljs-number">0</span> new alerts
 
 ### Dependabot PRs Open
 - #<span class="hljs-number">47</span>: Bump actions/cache <span class="hljs-keyword">from</span> <span class="hljs-number">3.3</span><span class="hljs-number">.1</span> to <span class="hljs-number">3.3</span><span class="hljs-number">.3</span>
   <span class="hljs-string">&quot;Review and merge to resolve the High severity alert&quot;</span>
 
 ### Recommendation
-Action needed: Review PR #<span class="hljs-number">47</span> (<span class="hljs-number">5</span> minutes — single file change)</code></pre>
-<p><strong>Workshop exercise:</strong> Run <code>/security-dashboard</code> on your fork after Day 2. Review any Dependabot PRs open on the upstream <code>accesswatch/agent-forge</code> — merging one is a real security contribution.</p>
+Action needed: Review PR #<span class="hljs-number">47</span> (<span class="hljs-number">5</span> minutes - single file change)</code></pre>
+<p><strong>Workshop exercise:</strong> Run <code>/security-dashboard</code> on your fork after Day 2. Review any Dependabot PRs open on the upstream <code>accesswatch/agent-forge</code> - merging one is a real security contribution.</p>
 <hr>
-<p><em>Return to: <a href="appendix-u-resources.md">Resources</a> | <a href="appendix-q-github-actions-workflows.md">Appendix Q — GitHub Actions</a> | <a href="appendix-k-branch-protection-rulesets.md">Appendix K — Branch Protection</a></em></p>
+<p><em>Return to: <a href="appendix-u-resources.md">Resources</a> | <a href="appendix-q-github-actions-workflows.md">Appendix Q - GitHub Actions</a> | <a href="appendix-k-branch-protection-rulesets.md">Appendix K - Branch Protection</a></em></p>
 
   </main>
   <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
-    <p><strong>GIT Going with GitHub</strong> — A workshop by <a href="http://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
-    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="http://www.joinbits.org">joinbits.org</a></p>
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://www.joinbits.org">BITS (Blind Information Technology Solutions)</a></p>
+    <p><a href="https://github.com/BITS-ACB/git-going-with-github">View on GitHub</a> · <a href="https://www.joinbits.org">joinbits.org</a></p>
   </footer>
   </body>
 </html>

@@ -1,5 +1,5 @@
 # Appendix U: Resources
-## Everything You Need — Before, During, and After the Workshop
+## Everything You Need - Before, During, and After the Workshop
 
 > This is your permanent reference. Every link, tool, guide, and community resource from the two-day workshop in one place. Bookmark this page in your fork so it travels with you.
 
@@ -7,14 +7,14 @@
 
 ## Table of Contents
 
-1. [The Central Project — Agent Forge](#1-the-central-project--agent-forge)
+1. [The Central Project - Agent Forge](#1-the-central-project--agent-forge)
 2. [GitHub Accessibility Guides](#2-github-accessibility-guides)
 3. [GitHub Skills Learning Modules](#3-github-skills-learning-modules)
 4. [Screen Reader Downloads and Documentation](#4-screen-reader-downloads-and-documentation)
 5. [VS Code Resources](#5-vs-code-resources)
 6. [GitHub Copilot Resources](#6-github-copilot-resources)
 7. [GitHub Agentic Workflows](#7-github-agentic-workflows)
-8. [Spec-Driven Development — Spec Kit](#8-spec-driven-development--spec-kit)
+8. [Spec-Driven Development - Spec Kit](#8-spec-driven-development--spec-kit)
 9. [GitHub CLI, Desktop, and Copilot CLI](#9-github-cli-desktop-and-copilot-cli)
 10. [GitHub Mobile Apps](#10-github-mobile-apps)
 11. [GitHub Best Practices and Power Features](#11-github-best-practices-and-power-features)
@@ -22,17 +22,17 @@
 13. [Accessibility Standards and References](#13-accessibility-standards-and-references)
 14. [GitHub Keyboard Shortcuts](#14-github-keyboard-shortcuts)
 15. [Community and Support](#15-community-and-support)
-16. [Your Workshop Documentation — Offline Reference](#16-your-workshop-documentation--offline-reference)
+16. [Your Workshop Documentation - Offline Reference](#16-your-workshop-documentation--offline-reference)
 
 ---
 
-## 1. The Central Project — Agent Forge
+## 1. The Central Project - Agent Forge
 
 The project you forked, contributed to, and carry home.
 
 | Resource | URL | Notes |
 |----------|-----|-------|
-| **Agent Forge — Main Repo** | [github.com/accesswatch/agent-forge](https://github.com/accesswatch/agent-forge) | The upstream — your contributions go here |
+| **Agent Forge - Main Repo** | [github.com/accesswatch/agent-forge](https://github.com/accesswatch/agent-forge) | The upstream - your contributions go here |
 | Getting Started Guide | [agent-forge/Documentation/GETTING-STARTED.md](https://github.com/accesswatch/agent-forge/blob/main/Documentation/GETTING-STARTED.md) | Your first hour with the agents |
 | Full Reference Guide | [agent-forge/Documentation/GUIDE.md](https://github.com/accesswatch/agent-forge/blob/main/Documentation/GUIDE.md) | Complete agent and command reference |
 | Setup Guide | [agent-forge/SETUP.md](https://github.com/accesswatch/agent-forge/blob/main/SETUP.md) | Configuration and preferences |
@@ -57,7 +57,7 @@ https://github.com/[your-username]/agent-forge
 
 1. Copy `preferences.example.md` to `preferences.md` in `.github/agents/`
 2. Add your GitHub username, your most-used repositories, and your preferred output format
-3. Commit the file — now the agents know who you are and what you work on
+3. Commit the file - now the agents know who you are and what you work on
 
 ---
 
@@ -67,11 +67,11 @@ Official guides from the GitHub Accessibility team. These were the primary resea
 
 | Guide | URL | When to Use |
 |-------|-----|-------------|
-| **GitHub Repos — Screen Reader Guide** | [accessibility.github.com/documentation/guide/repos](https://accessibility.github.com/documentation/guide/repos/) | Navigating repositories, file trees, branches |
-| **GitHub Issues — Screen Reader Guide** | [accessibility.github.com/documentation/guide/issues](https://accessibility.github.com/documentation/guide/issues/) | Filing, reading, commenting on issues |
-| **GitHub Pull Requests — Screen Reader Guide** | [accessibility.github.com/documentation/guide/pull-requests](https://accessibility.github.com/documentation/guide/pull-requests/) | Reading diffs, reviewing, merging |
-| **GitHub Copilot in VS Code — Screen Reader Guide** | [accessibility.github.com/documentation/guide/github-copilot-vsc](https://accessibility.github.com/documentation/guide/github-copilot-vsc/) | Using Copilot with NVDA, JAWS, VoiceOver |
-| **Custom Instructions — Screen Reader Guide** | [accessibility.github.com/documentation/guide/custom-instructions](https://accessibility.github.com/documentation/guide/custom-instructions/) | Configuring Copilot's behavior for your workflow |
+| **GitHub Repos - Screen Reader Guide** | [accessibility.github.com/documentation/guide/repos](https://accessibility.github.com/documentation/guide/repos/) | Navigating repositories, file trees, branches |
+| **GitHub Issues - Screen Reader Guide** | [accessibility.github.com/documentation/guide/issues](https://accessibility.github.com/documentation/guide/issues/) | Filing, reading, commenting on issues |
+| **GitHub Pull Requests - Screen Reader Guide** | [accessibility.github.com/documentation/guide/pull-requests](https://accessibility.github.com/documentation/guide/pull-requests/) | Reading diffs, reviewing, merging |
+| **GitHub Copilot in VS Code - Screen Reader Guide** | [accessibility.github.com/documentation/guide/github-copilot-vsc](https://accessibility.github.com/documentation/guide/github-copilot-vsc/) | Using Copilot with NVDA, JAWS, VoiceOver |
+| **Custom Instructions - Screen Reader Guide** | [accessibility.github.com/documentation/guide/custom-instructions](https://accessibility.github.com/documentation/guide/custom-instructions/) | Configuring Copilot's behavior for your workflow |
 | **Getting Started with Custom Agents for Accessibility** | [accessibility.github.com/documentation/guide/getting-started-with-agents](https://accessibility.github.com/documentation/guide/getting-started-with-agents/) | What agents are, custom agents vs custom instructions, informational vs task-oriented agents, step-by-step walkthroughs for building both types |
 | Accessibility Settings Overview | [docs.github.com/en/get-started/accessibility](https://docs.github.com/en/get-started/accessibility) | Hovercard settings, motion reduction, color modes |
 
@@ -79,14 +79,14 @@ Official guides from the GitHub Accessibility team. These were the primary resea
 
 ## 3. GitHub Skills Learning Modules
 
-GitHub Skills is GitHub's free, self-paced interactive learning platform. Every course runs **entirely inside GitHub** — no external site, no separate login, no video to watch. Each course uses the **template-copy pattern**: you copy the course repository to your account, and Mona (GitHub's official education bot) activates and teaches you entirely through issues and pull requests.
+GitHub Skills is GitHub's free, self-paced interactive learning platform. Every course runs **entirely inside GitHub** - no external site, no separate login, no video to watch. Each course uses the **template-copy pattern**: you copy the course repository to your account, and Mona (GitHub's official education bot) activates and teaches you entirely through issues and pull requests.
 
 ### How GitHub Skills Works
 
 Unlike a conventional course where you watch videos or read slides, GitHub Skills teaches through doing:
 
 1. **Copy the course:** Select "Start course" → "Use this template" → "Create a new repository." This copies the course scaffold to your own account.
-2. **Mona activates:** A GitHub Actions workflow automatically runs — within 20 seconds, Mona opens your first lesson as an Issue in your new repository.
+2. **Mona activates:** A GitHub Actions workflow automatically runs - within 20 seconds, Mona opens your first lesson as an Issue in your new repository.
 3. **Read and act:** The issue contains step-by-step instructions. You do the task (commit a file, open a PR, resolve a conflict) in the **same repository**.
 4. **Mona validates:** Another GitHub Actions workflow detects what you did, checks if it's correct, and either advances you to the next step or gives you feedback to try again.
 5. **Repeat until done:** All feedback arrives as issue comments and new issues. The course is complete when Mona closes the final issue with a success message.
@@ -112,7 +112,7 @@ Following lessons:
   9 (NVDA/JAWS) → navigate to comments to read Mona's feedback
 ```
 
-### After This Workshop — Your Learning Path
+### After This Workshop - Your Learning Path
 
 GitHub Skills courses are available 24/7 and are completely free. Recommended order after this workshop:
 
@@ -158,7 +158,7 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 - Elements list: `Insert+F3`
 - Next heading: `H` | Next link: `Tab` or `U` | Next button: `B`
 
-### VoiceOver (macOS / iOS — built in)
+### VoiceOver (macOS / iOS - built in)
 
 | Resource | URL |
 |----------|-----|
@@ -176,7 +176,7 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 
 | Screen Reader | Platform | URL |
 |--------------|----------|-----|
-| Narrator | Windows (built in) | `Win+Ctrl+Enter` to launch — no download required |
+| Narrator | Windows (built in) | `Win+Ctrl+Enter` to launch - no download required |
 | Orca | Linux (GNOME) | [wiki.gnome.org/Projects/Orca](https://wiki.gnome.org/Projects/Orca) |
 | TalkBack | Android (built in) | Settings → Accessibility → TalkBack |
 
@@ -186,13 +186,13 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 
 | Resource | URL | Notes |
 |----------|-----|-------|
-| Download VS Code | [code.visualstudio.com](https://code.visualstudio.com) | Free — Windows, macOS, Linux |
+| Download VS Code | [code.visualstudio.com](https://code.visualstudio.com) | Free - Windows, macOS, Linux |
 | VS Code Accessibility Docs | [code.visualstudio.com/docs/editor/accessibility](https://code.visualstudio.com/docs/editor/accessibility) | Screen reader mode, audio cues, accessible view |
 | VS Code Keyboard Shortcuts (Windows) | [aka.ms/vscode-keyboard-windows](https://aka.ms/vscode-keyboard-windows) | Full reference PDF |
 | VS Code Keyboard Shortcuts (macOS) | [aka.ms/vscode-keyboard-mac](https://aka.ms/vscode-keyboard-mac) | Full reference PDF |
 | GitHub Pull Requests Extension | [marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) | Review and manage PRs from VS Code |
 | GitLens | [marketplace.visualstudio.com/items?itemName=eamodio.gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) | Enhanced git history, blame, and branch visualization |
-| YAML Support | [marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) | YAML validation — useful for issue templates |
+| YAML Support | [marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) | YAML validation - useful for issue templates |
 
 **Install the GitHub PR extension quickly:**
 1. Open VS Code Extensions (`Ctrl+Shift+X`)
@@ -205,13 +205,13 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 
 | Resource | URL | Notes |
 |----------|-----|-------|
-| GitHub Copilot (Free tier) | [github.com/features/copilot](https://github.com/features/copilot) | Free for individuals — no credit card required |
+| GitHub Copilot (Free tier) | [github.com/features/copilot](https://github.com/features/copilot) | Free for individuals - no credit card required |
 | Copilot Documentation | [docs.github.com/copilot](https://docs.github.com/en/copilot) | Full reference |
 | Copilot in VS Code | [docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot](https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot) | Setup guide |
 | Copilot Extensions Marketplace | [github.com/marketplace?type=apps&copilot_app=true](https://github.com/marketplace?type=apps&copilot_app=true) | Extensions that add capabilities to Copilot Chat |
 | Custom Instructions for Copilot | [docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot](https://docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot) | Teach Copilot your preferences and project context |
-| Copilot Coding Agent — Customize Environment | [docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-environment](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-environment#switching-copilot-to-a-windows-development-environment) | Switch coding agent to Windows dev environment |
-| Copilot in VS Code — A11y Guide | [accessibility.github.com/documentation/guide/github-copilot-vsc](https://accessibility.github.com/documentation/guide/github-copilot-vsc/) | Screen reader-optimized usage |
+| Copilot Coding Agent - Customize Environment | [docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-environment](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-environment#switching-copilot-to-a-windows-development-environment) | Switch coding agent to Windows dev environment |
+| Copilot in VS Code - A11y Guide | [accessibility.github.com/documentation/guide/github-copilot-vsc](https://accessibility.github.com/documentation/guide/github-copilot-vsc/) | Screen reader-optimized usage |
 
 ---
 
@@ -221,7 +221,7 @@ GitHub Agentic Workflows are in **technical preview** as of February 2026. Acces
 
 | Resource | URL | Notes |
 |----------|-----|-------|
-| Agentic Workflows Blog Post | [github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows](https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/) | The announcement — explains the full model |
+| Agentic Workflows Blog Post | [github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows](https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/) | The announcement - explains the full model |
 | `gh-aw` CLI Extension | `gh extension install github/gh-aw` | Install via GitHub CLI |
 | Technical Preview Feedback | [gh.io/aw-tp-community-feedback](https://gh.io/aw-tp-community-feedback) | Community discussion for the preview |
 | GitHub Next Discord | [gh.io/next-discord](https://gh.io/next-discord) | Real-time discussion with the GitHub Next team |
@@ -229,22 +229,22 @@ GitHub Agentic Workflows are in **technical preview** as of February 2026. Acces
 **How Agentic Workflows connect to what you learned:**
 
 During the workshop, you learned:
-1. Standard GitHub Actions (YAML workflows — triggers, jobs, steps)
-2. Agent Forge agents (`.agent.md` files — plain English instructions, Copilot Chat executor)
-3. GitHub Agentic Workflows (`.md` files in `.github/workflows/` — plain English instructions, cloud-based coding agent executor)
+1. Standard GitHub Actions (YAML workflows - triggers, jobs, steps)
+2. Agent Forge agents (`.agent.md` files - plain English instructions, Copilot Chat executor)
+3. GitHub Agentic Workflows (`.md` files in `.github/workflows/` - plain English instructions, cloud-based coding agent executor)
 
 All three live in `.github/`. All three are plain text. The only difference is where they run and how sophisticated their executor is.
 
 ---
 
-## 8. Spec-Driven Development — Spec Kit
+## 8. Spec-Driven Development - Spec Kit
 
 | Resource | URL | Notes |
 |----------|-----|-------|
-| Spec Kit — GitHub Repo | [github.com/github/spec-kit](https://github.com/github/spec-kit) | Open source, MIT license |
+| Spec Kit - GitHub Repo | [github.com/github/spec-kit](https://github.com/github/spec-kit) | Open source, MIT license |
 | Spec Kit Blog Post | [github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit](https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/) | Full explanation of the methodology |
 
-**The core idea:** Write the intent of a feature before anyone builds it. The specification is a living document — AI uses it to plan tasks, contributors use it to stay aligned, the community uses it to evaluate whether the outcome matched the intention.
+**The core idea:** Write the intent of a feature before anyone builds it. The specification is a living document - AI uses it to plan tasks, contributors use it to stay aligned, the community uses it to evaluate whether the outcome matched the intention.
 
 **Quick start:**
 ```bash
@@ -252,9 +252,9 @@ uvx --from git+https://github.com/github/spec-kit.git specify init YOUR_PROJECT_
 ```
 
 **Slash commands:**
-- `/specify` — open a new specification session
-- `/plan` — convert a spec into a development plan
-- `/tasks` — break the plan into trackable tasks
+- `/specify` - open a new specification session
+- `/plan` - convert a spec into a development plan
+- `/tasks` - break the plan into trackable tasks
 
 Works with GitHub Copilot, Claude Code, and Gemini CLI.
 
@@ -319,13 +319,13 @@ GitHub's official mobile apps bring the full GitHub experience to your phone or 
 
 ### What You Can Do in GitHub Mobile
 
-- **Browse repositories** — navigate code, read files, view commits
-- **Manage issues** — create, edit, comment, close, and label issues
-- **Review pull requests** — read diffs, leave comments, request changes, approve, merge
-- **Manage notifications** — triage your inbox on the go
-- **Interact with GitHub Copilot** — chat with Copilot Chat on mobile (as of Feb 2026)
-- **View GitHub Actions** — monitor workflows and check build status
-- **Manage Discussions** — participate in community conversations
+- **Browse repositories** - navigate code, read files, view commits
+- **Manage issues** - create, edit, comment, close, and label issues
+- **Review pull requests** - read diffs, leave comments, request changes, approve, merge
+- **Manage notifications** - triage your inbox on the go
+- **Interact with GitHub Copilot** - chat with Copilot Chat on mobile (as of Feb 2026)
+- **View GitHub Actions** - monitor workflows and check build status
+- **Manage Discussions** - participate in community conversations
 
 ### Accessibility Features
 
@@ -406,20 +406,20 @@ Share precise references to code by including line numbers in GitHub URLs.
 1. Navigate to a file on GitHub
 2. Click the line number (in screen readers: navigate to the line and activate the number link)
 3. Hold `Shift` and click another line number to select a range
-4. Copy the URL from your browser — the line numbers are automatically included
+4. Copy the URL from your browser - the line numbers are automatically included
 
 **Screen reader tip:** Line numbers are links announced as "Line 42 link" (or similar). They're in the left margin of the code view.
 
-### Permalinks — Stable Links That Never Break
+### Permalinks - Stable Links That Never Break
 
 When you link to code on GitHub using a branch name (`main`, `develop`), that link can break if the code changes or the file moves. **Permalinks** use the commit SHA instead of the branch name, creating a permanent snapshot link.
 
-**Why this matters:** When you file a bug report or reference code in a discussion, you want the link to show exactly what you were looking at — not what the code looks like weeks later after someone refactored it.
+**Why this matters:** When you file a bug report or reference code in a discussion, you want the link to show exactly what you were looking at - not what the code looks like weeks later after someone refactored it.
 
 **How to create a permalink:**
 1. View any file on GitHub
-2. Press `Y` while viewing the file — the URL changes from `/blob/main/file.js` to `/blob/a1b2c3d4.../file.js`
-3. Copy the new URL — it now points to that specific commit
+2. Press `Y` while viewing the file - the URL changes from `/blob/main/file.js` to `/blob/a1b2c3d4.../file.js`
+3. Copy the new URL - it now points to that specific commit
 
 **Shortcut:** `Y` = "Yank permalink" (borrows from Vim terminology)
 
@@ -441,14 +441,14 @@ Not every issue is a bug or feature request. Some are questions, proposals, or o
 
 All comments and history are preserved. The issue is closed and replaced with a link to the new discussion.
 
-### Team Mentions — Notify a Whole Group
+### Team Mentions - Notify a Whole Group
 
 In organizations, you can mention entire teams instead of individuals: `@org-name/team-name`
 
 **Example:** `@github/accessibility` notifies everyone on GitHub's accessibility team.
 
 **Why this matters:**
-- You don't need to know who's on a team — just mention the team
+- You don't need to know who's on a team - just mention the team
 - Teams can subscribe to notifications as a group
 - CODEOWNERS files use team mentions for automatic reviewer assignment
 
@@ -463,7 +463,7 @@ Keep long issue descriptions or PR descriptions scannable by hiding details in c
 <details>
 <summary>Click to expand: Full error stack trace</summary>
 
-(Your detailed content here — code blocks, lists, anything)
+(Your detailed content here - code blocks, lists, anything)
 
 </details>
 ```
@@ -491,7 +491,7 @@ Co-authored-by: Jordan Smith <jordan@example.com>
 ```
 
 **Why this matters:**
-- Pair programming — both people get credit in the Git history
+- Pair programming - both people get credit in the Git history
 - Crediting someone who provided the solution but didn't write the code
 - GitHub recognizes these trailers and shows all co-authors on the commit
 
@@ -499,7 +499,7 @@ Co-authored-by: Jordan Smith <jordan@example.com>
 
 ### Understanding Watch, Star, and Fork
 
-Three ways to interact with a repository — each means something different:
+Three ways to interact with a repository - each means something different:
 
 | Action | What It Does | When to Use |
 |--------|--------------|-------------|
@@ -508,14 +508,14 @@ Three ways to interact with a repository — each means something different:
 | **Fork** | Create your own copy of the repo | You want to contribute changes or use it as a starting point |
 
 **Watch settings:**
-- **All activity** — every issue, PR, and discussion
-- **Participating** (default) — only threads you comment on or are @mentioned in
-- **Releases only** — just new releases
-- **Ignore** — unsubscribe completely
+- **All activity** - every issue, PR, and discussion
+- **Participating** (default) - only threads you comment on or are @mentioned in
+- **Releases only** - just new releases
+- **Ignore** - unsubscribe completely
 
 **Pro tip:** Star repos for discovery; Watch repos you actively contribute to.
 
-### CODEOWNERS — Automatic Reviewer Assignment
+### CODEOWNERS - Automatic Reviewer Assignment
 
 The `CODEOWNERS` file automatically requests reviews from specific people or teams when files in their area are changed.
 
@@ -653,7 +653,7 @@ is:open is:issue label:accessibility no:assignee
 | Resource | URL | Notes |
 |----------|-----|-------|
 | WCAG 2.2 (Full Standard) | [w3.org/TR/WCAG22](https://www.w3.org/TR/WCAG22/) | The complete Web Content Accessibility Guidelines |
-| WCAG Quick Reference | [w3.org/WAI/WCAG22/quickref](https://www.w3.org/WAI/WCAG22/quickref/) | Filtered, searchable version — much more practical |
+| WCAG Quick Reference | [w3.org/WAI/WCAG22/quickref](https://www.w3.org/WAI/WCAG22/quickref/) | Filtered, searchable version - much more practical |
 | ARIA Authoring Practices Guide | [w3.org/WAI/ARIA/apg](https://www.w3.org/WAI/ARIA/apg/) | When and how to use ARIA roles and attributes |
 | WebAIM Screen Reader Survey | [webaim.org/projects/screenreadersurvey](https://webaim.org/projects/screenreadersurvey/) | Real-world data on how screen reader users work |
 | The A11y Project | [a11yproject.com](https://www.a11yproject.com) | Community-driven accessibility checklist and resources |
@@ -665,7 +665,7 @@ is:open is:issue label:accessibility no:assignee
 | Tool | URL | Notes |
 |------|-----|-------|
 | WebAIM Contrast Checker | [webaim.org/resources/contrastchecker](https://webaim.org/resources/contrastchecker/) | Check text/background color contrast against WCAG AA/AAA |
-| WAVE Browser Extension | [wave.webaim.org/extension](https://wave.webaim.org/extension/) | Highlights accessibility issues on any webpage — Chrome, Firefox, Edge |
+| WAVE Browser Extension | [wave.webaim.org/extension](https://wave.webaim.org/extension/) | Highlights accessibility issues on any webpage - Chrome, Firefox, Edge |
 | Axe DevTools | [deque.com/axe/devtools](https://www.deque.com/axe/devtools/) | Finds WCAG violations with severity levels |
 | Lighthouse | In Chrome DevTools (F12 → Lighthouse tab) | Built-in auditing for accessibility, performance, and SEO |
 
@@ -673,9 +673,9 @@ is:open is:issue label:accessibility no:assignee
 
 | Resource | URL | Notes |
 |----------|-----|-------|
-| Learn Git Branching | [learngitbranching.js.org](https://learngitbranching.js.org/) | Gamified, step-by-step challenges — branching, merging, rebasing |
+| Learn Git Branching | [learngitbranching.js.org](https://learngitbranching.js.org/) | Gamified, step-by-step challenges - branching, merging, rebasing |
 | Visualizing Git | [git-school.github.io/visualizing-git](https://git-school.github.io/visualizing-git/) | Interactive visual playground for branches and commits |
-| Pro Git Book (free) | [git-scm.com/book/en/v2](https://git-scm.com/book/en/v2) | Complete reference — free online |
+| Pro Git Book (free) | [git-scm.com/book/en/v2](https://git-scm.com/book/en/v2) | Complete reference - free online |
 | Git Cheat Sheet | [github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf) | Quick command reference PDF |
 
 ---
@@ -685,7 +685,7 @@ is:open is:issue label:accessibility no:assignee
 | Resource | URL | Notes |
 |----------|-----|-------|
 | Full Keyboard Shortcuts Reference | [docs.github.com/en/get-started/accessibility/keyboard-shortcuts](https://docs.github.com/en/get-started/accessibility/keyboard-shortcuts) | Every shortcut on every page |
-| Press `?` on any GitHub page | — | Opens the keyboard shortcuts overlay for that specific page |
+| Press `?` on any GitHub page | - | Opens the keyboard shortcuts overlay for that specific page |
 
 **The most important shortcuts to memorize:**
 
@@ -756,9 +756,9 @@ Not sure where to start after the workshop? Use these suggested paths.
 
 ---
 
-## 16. Your Workshop Documentation — Offline Reference
+## 16. Your Workshop Documentation - Offline Reference
 
-Every guide from this workshop lives in your fork. Clone your fork once and the complete documentation works offline — no internet required.
+Every guide from this workshop lives in your fork. Clone your fork once and the complete documentation works offline - no internet required.
 
 ```bash
 git clone https://github.com/[your-username]/agent-forge.git

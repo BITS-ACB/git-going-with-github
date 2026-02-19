@@ -1,6 +1,6 @@
 # Contributing to This Workshop Repository
 
-Thank you for helping improve this workshop. Whether you are a participant who found a typo, someone who wants to add a new exercise, or an educator adapting these materials for your own community — your contribution is meaningful and welcome.
+Thank you for helping improve this workshop. Whether you are a participant who found a typo, someone who wants to add a new exercise, or an educator adapting these materials for your own community - your contribution is meaningful and welcome.
 
 This guide covers contributing to **this workshop learning repository**. For contributing to Agent Forge itself (the project you work on during Day 2), see [Agent Forge's CONTRIBUTING.md](https://github.com/accesswatch/agent-forge/blob/main/CONTRIBUTING.md).
 
@@ -10,8 +10,8 @@ This guide covers contributing to **this workshop learning repository**. For con
 
 1. [Who This Is For](#1-who-this-is-for)
 2. [What Kinds of Contributions Are Welcome](#2-what-kinds-of-contributions-are-welcome)
-3. [Before You Start — Fork and Clone](#3-before-you-start--fork-and-clone)
-4. [Contribution Workflow — Step by Step](#4-contribution-workflow--step-by-step)
+3. [Before You Start - Fork and Clone](#3-before-you-start--fork-and-clone)
+4. [Contribution Workflow - Step by Step](#4-contribution-workflow--step-by-step)
 5. [Writing and Style Guidelines](#5-writing-and-style-guidelines)
 6. [Accessibility Requirements](#6-accessibility-requirements)
 7. [HTML Documentation Build System](#7-html-documentation-build-system)
@@ -26,11 +26,11 @@ This guide covers contributing to **this workshop learning repository**. For con
 
 **Workshop participants:** You have already completed the contribution workflow during the workshop. This repository is an excellent first contribution target for applying what you practiced.
 
-**Educators and facilitators:** You are welcome to fork the entire repository and adapt the materials for your own workshop program. Attribution is required under the CC BY 4.0 license — please include a credit line and link to the original repository.
+**Educators and facilitators:** You are welcome to fork the entire repository and adapt the materials for your own workshop program. Attribution is required under the CC BY 4.0 license - please include a credit line and link to the original repository.
 
 **Accessibility practitioners:** If you have domain expertise in a particular screen reader or assistive technology and notice something that is incorrect or incomplete, please open an issue or submit a correction. Your expertise is exactly what this documentation needs.
 
-**People who find bugs:** A broken link, a command that has stopped working, an exercise that cannot be completed — all of these are legitimate bugs. Open an issue the same way you would for any software project.
+**People who find bugs:** A broken link, a command that has stopped working, an exercise that cannot be completed - all of these are legitimate bugs. Open an issue the same way you would for any software project.
 
 ---
 
@@ -59,13 +59,13 @@ This guide covers contributing to **this workshop learning repository**. For con
 
 ### What We Are Not Looking For Right Now
 
-- Rewriting the complete voice or structure of the workshop — if you have large-scale ideas, open a discussion first
+- Rewriting the complete voice or structure of the workshop - if you have large-scale ideas, open a discussion first
 - Adding content about tools or platforms not currently mentioned in the workshop
 - Automated link-checking or content generation without human review
 
 ---
 
-## 3. Before You Start — Fork and Clone
+## 3. Before You Start - Fork and Clone
 
 You learned this workflow during the workshop. Here it is again as a reference.
 
@@ -74,7 +74,7 @@ You learned this workflow during the workshop. Here it is again as a reference.
 1. Navigate to the workshop repository on GitHub
 2. Activate the **Fork** button (top right of the repository page)
 3. Select your account as the fork destination
-4. Wait for the fork to complete — you will be redirected to your copy
+4. Wait for the fork to complete - you will be redirected to your copy
 
 **Screen reader users:**
 - NVDA / JAWS: Navigate by button (`B`) to find "Fork"
@@ -111,11 +111,11 @@ upstream  https://github.com/[original-owner]/[workshop-repo-name].git (push)
 
 ---
 
-## 4. Contribution Workflow — Step by Step
+## 4. Contribution Workflow - Step by Step
 
 This is the same workflow you practiced during the workshop, applied to a real contribution.
 
-### Step 1 — Sync with Upstream
+### Step 1 - Sync with Upstream
 
 Always start from a current copy of the main branch:
 
@@ -126,7 +126,7 @@ git merge upstream/main
 git push origin main
 ```
 
-### Step 2 — Create a Focused Branch
+### Step 2 - Create a Focused Branch
 
 One issue or topic per branch. Branch names should describe the change:
 
@@ -136,7 +136,7 @@ git checkout -b add-exercise-03-alternative-macos
 git checkout -b update-broken-links-resources
 ```
 
-### Step 3 — Make Your Changes
+### Step 3 - Make Your Changes
 
 Edit the file or files. Limit your changes to what is described in your branch name. Unrelated improvements belong in separate branches and separate pull requests.
 
@@ -151,7 +151,7 @@ Edit the file or files. Limit your changes to what is described in your branch n
 3. Make your changes
 4. Use "Commit changes" to save directly to your branch
 
-### Step 4 — Commit Your Changes
+### Step 4 - Commit Your Changes
 
 Write a commit message that a future contributor can read and understand without context:
 
@@ -174,16 +174,16 @@ changed. What problem does this solve? What was wrong before?
 
 Types: `fix`, `docs`, `exercise`, `style`, `chore`
 
-### Step 5 — Push to Your Fork
+### Step 5 - Push to Your Fork
 
 ```bash
 git push origin fix-nvda-shortcut-section-05
 ```
 
-### Step 6 — Open a Pull Request
+### Step 6 - Open a Pull Request
 
 1. Navigate to your fork on GitHub
-2. A banner should appear: "Compare & pull request" — activate it
+2. A banner should appear: "Compare & pull request" - activate it
 3. If no banner appears: Activate the **Pull requests** tab → **New pull request** → change the compare branch to your branch
 4. Fill in the PR template (see below)
 5. Submit
@@ -196,13 +196,13 @@ git push origin fix-nvda-shortcut-section-05
 
 - **Imperative mood for instructions:** "Navigate to the Issues tab" not "You should navigate to the Issues tab"
 - **Present tense:** "The button opens a dialog" not "The button will open a dialog"
-- **Specific:** Name the exact shortcut, exact menu item, exact element to look for — do not say "click the appropriate option"
+- **Specific:** Name the exact shortcut, exact menu item, exact element to look for - do not say "click the appropriate option"
 - **Screen reader aware:** Include landmark context, not just visual position ("the Save button in the dialog footer" not "the blue button on the right")
 
 ### Structure
 
-- Use heading levels consistently — H2 for major sections, H3 for subsections, H4 sparingly
-- Use numbered lists for sequential steps — the order matters and participants need to count steps
+- Use heading levels consistently - H2 for major sections, H3 for subsections, H4 sparingly
+- Use numbered lists for sequential steps - the order matters and participants need to count steps
 - Use bulleted lists for options, items where order is unimportant
 - Use code blocks (` ``` `) for all commands, keyboard shortcuts in context, and file paths
 - Inline code (` `` `) for short references to a key name, command name, or file name
@@ -215,11 +215,11 @@ Format all keyboard shortcuts in a table when listing more than two:
 |--------|------|------|-----------|
 | Focus search | `/` | `/` | `/` |
 
-When mentioning a single shortcut inline: use backticks — `NVDA+F7`
+When mentioning a single shortcut inline: use backticks - `NVDA+F7`
 
 ### Links
 
-- Link text should describe the destination — not "click here" or "this guide"
+- Link text should describe the destination - not "click here" or "this guide"
 - Good: `[NVDA User Guide](https://www.nvaccess.org/files/nvda/documentation/userGuide.html)`
 - Bad: `[click here](https://www.nvaccess.org/files/nvda/documentation/userGuide.html)`
 
@@ -227,17 +227,17 @@ When mentioning a single shortcut inline: use backticks — `NVDA+F7`
 
 ## 6. Accessibility Requirements
 
-Every document in this repository is used by screen reader users. Accessibility is not a nice-to-have — it is the primary requirement. All contributions must meet the following:
+Every document in this repository is used by screen reader users. Accessibility is not a nice-to-have - it is the primary requirement. All contributions must meet the following:
 
 ### Heading Structure
 
 - Every heading must be in-sequence (no skipping from H2 to H4)
-- Every document must have exactly one H1 (`#`) — the page title
+- Every document must have exactly one H1 (`#`) - the page title
 - Headings must accurately describe the content they introduce
 
 ### Links and References
 
-- No bare URLs in running text — always use descriptive link text
+- No bare URLs in running text - always use descriptive link text
 - Exception: the Resources document may list URLs in table columns labeled "URL" for copy-paste use
 
 ### Images and Media
@@ -245,13 +245,13 @@ Every document in this repository is used by screen reader users. Accessibility 
 - Every image requires meaningful alt text
 - Alt text describes what the image shows, not just its label
 - Decorative-only images (rare in documentation) may use empty alt `alt=""`
-- This workshop avoids screenshots of UI because screen reader users cannot use them — prefer text descriptions and keyboard instructions
+- This workshop avoids screenshots of UI because screen reader users cannot use them - prefer text descriptions and keyboard instructions
 
 ### Tables
 
 - Every table must have a header row using `|---|` separator syntax in Markdown
 - Table headers must be meaningful and concise
-- Avoid merged cells — Markdown tables do not support them, and they create complex reading order for screen readers
+- Avoid merged cells - Markdown tables do not support them, and they create complex reading order for screen readers
 
 ### Code Blocks
 
@@ -270,7 +270,7 @@ This repository maintains HTML versions of all Markdown files. The HTML is built
 **Local build, committed output:**
 - You edit `.md` files, then run `npm run build:html` before committing
 - Both the Markdown changes and the updated `html/` output are committed together
-- There is no CI pipeline — the build is your responsibility before pushing
+- There is no CI pipeline - the build is your responsibility before pushing
 
 **What gets converted:**
 - All markdown files in `docs/`
@@ -288,7 +288,7 @@ npm install
 # Generate HTML files once
 npm run build:html
 
-# Watch mode — rebuilds HTML automatically when you save markdown files
+# Watch mode - rebuilds HTML automatically when you save markdown files
 npm run watch:html
 
 # Clean generated HTML
@@ -300,12 +300,12 @@ Generated HTML files will be in the `html/` directory with the same folder struc
 ### HTML Features
 
 The generated documentation includes:
-- **GitHub-flavored styling** — familiar appearance for GitHub users
+- **GitHub-flavored styling** - familiar appearance for GitHub users
 - **Syntax highlighting** for code blocks
-- **Responsive design** — works on mobile and desktop
-- **Accessible markup** — proper ARIA labels, semantic HTML, keyboard navigation
-- **Breadcrumb navigation** — easy to return to home
-- **High contrast mode support** — respects user preferences
+- **Responsive design** - works on mobile and desktop
+- **Accessible markup** - proper ARIA labels, semantic HTML, keyboard navigation
+- **Breadcrumb navigation** - easy to return to home
+- **High contrast mode support** - respects user preferences
 
 ### What You Need to Know When Contributing
 
@@ -350,13 +350,13 @@ If you are reviewing this repository using a screen reader, here are the relevan
 ### NVDA
 
 - **Table navigation:** `T` to reach the table, then `Ctrl+Alt+Arrow Keys` to navigate cells
-- **Code blocks** are read as preformatted text. NVDA reads the content character-by-character if you need to copy a command — use `NVDA+F8` to switch to flat review, then `NVDA+C` to copy a line
+- **Code blocks** are read as preformatted text. NVDA reads the content character-by-character if you need to copy a command - use `NVDA+F8` to switch to flat review, then `NVDA+C` to copy a line
 - **Headings:** `H` to jump between headings when in browse mode
 
 ### JAWS
 
 - **Table navigation:** `T` to reach the table, `Ctrl+Alt+Arrow Keys` for cells
-- **Code blocks:** `Insert+F5` (forms list) will not find code elements — navigate with cursor keys
+- **Code blocks:** `Insert+F5` (forms list) will not find code elements - navigate with cursor keys
 - **Headings:** `H` forward, `Shift+H` backward
 
 ### VoiceOver (macOS)
@@ -411,11 +411,11 @@ Small, focused pull requests are reviewed faster and merged sooner. If you have 
 
 ## 10. What Happens After You Submit
 
-1. **A maintainer reviews your PR** — typically within a few days for documentation changes
-2. **You may receive review comments** — these are not rejections; they are part of the collaboration
-3. **You can add commits to the same branch** to respond to feedback — GitHub adds them to the open PR automatically
+1. **A maintainer reviews your PR** - typically within a few days for documentation changes
+2. **You may receive review comments** - these are not rejections; they are part of the collaboration
+3. **You can add commits to the same branch** to respond to feedback - GitHub adds them to the open PR automatically
 4. **Once approved**, a maintainer will merge the PR
-5. **Your name is in the commit history** of the repository — that is the permanent record of your contribution
+5. **Your name is in the commit history** of the repository - that is the permanent record of your contribution
 
 If two weeks pass with no response, feel free to leave a comment on the PR to check in.
 
@@ -433,6 +433,6 @@ If two weeks pass with no response, feel free to leave a comment on the PR to ch
 
 ---
 
-*Workshops run better when participants contribute back. Every correction, every clarification, every additional exercise makes this material stronger for everyone who comes after you. Your name in the commit history is not the end of your participation — it is the beginning.*
+*Workshops run better when participants contribute back. Every correction, every clarification, every additional exercise makes this material stronger for everyone who comes after you. Your name in the commit history is not the end of your participation - it is the beginning.*
 
 *[Back to README →](README.md) | [Resources →](docs/appendix-u-resources.md) | [Code of Conduct →](CODE_OF_CONDUCT.md)*

@@ -1,7 +1,7 @@
 # Appendix P: Publishing with GitHub Pages
 ## How to Deploy a Static Website Directly from Your Repository
 
-> GitHub Pages lets you publish a static website straight from a GitHub repository — no server, no hosting bill, no deployment pipeline required for simple sites. This appendix explains how to enable it, what it can publish, and how to ensure the published site meets the same accessibility standards as your source code.
+> GitHub Pages lets you publish a static website straight from a GitHub repository - no server, no hosting bill, no deployment pipeline required for simple sites. This appendix explains how to enable it, what it can publish, and how to ensure the published site meets the same accessibility standards as your source code.
 
 ---
 
@@ -34,7 +34,7 @@ For organization accounts and user profile repositories (`<username>/<username>.
 https://<username>.github.io/
 ```
 
-**What "static" means:** GitHub Pages only serves files as-is — HTML, CSS, JavaScript, images, PDFs. It does not run server-side code (no PHP, no Python, no Node.js request handlers). If you need a database or dynamic server logic, you need a different host.
+**What "static" means:** GitHub Pages only serves files as-is - HTML, CSS, JavaScript, images, PDFs. It does not run server-side code (no PHP, no Python, no Node.js request handlers). If you need a database or dynamic server logic, you need a different host.
 
 **What it is good for:**
 - Documentation sites
@@ -53,8 +53,8 @@ https://<username>.github.io/
 2. Click **Settings** (the gear icon in the top navigation)
 3. In the left sidebar, scroll to **Code and automation** and click **Pages**
 4. Under **Build and deployment**, choose your publishing source:
-   - **Deploy from a branch** — serve files directly from a branch/folder
-   - **GitHub Actions** — use a workflow to build and deploy
+   - **Deploy from a branch** - serve files directly from a branch/folder
+   - **GitHub Actions** - use a workflow to build and deploy
 5. If using "Deploy from a branch":
    - Select the branch (e.g. `main` or `master`)
    - Select the folder: `/` (root) or `/docs`
@@ -66,7 +66,7 @@ GitHub will build and deploy within a minute or two. The URL appears at the top 
 
 - The **Settings** tab is a link in the repository's top navigation bar. It has the accessible name "Settings"
 - The **Pages** option in the left sidebar is a link under the "Code and automation" group heading
-- The branch and folder dropdowns are standard `<select>` elements — navigate with arrow keys
+- The branch and folder dropdowns are standard `<select>` elements - navigate with arrow keys
 
 ---
 
@@ -79,7 +79,7 @@ The simplest option. GitHub reads files directly from a branch.
 | Folder option | What it serves |
 |---------------|---------------|
 | `/` (root) | Serves the entire repository root |
-| `/docs` | Serves only the `docs/` folder — useful when your repository also contains source code |
+| `/docs` | Serves only the `docs/` folder - useful when your repository also contains source code |
 
 **Best practice:** Use `/docs` to isolate the published content from source files, especially for projects with build pipelines where the output lives in a specific folder.
 
@@ -105,7 +105,7 @@ This project has a pre-built HTML mirror of all Markdown content in the `html/` 
 
 Because GitHub Pages only supports `/` (root) or `/docs` as folder sources, and this project's output is in `html/`, you have two options:
 
-**Option A1 — Copy html/ contents to docs/**
+**Option A1 - Copy html/ contents to docs/**
 
 ```bash
 # Copy the html/ output into docs/ for GitHub Pages
@@ -117,7 +117,7 @@ git push
 
 Then set Pages source to branch `master`, folder `/docs`.
 
-**Option A2 — Rename html/ to docs/**
+**Option A2 - Rename html/ to docs/**
 
 If the project does not already use `docs/` for Markdown sources, you could rename the output folder:
 
@@ -337,7 +337,7 @@ For more comprehensive checking, scan multiple pages:
 ### Site not updating after a push
 
 - Check the **Actions** tab for a failed deploy workflow
-- Check Settings → Pages — the most recent deployment timestamp should match your push
+- Check Settings → Pages - the most recent deployment timestamp should match your push
 - Hard-refresh the browser (`Ctrl+F5` / `Cmd+Shift+R`) to bypass the cache
 - DNS TTL caching can delay custom domain updates up to the TTL value (often 1 hour)
 
@@ -348,7 +348,7 @@ This usually indicates a **base URL mismatch**. If your site is at `https://user
 ### HTTPS certificate not provisioning
 
 - Verify DNS records are correctly set
-- Ensure the domain is not proxied through a CDN (e.g. Cloudflare orange-cloud) — GitHub Pages needs to see the DNS record directly to provision the cert
+- Ensure the domain is not proxied through a CDN (e.g. Cloudflare orange-cloud) - GitHub Pages needs to see the DNS record directly to provision the cert
 - Allow up to 24 hours after correct DNS propagation
 
 ### Screen reader announces wrong page title
@@ -357,4 +357,4 @@ The published `<title>` element is set during the HTML build step. Update the te
 
 ---
 
-*Return to: [Resources](appendix-u-resources.md) | [Appendix E — GitHub Flavored Markdown](appendix-e-github-flavored-markdown.md) | [Appendix A — Glossary](appendix-a-glossary.md)*
+*Return to: [Resources](appendix-u-resources.md) | [Appendix E - GitHub Flavored Markdown](appendix-e-github-flavored-markdown.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

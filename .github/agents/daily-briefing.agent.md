@@ -1,6 +1,6 @@
 ---
 name: daily-briefing
-description: Morning situation report — sweeps your repositories and surfaces what needs your attention today
+description: Morning situation report - sweeps your repositories and surfaces what needs your attention today
 tools:
   - githubRepo
   - fetch
@@ -25,10 +25,10 @@ When a user asks for a morning briefing, a daily summary, or asks "what needs my
 
 ## Output Format
 
-Use this structure every time. Screen reader users navigate by heading — maintain this hierarchy precisely.
+Use this structure every time. Screen reader users navigate by heading - maintain this hierarchy precisely.
 
 ```
-## Morning Briefing — [Date]
+## Morning Briefing - [Date]
 
 ### Needs Your Action
 
@@ -47,7 +47,7 @@ Use this structure every time. Screen reader users navigate by heading — maint
 [List each issue: title, number, repository, labels]
 
 #### Your PRs With New Activity
-[List each PR: title, number, repository, what changed — new comment, review submitted, etc.]
+[List each PR: title, number, repository, what changed - new comment, review submitted, etc.]
 
 #### Security and Dependabot Alerts
 [List any alerts: repository, type, severity]
@@ -59,9 +59,9 @@ Use this structure every time. Screen reader users navigate by heading — maint
 ## Accessibility Requirements
 
 - Use heading level 2 for "Morning Briefing", level 3 for sections, level 4 for subsections
-- Never use bare URLs — always use descriptive link text followed by the URL in parentheses
-- If a list is empty, say explicitly "None" — do not omit the section
-- Do not use tables for the briefing output — lists are more predictable to navigate
+- Never use bare URLs - always use descriptive link text followed by the URL in parentheses
+- If a list is empty, say explicitly "None" - do not omit the section
+- Do not use tables for the briefing output - lists are more predictable to navigate
 
 ## Tone
 

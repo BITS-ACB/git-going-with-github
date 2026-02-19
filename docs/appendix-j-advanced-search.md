@@ -24,9 +24,9 @@
 
 GitHub's search is accessible from nearly any page:
 
-- **Global search bar:** At the top of every GitHub page — keyboard shortcut `/` to focus it from anywhere (press `/`, then type)
+- **Global search bar:** At the top of every GitHub page - keyboard shortcut `/` to focus it from anywhere (press `/`, then type)
 - **Issues/PRs list:** Each tab has its own search bar pre-scoped to that repository
-- **Advanced Search UI:** `github.com/search/advanced` — a form with individual fields for each filter. Accessible but verbose; query syntax below is faster.
+- **Advanced Search UI:** `github.com/search/advanced` - a form with individual fields for each filter. Accessible but verbose; query syntax below is faster.
 
 **Keyboard to global search:**
 ```
@@ -278,9 +278,9 @@ repo:accesswatch/agent-forge in:discussions screen reader
 
 GitHub does not have a built-in saved-search feature, but you can:
 
-1. **Bookmark the URL** — every search result page has the query in the URL. Bookmark it in your browser for instant re-run.
-2. **Pin in notifications** — if you're watching a repo, set up notification filters
-3. **Agent Forge** — use `/my-issues` and `/my-prs` for your personal saved-search equivalents without leaving VS Code
+1. **Bookmark the URL** - every search result page has the query in the URL. Bookmark it in your browser for instant re-run.
+2. **Pin in notifications** - if you're watching a repo, set up notification filters
+3. **Agent Forge** - use `/my-issues` and `/my-prs` for your personal saved-search equivalents without leaving VS Code
 
 **Example bookmarkable URL:**
 ```

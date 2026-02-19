@@ -395,14 +395,14 @@ The automation features described above (PR validation, skills progression, stud
 
 **What facilitators need to create:**
 
-1. **PR validation workflow** — A GitHub Actions workflow (`.github/workflows/pr-validation.yml`) triggered on `pull_request` events that runs the checks described in the "PR Validation Bot" section above
-2. **Skills tracker** — A workflow or bot that monitors merged PRs and updates contributor progress
-3. **Reviewer assignment** — A workflow that auto-assigns peer reviewers when PRs are opened
+1. **PR validation workflow** - A GitHub Actions workflow (`.github/workflows/pr-validation.yml`) triggered on `pull_request` events that runs the checks described in the "PR Validation Bot" section above
+2. **Skills tracker** - A workflow or bot that monitors merged PRs and updates contributor progress
+3. **Reviewer assignment** - A workflow that auto-assigns peer reviewers when PRs are opened
 
 **Resources for building these:**
-- [GitHub Actions Workflows](../docs/appendix-q-github-actions-workflows.md) — Workshop appendix on Actions
-- [GitHub Actions Documentation](https://docs.github.com/en/actions) — Official reference
-- [Probot](https://probot.github.io/) — Framework for building GitHub bots
+- [GitHub Actions Workflows](../docs/appendix-q-github-actions-workflows.md) - Workshop appendix on Actions
+- [GitHub Actions Documentation](https://docs.github.com/en/actions) - Official reference
+- [Probot](https://probot.github.io/) - Framework for building GitHub bots
 
 ---
 

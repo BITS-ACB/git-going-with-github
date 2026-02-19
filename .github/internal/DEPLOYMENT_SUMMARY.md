@@ -8,7 +8,7 @@ Your complete GitHub Learning Curriculum is now ready for deployment. Here's wha
 
 ## New Files Created (10 Total)
 
-### Core Guides (Root Level) — All in HTML
+### Core Guides (Root Level) - All in HTML
 1. **QUICK_REFERENCE.md** → `QUICK_REFERENCE.html`
    - 1-page cheat sheet: keyboard shortcuts, screen reader commands, YAML templates
    - Size: ~31KB HTML
@@ -40,7 +40,7 @@ Your complete GitHub Learning Curriculum is now ready for deployment. Here's wha
    - Strategic goals, ROI, implementation roadmap
    - Size: ~34KB HTML
 
-### Advanced Chapters (Docs Folder) — Converted to HTML
+### Advanced Chapters (Docs Folder) - Converted to HTML
 8. **docs/15-accessible-code-review.md** → `docs/15-accessible-code-review.html`
    - Chapter 15 with updated prerequisites checklist
    - Size: ~54KB HTML
@@ -54,7 +54,7 @@ Your complete GitHub Learning Curriculum is now ready for deployment. Here's wha
     - Size: ~112KB HTML
 
 ### Also Created
-- `index.html` — Pandoc-generated README conversion (24KB)
+- `index.html` - Pandoc-generated README conversion (24KB)
 
 ---
 
@@ -82,7 +82,7 @@ Chapter 16: Prerequisites table for each agent + core prerequisites
 ## Complete Curriculum Statistics
 
 ### Content Volume
-- **Total Markdown chapters:** 18 core + 16 appendices (A–Q, no M) = 34 documents
+- **Total Markdown chapters:** 18 core + 16 appendices (A-Q, no M) = 34 documents
 - **Total word count:** ~110,000 words across all chapters, appendices, and guides
 - **Total HTML files:** 97 web-ready files (auto-built)
 - **Total size (HTML):** ~600KB+ text content
@@ -112,13 +112,13 @@ Chapter 16: Prerequisites table for each agent + core prerequisites
 ## What's Ready for Deployment
 
 ### Fully Complete & Ready
-1. **Core Curriculum** — 18 chapters, fully written and tested
-2. **6 AI Agents** — All defined, integrated, ready to use
-3. **10 Exercises** — Detailed step-by-step walkthroughs with checkpoints
-4. **Support Documentation** — 7 comprehensive guides covering all learner needs
-5. **Accessibility** — WCAG 2.1 AA design throughout
-6. **HTML Conversion** — All key documents available in web-friendly HTML
-7. **Executive Proposal** — Ready for organizational pitch
+1. **Core Curriculum** - 18 chapters, fully written and tested
+2. **6 AI Agents** - All defined, integrated, ready to use
+3. **10 Exercises** - Detailed step-by-step walkthroughs with checkpoints
+4. **Support Documentation** - 7 comprehensive guides covering all learner needs
+5. **Accessibility** - WCAG 2.1 AA design throughout
+6. **HTML Conversion** - All key documents available in web-friendly HTML
+7. **Executive Proposal** - Ready for organizational pitch
 
 ### File Organization
 ```
@@ -272,14 +272,14 @@ Upon launch, you should see:
 
 ## What Makes This Curriculum Special
 
-1. **Accessibility-First** — Not an afterthought
-2. **Skill-First, Agent-Second** — Learning before automation
-3. **Hands-Holding** — 300-900 line exercises with checkpoints
-4. **Multi-Format** — Markdown for editing, HTML for reading
-5. **Self-Service** — FAQ, Troubleshooting, Quick Reference guides
-6. **Facilitator-Ready** — Complete guides for running workshops
-7. **Enterprise-Ready** — Executive proposal included
-8. **Community-Friendly** — Contribution guidelines provided
+1. **Accessibility-First** - Not an afterthought
+2. **Skill-First, Agent-Second** - Learning before automation
+3. **Hands-Holding** - 300-900 line exercises with checkpoints
+4. **Multi-Format** - Markdown for editing, HTML for reading
+5. **Self-Service** - FAQ, Troubleshooting, Quick Reference guides
+6. **Facilitator-Ready** - Complete guides for running workshops
+7. **Enterprise-Ready** - Executive proposal included
+8. **Community-Friendly** - Contribution guidelines provided
 
 ---
 

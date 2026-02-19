@@ -62,17 +62,17 @@ SSH uses public-key cryptography. You generate a key pair on your computer (publ
 4. Give it a descriptive name in the **Note** field: "Workshop Laptop Token"
 5. Set expiration: **30 days** or **60 days** (recommended for temporary workshop use)
 6. Select scopes:
-   - **`repo`** — Full control of private repositories (includes public repo access)
-   - **`workflow`** — Update GitHub Actions workflows (if you'll work with Actions)
+   - **`repo`** - Full control of private repositories (includes public repo access)
+   - **`workflow`** - Update GitHub Actions workflows (if you'll work with Actions)
 7. Scroll down and activate **"Generate token"**
-8. **CRITICAL:** Copy the token immediately — you cannot see it again
+8. **CRITICAL:** Copy the token immediately - you cannot see it again
 
 **Screen reader note:** The token appears as a long string in a text field. Select all (`Ctrl+A`), copy (`Ctrl+C`), and paste it into a secure note or password manager.
 
 ### Step 2: Store It Securely
 
 **Options:**
-- **Password manager** (1Password, Bitwarden, LastPass) — best option
+- **Password manager** (1Password, Bitwarden, LastPass) - best option
 - **Encrypted note** in your operating system's secure notes
 - **Plain text file** in an encrypted folder (temporary only)
 
@@ -205,7 +205,7 @@ git remote set-url origin https://github.com/your-username/repo.git
 **Solution:**
 - Generate a new PAT
 - Clear your credential cache (Windows: Credential Manager; macOS: Keychain; Linux: `git credential-cache exit`)
-- Try pushing again — Git will ask for credentials
+- Try pushing again - Git will ask for credentials
 
 ### "Permission denied (publickey)"
 
@@ -229,18 +229,18 @@ ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 ## Security Best Practices
 
-1. **Never share your private key or PAT** — treat them like passwords
-2. **Use scoped PATs** — only grant the minimum permissions needed
-3. **Set expiration dates** on PATs — regenerate periodically
-4. **Use a passphrase** on SSH keys — adds another layer of security
+1. **Never share your private key or PAT** - treat them like passwords
+2. **Use scoped PATs** - only grant the minimum permissions needed
+3. **Set expiration dates** on PATs - regenerate periodically
+4. **Use a passphrase** on SSH keys - adds another layer of security
 5. **Revoke old tokens** when you're done with a project or device
-6. **Don't commit tokens or keys to Git** — use `.gitignore` for config files
+6. **Don't commit tokens or keys to Git** - use `.gitignore` for config files
 
 ---
 
-## Commit Signing — Verified Badges and Vigilant Mode
+## Commit Signing - Verified Badges and Vigilant Mode
 
-When you push commits to GitHub, each commit shows a small badge: **Verified** or **Unverified**. This badge tells anyone viewing the commit history whether the commit was cryptographically signed — proving it came from you and was not tampered with.
+When you push commits to GitHub, each commit shows a small badge: **Verified** or **Unverified**. This badge tells anyone viewing the commit history whether the commit was cryptographically signed - proving it came from you and was not tampered with.
 
 ### Why It Matters
 
@@ -248,7 +248,7 @@ Open source maintainers increasingly require signed commits before merging. Some
 
 ### Two Methods for Signing Commits
 
-#### SSH Signing (simpler — reuses your existing SSH key)
+#### SSH Signing (simpler - reuses your existing SSH key)
 
 If you already have an SSH key set up for authentication, you can use it for signing too.
 
@@ -301,7 +301,7 @@ git config --global commit.gpgsign true
 
 ### Vigilant Mode
 
-GitHub has an optional setting called **Vigilant Mode** (in Settings → SSH and GPG Keys → Vigilant mode). When enabled, GitHub marks **all** commits from your account as "Unverified" unless they are signed — even commits that were previously shown without a badge.
+GitHub has an optional setting called **Vigilant Mode** (in Settings → SSH and GPG Keys → Vigilant mode). When enabled, GitHub marks **all** commits from your account as "Unverified" unless they are signed - even commits that were previously shown without a badge.
 
 **Why some maintainers enable Vigilant Mode:**
 - It makes tampered or spoofed commits immediately obvious
@@ -309,7 +309,7 @@ GitHub has an optional setting called **Vigilant Mode** (in Settings → SSH and
 
 **What you see as a contributor:**
 - Every unsigned commit you push will show a yellow "Unverified" badge
-- This is a visual signal — commits can still be pushed, but maintainers may block the merge
+- This is a visual signal - commits can still be pushed, but maintainers may block the merge
 
 **To read verification badges with a screen reader:**
 - Navigate to the repository's commit history (Code tab → Commits link)
@@ -317,7 +317,7 @@ GitHub has an optional setting called **Vigilant Mode** (in Settings → SSH and
 - NVDA/JAWS: the badge is inside the commit row; use `↓` to read through each row and the badge text is read inline
 - VoiceOver: use `VO+Right` through the commit row; the badge is read as a button with the text "Verified" (clicking it shows the certificate)
 
-**Workshop recommendation:** SSH signing is simpler to set up than GPG and reuses your existing key. If you have 10 minutes, configure it before Day 2 — every commit you push to agent-forge will show as Verified.
+**Workshop recommendation:** SSH signing is simpler to set up than GPG and reuses your existing key. If you have 10 minutes, configure it before Day 2 - every commit you push to agent-forge will show as Verified.
 
 ---
 

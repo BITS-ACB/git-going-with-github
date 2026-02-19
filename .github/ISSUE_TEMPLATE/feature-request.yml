@@ -45,7 +45,7 @@ body:
     id: contribution
     attributes:
       label: Are you able to help implement this?
-      description: No commitment required — just helps with planning.
+      description: No commitment required - just helps with planning.
       options:
         - label: Yes, I can open a pull request with the change
         - label: I can provide research, examples, or feedback but cannot write the change

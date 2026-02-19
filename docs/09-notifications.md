@@ -1,7 +1,7 @@
 # Notifications
 ## Managing Your GitHub Notification Inbox
 
-> GitHub notifications are how GitHub tells you when something needs your attention. This guide teaches you to keep the inbox useful — not overwhelming — using only your keyboard and screen reader.
+> GitHub notifications are how GitHub tells you when something needs your attention. This guide teaches you to keep the inbox useful - not overwhelming - using only your keyboard and screen reader.
 
 ---
 
@@ -36,12 +36,12 @@ For each repository, you choose how many notifications to receive:
 <details>
 <summary>Visual / mouse users</summary>
 
-At the top of any repository page, find the **Watch** button (near Star and Fork). Click it to open a dropdown with levels: **Participating and @mentions**, **All Activity**, **Custom**, and **Ignore**. Click your preferred level — it takes effect immediately.
+At the top of any repository page, find the **Watch** button (near Star and Fork). Click it to open a dropdown with levels: **Participating and @mentions**, **All Activity**, **Custom**, and **Ignore**. Click your preferred level - it takes effect immediately.
 
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 1. Find the **Watch** button in the repo header (`B` to navigate buttons → find "Watch [N]" or "Unwatch" button)
 2. Press `Enter` to open the dropdown
@@ -52,7 +52,7 @@ At the top of any repository page, find the **Watch** button (near Star and Fork
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 1. Quick Nav `B` to find the **Watch** button in the repo header (listen for "Watch" or "Unwatch")
 2. `VO+Space` to open the dropdown
@@ -62,7 +62,7 @@ At the top of any repository page, find the **Watch** button (near Star and Fork
 
 </details>
 
-**Recommended setting for most repos:** “Participating and @mentions only” — you stay in the loop on what involves you without noise.
+**Recommended setting for most repos:** “Participating and @mentions only” - you stay in the loop on what involves you without noise.
 
 ---
 
@@ -94,7 +94,7 @@ The inbox shows notifications grouped by date (Today, Yesterday, This week, Olde
 
 1. `D` → main content landmark
 2. `H` to navigate group headings (Today / Yesterday / This week / Older)
-3. `Tab` through individual notifications — each row announces: repo name, issue/PR title, event type, time
+3. `Tab` through individual notifications - each row announces: repo name, issue/PR title, event type, time
 4. `Enter` to open the notification (goes to the issue/PR page)
 
 </details>
@@ -110,13 +110,13 @@ The inbox shows notifications grouped by date (Today, Yesterday, This week, Olde
 
 ### What is announced per notification
 
-> "microsoft/vscode — Add keyboard shortcut for accessible view — @username mentioned you — 2 hours ago"
+> "microsoft/vscode - Add keyboard shortcut for accessible view - @username mentioned you - 2 hours ago"
 
 Components: **repo/org** | **thread title** | **event type** | **timestamp**
 
 ---
 
-## Inbox Actions — Keyboard Shortcuts
+## Inbox Actions - Keyboard Shortcuts
 
 These shortcuts work when a notification is focused in the inbox:
 
@@ -160,7 +160,7 @@ Click the filter/search box at the top of the notification list and type a repos
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 1. Press `F` or `E` to reach the filter input
 2. Focus Mode → type repo name or org name
@@ -170,7 +170,7 @@ Click the filter/search box at the top of the notification list and type a repos
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 1. Quick Nav `F` to reach the filter input
 2. `VO+Shift+Down` to interact → type repo or org name
@@ -199,13 +199,13 @@ If a thread generates too many notifications:
 
 1. Open the issue or PR page
 2. In the right sidebar, scroll to the **Notifications** section
-3. Click **Unsubscribe** — you will stop receiving notifications from this thread
+3. Click **Unsubscribe** - you will stop receiving notifications from this thread
 4. Alternatively, from the inbox: hover over the notification row and click the **mute** icon (or the … menu)
 
 </details>
 
 <details>
-<summary>Screen reader users (NVDA / JAWS — Windows)</summary>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 1. Open the notification
 2. On the issue/PR page, navigate the sidebar to the **Notifications** section (`H` or `D`)
@@ -215,7 +215,7 @@ If a thread generates too many notifications:
 </details>
 
 <details>
-<summary>Screen reader users (VoiceOver — macOS)</summary>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
 
 1. Open the notification
 2. On the issue/PR page, `VO+U` → Landmarks or Quick Nav `H` to find the **Notifications** section in the sidebar
@@ -228,12 +228,12 @@ If a thread generates too many notifications:
 
 If you were @mentioned in an unfamiliar thread:
 1. Read the thread for context before responding
-2. If it seems like a mistake, a simple "I don't think this mention was meant for me — feel free to remove it!" is enough
+2. If it seems like a mistake, a simple "I don't think this mention was meant for me - feel free to remove it!" is enough
 3. Unsubscribe after reading if you don't need to stay in the loop
 
 ---
 
-## Notification Settings — Per Your Account
+## Notification Settings - Per Your Account
 
 Global notification preferences are at `https://github.com/settings/notifications`.
 
@@ -242,7 +242,7 @@ Key settings to review:
 | Setting | Recommendation |
 |---------|---------------|
 | **Email delivery** | Choose Participating and @mentions unless you prefer email for everything |
-| **GitHub Mobile** | Enable only if you use GitHub Mobile — mobile notifications can duplicate desktop ones |
+| **GitHub Mobile** | Enable only if you use GitHub Mobile - mobile notifications can duplicate desktop ones |
 | **Watching** | "Participating and @mentions" unless you are an active maintainer |
 | **Organization alerts** | Enable for orgs where you have responsibilities |
 
@@ -255,7 +255,7 @@ Tab → move between options within a form group
 
 ---
 
-## Starring vs. Watching — What Is the Difference?
+## Starring vs. Watching - What Is the Difference?
 
 New contributors often confuse these two. They appear next to each other on every repository page and do completely different things.
 
@@ -265,7 +265,7 @@ New contributors often confuse these two. They appear next to each other on ever
 |---|---|
 | **What it does** | Bookmarks the repository to your Stars list at `github.com/stars` |
 | **Notifications** | **None.** Starring never sends you any notifications |
-| **Visibility** | Public — anyone can see what you've starred on your profile |
+| **Visibility** | Public - anyone can see what you've starred on your profile |
 | **Use case** | "I want to save this for later" or "I want to show appreciation" |
 | **Keyboard path** | On any repo page: `B` to navigate buttons → find "Star" button → Enter |
 
@@ -277,13 +277,13 @@ Starring is GitHub's equivalent of a bookmark + public endorsement. The star cou
 |---|---|
 | **What it does** | Subscribes you to notifications from that repository |
 | **Notifications** | Sends notifications based on your chosen level (see below) |
-| **Visibility** | Private — other users cannot see what you're watching |
+| **Visibility** | Private - other users cannot see what you're watching |
 | **Use case** | "I need to stay informed about activity in this repo" |
 | **Keyboard path** | `B` → find "Watch" button → Enter → ↑/↓ to pick a level → Enter |
 
 ### Common Mistake: Accidental Watching
 
-When you comment on an issue or PR in a repository, GitHub **automatically subscribes you** to that thread — but not the whole repository. However, if you once click "Watch" on a busy repository (say, a popular open source project), you will receive a notification for every issue opened and every comment posted — potentially hundreds per day.
+When you comment on an issue or PR in a repository, GitHub **automatically subscribes you** to that thread - but not the whole repository. However, if you once click "Watch" on a busy repository (say, a popular open source project), you will receive a notification for every issue opened and every comment posted - potentially hundreds per day.
 
 **How to silence a repository you accidentally over-subscribed to:**
 ```
@@ -299,10 +299,10 @@ This immediately reduces notifications from that repository to only threads you 
 
 | Repository | Recommended Watch Level |
 |---|---|
-| `accesswatch/agent-forge` | **Participating and @mentions** — you contribute there, you only need to hear back when someone replies to you |
-| Your own fork | **All Activity** — this is your fork; know everything |
-| Very busy popular repos | **Ignore** or **Participating** — do not watch for All Activity |
-| Repos you're evaluating | **Star only** — save without subscribing |
+| `accesswatch/agent-forge` | **Participating and @mentions** - you contribute there, you only need to hear back when someone replies to you |
+| Your own fork | **All Activity** - this is your fork; know everything |
+| Very busy popular repos | **Ignore** or **Participating** - do not watch for All Activity |
+| Repos you're evaluating | **Star only** - save without subscribing |
 
 ---
 
@@ -310,7 +310,7 @@ This immediately reduces notifications from that repository to only threads you 
 
 ### NVDA
 
-- The notification list is complex — use `Tab` to navigate individual rows rather than Browse Mode arrow keys
+- The notification list is complex - use `Tab` to navigate individual rows rather than Browse Mode arrow keys
 - After marking notifications done (press `E`), the next notification automatically receives focus
 - Use `NVDA+F7` → Links to get a filtered list of notification titles to scan quickly
 
@@ -318,7 +318,7 @@ This immediately reduces notifications from that repository to only threads you 
 
 - Like NVDA, use `Tab` for row navigation in the inbox
 - `Insert+F6` (Headings list) to jump between date group headings (Today, This Week, etc.)
-- The inbox updates in real time — JAWS will announce new notifications as they arrive
+- The inbox updates in real time - JAWS will announce new notifications as they arrive
 
 ### VoiceOver
 
@@ -328,7 +328,7 @@ This immediately reduces notifications from that repository to only threads you 
 
 ---
 
-## The GitHub Mobile App — A Reference Note
+## The GitHub Mobile App - A Reference Note
 
 GitHub has an iOS and Android app that supports push notifications. While the app itself is not covered as a primary tool in this workshop, it is worth knowing:
 
@@ -344,9 +344,9 @@ GitHub has an iOS and Android app that supports push notifications. While the ap
 
 Go to [github.com/notifications](https://github.com/notifications) and practice:
 
-1. **Scan your inbox** — Press `H` and `Tab` to navigate through notifications. Each one shows the repo name, type (issue/PR), and title.
-2. **Mark one as done** — Find a notification you've already read. Press `E` to mark it as done. It disappears from the list.
-3. **Configure watching** — Go to the Learning Room repository. Press `D` to landmarks, find the repo nav area, then look for the "Watch" or "Unwatch" button (`B` to scan buttons). Choose your preferred watch level.
+1. **Scan your inbox** - Press `H` and `Tab` to navigate through notifications. Each one shows the repo name, type (issue/PR), and title.
+2. **Mark one as done** - Find a notification you've already read. Press `E` to mark it as done. It disappears from the list.
+3. **Configure watching** - Go to the Learning Room repository. Press `D` to landmarks, find the repo nav area, then look for the "Watch" or "Unwatch" button (`B` to scan buttons). Choose your preferred watch level.
 
 **You're done.** You now control what GitHub tells you about and what it doesn't.
 
@@ -354,14 +354,14 @@ Go to [github.com/notifications](https://github.com/notifications) and practice:
 
 ---
 
-> ### Day 2 Amplifier — Agent Forge: `@daily-briefing`
+> ### Day 2 Amplifier - Agent Forge: `@daily-briefing`
 >
-> **Manage your notification inbox manually before using any agent.** The signal-versus-noise judgment you develop — what to act on, what to watch, what to mute — is the same judgment the agent applies when prioritizing its output. Without that judgment, you cannot evaluate whether the agent's prioritization is correct or whether it surfaced the things that actually matter to you.
+> **Manage your notification inbox manually before using any agent.** The signal-versus-noise judgment you develop - what to act on, what to watch, what to mute - is the same judgment the agent applies when prioritizing its output. Without that judgment, you cannot evaluate whether the agent's prioritization is correct or whether it surfaced the things that actually matter to you.
 >
 > Once you have mastered manual notification management:
-> - **In VS Code** — `@daily-briefing morning briefing` delivers the same information as your notification inbox, organized by priority and actionability, with the ability to reply, close, and merge from inside Copilot Chat
-> - **In your repo** — Fork `agent-forge` and every collaborator on your project can run `@daily-briefing` against your shared repository; the whole team stays aligned from a single command with no inbox required
-> - **In the cloud** — GitHub Agentic Workflows can run on a schedule and post a team digest to a designated issue each morning, surfacing what needs attention before anyone opens their notifications
+> - **In VS Code** - `@daily-briefing morning briefing` delivers the same information as your notification inbox, organized by priority and actionability, with the ability to reply, close, and merge from inside Copilot Chat
+> - **In your repo** - Fork `agent-forge` and every collaborator on your project can run `@daily-briefing` against your shared repository; the whole team stays aligned from a single command with no inbox required
+> - **In the cloud** - GitHub Agentic Workflows can run on a schedule and post a team digest to a designated issue each morning, surfacing what needs attention before anyone opens their notifications
 >
 > *Your notification discipline today becomes the standard the agent enforces at scale tomorrow.*
 

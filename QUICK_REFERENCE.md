@@ -12,7 +12,7 @@
 | Jump to navigation | `D` |
 | Jump to search/main content | `D` (cycle through landmarks) |
 | Read next heading | `H` |
-| Navigate by heading level | `1`–`6` (headings), `T` (table), `B` (button), `L` (list) |
+| Navigate by heading level | `1`-`6` (headings), `T` (table), `B` (button), `L` (list) |
 | Open Focus Mode | `NVDA+Space` (then navigate) |
 | Announce current line | `NVDA+Up` |
 | Read all from cursor | `NVDA+Down` |
@@ -26,7 +26,7 @@
 |------|---------|
 | Virtual cursor browse | `Spacebar` |
 | Navigate headings | `H` or `Numpad 5` |
-| Navigate by level | `1`–`6` |
+| Navigate by level | `1`-`6` |
 | Open navigation bar | `Insert+F5` |
 | List links | `Insert+Ctrl+L` |
 | List headings | `Insert+F6` |

@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-This repository contains **educational curriculum and documentation only** — no production software, application servers, or APIs. There are no versioned software releases to patch.
+This repository contains **educational curriculum and documentation only** - no production software, application servers, or APIs. There are no versioned software releases to patch.
 
 | Content | Supported |
 |---------|-----------|
@@ -15,7 +15,7 @@ This repository contains **educational curriculum and documentation only** — n
 
 **Please do not report security vulnerabilities as public GitHub Issues.** Public issues are visible to everyone, including people who might exploit the vulnerability before it is fixed.
 
-### Preferred Method — Private Vulnerability Reporting
+### Preferred Method - Private Vulnerability Reporting
 
 This repository has **Private Vulnerability Reporting** enabled. To submit a report:
 
@@ -26,17 +26,17 @@ This repository has **Private Vulnerability Reporting** enabled. To submit a rep
    - A detailed description of the vulnerability and its potential impact
    - Steps to reproduce (if applicable)
    - Your suggested fix (optional but appreciated)
-4. Submit — only the maintainers will see your report
+4. Submit - only the maintainers will see your report
 
 ### What to Report
 
 Even though this is an educational repository, the following are genuine security concerns:
 
-- **Malicious content injected into curriculum files** — documentation that contains links to phishing sites, malware downloads, or misleading instructions
-- **GitHub Actions workflow vulnerabilities** — script injection risks in `.github/workflows/`, insecure use of `GITHUB_TOKEN`, or pull-request-triggered workflows that execute untrusted code
-- **Hardcoded credentials** — any real tokens, passwords, or API keys accidentally committed to any file
-- **Supply chain risks** — compromised npm dependencies used by the build system
-- **Prompt injection in agent files** — AI agent prompts (`.prompt.md`, `.agent.md`) that could manipulate an LLM to produce harmful output
+- **Malicious content injected into curriculum files** - documentation that contains links to phishing sites, malware downloads, or misleading instructions
+- **GitHub Actions workflow vulnerabilities** - script injection risks in `.github/workflows/`, insecure use of `GITHUB_TOKEN`, or pull-request-triggered workflows that execute untrusted code
+- **Hardcoded credentials** - any real tokens, passwords, or API keys accidentally committed to any file
+- **Supply chain risks** - compromised npm dependencies used by the build system
+- **Prompt injection in agent files** - AI agent prompts (`.prompt.md`, `.agent.md`) that could manipulate an LLM to produce harmful output
 
 ### What Is Out of Scope
 
@@ -57,9 +57,9 @@ Even though this is an educational repository, the following are genuine securit
 
 This curriculum is designed to teach GitHub to workshop participants. The primary security risks are:
 
-1. **Documentation accuracy** — incorrect instructions that could cause participants to configure their systems insecurely
-2. **Workflow integrity** — GitHub Actions that run on pull requests from forks require careful scoping to prevent privilege escalation
-3. **Dependency security** — the build system uses Node.js packages that must be kept up to date
+1. **Documentation accuracy** - incorrect instructions that could cause participants to configure their systems insecurely
+2. **Workflow integrity** - GitHub Actions that run on pull requests from forks require careful scoping to prevent privilege escalation
+3. **Dependency security** - the build system uses Node.js packages that must be kept up to date
 
 ## Credit
 

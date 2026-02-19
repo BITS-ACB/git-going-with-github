@@ -1,5 +1,5 @@
 # VS Code Setup & Accessibility Basics
-## Your Accessible Development Environment — Part 1: Foundation
+## Your Accessible Development Environment - Part 1: Foundation
 
 > **Day 2, Block 1 Material**
 >
@@ -12,7 +12,7 @@
 ## Table of Contents
 
 1. [Why VS Code for Open Source Contribution](#1-why-vs-code-for-open-source-contribution)
-2. [The Bridge: github.dev — VS Code in Your Browser](#2-the-bridge-githubdev--vs-code-in-your-browser)
+2. [The Bridge: github.dev - VS Code in Your Browser](#2-the-bridge-githubdev--vs-code-in-your-browser)
 3. [Screen Reader Mode in VS Code](#3-screen-reader-mode-in-vs-code)
 4. [Essential Keyboard Navigation and Find/Filter](#4-essential-keyboard-navigation-and-findfilter)
 5. [Accessible Help, Accessible View, and Accessible Diff](#5-accessible-help-accessible-view-and-accessible-diff)
@@ -34,11 +34,11 @@ GitHub's browser interface is excellent for reviewing, discussing, and triaging.
 | Run Agent Forge agents | Not available | Copilot Chat with agent files |
 | See errors in your contribution | After push | Real-time as you type |
 
-For Markdown contributions (which is most of what `agent-forge` needs), VS Code gives you Copilot assistance, live preview, and the same Git workflow — with less tab switching and with agents available on every file you open.
+For Markdown contributions (which is most of what `agent-forge` needs), VS Code gives you Copilot assistance, live preview, and the same Git workflow - with less tab switching and with agents available on every file you open.
 
 ---
 
-## 2. The Bridge: github.dev — VS Code in Your Browser
+## 2. The Bridge: github.dev - VS Code in Your Browser
 
 **Before you install anything: try VS Code right now in your browser.**
 
@@ -50,7 +50,7 @@ GitHub provides a web-based version of VS Code called **github.dev**. It runs en
 
 From any GitHub repository page:
 
-1. Press `.` (period key — just the period, no modifier keys)
+1. Press `.` (period key - just the period, no modifier keys)
 2. The page transforms into VS Code
 3. You're now editing in github.dev
 4. The URL changes to `github.dev/owner/repo`
@@ -62,7 +62,7 @@ From any GitHub repository page:
 - Pull request pages
 - Any branch or commit view
 
-**Screen reader note:** The period key shortcut is a single keypress — no modifier keys. It's GitHub's universal "open this in VS Code" command.
+**Screen reader note:** The period key shortcut is a single keypress - no modifier keys. It's GitHub's universal "open this in VS Code" command.
 
 **Alternative: Press `>` (Shift+Period)** to open github.dev in a **new tab**. This preserves your GitHub page and is the preferred method when you want to keep both interfaces open.
 
@@ -100,27 +100,27 @@ Everything in the list below works **exactly like desktop VS Code**:
 
 **Full text editor with syntax highlighting**  
 **All VS Code keyboard shortcuts** (see [Keyboard Reference](13-github-copilot.md#8-keyboard-shortcuts-reference))  
-**Screen reader mode** (`Shift+Alt+F1` to activate — Mac: `Shift+Option+F1`)  
-**File Explorer** (`Ctrl+Shift+E` — Mac: `Cmd+Shift+E`) — browse the entire repository  
-**Search across files** (`Ctrl+Shift+F` — Mac: `Cmd+Shift+F`)  
-**Source Control (Git)** (`Ctrl+Shift+G` — Mac: `Cmd+Shift+G`) — stage, commit, push changes  
-**Markdown preview** (`Ctrl+Shift+V` — Mac: `Cmd+Shift+V`)  
-**Command Palette** (`Ctrl+Shift+P` — Mac: `Cmd+Shift+P`) — access every VS Code command  
-**Go to File** (`Ctrl+P` — Mac: `Cmd+P`) — instant file picker  
-**Go to Symbol** (`Ctrl+Shift+O` — Mac: `Cmd+Shift+O`) — navigate by headings in Markdown  
+**Screen reader mode** (`Shift+Alt+F1` to activate - Mac: `Shift+Option+F1`)  
+**File Explorer** (`Ctrl+Shift+E` - Mac: `Cmd+Shift+E`) - browse the entire repository  
+**Search across files** (`Ctrl+Shift+F` - Mac: `Cmd+Shift+F`)  
+**Source Control (Git)** (`Ctrl+Shift+G` - Mac: `Cmd+Shift+G`) - stage, commit, push changes  
+**Markdown preview** (`Ctrl+Shift+V` - Mac: `Cmd+Shift+V`)  
+**Command Palette** (`Ctrl+Shift+P` - Mac: `Cmd+Shift+P`) - access every VS Code command  
+**Go to File** (`Ctrl+P` - Mac: `Cmd+P`) - instant file picker  
+**Go to Symbol** (`Ctrl+Shift+O` - Mac: `Cmd+Shift+O`) - navigate by headings in Markdown  
 **Multiple editor tabs and split view**  
-**Settings sync** — if you sign in, your VS Code settings apply here too
+**Settings sync** - if you sign in, your VS Code settings apply here too
 
 ---
 
 ### What github.dev Does NOT Have
 
-**No terminal** — can't run shell commands, npm, git CLI  
-**No GitHub Copilot** — Copilot requires the desktop app or a Codespace  
-**No Agent Forge agents** — agents rely on extensions that need desktop VS Code  
-**No extension installation** — extensions are disabled in github.dev  
-**No debugger** — debugging requires a local environment  
-**No live server or preview** — except Markdown preview, which does work
+**No terminal** - can't run shell commands, npm, git CLI  
+**No GitHub Copilot** - Copilot requires the desktop app or a Codespace  
+**No Agent Forge agents** - agents rely on extensions that need desktop VS Code  
+**No extension installation** - extensions are disabled in github.dev  
+**No debugger** - debugging requires a local environment  
+**No live server or preview** - except Markdown preview, which does work
 
 These limitations are why **desktop VS Code exists**. github.dev is for quick edits and reading code. Desktop is for Copilot, agents, terminal workflows, and full development.
 
@@ -167,7 +167,7 @@ These limitations are why **desktop VS Code exists**. github.dev is for quick ed
 - Use `Ctrl+Shift+E` to open the Explorer (file tree)
 - Use `Up/Down Arrow` to navigate files
 - Press `Enter` on a file to open it in the editor
-- The editor behaves like a standard text area — your screen reader's reading commands work normally
+- The editor behaves like a standard text area - your screen reader's reading commands work normally
 
 **NVDA/JAWS users:**
 - You remain in Browse/Virtual mode for the overall interface
@@ -195,13 +195,13 @@ Before reading the rest of this guide:
 8. Press `Ctrl+Shift+O` (Mac: `Cmd+Shift+O`) to see the outline (all headings)
 9. Close the tab when done
 
-**You just used VS Code.** The desktop version in the rest of this guide is the same experience — with Copilot and agents added.
+**You just used VS Code.** The desktop version in the rest of this guide is the same experience - with Copilot and agents added.
 
 ---
 
 ## 3. Screen Reader Mode in VS Code
 
-> **Who needs this section?** If you use NVDA, JAWS, VoiceOver, or another screen reader, read this section before continuing. If you are not using a screen reader, you can skip to [Section 4](#4-essential-keyboard-navigation-and-findfilter) — VS Code works fully without enabling this mode.
+> **Who needs this section?** If you use NVDA, JAWS, VoiceOver, or another screen reader, read this section before continuing. If you are not using a screen reader, you can skip to [Section 4](#4-essential-keyboard-navigation-and-findfilter) - VS Code works fully without enabling this mode.
 
 VS Code has built-in accessibility support designed for screen reader users. It changes how focus moves, how announcements work, and how navigation behaves.
 
@@ -214,7 +214,7 @@ VS Code has built-in accessibility support designed for screen reader users. It 
 | Auto-detection | VS Code detects NVDA and JAWS automatically on Windows; VoiceOver on macOS |
 
 **Verify it is active:**
-Open Settings (`Ctrl+,` — Mac: `Cmd+,`) → search for `accessibility support` → confirm it shows `on` (not `auto`).
+Open Settings (`Ctrl+,` - Mac: `Cmd+,`) → search for `accessibility support` → confirm it shows `on` (not `auto`).
 
 ### What Changes in Screen Reader Mode
 
@@ -245,7 +245,7 @@ VS Code uses a web-based renderer. Configure NVDA for best results:
 
 1. Open VS Code → `Shift+Alt+F1` (Mac: `Shift+Option+F1`) to confirm screen reader mode
 2. In VoiceOver Utility: Verbosity → set "Punctuation" to "All" for reading code
-3. Use Quick Nav OFF (`Left+Right Arrow`) when inside the editor — standard cursor navigation is more predictable
+3. Use Quick Nav OFF (`Left+Right Arrow`) when inside the editor - standard cursor navigation is more predictable
 4. Use `VO+Shift+Down` to interact with the editor, `VO+Shift+Up` to stop interacting
 
 ---
@@ -307,23 +307,23 @@ When the Find widget opens, three toggle buttons refine what matches:
 | Use Regular Expression | `Alt+R` | Enables regex patterns in the search box |
 
 **Screen reader interactions inside the Find widget:**
-- Toggles are announced as checkboxes — press `Space` to toggle each one
+- Toggles are announced as checkboxes - press `Space` to toggle each one
 - Match count is announced as you type (example: `3 of 12 matches`)
 - `F3` / `Shift+F3` move through matches while the widget stays open
 - `Escape` closes the widget and returns focus to your last cursor position
 
 **Replace (`Ctrl+H`):** Opens the Find widget with a second input for the replacement text.
-- `Ctrl+Shift+1` — replace the current match
-- `Ctrl+Alt+Enter` — replace all matches at once
+- `Ctrl+Shift+1` - replace the current match
+- `Ctrl+Alt+Enter` - replace all matches at once
 
 #### Global Search Across the Workspace (`Ctrl+Shift+F`)
 
-The global Search panel has a rich filtering system — all keyboard-accessible:
+The global Search panel has a rich filtering system - all keyboard-accessible:
 
 | Action | How |
 |--------|-----|
 | Open global search | `Ctrl+Shift+F` |
-| Search input | Focus lands here automatically — type your query |
+| Search input | Focus lands here automatically - type your query |
 | Toggle case / word / regex | `Alt+C`, `Alt+W`, `Alt+R` (same as Find) |
 | Include files filter | `Tab` to "files to include" field → type glob patterns |
 | Exclude files filter | `Tab` to "files to exclude" field → type glob patterns |
@@ -346,7 +346,7 @@ The Settings editor has built-in search that filters by keyword as you type. Add
 |--------|---------------|
 | `@modified` | Only settings you have changed from their defaults |
 | `@tag:accessibility` | All accessibility-related settings |
-| `@tag:advanced` | Advanced settings — useful for finding less common configuration options |
+| `@tag:advanced` | Advanced settings - useful for finding less common configuration options |
 | `@tag:experimental` | Experimental features not enabled by default |
 
 Type any of these directly in the Settings search box (`Ctrl+,`).
@@ -361,10 +361,10 @@ Enable with: Settings (`Ctrl+,`) → search `terminal.integrated.suggest.enabled
 
 #### Type-to-Filter in Tree Views
 
-In the **Explorer** file tree and the **Source Control** changes list, you can type characters to narrow the visible items — no scrolling required:
+In the **Explorer** file tree and the **Source Control** changes list, you can type characters to narrow the visible items - no scrolling required:
 
 1. Focus the Explorer (`Ctrl+Shift+E`)
-2. Start typing a filename — a filter input appears at the bottom of the tree
+2. Start typing a filename - a filter input appears at the bottom of the tree
 3. The tree instantly narrows to matching files
 4. Press `Escape` to clear the filter and restore full view
 
@@ -401,9 +401,9 @@ VS Code has a family of purpose-built accessibility features that give screen re
 
 ---
 
-### 5.1 Accessible Help — Context-Aware Keyboard Guide
+### 5.1 Accessible Help - Context-Aware Keyboard Guide
 
-Every interactive area of VS Code — the editor, the terminal, the diff view, the Copilot Chat panel — has its own keyboard commands. **Accessible Help** surfaces those commands in a plain-text, fully readable dialog, tailored to exactly where your focus is right now.
+Every interactive area of VS Code - the editor, the terminal, the diff view, the Copilot Chat panel - has its own keyboard commands. **Accessible Help** surfaces those commands in a plain-text, fully readable dialog, tailored to exactly where your focus is right now.
 
 **How to open Accessible Help:**
 
@@ -437,7 +437,7 @@ Use Accessible Help as your first action whenever you land somewhere new in VS C
 
 ---
 
-### 5.2 Accessible View — Reading Dynamic and Streamed Content
+### 5.2 Accessible View - Reading Dynamic and Streamed Content
 
 **Accessible View** (`Alt+F2`) gives screen reader users a clean, static, fully readable version of content that is otherwise presented dynamically, in tooltips, or in streaming form.
 
@@ -452,9 +452,9 @@ Use Accessible Help as your first action whenever you land somewhere new in VS C
 
 | Content Type | Without Accessible View | With Accessible View (`Alt+F2`) |
 |-------------|-------------------------|---------------------------------|
-| Copilot Chat response | Fragmented — announced as tokens stream in | Full complete response, read sequentially with Arrow keys |
-| Inline Copilot suggestion | Ghost text — may not be announced | Announced as "Suggestion: [full text]" |
-| Hover documentation | Popup tooltip — announced only briefly | Full content, fully navigable with Arrow keys |
+| Copilot Chat response | Fragmented - announced as tokens stream in | Full complete response, read sequentially with Arrow keys |
+| Inline Copilot suggestion | Ghost text - may not be announced | Announced as "Suggestion: [full text]" |
+| Hover documentation | Popup tooltip - announced only briefly | Full content, fully navigable with Arrow keys |
 | Error / warning details | On-focus message only | Full error text, error code, and suggested fix |
 | Terminal output | May be truncated by live region limits | Full output in review mode with scroll |
 | Notification banners | Announced once and dismissed | Persistent readable content until you close it |
@@ -462,7 +462,7 @@ Use Accessible Help as your first action whenever you land somewhere new in VS C
 **Recommended workflow for Copilot Chat:**
 1. Type your prompt in the Chat input
 2. Wait for the response to finish (NVDA: live region announcements stop; JAWS: typing indicator disappears; VoiceOver: busy state clears)
-3. Press `Alt+F2` — Accessible View opens with the complete response
+3. Press `Alt+F2` - Accessible View opens with the complete response
 4. Navigate with `Up/Down Arrow` through the response
 5. Press `Escape` to return to the chat input
 
@@ -474,11 +474,11 @@ Use Accessible Help as your first action whenever you land somewhere new in VS C
 
 ---
 
-### 5.3 Accessible Diff Viewer — Reading Changes Without Visual Scanning
+### 5.3 Accessible Diff Viewer - Reading Changes Without Visual Scanning
 
-When you open a file diff — in Source Control, in the GitHub PR extension, or during a merge conflict — VS Code normally shows it as a side-by-side or inline visual view. For screen reader users, tracking which lines changed and how can be difficult without a structured reading mode.
+When you open a file diff - in Source Control, in the GitHub PR extension, or during a merge conflict - VS Code normally shows it as a side-by-side or inline visual view. For screen reader users, tracking which lines changed and how can be difficult without a structured reading mode.
 
-**The Accessible Diff Viewer** presents the same diff as a plain, navigable list of changed lines — organized by hunk, labeled by change type (added, removed, unchanged), with the line number announced for each line.
+**The Accessible Diff Viewer** presents the same diff as a plain, navigable list of changed lines - organized by hunk, labeled by change type (added, removed, unchanged), with the line number announced for each line.
 
 **How to open the Accessible Diff Viewer:**
 
@@ -496,7 +496,7 @@ For each hunk (a block of related changes), the viewer announces:
 - Each line, prefixed with its change type:
 
 ```
-Hunk 1 of 3 — lines 12 to 18
+Hunk 1 of 3 - lines 12 to 18
   Unchanged: ## Screen Reader Cheat Sheet
 - Line removed: > Quick reference for NVDA users.
 + Line added: > Quick reference for NVDA, JAWS, and VoiceOver users.
@@ -509,7 +509,7 @@ This gives you the complete picture of what changed, in reading order, without v
 **Practical uses during this workshop:**
 
 - **Before approving a PR:** Open the diff → `F7` to enter the first hunk → navigate each change → `F7` for next hunk → repeat until all hunks reviewed
-- **During a merge conflict:** The conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) appear as lines in the viewer — you can read both conflicting versions before deciding which to keep
+- **During a merge conflict:** The conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) appear as lines in the viewer - you can read both conflicting versions before deciding which to keep
 - **After Copilot generates an edit:** Open the diff (`Ctrl+Shift+G` → navigate to the changed file → `Enter`) then review exactly what Copilot changed vs. what was there before
 
 **Audio cues for diffs:**
@@ -520,7 +520,7 @@ With `accessibility.signals.diffLineInserted` and `accessibility.signals.diffLin
 
 ## Accessibility Signals and Audio Cues
 
-VS Code can communicate editor state through accessibility signals — sounds that announce when you move past line breaks, reach the end of a file, land on an error, or complete a task. This is particularly useful for screen reader users who benefit from non-verbal state confirmation.
+VS Code can communicate editor state through accessibility signals - sounds that announce when you move past line breaks, reach the end of a file, land on an error, or complete a task. This is particularly useful for screen reader users who benefit from non-verbal state confirmation.
 
 ### Enabling Accessibility Signals
 

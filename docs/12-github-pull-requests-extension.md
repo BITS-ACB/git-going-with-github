@@ -26,7 +26,7 @@
 
 ## 1. Installing the GitHub Pull Requests Extension
 
-The GitHub Pull Requests and Issues extension integrates GitHub's PR workflow directly into VS Code — no browser tab switching required.
+The GitHub Pull Requests and Issues extension integrates GitHub's PR workflow directly into VS Code - no browser tab switching required.
 
 ### Installation Steps
 
@@ -58,7 +58,7 @@ After installation, VS Code prompts you to sign in:
 3. Select "Sign in"
 4. VS Code opens your browser for GitHub OAuth authentication
 5. Authorize VS Code in the browser
-6. Return to VS Code — you're now signed in
+6. Return to VS Code - you're now signed in
 
 **Verify sign-in:**
 - Open Command Palette: `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`)
@@ -130,10 +130,10 @@ GitHub Pull Requests
 ### Filtering PR Lists
 
 **By status:**
-- "All Open" — every open PR
-- "Assigned to Me" — PRs where you're an assignee
-- "Waiting for my Review" — PRs where you're requested as reviewer
-- "Draft" — PRs marked as work-in-progress
+- "All Open" - every open PR
+- "Assigned to Me" - PRs where you're an assignee
+- "Waiting for my Review" - PRs where you're requested as reviewer
+- "Draft" - PRs marked as work-in-progress
 
 **By repository:**
 The tree organizes PRs by repository. Expand a repo to see its PRs.
@@ -262,7 +262,7 @@ When you open a file from "Files Changed":
 **Example Accessible Diff output:**
 
 ```
-Hunk 1 of 3 — lines 12 to 18
+Hunk 1 of 3 - lines 12 to 18
   Unchanged: ## VS Code Setup
 - Removed: This guide covers VS Code basics.
 + Added: This guide covers VS Code basics and accessibility features.
@@ -332,7 +332,7 @@ The form has these fields:
 - Explain what changed and why
 - Reference the issue you're fixing: "Fixes #42"
 - If a PR template exists, VS Code loads it here (see Section 6)
-- **Copilot-assisted description:** An AI sparkle icon in the description toolbar lets you generate a description from your commits. When a PR template exists, Copilot fills in the template sections intelligently rather than replacing the template — it populates the checklist items and description sections with content derived from your changes.
+- **Copilot-assisted description:** An AI sparkle icon in the description toolbar lets you generate a description from your commits. When a PR template exists, Copilot fills in the template sections intelligently rather than replacing the template - it populates the checklist items and description sections with content derived from your changes.
 
 **Base branch (target):**
 - Usually `main` or `develop`
@@ -367,13 +367,13 @@ The form has these fields:
 2. `Tab` to "Create" button
 3. Press `Enter`
 
-VS Code creates the PR on GitHub and shows a success message. The PR link appears in the notification — click it to open the PR on GitHub, or open it in the GitHub Pull Requests panel.
+VS Code creates the PR on GitHub and shows a success message. The PR link appears in the notification - click it to open the PR on GitHub, or open it in the GitHub Pull Requests panel.
 
 ---
 
 ## 6. Pull Request Description Templates
 
-Many repositories include a **PR template** — a Markdown file that pre-fills the PR description with a checklist or structure.
+Many repositories include a **PR template** - a Markdown file that pre-fills the PR description with a checklist or structure.
 
 ### Where Templates Are Stored
 
@@ -447,7 +447,7 @@ When reviewing a PR, you can:
 
 **Comment format tips:**
 - Be specific: "This heading should be H3, not H2"
-- Provide context: "Screen readers announce this as 'list with 1 item' — should be a paragraph instead"
+- Provide context: "Screen readers announce this as 'list with 1 item' - should be a paragraph instead"
 - Suggest a fix: "Consider rewording to: 'Click the button to save'"
 
 ### Starting a Review
@@ -466,9 +466,9 @@ When you've reviewed all files:
 2. Type "GitHub Pull Requests: Submit Review"
 3. Select "GitHub Pull Requests: Finish Review"
 4. Choose review type:
-   - **Comment** — general feedback, no approval decision
-   - **Approve** — PR looks good, ready to merge
-   - **Request Changes** — issues must be fixed before merging
+   - **Comment** - general feedback, no approval decision
+   - **Approve** - PR looks good, ready to merge
+   - **Request Changes** - issues must be fixed before merging
 5. Optionally add a summary comment
 6. Press `Enter` to submit
 
@@ -565,7 +565,7 @@ This deletes the branch locally. To delete it on GitHub too:
 
 ---
 
-## Keyboard Shortcuts — GitHub Pull Requests Extension
+## Keyboard Shortcuts - GitHub Pull Requests Extension
 
 | Action | Windows | Mac |
 |--------|---------|-----|
@@ -615,15 +615,15 @@ This deletes the branch locally. To delete it on GitHub too:
 
 **Time:** 3 minutes | **What you need:** VS Code with GitHub Pull Requests extension installed and signed in
 
-1. **Open the PR view** — Press `Ctrl+Shift+P` → type `Pull Requests: Focus on GitHub Pull Requests View` → `Enter`.
-2. **Find a PR** — Navigate the tree with arrow keys. Expand a PR to see its changed files.
-3. **Open a diff** — Press `Enter` on a changed file. The diff editor opens.
-4. **Use the Accessible Diff Viewer** — Press `F7` to jump to the first change. Your screen reader announces what was added or removed. Press `F7` again to move to the next change.
-5. **Leave a comment** — Position your cursor on a line you want to comment on, then press `Ctrl+Shift+P` → `Pull Request: Add Comment on Current Diff Line`. Type a brief, constructive comment and submit.
+1. **Open the PR view** - Press `Ctrl+Shift+P` → type `Pull Requests: Focus on GitHub Pull Requests View` → `Enter`.
+2. **Find a PR** - Navigate the tree with arrow keys. Expand a PR to see its changed files.
+3. **Open a diff** - Press `Enter` on a changed file. The diff editor opens.
+4. **Use the Accessible Diff Viewer** - Press `F7` to jump to the first change. Your screen reader announces what was added or removed. Press `F7` again to move to the next change.
+5. **Leave a comment** - Position your cursor on a line you want to comment on, then press `Ctrl+Shift+P` → `Pull Request: Add Comment on Current Diff Line`. Type a brief, constructive comment and submit.
 
 **You're done.** You just reviewed a pull request entirely from VS Code.
 
-> **What success feels like:** You read a diff, heard the changes announced by your screen reader, and left feedback — all without opening a browser. This is how many developers review code every day.
+> **What success feels like:** You read a diff, heard the changes announced by your screen reader, and left feedback - all without opening a browser. This is how many developers review code every day.
 
 ---
 

@@ -1,16 +1,16 @@
 # Appendix C: Accessibility Standards Reference
 ## WCAG, ARIA, and What They Mean for Your Contributions
 
-> This appendix gives you a working understanding of the accessibility standards that govern the web, GitHub's interface, and the projects you will contribute to. You do not need to memorize these — use this as a lookup when a PR review mentions a specific standard or success criterion.
+> This appendix gives you a working understanding of the accessibility standards that govern the web, GitHub's interface, and the projects you will contribute to. You do not need to memorize these - use this as a lookup when a PR review mentions a specific standard or success criterion.
 
 ---
 
 ## Table of Contents
 
-1. [WCAG 2.2 — The Four Principles](#1-wcag-22--the-four-principles)
+1. [WCAG 2.2 - The Four Principles](#1-wcag-22--the-four-principles)
 2. [Conformance Levels: A, AA, AAA](#2-conformance-levels-a-aa-aaa)
 3. [Key Success Criteria for Web Contributions](#3-key-success-criteria-for-web-contributions)
-4. [ARIA — Roles, States, and Properties](#4-aria--roles-states-and-properties)
+4. [ARIA - Roles, States, and Properties](#4-aria--roles-states-and-properties)
 5. [ARIA Landmark Roles](#5-aria-landmark-roles)
 6. [Common ARIA Patterns](#6-common-aria-patterns)
 7. [How Standards Apply to GitHub Contributions](#7-how-standards-apply-to-github-contributions)
@@ -20,16 +20,16 @@
 
 ---
 
-## 1. WCAG 2.2 — The Four Principles
+## 1. WCAG 2.2 - The Four Principles
 
 WCAG (Web Content Accessibility Guidelines) is organized around four principles, often abbreviated **POUR**:
 
 | Principle | Meaning | Example Failure |
 |-----------|---------|-----------------|
-| **Perceivable** | Information must be presentable to users in ways they can perceive | An image with no alt text — a screen reader user gets nothing |
-| **Operable** | UI components and navigation must be operable | A button that only works on hover — keyboard users cannot activate it |
+| **Perceivable** | Information must be presentable to users in ways they can perceive | An image with no alt text - a screen reader user gets nothing |
+| **Operable** | UI components and navigation must be operable | A button that only works on hover - keyboard users cannot activate it |
 | **Understandable** | Information and operation must be understandable | An error message that says "Invalid input" with no explanation of what is wrong |
-| **Robust** | Content must be robust enough to be interpreted by assistive technologies | Custom JavaScript widgets with no ARIA roles — screen readers cannot determine what they are |
+| **Robust** | Content must be robust enough to be interpreted by assistive technologies | Custom JavaScript widgets with no ARIA roles - screen readers cannot determine what they are |
 
 Every WCAG success criterion belongs to one of these four principles.
 
@@ -39,9 +39,9 @@ Every WCAG success criterion belongs to one of these four principles.
 
 | Level | Requirement | Who targets this |
 |-------|-------------|-----------------|
-| **A** | Minimum accessibility — the baseline that removes the most severe barriers | Required by most accessibility laws |
-| **AA** | Enhanced accessibility — removes significant barriers | Required by WCAG 2.2 compliance targets, most government and enterprise standards, GitHub's own accessibility commitment |
-| **AAA** | Highest level — removes remaining barriers for the most niche cases | Not universally required; applied where feasible |
+| **A** | Minimum accessibility - the baseline that removes the most severe barriers | Required by most accessibility laws |
+| **AA** | Enhanced accessibility - removes significant barriers | Required by WCAG 2.2 compliance targets, most government and enterprise standards, GitHub's own accessibility commitment |
+| **AAA** | Highest level - removes remaining barriers for the most niche cases | Not universally required; applied where feasible |
 
 Most open source projects, and GitHub itself, target **WCAG 2.2 AA** compliance. When you file an accessibility bug or review a PR, AA is the standard to reference.
 
@@ -101,7 +101,7 @@ These are the criteria you will most commonly encounter when contributing to web
 
 ---
 
-## 4. ARIA — Roles, States, and Properties
+## 4. ARIA - Roles, States, and Properties
 
 WAI-ARIA (Accessible Rich Internet Applications) fills the gap between what HTML natively expresses and what complex interactive widgets require.
 
@@ -115,9 +115,9 @@ WAI-ARIA (Accessible Rich Internet Applications) fills the gap between what HTML
 
 **Important rules:**
 
-1. **Don't use ARIA if native HTML suffices.** A `<button>` is already a button — adding `role="button"` to a `<div>` is only needed when HTML semantics cannot be used.
+1. **Don't use ARIA if native HTML suffices.** A `<button>` is already a button - adding `role="button"` to a `<div>` is only needed when HTML semantics cannot be used.
 2. **All interactive ARIA widgets must be keyboard operable.** Adding `role="button"` means you must also handle `Enter` and `Space` keypresses in JavaScript.
-3. **ARIA only affects the accessibility tree.** It does not add visual styling or behavior — it only changes what assistive technologies announce.
+3. **ARIA only affects the accessibility tree.** It does not add visual styling or behavior - it only changes what assistive technologies announce.
 
 ---
 
@@ -218,22 +218,22 @@ Documentation in Markdown is converted to HTML. Accessible Markdown:
 
 ## 8. Testing Against Standards
 
-### Automated Tools (catch ~30–40% of issues)
+### Automated Tools (catch ~30-40% of issues)
 
 | Tool | Use |
 |------|-----|
-| [axe DevTools](https://www.deque.com/axe/) | Browser extension — run on any page, get WCAG violations with criterion references |
-| [WAVE](https://wave.webaim.org/) | Browser extension or web service — visual overlay showing issues |
-| [Lighthouse](https://developer.chrome.com/docs/lighthouse/) | Built into Chrome DevTools — accessibility audit with scores |
+| [axe DevTools](https://www.deque.com/axe/) | Browser extension - run on any page, get WCAG violations with criterion references |
+| [WAVE](https://wave.webaim.org/) | Browser extension or web service - visual overlay showing issues |
+| [Lighthouse](https://developer.chrome.com/docs/lighthouse/) | Built into Chrome DevTools - accessibility audit with scores |
 | [IBM Equal Access Checker](https://www.ibm.com/able/toolkit/tools/) | Enterprise-grade browser extension |
 
 ### Manual Testing (catches the rest)
 
-1. **Keyboard-only navigation** — unplug your mouse; can you do everything?
-2. **Screen reader walkthrough** — navigate the feature with NVDA, JAWS, or VoiceOver
-3. **200% zoom** — does content reflow without horizontal scrolling?
-4. **High contrast mode** — Windows High Contrast or macOS Increase Contrast; are all elements still visible?
-5. **Disable CSS** — does the content still make sense in reading order?
+1. **Keyboard-only navigation** - unplug your mouse; can you do everything?
+2. **Screen reader walkthrough** - navigate the feature with NVDA, JAWS, or VoiceOver
+3. **200% zoom** - does content reflow without horizontal scrolling?
+4. **High contrast mode** - Windows High Contrast or macOS Increase Contrast; are all elements still visible?
+5. **Disable CSS** - does the content still make sense in reading order?
 
 ---
 
@@ -269,4 +269,4 @@ Documentation in Markdown is converted to HTML. Accessible Markdown:
 
 ---
 
-*Return to: [Resources](appendix-u-resources.md) | [Appendix B — Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Appendix A — Glossary](appendix-a-glossary.md)*
+*Return to: [Resources](appendix-u-resources.md) | [Appendix B - Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

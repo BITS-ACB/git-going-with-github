@@ -30,13 +30,13 @@ Examples of unacceptable behavior:
 
 ## Accessibility Commitment
 
-This community has an explicit commitment to accessibility. All participants — contributors, facilitators, reviewers, and community members — are expected to:
+This community has an explicit commitment to accessibility. All participants - contributors, facilitators, reviewers, and community members - are expected to:
 
 - Write documentation, issues, and pull requests in a way that screen reader users can navigate and understand
 - Use descriptive link text (not "click here" or bare URLs in prose)
 - Maintain proper heading hierarchy in all Markdown content
 - Provide alt text when adding images
-- Avoid posting images of text — write the text directly in the comment or document
+- Avoid posting images of text - write the text directly in the comment or document
 - Never dismiss accessibility-related issues or feedback as low priority or "edge cases"
 
 Accessibility concerns raised by community members are treated with the same urgency as any other bug report.
@@ -65,7 +65,7 @@ All community leaders are obligated to respect the privacy and security of the r
 
 **Contact:** jeff@jeffbishop.com
 
-Do not open a public GitHub issue to report Code of Conduct concerns — report them directly to the email address above so that the matter can be handled privately.
+Do not open a public GitHub issue to report Code of Conduct concerns - report them directly to the email address above so that the matter can be handled privately.
 
 ---
 

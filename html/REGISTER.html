@@ -31,7 +31,14 @@
   <main id="main-content" class="markdown-body">
     <h1>Register for GIT Going with GitHub</h1>
 <p><a href="https://bits-acb.github.io/git-going-with-github/">Back to Home</a> | <a href="https://github.com/BITS-ACB/git-going-with-github/discussions">Discussion Forum</a> | <a href="https://bits-acb.github.io/git-going-with-github/COMING_SOON.html">Pre-Workshop Setup Guide</a></p>
-<p>Registration requires two steps. Both are required to complete your registration.</p>
+<div id="registration-open-intro">
+<p>Registration requires two steps. Both steps are required.</p>
+</div>
+<div id="registration-full-banner" style="display: none;">
+<blockquote>
+<p><strong>Registration is currently full.</strong> All 75 spots have been filled. You can still join the waitlist by filing a GitHub issue below. If a spot opens up, we will contact you.</p>
+</blockquote>
+</div>
 <table>
 <thead>
 <tr>
@@ -65,6 +72,7 @@
 <blockquote>
 <p><strong>Already registered?</strong> Complete the <a href="https://bits-acb.github.io/git-going-with-github/COMING_SOON.html"><strong>Pre-Workshop Setup Guide</strong></a> before March 7. It walks you through GitHub account setup, screen reader configuration, <a href="https://code.visualstudio.com/">VS Code</a>, and <a href="https://github.com/features/copilot">GitHub Copilot</a> - with instructions for NVDA, JAWS, and VoiceOver.</p>
 </blockquote>
+<div id="section-zoom">
 <hr>
 <h2>Step 1 - Register for the Zoom Session</h2>
 <p>Register for the Zoom session so you receive the meeting link before the workshop.</p>
@@ -76,9 +84,13 @@
 <ul>
 <li>The <a href="https://zoom.us/">Zoom</a> client works well with <a href="https://www.nvaccess.org/download/">NVDA</a>, <a href="https://www.freedomscientific.com/products/software/jaws/">JAWS</a>, and <a href="https://support.apple.com/guide/voiceover/welcome/mac">VoiceOver</a></li>
 </ul>
+</div>
 <hr>
-<h2>Step 2 - Sign Up on GitHub</h2>
-<p>File a GitHub issue to register. This is intentional - filing an issue is one of the first skills you will learn in this workshop, so you are already practicing.</p>
+<h2 id="github-step-heading">Step 2 - Sign Up on GitHub</h2>
+<div id="section-waitlist-heading" style="display: none;">
+<h2>Join the Waitlist</h2>
+</div>
+<p id="github-step-description">File a GitHub issue to register. This is intentional - filing an issue is one of the first skills you will learn in this workshop, so you are already practicing.</p>
 <p>You must be signed into a <a href="https://github.com">GitHub</a> account to file the issue. If you do not have one yet, create one first using the steps below - then come back to file your registration issue.</p>
 <h3>Need a GitHub Account?</h3>
 <p>If you do not have a GitHub account yet, follow these steps:</p>
@@ -95,10 +107,10 @@
 </ol>
 <p>After creating your account, check your email for a message from GitHub with the subject &quot;Please verify your email address&quot; and activate the link inside it.</p>
 <p><strong>Enable two-factor authentication</strong> (strongly recommended): Go to <a href="https://github.com/settings/security">github.com/settings/security</a>, find &quot;Two-factor authentication,&quot; and activate &quot;Enable.&quot; An authenticator app (Microsoft Authenticator, Google Authenticator, or Authy) is the most reliable option.</p>
-<h3>File Your Registration Issue</h3>
+<h3 id="file-issue-heading">File Your Registration Issue</h3>
 <p><strong>Important:</strong> You must be signed into your GitHub account before clicking the link below. If you are not signed in, go to <a href="https://github.com">github.com</a> and sign in first.</p>
 <blockquote>
-<p><a href="https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+-+March+2026"><strong>Start Step 2 - File your registration issue</strong></a></p>
+<p><a id="file-issue-link" href="https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+-+March+2026"><strong>Start Step 2 - File your registration issue</strong></a></p>
 </blockquote>
 <p><strong>Note:</strong> The issue title is pre-filled and required by GitHub. You do not need to change it - just fill out the form fields below it and submit.</p>
 <p>The form asks for:</p>
@@ -112,6 +124,7 @@
 </ul>
 <p>After you submit, you will receive an automated confirmation comment on your issue. Your GitHub username is captured automatically - you do not need to enter it.</p>
 <hr>
+<div id="section-what-happens-open">
 <h2>What Happens Next</h2>
 <p>Once you have completed both steps:</p>
 <ol>
@@ -120,6 +133,16 @@
 <li>Complete the <a href="https://bits-acb.github.io/git-going-with-github/COMING_SOON.html">Pre-Workshop Setup Guide</a> before March 7 - it covers GitHub account setup, screen reader configuration, <a href="https://code.visualstudio.com/">VS Code</a>, and <a href="https://github.com/features/copilot">GitHub Copilot</a></li>
 <li>Questions? Email <a href="mailto:support@bits-acb.org">support@bits-acb.org</a></li>
 </ol>
+</div>
+<div id="section-what-happens-waitlist" style="display: none;">
+<h2>What Happens Next</h2>
+<p>After filing your waitlist issue:</p>
+<ol>
+<li>You will see a confirmation comment on your GitHub issue letting you know you are on the waitlist</li>
+<li>If a spot opens up, we will let you know through your GitHub issue</li>
+<li>Questions? Email <a href="mailto:support@bits-acb.org">support@bits-acb.org</a></li>
+</ol>
+</div>
 <hr>
 <h2>While You Wait</h2>
 <ul>
@@ -136,6 +159,7 @@
   </footer>
   <script>
 (function() {
+  var MAX_CAPACITY = 75;
   var url = 'https://api.github.com/search/issues?q=repo:BITS-ACB/git-going-with-github+label:registration+is:issue+is:open';
   var xhr = new XMLHttpRequest();
   xhr.open('GET', url);
@@ -147,6 +171,28 @@
         var els = document.querySelectorAll('[id^="registration-count"]');
         for (var i = 0; i < els.length; i++) {
           els[i].textContent = count;
+        }
+
+        if (count >= MAX_CAPACITY) {
+          // Hide registration-open content
+          var hideIds = ['registration-open-intro', 'section-zoom', 'github-step-heading', 'section-what-happens-open'];
+          for (var h = 0; h < hideIds.length; h++) {
+            var el = document.getElementById(hideIds[h]);
+            if (el) el.style.display = 'none';
+          }
+          // Show waitlist content
+          var showIds = ['registration-full-banner', 'section-waitlist-heading', 'section-what-happens-waitlist'];
+          for (var s = 0; s < showIds.length; s++) {
+            var el = document.getElementById(showIds[s]);
+            if (el) el.style.display = '';
+          }
+          // Update text for waitlist context
+          var desc = document.getElementById('github-step-description');
+          if (desc) desc.textContent = 'File a GitHub issue to join the waitlist. Filing an issue is one of the first skills you will learn in this workshop, so you are already practicing.';
+          var heading = document.getElementById('file-issue-heading');
+          if (heading) heading.textContent = 'File Your Waitlist Issue';
+          var link = document.getElementById('file-issue-link');
+          if (link) link.innerHTML = '<strong>File your waitlist issue</strong>';
         }
       } catch (e) {}
     }

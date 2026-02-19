@@ -2,7 +2,7 @@ name: Registration - Welcome & CSV Export
 
 on:
   issues:
-    types: [opened, edited, labeled]
+    types: [opened]
   workflow_dispatch:
 
 permissions:
@@ -18,7 +18,105 @@ jobs:
       github.event.action == 'opened' &&
       contains(github.event.issue.title, '[REGISTER]')
     steps:
-      - name: Post welcome comment
+      - name: Check for duplicate registration
+        id: dup-check
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const username = context.payload.issue.user.login;
+            const currentIssueNumber = context.issue.number;
+
+            // Find existing registration issues by this user
+            const existingIssues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'registration',
+              state: 'all',
+              per_page: 100
+            });
+
+            const priorRegistration = existingIssues.find(
+              issue => issue.user.login === username && issue.number !== currentIssueNumber
+            );
+
+            if (priorRegistration) {
+              core.setOutput('is_duplicate', 'true');
+              core.setOutput('original_issue', priorRegistration.number);
+            } else {
+              core.setOutput('is_duplicate', 'false');
+            }
+
+      - name: Handle duplicate registration
+        if: steps.dup-check.outputs.is_duplicate == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const originalIssue = ${{ steps.dup-check.outputs.original_issue }};
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `## You are already registered!
+
+            Hi @${context.payload.issue.user.login}, it looks like you already registered in issue #${originalIssue}. No need to register again — your spot is saved!
+
+            We have closed this issue since your original registration is already on file. If you need to update your details, please comment on your original issue #${originalIssue}.
+
+            Questions? Email [support@bits-acb.org](mailto:support@bits-acb.org).`
+            });
+
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['duplicate']
+            });
+
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed',
+              state_reason: 'not_planned'
+            });
+
+      - name: Check capacity
+        id: capacity-check
+        if: steps.dup-check.outputs.is_duplicate == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const MAX_CAPACITY = 75;
+
+            // Count unique registered users (excluding this issue)
+            const existingIssues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'registration',
+              state: 'all',
+              per_page: 100
+            });
+
+            const currentIssueNumber = context.issue.number;
+            const uniqueUsers = new Set();
+            for (const issue of existingIssues) {
+              if (issue.number !== currentIssueNumber) {
+                uniqueUsers.add(issue.user.login);
+              }
+            }
+
+            const currentCount = uniqueUsers.size;
+            core.setOutput('count', currentCount);
+
+            if (currentCount >= MAX_CAPACITY) {
+              core.setOutput('is_full', 'true');
+            } else {
+              core.setOutput('is_full', 'false');
+            }
+
+      - name: Handle registration full
+        if: steps.dup-check.outputs.is_duplicate == 'false' && steps.capacity-check.outputs.is_full == 'true'
         uses: actions/github-script@v7
         with:
           script: |
@@ -26,23 +124,44 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: `## You are registered for GIT Going with GitHub!
+              body: `## Registration is currently full
 
-            Welcome, @${context.payload.issue.user.login}! Your registration has been received.
+            Hi @${context.payload.issue.user.login}, thank you for your interest in GIT Going with GitHub! Unfortunately, all 75 spots have been filled.
 
-            **Workshop details:**
-            - **Dates:** Saturday, March 7 & Sunday, March 8, 2026
-            - **Time:** 12:00 PM - 8:00 PM Eastern (both days)
-            - **Location:** Online via Zoom (link will be emailed before the event)
+            We have added you to the waitlist. If a spot opens up, we will let you know right here on this issue.
 
-            **What to do next:**
-            1. Complete the [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/docs/00-pre-workshop-setup.html) before March 7
-            2. Questions? Email [support@bits-acb.org](mailto:support@bits-acb.org)
+            Questions? Email [support@bits-acb.org](mailto:support@bits-acb.org).`
+            });
 
-            You just filed a GitHub issue - your first open source contribution. Welcome to the community.`
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['waitlist']
+            });
+
+      - name: Post welcome comment
+        if: steps.dup-check.outputs.is_duplicate == 'false' && steps.capacity-check.outputs.is_full == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `## Welcome to GIT Going with GitHub!
+
+            Hi @${context.payload.issue.user.login}, thank you for registering! We are excited to have you join us.
+
+            Your registration has been confirmed. Additional information, including the Zoom link and pre-workshop preparation materials, will be sent to you soon.
+
+            In the meantime, if you have any questions, feel free to email us at [support@bits-acb.org](mailto:support@bits-acb.org).
+
+            See you on March 7! Welcome aboard.`
             });
 
       - name: Add registration label
+        if: steps.dup-check.outputs.is_duplicate == 'false' && steps.capacity-check.outputs.is_full == 'false'
         uses: actions/github-script@v7
         with:
           script: |
@@ -62,7 +181,9 @@ jobs:
     runs-on: ubuntu-latest
     if: >-
       (github.event_name == 'workflow_dispatch') ||
-      (github.event_name == 'issues' && contains(github.event.issue.title, '[REGISTER]'))
+      (github.event_name == 'issues' &&
+      github.event.action == 'opened' &&
+      contains(github.event.issue.title, '[REGISTER]'))
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -118,10 +239,18 @@ jobs:
 
             let csv = headers.join(',') + '\n';
 
-            for (const issue of issues) {
+            // Deduplicate by GitHub username, keeping only the earliest registration
+            const seen = new Set();
+            const sortedIssues = issues.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+
+            for (const issue of sortedIssues) {
+              const username = issue.user.login;
+              if (seen.has(username)) continue;
+              seen.add(username);
+
               const row = [
                 issue.created_at.split('T')[0],
-                issue.user.login,
+                username,
                 parseField(issue.body, 'First Name'),
                 parseField(issue.body, 'Last Name'),
                 parseField(issue.body, 'Email Address'),
@@ -137,7 +266,7 @@ jobs:
             // Write CSV file
             fs.mkdirSync('.github/data', { recursive: true });
             fs.writeFileSync('.github/data/registrations.csv', csv, 'utf-8');
-            console.log(`Exported ${issues.length} registration(s) to .github/data/registrations.csv`);
+            console.log(`Exported ${seen.size} unique registration(s) from ${issues.length} total issue(s) to .github/data/registrations.csv`);
 
       - name: Commit and push CSV
         run: |

@@ -214,7 +214,6 @@ Zoom join links will be emailed to all registered participants before the worksh
 
 **Zoom accessibility notes:**
 - The [Zoom](https://zoom.us/) client works well with [NVDA](https://www.nvaccess.org/download/), [JAWS](https://www.freedomscientific.com/products/software/jaws/), and [VoiceOver](https://support.apple.com/guide/voiceover/welcome/mac)
-- If you need a sign language interpreter or any other accommodation, note it in the registration form and we will arrange it
 
 ---
 

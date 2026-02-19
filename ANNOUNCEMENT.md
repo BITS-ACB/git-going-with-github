@@ -22,7 +22,7 @@ Sponsored by [BITS](https://www.joinbits.org) in partnership with [GitHub](https
 
 ---
 
-> **Registration is open!** [**Register now**](https://bits-acb.github.io/git-going-with-github/REGISTER.html) - registration takes two steps (GitHub issue + Zoom) and only a few minutes.
+> **Registration is open!** [**Register now**](https://bits-acb.github.io/git-going-with-github/REGISTER.html) - your seat is waiting.
 
 ---
 

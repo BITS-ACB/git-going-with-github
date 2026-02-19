@@ -38,24 +38,7 @@ The Zoom registration link will be posted here before the workshop. Check back s
 
 File a GitHub issue to register. This is intentional - filing an issue is one of the first skills you will learn in this workshop, so you are already practicing.
 
-You must be signed into a [GitHub](https://github.com) account to file the issue. If you do not have one yet, follow the instructions below to create one first.
-
-> [**Start Step 2 - File your registration issue**](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+-+March+2026)
-
-**Note:** The issue title is pre-filled and required by GitHub. You do not need to change it - just fill out the form fields below it and submit.
-
-The form asks for:
-
-- **First Name** (required) - your first name as you would like to be addressed during the workshop
-- **Last Name** (required)
-- **Email Address** (required) - we will use this to send you Zoom links and workshop materials before the event
-- **GitHub Proficiency Level** (required) - a dropdown from "Brand new" to "Experienced" so we can prepare the right level of support
-- **Primary Screen Reader** (optional) - which screen reader you primarily use (NVDA, JAWS, VoiceOver, or other)
-- **Questions or Accommodations** (optional) - anything we should know or arrange before the workshop
-
-After you submit, you will receive an automated confirmation comment on your issue. Your GitHub username is captured automatically - you do not need to enter it.
-
----
+You must be signed into a [GitHub](https://github.com) account to file the issue. If you do not have one yet, create one first using the steps below - then come back to file your registration issue.
 
 ### Need a GitHub Account?
 
@@ -75,7 +58,22 @@ After creating your account, check your email for a message from GitHub with the
 
 **Enable two-factor authentication** (strongly recommended): Go to [github.com/settings/security](https://github.com/settings/security), find "Two-factor authentication," and activate "Enable." An authenticator app (Microsoft Authenticator, Google Authenticator, or Authy) is the most reliable option.
 
-Once your account is ready, return to [Step 2](#step-2---sign-up-on-github) above to file your registration issue.
+### File Your Registration Issue
+
+> [**Start Step 2 - File your registration issue**](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+-+March+2026)
+
+**Note:** The issue title is pre-filled and required by GitHub. You do not need to change it - just fill out the form fields below it and submit.
+
+The form asks for:
+
+- **First Name** (required) - your first name as you would like to be addressed during the workshop
+- **Last Name** (required)
+- **Email Address** (required) - we will use this to send you Zoom links and workshop materials before the event
+- **GitHub Proficiency Level** (required) - a dropdown from "Brand new" to "Experienced" so we can prepare the right level of support
+- **Primary Screen Reader** (optional) - which screen reader you primarily use (NVDA, JAWS, VoiceOver, or other)
+- **Questions or Accommodations** (optional) - anything we should know or arrange before the workshop
+
+After you submit, you will receive an automated confirmation comment on your issue. Your GitHub username is captured automatically - you do not need to enter it.
 
 ---
 

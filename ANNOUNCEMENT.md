@@ -193,13 +193,13 @@ Our [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/
 
 ## Register
 
-Registration requires two steps. Both are required. You will need a free [GitHub](https://github.com) account to complete registration - if you do not have one yet, [create one here](https://github.com/signup).
-
-> [**Go to the registration page**](https://bits-acb.github.io/git-going-with-github/REGISTER.html) to complete both steps - it only takes a few minutes.
+Registration requires two steps. Both are required.
 
 **Step 1** - Register for the Zoom session so you receive the meeting link before the workshop.
 
-**Step 2** - File a GitHub issue with your name, email, and screen reader preference. You must be signed into a free [GitHub](https://github.com) account - if you do not have one, the registration page walks you through creating one.
+**Step 2** - File a GitHub issue with your name, email, and screen reader preference. You will need a free [GitHub](https://github.com) account - if you do not have one yet, [create one here](https://github.com/signup) or the registration page will walk you through it.
+
+> [**Go to the registration page**](https://bits-acb.github.io/git-going-with-github/REGISTER.html) to complete both steps - it only takes a few minutes.
 
 Registered: <span id="registration-count-2" aria-live="polite">loading...</span> out of 75 spots
 

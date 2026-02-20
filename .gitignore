@@ -1,6 +1,9 @@
 # Agent Forge personal preferences — each person's copy stays in their fork only, never committed
 .github/agents/preferences.md
 
+# Registration data — contains personal information, stored as workflow artifacts only
+.github/data/
+
 # Node.js dependencies
 node_modules/
 package-lock.json

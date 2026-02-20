@@ -6,7 +6,6 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
   issues: write
 
 jobs:
@@ -153,11 +152,13 @@ jobs:
 
             Hi @${context.payload.issue.user.login}, thank you for registering! We are excited to have you join us.
 
-            Your registration has been confirmed. Additional information, including the Zoom link and pre-workshop preparation materials, will be sent to you soon.
+            Your registration is confirmed. We will follow up with the Zoom link and preparation materials by email before the workshop.
 
-            In the meantime, if you have any questions, feel free to email us at [support@bits-acb.org](mailto:support@bits-acb.org).
+            In the meantime, you can get a head start with the [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/docs/00-pre-workshop-setup.html).
 
-            See you on March 7! Welcome aboard.`
+            If you have any questions, email us at [support@bits-acb.org](mailto:support@bits-acb.org).
+
+            See you on March 7!`
             });
 
       - name: Add registration label
@@ -185,11 +186,6 @@ jobs:
       github.event.action == 'opened' &&
       contains(github.event.issue.title, '[REGISTER]'))
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          ref: main
-
       - name: Generate CSV from registration issues
         uses: actions/github-script@v7
         with:
@@ -268,11 +264,9 @@ jobs:
             fs.writeFileSync('.github/data/registrations.csv', csv, 'utf-8');
             console.log(`Exported ${seen.size} unique registration(s) from ${issues.length} total issue(s) to .github/data/registrations.csv`);
 
-      - name: Commit and push CSV
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .github/data/registrations.csv
-          git diff --cached --quiet && echo "No changes to commit" && exit 0
-          git commit -m "chore: update registration CSV [skip ci]"
-          git push
+      - name: Upload CSV as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: registrations
+          path: .github/data/registrations.csv
+          retention-days: 90

@@ -2,7 +2,7 @@
 
 [Back to Home](https://bits-acb.github.io/git-going-with-github/) | [Discussion Forum](https://github.com/BITS-ACB/git-going-with-github/discussions) | [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)
 
-Registration requires two steps. Both are required to complete your registration.
+Registration requires two steps. Both steps are required.
 
 | | |
 |---|---|

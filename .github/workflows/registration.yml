@@ -152,7 +152,7 @@ jobs:
 
             Hi @${context.payload.issue.user.login}, thank you for registering! We are excited to have you join us.
 
-            Your registration is confirmed. We will follow up with the Zoom link and preparation materials by email before the workshop.
+            Your registration is confirmed. Please register for the Zoom session here: [Register on Zoom](https://us06web.zoom.us/meeting/register/YdAAvwzAQUCYpPpNtAlG3g)
 
             In the meantime, you can get a head start with the [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/docs/00-pre-workshop-setup.html).
 

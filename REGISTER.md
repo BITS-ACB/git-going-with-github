@@ -24,9 +24,9 @@ Registered: <span id="registration-count" aria-live="polite">loading...</span> o
 
 Register for the Zoom session so you receive the meeting link before the workshop.
 
-> [**Start Step 1 - Register on Zoom**](#zoom-link-coming-soon)
+> [**Start Step 1 - Register on Zoom**](https://us06web.zoom.us/meeting/register/YdAAvwzAQUCYpPpNtAlG3g)
 
-The Zoom registration link will be posted here before the workshop. Check back soon or watch for an email after completing Step 2.
+Register for the Zoom session to receive the meeting link before the workshop.
 
 **Zoom accessibility notes:**
 
